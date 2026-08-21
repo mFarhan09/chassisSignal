@@ -1,0 +1,15 @@
+---
+import EvidenceBadge from './EvidenceBadge.astro';
+interface Props {
+  article: { id: string; data: { title: string; description: string; category: string; readingTime: string; evidenceLevel: string; slug: string; heroImage?: string | { src: string } } };
+  visual?: boolean;
+}
+const { article, visual = true } = Astro.props;
+---
+<article class="article-card card-3d" data-tilt>
+  {visual && <div class="article-card__visual" style={`--article-image:url(${typeof article.data.heroImage === 'string' ? article.data.heroImage : '/images/research-workshop.jpg'})`} aria-hidden="true"></div>}
+  <div class="article-card__meta"><span>{article.data.category}</span><EvidenceBadge level={article.data.evidenceLevel} /></div>
+  <h3><a href={`/research/${article.data.slug}/`}>{article.data.title}</a></h3>
+  <p>{article.data.description}</p>
+  <a class="text-link" href={`/research/${article.data.slug}/`}>Read research <span aria-hidden="true">→</span></a>
+</article>

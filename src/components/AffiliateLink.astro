@@ -1,0 +1,12 @@
+---
+interface Props {
+  href?: string;
+  merchant?: string;
+  product: string;
+  subId?: string;
+  class?: string;
+}
+const { href, merchant, product, subId, class: className = '' } = Astro.props;
+const destination = href && subId ? `${href}${href.includes('?') ? '&' : '?'}subid=${encodeURIComponent(subId)}` : href;
+---
+{destination ? <a class={className} href={destination} rel="sponsored noopener noreferrer" target="_blank" data-affiliate-product={product} data-affiliate-merchant={merchant}> <slot /> </a> : <span class={className}><slot /></span>}

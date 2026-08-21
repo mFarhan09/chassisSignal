@@ -1,0 +1,6 @@
+---
+interface Props { level: string; }
+const { level } = Astro.props;
+const key = level.toLowerCase().replaceAll(' ', '-');
+---
+<span class={`evidence evidence--${key}`}>{level}</span>

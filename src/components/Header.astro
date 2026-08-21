@@ -1,0 +1,31 @@
+---
+import { primaryNav } from '../data/site';
+---
+<header class="site-header" data-header>
+  <div class="header-inner">
+    <a class="brand" href="/" aria-label="Chassis Index home"><img src="/brand/chassis-index-logo.svg" alt="Chassis Index" width="220" height="52" /></a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      {primaryNav.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" type="button" data-search-open aria-label="Search publication"><span class="search-glyph" aria-hidden="true"></span></button>
+      <button class="menu-button" type="button" data-menu-open aria-controls="mobile-menu" aria-expanded="false"><span>Menu</span><i aria-hidden="true"></i></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu" data-menu aria-hidden="true">
+  <div class="mobile-menu-top"><img src="/brand/chassis-index-logo-white.svg" alt="Chassis Index" width="220" height="52" /><button type="button" data-menu-close aria-label="Close menu">Close</button></div>
+  <p class="menu-kicker">Independent BMW & MINI research</p>
+  <nav aria-label="Mobile navigation">{primaryNav.map((item, index) => <a href={item.href}><small>{String(index + 1).padStart(2, '0')}</small>{item.label}</a>)}</nav>
+  <div class="menu-meta"><a href="/methodology/">Methodology</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
+</div>
+<div class="search-overlay" data-search aria-hidden="true">
+  <div class="search-shell">
+    <button type="button" class="search-close" data-search-close>Close <span aria-hidden="true">×</span></button>
+    <p class="section-kicker">Publication search</p>
+    <label for="site-search">Search titles, products, chassis and topics</label>
+    <div class="search-field"><input id="site-search" type="search" placeholder="Try “F30”, “BimmerCode” or “battery”" autocomplete="off" data-search-input /><span aria-hidden="true">↗</span></div>
+    <p class="search-status" data-search-status>Start typing to search the index.</p>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
