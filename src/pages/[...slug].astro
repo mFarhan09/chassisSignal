@@ -19,7 +19,7 @@ const articles = (await getCollection('articles', ({ data }) => !data.draft)).so
 const relevant = hubPage ? articles.filter((article) => hubPage.slug === 'research' || article.data.category.toLowerCase().includes(hubPage.title.split(' ')[0].toLowerCase()) || article.data.tags.some((tag) => tag.toLowerCase().includes(hubPage.slug.replaceAll('-', ' ')))) : [];
 ---
 <BaseLayout title={page.title} description={page.intro}>
-  <header class="page-hero"><div class="shell page-hero-grid"><div><p class="eyebrow">{page.eyebrow}</p><h1>{page.title}</h1><p class="lede">{page.intro}</p></div><div class="page-index"><span>CI</span>{kind === 'hub' ? 'Research organized by decision, evidence and compatibility context.' : 'Publication standard — reviewed for clarity, independence and accuracy.'}</div></div></header>
+  <header class="page-hero"><div class="shell page-hero-grid"><div><p class="eyebrow">{page.eyebrow}</p><h1>{page.title}</h1><p class="lede">{page.intro}</p></div><div class="page-index"><span>CS</span>{kind === 'hub' ? 'Research organized by decision, evidence and compatibility context.' : 'Publication standard — reviewed for clarity, independence and accuracy.'}</div></div></header>
   {kind === 'hub' ? <>
     <div class="focus-strip shell">{hubPage?.focus.map((focus: string, index: number) => <div><small>0{index + 1}</small>{focus}</div>)}</div>
     <section class="section"><div class="shell hub-layout"><aside class="hub-aside"><strong>In this index</strong><p>Use the research labels to distinguish documented material from items that still need verification.</p><a href="/methodology/">Research methodology →</a><a href="/editorial-standards/">Evidence standards →</a><a href="/contact/">Submit a correction →</a></aside><div>
