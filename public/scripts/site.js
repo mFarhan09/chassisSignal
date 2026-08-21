@@ -4,6 +4,7 @@ const menu = document.querySelector('[data-menu]');
 const menuOpen = document.querySelector('[data-menu-open]');
 const menuClose = document.querySelector('[data-menu-close]');
 const search = document.querySelector('[data-search]');
+const searchOpenButtons = document.querySelectorAll('[data-search-open]');
 const searchInput = document.querySelector('[data-search-input]');
 const results = document.querySelector('[data-search-results]');
 const searchStatus = document.querySelector('[data-search-status]');
@@ -17,7 +18,7 @@ const setPanel = (panel, open) => {
 
 menuOpen?.addEventListener('click', () => { setPanel(menu, true); menuOpen.setAttribute('aria-expanded', 'true'); menuClose?.focus(); });
 menuClose?.addEventListener('click', () => { setPanel(menu, false); menuOpen?.setAttribute('aria-expanded', 'false'); menuOpen?.focus(); });
-document.querySelector('[data-search-open]')?.addEventListener('click', () => { setPanel(search, true); setTimeout(() => searchInput?.focus(), 80); });
+searchOpenButtons.forEach((button) => button.addEventListener('click', () => { setPanel(search, true); setTimeout(() => searchInput?.focus(), 80); }));
 document.querySelector('[data-search-close]')?.addEventListener('click', () => setPanel(search, false));
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { setPanel(menu, false); setPanel(search, false); menuOpen?.setAttribute('aria-expanded', 'false'); } });
 window.addEventListener('scroll', () => header?.classList.toggle('is-scrolled', scrollY > 24), { passive: true });

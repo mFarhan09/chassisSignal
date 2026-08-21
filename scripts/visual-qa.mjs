@@ -14,7 +14,7 @@ const checks = [
   ['home-360-emulated', '/', 360, 800],
   ['research-1024-emulated', '/research/', 1024, 768],
   ['research-390-emulated', '/research/', 390, 844],
-  ['article-375-emulated', '/research/best-adapter-for-bimmercode/', 375, 812],
+  ['methodology-375-emulated', '/methodology/', 375, 812],
   ['contact-390-emulated', '/contact/', 390, 844]
 ];
 
@@ -44,7 +44,7 @@ for (const [name, path, width, height] of checks) {
   });
   await page.screenshot({ path: new URL(`${name}.png`, outputDirectory).pathname.slice(1), fullPage: false, animations: 'disabled', timeout: 60_000 });
   if (name === 'home-1440') {
-    const componentShots = [['stories-3d', '.story-rail'], ['categories-3d', '.category-index'], ['tools-3d', '.tool-rail'], ['articles-3d', '.article-grid']];
+    const componentShots = [['research-status', '.empty-state'], ['categories-3d', '.category-index']];
     for (const [shotName, selector] of componentShots) {
       const component = page.locator(selector);
       await component.scrollIntoViewIfNeeded();
@@ -70,9 +70,10 @@ await interactionPage.locator('[data-search-open]').first().click();
 await interactionPage.locator('[data-search-input]').fill('F30');
 await interactionPage.waitForTimeout(100);
 const searchResultsForF30 = await interactionPage.locator('[data-search-results] a').count();
-const interactionResult = { menuAriaHiddenAfterOpen, searchResultsForF30, pageErrors: interactionErrors };
+const emptySearchStatus = await interactionPage.locator('[data-search-status]').textContent();
+const interactionResult = { menuAriaHiddenAfterOpen, searchResultsForF30, emptySearchStatus, pageErrors: interactionErrors };
 console.log(JSON.stringify({ name: 'mobile-interactions', ...interactionResult }));
-if (menuAriaHiddenAfterOpen !== 'false' || searchResultsForF30 < 1 || interactionErrors.length) failed = true;
+if (menuAriaHiddenAfterOpen !== 'false' || searchResultsForF30 !== 0 || !emptySearchStatus?.startsWith('No exact match.') || interactionErrors.length) failed = true;
 await interactionContext.close();
 
 await browser.close();

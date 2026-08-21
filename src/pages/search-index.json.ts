@@ -1,7 +1,7 @@
-import { getCollection } from 'astro:content';
+import { getPublishedArticles } from '../data/articles';
 
 export async function GET() {
-  const articles = await getCollection('articles', ({ data }) => !data.draft);
+  const articles = await getPublishedArticles();
   const index = articles.map(({ data }) => ({
     title: data.title,
     description: data.description,

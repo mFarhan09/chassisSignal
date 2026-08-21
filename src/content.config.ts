@@ -1,8 +1,13 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { existsSync, readdirSync } from 'node:fs';
+
+const articleDirectory = new URL('./content/articles/', import.meta.url);
+const hasArticleFiles = existsSync(articleDirectory) && readdirSync(articleDirectory, { recursive: true, withFileTypes: true })
+  .some((entry) => entry.isFile() && /\\.mdx?$/.test(entry.name));
 
 const articles = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/articles' }),
+  loader: hasArticleFiles ? glob({ pattern: '**/*.{md,mdx}', base: './src/content/articles' }) : async () => [],
   schema: ({ image }) => z.object({
     title: z.string(),
     description: z.string(),
