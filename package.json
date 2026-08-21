@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "check": "astro check",
     "qa:visual": "node scripts/visual-qa.mjs",
-    "deploy": "wrangler pages deploy dist --project-name chassis-signal"
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.4.1",
