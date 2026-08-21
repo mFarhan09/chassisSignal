@@ -67,7 +67,7 @@ p { line-height: 1.72; }
 .brand { flex: 0 0 auto; }
 .brand img { width: clamp(174px, 15vw, 220px); }
 .desktop-nav { margin-left: auto; display: flex; align-items: center; gap: clamp(15px, 1.65vw, 28px); }
-.desktop-nav a { position: relative; padding: 28px 0; font-size: 11px; font-weight: 700; letter-spacing: .025em; white-space: nowrap; }
+.desktop-nav a { position: relative; padding: 28px 0; font-size: 13px; font-weight: 700; letter-spacing: .02em; white-space: nowrap; }
 .desktop-nav a::after { content: ''; position: absolute; left: 0; right: 100%; bottom: 19px; height: 1px; background: var(--teal); transition: right .3s var(--ease); }
 .desktop-nav a:hover::after { right: 0; }
 .header-actions { display: flex; align-items: center; gap: 10px; }
@@ -75,7 +75,7 @@ p { line-height: 1.72; }
 .icon-button { width: 40px; height: 40px; display: grid; place-items: center; }
 .search-glyph { display: block; width: 17px; height: 17px; border: 1.5px solid currentColor; border-radius: 50%; position: relative; }
 .search-glyph::after { content: ''; width: 7px; height: 1.5px; background: currentColor; position: absolute; right: -5px; bottom: -2px; rotate: 45deg; }
-.menu-button { display: none; gap: 10px; align-items: center; text-transform: uppercase; letter-spacing: .1em; font-size: 10px; font-weight: 700; }
+.menu-button { display: none; gap: 10px; align-items: center; text-transform: uppercase; letter-spacing: .1em; font-size: 12px; font-weight: 700; }
 .menu-button i { width: 18px; height: 8px; border-block: 1px solid; }
 .mobile-menu, .search-overlay { position: fixed; z-index: 100; inset: 0; visibility: hidden; opacity: 0; pointer-events: none; transition: opacity .35s, visibility .35s; }
 .mobile-menu.is-open, .search-overlay.is-open { visibility: visible; opacity: 1; pointer-events: auto; }
@@ -83,12 +83,12 @@ p { line-height: 1.72; }
 .mobile-menu::before { content: ''; position: absolute; inset: 0; opacity: .11; background: linear-gradient(110deg, transparent 0 48%, rgba(117,164,209,.5) 48.1% 48.25%, transparent 48.4%); pointer-events: none; }
 .mobile-menu-top { display: flex; align-items: center; justify-content: space-between; position: relative; }
 .mobile-menu-top img { width: 190px; }
-.mobile-menu button { color: white; border: 0; border-bottom: 1px solid rgba(255,255,255,.5); background: none; text-transform: uppercase; letter-spacing: .15em; font-size: 10px; padding: 8px 0; cursor: pointer; }
-.menu-kicker { color: #91aaa8; margin: clamp(48px, 8vh, 90px) 0 18px; text-transform: uppercase; letter-spacing: .17em; font-size: 10px; }
+.mobile-menu button { color: white; border: 0; border-bottom: 1px solid rgba(255,255,255,.5); background: none; text-transform: uppercase; letter-spacing: .15em; font-size: 12px; padding: 8px 0; cursor: pointer; }
+.menu-kicker { color: #91aaa8; margin: clamp(48px, 8vh, 90px) 0 18px; text-transform: uppercase; letter-spacing: .17em; font-size: 12px; }
 .mobile-menu nav { display: flex; flex-direction: column; position: relative; }
 .mobile-menu nav a { font-family: var(--serif); font-size: clamp(32px, 6vw, 52px); padding: 10px 0; border-bottom: 1px solid var(--line-dark); display: flex; gap: 20px; align-items: baseline; }
-.mobile-menu nav small { font-family: var(--sans); color: #75a4d1; font-size: 9px; letter-spacing: .16em; }
-.menu-meta { display: flex; gap: 26px; margin-top: 28px; color: #9eadaa; font-size: 12px; }
+.mobile-menu nav small { font-family: var(--sans); color: #75a4d1; font-size: 11px; letter-spacing: .16em; }
+.menu-meta { display: flex; gap: 26px; margin-top: 28px; color: #9eadaa; font-size: 14px; }
 .search-overlay { background: rgba(7,20,25,.98); color: white; overflow-y: auto; }
 .search-shell { width: min(900px, calc(100% - 48px)); margin: 8vh auto; }
 .search-close { display: block; margin-left: auto; border: 0; background: none; color: white; font-size: 12px; text-transform: uppercase; letter-spacing: .12em; cursor: pointer; }
@@ -107,7 +107,7 @@ p { line-height: 1.72; }
 
 /* Homepage */
 .hero { min-height: min(860px, calc(100vh - 72px)); padding: clamp(56px, 7vh, 92px) 0 74px; position: relative; overflow: hidden; }
-.hero::after { content: 'CI / RESEARCH INDEX'; position: absolute; right: -18px; bottom: 130px; rotate: 90deg; font-size: 8px; letter-spacing: .22em; color: #7d8580; }
+.hero::after { content: 'CS / RESEARCH INDEX'; position: absolute; right: -18px; bottom: 130px; rotate: 90deg; font-size: 8px; letter-spacing: .22em; color: #7d8580; }
 .hero-grid { width: var(--shell); margin: auto; display: grid; grid-template-columns: minmax(0, .96fr) minmax(450px, .9fr); gap: clamp(35px, 5vw, 90px); align-items: center; }
 .hero-copy { padding-bottom: 20px; position: relative; z-index: 2; }
 .hero .eyebrow { margin-bottom: 25px; animation: rise .8s .05s both var(--ease); }
@@ -124,7 +124,7 @@ p { line-height: 1.72; }
 .chassis-line { position: absolute; inset: 8% 2% 6% 4%; transform: translateZ(35px); opacity: .28; }
 .chassis-line svg { width: 100%; height: 100%; }
 .device { position: absolute; left: 18%; top: 21%; width: 37%; height: 57%; border-radius: 19px; background: linear-gradient(145deg, #29383a, #0b1214 62%); border: 1px solid rgba(255,255,255,.19); box-shadow: -12px 23px 40px rgba(0,0,0,.35), inset 0 1px rgba(255,255,255,.16); transform: translateZ(78px) rotate(-5deg); }
-.device::before { content: 'CHASSIS INDEX'; position: absolute; left: 12%; right: 12%; top: 12%; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,.14); color: #9db1ae; letter-spacing: .16em; font-size: 7px; }
+.device::before { content: 'CHASSIS SIGNAL'; position: absolute; left: 12%; right: 12%; top: 12%; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,.14); color: #9db1ae; letter-spacing: .16em; font-size: 7px; }
 .device-screen { position: absolute; inset: 24% 12% 24%; background: linear-gradient(160deg, #dce6df, #9caaa4); color: #102124; padding: 16px; box-shadow: inset 0 0 20px rgba(9,31,32,.22); }
 .device-screen small { display: block; font-size: 7px; letter-spacing: .15em; text-transform: uppercase; }
 .device-screen strong { display: block; font-family: var(--serif); font-size: clamp(20px, 2.3vw, 34px); font-weight: 500; margin: 8px 0 20px; }

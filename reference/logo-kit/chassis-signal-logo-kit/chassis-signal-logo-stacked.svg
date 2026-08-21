@@ -1,6 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" role="img" aria-label="Chassis Signal favicon" fill="none">
-  <rect width="150" height="150" rx="24" fill="#F5F2EB"/>
-  <g transform="translate(3 5) scale(.98)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 310" role="img" aria-label="Chassis Signal stacked logo" fill="none">
+  <style>
+    .wordmark { font-family: "Cormorant Garamond", "Libre Baskerville", Georgia, serif; font-size: 82px; letter-spacing: 0.14em; fill: #111820; }
+  </style>
+  <g transform="translate(295 22) scale(.95)">
     <path d="M118 26 H72 C42 26 25 48 25 80 C25 112 42 134 72 134 H104" fill="none" stroke="#111820" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M121 26 L101 134 H118 L138 26 Z" fill="#2D5B86"/>
     <path d="M48 78 L60 58 H93 L106 78" fill="none" stroke="#111820" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -11,4 +13,5 @@
     <rect x="98" y="108" width="31" height="18" rx="4" fill="#111820"/>
     <path d="M105 114 H122 M105 120 H122" stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round"/>
   </g>
+  <text class="wordmark" x="50" y="245">CHASSIS SIGNAL</text>
 </svg>

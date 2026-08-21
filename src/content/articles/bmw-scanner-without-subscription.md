@@ -8,7 +8,7 @@ tags: ["scanners", "subscription", "ownership cost", "buyer guide"]
 featured: false
 heroImage: "/images/research-workshop.jpg"
 heroAlt: "Automotive scanner and software research scene"
-author: "Chassis Index Editorial"
+author: "Chassis Signal Editorial"
 readingTime: "7 min read"
 safetyLevel: "LOW"
 evidenceLevel: "NEEDS VERIFICATION"

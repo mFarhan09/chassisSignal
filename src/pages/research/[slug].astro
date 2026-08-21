@@ -29,7 +29,7 @@ const schema = {
   datePublished: article.data.publishedAt.toISOString(),
   dateModified: (article.data.updatedAt || article.data.publishedAt).toISOString(),
   author: { '@type': 'Organization', name: article.data.author },
-  publisher: { '@type': 'Organization', name: 'Chassis Index', url: Astro.site },
+  publisher: { '@type': 'Organization', name: 'Chassis Signal', url: Astro.site },
   mainEntityOfPage: new URL(Astro.url.pathname, Astro.site),
   image: new URL(typeof article.data.heroImage === 'string' ? article.data.heroImage : '/images/research-workshop.jpg', Astro.site)
 };

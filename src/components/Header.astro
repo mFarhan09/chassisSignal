@@ -3,7 +3,7 @@ import { primaryNav } from '../data/site';
 ---
 <header class="site-header" data-header>
   <div class="header-inner">
-    <a class="brand" href="/" aria-label="Chassis Index home"><img src="/brand/chassis-index-logo.svg" alt="Chassis Index" width="220" height="52" /></a>
+    <a class="brand" href="/" aria-label="Chassis Signal home"><img src="/brand/chassis-signal-logo.svg" alt="Chassis Signal" width="244" height="40" /></a>
     <nav class="desktop-nav" aria-label="Primary navigation">
       {primaryNav.map((item) => <a href={item.href}>{item.label}</a>)}
     </nav>
@@ -14,7 +14,7 @@ import { primaryNav } from '../data/site';
   </div>
 </header>
 <div class="mobile-menu" id="mobile-menu" data-menu aria-hidden="true">
-  <div class="mobile-menu-top"><img src="/brand/chassis-index-logo-white.svg" alt="Chassis Index" width="220" height="52" /><button type="button" data-menu-close aria-label="Close menu">Close</button></div>
+  <div class="mobile-menu-top"><img src="/brand/chassis-signal-logo-white.svg" alt="Chassis Signal" width="244" height="40" /><button type="button" data-menu-close aria-label="Close menu">Close</button></div>
   <p class="menu-kicker">Independent BMW & MINI research</p>
   <nav aria-label="Mobile navigation">{primaryNav.map((item, index) => <a href={item.href}><small>{String(index + 1).padStart(2, '0')}</small>{item.label}</a>)}</nav>
   <div class="menu-meta"><a href="/methodology/">Methodology</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>

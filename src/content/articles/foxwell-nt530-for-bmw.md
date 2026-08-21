@@ -8,7 +8,7 @@ tags: ["scanners", "Foxwell", "NT530", "handheld"]
 featured: true
 heroImage: "/images/scanner-workbench.jpg"
 heroAlt: "Handheld automotive scanner represented in a dark workshop scene"
-author: "Chassis Index Editorial"
+author: "Chassis Signal Editorial"
 readingTime: "6 min read"
 safetyLevel: "MEDIUM"
 evidenceLevel: "MANUFACTURER CLAIM"

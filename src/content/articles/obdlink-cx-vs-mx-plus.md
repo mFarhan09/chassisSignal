@@ -8,7 +8,7 @@ tags: ["comparisons", "OBDLink CX", "OBDLink MX+", "coding adapters"]
 featured: false
 heroImage: "/images/adapter-study.jpg"
 heroAlt: "Compact wireless OBD interfaces in an automotive research setting"
-author: "Chassis Index Editorial"
+author: "Chassis Signal Editorial"
 readingTime: "7 min read"
 safetyLevel: "LOW"
 evidenceLevel: "DOCUMENTED"

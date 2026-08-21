@@ -14,7 +14,7 @@ const articles = defineCollection({
     featured: z.boolean().default(false),
     heroImage: z.string().or(image()).optional(),
     heroAlt: z.string(),
-    author: z.string().default('Chassis Index Editorial'),
+    author: z.string().default('Chassis Signal Editorial'),
     readingTime: z.string(),
     safetyLevel: z.enum(['LOW', 'MEDIUM', 'HIGH']),
     evidenceLevel: z.enum(['DOCUMENTED', 'MANUFACTURER CLAIM', 'COMMUNITY REPORTED', 'NEEDS VERIFICATION', 'HANDS-ON VERIFIED']),

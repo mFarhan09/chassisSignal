@@ -22,7 +22,7 @@ Set `SITE_URL` to the final production origin, for example `https://chassisindex
 3. Authenticate Wrangler with `pnpm wrangler login`.
 4. Run `pnpm deploy`.
 
-`wrangler.toml` already points Pages at `./dist`. The deployment script uses the Pages project name `chassis-index`; change that value if the Cloudflare project uses another name.
+`wrangler.toml` already points Pages at `./dist`. The deployment script uses the Pages project name `chassis-signal`; change that value if the Cloudflare project uses another name.
 
 ## Platform files
 

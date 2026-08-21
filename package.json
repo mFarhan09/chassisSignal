@@ -1,5 +1,5 @@
 {
-  "name": "chassis-index",
+  "name": "chassis-signal",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "check": "astro check",
     "qa:visual": "node scripts/visual-qa.mjs",
-    "deploy": "wrangler pages deploy dist --project-name chassis-index"
+    "deploy": "wrangler pages deploy dist --project-name chassis-signal"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.4.1",

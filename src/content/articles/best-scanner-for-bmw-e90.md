@@ -8,7 +8,7 @@ tags: ["scanners", "E90", "E-Series", "compatibility"]
 featured: false
 heroImage: "/images/research-workshop.jpg"
 heroAlt: "Diagnostic scanner in a restrained automotive workshop scene"
-author: "Chassis Index Editorial"
+author: "Chassis Signal Editorial"
 readingTime: "7 min read"
 safetyLevel: "LOW"
 evidenceLevel: "NEEDS VERIFICATION"

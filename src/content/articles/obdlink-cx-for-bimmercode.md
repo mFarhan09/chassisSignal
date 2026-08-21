@@ -8,7 +8,7 @@ tags: ["coding adapters", "OBDLink CX", "BimmerCode", "BLE"]
 featured: true
 heroImage: "/images/adapter-study.jpg"
 heroAlt: "Compact OBD adapter in an automotive diagnostics composition"
-author: "Chassis Index Editorial"
+author: "Chassis Signal Editorial"
 readingTime: "5 min read"
 safetyLevel: "MEDIUM"
 evidenceLevel: "DOCUMENTED"

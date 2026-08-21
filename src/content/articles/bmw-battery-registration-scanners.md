@@ -8,7 +8,7 @@ tags: ["battery service tools", "battery registration", "scanners", "BMW"]
 featured: false
 heroImage: "/images/scanner-workbench.jpg"
 heroAlt: "Automotive service diagnostics equipment"
-author: "Chassis Index Editorial"
+author: "Chassis Signal Editorial"
 readingTime: "8 min read"
 safetyLevel: "HIGH"
 evidenceLevel: "NEEDS VERIFICATION"

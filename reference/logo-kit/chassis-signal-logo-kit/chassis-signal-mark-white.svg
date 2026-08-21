@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" role="img" aria-label="Chassis Signal brand mark white" fill="none">
+  <g transform="translate(3 5) scale(.98)">
+    <path d="M118 26 H72 C42 26 25 48 25 80 C25 112 42 134 72 134 H104" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M121 26 L101 134 H118 L138 26 Z" fill="#9DC2E6"/>
+    <path d="M48 78 L60 58 H93 L106 78" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 81 H107 V99 H45 Z" fill="#FFFFFF"/>
+    <path d="M50 84 H64" stroke="#0B1521" stroke-width="4" stroke-linecap="round" opacity="0.96"/>
+    <path d="M88 84 H102" stroke="#0B1521" stroke-width="4" stroke-linecap="round" opacity="0.96"/>
+    <path d="M77 103 V115 H101" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="98" y="108" width="31" height="18" rx="4" fill="#FFFFFF"/>
+    <path d="M105 114 H122 M105 120 H122" stroke="#0B1521" stroke-width="2.8" stroke-linecap="round"/>
+  </g>
+</svg>

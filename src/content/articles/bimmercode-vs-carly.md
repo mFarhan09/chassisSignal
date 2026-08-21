@@ -8,7 +8,7 @@ tags: ["comparisons", "software", "BimmerCode", "Carly"]
 featured: true
 heroImage: "/images/coding-workspace.jpg"
 heroAlt: "Phone-based vehicle diagnostics concept in a premium technical setting"
-author: "Chassis Index Editorial"
+author: "Chassis Signal Editorial"
 readingTime: "8 min read"
 safetyLevel: "MEDIUM"
 evidenceLevel: "NEEDS VERIFICATION"

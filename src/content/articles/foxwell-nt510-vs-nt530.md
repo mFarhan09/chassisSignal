@@ -8,7 +8,7 @@ tags: ["comparisons", "Foxwell NT510", "Foxwell NT530", "scanners"]
 featured: false
 heroImage: "/images/scanner-workbench.jpg"
 heroAlt: "Two handheld diagnostic tools represented in a technical scene"
-author: "Chassis Index Editorial"
+author: "Chassis Signal Editorial"
 readingTime: "6 min read"
 safetyLevel: "LOW"
 evidenceLevel: "NEEDS VERIFICATION"

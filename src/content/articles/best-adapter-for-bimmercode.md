@@ -8,7 +8,7 @@ tags: ["coding adapters", "BimmerCode", "BLE", "ENET"]
 featured: true
 heroImage: "/images/adapter-study.jpg"
 heroAlt: "Diagnostic interface hardware arranged in a technical automotive scene"
-author: "Chassis Index Editorial"
+author: "Chassis Signal Editorial"
 readingTime: "6 min read"
 safetyLevel: "MEDIUM"
 evidenceLevel: "DOCUMENTED"

@@ -37,7 +37,7 @@ export const hubs: Hub[] = [
 
 export const editorialPages = [
   {
-    slug: 'about', eyebrow: 'About the publication', title: 'Independent by design.', intro: 'Chassis Index is a specialist publication for BMW and MINI owners navigating diagnostic scanners, coding adapters, software and compatibility.', sections: [
+    slug: 'about', eyebrow: 'About the publication', title: 'Independent by design.', intro: 'Chassis Signal is a specialist publication for BMW and MINI owners navigating diagnostic scanners, coding adapters, software and compatibility.', sections: [
       ['What we research', 'We organize primary documentation, manufacturer material, app compatibility information and carefully qualified community evidence into readable owner-focused research.'],
       ['What we do not claim', 'We do not imply hands-on testing where none has occurred, invent credentials, manufacture compatibility conclusions or present marketing claims as independent findings.'],
       ['Why compatibility matters', 'A tool name alone rarely answers the real question. Chassis generation, model year, protocol, adapter, app version and intended function can all change the result.'],
@@ -45,7 +45,7 @@ export const editorialPages = [
     ]
   },
   {
-    slug: 'methodology', eyebrow: 'Research system / v1.0', title: 'How Chassis Index researches.', intro: 'A transparent workflow for separating documentation, claims, owner reports and verified observations.', sections: [
+    slug: 'methodology', eyebrow: 'Research system / v1.0', title: 'How Chassis Signal researches.', intro: 'A transparent workflow for separating documentation, claims, owner reports and verified observations.', sections: [
       ['01 — Define the question', 'We begin with a specific owner decision: vehicle generation, intended task, tool category and practical constraints.'],
       ['02 — Build the source set', 'Primary technical documentation and current app compatibility material take priority. Manufacturer product pages are treated as claims until corroborated.'],
       ['03 — Map compatibility', 'We compare the vehicle, protocol, interface, platform, software and function as a connected system. Unknowns remain unknown.'],
@@ -64,7 +64,7 @@ export const editorialPages = [
     ]
   },
   {
-    slug: 'affiliate-disclosure', eyebrow: 'Transparency', title: 'Editorial judgment is not for sale.', intro: 'Chassis Index may eventually earn a commission when a reader purchases through certain clearly identified links.', sections: [
+    slug: 'affiliate-disclosure', eyebrow: 'Transparency', title: 'Editorial judgment is not for sale.', intro: 'Chassis Signal may eventually earn a commission when a reader purchases through certain clearly identified links.', sections: [
       ['Current status', 'No specific affiliate relationship is represented by this launch version. Links without an affiliate destination remain ordinary research links.'],
       ['Editorial separation', 'Commercial relationships should not determine conclusions, evidence labels or the inclusion of relevant limitations.'],
       ['Link treatment', 'Affiliate links, when introduced, will be identified and use appropriate sponsored and security attributes. Prices and availability should be verified at the destination.']

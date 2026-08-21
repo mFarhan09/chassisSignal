@@ -9,7 +9,7 @@ tags: ["scanners", "buyer guide", "BMW", "diagnostics"]
 featured: true
 heroImage: "/images/scanner-workbench.jpg"
 heroAlt: "Automotive diagnostic equipment in a dark technical setting"
-author: "Chassis Index Editorial"
+author: "Chassis Signal Editorial"
 readingTime: "7 min read"
 safetyLevel: "LOW"
 evidenceLevel: "NEEDS VERIFICATION"

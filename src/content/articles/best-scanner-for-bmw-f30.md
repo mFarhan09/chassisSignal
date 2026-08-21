@@ -8,7 +8,7 @@ tags: ["scanners", "F30", "F-Series", "compatibility"]
 featured: false
 heroImage: "/images/research-workshop.jpg"
 heroAlt: "BMW-focused diagnostic equipment in a technical workshop atmosphere"
-author: "Chassis Index Editorial"
+author: "Chassis Signal Editorial"
 readingTime: "7 min read"
 safetyLevel: "LOW"
 evidenceLevel: "NEEDS VERIFICATION"

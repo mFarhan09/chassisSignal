@@ -8,7 +8,7 @@ tags: ["software", "BimmerCode", "BimmerLink", "comparisons"]
 featured: false
 heroImage: "/images/coding-workspace.jpg"
 heroAlt: "Mobile diagnostic software interface concept"
-author: "Chassis Index Editorial"
+author: "Chassis Signal Editorial"
 readingTime: "5 min read"
 safetyLevel: "MEDIUM"
 evidenceLevel: "DOCUMENTED"

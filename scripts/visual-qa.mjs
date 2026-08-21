@@ -42,14 +42,14 @@ for (const [name, path, width, height] of checks) {
     }).slice(0, 12);
     return { clientWidth: width, scrollWidth: document.documentElement.scrollWidth, offenders };
   });
-  await page.screenshot({ path: new URL(`${name}.png`, outputDirectory).pathname.slice(1), fullPage: false });
+  await page.screenshot({ path: new URL(`${name}.png`, outputDirectory).pathname.slice(1), fullPage: false, animations: 'disabled', timeout: 60_000 });
   if (name === 'home-1440') {
     const componentShots = [['stories-3d', '.story-rail'], ['categories-3d', '.category-index'], ['tools-3d', '.tool-rail'], ['articles-3d', '.article-grid']];
     for (const [shotName, selector] of componentShots) {
       const component = page.locator(selector);
       await component.scrollIntoViewIfNeeded();
       await page.waitForTimeout(350);
-      await component.screenshot({ path: new URL(`${shotName}.png`, outputDirectory).pathname.slice(1) });
+      await component.screenshot({ path: new URL(`${shotName}.png`, outputDirectory).pathname.slice(1), animations: 'disabled', timeout: 60_000 });
     }
   }
   const overflow = layout.scrollWidth > layout.clientWidth + 1;
