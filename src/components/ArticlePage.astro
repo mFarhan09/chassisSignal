@@ -1,0 +1,80 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EvidenceBadge from './EvidenceBadge.astro';
+import { articlePath } from '../data/articles';
+
+type Article = CollectionEntry<'articles'>;
+
+interface Props {
+  article: Article;
+  articles: Article[];
+}
+
+const { article, articles } = Astro.props;
+const { Content, headings } = await render(article);
+const href = articlePath(article);
+const sectionLabel = article.data.section === 'guides' ? 'Guides' : 'Research';
+const sectionHref = `/${article.data.section}/`;
+const related = articles
+  .filter((candidate) => candidate.id !== article.id && (candidate.data.category === article.data.category || candidate.data.tags.some((tag: string) => article.data.tags.includes(tag))))
+  .slice(0, 3);
+const published = article.data.publishedAt.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+const updated = article.data.updatedAt?.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+const pricingChecked = article.data.pricingChecked?.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+const image = typeof article.data.heroImage === 'string' ? article.data.heroImage : '/images/research-workshop.jpg';
+const canonical = new URL(href, Astro.site);
+const evidenceCopy = {
+  'DOCUMENTED': 'The core scope is supported by official documentation. Product and vehicle details still need current verification.',
+  'MANUFACTURER CLAIM': 'The current scope depends on first-party product claims and is not presented as independent testing.',
+  'COMMUNITY REPORTED': 'Repeated owner reports inform this page, but vehicle and software differences may change results.',
+  'NEEDS VERIFICATION': 'Primary evidence is incomplete. Treat this as a research framework, not a final product conclusion.',
+  'HANDS-ON VERIFIED': 'Use only when retained project evidence supports the exact statement and configuration.'
+}[article.data.evidenceLevel];
+const safetyCopy = article.data.safetyLevel === 'HIGH'
+  ? 'High-risk subject: confirm prerequisites, stable power and a recovery path. Professional assistance may be appropriate.'
+  : article.data.safetyLevel === 'MEDIUM'
+    ? 'Use vehicle-specific instructions and understand the effect of any write or service operation.'
+    : 'Low-risk research context; vehicle-specific verification still applies.';
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: article.data.title,
+  description: article.data.description,
+  datePublished: article.data.publishedAt.toISOString(),
+  dateModified: (article.data.updatedAt || article.data.publishedAt).toISOString(),
+  author: { '@type': 'Organization', name: article.data.author },
+  publisher: { '@type': 'Organization', name: 'Chassis Signal', url: Astro.site },
+  mainEntityOfPage: canonical,
+  image: new URL(image, Astro.site)
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', Astro.site) },
+    { '@type': 'ListItem', position: 2, name: sectionLabel, item: new URL(sectionHref, Astro.site) },
+    { '@type': 'ListItem', position: 3, name: article.data.title, item: canonical }
+  ]
+};
+---
+<BaseLayout title={article.data.seoTitle || article.data.title} description={article.data.description} image={image} type="article">
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <header class="article-header shell">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href={sectionHref}>{sectionLabel}</a><span>/</span><span aria-current="page">{article.data.title}</span></nav>
+    <h1>{article.data.title}</h1>
+    <p class="article-dek">{article.data.description}</p>
+    <div class="article-meta"><span>Published {published}</span>{updated && <span>Updated {updated}</span>}{pricingChecked && <span>Pricing checked {pricingChecked}</span>}<span>{article.data.readingTime}</span><span>Safety / {article.data.safetyLevel}</span><EvidenceBadge level={article.data.evidenceLevel} /></div>
+  </header>
+  {article.data.showHero && <img class="article-hero-image" src={image} alt={article.data.heroAlt} width="1774" height="887" />}
+  <div class:list={['article-layout', { 'article-layout--no-hero': !article.data.showHero }]}>
+    <nav class="toc" aria-label="Table of contents"><strong>On this page</strong>{headings.filter((heading) => heading.depth === 2).map((heading) => <a href={`#${heading.slug}`}>{heading.text}</a>)}</nav>
+    <article class="prose">
+      <div class="key-findings"><strong>Evidence & safety context</strong><p>{evidenceCopy} {safetyCopy}</p></div>
+      <Content />
+      {related.length > 0 && <section class="related"><h2>Related research</h2>{related.map((item) => <p><a href={articlePath(item)}>{item.data.title} →</a></p>)}</section>}
+    </article>
+    <aside class="article-aside"><div class="evidence-panel"><h2>Evidence label</h2><EvidenceBadge level={article.data.evidenceLevel} /><p>{evidenceCopy}</p></div><div class="research-note"><strong>Methodology</strong><p><a href="/methodology/">See how we classify evidence →</a></p></div></aside>
+  </div>
+</BaseLayout>

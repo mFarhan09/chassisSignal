@@ -3,7 +3,7 @@ import ArticlePage from '../../components/ArticlePage.astro';
 import { getPublishedArticles } from '../../data/articles';
 
 export async function getStaticPaths() {
-  const articles = (await getPublishedArticles()).filter((article) => article.data.section === 'research');
+  const articles = (await getPublishedArticles()).filter((article) => article.data.section === 'guides');
   return articles.map((article) => ({ params: { slug: article.data.slug }, props: { article, articles } }));
 }
 

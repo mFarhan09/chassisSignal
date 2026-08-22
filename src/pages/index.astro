@@ -1,6 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { getPublishedArticles } from '../data/articles';
 import { categories } from '../data/site';
+
+const featuredArticles = (await getPublishedArticles())
+  .filter((article) => article.data.featured)
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
+  .slice(0, 1);
 ---
 <BaseLayout title="Chassis Signal" description="Independent BMW & MINI diagnostic scanner, coding adapter, software and compatibility research.">
   <section class="hero mobile-panel">
@@ -25,10 +32,10 @@ import { categories } from '../data/site';
     </div>
   </section>
 
-  <section class="section section--tight mobile-panel" aria-labelledby="publication-status-title">
+  <section class="section section--tight mobile-panel" aria-labelledby="latest-guide-title">
     <div class="shell">
-      <div class="section-head" data-reveal><div><p class="section-kicker">Publication status</p><h2 id="publication-status-title">Research starts with evidence.</h2></div><a class="text-link" href="/methodology/">Review the methodology <span>→</span></a></div>
-      <div class="empty-state card-3d" data-reveal><p class="section-kicker">Editorial queue</p><h2>No research articles are published yet.</h2><p>Chassis Signal will publish only after the source set, compatibility context and factual claims have been reviewed. Development examples have not been retained as editorial content.</p></div>
+      <div class="section-head" data-reveal><div><p class="section-kicker">Latest publication</p><h2 id="latest-guide-title">Evidence-led owner guidance.</h2></div><a class="text-link" href="/guides/">Browse all guides <span>→</span></a></div>
+      <div class="article-grid article-grid--single" data-reveal>{featuredArticles.map((article) => <ArticleCard article={article} />)}</div>
     </div>
   </section>
 

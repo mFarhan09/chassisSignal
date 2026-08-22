@@ -4,7 +4,7 @@ export const primaryNav = [
   { label: 'Software', href: '/software/' },
   { label: 'Comparisons', href: '/comparisons/' },
   { label: 'Compatibility', href: '/compatibility/' },
-  { label: 'Research', href: '/research/' }
+  { label: 'Guides', href: '/guides/' }
 ] as const;
 
 export const categories = [
@@ -32,6 +32,7 @@ export const hubs: Hub[] = [
   { slug: 'comparisons', eyebrow: 'Research hub / 04', title: 'Comparisons', intro: 'Calm, factual comparisons built around ownership model, connection type, documented functions and compatibility—not unsupported scores.', focus: ['Like-for-like scope', 'Documented differences', 'Evidence gaps', 'Decision context'], note: '“Best” only makes sense after the vehicle, intended task and tolerance for subscriptions are known.' },
   { slug: 'compatibility', eyebrow: 'Research hub / 05', title: 'Compatibility index', intro: 'A developing map of the relationships between BMW and MINI chassis generations, protocols, adapters, apps and scanners.', focus: ['E-Series', 'F-Series', 'G-Series', 'MINI'], note: 'Compatibility is a chain. Vehicle, interface, software and intended function all need to align.' },
   { slug: 'battery-service-tools', eyebrow: 'Research hub / 06', title: 'Battery & service tools', intro: 'Research into battery registration, service resets and adjacent maintenance functions with safety and evidence labels kept visible.', focus: ['Battery registration', 'Service resets', 'System coverage', 'Procedure risk'], note: 'Battery registration is not the same as battery coding. Follow vehicle-specific service information.' },
+  { slug: 'guides', eyebrow: 'Publication guides', title: 'Guides', intro: 'Evidence-backed BMW and MINI diagnostic-tool guides built for specific owner decisions.', focus: ['Comparisons', 'Compatibility', 'Ownership cost', 'Decision support'], note: 'Each guide distinguishes documented facts, analysis, limitations and any firsthand evidence.' },
   { slug: 'research', eyebrow: 'Publication index', title: 'All research', intro: 'The publication index for completed guides, comparisons and compatibility research.', focus: ['Buyer guides', 'Explainers', 'Comparisons', 'Compatibility'], note: 'Only completed, evidence-backed work is added to this index.' }
 ];
 

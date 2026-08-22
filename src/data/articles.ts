@@ -9,3 +9,7 @@ export async function getPublishedArticles() {
 
   return getCollection('articles', ({ data }) => !data.draft);
 }
+
+export function articlePath(article: { data: { section: 'guides' | 'research'; slug: string } }) {
+  return `/${article.data.section}/${article.data.slug}/`;
+}
