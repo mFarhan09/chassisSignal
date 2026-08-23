@@ -74,7 +74,13 @@ const breadcrumbSchema = {
     <article class="prose">
       <div class="key-findings"><strong>Evidence & safety context</strong><p>{evidenceCopy} {safetyCopy}</p></div>
       <Content />
-      {related.length > 0 && <section class="related"><h2>Related research</h2>{related.map((item) => <p><a href={articlePath(item)}>{item.data.title} →</a></p>)}</section>}
+      {related.length > 0 && <section class="related">
+        <h2>Related research</h2>
+        <div class="related-grid">{related.map((item) => <a class="related-card" href={articlePath(item)}>
+          <span class="related-card__visual" style={`--related-image:url(${typeof item.data.heroImage === 'string' ? item.data.heroImage : '/images/research-workshop.jpg'})`} aria-hidden="true"></span>
+          <span class="related-card__body"><small>{item.data.category}</small><strong>{item.data.title}</strong><span>Read guide →</span></span>
+        </a>)}</div>
+      </section>}
     </article>
     <aside class="article-aside"><div class="evidence-panel"><h2>Evidence label</h2><EvidenceBadge level={article.data.evidenceLevel} /><p>{evidenceCopy}</p><h2 class="rail-heading">Safety</h2><p><strong>Safety / {article.data.safetyLevel}</strong><br />{safetyCopy}</p><h2 class="rail-heading">Testing status</h2><p>Documentation-based; no hands-on claim.</p></div><div class="research-note"><strong>Methodology</strong><p><a href="/methodology/">See how we classify evidence →</a></p></div></aside>
   </div>

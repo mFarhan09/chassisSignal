@@ -1,10 +1,10 @@
 export const primaryNav = [
+  { label: 'Guides', href: '/guides/' },
   { label: 'Scanners', href: '/scanners/' },
   { label: 'Coding adapters', href: '/coding-adapters/' },
   { label: 'Software', href: '/software/' },
   { label: 'Comparisons', href: '/comparisons/' },
-  { label: 'Compatibility', href: '/compatibility/' },
-  { label: 'Guides', href: '/guides/' }
+  { label: 'Compatibility', href: '/compatibility/' }
 ] as const;
 
 export const categories = [

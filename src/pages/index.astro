@@ -7,7 +7,7 @@ import { categories } from '../data/site';
 const featuredArticles = (await getPublishedArticles())
   .filter((article) => article.data.featured)
   .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
-  .slice(0, 1);
+  .slice(0, 2);
 ---
 <BaseLayout title="Chassis Signal" description="Independent BMW & MINI diagnostic scanner, coding adapter, software and compatibility research.">
   <section class="hero mobile-panel">
@@ -34,8 +34,8 @@ const featuredArticles = (await getPublishedArticles())
 
   <section class="section section--tight mobile-panel" aria-labelledby="latest-guide-title">
     <div class="shell">
-      <div class="section-head" data-reveal><div><p class="section-kicker">Latest publication</p><h2 id="latest-guide-title">Evidence-led owner guidance.</h2></div><a class="text-link" href="/guides/">Browse all guides <span>→</span></a></div>
-      <div class="article-grid article-grid--single" data-reveal>{featuredArticles.map((article) => <ArticleCard article={article} />)}</div>
+      <div class="section-head" data-reveal><div><p class="section-kicker">Latest publications</p><h2 id="latest-guide-title">Evidence-led owner guidance.</h2></div><a class="text-link" href="/guides/">Browse all guides <span>→</span></a></div>
+      <div class="article-grid article-grid--featured" data-reveal>{featuredArticles.map((article) => <ArticleCard article={article} />)}</div>
     </div>
   </section>
 
