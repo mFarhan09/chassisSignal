@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1660" role="img" aria-labelledby="title desc">
+  <title id="title">BMW battery registration scanner selection gate</title>
+  <desc id="desc">A vertical mobile flow through vehicle, requirement, function, hardware, and license gates before purchase.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0v6l9-3z" fill="#e7a85d"/></marker>
+  </defs>
+  <rect width="600" height="1660" rx="28" fill="#0b1017"/>
+  <g font-family="Inter,Arial,sans-serif">
+    <text x="36" y="64" fill="#f3f0e8" font-size="38" font-weight="700">Five gates before purchase</text>
+    <text x="36" y="103" fill="#aab5c4" font-size="20">“Supports BMW” is not an exact result</text>
+
+    <g transform="translate(36 142)">
+      <rect width="528" height="210" rx="22" fill="#151e2b" stroke="#64c9a5"/>
+      <text x="28" y="44" fill="#64c9a5" font-size="22" font-weight="700">01 — VEHICLE</text>
+      <text x="28" y="91" fill="#f3f0e8" font-size="30" font-weight="700">Exact chassis + build date</text>
+      <text x="28" y="139" fill="#aab5c4" font-size="21">Model • drivetrain</text>
+      <text x="28" y="174" fill="#aab5c4" font-size="21">Main / auxiliary battery</text>
+    </g>
+    <path d="M300 364V402" stroke="#e7a85d" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <g transform="translate(36 420)">
+      <rect width="528" height="210" rx="22" fill="#151e2b" stroke="#64c9a5"/>
+      <text x="28" y="44" fill="#64c9a5" font-size="22" font-weight="700">02 — REQUIREMENT</text>
+      <text x="28" y="91" fill="#f3f0e8" font-size="30" font-weight="700">Registration or configuration?</text>
+      <text x="28" y="139" fill="#aab5c4" font-size="21">Same type / capacity</text>
+      <text x="28" y="174" fill="#aab5c4" font-size="21">or documented change</text>
+    </g>
+    <path d="M300 642V680" stroke="#e7a85d" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <g transform="translate(36 698)">
+      <rect width="528" height="210" rx="22" fill="#151e2b" stroke="#64c9a5"/>
+      <text x="28" y="44" fill="#64c9a5" font-size="22" font-weight="700">03 — FUNCTION</text>
+      <text x="28" y="91" fill="#f3f0e8" font-size="30" font-weight="700">Exact feature documented</text>
+      <text x="28" y="139" fill="#aab5c4" font-size="21">Checker • app preview</text>
+      <text x="28" y="174" fill="#aab5c4" font-size="21">Manual • support reply</text>
+    </g>
+    <path d="M300 920V958" stroke="#e7a85d" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <g transform="translate(36 976)">
+      <rect width="528" height="210" rx="22" fill="#151e2b" stroke="#64c9a5"/>
+      <text x="28" y="44" fill="#64c9a5" font-size="22" font-weight="700">04 — HARDWARE</text>
+      <text x="28" y="91" fill="#f3f0e8" font-size="30" font-weight="700">Current scanner or adapter</text>
+      <text x="28" y="139" fill="#aab5c4" font-size="21">Generation • vehicle series</text>
+      <text x="28" y="174" fill="#aab5c4" font-size="21">Phone / OS where applicable</text>
+    </g>
+    <path d="M300 1198V1236" stroke="#e7a85d" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <g transform="translate(36 1254)">
+      <rect width="528" height="174" rx="22" fill="#151e2b" stroke="#64c9a5"/>
+      <text x="28" y="44" fill="#64c9a5" font-size="22" font-weight="700">05 — LICENSE</text>
+      <text x="28" y="91" fill="#f3f0e8" font-size="30" font-weight="700">One-time or annual</text>
+      <text x="28" y="139" fill="#aab5c4" font-size="21">Region • channel • renewal • updates</text>
+    </g>
+
+    <rect x="36" y="1462" width="528" height="126" rx="22" fill="#172332" stroke="#324253"/>
+    <text x="300" y="1510" text-anchor="middle" fill="#f3f0e8" font-size="26" font-weight="700">BUY only when all gates pass</text>
+    <text x="300" y="1552" text-anchor="middle" fill="#e7a85d" font-size="19">Ambiguous chassis or function = HOLD</text>
+    <text x="300" y="1624" text-anchor="middle" fill="#aab5c4" font-size="17">Tool selection only — no service procedure.</text>
+  </g>
+</svg>

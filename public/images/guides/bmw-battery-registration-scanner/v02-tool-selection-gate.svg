@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 820" role="img" aria-labelledby="title desc">
+  <title id="title">BMW battery registration scanner selection gate</title>
+  <desc id="desc">Five gates require exact vehicle, exact battery requirement, documented function, required hardware, and license or ownership fit before purchase.</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0v6l9-3z" fill="#e7a85d"/></marker></defs>
+  <rect width="1600" height="820" rx="30" fill="#0b1017"/>
+  <text x="70" y="82" fill="#f3f0e8" font-family="Inter,Arial,sans-serif" font-size="40" font-weight="700">Five gates before purchase</text>
+  <text x="70" y="120" fill="#aab5c4" font-family="Inter,Arial,sans-serif" font-size="21">“Supports BMW” is not an exact compatibility result</text>
+  <g font-family="Inter,Arial,sans-serif">
+    <g transform="translate(55 210)"><rect width="260" height="270" rx="22" fill="#151e2b" stroke="#64c9a5"/><text x="26" y="46" fill="#64c9a5" font-size="17" font-weight="700">01 — VEHICLE</text><text x="26" y="100" fill="#f3f0e8" font-size="25" font-weight="700">Exact chassis</text><text x="26" y="134" fill="#f3f0e8" font-size="25" font-weight="700">+ build date</text><text x="26" y="194" fill="#aab5c4" font-size="18">Model • drivetrain</text><text x="26" y="226" fill="#aab5c4" font-size="18">Main / auxiliary</text></g>
+    <path d="M325 345H365" stroke="#e7a85d" stroke-width="4" marker-end="url(#a)"/>
+    <g transform="translate(375 210)"><rect width="260" height="270" rx="22" fill="#151e2b" stroke="#64c9a5"/><text x="26" y="46" fill="#64c9a5" font-size="17" font-weight="700">02 — REQUIREMENT</text><text x="26" y="100" fill="#f3f0e8" font-size="25" font-weight="700">Registration</text><text x="26" y="134" fill="#f3f0e8" font-size="25" font-weight="700">or configuration?</text><text x="26" y="194" fill="#aab5c4" font-size="18">Same type / capacity</text><text x="26" y="226" fill="#aab5c4" font-size="18">or documented change</text></g>
+    <path d="M645 345H685" stroke="#e7a85d" stroke-width="4" marker-end="url(#a)"/>
+    <g transform="translate(695 210)"><rect width="260" height="270" rx="22" fill="#151e2b" stroke="#64c9a5"/><text x="26" y="46" fill="#64c9a5" font-size="17" font-weight="700">03 — FUNCTION</text><text x="26" y="100" fill="#f3f0e8" font-size="25" font-weight="700">Exact feature</text><text x="26" y="134" fill="#f3f0e8" font-size="25" font-weight="700">documented</text><text x="26" y="194" fill="#aab5c4" font-size="18">Checker • app preview</text><text x="26" y="226" fill="#aab5c4" font-size="18">manual • support reply</text></g>
+    <path d="M965 345H1005" stroke="#e7a85d" stroke-width="4" marker-end="url(#a)"/>
+    <g transform="translate(1015 210)"><rect width="260" height="270" rx="22" fill="#151e2b" stroke="#64c9a5"/><text x="26" y="46" fill="#64c9a5" font-size="17" font-weight="700">04 — HARDWARE</text><text x="26" y="100" fill="#f3f0e8" font-size="25" font-weight="700">Current scanner</text><text x="26" y="134" fill="#f3f0e8" font-size="25" font-weight="700">or adapter</text><text x="26" y="194" fill="#aab5c4" font-size="18">Generation • series</text><text x="26" y="226" fill="#aab5c4" font-size="18">Phone / OS if used</text></g>
+    <path d="M1285 345H1325" stroke="#e7a85d" stroke-width="4" marker-end="url(#a)"/>
+    <g transform="translate(1335 210)"><rect width="210" height="270" rx="22" fill="#151e2b" stroke="#64c9a5"/><text x="22" y="46" fill="#64c9a5" font-size="17" font-weight="700">05 — LICENSE</text><text x="22" y="100" fill="#f3f0e8" font-size="24" font-weight="700">One-time or</text><text x="22" y="134" fill="#f3f0e8" font-size="24" font-weight="700">annual</text><text x="22" y="194" fill="#aab5c4" font-size="17">Region • channel</text><text x="22" y="226" fill="#aab5c4" font-size="17">Renewal • updates</text></g>
+  </g>
+  <rect x="230" y="570" width="1140" height="120" rx="22" fill="#172332" stroke="#324253"/>
+  <text x="800" y="618" text-anchor="middle" fill="#f3f0e8" font-family="Inter,Arial,sans-serif" font-size="26" font-weight="700">BUY only when all five gates pass</text>
+  <text x="800" y="658" text-anchor="middle" fill="#e7a85d" font-family="Inter,Arial,sans-serif" font-size="20">Ambiguous function or chassis support = HOLD, not a guessed connection.</text>
+  <text x="800" y="756" text-anchor="middle" fill="#aab5c4" font-family="Inter,Arial,sans-serif" font-size="19">Tool selection only. No battery replacement, registration, coding or ECU procedure.</text>
+</svg>

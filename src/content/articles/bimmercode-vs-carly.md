@@ -31,6 +31,8 @@ That does not make Carly the automatic choice. If you mainly want occasional cod
 
 There is also a third comparison owners often miss: **BimmerCode and BimmerLink are separate products**. BimmerLink, not BimmerCode, is the developer's product for documented functions such as fault-code diagnostics, live sensor data, battery registration, DPF functions, and service functions. An owner who wants BimmerCode's coding approach plus those capabilities may need to compare **BimmerCode + BimmerLink** against Carly.
 
+If battery registration is your main requirement, see our [BMW battery-registration scanner guide](/guides/bmw-battery-registration-scanner/) for tool and compatibility checks.
+
 > **Testing disclosure:** Chassis Signal has not physically tested BimmerCode or Carly for this comparison. This article is based on current official compatibility, support, pricing, licensing, and platform documentation.
 
 ## Why this is not a simple feature-for-feature comparison

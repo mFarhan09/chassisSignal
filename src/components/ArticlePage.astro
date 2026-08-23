@@ -16,6 +16,7 @@ const { Content, headings } = await render(article);
 const href = articlePath(article);
 const sectionLabel = article.data.section === 'guides' ? 'Guides' : 'Research';
 const sectionHref = `/${article.data.section}/`;
+const breadcrumbLabel = article.data.title.split(':')[0];
 const related = articles
   .filter((candidate) => candidate.id !== article.id && (candidate.data.category === article.data.category || candidate.data.tags.some((tag: string) => article.data.tags.includes(tag))))
   .slice(0, 3);
@@ -25,14 +26,14 @@ const pricingChecked = article.data.pricingChecked?.toLocaleDateString('en-GB', 
 const image = typeof article.data.heroImage === 'string' ? article.data.heroImage : '/images/research-workshop.jpg';
 const canonical = new URL(href, Astro.site);
 const evidenceCopy = {
-  'DOCUMENTED': 'The core scope is supported by official documentation. Product and vehicle details still need current verification.',
+  'DOCUMENTED': 'Primary manufacturer documentation supports the core scope. Compatibility claims are not independent hands-on testing; verify the exact vehicle and function.',
   'MANUFACTURER CLAIM': 'The current scope depends on first-party product claims and is not presented as independent testing.',
   'COMMUNITY REPORTED': 'Repeated owner reports inform this page, but vehicle and software differences may change results.',
   'NEEDS VERIFICATION': 'Primary evidence is incomplete. Treat this as a research framework, not a final product conclusion.',
   'HANDS-ON VERIFIED': 'Use only when retained project evidence supports the exact statement and configuration.'
 }[article.data.evidenceLevel];
 const safetyCopy = article.data.safetyLevel === 'HIGH'
-  ? 'High-risk subject: confirm prerequisites, stable power and a recovery path. Professional assistance may be appropriate.'
+  ? 'Tool-selection guidance only: this article does not provide battery replacement, registration or coding instructions. Vehicle-specific prerequisites still matter.'
   : article.data.safetyLevel === 'MEDIUM'
     ? 'Use vehicle-specific instructions and understand the effect of any write or service operation.'
     : 'Low-risk research context; vehicle-specific verification still applies.';
@@ -62,7 +63,7 @@ const breadcrumbSchema = {
   <script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <header class="article-header shell">
-    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href={sectionHref}>{sectionLabel}</a><span>/</span><span aria-current="page">{article.data.title}</span></nav>
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href={sectionHref}>{sectionLabel}</a><span>/</span><span aria-current="page">{breadcrumbLabel}</span></nav>
     <h1>{article.data.title}</h1>
     <p class="article-dek">{article.data.description}</p>
     <div class="article-meta"><span>Published {published}</span>{updated && <span>Updated {updated}</span>}{pricingChecked && <span>Pricing checked {pricingChecked}</span>}<span>{article.data.readingTime}</span><span>Safety / {article.data.safetyLevel}</span><EvidenceBadge level={article.data.evidenceLevel} /></div>
@@ -75,6 +76,6 @@ const breadcrumbSchema = {
       <Content />
       {related.length > 0 && <section class="related"><h2>Related research</h2>{related.map((item) => <p><a href={articlePath(item)}>{item.data.title} →</a></p>)}</section>}
     </article>
-    <aside class="article-aside"><div class="evidence-panel"><h2>Evidence label</h2><EvidenceBadge level={article.data.evidenceLevel} /><p>{evidenceCopy}</p></div><div class="research-note"><strong>Methodology</strong><p><a href="/methodology/">See how we classify evidence →</a></p></div></aside>
+    <aside class="article-aside"><div class="evidence-panel"><h2>Evidence label</h2><EvidenceBadge level={article.data.evidenceLevel} /><p>{evidenceCopy}</p><h2 class="rail-heading">Safety</h2><p><strong>Safety / {article.data.safetyLevel}</strong><br />{safetyCopy}</p><h2 class="rail-heading">Testing status</h2><p>Documentation-based; no hands-on claim.</p></div><div class="research-note"><strong>Methodology</strong><p><a href="/methodology/">See how we classify evidence →</a></p></div></aside>
   </div>
 </BaseLayout>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1260" role="img" aria-labelledby="title desc">
+  <title id="title">BMW battery registration versus battery configuration</title>
+  <desc id="desc">A mobile comparison showing that recording a replacement battery is different from changing battery type or capacity.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0v6l9-3z" fill="#e7a85d"/></marker>
+  </defs>
+  <rect width="600" height="1260" rx="28" fill="#0b1017"/>
+  <g font-family="Inter,Arial,sans-serif">
+    <text x="36" y="66" fill="#f3f0e8" font-size="38" font-weight="700">Two different requirements</text>
+    <text x="36" y="105" fill="#aab5c4" font-size="20">Registration does not prove configuration support</text>
+
+    <g transform="translate(36 150)">
+      <rect width="528" height="412" rx="24" fill="#151e2b" stroke="#64c9a5" stroke-width="2"/>
+      <text x="28" y="48" fill="#64c9a5" font-size="22" font-weight="700">BATTERY REGISTRATION</text>
+      <text x="28" y="96" fill="#f3f0e8" font-size="31" font-weight="700">Replacement recorded</text>
+      <g transform="translate(28 132)">
+        <circle cx="46" cy="46" r="42" fill="#203645"/>
+        <rect x="28" y="19" width="36" height="52" rx="5" fill="none" stroke="#64c9a5" stroke-width="4"/>
+        <path d="M38 14V4m16 10V4" stroke="#64c9a5" stroke-width="4"/>
+        <path d="M104 46H280" stroke="#64c9a5" stroke-width="4" marker-end="url(#arrow)"/>
+        <rect x="306" y="4" width="162" height="84" rx="14" fill="#203645"/>
+        <text x="387" y="54" text-anchor="middle" fill="#f3f0e8" font-size="20">Vehicle record</text>
+      </g>
+      <text x="28" y="274" fill="#d8dee8" font-size="22">Tells the vehicle a replacement</text>
+      <text x="28" y="307" fill="#d8dee8" font-size="22">battery was installed.</text>
+      <path d="M28 336H500" stroke="#2d3a49"/>
+      <text x="28" y="374" fill="#f0b46d" font-size="19" font-weight="700">VERIFY</text>
+      <text x="112" y="374" fill="#d8dee8" font-size="19">exact chassis + main/auxiliary</text>
+    </g>
+
+    <path d="M300 580V624" stroke="#e7a85d" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <g transform="translate(36 648)">
+      <rect width="528" height="460" rx="24" fill="#151e2b" stroke="#c7a4ff" stroke-width="2"/>
+      <text x="28" y="48" fill="#c7a4ff" font-size="21" font-weight="700">TYPE / CAPACITY CONFIGURATION</text>
+      <text x="28" y="96" fill="#f3f0e8" font-size="31" font-weight="700">Specification may change</text>
+      <rect x="28" y="132" width="222" height="104" rx="14" fill="#202b3c"/>
+      <text x="139" y="172" text-anchor="middle" fill="#aab5c4" font-size="18">Chemistry</text>
+      <text x="139" y="207" text-anchor="middle" fill="#f3f0e8" font-size="22" font-weight="700">AGM / standard</text>
+      <rect x="278" y="132" width="222" height="104" rx="14" fill="#202b3c"/>
+      <text x="389" y="172" text-anchor="middle" fill="#aab5c4" font-size="18">Capacity</text>
+      <text x="389" y="207" text-anchor="middle" fill="#f3f0e8" font-size="22" font-weight="700">Supported Ah</text>
+      <text x="28" y="286" fill="#d8dee8" font-size="22">Requires separate, vehicle-specific</text>
+      <text x="28" y="319" fill="#d8dee8" font-size="22">support where a change is needed.</text>
+      <path d="M28 352H500" stroke="#2d3a49"/>
+      <text x="28" y="393" fill="#f0b46d" font-size="19" font-weight="700">DO NOT INFER</text>
+      <text x="28" y="426" fill="#d8dee8" font-size="19">from “battery registration”</text>
+    </g>
+
+    <text x="300" y="1174" text-anchor="middle" fill="#aab5c4" font-size="19">Tool-selection distinction only.</text>
+    <text x="300" y="1205" text-anchor="middle" fill="#aab5c4" font-size="19">Not a battery service procedure.</text>
+  </g>
+</svg>
