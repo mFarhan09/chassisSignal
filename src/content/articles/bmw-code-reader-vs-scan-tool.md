@@ -89,13 +89,13 @@ Even “live data” needs qualification. Standardized OBD-II defines a common e
 
 ## Service functions are not one bundle
 
-An oil reminder reset, battery registration and electronic parking-brake service mode are different jobs. BimmerLink documents them separately. A tool advertising “reset functions” has not established all three.
+An oil reminder reset, battery registration and electronic parking-brake service mode are different jobs. BimmerLink documents them separately. A tool advertising “reset functions” has not established all three. Use the [BMW battery registration scanner guide](/guides/bmw-battery-registration-scanner/) when that is the actual job.
 
 For battery work, battery type or capacity configuration and battery registration are separate questions. Do not infer that a code-clearing function performs registration, or that a maintenance-reset menu covers the required battery procedure. A dedicated battery-registration guide is planned, but it must not be linked until that page is live.
 
 ## Active tests, coding and safety
 
-An active test commands a supported output while the technician observes the result. It can narrow a fault, but it changes vehicle state. Do not infer it from “all-system” or “professional.”
+An active test commands a supported output while the technician observes the result. It can narrow a fault, but it changes vehicle state. Do not infer it from “all-system” or “professional.” For the broader category choice, see [OBD app vs handheld scanner](/guides/obd-app-vs-handheld-scanner/).
 
 Coding changes configuration; programming or flashing may write software. Both differ from reading DTCs. [BimmerCode’s adapter matrix](https://bimmercode.app/adapters/) also shows that vehicle series and connection method constrain the path. A compatible connector does not prove every coding option exists. This guide provides no modification instructions.
 

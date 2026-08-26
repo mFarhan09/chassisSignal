@@ -27,6 +27,8 @@ OBDLink CX and MX+ can both suit a BMW owner. They are not interchangeable acros
 
 The correct choice depends on the cars, app, phone or computer, and included software—not an undocumented claim that one is universally faster or more reliable.
 
+If BimmerLink is the app in your plan, use the [BimmerLink adapter guide](/guides/bimmerlink-adapter/) to verify the exact vehicle, platform, interface, and function intersection.
+
 <figure class="cs-article-visual">
   <img src="/images/guides/obdlink-cx-vs-mx-plus/cs009-in-car-diagnostic-context.webp" alt="A technician using a laptop inside a vehicle during diagnostic work." width="1600" height="900" loading="lazy" decoding="async">
   <figcaption>Vehicle-diagnostics context; no OBDLink product or connection result is depicted or tested. Photo by Fatih Erden via Pexels.</figcaption>

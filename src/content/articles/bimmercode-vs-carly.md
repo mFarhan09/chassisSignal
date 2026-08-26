@@ -33,6 +33,8 @@ There is also a third comparison owners often miss: **BimmerCode and BimmerLink 
 
 If battery registration is your main requirement, see our [BMW battery-registration scanner guide](/guides/bmw-battery-registration-scanner/) for tool and compatibility checks.
 
+For the recurring-cost side of the Carly decision, see our [Carly subscription cost guide](/guides/carly-subscription-cost/) for channel-specific pricing and renewal checks.
+
 > **Testing disclosure:** Chassis Signal has not physically tested BimmerCode or Carly for this comparison. This article is based on current official compatibility, support, pricing, licensing, and platform documentation.
 
 ## Why this is not a simple feature-for-feature comparison
