@@ -9,6 +9,7 @@ updatedAt: 2026-08-23
 pricingChecked: 2026-08-22
 category: "Comparisons"
 tags: ["Guides", "BMW", "MINI", "Coding", "Diagnostics", "BimmerCode", "Carly"]
+relatedSlugs: [bimmercode-pricing, carly-subscription-cost, mini-diagnostic-app]
 featured: true
 heroImage: "/images/guides/bimmercode-vs-carly/r02-carly-universal-scanner.webp"
 heroAlt: "Official press photograph of the Carly Universal Scanner used for hardware identification"
@@ -34,6 +35,8 @@ There is also a third comparison owners often miss: **BimmerCode and BimmerLink 
 If battery registration is your main requirement, see our [BMW battery-registration scanner guide](/guides/bmw-battery-registration-scanner/) for tool and compatibility checks.
 
 For the recurring-cost side of the Carly decision, see our [Carly subscription cost guide](/guides/carly-subscription-cost/) for channel-specific pricing and renewal checks.
+
+For BimmerCode platform licensing and adapter ownership cost, use the dedicated [BimmerCode pricing guide](/guides/bimmercode-pricing/).
 
 > **Testing disclosure:** Chassis Signal has not physically tested BimmerCode or Carly for this comparison. This article is based on current official compatibility, support, pricing, licensing, and platform documentation.
 

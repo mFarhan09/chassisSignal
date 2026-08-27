@@ -8,6 +8,7 @@ publishedAt: 2026-08-25T12:00:00+05:00
 updatedAt: 2026-08-25T12:00:00+05:00
 category: "Buying Guides"
 tags: ["Guides", "BMW", "MINI", "Diagnostics", "Scanners", "Code Readers", "Scan Tools"]
+relatedSlugs: [obd-app-vs-handheld-scanner, bmw-battery-registration-scanner, bimmerlink-adapter]
 featured: true
 heroImage: "/images/guides/bmw-code-reader-vs-scan-tool/cs010-obd-diagnostic-tool-context.webp"
 heroAlt: "A technician holding a diagnostic tool inside a vehicle workshop"

@@ -9,6 +9,7 @@ updatedAt: 2026-08-23T12:00:00+05:00
 pricingChecked: 2026-08-23
 category: "Buying Guides"
 tags: ["Guides", "BMW", "MINI", "Diagnostics", "Battery Registration", "BimmerLink", "Carly", "ANCEL"]
+relatedSlugs: [bimmerlink-adapter, bmw-code-reader-vs-scan-tool, obd-app-vs-handheld-scanner]
 featured: true
 heroImage: "/images/guides/bmw-battery-registration-scanner/r01-obd-diagnostic-session.webp"
 heroAlt: "A technician uses an automotive diagnostic tablet inside a vehicle"

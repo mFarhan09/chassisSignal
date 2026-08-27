@@ -19,6 +19,7 @@ const articles = defineCollection({
     pricingChecked: z.coerce.date().optional(),
     category: z.string(),
     tags: z.array(z.string()),
+    relatedSlugs: z.array(z.string()).default([]),
     featured: z.boolean().default(false),
     heroImage: z.string().or(image()).optional(),
     heroAlt: z.string(),

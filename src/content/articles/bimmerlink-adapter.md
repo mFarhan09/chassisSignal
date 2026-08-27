@@ -8,6 +8,7 @@ publishedAt: 2026-08-26T12:00:00+05:00
 updatedAt: 2026-08-26
 category: 'Buying Guides'
 tags: [Guides, BMW, MINI, Diagnostics, Adapters, BimmerLink, Compatibility]
+relatedSlugs: [mini-diagnostic-app, bmw-f-series-vs-g-series-obd-adapter, obdlink-mx-plus-vs-lx]
 featured: true
 heroImage: /images/guides/bimmerlink-adapter/cs014-bmw-diagnostic-context.webp
 heroAlt: BMW interior with steering wheel, center display, and dashboard controls
@@ -64,6 +65,8 @@ BimmerLink describes all-control-unit trouble-code reading and clearing, real-ti
 For a check-engine-light-only task, first ask whether a simpler generic reader would be enough. Our [BMW code reader versus scan tool](/guides/bmw-code-reader-vs-scan-tool/) guide explains why generic emissions access and BMW-aware module access are not equivalent.
 
 For battery replacement, adapter compatibility is only one part of the workflow. The vehicle may require registration, capacity or chemistry handling, or a different level of configuration. Use the [BMW battery registration scanner](/guides/bmw-battery-registration-scanner/) guide for that specific decision.
+
+For MINI owners choosing the app role before the adapter, the [MINI diagnostic app guide](/guides/mini-diagnostic-app/) separates diagnostics, service functions, and coding.
 
 ## Third gate: iOS and Android do not accept every path equally
 

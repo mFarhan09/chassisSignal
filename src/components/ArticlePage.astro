@@ -17,8 +17,12 @@ const href = articlePath(article);
 const sectionLabel = article.data.section === 'guides' ? 'Guides' : 'Research';
 const sectionHref = `/${article.data.section}/`;
 const breadcrumbLabel = article.data.title.split(':')[0];
-const related = articles
-  .filter((candidate) => candidate.id !== article.id && (candidate.data.category === article.data.category || candidate.data.tags.some((tag: string) => article.data.tags.includes(tag))))
+const requestedRelatedSlugs = [...new Set(article.data.relatedSlugs)].filter((slug) => slug !== article.data.slug);
+const explicitRelated = requestedRelatedSlugs
+  .map((slug) => articles.find((candidate) => candidate.data.slug === slug))
+  .filter((candidate): candidate is Article => Boolean(candidate));
+const related = (explicitRelated.length > 0 ? explicitRelated : articles
+  .filter((candidate) => candidate.id !== article.id && (candidate.data.category === article.data.category || candidate.data.tags.some((tag: string) => article.data.tags.includes(tag)))))
   .slice(0, 3);
 const published = article.data.publishedAt.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 const updated = article.data.updatedAt?.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -75,7 +79,7 @@ const breadcrumbSchema = {
       <div class="key-findings"><strong>Evidence & safety context</strong><p>{evidenceCopy} {safetyCopy}</p></div>
       <Content />
       {related.length > 0 && <section class="related">
-        <h2>Related research</h2>
+        <h2>Related articles</h2>
         <div class="related-grid">{related.map((item) => <a class="related-card" href={articlePath(item)}>
           <span class="related-card__visual" style={`--related-image:url(${typeof item.data.heroImage === 'string' ? item.data.heroImage : '/images/research-workshop.jpg'})`} aria-hidden="true"></span>
           <span class="related-card__body"><small>{item.data.category}</small><strong>{item.data.title}</strong><span>Read guide →</span></span>

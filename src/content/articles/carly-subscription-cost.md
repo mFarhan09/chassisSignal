@@ -9,6 +9,7 @@ updatedAt: 2026-08-26
 pricingChecked: 2026-08-26
 category: Buying Guides
 tags: [Guides, BMW, MINI, Diagnostics, Carly, Subscriptions, Pricing]
+relatedSlugs: [bimmercode-pricing, bimmercode-vs-carly, mini-diagnostic-app]
 featured: true
 heroImage: /images/guides/carly-subscription-cost/cs020-phone-in-car-context.webp
 heroAlt: Smartphone diagnostic app beside an OBD scanner and mechanic's tools
@@ -76,6 +77,8 @@ A defensible worksheet has a hardware line even when the website labels the scan
 The first-year cash total may contain a scanner and license together. Renewal may contain software only. Comparing first year directly with renewal without exposing that composition makes the recurring cost look inconsistent.
 
 If the buying question is whether Carly is the right product rather than what it costs, keep that separate. The [BimmerCode vs Carly guide](/guides/bimmercode-vs-carly/) owns the app-role comparison. This page owns subscription and ownership math.
+
+For the equivalent one-time-license and adapter-cost decision, see the [BimmerCode pricing guide](/guides/bimmercode-pricing/).
 
 ## Reproducible first-year and renewal math
 
