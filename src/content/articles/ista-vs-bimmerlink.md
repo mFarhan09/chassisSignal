@@ -10,6 +10,7 @@ category: "Comparisons"
 tags: ["Guides", "Comparisons", "BMW", "Diagnostics", "Software", "BimmerLink", "ISTA"]
 relatedSlugs: [bimmerlink-adapter, bimmerlink-vs-protool, bimmercode-vs-carly]
 featured: true
+cardImage: "/images/guides/ista-vs-bimmerlink/cs024-diagnostic-depth.svg"
 heroAlt: ""
 showHero: false
 author: "Chassis Signal Editorial"

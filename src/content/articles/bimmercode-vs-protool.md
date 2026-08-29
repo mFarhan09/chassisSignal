@@ -11,6 +11,7 @@ category: "Comparisons"
 tags: ["Guides", "Comparisons", "BMW", "Coding", "Diagnostics", "Software", "BimmerCode", "ProTool"]
 relatedSlugs: [bimmercode-pricing, bimmercode-vs-carly, bimmerlink-vs-protool]
 featured: true
+cardImage: "/images/guides/bimmercode-vs-protool/cs026-scope-orbits.svg"
 heroAlt: ""
 showHero: false
 author: "Chassis Signal Editorial"

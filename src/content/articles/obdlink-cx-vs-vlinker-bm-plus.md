@@ -10,6 +10,7 @@ category: "Comparisons"
 tags: ["Guides", "Comparisons", "BMW", "Adapters", "Coding adapters", "Compatibility", "OBDLink", "vLinker"]
 relatedSlugs: [obdlink-cx-vs-mx-plus, bimmerlink-adapter, bmw-f-series-vs-g-series-obd-adapter]
 featured: true
+cardImage: "/images/guides/obdlink-cx-vs-vlinker-bm-plus/cs028-compatibility-layers.svg"
 heroAlt: ""
 showHero: false
 author: "Chassis Signal Editorial"

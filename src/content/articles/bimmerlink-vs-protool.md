@@ -11,6 +11,7 @@ category: "Comparisons"
 tags: ["Guides", "Comparisons", "BMW", "Diagnostics", "Software", "BimmerLink", "ProTool"]
 relatedSlugs: [bimmerlink-adapter, bimmercode-vs-protool, ista-vs-bimmerlink]
 featured: true
+cardImage: "/images/guides/bimmerlink-vs-protool/cs027-depth-rungs.svg"
 heroAlt: ""
 showHero: false
 author: "Chassis Signal Editorial"

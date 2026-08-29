@@ -22,6 +22,7 @@ const articles = defineCollection({
     relatedSlugs: z.array(z.string()).default([]),
     featured: z.boolean().default(false),
     heroImage: z.string().or(image()).optional(),
+    cardImage: z.string().optional(),
     heroAlt: z.string(),
     showHero: z.boolean().default(true),
     author: z.string().default('Chassis Signal Editorial'),

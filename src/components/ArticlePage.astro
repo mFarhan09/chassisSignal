@@ -2,7 +2,7 @@
 import { render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import EvidenceBadge from './EvidenceBadge.astro';
-import { articlePath } from '../data/articles';
+import { articleCardImage, articlePath } from '../data/articles';
 
 type Article = CollectionEntry<'articles'>;
 
@@ -81,7 +81,7 @@ const breadcrumbSchema = {
       {related.length > 0 && <section class="related">
         <h2>Related articles</h2>
         <div class="related-grid">{related.map((item) => <a class="related-card" href={articlePath(item)}>
-          <span class:list={['related-card__visual', { 'related-card__visual--abstract': !image || typeof item.data.heroImage !== 'string' }]} style={image && typeof item.data.heroImage === 'string' ? `--related-image:url(${item.data.heroImage})` : undefined} aria-hidden="true"></span>
+          <span class:list={['related-card__visual', { 'related-card__visual--abstract': !articleCardImage(item) }]} style={articleCardImage(item) ? `--related-image:url(${articleCardImage(item)})` : undefined} aria-hidden="true"></span>
           <span class="related-card__body"><small>{item.data.category}</small><strong>{item.data.title}</strong><span>Read guide →</span></span>
         </a>)}</div>
       </section>}

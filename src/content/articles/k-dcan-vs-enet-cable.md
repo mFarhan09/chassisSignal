@@ -10,6 +10,7 @@ category: "Comparisons"
 tags: ["Guides", "Comparisons", "BMW", "Diagnostics", "Adapters", "Coding adapters", "Compatibility", "ENET", "DCAN"]
 relatedSlugs: [bmw-enet-vs-bluetooth-obd, bmw-f-series-vs-g-series-obd-adapter, bimmerlink-adapter]
 featured: true
+cardImage: "/images/guides/k-dcan-vs-enet-cable/cs030-generation-river.svg"
 heroAlt: ""
 showHero: false
 author: "Chassis Signal Editorial"

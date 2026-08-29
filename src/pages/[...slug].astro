@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import EvidenceBadge from '../components/EvidenceBadge.astro';
-import { articlePath, getPublishedArticles } from '../data/articles';
+import { articleCardImage, articlePath, getPublishedArticles } from '../data/articles';
 import { hubs, editorialPages } from '../data/site';
 import type { Hub } from '../data/site';
 
@@ -29,7 +29,7 @@ const relevant = hubPage ? articles.filter((article) =>
     <div class="focus-strip shell">{hubPage?.focus.map((focus: string, index: number) => <div><small>0{index + 1}</small>{focus}</div>)}</div>
     <section class="section"><div class="shell hub-layout"><aside class="hub-aside"><strong>In this index</strong><p>Published research will identify its evidence basis, limitations and compatibility context.</p><a href="/methodology/">Research methodology →</a><a href="/editorial-standards/">Evidence standards →</a><a href="/contact/">Contact status →</a></aside><div>
       {relevant.length ? <div class="hub-list">{relevant.map((article) => <article class:list={['hub-article card-3d', { 'hub-article--visual': hubPage?.slug === 'guides' }]} data-tilt>
-        {hubPage?.slug === 'guides' && <a class:list={['hub-article__visual', { 'hub-article__visual--abstract': typeof article.data.heroImage !== 'string' }]} href={articlePath(article)} style={typeof article.data.heroImage === 'string' ? `--hub-image:url(${article.data.heroImage})` : undefined} aria-label={`Read ${article.data.title}`}></a>}
+        {hubPage?.slug === 'guides' && <a class:list={['hub-article__visual', { 'hub-article__visual--abstract': !articleCardImage(article) }]} href={articlePath(article)} style={articleCardImage(article) ? `--hub-image:url(${articleCardImage(article)})` : undefined} aria-label={`Read ${article.data.title}`}></a>}
         <small>{article.data.category}<br />{article.data.readingTime}</small>
         <div><h2><a href={articlePath(article)}>{article.data.title}</a></h2><p>{article.data.description}</p></div>
         <EvidenceBadge level={article.data.evidenceLevel} />
