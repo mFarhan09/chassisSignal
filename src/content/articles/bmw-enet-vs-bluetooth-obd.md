@@ -120,6 +120,8 @@ Joining an adapter network can interact with mobile data, wireless CarPlay, loca
 
 Older BMW E and R Series paths often bring DCAN/USB cables into the shortlist where the app and platform list them. USB can provide a stable physical connection, but the device must support the cable, adapter, driver or USB-OTG requirements, and the app's mode.
 
+The [K+DCAN vs ENET cable guide](/guides/k-dcan-vs-enet-cable/) isolates that wired-interface decision by transport, vehicle, software and task.
+
 ENET should not be used as a generic word for every wired BMW diagnostic cable. DCAN and ENET describe different technical paths. Match the generation and app.
 
 ## A decision process that avoids guesswork

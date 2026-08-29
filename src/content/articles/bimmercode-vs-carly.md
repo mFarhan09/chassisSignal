@@ -38,6 +38,8 @@ For the recurring-cost side of the Carly decision, see our [Carly subscription c
 
 For BimmerCode platform licensing and adapter ownership cost, use the dedicated [BimmerCode pricing guide](/guides/bimmercode-pricing/).
 
+If the shortlist is BimmerCode and ProTool rather than Carly, the [BimmerCode vs ProTool comparison](/guides/bimmercode-vs-protool/) separates the focused cross-platform coding app from ProTool's Android-only licensed toolset.
+
 > **Testing disclosure:** Chassis Signal has not physically tested BimmerCode or Carly for this comparison. This article is based on current official compatibility, support, pricing, licensing, and platform documentation.
 
 ## Why this is not a simple feature-for-feature comparison

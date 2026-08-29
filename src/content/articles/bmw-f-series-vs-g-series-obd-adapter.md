@@ -67,7 +67,7 @@ The apps can share adapter families without sharing the same job. A coding resul
   <img src='/images/guides/bmw-f-series-vs-g-series-obd-adapter/cs022-decision-sequence.svg' alt='Decision flow from exact BMW and task through official adapter and phone-interface confirmation.' loading='lazy' decoding='async'>
 </picture>
 
-Use [BMW ENET vs Bluetooth OBD](/guides/bmw-enet-vs-bluetooth-obd/) for architecture and [BimmerLink adapter](/guides/bimmerlink-adapter/) for app fit. If the category is undecided, see [OBD app vs handheld scanner](/guides/obd-app-vs-handheld-scanner/). [Carly subscription cost](/guides/carly-subscription-cost/) covers a different ownership model. For the OBDLink product choice, [OBDLink MX+ vs LX](/guides/obdlink-mx-plus-vs-lx/) owns that pairwise decision.
+Use [BMW ENET vs Bluetooth OBD](/guides/bmw-enet-vs-bluetooth-obd/) for architecture, [K+DCAN vs ENET cable](/guides/k-dcan-vs-enet-cable/) for the wired-interface boundary, and [BimmerLink adapter](/guides/bimmerlink-adapter/) for app fit. If the category is undecided, see [OBD app vs handheld scanner](/guides/obd-app-vs-handheld-scanner/). [Carly subscription cost](/guides/carly-subscription-cost/) covers a different ownership model. For exact product choices, [OBDLink MX+ vs LX](/guides/obdlink-mx-plus-vs-lx/) owns that pair and [OBDLink CX vs vLinker BM+](/guides/obdlink-cx-vs-vlinker-bm-plus/) owns the BMW-app adapter pair.
 
 ## Safety and bottom line
 

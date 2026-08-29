@@ -70,7 +70,7 @@ Generic emissions OBD can expose a narrower layer than manufacturer-specific MIN
   <img src='/images/guides/mini-diagnostic-app/cs015-selection-check.svg' alt='Decision flow for defining the MINI job, verifying vehicle/function, adapter/platform and current license.' loading='lazy' decoding='async'>
 </picture>
 
-Use [BimmerLink adapter](/guides/bimmerlink-adapter/) for its interface shortlist, [OBD app vs handheld scanner](/guides/obd-app-vs-handheld-scanner/) for tool-category ownership, [Carly subscription cost](/guides/carly-subscription-cost/) for annual economics, and [BMW ENET vs Bluetooth OBD](/guides/bmw-enet-vs-bluetooth-obd/) for connection architecture. If coding cost is the open question, use the [BimmerCode pricing guide](/guides/bimmercode-pricing/).
+Use [BimmerLink adapter](/guides/bimmerlink-adapter/) for its interface shortlist, [OBD app vs handheld scanner](/guides/obd-app-vs-handheld-scanner/) for tool-category ownership, [Carly subscription cost](/guides/carly-subscription-cost/) for annual economics, and [BMW ENET vs Bluetooth OBD](/guides/bmw-enet-vs-bluetooth-obd/) for connection architecture. If coding cost is the open question, use the [BimmerCode pricing guide](/guides/bimmercode-pricing/). For diagnostic-software depth, compare [BimmerLink vs ProTool](/guides/bimmerlink-vs-protool/) or the wider workshop boundary in [ISTA vs BimmerLink](/guides/ista-vs-bimmerlink/).
 
 ## Safety and bottom line
 

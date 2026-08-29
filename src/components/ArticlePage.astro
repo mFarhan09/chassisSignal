@@ -27,7 +27,7 @@ const related = (explicitRelated.length > 0 ? explicitRelated : articles
 const published = article.data.publishedAt.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 const updated = article.data.updatedAt?.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 const pricingChecked = article.data.pricingChecked?.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
-const image = typeof article.data.heroImage === 'string' ? article.data.heroImage : '/images/research-workshop.jpg';
+const image = typeof article.data.heroImage === 'string' ? article.data.heroImage : undefined;
 const canonical = new URL(href, Astro.site);
 const evidenceCopy = {
   'DOCUMENTED': 'Primary manufacturer documentation supports the core scope. Compatibility claims are not independent hands-on testing; verify the exact vehicle and function.',
@@ -51,7 +51,7 @@ const articleSchema = {
   author: { '@type': 'Organization', name: article.data.author },
   publisher: { '@type': 'Organization', name: 'Chassis Signal', url: Astro.site },
   mainEntityOfPage: canonical,
-  image: new URL(image, Astro.site)
+  ...(image ? { image: new URL(image, Astro.site) } : {})
 };
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -63,7 +63,7 @@ const breadcrumbSchema = {
   ]
 };
 ---
-<BaseLayout title={article.data.seoTitle || article.data.title} description={article.data.description} image={image} type="article">
+<BaseLayout title={article.data.seoTitle || article.data.title} description={article.data.description} image={image || null} type="article">
   <script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <header class="article-header shell">
@@ -72,7 +72,7 @@ const breadcrumbSchema = {
     <p class="article-dek">{article.data.description}</p>
     <div class="article-meta"><span>Published {published}</span>{updated && <span>Updated {updated}</span>}{pricingChecked && <span>Pricing checked {pricingChecked}</span>}<span>{article.data.readingTime}</span><span>Safety / {article.data.safetyLevel}</span><EvidenceBadge level={article.data.evidenceLevel} /></div>
   </header>
-  {article.data.showHero && <img class="article-hero-image" src={image} alt={article.data.heroAlt} width="1774" height="887" />}
+  {article.data.showHero && image && <img class="article-hero-image" src={image} alt={article.data.heroAlt} width="1774" height="887" />}
   <div class:list={['article-layout', { 'article-layout--no-hero': !article.data.showHero }]}>
     <nav class="toc" aria-label="Table of contents"><strong>On this page</strong>{headings.filter((heading) => heading.depth === 2).map((heading) => <a href={`#${heading.slug}`}>{heading.text}</a>)}</nav>
     <article class="prose">
@@ -81,7 +81,7 @@ const breadcrumbSchema = {
       {related.length > 0 && <section class="related">
         <h2>Related articles</h2>
         <div class="related-grid">{related.map((item) => <a class="related-card" href={articlePath(item)}>
-          <span class="related-card__visual" style={`--related-image:url(${typeof item.data.heroImage === 'string' ? item.data.heroImage : '/images/research-workshop.jpg'})`} aria-hidden="true"></span>
+          <span class:list={['related-card__visual', { 'related-card__visual--abstract': !image || typeof item.data.heroImage !== 'string' }]} style={image && typeof item.data.heroImage === 'string' ? `--related-image:url(${item.data.heroImage})` : undefined} aria-hidden="true"></span>
           <span class="related-card__body"><small>{item.data.category}</small><strong>{item.data.title}</strong><span>Read guide →</span></span>
         </a>)}</div>
       </section>}

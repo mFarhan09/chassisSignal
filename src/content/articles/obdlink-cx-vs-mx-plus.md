@@ -32,6 +32,8 @@ If BimmerLink is the app in your plan, use the [BimmerLink adapter guide](/guide
 
 If the decision is specifically MX+ versus LX, compare their platform and network differences in the [OBDLink MX+ vs LX guide](/guides/obdlink-mx-plus-vs-lx/).
 
+If the BMW-app shortlist is CX versus vLinker BM+, use the dedicated [OBDLink CX vs vLinker BM+ comparison](/guides/obdlink-cx-vs-vlinker-bm-plus/) instead of extending this CX-versus-MX+ verdict.
+
 <figure class="cs-article-visual">
   <img src="/images/guides/obdlink-cx-vs-mx-plus/cs009-in-car-diagnostic-context.webp" alt="A technician using a laptop inside a vehicle during diagnostic work." width="1600" height="900" loading="lazy" decoding="async">
   <figcaption>Vehicle-diagnostics context; no OBDLink product or connection result is depicted or tested. Photo by Fatih Erden via Pexels.</figcaption>

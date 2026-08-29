@@ -88,7 +88,7 @@ For an Android buyer, record the in-app Google Play amount visible to that accou
 
 No universal total is published here because adapter choice, seller, location, storefront and taxes change the result.
 
-Use [BimmerCode vs Carly](/guides/bimmercode-vs-carly/) for the app decision and [Carly subscription cost](/guides/carly-subscription-cost/) for Carly's recurring ownership model. [BimmerLink adapter](/guides/bimmerlink-adapter/) covers BimmerLink's separate compatibility job, while [OBDLink CX vs MX+](/guides/obdlink-cx-vs-mx-plus/) compares two supported hardware paths. For MINI-specific diagnostic and service roles, use the [MINI diagnostic app guide](/guides/mini-diagnostic-app/).
+Use [BimmerCode vs Carly](/guides/bimmercode-vs-carly/) for the app decision and [Carly subscription cost](/guides/carly-subscription-cost/) for Carly's recurring ownership model. If the alternative is an Android-only modular BMW toolset, use [BimmerCode vs ProTool](/guides/bimmercode-vs-protool/) to compare platform and license boundaries. [BimmerLink adapter](/guides/bimmerlink-adapter/) covers BimmerLink's separate compatibility job, while [OBDLink CX vs MX+](/guides/obdlink-cx-vs-mx-plus/) compares two supported hardware paths. For MINI-specific diagnostic and service roles, use the [MINI diagnostic app guide](/guides/mini-diagnostic-app/).
 
 ## Safety boundary
 

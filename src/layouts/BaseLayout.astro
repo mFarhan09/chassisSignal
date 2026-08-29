@@ -6,11 +6,12 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description: string;
-  image?: string;
+  image?: string | null;
   type?: 'website' | 'article';
   noindex?: boolean;
 }
-const { title, description, image = '/images/research-workshop.jpg', type = 'website', noindex = false } = Astro.props;
+const { title, description, image, type = 'website', noindex = false } = Astro.props;
+const socialImage = image === undefined ? '/images/research-workshop.jpg' : image;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const pageTitle = title === 'Chassis Signal' ? title : `${title} — Chassis Signal`;
 const gaId = import.meta.env.PUBLIC_GA_ID;
@@ -39,11 +40,11 @@ const schema = {
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={new URL(image, Astro.site)} />
+    {socialImage && <meta property="og:image" content={new URL(socialImage, Astro.site)} />}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL(image, Astro.site)} />
+    {socialImage && <meta name="twitter:image" content={new URL(socialImage, Astro.site)} />}
     <title>{pageTitle}</title>
     <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
     {gaId && <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>}

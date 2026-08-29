@@ -10,7 +10,7 @@ const href = articlePath(article);
 const actionLabel = article.data.section === 'guides' ? 'Read guide' : 'Read research';
 ---
 <article class="article-card card-3d" data-tilt>
-  {visual && <div class="article-card__visual" style={`--article-image:url(${typeof article.data.heroImage === 'string' ? article.data.heroImage : '/images/research-workshop.jpg'})`} aria-hidden="true"></div>}
+  {visual && <div class:list={['article-card__visual', { 'article-card__visual--abstract': typeof article.data.heroImage !== 'string' }]} style={typeof article.data.heroImage === 'string' ? `--article-image:url(${article.data.heroImage})` : undefined} aria-hidden="true"></div>}
   <div class="article-card__meta"><span>{article.data.category}</span><EvidenceBadge level={article.data.evidenceLevel} /></div>
   <h3><a href={href}>{article.data.title}</a></h3>
   <p>{article.data.description}</p>
