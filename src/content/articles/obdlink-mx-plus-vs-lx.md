@@ -84,6 +84,8 @@ Choose **LX** when Android or Windows is the host, legislated OBD-II is the job,
 
 For BMW use, do not assume MX+ or LX from this comparison. BimmerCode and BimmerLink maintain their own adapter compatibility tables. The [OBDLink CX vs MX+](/guides/obdlink-cx-vs-mx-plus/) guide owns that BMW-oriented pair, and [BimmerLink adapter](/guides/bimmerlink-adapter/) maps BimmerLink's supported path. [BMW ENET vs Bluetooth OBD](/guides/bmw-enet-vs-bluetooth-obd/) explains the broader interface choice. For a generation-specific BMW purchase, see [BMW F Series vs G Series OBD adapter](/guides/bmw-f-series-vs-g-series-obd-adapter/).
 
+If CX is also on the shortlist, [OBDLink CX vs LX](/guides/obdlink-cx-vs-lx/) isolates the host-platform boundary, while [OBDLink CX vs vLinker MC+](/guides/obdlink-cx-vs-vlinker-mc-plus/) follows the exact application and vehicle approval path.
+
 ## Ownership and safety
 
 Both adapters advertise automatic sleep/wake, firmware updates and protected pairing. Use OBDLink's current firmware procedure for the exact model and platform. Do not update firmware during an unstable power or connection state.

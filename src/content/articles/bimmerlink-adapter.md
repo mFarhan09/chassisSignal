@@ -49,6 +49,8 @@ This guide does not name a fastest or universally best adapter. No controlled la
 
 If the open question is application scope rather than hardware, compare [BimmerLink vs ProTool](/guides/bimmerlink-vs-protool/). For the boundary between an owner app and BMW's workshop diagnosis environment, use [ISTA vs BimmerLink](/guides/ista-vs-bimmerlink/).
 
+If the open question is total app, add-on, and adapter spend, use the dated [BimmerLink pricing guide](/guides/bimmerlink-pricing/).
+
 <picture>
   <source media='(max-width: 599px)' srcset='/images/guides/bimmerlink-adapter/cs014-compatibility-gates-mobile.svg'>
   <img src='/images/guides/bimmerlink-adapter/cs014-compatibility-gates.svg' alt='Four compatibility gates: vehicle, platform, interface, and intended function.' loading='lazy' decoding='async'>

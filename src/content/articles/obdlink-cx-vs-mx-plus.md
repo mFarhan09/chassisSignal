@@ -34,6 +34,8 @@ If the decision is specifically MX+ versus LX, compare their platform and networ
 
 If the BMW-app shortlist is CX versus vLinker BM+, use the dedicated [OBDLink CX vs vLinker BM+ comparison](/guides/obdlink-cx-vs-vlinker-bm-plus/) instead of extending this CX-versus-MX+ verdict.
 
+For adjacent model choices, use [OBDLink CX vs LX](/guides/obdlink-cx-vs-lx/) for the BLE-versus-Classic platform boundary, [OBDLink MX+ vs vLinker BM+](/guides/obdlink-mx-plus-vs-vlinker-bm-plus/) for a broad-network versus BMW-focused decision, or [OBDLink CX vs vLinker MC+](/guides/obdlink-cx-vs-vlinker-mc-plus/) for an app-first compatibility check.
+
 <figure class="cs-article-visual">
   <img src="/images/guides/obdlink-cx-vs-mx-plus/cs009-in-car-diagnostic-context.webp" alt="A technician using a laptop inside a vehicle during diagnostic work." width="1600" height="900" loading="lazy" decoding="async">
   <figcaption>Vehicle-diagnostics context; no OBDLink product or connection result is depicted or tested. Photo by Fatih Erden via Pexels.</figcaption>
@@ -133,7 +135,7 @@ Total ownership can include a paid third-party app, platform-specific software, 
 5. Price third-party apps independently.
 6. Treat performance claims as unverified without controlled testing.
 
-A separate BimmerCode-versus-Carly software guide is package-ready but not live; do not add that internal link until its production URL is established.
+For the adjacent software decision, the [BimmerCode vs Carly guide](/guides/bimmercode-vs-carly/) compares their documented scope, adapter paths, and ownership models.
 
 ## Bottom line
 
