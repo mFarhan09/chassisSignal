@@ -77,7 +77,7 @@ At verification, ProTool publicly listed Diagnostic and Coding licenses separate
 
 For BimmerCode, use the current app-store price on the platform where it will be used and include any required adapter. Its FAQ makes the cross-platform purchase boundary important: buying on one ecosystem does not imply a license on the other.
 
-The [BimmerCode pricing guide](/guides/bimmercode-pricing/) tracks its platform and adapter cost, while [BimmerCode versus Carly](/guides/bimmercode-vs-carly/) owns the separate comparison with Carly's broader subscription ecosystem.
+The [BimmerCode pricing guide](/guides/bimmercode-pricing/) tracks its platform and adapter cost, the [ProTool pricing guide](/guides/protool-pricing/) itemizes current licenses, interfaces and setup totals, and [BimmerCode versus Carly](/guides/bimmercode-vs-carly/) owns the separate comparison with Carly's broader subscription ecosystem.
 
 A useful cost worksheet has four lines:
 

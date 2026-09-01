@@ -40,6 +40,8 @@ For BimmerCode platform licensing and adapter ownership cost, use the dedicated 
 
 If the shortlist is BimmerCode and ProTool rather than Carly, the [BimmerCode vs ProTool comparison](/guides/bimmercode-vs-protool/) separates the focused cross-platform coding app from ProTool's Android-only licensed toolset.
 
+If ProTool and Carly are the final two candidates, the [ProTool vs Carly comparison](/guides/protool-vs-carly/) compares platform, verified functions, included hardware and recurring versus one-time cost on the same horizon.
+
 If a dedicated handheld is the alternative, compare [BimmerCode vs Foxwell NT530](/guides/bimmercode-vs-foxwell-nt530/) for the coding-versus-diagnostics boundary or [Carly vs Foxwell NT530](/guides/carly-vs-foxwell-nt530/) for the recurring-license versus dedicated-scanner ownership model.
 
 > **Testing disclosure:** Chassis Signal has not physically tested BimmerCode or Carly for this comparison. This article is based on current official compatibility, support, pricing, licensing, and platform documentation.

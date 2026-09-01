@@ -47,6 +47,8 @@ NT530 uses physical controls and a smaller display. Its current commercial offer
 
 Check the exact checkout SKU. A case, cable or accessory shown in photography may not be included in every regional bundle, and additional brands or later updates can change ownership cost.
 
+For a cross-brand BMW scanner decision rather than a Foxwell upgrade, the [AUTOPHIX 7910 versus Foxwell NT530 comparison](/guides/autophix-7910-vs-foxwell-nt530/) checks service functions, active tests, coding claims, updates and current commercial terms.
+
 <figure>
   <picture>
     <source media="(max-width: 599px)" srcset="/images/guides/foxwell-nt530-vs-nt710/cs046-visual-a-mobile.svg" width="720" height="960">

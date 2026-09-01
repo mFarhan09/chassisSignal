@@ -60,6 +60,8 @@ Vehicle production date, module architecture and the application can narrow supp
 
 The [BMW F-series versus G-series adapter guide](/guides/bmw-f-series-vs-g-series-obd-adapter/) covers that generation-specific purchase boundary.
 
+For interface-specific follow-ups, compare [OBDLink EX with an ENET cable](/guides/obdlink-ex-vs-enet-cable/) when the app names one of those paths, or [BMW ICOM with K+DCAN](/guides/bmw-icom-vs-k-dcan/) when the decision reaches ISTA and workshop risk.
+
 ## K+DCAN naming needs care
 
 The plus sign in K+DCAN signals a product category spanning older K-line and D-CAN use; it does not guarantee that every cable implements every transition correctly. Exact interface electronics, any mode control, driver support and publisher approval matter. Do not rely on cable color or a copied chipset claim.

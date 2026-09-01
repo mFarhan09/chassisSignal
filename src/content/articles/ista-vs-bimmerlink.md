@@ -34,6 +34,8 @@ Use BimmerLink for documented owner-level diagnostics and service functions when
 
 They can be complementary. A BimmerLink scan can identify the system needing attention; ISTA may provide the structured test path. That does not mean every code requires ISTA or that clearing a code constitutes a repair.
 
+When the mobile alternative is ProTool rather than BimmerLink, the [ProTool versus ISTA comparison](/guides/protool-vs-ista/) applies the same diagnostic-versus-workshop boundary to ProTool's Android license model.
+
 <picture>
   <source media="(max-width: 599px)" srcset="/images/guides/ista-vs-bimmerlink/cs024-diagnostic-depth-mobile.svg">
   <img src="/images/guides/ista-vs-bimmerlink/cs024-diagnostic-depth.svg" alt="Diagnostic depth from owner-level fault access to BMW workshop test plans and programming infrastructure." width="1280" height="720" loading="lazy" decoding="async">

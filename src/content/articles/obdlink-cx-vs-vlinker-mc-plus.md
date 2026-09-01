@@ -72,6 +72,8 @@ Vgate supplies MC-family firmware information, and supported-app lists can estab
 
 If MC+ appears on the intended app selector for the exact vehicle, record the selector date and firmware source. If only a forum or marketplace claims support, the purchase remains unverified for this comparison.
 
+If the shortlist has narrowed to Vgate hardware, the [vLinker BM+ versus MC+ comparison](/guides/vlinker-bm-plus-vs-mc-plus/) separates BMW-app focus from MC+'s broader network positioning.
+
 <figure>
   <picture>
     <source media="(max-width: 599px)" srcset="/images/guides/obdlink-cx-vs-vlinker-mc-plus/cs036-visual-b-mobile.svg" width="720" height="960">
