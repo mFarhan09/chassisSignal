@@ -76,7 +76,7 @@ A defensible worksheet has a hardware line even when the website labels the scan
 
 The first-year cash total may contain a scanner and license together. Renewal may contain software only. Comparing first year directly with renewal without exposing that composition makes the recurring cost look inconsistent.
 
-If the buying question is whether Carly is the right product rather than what it costs, keep that separate. The [BimmerCode vs Carly guide](/guides/bimmercode-vs-carly/) owns the app-role comparison. This page owns subscription and ownership math.
+If the buying question is whether Carly is the right product rather than what it costs, keep that separate. The [BimmerCode vs Carly guide](/guides/bimmercode-vs-carly/) owns the app-role comparison, while our [BimmerLink vs Carly comparison](/guides/bimmerlink-vs-carly/) breaks down the diagnostic and service-reset trade-offs against a one-time purchase tool. This page owns subscription and ownership math.
 
 For the equivalent one-time-license and adapter-cost decision, see the [BimmerCode pricing guide](/guides/bimmercode-pricing/).
 

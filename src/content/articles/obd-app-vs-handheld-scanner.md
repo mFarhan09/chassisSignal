@@ -80,7 +80,7 @@ Phone availability is part of the system. Notifications, battery state, permissi
 
 ## Handheld scanners span several categories
 
-“Handheld” can mean a simple cable-connected reader, a device with live data and service functions, or a tablet-style diagnostic system. Innova's 5610, for example, documents an integrated screen and cable, network scanning, live data, special resets and update behavior. Autel's MK808S represents a different class with a tablet interface, broad module claims, service functions and a defined update package.
+“Handheld” can mean a simple cable-connected reader, a device with live data and service functions, or a tablet-style diagnostic system. Innova's 5610, for example, documents an integrated screen and cable, network scanning, live data, special resets and update behavior. Autel's MK808S represents a different class with a tablet interface, broad module claims, service functions and a defined update package. For a detailed breakdown of current Autel tablet tiers and update policies on BMW vehicles, see our [Autel scanner for BMW guide](/guides/autel-scanner-for-bmw/).
 
 These examples show range, not winners. A dedicated display can make the tool easier to keep with the vehicle and avoids borrowing a personal phone. But a product can still depend on Wi-Fi, account activation or paid updates for part of its lifecycle. Read the manual, coverage tables and update terms for the exact model.
 

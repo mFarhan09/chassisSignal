@@ -96,7 +96,7 @@ For battery work, battery type or capacity configuration and battery registratio
 
 ## Active tests, coding and safety
 
-An active test commands a supported output while the technician observes the result. It can narrow a fault, but it changes vehicle state. Do not infer it from “all-system” or “professional.” For the broader category choice, see [OBD app vs handheld scanner](/guides/obd-app-vs-handheld-scanner/).
+An active test commands a supported output while the technician observes the result. It can narrow a fault, but it changes vehicle state. Do not infer it from “all-system” or “professional.” For the broader category choice, see [OBD app vs handheld scanner](/guides/obd-app-vs-handheld-scanner/), or compare full-featured tablet platforms in our [Autel scanner for BMW guide](/guides/autel-scanner-for-bmw/).
 
 Coding changes configuration; programming or flashing may write software. Both differ from reading DTCs. [BimmerCode’s adapter matrix](https://bimmercode.app/adapters/) also shows that vehicle series and connection method constrain the path. A compatible connector does not prove every coding option exists. This guide provides no modification instructions.
 
@@ -125,7 +125,7 @@ Start with a compliant generic reader. It can retrieve standardized emissions DT
 
 ### ABS, airbag or body warning
 
-Require BMW-aware access to the named module on the exact vehicle. “Reads BMW codes” is too broad because a seller may mean only enhanced engine codes. Confirm module entry, DTC definitions and any live data needed for diagnosis.
+Require BMW-aware access to the named module on the exact vehicle. “Reads BMW codes” is too broad because a seller may mean only enhanced engine codes. Confirm module entry, DTC definitions and any live data needed for diagnosis. Our guide to choosing a [BMW scanner for ABS and airbag codes](/guides/bmw-scanner-abs-airbag-codes/) explains how to qualify safety-system module coverage and avoid unreadable codes.
 
 ### Routine maintenance procedure
 
@@ -133,7 +133,7 @@ Buy against the procedure name. Battery registration, parking-brake service mode
 
 ### Component command for diagnosis
 
-Require a named active test or bidirectional control for the component and vehicle. Module access alone does not prove the command exists. Because an active test changes output state, the service information and safe operating conditions matter as much as menu availability.
+Require a named active test or bidirectional control for the component and vehicle. Module access alone does not prove the command exists. Because an active test changes output state, the service information and safe operating conditions matter as much as menu availability. Our dedicated [BMW bidirectional scan tool guide](/guides/bmw-bidirectional-scan-tool-functions/) breaks down how to verify active tests and safety boundaries before buying.
 
 ### Configuration change or software work
 

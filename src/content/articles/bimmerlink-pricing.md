@@ -88,7 +88,7 @@ For a concrete US illustration, OBDLink listed CX at **$79.95** on 2026-08-29. C
 
 Buy only the app unlock when you already have a supported interface and have confirmed your exact vehicle. Budget for app plus adapter when this is a first diagnostic setup. Add CarPlay only when its sensor-display workflow matters; it is not needed merely to read faults from the phone.
 
-The comparison with a handheld scanner begins only after defining the job. BimmerLink uses a phone and separate interface. A handheld bundles display, controls and cable into its own hardware. Their sticker prices therefore do not describe the same architecture.
+The comparison with a handheld scanner begins only after defining the job. BimmerLink uses a phone and separate interface. A handheld bundles display, controls and cable into its own hardware. Their sticker prices therefore do not describe the same architecture. When deciding between phone-based diagnostic platforms with one-time or subscription pricing, compare [BimmerLink and Carly](/guides/bimmerlink-vs-carly/) to match the software model to your maintenance routine.
 
 ## What to verify at checkout
 

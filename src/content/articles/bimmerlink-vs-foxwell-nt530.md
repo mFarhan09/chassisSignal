@@ -44,7 +44,7 @@ Choose BimmerLink when a phone-based workflow, live dashboards and its documente
 
 BimmerLink's purchase contains software. The working system also contains your iOS or Android device, a supported OBD adapter or cable and the app's current vehicle coverage. Foxwell's NT530 purchase is a handheld with display, buttons, cable and one selected brand software package in the advertised bundle.
 
-That difference affects portability and support. A phone app can follow the phone's screen, battery and operating-system lifecycle. A handheld keeps the user interface with the tool but follows Foxwell's hardware and update ecosystem.
+That difference affects portability and support. A phone app can follow the phone's screen, battery and operating-system lifecycle. A handheld keeps the user interface with the tool but follows Foxwell's hardware and update ecosystem. If evaluating how Foxwell compares against simpler standalone readers, our [Creator C310+ vs Foxwell NT530 guide](/guides/creator-c310-plus-vs-foxwell-nt530/) compares two different handheld philosophies.
 
 <figure>
   <picture>
