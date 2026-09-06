@@ -121,7 +121,7 @@ Use these operating rules regardless of app:
 
 **ProTool fits best** when the user maintains an Android workflow, needs both documented coding and diagnostic scope, understands why the licenses are separate, and wants the combined environment rather than the smallest app.
 
-**Neither is a complete answer** when the task is programming, an unsupported generation, or a specialist repair procedure outside the published scope. Product breadth cannot erase a vehicle or knowledge boundary.
+**Neither is a complete answer** when the task crosses the [BMW coding-versus-programming boundary](/guides/bmw-coding-vs-programming/), involves an unsupported generation, or requires a specialist repair procedure outside the published scope. Product breadth cannot erase a vehicle or knowledge boundary.
 
 ## Bottom line
 

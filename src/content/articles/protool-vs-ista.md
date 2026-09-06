@@ -25,7 +25,7 @@ affiliate: false
 draft: false
 ---
 
-**ProTool is the portable Android choice for supported diagnostics and coding. ISTA is BMW's workshop-oriented environment for diagnosis and programming, tied to official technical information, computer requirements and interface discipline.** ProTool can cover many owner and independent-shop tasks; it is not a blanket replacement for ISTA.
+**ProTool is the portable Android choice for supported diagnostics and coding. ISTA is BMW's workshop-oriented environment for diagnosis and programming, tied to official technical information, computer requirements and interface discipline.** ProTool can cover many owner and independent-shop tasks; it is not a blanket replacement for ISTA. The [BMW coding-versus-programming guide](/guides/bmw-coding-vs-programming/) defines the underlying write boundary.
 
 <figure class="cs-article-visual">
   <img src="/images/guides/protool-vs-ista/cs-039-editorial-hero.webp" alt="A phone-based ProTool diagnostic path beside an ISTA workshop station" width="1600" height="900" loading="eager" decoding="async">
@@ -58,7 +58,7 @@ That scope should be read as the vendor's documented capability, not proof for e
 
 ## What ISTA adds
 
-BMW's current [Technical Information System](https://bmwtechinfo.bmwgroup.com/) places ISTA inside a professional technical environment. The official site and system-requirements PDFs describe diagnosis and programming, a qualified PC/network setup and ICOM Next as the recommended interface. BMW also documents a J2534 passthrough alternative under stated conditions.
+BMW's current [Technical Information System](https://bmwtechinfo.bmwgroup.com/) places ISTA inside a professional technical environment. Our [BMW diagnostic software for Windows guide](/guides/bmw-diagnostic-software-windows/) maps the host, interface, and software-provenance checks around that environment. The official site and system-requirements PDFs describe diagnosis and programming, a qualified PC/network setup and ICOM Next as the recommended interface. BMW also documents a J2534 passthrough alternative under stated conditions.
 
 Programming is the decisive boundary. BMW calls for a stable power supply and adequate network capacity. A successful code read through a convenient adapter does not establish a safe programming path. For module programming, follow the current BMW workflow rather than extrapolating from a diagnostic session.
 

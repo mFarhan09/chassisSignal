@@ -59,7 +59,7 @@ For a cross-brand BMW scanner decision rather than a Foxwell upgrade, the [AUTOP
 
 ## NT710 as a touch platform
 
-NT710 moves to a larger Android-based touch interface with its own battery and current-generation workflow. That can improve navigation and information density for frequent use, but it also introduces charging and a different physical ownership model. For readers evaluating Android tablet platforms more broadly, our [Autel scanner for BMW guide](/guides/autel-scanner-for-bmw/) examines touch tablet workflows and software entitlement terms.
+NT710 moves to a larger Android-based touch interface with its own battery and current-generation workflow. That can improve navigation and information density for frequent use, but it also introduces charging and a different physical ownership model. For readers evaluating Android tablet platforms more broadly, our [Autel scanner for BMW guide](/guides/autel-scanner-for-bmw/) examines touch tablet workflows and software entitlement terms. The [Launch X431 for BMW guide](/guides/launch-x431-bmw/) covers BMW-focused handheld, professional-tablet, regional-support, and pass-through distinctions in that model family.
 
 Do not infer that every NT530 function transfers automatically. The exact NT710 brand package and current coverage list remain the authority for each vehicle and task.
 

@@ -64,7 +64,7 @@ BMW's current ISTA [system requirements](https://bmwtechinfo.bmwgroup.com/assets
 
 BMW also documents J2534 passthrough as an alternative under stated conditions. That nuance matters: “ISTA requires ICOM for everything” is too broad. The exact release, vehicle, job and BMW documentation determine the supported path.
 
-For a broader software boundary, [ISTA versus BimmerLink](/guides/ista-vs-bimmerlink/) separates guided workshop diagnosis from an owner app. The [BMW ENET versus Bluetooth OBD guide](/guides/bmw-enet-vs-bluetooth-obd/) covers two other connection paths without treating either as ICOM.
+For Windows host, software, entitlement, and interface qualification, use the [BMW diagnostic software for Windows guide](/guides/bmw-diagnostic-software-windows/). For a broader software boundary, [ISTA versus BimmerLink](/guides/ista-vs-bimmerlink/) separates guided workshop diagnosis from an owner app. The [BMW ENET versus Bluetooth OBD guide](/guides/bmw-enet-vs-bluetooth-obd/) covers two other connection paths without treating either as ICOM.
 
 ## Programming risk is the dividing line
 
