@@ -54,7 +54,7 @@ Standardized OBD-II is primarily an emissions framework. It is designed to expos
 
 Enhanced or manufacturer-specific diagnostics add vehicle networks, modules, code definitions, and data that a basic reader may not understand. That is why a tool can successfully connect to the engine controller while reporting nothing useful about an illuminated airbag lamp.
 
-The [BMW code reader versus scan tool guide](/guides/bmw-code-reader-vs-scan-tool/) explains the broader capability ladder. For this purchase, the decisive rung is not the name on the box. It is explicit entry to both target modules on the exact vehicle.
+The [BMW code reader versus scan tool guide](/guides/bmw-code-reader-vs-scan-tool/) explains the broader capability ladder. For this purchase, the decisive rung is not the name on the box. It is explicit entry to both target modules on the exact vehicle. That distinction matters in a [pre-purchase module scan](/guides/bmw-scanner-for-used-car-inspection/) and when qualifying a separate [DSC-assisted brake-bleeding function](/guides/bmw-brake-bleed-scan-tool/).
 
 ## Five levels of access that listings often collapse
 

@@ -37,7 +37,7 @@ const evidenceCopy = {
   'HANDS-ON VERIFIED': 'Use only when retained project evidence supports the exact statement and configuration.'
 }[article.data.evidenceLevel];
 const safetyCopy = article.data.safetyLevel === 'HIGH'
-  ? 'Tool-selection guidance only: this article does not provide battery replacement, registration or coding instructions. Vehicle-specific prerequisites still matter.'
+  ? 'Tool-selection guidance only: this article does not provide a universal service procedure. Vehicle-specific instructions, prerequisites, and professional escalation still matter.'
   : article.data.safetyLevel === 'MEDIUM'
     ? 'Use vehicle-specific instructions and understand the effect of any write or service operation.'
     : 'Low-risk research context; vehicle-specific verification still applies.';

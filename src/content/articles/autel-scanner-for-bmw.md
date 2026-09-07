@@ -108,7 +108,7 @@ Build one row per required BMW outcome:
 7. protocol or gateway condition;
 8. any online access, account, or authorization.
 
-Use Autel's coverage resources or support to resolve those rows for the exact scanner. A successful AutoVIN claim does not prove the target function; manual vehicle selection may still be necessary, and the function can remain absent.
+Use Autel's coverage resources or support to resolve those rows for the exact scanner. A successful AutoVIN claim does not prove the target function; manual vehicle selection may still be necessary, and the function can remain absent. For module-specific examples, see how to [verify BMW transfer-case coverage](/guides/bmw-transfer-case-adaptation-reset-tool/) and [verify injector coding for the exact engine](/guides/bmw-injector-coding-tool/).
 
 Treat every active command as its own pass/fail requirement instead of transferring a platform-level claim. Keep the evidence with the exact scanner suffix and software date.
 

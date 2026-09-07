@@ -152,7 +152,7 @@ Do not combine answers from different model lines or regions. A similar product 
 
 ## Risk rises faster than the feature count
 
-Read-only access is comparatively easy to reverse: you can save a report and disconnect. A reset or relearn changes stored state. An active command moves or energizes something. Coding writes configuration. Programming writes software. Each step requires stronger evidence, prerequisites, power management, and recovery planning.
+Read-only access is comparatively easy to reverse: you can save a report and disconnect. A reset or relearn changes stored state. An active command moves or energizes something. Coding writes configuration. Programming writes software. Each step requires stronger evidence, prerequisites, power management, and recovery planning. Apply that proof to the exact job: [transfer-case service functions](/guides/bmw-transfer-case-adaptation-reset-tool/), [BMW injector code entry](/guides/bmw-injector-coding-tool/), and a [brake-bleed service function](/guides/bmw-brake-bleed-scan-tool/) each require their own vehicle, module, and command match.
 
 <figure>
   <picture>

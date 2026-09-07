@@ -36,7 +36,7 @@ INPA, EDIABAS, Tool32, NCS Expert, and E-Sys appear throughout enthusiast archiv
 
 “BMW diagnostic software” can mean emissions-code reading, BMW-wide control-unit diagnosis, guided test plans, service functions, configuration coding, engineering access, or control-unit programming. Those are not interchangeable. A tool can communicate with an engine ECU yet fail to see body modules; another can expose engineering jobs without giving a safe, documented service plan.
 
-Write a narrow requirement: for example, “read and document faults across all control units on this F-series car” or “follow the BMW test plan for a current G-series symptom.” Then choose a supported stack. If the requirement is a convenience coding change, a purpose-built coding product may be more appropriate than constructing a workshop laptop. Our [ProTool versus ISTA guide](/guides/protool-vs-ista/) separates mobile diagnosis/coding from factory service intent.
+Write a narrow requirement: for example, “read and document faults across all control units on this F-series car,” “perform the engine-specific [injector adjustment-value entry](/guides/bmw-injector-coding-tool/),” or “follow the BMW test plan for a current G-series symptom.” Then choose a supported stack. If the requirement is a convenience coding change, a purpose-built coding product may be more appropriate than constructing a workshop laptop. Our [ProTool versus ISTA guide](/guides/protool-vs-ista/) separates mobile diagnosis/coding from factory service intent.
 
 <figure>
   <picture>

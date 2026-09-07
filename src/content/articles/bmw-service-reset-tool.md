@@ -88,7 +88,7 @@ For a phone workflow, BimmerLink lists service reset among its functions for app
 | Perform battery registration | Different service function | Requires explicit battery-registration support |
 | Repair a mechanical fault | No | No; diagnostics guide the repair |
 
-The [BMW code reader versus scan tool guide](/guides/bmw-code-reader-vs-scan-tool/) explains why generic emissions-code access is not proof of BMW CBS capability. Battery replacement is another distinct workflow; use the [battery registration guide](/guides/bmw-battery-registration-scanner/) instead of treating it as a service-light reset.
+The [BMW code reader versus scan tool guide](/guides/bmw-code-reader-vs-scan-tool/) explains why generic emissions-code access is not proof of BMW CBS capability. A [VTG oil-service reset](/guides/bmw-transfer-case-adaptation-reset-tool/) belongs to a transfer-case service plan, while [hydraulic brake service](/guides/bmw-brake-bleed-scan-tool/) may involve a separate DSC function; neither is implied by a dashboard reminder reset. Battery replacement is another distinct workflow; use the [battery registration guide](/guides/bmw-battery-registration-scanner/) instead of treating it as a service-light reset.
 
 ## A reliable reset workflow
 

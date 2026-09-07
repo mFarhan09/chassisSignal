@@ -71,7 +71,7 @@ Enhanced access means the software and interface understand supported BMW/MINI n
 
 ## What “all systems” does—and does not—prove
 
-“All systems” should be read as a claim that requires a coverage table, not as a technical specification. On one product it may mean the major control units on a limited model list. On another it may mean a broad module scan but only code reading and clearing. It does not automatically establish live data, active tests, service routines or coding for every discovered module.
+“All systems” should be read as a claim that requires a coverage table, not as a technical specification. On one product it may mean the major control units on a limited model list. On another it may mean a broad module scan but only code reading and clearing. It does not automatically establish live data, active tests, service routines or coding for every discovered module. A [used-BMW inspection evidence](/guides/bmw-scanner-for-used-car-inspection/) workflow also needs a complete, exportable report rather than an unexplained green summary.
 
 Ask the seller to make four layers explicit:
 

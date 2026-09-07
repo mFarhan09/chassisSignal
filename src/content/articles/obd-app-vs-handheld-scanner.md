@@ -49,7 +49,7 @@ The real choice is an ownership architecture. The app path combines a phone or t
 | Offline dependency | App, login and downloaded data determine behavior | Model-specific; some work locally, others need online services for certain functions |
 | Ownership risk | Phone compatibility, adapter choice and subscriptions | Higher device commitment, batteries/cables and update cost |
 
-Neither column wins by default. A focused app stack can be the simpler purchase when it documents the needed car and functions. A dedicated scanner can reduce phone and pairing dependencies, but only its coverage table can prove it performs a named task.
+Neither column wins by default. A focused app stack can be the simpler purchase when it documents the needed car and functions. A dedicated scanner can reduce phone and pairing dependencies, but only its coverage table can prove it performs a named task. For a used-car workflow, also confirm that the tool can [save a dated inspection report](/guides/bmw-scanner-for-used-car-inspection/) before anyone clears the evidence.
 
 <picture>
   <source media='(max-width: 599px)' srcset='/images/guides/obd-app-vs-handheld-scanner/cs012-architecture-map-mobile.svg'>
