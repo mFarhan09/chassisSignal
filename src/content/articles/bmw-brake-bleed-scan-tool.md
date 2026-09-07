@@ -139,7 +139,7 @@ The reliable chain is simple: documented repair event, exact BMW instruction, ve
 
 ## Sources consulted
 
-- [BMW Group — Brake System Service training manual](https://bmwtechinfo.bmwgroup.com/tech_training_manual/ST1110%20Brake%20System%20Service.pdf)
+- [BMW Group — Brake System Service training manual](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
 - [BMW / NHTSA — Model-specific recall repair instruction](https://static.nhtsa.gov/odi/rcl/2024/RCRIT-24V739-5692.pdf)
 - [BMW Group — Technical Information System](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
 - [Autel — Service-function product documentation](https://autel.com/mk3/4292.jhtml)

@@ -139,7 +139,7 @@ If you cannot name the diagnosed fault, completed service event, target VTG modu
 
 ## Sources consulted
 
-- [BMW Group — xDrive Dynamics training manual](https://bmwtechinfo.bmwgroup.com/tech_training_manual/ST608%20xDrive%20Dynamics.pdf)
+- [BMW Group — xDrive Dynamics training manual](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
 - [BMW Group — Technical Information System](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
 - [Autel — Vehicle coverage database](https://autel.com/vehicle-coverage/coverage2)
 - [Autel — Special-function service tools](https://support.autel.com/support/solutions/articles/8000037458-special-function-service-tools)

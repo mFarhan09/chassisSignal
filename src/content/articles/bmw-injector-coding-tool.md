@@ -137,8 +137,8 @@ If the procedure does not require code entry, do not manufacture a coding job fr
 
 ## Sources consulted
 
-- [BMW Group — N57TU Diesel Engine training manual](https://bmwtechinfo.bmwgroup.com/tech_training_manual/ST1306%20N57TU%20Diesel%20Engine.pdf)
-- [BMW Group — S55 Engine training manual](https://bmwtechinfo.bmwgroup.com/tech_training_manual/ST1404%20S55%20Engine.pdf)
+- [BMW Group — N57TU Diesel Engine training manual](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
+- [BMW Group — S55 Engine training manual](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
 - [BMW Group — Technical Information System](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
 - [Autel — Service-function product documentation](https://autel.com/mk3/4292.jhtml)
 - [Autel — Vehicle coverage database](https://autel.com/vehicle-coverage/coverage2)
