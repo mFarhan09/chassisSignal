@@ -29,7 +29,7 @@ The safest way to choose a BMW battery registration scanner is to verify three t
 
 Based on current official documentation, **BimmerLink plus a listed adapter** is the clearest mobile-app path for a compatible same-spec replacement. **Carly Premium plus the current Universal Scanner** is the broader annual-subscription path when the exact car and battery options appear in the app. **ANCEL BM700 Pro** is a dedicated handheld option, but its registration support is model-dependent and it does not change battery type or capacity.
 
-These are documented-fit categories, not hands-on performance rankings.
+These are documented-fit categories, not hands-on performance rankings. If the battery is repeatedly discharged before replacement, follow the [BMW battery-drain evidence chain](/guides/bmw-battery-drain-diagnostic-tool/) before treating registration as the repair.
 
 <figure class="cs-article-visual">
   <img src="/images/guides/bmw-battery-registration-scanner/r01-obd-diagnostic-session.webp" alt="A technician uses an automotive diagnostic tablet inside a vehicle." width="1600" height="1067" loading="lazy" decoding="async">

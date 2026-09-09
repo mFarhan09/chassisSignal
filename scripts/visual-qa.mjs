@@ -44,7 +44,7 @@ for (const [name, path, width, height] of checks) {
   });
   await page.screenshot({ path: new URL(`${name}.png`, outputDirectory).pathname.slice(1), fullPage: false, animations: 'disabled', timeout: 60_000 });
   if (name === 'home-1440') {
-    const componentShots = [['research-status', '.empty-state'], ['categories-3d', '.category-index']];
+    const componentShots = [['latest-guides', '.article-grid--featured'], ['categories-3d', '.category-index']];
     for (const [shotName, selector] of componentShots) {
       const component = page.locator(selector);
       await component.scrollIntoViewIfNeeded();

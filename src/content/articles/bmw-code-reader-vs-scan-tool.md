@@ -52,7 +52,7 @@ A basic reader can be the sensible purchase for a check-engine light. It becomes
 
 The [EPA’s OBD explanation](https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT) describes an emissions-monitoring system that stores diagnostic trouble codes and illuminates the malfunction indicator lamp. A compliant reader can generally retrieve generic powertrain codes, check readiness, view standardized parameters and clear emissions codes.
 
-That can answer why the check-engine light is on. It is not a map of every computer in a BMW. Generic access does not establish support for restraint, ABS, parking brake, climate, body, lighting or infotainment modules.
+That can answer why the check-engine light is on. It is not a map of every computer in a BMW. Generic access does not establish support for restraint, ABS, parking brake, climate, body, lighting or infotainment modules. If a scanner powers up but the vehicle or intended modules do not respond, use the [BMW OBD communication isolation guide](/guides/bmw-no-communication-with-obd-scanner/) to identify the failed layer.
 
 ## What “BMW-aware” must establish
 
