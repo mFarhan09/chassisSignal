@@ -43,7 +43,7 @@ The broader [OBD app versus handheld scanner guide](/guides/obd-app-vs-handheld-
 - **MaxiCOM MK808S:** current 7-inch wired model in Autel's MK808S/MK808Z documentation.
 - **MaxiCOM MK900:** current 8-inch wired model in Autel's MK900 documentation.
 
-The Bluetooth and TS variants remain separate. A cart should preserve the complete model suffix from product page to receipt.
+The Bluetooth and TS variants remain separate. A cart should preserve the complete model suffix from product page to receipt. For a direct exact-SKU cross-vendor decision, compare the [Foxwell NT530 Plus with the wired Autel MK808S](/guides/foxwell-nt530-vs-autel-mk808s-bmw/).
 
 <figure>
   <picture>
@@ -91,7 +91,7 @@ Pre/post scan can be valuable when a workshop needs a before-and-after record. A
 | CAN FD | Optional adapter shown in current comparison | Listed | Hardware path and vehicle support both matter |
 | Complete TPMS work | No; basic status | No; basic status | TS suffix identifies the TPMS-focused variants |
 
-This is a model-level comparison as observed on September 2, 2026. Autel can revise hardware, manuals, regional bundles, or included access. Recheck the exact regional page before purchase.
+This is a model-level comparison as observed on September 2, 2026. Autel can revise hardware, manuals, regional bundles, or included access. Recheck the exact regional page before purchase. If renewal and post-update ownership are decisive, use the [BMW scanner without a subscription guide](/guides/bmw-scanner-without-subscription/) to separate installed capability from future coverage.
 
 ## BMW coverage must resolve below the brand
 

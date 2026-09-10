@@ -60,7 +60,7 @@ Vehicle production date, module architecture and the application can narrow supp
 
 The [BMW F-series versus G-series adapter guide](/guides/bmw-f-series-vs-g-series-obd-adapter/) covers that generation-specific purchase boundary.
 
-For interface-specific follow-ups, compare [OBDLink EX with an ENET cable](/guides/obdlink-ex-vs-enet-cable/) when the app names one of those paths, or [BMW ICOM with K+DCAN](/guides/bmw-icom-vs-k-dcan/) when the decision reaches ISTA and workshop risk.
+For interface-specific follow-ups, compare [OBDLink EX with an ENET cable](/guides/obdlink-ex-vs-enet-cable/) when the app names one of those paths, [BMW ICOM with K+DCAN](/guides/bmw-icom-vs-k-dcan/) when the decision reaches an older workshop interface, or use the direct [BMW ICOM versus ENET guide](/guides/bmw-icom-vs-enet/) when software, Ethernet transport and job risk must be evaluated together.
 
 ## K+DCAN naming needs care
 

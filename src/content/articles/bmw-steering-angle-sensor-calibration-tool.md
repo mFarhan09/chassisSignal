@@ -74,7 +74,7 @@ Keep the jobs separate in the service record.
 
 The [BMW scanner for ABS and airbag codes](/guides/bmw-scanner-abs-airbag-codes/) page owns module access and fault reading.
 
-The [BMW bidirectional scan-tool functions](/guides/bmw-bidirectional-scan-tool-functions/) page explains why a named command needs exact coverage proof. Neither should be collapsed into this calibration decision.
+The [BMW bidirectional scan-tool functions](/guides/bmw-bidirectional-scan-tool-functions/) page explains why a named command needs exact coverage proof. Neither should be collapsed into this calibration decision. [BMW ride-height calibration](/guides/bmw-ride-height-calibration-scan-tool/) is a separate suspension-system owner with its own prerequisites and measurements.
 
 ## Build a four-coordinate qualification
 
