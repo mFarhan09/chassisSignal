@@ -110,7 +110,7 @@ The shape of the failure is more informative than the error message. Nothing res
 
 Generic OBD working while non-emissions modules fail narrows the scope. Several modules missing together can implicate a shared network, power supply, gateway route or vehicle state.
 
-One missing module moves the investigation toward that controller's local branch.
+One missing module moves the investigation toward that controller's local branch. An absent footwell controller is handled in the [FRM-specific diagnostic guide](/guides/bmw-frm-module-diagnostic-tool/).
 
 <figure>
   <picture>

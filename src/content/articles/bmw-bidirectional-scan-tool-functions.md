@@ -56,7 +56,7 @@ Ordinary diagnosis asks a controller for stored information. A bidirectional tes
 
 The word does not describe how many modules or commands are implemented. Nor does it prove the command is safe in the vehicle's current state. The tool may require the engine off, a stable voltage, a particular gear or brake state, or other conditions. Those requirements belong to the current manual and vehicle service information.
 
-An active test is also not a repair. If a command produces no response, the result still needs interpretation. The cause could be the controlled part, its supply, wiring, controller logic, interlocks, or an unsupported command path.
+An active test is also not a repair. If a command produces no response, the result still needs interpretation. The cause could be the controlled part, its supply, wiring, controller logic, interlocks, or an unsupported command path. The [electronic coolant-pump diagnosis guide](/guides/bmw-electronic-water-pump-diagnostic-tool/) applies that distinction to DME evidence, activation and electrical-path checks.
 
 ## A responsible active-test loop
 

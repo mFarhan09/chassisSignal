@@ -48,7 +48,7 @@ Write a narrow requirement: for example, “read and document faults across all 
 
 ## The supported ISTA route
 
-ISTA is BMW's service diagnostic environment. Current access, packages, and terms vary by market, so the BMW technical-information or AOS portal for the intended region is the authority. The AOS technical-requirements page should be treated as a live build sheet rather than a timeless recommendation.
+ISTA is BMW's service diagnostic environment. Current access, packages, and terms vary by market, so the BMW technical-information or AOS portal for the intended region is the authority. The AOS technical-requirements page should be treated as a live build sheet rather than a timeless recommendation. An [engine-specific Valvetronic relearn](/guides/ista-valvetronic-relearn/) is one case where the current vehicle test plan, fault state and prerequisites must control.
 
 At the observation date, BMW AOS specified 64-bit Windows 10 or Windows 11 Pro/Enterprise, at least 4 GB of RAM, 250 GB of free space on the system drive, a LAN adapter, .NET and Java requirements, and a supported vehicle interface. Those are minimum eligibility facts, not a promise that a marginal laptop will be pleasant under every data package. Storage headroom, reliable Ethernet, an SSD, a stable power plan, and controlled operating-system updates improve service reliability.
 

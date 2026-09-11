@@ -125,7 +125,7 @@ Do not choose on screen size or a maximum feature count. A verified compact tool
 
 Capture the official regional model page and date. Ask the seller for the exact SKU and a coverage screenshot or manufacturer lookup that resolves to the target BMW. Confirm whether the included software period starts at registration, what remains available after expiry, and whether BMW coverage requires an extra purchase. Confirm required adapters for the vehicle's protocols. Finally, write down the return path if the named function is absent.
 
-Compare a LAUNCH candidate with the actual alternatives, not with a generic scanner label. The [Foxwell NT530 versus NT710 guide](/guides/foxwell-nt530-vs-nt710/) covers BMW-oriented handheld tradeoffs, while the [Autel BMW guide](/guides/autel-scanner-for-bmw/) addresses another broad tablet family.
+Compare a LAUNCH candidate with the actual alternatives, not with a generic scanner label. The [Foxwell NT530 versus NT710 guide](/guides/foxwell-nt530-vs-nt710/) covers BMW-oriented handheld tradeoffs, while the [Autel BMW guide](/guides/autel-scanner-for-bmw/) addresses another broad tablet family. For a tier-matched cross-brand shop-platform decision, use the [Launch versus Autel flagship comparison](/guides/launch-x431-vs-autel-for-bmw/).
 
 ## Which Launch should a BMW owner choose?
 
