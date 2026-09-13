@@ -1,5 +1,6 @@
 import { chromium } from 'playwright-core';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
 
 const baseUrl = process.env.QA_BASE_URL || 'http://127.0.0.1:4321';
 const executablePath = process.env.CHROME_PATH || 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
@@ -65,7 +66,7 @@ for (const width of widths) {
     if (representative.has(slug)) {
       await page.locator('[data-affiliate-unit]').first().scrollIntoViewIfNeeded();
       await page.waitForTimeout(150);
-      await page.screenshot({ path: new URL(slug + '-' + width + '.png', outputDirectory).pathname.slice(1), fullPage: false, animations: 'disabled', timeout: 60_000 });
+      await page.screenshot({ path: fileURLToPath(new URL(slug + '-' + width + '.png', outputDirectory)), fullPage: false, animations: 'disabled', timeout: 60_000 });
     }
     await page.close();
   }

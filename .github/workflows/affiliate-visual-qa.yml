@@ -1,0 +1,89 @@
+name: Affiliate release checks
+
+on:
+  push:
+    branches:
+      - feat/affiliate-monetization-system
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  checks:
+    name: Deterministic release checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Typecheck
+        run: pnpm typecheck
+      - name: Production build (draft)
+        run: pnpm build
+      - name: Affiliate tests
+        run: pnpm test:affiliate
+      - name: Draft affiliate audit
+        run: pnpm affiliate:audit
+      - name: Controlled live affiliate audit
+        run: |
+          AFFILIATE_MODE=live pnpm build
+          AFFILIATE_MODE=live pnpm affiliate:audit
+      - name: Preservation vs baseline (article Markdown / OBDLink CX / queues)
+        run: |
+          BASE=7e236b78cdc9f514c72251e9d80abaa83870fcc5
+          test -z "$(git diff "$BASE" -- src/content/articles/)" || { echo 'article Markdown changed'; exit 1; }
+          test -z "$(git diff "$BASE" -- reports/affiliate/link-verification-queue.csv reports/affiliate/image-rights-queue.csv)" || { echo 'queues changed'; exit 1; }
+          node -e "const cp=require('child_process');const b=JSON.parse(cp.execSync('git show '+process.env.BASE+':src/affiliate/product-registry.generated.json').toString());const cur=require('./src/affiliate/product-registry.generated.json');if(JSON.stringify(b['obdlink-cx'])!==JSON.stringify(cur['obdlink-cx'])){console.error('OBDLink CX changed');process.exit(1);}console.log('OBDLink CX preserved');"
+        env:
+          BASE: 7e236b78cdc9f514c72251e9d80abaa83870fcc5
+
+  visual-qa:
+    name: Visual QA (320/390/768/1440)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Install Chromium for Playwright
+        run: npx --yes playwright@1.62.1 install --with-deps chromium
+      - name: Resolve Chromium executable path
+        run: |
+          CHROME_PATH="$(node --input-type=module -e "import {chromium} from 'playwright-core'; console.log(chromium.executablePath());")"
+          echo "Resolved Chromium: $CHROME_PATH"
+          echo "CHROME_PATH=$CHROME_PATH" >> "$GITHUB_ENV"
+      - name: Build (controlled live), serve preview, run visual QA
+        run: |
+          set -euo pipefail
+          AFFILIATE_MODE=live pnpm build
+          AFFILIATE_MODE=live pnpm preview --port 4321 &
+          PREVIEW_PID=$!
+          for i in $(seq 1 40); do
+            if curl -sf "http://127.0.0.1:4321/guides/bimmerlink-adapter/" >/dev/null 2>&1; then echo "preview healthy"; break; fi
+            sleep 2
+          done
+          if ! curl -sf "http://127.0.0.1:4321/guides/bimmerlink-adapter/" >/dev/null 2>&1; then
+            echo "preview did not become healthy"; kill "$PREVIEW_PID" 2>/dev/null || true; exit 1
+          fi
+          set +e
+          QA_BASE_URL=http://127.0.0.1:4321 pnpm qa:visual
+          status=$?
+          kill "$PREVIEW_PID" 2>/dev/null || true
+          exit $status
+      - name: Upload visual QA results and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: affiliate-visual-qa
+          path: qa/affiliate-rollout/
+          if-no-files-found: warn
