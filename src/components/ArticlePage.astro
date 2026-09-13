@@ -12,6 +12,8 @@ import ProductCard from './affiliate/ProductCard.astro';
 import ProductComparisonCard from './affiliate/ProductComparisonCard.astro';
 import RecommendedEquipmentCard from './affiliate/RecommendedEquipmentCard.astro';
 import RelatedBuyerGuideCTA from './affiliate/RelatedBuyerGuideCTA.astro';
+import InlineAffiliateCTA from './affiliate/InlineAffiliateCTA.astro';
+import { secondaryPlacements } from '../affiliate/placement-classification';
 
 type Article = CollectionEntry<'articles'>;
 
@@ -104,6 +106,12 @@ const breadcrumbSchema = {
           : affiliateMapping.monetizationMode === 'recommended_equipment' || affiliateMapping.monetizationMode === 'compatible_adapter'
             ? <RecommendedEquipmentCard productKey={affiliateMapping.primaryProductKeys[0]} articleSlug={article.data.slug} />
             : <ProductCard productKey={affiliateMapping.primaryProductKeys[0]} articleSlug={article.data.slug} />}
+        {(secondaryPlacements[article.data.slug] ?? []).map((placement) => <InlineAffiliateCTA
+          productKey={placement.productKey}
+          articleSlug={article.data.slug}
+          role={placement.role}
+          context={placement.context}
+        />)}
       </>}
       {!showAffiliateBlock && affiliateMapping?.monetizationMode === 'related_buyer_guide' && fallbackArticle && <RelatedBuyerGuideCTA
         href={articlePath(fallbackArticle)}

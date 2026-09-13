@@ -97,6 +97,7 @@ span.affiliate-button { cursor: not-allowed; opacity: .65; }
 }
 
 .affiliate-inline-cta { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; align-items: center; }
+.affiliate-inline-cta__role { margin: 0 0 4px !important; font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--teal); }
 .affiliate-inline-cta p, .related-buyer-guide-cta p { margin: 5px 0 14px; color: var(--muted); font-size: 13px; line-height: 1.55; }
 .related-buyer-guide-cta h2 { margin: 7px 0 10px; font-size: 29px; }
 .affiliate-button--internal { background: transparent; color: var(--ink) !important; }

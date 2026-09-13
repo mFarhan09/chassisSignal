@@ -11,6 +11,7 @@ import { getProductRenderState } from '../src/affiliate/render-policy.ts';
 import { validateSpecialLink } from '../src/affiliate/validator.ts';
 import { findRawAmazonUrls, scanEligibleGuides } from '../scripts/lib/affiliate-inventory.mjs';
 import { parseCsvRecords } from '../scripts/lib/csv.mjs';
+import { secondaryPlacements, validatePlacements, classifyCount, summarizePlacement, MAX_PLACEMENTS_PER_ARTICLE } from '../src/affiliate/placement-classification.ts';
 
 const root = process.cwd();
 const registry = JSON.parse(await readFile(join(root, 'src/affiliate/product-registry.generated.json'), 'utf8'));
@@ -132,4 +133,67 @@ test('catalog and final reports preserve all candidates and cover 58 guides', as
     assert.ok(report.includes(String.fromCharCode(96) + article.slug + String.fromCharCode(96)), article.slug);
   }
   assert.match(report, /Remaining HOLD articles: 0/);
+});
+
+test('contextual multi-placement rollout is valid and capped', () => {
+  // No placement classification errors against the real mappings/registry.
+  assert.deepEqual(validatePlacements(mappings, registry), []);
+  // Every article is classified, capped at 3, and its count matches its classification.
+  let one = 0, two = 0, three = 0;
+  for (const article of articles) {
+    const s = summarizePlacement(mappings[article.slug], article.slug);
+    assert.ok(s.placementCount >= 1 && s.placementCount <= MAX_PLACEMENTS_PER_ARTICLE, article.slug);
+    assert.equal(s.classification, classifyCount(s.placementCount), article.slug);
+    if (s.placementCount === 1) one++; else if (s.placementCount === 2) two++; else three++;
+  }
+  assert.equal(one + two + three, 58);
+  // A rigorous, quality-first audit: most articles are one-placement; only justified ones carry more.
+  assert.equal(two, Object.keys(secondaryPlacements).length);
+  assert.equal(three, 0);
+});
+
+test('every secondary placement is a distinct, approved, verified-linkable decision', () => {
+  for (const [slug, entries] of Object.entries(secondaryPlacements)) {
+    const mapping = mappings[slug];
+    assert.ok(mapping, slug);
+    for (const placement of entries) {
+      // approved alternative, not a duplicate of primary, with a valid link and article-specific copy
+      assert.ok(mapping.alternativeProductKeys.includes(placement.productKey), `${slug}:${placement.productKey} approved`);
+      assert.ok(!mapping.primaryProductKeys.includes(placement.productKey), `${slug}:${placement.productKey} distinct`);
+      assert.equal(validateSpecialLink(registry[placement.productKey]).valid, true, `${slug}:${placement.productKey} linkable`);
+      assert.ok(placement.context.trim().length > 40, `${slug}:${placement.productKey} contextual`);
+      assert.ok(placement.distinctnessReason.trim().length > 40, `${slug}:${placement.productKey} distinctness`);
+      // contextual copy must not be a generic template
+      assert.doesNotMatch(placement.context, /looking for a reliable option|check out/i, slug);
+    }
+  }
+});
+
+test('placement validator actually fails on broken rollout (mutation tests)', () => {
+  const slug = Object.keys(secondaryPlacements)[0];
+  const base = secondaryPlacements[slug][0];
+  const codes = (mut) => new Set(validatePlacements(mappings, registry, mut).map((e) => e.code));
+  // 1. secondary duplicates the primary product
+  assert.ok(codes({ [slug]: [{ ...base, productKey: mappings[slug].primaryProductKeys[0] }] }).has('SECONDARY_DUPLICATES_PRIMARY'));
+  // 2. a fourth placement pushes the article over the cap (two extra + primary = 3 ok; three extra = 4)
+  const alt = mappings[slug].alternativeProductKeys[0];
+  assert.ok(codes({ [slug]: [base, { ...base, productKey: 'obdlink-lx' }, { ...base, productKey: 'obdlink-ex' }] }).has('PLACEMENT_COUNT_EXCEEDED'));
+  // 3. secondary references a product that is not an approved alternative
+  assert.ok(codes({ [slug]: [{ ...base, productKey: 'foxwell-nt530' }] }).has('SECONDARY_NOT_APPROVED_ALTERNATIVE'));
+  // 4. missing contextual copy
+  assert.ok(codes({ [slug]: [{ ...base, context: '' }] }).has('SECONDARY_CONTEXT_MISSING'));
+  // 5. an approved alternative left unsurfaced is flagged
+  assert.ok(codes({ [slug]: [] }).has('APPROVED_ALTERNATIVE_NOT_SURFACED'));
+  // sanity: alt is a real approved alternative used above
+  assert.ok(alt);
+});
+
+test('disclosure precedes every affiliate unit including secondary CTAs', async () => {
+  const page = await readFile(join(root, 'src/components/ArticlePage.astro'), 'utf8');
+  const disclosure = page.indexOf('<AffiliateDisclosure compact />');
+  assert.ok(disclosure >= 0);
+  // disclosure is emitted before the primary card and before the secondary InlineAffiliateCTA loop
+  assert.ok(disclosure < page.indexOf('<ProductComparisonCard'));
+  assert.ok(disclosure < page.indexOf('<InlineAffiliateCTA'));
+  assert.ok(page.indexOf('secondaryPlacements[article.data.slug]') > page.indexOf('<RecommendedEquipmentCard'));
 });
