@@ -7,7 +7,7 @@ import { productVerificationOverrides } from '../src/affiliate/product-verificat
 import { suppliedSiteStripeInventory } from '../src/affiliate/supplied-sitestripe-inventory.ts';
 import { getProductRenderState } from '../src/affiliate/render-policy.ts';
 import { validateSpecialLink } from '../src/affiliate/validator.ts';
-import { secondaryPlacements, validatePlacements, placementCount, MAX_PLACEMENTS_PER_ARTICLE } from '../src/affiliate/placement-classification.ts';
+import { placementPlans, getPlacementPlan, validatePlacementPlans, MAX_PLACEMENTS_PER_ARTICLE } from '../src/affiliate/placement-plan.ts';
 import { findRawAmazonUrls, scanEligibleGuides } from './lib/affiliate-inventory.mjs';
 import { parseCsvRecords } from './lib/csv.mjs';
 
@@ -73,11 +73,12 @@ const cx = registry['obdlink-cx'];
 if (cx.specialLink !== productVerificationOverrides['obdlink-cx'].specialLink || cx.asin !== 'B08NFLL3NT') fail('OBDLINK_CX_CHANGED', 'OBDLink CX link or ASIN changed.');
 if (cx.imageSha256 !== '71D0D17DD3027118E4F5B3FB35CB79A4F45DC04B50B2FE9607D019D2E2FA04D6') fail('OBDLINK_CX_HASH_CHANGED', 'OBDLink CX image hash changed.');
 
-// Contextual multi-placement enforcement: distinct-decision placements only, capped, no duplicates.
-for (const error of validatePlacements(mappings, registry)) fail(`PLACEMENT_${error.code}`, error.message);
+// Contextual placement-density enforcement: 1-3 placements, distributed, distinct, capped.
+for (const error of validatePlacementPlans(placementPlans, mappings, registry)) fail(`PLACEMENT_${error.code}`, error.message);
 for (const article of articles) {
-  const count = placementCount(mappings[article.slug], article.slug);
-  if (count > MAX_PLACEMENTS_PER_ARTICLE) fail('PLACEMENT_COUNT_EXCEEDED', `${article.slug}: ${count} placements.`);
+  const plan = getPlacementPlan(article.slug);
+  if (!plan) fail('PLACEMENT_MISSING_PLAN', article.slug);
+  else if (plan.placements.length > MAX_PLACEMENTS_PER_ARTICLE) fail('PLACEMENT_COUNT_EXCEEDED', `${article.slug}: ${plan.placements.length} placements.`);
 }
 
 const queueKeys = (rows) => rows.map((row) => row.productKey).sort().join('\0');
@@ -98,8 +99,15 @@ if (mode === 'live') {
       if (!html.includes('rel="sponsored nofollow noopener"')) fail('REL_MISSING', article.slug);
       if (!html.includes('data-affiliate-unit') || !html.includes('class="affiliate-product-card__image"')) fail('MISSING_HTML_UNIT_OR_IMAGE', article.slug);
       if (/src="https?:\/\/[^"]*amazon\./i.test(html)) fail('EXTERNAL_AMAZON_IMAGE', article.slug);
-      for (const placement of secondaryPlacements[article.slug] ?? []) {
-        if (!html.includes(`data-product-key="${placement.productKey}"`)) fail('MISSING_SECONDARY_PLACEMENT', `${article.slug}: ${placement.productKey}`);
+      const plan = getPlacementPlan(article.slug);
+      if (plan) {
+        const unitCount = (html.match(/data-affiliate-unit/g) ?? []).length;
+        // Each placement renders one unit; a comparison card renders two product-card units.
+        const expectedUnits = plan.placements.reduce((sum, p) => sum + (p.variant === 'comparison_card' ? 2 : 1), 0);
+        if (unitCount !== expectedUnits) fail('PLACEMENT_UNIT_COUNT', `${article.slug}: ${unitCount} units, expected ${expectedUnits}.`);
+        for (const placement of plan.placements) for (const key of placement.productKeys) {
+          if (!html.includes(`data-product-key="${key}"`)) fail('MISSING_PLANNED_PLACEMENT', `${article.slug}: ${key}`);
+        }
       }
     } catch { fail('MISSING_BUILT_PAGE', article.slug); }
   }

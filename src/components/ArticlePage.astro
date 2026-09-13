@@ -8,12 +8,11 @@ import { getArticleProductMapping } from '../affiliate/mappings';
 import { productRegistry } from '../affiliate/registry';
 import { mappingHasLiveProducts } from '../affiliate/render-policy';
 import AffiliateDisclosure from './affiliate/AffiliateDisclosure.astro';
-import ProductCard from './affiliate/ProductCard.astro';
-import ProductComparisonCard from './affiliate/ProductComparisonCard.astro';
-import RecommendedEquipmentCard from './affiliate/RecommendedEquipmentCard.astro';
 import RelatedBuyerGuideCTA from './affiliate/RelatedBuyerGuideCTA.astro';
-import InlineAffiliateCTA from './affiliate/InlineAffiliateCTA.astro';
-import { secondaryPlacements } from '../affiliate/placement-classification';
+import PlacementRenderer from './affiliate/PlacementRenderer.astro';
+import { getPlacementPlan, type PlannedPlacement } from '../affiliate/placement-plan';
+
+type ContentSegment = { type: 'html'; value: string } | { type: 'placement'; placement: PlannedPlacement; first: boolean };
 
 type Article = CollectionEntry<'articles'>;
 
@@ -47,6 +46,30 @@ const showDraftAffiliatePreview = affiliateMode === 'draft'
   && affiliateMapping?.primaryProductKeys.length === 1
   && affiliateMapping.primaryProductKeys[0] === affiliateConfig.draftPilot.productKey;
 const showAffiliateBlock = hasLiveAffiliateProducts || showDraftAffiliatePreview;
+const placementPlan = getPlacementPlan(article.data.slug);
+// Split the rendered article HTML at H2 section boundaries and inject each planned
+// placement at the end of its target section (a distributed commercial journey),
+// without touching the prose. Falls back to <Content /> when rendered HTML is
+// unavailable (e.g. dev deferred rendering).
+const renderedHtml = article.rendered?.html;
+let contentSegments: ContentSegment[] | null = null;
+if (showAffiliateBlock && placementPlan && renderedHtml) {
+  const html = renderedHtml;
+  const h2Offsets = [...html.matchAll(/<h2[\s>]/g)].map((match) => match.index ?? 0);
+  const offsetForAnchor = (anchorIndex: number) => (anchorIndex + 1 < h2Offsets.length ? h2Offsets[anchorIndex + 1] : html.length);
+  const injected = placementPlan.placements
+    .map((placement) => ({ placement, offset: offsetForAnchor(placement.anchorIndex) }))
+    .sort((a, b) => a.offset - b.offset);
+  const parts: ContentSegment[] = [];
+  let cursor = 0;
+  injected.forEach(({ placement, offset }, index) => {
+    parts.push({ type: 'html', value: html.slice(cursor, offset) });
+    parts.push({ type: 'placement', placement, first: index === 0 });
+    cursor = offset;
+  });
+  parts.push({ type: 'html', value: html.slice(cursor) });
+  contentSegments = parts;
+}
 const fallbackArticle = affiliateMapping?.relatedBuyerGuideSlug
   ? articles.find((candidate) => candidate.data.slug === affiliateMapping.relatedBuyerGuideSlug) : undefined;
 const canonical = new URL(href, Astro.site);
@@ -98,21 +121,20 @@ const breadcrumbSchema = {
     <nav class="toc" aria-label="Table of contents"><strong>On this page</strong>{headings.filter((heading) => heading.depth === 2).map((heading) => <a href={`#${heading.slug}`}>{heading.text}</a>)}</nav>
     <article class="prose">
       <div class="key-findings"><strong>Evidence & safety context</strong><p>{evidenceCopy} {safetyCopy}</p></div>
-      <Content />
-      {showAffiliateBlock && affiliateMapping && <>
-        <AffiliateDisclosure compact />
-        {affiliateMapping.monetizationMode === 'comparison' && affiliateMapping.primaryProductKeys.length > 1
-          ? <ProductComparisonCard productKeys={affiliateMapping.primaryProductKeys} articleSlug={article.data.slug} />
-          : affiliateMapping.monetizationMode === 'recommended_equipment' || affiliateMapping.monetizationMode === 'compatible_adapter'
-            ? <RecommendedEquipmentCard productKey={affiliateMapping.primaryProductKeys[0]} articleSlug={article.data.slug} />
-            : <ProductCard productKey={affiliateMapping.primaryProductKeys[0]} articleSlug={article.data.slug} />}
-        {(secondaryPlacements[article.data.slug] ?? []).map((placement) => <InlineAffiliateCTA
-          productKey={placement.productKey}
-          articleSlug={article.data.slug}
-          role={placement.role}
-          context={placement.context}
-        />)}
-      </>}
+      {contentSegments
+        ? contentSegments.map((part) => part.type === 'html'
+            ? <Fragment set:html={part.value} />
+            : <>
+                {part.first && <AffiliateDisclosure compact />}
+                <PlacementRenderer placement={part.placement} articleSlug={article.data.slug} />
+              </>)
+        : <>
+            <Content />
+            {showAffiliateBlock && affiliateMapping && placementPlan && <>
+              <AffiliateDisclosure compact />
+              {placementPlan.placements.map((placement) => <PlacementRenderer placement={placement} articleSlug={article.data.slug} />)}
+            </>}
+          </>}
       {!showAffiliateBlock && affiliateMapping?.monetizationMode === 'related_buyer_guide' && fallbackArticle && <RelatedBuyerGuideCTA
         href={articlePath(fallbackArticle)}
         title={fallbackArticle.data.title}

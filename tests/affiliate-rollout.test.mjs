@@ -11,7 +11,7 @@ import { getProductRenderState } from '../src/affiliate/render-policy.ts';
 import { validateSpecialLink } from '../src/affiliate/validator.ts';
 import { findRawAmazonUrls, scanEligibleGuides } from '../scripts/lib/affiliate-inventory.mjs';
 import { parseCsvRecords } from '../scripts/lib/csv.mjs';
-import { secondaryPlacements, validatePlacements, classifyCount, summarizePlacement, MAX_PLACEMENTS_PER_ARTICLE } from '../src/affiliate/placement-classification.ts';
+import { placementPlans, validatePlacementPlans, planSummary, MAX_PLACEMENTS_PER_ARTICLE } from '../src/affiliate/placement-plan.ts';
 
 const root = process.cwd();
 const registry = JSON.parse(await readFile(join(root, 'src/affiliate/product-registry.generated.json'), 'utf8'));
@@ -119,7 +119,8 @@ test('card markup binds identity and safe affiliate attributes without commerce 
   assert.match(card, /src=\{product\.imagePathOrUrl!\}/);
   assert.match(card, /alt=\{product\.imageAlt/);
   assert.doesNotMatch(card, /buy now|star rating|review count|in stock|price:/i);
-  assert.ok(page.indexOf('<AffiliateDisclosure compact />') < page.indexOf('<ProductComparisonCard'));
+  // Disclosure is emitted immediately before the first placement in the distributed render.
+  assert.match(page, /part\.first && <AffiliateDisclosure compact \/>[\s\S]*<PlacementRenderer/);
 });
 
 test('catalog and final reports preserve all candidates and cover 58 guides', async () => {
@@ -135,65 +136,77 @@ test('catalog and final reports preserve all candidates and cover 58 guides', as
   assert.match(report, /Remaining HOLD articles: 0/);
 });
 
-test('contextual multi-placement rollout is valid and capped', () => {
-  // No placement classification errors against the real mappings/registry.
-  assert.deepEqual(validatePlacements(mappings, registry), []);
-  // Every article is classified, capped at 3, and its count matches its classification.
-  let one = 0, two = 0, three = 0;
+test('placement density plan is valid, distributed and capped', () => {
+  assert.deepEqual(validatePlacementPlans(placementPlans, mappings, registry), []);
+  let two = 0, three = 0, exc = 0;
   for (const article of articles) {
-    const s = summarizePlacement(mappings[article.slug], article.slug);
-    assert.ok(s.placementCount >= 1 && s.placementCount <= MAX_PLACEMENTS_PER_ARTICLE, article.slug);
-    assert.equal(s.classification, classifyCount(s.placementCount), article.slug);
-    if (s.placementCount === 1) one++; else if (s.placementCount === 2) two++; else three++;
+    const plan = placementPlans[article.slug];
+    assert.ok(plan, article.slug);
+    assert.ok(plan.placements.length >= 1 && plan.placements.length <= MAX_PLACEMENTS_PER_ARTICLE, article.slug);
+    if (plan.classification === 'TWO_PLACEMENTS') two++;
+    else if (plan.classification === 'THREE_PLACEMENTS') three++;
+    else exc++;
   }
-  assert.equal(one + two + three, 58);
-  // A rigorous, quality-first audit: most articles are one-placement; only justified ones carry more.
-  assert.equal(two, Object.keys(secondaryPlacements).length);
-  assert.equal(three, 0);
+  assert.equal(two + three + exc, 58);
+  // Corrected model: TWO is the normal state; THREE for comparison/alternative articles; exceptions rare.
+  assert.ok(two >= 40, `expected mostly two-placement articles, got ${two}`);
+  assert.ok(three >= 10, `expected several three-placement articles, got ${three}`);
+  const s = planSummary(placementPlans);
+  assert.equal(s.totalPlacements, two * 2 + three * 3 + exc);
 });
 
-test('every secondary placement is a distinct, approved, verified-linkable decision', () => {
-  for (const [slug, entries] of Object.entries(secondaryPlacements)) {
+test('every planned placement is approved, verified-linkable, distributed and non-repetitive', () => {
+  const seenContext = new Set();
+  for (const [slug, plan] of Object.entries(placementPlans)) {
     const mapping = mappings[slug];
-    assert.ok(mapping, slug);
-    for (const placement of entries) {
-      // approved alternative, not a duplicate of primary, with a valid link and article-specific copy
-      assert.ok(mapping.alternativeProductKeys.includes(placement.productKey), `${slug}:${placement.productKey} approved`);
-      assert.ok(!mapping.primaryProductKeys.includes(placement.productKey), `${slug}:${placement.productKey} distinct`);
-      assert.equal(validateSpecialLink(registry[placement.productKey]).valid, true, `${slug}:${placement.productKey} linkable`);
-      assert.ok(placement.context.trim().length > 40, `${slug}:${placement.productKey} contextual`);
-      assert.ok(placement.distinctnessReason.trim().length > 40, `${slug}:${placement.productKey} distinctness`);
-      // contextual copy must not be a generic template
-      assert.doesNotMatch(placement.context, /looking for a reliable option|check out/i, slug);
+    const approved = new Set([...mapping.primaryProductKeys, ...mapping.alternativeProductKeys]);
+    const anchors = plan.placements.map((p) => p.anchorIndex);
+    // distinct section anchors, spread across the article (not all at the end)
+    assert.equal(new Set(anchors).size, anchors.length, `${slug}: duplicate anchors`);
+    if (anchors.length >= 2) assert.notEqual(Math.min(...anchors), Math.max(...anchors), `${slug}: clustered`);
+    for (const placement of plan.placements) {
+      assert.equal(placement.variant === 'comparison_card' ? 2 : 1, placement.productKeys.length, `${slug}: ${placement.variant} product count`);
+      for (const key of placement.productKeys) {
+        assert.ok(approved.has(key), `${slug}: ${key} approved`);
+        assert.equal(validateSpecialLink(registry[key]).valid, true, `${slug}: ${key} linkable`);
+      }
+      if (placement.variant === 'compact_cta' || placement.variant === 'final_cta') {
+        assert.ok(placement.context && placement.context.trim().length >= 30, `${slug}: contextual copy`);
+        assert.ok(!seenContext.has(placement.context), `${slug}: duplicate contextual copy`);
+        seenContext.add(placement.context);
+      }
     }
   }
 });
 
-test('placement validator actually fails on broken rollout (mutation tests)', () => {
-  const slug = Object.keys(secondaryPlacements)[0];
-  const base = secondaryPlacements[slug][0];
-  const codes = (mut) => new Set(validatePlacements(mappings, registry, mut).map((e) => e.code));
-  // 1. secondary duplicates the primary product
-  assert.ok(codes({ [slug]: [{ ...base, productKey: mappings[slug].primaryProductKeys[0] }] }).has('SECONDARY_DUPLICATES_PRIMARY'));
-  // 2. a fourth placement pushes the article over the cap (two extra + primary = 3 ok; three extra = 4)
-  const alt = mappings[slug].alternativeProductKeys[0];
-  assert.ok(codes({ [slug]: [base, { ...base, productKey: 'obdlink-lx' }, { ...base, productKey: 'obdlink-ex' }] }).has('PLACEMENT_COUNT_EXCEEDED'));
-  // 3. secondary references a product that is not an approved alternative
-  assert.ok(codes({ [slug]: [{ ...base, productKey: 'foxwell-nt530' }] }).has('SECONDARY_NOT_APPROVED_ALTERNATIVE'));
-  // 4. missing contextual copy
-  assert.ok(codes({ [slug]: [{ ...base, context: '' }] }).has('SECONDARY_CONTEXT_MISSING'));
-  // 5. an approved alternative left unsurfaced is flagged
-  assert.ok(codes({ [slug]: [] }).has('APPROVED_ALTERNATIVE_NOT_SURFACED'));
-  // sanity: alt is a real approved alternative used above
-  assert.ok(alt);
+test('placement validator actually fails on broken plans (mutation tests)', () => {
+  const slug = Object.keys(placementPlans).find((s) => placementPlans[s].classification === 'THREE_PLACEMENTS');
+  const base = placementPlans[slug];
+  const clone = () => JSON.parse(JSON.stringify(base));
+  const codes = (plan) => new Set(validatePlacementPlans({ [slug]: plan }, mappings, registry).map((e) => e.code));
+  // 1. all placements clustered at the same section
+  const clustered = clone(); clustered.placements.forEach((p) => { p.anchorIndex = 5; });
+  assert.ok(codes(clustered).has('ALL_PLACEMENTS_AT_END') || codes(clustered).has('DUPLICATE_ANCHOR'));
+  // 2. over the cap (four placements)
+  const over = clone(); over.placements.push({ ...over.placements[0], anchorIndex: 99 }); over.classification = 'THREE_PLACEMENTS';
+  assert.ok(codes(over).has('PLACEMENT_COUNT_EXCEEDED'));
+  // 3. unapproved product
+  const bad = clone(); bad.placements[0].productKeys = ['foxwell-nt530']; bad.placements[0].variant = 'product_card';
+  assert.ok(codes(bad).has('PRODUCT_NOT_APPROVED') || codes(bad).has('LINK_INVALID'));
+  // 4. duplicate contextual copy across two CTAs
+  const dup = clone();
+  const ctas = dup.placements.filter((p) => p.variant === 'compact_cta' || p.variant === 'final_cta');
+  if (ctas.length >= 2) { ctas[1].context = ctas[0].context; assert.ok(codes(dup).has('DUPLICATE_CONTEXT')); }
+  // 5. classification/count mismatch
+  const mism = clone(); mism.classification = 'TWO_PLACEMENTS';
+  assert.ok(codes(mism).has('CLASSIFICATION_MISMATCH'));
 });
 
-test('disclosure precedes every affiliate unit including secondary CTAs', async () => {
+test('disclosure precedes every affiliate unit in the distributed render', async () => {
   const page = await readFile(join(root, 'src/components/ArticlePage.astro'), 'utf8');
-  const disclosure = page.indexOf('<AffiliateDisclosure compact />');
-  assert.ok(disclosure >= 0);
-  // disclosure is emitted before the primary card and before the secondary InlineAffiliateCTA loop
-  assert.ok(disclosure < page.indexOf('<ProductComparisonCard'));
-  assert.ok(disclosure < page.indexOf('<InlineAffiliateCTA'));
-  assert.ok(page.indexOf('secondaryPlacements[article.data.slug]') > page.indexOf('<RecommendedEquipmentCard'));
+  // In the segmented render, the disclosure is emitted immediately before the first placement.
+  assert.match(page, /part\.first && <AffiliateDisclosure compact \/>/);
+  assert.match(page, /<PlacementRenderer placement=\{part\.placement\}/);
+  // Placements attach inside the content flow (segments), not only after all content.
+  assert.match(page, /contentSegments/);
 });

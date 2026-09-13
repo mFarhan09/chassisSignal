@@ -11,6 +11,7 @@
     "qa:visual": "node scripts/affiliate-visual-qa.mjs",
     "affiliate:inventory": "node --experimental-strip-types scripts/affiliate-inventory.mjs",
     "affiliate:audit": "node --experimental-strip-types scripts/affiliate-rollout-audit.mjs",
+    "affiliate:plan": "node --experimental-strip-types scripts/affiliate-placement-plan.mjs",
     "affiliate:placements": "node --experimental-strip-types scripts/affiliate-placement-report.mjs",
     "test:affiliate": "pnpm affiliate:inventory && node --test --experimental-strip-types tests/affiliate-rollout.test.mjs",
     "test": "pnpm test:affiliate",
