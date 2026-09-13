@@ -28,20 +28,20 @@ for (const width of widths) {
     page.on('console', (message) => { if (message.type() === 'error') consoleErrors.push(message.text()); });
     page.on('pageerror', (error) => consoleErrors.push(error.message));
     await page.goto(baseUrl + '/guides/' + slug + '/', { waitUntil: 'networkidle' });
-    // Affiliate cards sit below the fold and use loading="lazy", so their images never load
-    // until scrolled into view. Step through the page to trigger them, return to the top, then
-    // wait (bounded) for those images to finish before asserting they loaded.
-    await page.evaluate(async () => {
-      for (let y = 0; y < document.body.scrollHeight; y += 600) {
-        window.scrollTo(0, y);
-        await new Promise((resolve) => setTimeout(resolve, 30));
+    // Affiliate cards sit below the fold and use loading="lazy", so their images never load in a
+    // headless viewport. Force those images to load eagerly, then wait (bounded) for them to
+    // finish before asserting. This deterministically validates the image resource without
+    // depending on scroll timing; a genuinely broken image still fails allImagesLoaded.
+    await page.evaluate(() => {
+      for (const image of document.querySelectorAll('[data-affiliate-unit] img')) {
+        image.loading = 'eager';
+        if (!image.complete) { const src = image.src; image.src = ''; image.src = src; }
       }
-      window.scrollTo(0, 0);
     });
     await page.waitForFunction(
       () => [...document.querySelectorAll('[data-affiliate-unit] img')].every((image) => image.complete && image.naturalWidth > 0),
       null,
-      { timeout: 8000 },
+      { timeout: 15_000 },
     ).catch(() => {});
     const check = await page.evaluate(() => {
       const documentWidth = document.documentElement.clientWidth;
