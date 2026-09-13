@@ -67,9 +67,9 @@ export const editorialPages = [
   },
   {
     slug: 'affiliate-disclosure', eyebrow: 'Transparency', title: 'Editorial judgment is not for sale.', intro: 'Chassis Signal may eventually earn a commission when a reader purchases through certain clearly identified links.', sections: [
-      ['Current status', 'No specific affiliate relationship is represented by the publication at this time. Links without an affiliate destination remain ordinary research links.'],
+      ['Required disclosure', 'As an Amazon Associate I earn from qualifying purchases. The affiliate engine remains in draft mode until exact product links receive human verification.'],
       ['Editorial separation', 'Commercial relationships should not determine conclusions, evidence labels or the inclusion of relevant limitations.'],
-      ['Link treatment', 'Affiliate links, when introduced, will be identified and use appropriate sponsored and security attributes. Prices and availability should be verified at the destination.']
+      ['Link treatment', 'Affiliate links are identified, point directly to Amazon and use sponsored, nofollow and security attributes. Chassis Signal does not publish manually maintained Amazon prices, ratings, availability or Prime claims.']
     ]
   },
   {

@@ -8,7 +8,12 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "qa:visual": "node scripts/visual-qa.mjs",
+    "qa:visual": "node scripts/affiliate-visual-qa.mjs",
+    "affiliate:inventory": "node --experimental-strip-types scripts/affiliate-inventory.mjs",
+    "affiliate:audit": "node --experimental-strip-types scripts/affiliate-rollout-audit.mjs",
+    "test:affiliate": "pnpm affiliate:inventory && node --test --experimental-strip-types tests/affiliate-rollout.test.mjs",
+    "test": "pnpm test:affiliate",
+    "typecheck": "astro check",
     "deploy": "wrangler deploy"
   },
   "dependencies": {

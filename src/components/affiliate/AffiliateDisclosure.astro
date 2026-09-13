@@ -1,0 +1,13 @@
+---
+import { affiliateConfig } from '../../affiliate/config';
+
+interface Props {
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+---
+<aside class:list={['affiliate-disclosure', { 'affiliate-disclosure--compact': compact }]} aria-label="Affiliate disclosure">
+  <strong>Affiliate disclosure</strong>
+  <p>{compact ? affiliateConfig.articleDisclosureText : affiliateConfig.disclosureText}</p>
+</aside>

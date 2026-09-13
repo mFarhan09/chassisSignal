@@ -1,0 +1,15 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  rationale: string;
+}
+
+const { href, title, rationale } = Astro.props;
+---
+<aside class="related-buyer-guide-cta">
+  <p class="related-buyer-guide-cta__eyebrow">Related buyer guide</p>
+  <h2>{title}</h2>
+  <p>{rationale}</p>
+  <a class="affiliate-button affiliate-button--internal" href={href}><span>Continue to the buyer guide</span></a>
+</aside>

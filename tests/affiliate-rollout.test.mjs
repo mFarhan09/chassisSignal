@@ -1,0 +1,135 @@
+import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
+import { readFile } from 'node:fs/promises';
+import { join } from 'node:path';
+import test from 'node:test';
+import { affiliateConfig } from '../src/affiliate/config.ts';
+import { editorialMappingOverrides } from '../src/affiliate/editorial-mapping-overrides.ts';
+import { productVerificationOverrides } from '../src/affiliate/product-verification-overrides.ts';
+import { suppliedSiteStripeInventory } from '../src/affiliate/supplied-sitestripe-inventory.ts';
+import { getProductRenderState } from '../src/affiliate/render-policy.ts';
+import { validateSpecialLink } from '../src/affiliate/validator.ts';
+import { findRawAmazonUrls, scanEligibleGuides } from '../scripts/lib/affiliate-inventory.mjs';
+import { parseCsvRecords } from '../scripts/lib/csv.mjs';
+
+const root = process.cwd();
+const registry = JSON.parse(await readFile(join(root, 'src/affiliate/product-registry.generated.json'), 'utf8'));
+const mappings = JSON.parse(await readFile(join(root, 'src/affiliate/article-mappings.generated.json'), 'utf8'));
+const articles = await scanEligibleGuides();
+const mapped = Object.values(mappings);
+const actionableKeys = [...new Set(mapped.flatMap((mapping) => [...mapping.primaryProductKeys, ...mapping.alternativeProductKeys]))].sort();
+
+test('exactly 58 published guides have approved non-HOLD mappings', () => {
+  assert.equal(articles.length, 58);
+  assert.equal(mapped.length, 58);
+  assert.equal(Object.keys(editorialMappingOverrides).length, 58);
+  for (const article of articles) {
+    const mapping = mappings[article.slug];
+    assert.ok(mapping, article.slug);
+    assert.notEqual(mapping.editorialDecision, 'HOLD', article.slug);
+    assert.equal(mapping.mappingStatus, 'approved', article.slug);
+    assert.equal(mapping.approvalStatus, 'approved', article.slug);
+    assert.ok(mapping.primaryProductKeys.length >= 1 && mapping.primaryProductKeys.length <= 2, article.slug);
+    assert.ok(mapping.relationshipLabel && mapping.recommendationRationale && mapping.officialEvidenceUrl, article.slug);
+  }
+});
+
+test('all 58 mappings resolve to live image-bearing affiliate links', () => {
+  for (const mapping of mapped) for (const key of mapping.primaryProductKeys) {
+    const state = getProductRenderState(registry[key], mapping, 'live', false);
+    assert.equal(state.visible && state.clickable && state.showImage, true, mapping.articleSlug + ': ' + key);
+  }
+});
+
+test('both queues exactly match 20 actionable keys', async () => {
+  assert.equal(actionableKeys.length, 20);
+  const link = parseCsvRecords(await readFile(join(root, 'reports/affiliate/link-verification-queue.csv'), 'utf8'));
+  const image = parseCsvRecords(await readFile(join(root, 'reports/affiliate/image-rights-queue.csv'), 'utf8'));
+  assert.deepEqual(link.map((row) => row.productKey).sort(), actionableKeys);
+  assert.deepEqual(image.map((row) => row.productKey).sort(), actionableKeys);
+});
+
+test('mapped links have exact tag, product path and matching ASIN', () => {
+  for (const key of actionableKeys) {
+    const product = registry[key];
+    assert.equal(validateSpecialLink(product).valid, true, key);
+    const url = new URL(product.specialLink);
+    assert.deepEqual(url.searchParams.getAll('tag'), [affiliateConfig.expectedTrackingId], key);
+    assert.equal(url.pathname.match(/\/dp\/([A-Z0-9]{10})(?:[/?]|$)/i)?.[1].toUpperCase(), product.asin, key);
+  }
+});
+
+test('all supplied URLs are byte-identical and OBDLink CX is preserved', async () => {
+  assert.equal(Object.keys(suppliedSiteStripeInventory).length, 21);
+  for (const [key, supplied] of Object.entries(suppliedSiteStripeInventory)) {
+    assert.equal(registry[key].specialLink, supplied.specialLink, key);
+    assert.equal(registry[key].asin, supplied.asin, key);
+    assert.equal(registry[key].verifiedBy, 'Muhammad Farhan', key);
+  }
+  const cx = registry['obdlink-cx'];
+  assert.equal(cx.specialLink, productVerificationOverrides['obdlink-cx'].specialLink);
+  assert.equal(cx.asin, 'B08NFLL3NT');
+  assert.equal(cx.verifiedAt, '2026-09-12T11:16:39.927Z');
+  const bytes = await readFile(join(root, 'public/images/products/obdlink-cx-official.jpg'));
+  assert.equal(createHash('sha256').update(bytes).digest('hex').toUpperCase(), '71D0D17DD3027118E4F5B3FB35CB79A4F45DC04B50B2FE9607D019D2E2FA04D6');
+});
+
+test('every actionable image is local, present, attributed and hash-verified', async () => {
+  for (const key of actionableKeys) {
+    const product = registry[key];
+    assert.match(product.imagePathOrUrl, /^\/images\/products\//, key);
+    assert.doesNotMatch(product.imageRightsSource, /amazon\./i, key);
+    assert.ok(product.imageAlt && product.imageAttribution && product.imageReviewedBy, key);
+    assert.ok(['manufacturer_attributed_editorial', 'site_owned', 'verified'].includes(product.imageRightsStatus), key);
+    const bytes = await readFile(join(root, 'public', product.imagePathOrUrl));
+    assert.equal(createHash('sha256').update(bytes).digest('hex').toUpperCase(), product.imageSha256, key);
+  }
+});
+
+test('alternative and supporting-equipment mappings are visibly labelled', () => {
+  for (const mapping of mapped) {
+    if (['available_alternative', 'workshop_alternative'].includes(mapping.affiliateRelationship)) assert.match(mapping.relationshipLabel, /alternative|available/i, mapping.articleSlug);
+    if (mapping.affiliateRelationship === 'supporting_equipment') assert.match(mapping.relationshipLabel, /supporting equipment/i, mapping.articleSlug);
+  }
+});
+
+test('rejected products and raw article Amazon links are absent', async () => {
+  const restricted = new Set(['bmw-enet-cable', 'k-dcan-cable', 'bmw-icom-next', 'bimmergeeks-bluetooth-adapter', 'bimmergeeks-expert-k-dcan']);
+  for (const key of actionableKeys) assert.equal(restricted.has(key), false, key);
+  for (const product of Object.values(registry)) {
+    assert.notEqual(product.asin, 'B0CDGH4WFH');
+    assert.notEqual(product.asin, 'B0GX17T6Z2');
+    assert.doesNotMatch(product.specialLink ?? '', /node=51812349011/);
+  }
+  for (const article of articles) {
+    const source = await readFile(join(root, article.filePath), 'utf8');
+    assert.deepEqual(findRawAmazonUrls(source), [], article.slug);
+  }
+});
+
+test('card markup binds identity and safe affiliate attributes without commerce claims', async () => {
+  const link = await readFile(join(root, 'src/components/AffiliateLink.astro'), 'utf8');
+  const card = await readFile(join(root, 'src/components/affiliate/ProductCard.astro'), 'utf8');
+  const page = await readFile(join(root, 'src/components/ArticlePage.astro'), 'utf8');
+  assert.match(link, /target="_blank"/);
+  assert.match(link, /rel="sponsored nofollow noopener"/);
+  assert.match(card, /data-product-key=\{product\.productKey\}/);
+  assert.match(card, /data-product-asin=\{product\.asin\}/);
+  assert.match(card, /src=\{product\.imagePathOrUrl!\}/);
+  assert.match(card, /alt=\{product\.imageAlt/);
+  assert.doesNotMatch(card, /buy now|star rating|review count|in stock|price:/i);
+  assert.ok(page.indexOf('<AffiliateDisclosure compact />') < page.indexOf('<ProductComparisonCard'));
+});
+
+test('catalog and final reports preserve all candidates and cover 58 guides', async () => {
+  assert.equal(Object.keys(registry).length, 47);
+  assert.equal(Object.values(registry).filter((product) => product.specialLink).length, 22);
+  const report = await readFile(join(root, 'reports/affiliate/final-affiliate-rollout-report.md'), 'utf8');
+  const rows = parseCsvRecords(await readFile(join(root, 'reports/affiliate/final-affiliate-coverage.csv'), 'utf8'));
+  assert.equal(rows.length, 58);
+  for (const article of articles) {
+    assert.ok(rows.find((row) => row.slug === article.slug), article.slug);
+    assert.ok(report.includes(String.fromCharCode(96) + article.slug + String.fromCharCode(96)), article.slug);
+  }
+  assert.match(report, /Remaining HOLD articles: 0/);
+});

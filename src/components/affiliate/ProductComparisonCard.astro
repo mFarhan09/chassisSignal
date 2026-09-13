@@ -1,0 +1,18 @@
+---
+import ProductCard from './ProductCard.astro';
+
+interface Props {
+  productKeys: string[];
+  articleSlug: string;
+  placement?: string;
+}
+
+const { productKeys, articleSlug, placement = 'after_evidence_context' } = Astro.props;
+const comparisonKeys = productKeys.slice(0, 2);
+---
+{comparisonKeys.length === 2 && <section class="affiliate-comparison" aria-label="Product comparison">
+  <div class="affiliate-comparison__heading"><p>Product options</p><h2>Compare the relevant equipment</h2></div>
+  <div class="affiliate-comparison__grid">
+    {comparisonKeys.map((productKey) => <ProductCard productKey={productKey} articleSlug={articleSlug} placement={placement} cardVariant="comparison_card" headingLevel="h3" />)}
+  </div>
+</section>}

@@ -1,0 +1,15 @@
+---
+import ProductCard from './ProductCard.astro';
+
+interface Props {
+  productKey: string;
+  articleSlug: string;
+  placement?: string;
+}
+
+const { productKey, articleSlug, placement = 'after_evidence_context' } = Astro.props;
+---
+<section class="affiliate-recommendation" aria-label="Recommended equipment">
+  <p class="affiliate-recommendation__eyebrow">Relevant equipment</p>
+  <ProductCard productKey={productKey} articleSlug={articleSlug} placement={placement} cardVariant="recommended_equipment" />
+</section>

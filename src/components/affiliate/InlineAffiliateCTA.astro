@@ -1,0 +1,24 @@
+---
+import { affiliateConfig, resolveAffiliateMode } from '../../affiliate/config';
+import { getArticleProductMapping } from '../../affiliate/mappings';
+import { getProduct } from '../../affiliate/registry';
+import { getProductRenderState } from '../../affiliate/render-policy';
+import AffiliateLink from '../AffiliateLink.astro';
+
+interface Props {
+  productKey: string;
+  articleSlug: string;
+  placement?: string;
+  label?: (typeof affiliateConfig.allowedCtaLabels)[number];
+}
+
+const { productKey, articleSlug, placement = 'inline', label = affiliateConfig.allowedCtaLabels[1] } = Astro.props;
+const product = getProduct(productKey);
+const mapping = getArticleProductMapping(articleSlug);
+const state = getProductRenderState(product, mapping, resolveAffiliateMode(import.meta.env.AFFILIATE_MODE), import.meta.env.DEV);
+---
+{state.visible && product && <aside class="affiliate-inline-cta" data-affiliate-unit>
+  {state.draftPreview && <span class="affiliate-draft-badge">Draft preview</span>}
+  <div><strong>{product.brand} {product.model}</strong><p>{product.editorialSummary || 'Exact product link pending editorial review.'}</p></div>
+  <AffiliateLink productKey={productKey} articleSlug={articleSlug} placement={placement} cardVariant="inline_cta" class="affiliate-button"><span>{state.draftPreview ? 'Amazon link awaiting verification' : label}</span></AffiliateLink>
+</aside>}

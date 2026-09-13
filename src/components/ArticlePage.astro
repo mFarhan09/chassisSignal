@@ -3,6 +3,15 @@ import { render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import EvidenceBadge from './EvidenceBadge.astro';
 import { articleCardImage, articlePath } from '../data/articles';
+import { affiliateConfig, resolveAffiliateMode } from '../affiliate/config';
+import { getArticleProductMapping } from '../affiliate/mappings';
+import { productRegistry } from '../affiliate/registry';
+import { mappingHasLiveProducts } from '../affiliate/render-policy';
+import AffiliateDisclosure from './affiliate/AffiliateDisclosure.astro';
+import ProductCard from './affiliate/ProductCard.astro';
+import ProductComparisonCard from './affiliate/ProductComparisonCard.astro';
+import RecommendedEquipmentCard from './affiliate/RecommendedEquipmentCard.astro';
+import RelatedBuyerGuideCTA from './affiliate/RelatedBuyerGuideCTA.astro';
 
 type Article = CollectionEntry<'articles'>;
 
@@ -28,6 +37,16 @@ const published = article.data.publishedAt.toLocaleDateString('en-GB', { day: 'n
 const updated = article.data.updatedAt?.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 const pricingChecked = article.data.pricingChecked?.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 const image = typeof article.data.heroImage === 'string' ? article.data.heroImage : undefined;
+const affiliateMode = resolveAffiliateMode(import.meta.env.AFFILIATE_MODE);
+const affiliateMapping = getArticleProductMapping(article.data.slug);
+const hasLiveAffiliateProducts = mappingHasLiveProducts(affiliateMapping, productRegistry, affiliateMode);
+const showDraftAffiliatePreview = affiliateMode === 'draft'
+  && article.data.slug === affiliateConfig.draftPilot.articleSlug
+  && affiliateMapping?.primaryProductKeys.length === 1
+  && affiliateMapping.primaryProductKeys[0] === affiliateConfig.draftPilot.productKey;
+const showAffiliateBlock = hasLiveAffiliateProducts || showDraftAffiliatePreview;
+const fallbackArticle = affiliateMapping?.relatedBuyerGuideSlug
+  ? articles.find((candidate) => candidate.data.slug === affiliateMapping.relatedBuyerGuideSlug) : undefined;
 const canonical = new URL(href, Astro.site);
 const evidenceCopy = {
   'DOCUMENTED': 'Primary manufacturer documentation supports the core scope. Compatibility claims are not independent hands-on testing; verify the exact vehicle and function.',
@@ -78,6 +97,19 @@ const breadcrumbSchema = {
     <article class="prose">
       <div class="key-findings"><strong>Evidence & safety context</strong><p>{evidenceCopy} {safetyCopy}</p></div>
       <Content />
+      {showAffiliateBlock && affiliateMapping && <>
+        <AffiliateDisclosure compact />
+        {affiliateMapping.monetizationMode === 'comparison' && affiliateMapping.primaryProductKeys.length > 1
+          ? <ProductComparisonCard productKeys={affiliateMapping.primaryProductKeys} articleSlug={article.data.slug} />
+          : affiliateMapping.monetizationMode === 'recommended_equipment' || affiliateMapping.monetizationMode === 'compatible_adapter'
+            ? <RecommendedEquipmentCard productKey={affiliateMapping.primaryProductKeys[0]} articleSlug={article.data.slug} />
+            : <ProductCard productKey={affiliateMapping.primaryProductKeys[0]} articleSlug={article.data.slug} />}
+      </>}
+      {!showAffiliateBlock && affiliateMapping?.monetizationMode === 'related_buyer_guide' && fallbackArticle && <RelatedBuyerGuideCTA
+        href={articlePath(fallbackArticle)}
+        title={fallbackArticle.data.title}
+        rationale={affiliateMapping.recommendationRationale}
+      />}
       {related.length > 0 && <section class="related">
         <h2>Related articles</h2>
         <div class="related-grid">{related.map((item) => <a class="related-card" href={articlePath(item)}>
