@@ -9,6 +9,21 @@ const searchInput = document.querySelector('[data-search-input]');
 const results = document.querySelector('[data-search-results]');
 const searchStatus = document.querySelector('[data-search-status]');
 
+document.addEventListener('click', (event) => {
+  const anchor = event.target instanceof Element ? event.target.closest('a[data-affiliate-link]') : null;
+  if (!(anchor instanceof HTMLAnchorElement)) return;
+  const eventData = {
+    article_slug: anchor.dataset.articleSlug || '',
+    product_key: anchor.dataset.productKey || '',
+    asin: anchor.dataset.asin || '',
+    placement: anchor.dataset.placement || '',
+    card_variant: anchor.dataset.cardVariant || '',
+    tracking_id: anchor.dataset.trackingId || '',
+    destination_domain: anchor.dataset.destinationDomain || ''
+  };
+  if (typeof window.gtag === 'function') window.gtag('event', 'affiliate_click', eventData);
+});
+
 const setPanel = (panel, open) => {
   if (!panel) return;
   panel.setAttribute('aria-hidden', String(!open));

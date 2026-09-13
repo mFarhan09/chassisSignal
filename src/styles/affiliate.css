@@ -1,0 +1,128 @@
+/* Compliance-first affiliate units */
+.affiliate-disclosure {
+  margin: 0 0 18px;
+  padding: 16px 18px;
+  border: 1px solid rgba(49, 95, 128, .22);
+  border-left: 3px solid var(--blue);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, .62);
+  font-family: var(--sans);
+}
+
+.affiliate-disclosure strong,
+.affiliate-draft-badge,
+.affiliate-product-card__category,
+.affiliate-recommendation__eyebrow,
+.related-buyer-guide-cta__eyebrow {
+  display: block;
+  color: var(--teal);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.affiliate-disclosure p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.affiliate-product-card {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 30px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, .86), rgba(232, 224, 212, .65));
+  box-shadow: var(--shadow-sm);
+  font-family: var(--sans);
+}
+
+.affiliate-product-card--image { grid-template-columns: minmax(150px, .42fr) minmax(0, 1fr); }
+.affiliate-product-card__image { width: 100%; height: 100%; min-height: 260px; aspect-ratio: 4 / 3; object-fit: contain; background: #f4f2ed; }
+.affiliate-product-card__relationship { margin: 0 0 6px !important; color: var(--teal) !important; font-size: 9px !important; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.affiliate-product-card__body { min-width: 0; padding: 25px; }
+.affiliate-product-card h2, .affiliate-product-card h3 { margin: 8px 0 11px; font-size: 30px; }
+.affiliate-product-card p { margin: 0 0 15px; color: var(--muted); font-size: 13px; line-height: 1.6; overflow-wrap: anywhere; }
+.affiliate-product-card__note { padding-top: 13px; border-top: 1px solid var(--line); }
+.affiliate-draft-badge { padding: 10px 16px; background: var(--navy); color: #a9cbd0; grid-column: 1 / -1; }
+
+.affiliate-product-card__attribution { font-size: 11px !important; }
+.affiliate-product-card__attribution a { color: var(--teal); font-weight: 700; }
+.affiliate-button {
+  max-width: 100%;
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 17px;
+  border: 1px solid var(--ink) !important;
+  background: var(--ink);
+  color: white !important;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .055em;
+  line-height: 1.35;
+  text-align: center;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+span.affiliate-button { cursor: not-allowed; opacity: .65; }
+.affiliate-comparison { max-width: 100%; margin: 0 0 34px; }
+.affiliate-comparison__heading p { margin: 0; color: var(--teal); font-family: var(--sans); font-size: 9px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.affiliate-comparison__heading h2 { margin: 6px 0 18px; font-size: 31px; }
+.affiliate-comparison__grid { min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.affiliate-comparison__grid .affiliate-product-card { height: 100%; margin: 0; }
+.affiliate-comparison__grid .affiliate-product-card__body { padding: 20px; }
+.affiliate-comparison__grid .affiliate-product-card h3 { font-size: 25px; }
+.affiliate-recommendation { max-width: 100%; margin-bottom: 30px; }
+.affiliate-recommendation__eyebrow { margin: 0 0 8px; }
+
+.affiliate-inline-cta,
+.related-buyer-guide-cta {
+  max-width: 100%;
+  margin: 2em 0;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--teal);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .58);
+  font-family: var(--sans);
+}
+
+.affiliate-inline-cta { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; align-items: center; }
+.affiliate-inline-cta__role { margin: 0 0 4px !important; font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--teal); }
+.affiliate-inline-cta p, .related-buyer-guide-cta p { margin: 5px 0 14px; color: var(--muted); font-size: 13px; line-height: 1.55; }
+.related-buyer-guide-cta h2 { margin: 7px 0 10px; font-size: 29px; }
+.affiliate-button--internal { background: transparent; color: var(--ink) !important; }
+
+.footer-affiliate-disclosure {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line-dark);
+  color: #c4cfcd;
+  font-size: 11px;
+}
+
+.footer-affiliate-disclosure strong { color: #75a4d1; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; }
+.footer-affiliate-disclosure p { margin: 0; line-height: 1.4; }
+
+@media (max-width: 640px) {
+  .affiliate-product-card--image { grid-template-columns: minmax(0, 1fr); }
+  .affiliate-product-card__image { min-height: 190px; max-height: 240px; }
+  .affiliate-product-card__body { padding: 18px; }
+  .affiliate-product-card h2, .affiliate-product-card h3 { font-size: 25px; }
+  .affiliate-comparison__grid { grid-template-columns: minmax(0, 1fr); }
+  .affiliate-comparison__grid .affiliate-product-card { height: auto; }
+  .affiliate-inline-cta { grid-template-columns: minmax(0, 1fr); }
+  .affiliate-inline-cta .affiliate-button, .related-buyer-guide-cta .affiliate-button { width: 100%; }
+}

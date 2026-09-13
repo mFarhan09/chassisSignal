@@ -1,0 +1,22 @@
+---
+import ProductCard from './ProductCard.astro';
+import ProductComparisonCard from './ProductComparisonCard.astro';
+import RecommendedEquipmentCard from './RecommendedEquipmentCard.astro';
+import InlineAffiliateCTA from './InlineAffiliateCTA.astro';
+import type { PlannedPlacement } from '../../affiliate/placement-plan';
+
+interface Props {
+  placement: PlannedPlacement;
+  articleSlug: string;
+}
+
+const { placement, articleSlug } = Astro.props;
+const id = placement.decisionMoment;
+---
+{placement.variant === 'comparison_card'
+  ? <ProductComparisonCard productKeys={placement.productKeys} articleSlug={articleSlug} placement={id} />
+  : placement.variant === 'recommended_equipment'
+    ? <RecommendedEquipmentCard productKey={placement.productKeys[0]} articleSlug={articleSlug} placement={id} />
+    : placement.variant === 'product_card'
+      ? <ProductCard productKey={placement.productKeys[0]} articleSlug={articleSlug} placement={id} />
+      : <InlineAffiliateCTA productKey={placement.productKeys[0]} articleSlug={articleSlug} placement={id} role={placement.role} context={placement.context} />}

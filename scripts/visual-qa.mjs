@@ -1,10 +1,12 @@
 import { chromium } from 'playwright-core';
-import { mkdir } from 'node:fs/promises';
+import { mkdir, readFile } from 'node:fs/promises';
 
 const baseUrl = process.env.QA_BASE_URL || 'http://127.0.0.1:4321';
 const executablePath = process.env.CHROME_PATH || 'C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe';
 const outputDirectory = new URL('../qa/', import.meta.url);
 
+const registry = JSON.parse(await readFile(new URL('../src/affiliate/product-registry.generated.json', import.meta.url), 'utf8'));
+const pilotExpectedHref = registry['obdlink-cx'].specialLink;
 const checks = [
   ['home-1440', '/', 1440, 900],
   ['home-1366', '/', 1366, 768],
@@ -15,6 +17,8 @@ const checks = [
   ['research-1024-emulated', '/research/', 1024, 768],
   ['research-390-emulated', '/research/', 390, 844],
   ['methodology-375-emulated', '/methodology/', 375, 812],
+  ['affiliate-pilot-bimmerlink-pricing-1280', '/guides/bimmerlink-pricing/', 1280, 900],
+  ['affiliate-pilot-bimmerlink-pricing-320', '/guides/bimmerlink-pricing/', 320, 720],
   ['contact-390-emulated', '/contact/', 390, 844]
 ];
 
@@ -42,6 +46,30 @@ for (const [name, path, width, height] of checks) {
     }).slice(0, 12);
     return { clientWidth: width, scrollWidth: document.documentElement.scrollWidth, offenders };
   });
+  let pilotResult = null;
+  if (name.startsWith('affiliate-pilot-')) {
+    const card = page.locator('[data-affiliate-unit]');
+    await card.scrollIntoViewIfNeeded();
+    await page.waitForTimeout(350);
+    pilotResult = await page.evaluate((expectedHref) => {
+      const units = [...document.querySelectorAll('[data-affiliate-unit]')];
+      const unit = units[0];
+      const link = unit?.querySelector('a[data-affiliate-link]');
+      const image = unit?.querySelector('img');
+      const disclosure = document.querySelector('.affiliate-disclosure');
+      return {
+        unitCount: units.length,
+        hrefExact: link?.getAttribute('href') === expectedHref,
+        relExact: link?.getAttribute('rel') === 'sponsored nofollow noopener',
+        productNameExact: unit?.querySelector('h2, h3')?.textContent?.trim() === 'OBDLink CX',
+        contextualRecommendation: unit?.textContent?.includes('For the BimmerLink setup described here') ?? false,
+        attributionExact: unit?.querySelector('.affiliate-product-card__attribution')?.textContent?.trim() === 'Product image: OBDLink.',
+        imageLoaded: Boolean(image?.complete && image.naturalWidth > 0),
+        disclosureBeforeCard: Boolean(disclosure && unit && (disclosure.compareDocumentPosition(unit) & Node.DOCUMENT_POSITION_FOLLOWING))
+      };
+    }, pilotExpectedHref);
+    if (pilotResult.unitCount !== 1 || !pilotResult.hrefExact || !pilotResult.relExact || !pilotResult.productNameExact || !pilotResult.contextualRecommendation || !pilotResult.attributionExact || !pilotResult.imageLoaded || !pilotResult.disclosureBeforeCard) failed = true;
+  }
   await page.screenshot({ path: new URL(`${name}.png`, outputDirectory).pathname.slice(1), fullPage: false, animations: 'disabled', timeout: 60_000 });
   if (name === 'home-1440') {
     const componentShots = [['latest-guides', '.article-grid--featured'], ['categories-3d', '.category-index']];
@@ -54,7 +82,7 @@ for (const [name, path, width, height] of checks) {
   }
   const overflow = layout.scrollWidth > layout.clientWidth + 1;
   if (overflow || consoleErrors.length) failed = true;
-  console.log(JSON.stringify({ name, viewport: `${width}x${height}`, overflow, ...layout, consoleErrors }));
+  console.log(JSON.stringify({ name, viewport: `${width}x${height}`, overflow, ...layout, consoleErrors, pilotResult }));
   await context.close();
 }
 

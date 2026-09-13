@@ -1,0 +1,171 @@
+# Affiliate editorial correction report
+
+Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors were added.
+
+- Eligible guides: 58
+- APPROVE: 5
+- CORRECTED: 53
+- HOLD: 0
+- Material before/after mapping changes: 53
+
+## Changed mappings
+
+- `autel-scanner-for-bmw` (CORRECTED)
+  - Before: primary=[foxwell-nt530]; alternative=[foxwell-nt530-plus, autel-mk808s, autel-mk900, autel-mx900]; mode=recommended_equipment
+  - After: primary=[autel-mx808s, autel-mk900-bt]; alternative=[]; mode=comparison
+- `autophix-7910-vs-foxwell-nt530` (CORRECTED)
+  - Before: primary=[foxwell-nt530, foxwell-nt530-plus]; alternative=[autophix-7910, creator-c310-plus]; mode=comparison
+  - After: primary=[autophix-7910p-plus]; alternative=[]; mode=recommended_equipment
+- `bimmercode-vs-carly` (CORRECTED)
+  - Before: primary=[obdlink-cx, obdlink-mx-plus]; alternative=[foxwell-nt530, carly-universal-scanner]; mode=comparison
+  - After: primary=[obdlink-cx]; alternative=[]; mode=compatible_adapter
+- `bimmercode-vs-foxwell-nt530` (CORRECTED)
+  - Before: primary=[foxwell-nt530]; alternative=[]; mode=exact_product
+  - After: primary=[obdlink-cx]; alternative=[]; mode=compatible_adapter
+- `bimmercode-vs-protool` (CORRECTED)
+  - Before: primary=[]; alternative=[]; mode=related_buyer_guide
+  - After: primary=[obdlink-cx]; alternative=[]; mode=compatible_adapter
+- `bimmerlink-adapter` (CORRECTED)
+  - Before: primary=[obdlink-cx]; alternative=[obdlink-mx-plus, bmw-enet-cable]; mode=recommended_equipment
+  - After: primary=[obdlink-cx]; alternative=[obdlink-mx-plus]; mode=recommended_equipment
+- `bimmerlink-pricing` (APPROVE)
+  - Before: primary=[obdlink-cx]; alternative=[]; mode=exact_product
+  - After: primary=[obdlink-cx]; alternative=[]; mode=recommended_equipment
+- `bimmerlink-vs-carly` (CORRECTED)
+  - Before: primary=[]; alternative=[]; mode=related_buyer_guide
+  - After: primary=[obdlink-cx]; alternative=[]; mode=compatible_adapter
+- `bimmerlink-vs-foxwell-nt530` (CORRECTED)
+  - Before: primary=[foxwell-nt530, creator-c310-plus]; alternative=[]; mode=comparison
+  - After: primary=[obdlink-cx]; alternative=[]; mode=compatible_adapter
+- `bimmerlink-vs-protool` (CORRECTED)
+  - Before: primary=[]; alternative=[]; mode=related_buyer_guide
+  - After: primary=[obdlink-cx]; alternative=[]; mode=compatible_adapter
+- `bmw-battery-drain-diagnostic-tool` (CORRECTED)
+  - Before: primary=[]; alternative=[]; mode=related_buyer_guide
+  - After: primary=[fluke-88v]; alternative=[]; mode=recommended_equipment
+- `bmw-battery-registration-scanner` (CORRECTED)
+  - Before: primary=[obdlink-cx]; alternative=[obdlink-mx-plus, ancel-bm700-pro, carly-universal-scanner]; mode=recommended_equipment
+  - After: primary=[obdlink-cx]; alternative=[]; mode=compatible_adapter
+- `bmw-bidirectional-scan-tool-functions` (CORRECTED)
+  - Before: primary=[foxwell-nt530]; alternative=[foxwell-nt530-plus, autel-mk900]; mode=recommended_equipment
+  - After: primary=[autel-mk900-bt]; alternative=[]; mode=recommended_equipment
+- `bmw-code-reader-vs-scan-tool` (CORRECTED)
+  - Before: primary=[]; alternative=[]; mode=related_buyer_guide
+  - After: primary=[obdlink-cx, autel-ds808s-bt]; alternative=[]; mode=comparison
+- `bmw-coding-vs-programming` (CORRECTED)
+  - Before: primary=[]; alternative=[]; mode=related_buyer_guide
+  - After: primary=[schumacher-inc100]; alternative=[]; mode=recommended_equipment
+- `bmw-diagnostic-software-windows` (CORRECTED)
+  - Before: primary=[bmw-enet-cable]; alternative=[]; mode=exact_product
+  - After: primary=[schumacher-inc100]; alternative=[]; mode=recommended_equipment
+- `bmw-electric-parking-brake-service-mode-scanner` (CORRECTED)
+  - Before: primary=[autel-mk808s]; alternative=[]; mode=exact_product
+  - After: primary=[autel-md909-pro]; alternative=[]; mode=exact_product
+- `bmw-electronic-water-pump-diagnostic-tool` (CORRECTED)
+  - Before: primary=[]; alternative=[]; mode=related_buyer_guide
+  - After: primary=[innova-5610-bundle]; alternative=[]; mode=recommended_equipment
+- `bmw-enet-vs-bluetooth-obd` (CORRECTED)
+  - Before: primary=[obdlink-cx, obdlink-mx-plus]; alternative=[bmw-enet-cable]; mode=comparison
+  - After: primary=[obdlink-cx]; alternative=[]; mode=compatible_adapter
+- `bmw-f-series-vs-g-series-obd-adapter` (CORRECTED)
+  - Before: primary=[obdlink-cx, obdlink-mx-plus]; alternative=[vlinker-bm-plus, bmw-enet-cable]; mode=comparison
+  - After: primary=[obdlink-cx]; alternative=[]; mode=compatible_adapter
+- `bmw-frm-module-diagnostic-tool` (CORRECTED)
+  - Before: primary=[]; alternative=[]; mode=related_buyer_guide
+  - After: primary=[fluke-88v]; alternative=[]; mode=recommended_equipment
+- `bmw-icom-vs-enet` (CORRECTED)
+  - Before: primary=[bmw-icom-next, bmw-enet-cable]; alternative=[]; mode=comparison
+  - After: primary=[schumacher-inc100]; alternative=[]; mode=recommended_equipment
+- `bmw-icom-vs-k-dcan` (CORRECTED)
+  - Before: primary=[bimmergeeks-expert-k-dcan, bmw-icom-next]; alternative=[k-dcan-cable]; mode=comparison
+  - After: primary=[schumacher-inc100]; alternative=[]; mode=recommended_equipment
+- `bmw-injector-coding-tool` (CORRECTED)
+  - Before: primary=[]; alternative=[]; mode=related_buyer_guide
+  - After: primary=[autel-md909-pro]; alternative=[]; mode=exact_product
+- `bmw-no-communication-with-obd-scanner` (CORRECTED)
+  - Before: primary=[obdlink-ex]; alternative=[]; mode=exact_product
+  - After: primary=[fluke-88v]; alternative=[]; mode=recommended_equipment
+- `bmw-ride-height-calibration-scan-tool` (CORRECTED)
+  - Before: primary=[]; alternative=[]; mode=related_buyer_guide
+  - After: primary=[autel-maxisys-ultra]; alternative=[]; mode=recommended_equipment
+- `bmw-scanner-abs-airbag-codes` (CORRECTED)
+  - Before: primary=[foxwell-nt530]; alternative=[foxwell-nt530-plus, autel-mx900]; mode=recommended_equipment
+  - After: primary=[autel-mx900]; alternative=[]; mode=recommended_equipment
+- `bmw-scanner-for-used-car-inspection` (CORRECTED)
+  - Before: primary=[autel-ds808s]; alternative=[]; mode=exact_product
+  - After: primary=[autel-ds808s-bt]; alternative=[]; mode=exact_product
+- `bmw-scanner-without-subscription` (CORRECTED)
+  - Before: primary=[foxwell-nt530]; alternative=[foxwell-nt530-plus, autel-mk808s]; mode=recommended_equipment
+  - After: primary=[innova-5610-bundle]; alternative=[]; mode=recommended_equipment
+- `bmw-service-reset-tool` (CORRECTED)
+  - Before: primary=[foxwell-nt530]; alternative=[foxwell-nt530-plus]; mode=recommended_equipment
+  - After: primary=[obdlink-cx]; alternative=[]; mode=compatible_adapter
+- `bmw-steering-angle-sensor-calibration-tool` (CORRECTED)
+  - Before: primary=[autel-mk808s]; alternative=[]; mode=exact_product
+  - After: primary=[autel-mx808s]; alternative=[]; mode=recommended_equipment
+- `bmw-tpms-diagnostic-tool` (CORRECTED)
+  - Before: primary=[autel-mk808s]; alternative=[autel-mk808s-ts]; mode=recommended_equipment
+  - After: primary=[autel-mx808s, autel-mx808s-ts]; alternative=[]; mode=comparison
+- `bmw-transfer-case-adaptation-reset-tool` (CORRECTED)
+  - Before: primary=[]; alternative=[]; mode=related_buyer_guide
+  - After: primary=[autel-maxisys-ultra]; alternative=[]; mode=recommended_equipment
+- `carly-subscription-cost` (CORRECTED)
+  - Before: primary=[obdlink-cx]; alternative=[carly-universal-scanner]; mode=recommended_equipment
+  - After: primary=[obdlink-cx]; alternative=[]; mode=recommended_equipment
+- `carly-vs-foxwell-nt530` (CORRECTED)
+  - Before: primary=[foxwell-nt530]; alternative=[]; mode=exact_product
+  - After: primary=[autophix-7910p-plus]; alternative=[]; mode=recommended_equipment
+- `creator-c310-plus-vs-foxwell-nt530` (CORRECTED)
+  - Before: primary=[foxwell-nt530, foxwell-nt530-plus]; alternative=[creator-c310-plus]; mode=comparison
+  - After: primary=[creator-c310-plus]; alternative=[]; mode=exact_product
+- `foxwell-nt530-vs-autel-mk808s-bmw` (CORRECTED)
+  - Before: primary=[foxwell-nt530, foxwell-nt530-plus]; alternative=[autel-mk808s]; mode=comparison
+  - After: primary=[autel-mx808s]; alternative=[]; mode=recommended_equipment
+- `foxwell-nt530-vs-nt710` (CORRECTED)
+  - Before: primary=[foxwell-nt530, foxwell-nt710]; alternative=[autophix-7910, creator-c310-plus]; mode=comparison
+  - After: primary=[autophix-7910p-plus]; alternative=[]; mode=recommended_equipment
+- `ista-valvetronic-relearn` (CORRECTED)
+  - Before: primary=[]; alternative=[]; mode=related_buyer_guide
+  - After: primary=[schumacher-inc100]; alternative=[]; mode=recommended_equipment
+- `ista-vs-bimmerlink` (CORRECTED)
+  - Before: primary=[]; alternative=[]; mode=related_buyer_guide
+  - After: primary=[obdlink-cx]; alternative=[]; mode=compatible_adapter
+- `k-dcan-vs-enet-cable` (CORRECTED)
+  - Before: primary=[obdlink-cx, obdlink-ex]; alternative=[k-dcan-cable, bmw-enet-cable]; mode=comparison
+  - After: primary=[schumacher-inc100]; alternative=[]; mode=recommended_equipment
+- `launch-x431-bmw` (CORRECTED)
+  - Before: primary=[foxwell-nt530]; alternative=[launch-creader-elite-bmw, launch-creader-elite-x, launch-x431-throttle-v, launch-x431-torque-link, launch-smartlink-c]; mode=recommended_equipment
+  - After: primary=[launch-creader-elite-bmw-v2, launch-x431-pro3s-plus]; alternative=[]; mode=comparison
+- `launch-x431-vs-autel-for-bmw` (CORRECTED)
+  - Before: primary=[foxwell-nt530, foxwell-nt530-plus]; alternative=[autel-mk808s, autel-maxisys-ultra-s2, launch-x431-throttle-v, autel-vcmi-2, autel-maxisys-ultra]; mode=comparison
+  - After: primary=[launch-x431-pro3s-plus, autel-maxisys-ultra]; alternative=[]; mode=comparison
+- `mini-diagnostic-app` (CORRECTED)
+  - Before: primary=[]; alternative=[]; mode=related_buyer_guide
+  - After: primary=[obdlink-cx]; alternative=[]; mode=compatible_adapter
+- `obd-app-vs-handheld-scanner` (CORRECTED)
+  - Before: primary=[obdlink-cx, obdlink-mx-plus]; alternative=[autel-mk808s, innova-5610]; mode=comparison
+  - After: primary=[obdlink-cx, autel-mx808s]; alternative=[]; mode=comparison
+- `obdlink-cx-vs-mx-plus` (CORRECTED)
+  - Before: primary=[obdlink-cx, obdlink-mx-plus]; alternative=[obdlink-ex, vlinker-bm-plus, vlinker-mc-plus]; mode=comparison
+  - After: primary=[obdlink-cx, obdlink-mx-plus]; alternative=[]; mode=comparison
+- `obdlink-cx-vs-vlinker-mc-plus` (CORRECTED)
+  - Before: primary=[obdlink-cx, vlinker-bm-plus]; alternative=[vlinker-mc-plus]; mode=comparison
+  - After: primary=[obdlink-cx, vlinker-mc-plus]; alternative=[]; mode=comparison
+- `obdlink-ex-vs-enet-cable` (CORRECTED)
+  - Before: primary=[obdlink-ex, bmw-enet-cable]; alternative=[]; mode=comparison
+  - After: primary=[obdlink-ex]; alternative=[]; mode=exact_product
+- `obdlink-mx-plus-vs-lx` (CORRECTED)
+  - Before: primary=[obdlink-cx, obdlink-mx-plus]; alternative=[obdlink-lx, vlinker-mc-plus]; mode=comparison
+  - After: primary=[obdlink-mx-plus, obdlink-lx]; alternative=[]; mode=comparison
+- `protool-pricing` (CORRECTED)
+  - Before: primary=[bimmergeeks-bluetooth-adapter]; alternative=[bimmergeeks-expert-k-dcan, k-dcan-cable]; mode=recommended_equipment
+  - After: primary=[obdlink-cx]; alternative=[]; mode=recommended_equipment
+- `protool-vs-carly` (CORRECTED)
+  - Before: primary=[carly-universal-scanner]; alternative=[]; mode=exact_product
+  - After: primary=[obdlink-cx]; alternative=[]; mode=recommended_equipment
+- `protool-vs-ista` (CORRECTED)
+  - Before: primary=[bmw-icom-next]; alternative=[]; mode=exact_product
+  - After: primary=[schumacher-inc100]; alternative=[]; mode=recommended_equipment
+- `vlinker-bm-plus-vs-mc-plus` (CORRECTED)
+  - Before: primary=[obdlink-cx, vlinker-bm-plus]; alternative=[vlinker-mc-plus]; mode=comparison
+  - After: primary=[vlinker-bm-plus, vlinker-mc-plus]; alternative=[]; mode=comparison

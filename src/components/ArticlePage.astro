@@ -3,6 +3,16 @@ import { render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import EvidenceBadge from './EvidenceBadge.astro';
 import { articleCardImage, articlePath } from '../data/articles';
+import { affiliateConfig, resolveAffiliateMode } from '../affiliate/config';
+import { getArticleProductMapping } from '../affiliate/mappings';
+import { productRegistry } from '../affiliate/registry';
+import { mappingHasLiveProducts } from '../affiliate/render-policy';
+import AffiliateDisclosure from './affiliate/AffiliateDisclosure.astro';
+import RelatedBuyerGuideCTA from './affiliate/RelatedBuyerGuideCTA.astro';
+import PlacementRenderer from './affiliate/PlacementRenderer.astro';
+import { getPlacementPlan, type PlannedPlacement } from '../affiliate/placement-plan';
+
+type ContentSegment = { type: 'html'; value: string } | { type: 'placement'; placement: PlannedPlacement; first: boolean };
 
 type Article = CollectionEntry<'articles'>;
 
@@ -28,6 +38,40 @@ const published = article.data.publishedAt.toLocaleDateString('en-GB', { day: 'n
 const updated = article.data.updatedAt?.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 const pricingChecked = article.data.pricingChecked?.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 const image = typeof article.data.heroImage === 'string' ? article.data.heroImage : undefined;
+const affiliateMode = resolveAffiliateMode(import.meta.env.AFFILIATE_MODE);
+const affiliateMapping = getArticleProductMapping(article.data.slug);
+const hasLiveAffiliateProducts = mappingHasLiveProducts(affiliateMapping, productRegistry, affiliateMode);
+const showDraftAffiliatePreview = affiliateMode === 'draft'
+  && article.data.slug === affiliateConfig.draftPilot.articleSlug
+  && affiliateMapping?.primaryProductKeys.length === 1
+  && affiliateMapping.primaryProductKeys[0] === affiliateConfig.draftPilot.productKey;
+const showAffiliateBlock = hasLiveAffiliateProducts || showDraftAffiliatePreview;
+const placementPlan = getPlacementPlan(article.data.slug);
+// Split the rendered article HTML at H2 section boundaries and inject each planned
+// placement at the end of its target section (a distributed commercial journey),
+// without touching the prose. Falls back to <Content /> when rendered HTML is
+// unavailable (e.g. dev deferred rendering).
+const renderedHtml = article.rendered?.html;
+let contentSegments: ContentSegment[] | null = null;
+if (showAffiliateBlock && placementPlan && renderedHtml) {
+  const html = renderedHtml;
+  const h2Offsets = [...html.matchAll(/<h2[\s>]/g)].map((match) => match.index ?? 0);
+  const offsetForAnchor = (anchorIndex: number) => (anchorIndex + 1 < h2Offsets.length ? h2Offsets[anchorIndex + 1] : html.length);
+  const injected = placementPlan.placements
+    .map((placement) => ({ placement, offset: offsetForAnchor(placement.anchorIndex) }))
+    .sort((a, b) => a.offset - b.offset);
+  const parts: ContentSegment[] = [];
+  let cursor = 0;
+  injected.forEach(({ placement, offset }, index) => {
+    parts.push({ type: 'html', value: html.slice(cursor, offset) });
+    parts.push({ type: 'placement', placement, first: index === 0 });
+    cursor = offset;
+  });
+  parts.push({ type: 'html', value: html.slice(cursor) });
+  contentSegments = parts;
+}
+const fallbackArticle = affiliateMapping?.relatedBuyerGuideSlug
+  ? articles.find((candidate) => candidate.data.slug === affiliateMapping.relatedBuyerGuideSlug) : undefined;
 const canonical = new URL(href, Astro.site);
 const evidenceCopy = {
   'DOCUMENTED': 'Primary manufacturer documentation supports the core scope. Compatibility claims are not independent hands-on testing; verify the exact vehicle and function.',
@@ -77,7 +121,25 @@ const breadcrumbSchema = {
     <nav class="toc" aria-label="Table of contents"><strong>On this page</strong>{headings.filter((heading) => heading.depth === 2).map((heading) => <a href={`#${heading.slug}`}>{heading.text}</a>)}</nav>
     <article class="prose">
       <div class="key-findings"><strong>Evidence & safety context</strong><p>{evidenceCopy} {safetyCopy}</p></div>
-      <Content />
+      {contentSegments
+        ? contentSegments.map((part) => part.type === 'html'
+            ? <Fragment set:html={part.value} />
+            : <>
+                {part.first && <AffiliateDisclosure compact />}
+                <PlacementRenderer placement={part.placement} articleSlug={article.data.slug} />
+              </>)
+        : <>
+            <Content />
+            {showAffiliateBlock && affiliateMapping && placementPlan && <>
+              <AffiliateDisclosure compact />
+              {placementPlan.placements.map((placement) => <PlacementRenderer placement={placement} articleSlug={article.data.slug} />)}
+            </>}
+          </>}
+      {!showAffiliateBlock && affiliateMapping?.monetizationMode === 'related_buyer_guide' && fallbackArticle && <RelatedBuyerGuideCTA
+        href={articlePath(fallbackArticle)}
+        title={fallbackArticle.data.title}
+        rationale={affiliateMapping.recommendationRationale}
+      />}
       {related.length > 0 && <section class="related">
         <h2>Related articles</h2>
         <div class="related-grid">{related.map((item) => <a class="related-card" href={articlePath(item)}>

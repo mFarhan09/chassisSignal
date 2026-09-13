@@ -1,0 +1,46 @@
+---
+import { affiliateConfig, resolveAffiliateMode } from '../../affiliate/config';
+import { getArticleProductMapping } from '../../affiliate/mappings';
+import { getProduct } from '../../affiliate/registry';
+import { getProductRenderState } from '../../affiliate/render-policy';
+import type { AffiliateCardVariant } from '../../affiliate/types';
+import AffiliateLink from '../AffiliateLink.astro';
+
+interface Props {
+  productKey: string;
+  articleSlug: string;
+  placement?: string;
+  cardVariant?: AffiliateCardVariant;
+  headingLevel?: 'h2' | 'h3';
+}
+
+const {
+  productKey,
+  articleSlug,
+  placement = 'after_evidence_context',
+  cardVariant = 'product_card',
+  headingLevel = 'h2'
+} = Astro.props;
+const product = getProduct(productKey);
+const mapping = getArticleProductMapping(articleSlug);
+const mode = resolveAffiliateMode(import.meta.env.AFFILIATE_MODE);
+const state = getProductRenderState(product, mapping, mode, import.meta.env.DEV);
+const Heading = headingLevel;
+const ctaLabel = affiliateConfig.allowedCtaLabels[0];
+---
+{state.visible && product && mapping && <article class:list={['affiliate-product-card', { 'affiliate-product-card--image': state.showImage }]} data-affiliate-unit data-product-key={product.productKey} data-product-name={`${product.brand} ${product.model}`} data-product-asin={product.asin} data-affiliate-relationship={mapping.affiliateRelationship}>
+  {state.pilot && <span class="affiliate-draft-badge">Draft pilot - verified link</span>}
+  {state.draftPreview && <span class="affiliate-draft-badge">Draft preview · not clickable</span>}
+  {state.showImage && <img class="affiliate-product-card__image" src={product.imagePathOrUrl!} alt={product.imageAlt || `${product.brand} ${product.model}`} width="720" height="540" loading="lazy" decoding="async" data-image-source={product.imageRightsSource} data-image-sha256={product.imageSha256} />}
+  <div class="affiliate-product-card__body">
+    <p class="affiliate-product-card__relationship">{mapping.relationshipLabel}</p>
+    <p class="affiliate-product-card__category">{product.category}</p>
+    <Heading>{`${product.brand} ${product.model}`}</Heading>
+    <p>{mapping.recommendationRationale}</p>
+    {product.compatibilityNotes && <p class="affiliate-product-card__note"><strong>Compatibility:</strong>{' '}{product.compatibilityNotes}</p>}
+    {state.showImage && product.imageAttribution && <p class="affiliate-product-card__attribution">{product.imageAttribution}</p>}
+    <AffiliateLink productKey={productKey} articleSlug={articleSlug} placement={placement} cardVariant={cardVariant} class="affiliate-button">
+      <span>{state.pilot ? ctaLabel : state.draftPreview ? 'Amazon link awaiting human verification' : ctaLabel}</span>
+    </AffiliateLink>
+  </div>
+</article>}

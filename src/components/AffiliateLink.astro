@@ -1,12 +1,39 @@
 ---
+import { resolveAffiliateMode } from '../affiliate/config';
+import { getArticleProductMapping } from '../affiliate/mappings';
+import { getProduct } from '../affiliate/registry';
+import { getProductRenderState } from '../affiliate/render-policy';
+import type { AffiliateCardVariant } from '../affiliate/types';
+
 interface Props {
-  href?: string;
-  merchant?: string;
-  product: string;
-  subId?: string;
+  productKey: string;
+  articleSlug: string;
+  placement: string;
+  cardVariant: AffiliateCardVariant;
   class?: string;
 }
-const { href, merchant, product, subId, class: className = '' } = Astro.props;
-const destination = href && subId ? `${href}${href.includes('?') ? '&' : '?'}subid=${encodeURIComponent(subId)}` : href;
+
+const { productKey, articleSlug, placement, cardVariant, class: className = '' } = Astro.props;
+const product = getProduct(productKey);
+const mapping = getArticleProductMapping(articleSlug);
+const mode = resolveAffiliateMode(import.meta.env.AFFILIATE_MODE);
+const state = getProductRenderState(product, mapping, mode, import.meta.env.DEV);
 ---
-{destination ? <a class={className} href={destination} rel="sponsored noopener noreferrer" target="_blank" data-affiliate-product={product} data-affiliate-merchant={merchant}> <slot /> </a> : <span class={className}><slot /></span>}
+{state.clickable && product ? (
+  <a
+    class={className}
+    href={state.destination!}
+    target="_blank"
+    rel="sponsored nofollow noopener"
+    data-affiliate-link
+    data-article-slug={articleSlug}
+    data-product-key={product.productKey}
+    data-asin={product.asin}
+    data-placement={placement}
+    data-card-variant={cardVariant}
+    data-tracking-id={product.expectedTrackingId}
+    data-destination-domain={state.destinationDomain}
+  ><slot /></a>
+) : state.draftPreview ? (
+  <span class={className} aria-disabled="true" data-affiliate-preview><slot /></span>
+) : null}
