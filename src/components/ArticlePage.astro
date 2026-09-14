@@ -11,6 +11,7 @@ import AffiliateDisclosure from './affiliate/AffiliateDisclosure.astro';
 import RelatedBuyerGuideCTA from './affiliate/RelatedBuyerGuideCTA.astro';
 import PlacementRenderer from './affiliate/PlacementRenderer.astro';
 import { getPlacementPlan, type PlannedPlacement } from '../affiliate/placement-plan';
+import { resolveFirstPlacementOffset } from '../affiliate/first-placement';
 
 type ContentSegment = { type: 'html'; value: string } | { type: 'placement'; placement: PlannedPlacement; first: boolean };
 
@@ -49,16 +50,30 @@ const showAffiliateBlock = hasLiveAffiliateProducts || showDraftAffiliatePreview
 const placementPlan = getPlacementPlan(article.data.slug);
 // Split the rendered article HTML at H2 section boundaries and inject each planned
 // placement at the end of its target section (a distributed commercial journey),
-// without touching the prose. Falls back to <Content /> when rendered HTML is
-// unavailable (e.g. dev deferred rendering).
+// without touching the prose. The FIRST placement is instead surfaced early —
+// just after ~2 intro prose paragraphs — so it (and its disclosure) render high
+// on the page; later placements keep their distributed section positions. Falls
+// back to <Content /> when rendered HTML is unavailable (e.g. dev deferred rendering).
 const renderedHtml = article.rendered?.html;
 let contentSegments: ContentSegment[] | null = null;
 if (showAffiliateBlock && placementPlan && renderedHtml) {
   const html = renderedHtml;
   const h2Offsets = [...html.matchAll(/<h2[\s>]/g)].map((match) => match.index ?? 0);
   const offsetForAnchor = (anchorIndex: number) => (anchorIndex + 1 < h2Offsets.length ? h2Offsets[anchorIndex + 1] : html.length);
+  // The planned first unit is the earliest-anchored placement; move only that one
+  // up to an early, structurally-safe prose boundary (never later than its
+  // original section position). All other placements stay distributed.
+  const firstPlacement = placementPlan.placements.reduce((earliest, candidate) =>
+    candidate.anchorIndex < earliest.anchorIndex ? candidate : earliest, placementPlan.placements[0]);
   const injected = placementPlan.placements
-    .map((placement) => ({ placement, offset: offsetForAnchor(placement.anchorIndex) }))
+    .map((placement) => {
+      const sectionOffset = offsetForAnchor(placement.anchorIndex);
+      if (placement === firstPlacement) {
+        const earlyOffset = resolveFirstPlacementOffset(html, sectionOffset);
+        return { placement, offset: earlyOffset ?? sectionOffset };
+      }
+      return { placement, offset: sectionOffset };
+    })
     .sort((a, b) => a.offset - b.offset);
   const parts: ContentSegment[] = [];
   let cursor = 0;

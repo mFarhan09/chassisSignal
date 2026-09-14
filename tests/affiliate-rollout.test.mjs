@@ -12,6 +12,7 @@ import { validateSpecialLink } from '../src/affiliate/validator.ts';
 import { findRawAmazonUrls, scanEligibleGuides } from '../scripts/lib/affiliate-inventory.mjs';
 import { parseCsvRecords } from '../scripts/lib/csv.mjs';
 import { placementPlans, validatePlacementPlans, planSummary, MAX_PLACEMENTS_PER_ARTICLE } from '../src/affiliate/placement-plan.ts';
+import { resolveFirstPlacementOffset } from '../src/affiliate/first-placement.ts';
 
 const root = process.cwd();
 const registry = JSON.parse(await readFile(join(root, 'src/affiliate/product-registry.generated.json'), 'utf8'));
@@ -200,6 +201,40 @@ test('placement validator actually fails on broken plans (mutation tests)', () =
   // 5. classification/count mismatch
   const mism = clone(); mism.classification = 'TWO_PLACEMENTS';
   assert.ok(codes(mism).has('CLASSIFICATION_MISMATCH'));
+});
+
+test('first placement surfaces after ~2 intro prose paragraphs (early, safe, never later)', () => {
+  const SECTION = 100000; // an intentionally deep original section boundary
+  // Long intro of plain paragraphs: land just after the 2nd paragraph.
+  const plain = '<p>One.</p>\n<p>Two.</p>\n<p>Three.</p>\n<h2>S</h2><p>x</p>';
+  const plainAt = resolveFirstPlacementOffset(plain, SECTION);
+  assert.equal(plain.slice(0, plainAt), '<p>One.</p>\n<p>Two.</p>');
+  // Paragraphs nested inside a blockquote/figure/list are skipped, never counted or split.
+  const nested = '<blockquote><p>Q1.</p><p>Q2.</p></blockquote>\n<p>Real one.</p>\n<p>Real two.</p>\n<h2>S</h2>';
+  const nestedAt = resolveFirstPlacementOffset(nested, SECTION);
+  assert.ok(nestedAt > nested.indexOf('</blockquote>'), 'must not split the blockquote');
+  assert.equal(nested.slice(0, nestedAt).endsWith('<p>Real two.</p>'), true);
+  // Counting crosses a leading heading (intro-less articles) but never counts the heading itself.
+  const leadingH2 = '<h2>Direct answer</h2>\n<p>A.</p>\n<p>B.</p>\n<p>C.</p>';
+  const leadingAt = resolveFirstPlacementOffset(leadingH2, SECTION);
+  assert.equal(leadingH2.slice(0, leadingAt), '<h2>Direct answer</h2>\n<p>A.</p>\n<p>B.</p>');
+  // The result is always earlier than the original section boundary (never later).
+  assert.ok(plainAt < SECTION && nestedAt < SECTION && leadingAt < SECTION);
+});
+
+test('first-placement resolver falls back safely and is bounded (adversarial)', () => {
+  // No leading prose at all (opens on a table/list) -> null, caller keeps section position.
+  assert.equal(resolveFirstPlacementOffset('<table><tr><td>x</td></tr></table><h2>S</h2>', 100000), null);
+  assert.equal(resolveFirstPlacementOffset('<ul><li>a</li></ul>', 100000), null);
+  // Only one paragraph available before the section -> after that single paragraph, still early.
+  const one = '<p>Solo intro.</p><h2>S</h2><p>later</p>';
+  assert.equal(resolveFirstPlacementOffset(one, one.indexOf('<h2')), '<p>Solo intro.</p>'.length);
+  // A tiny section budget that precedes the 2nd paragraph must never return past it.
+  const budget = '<p>One.</p><p>Two.</p>';
+  const tight = resolveFirstPlacementOffset(budget, '<p>One.</p>'.length + 3);
+  assert.ok(tight === null || tight <= '<p>One.</p>'.length + 3, 'must respect the section budget');
+  // Malformed / unmatched markup must not throw and must not fabricate a boundary past a real paragraph.
+  assert.doesNotThrow(() => resolveFirstPlacementOffset('<p>Good.</p><div><span>unclosed', 100000));
 });
 
 test('disclosure precedes every affiliate unit in the distributed render', async () => {

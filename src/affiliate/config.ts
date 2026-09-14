@@ -11,7 +11,7 @@ export const affiliateConfig = Object.freeze({
   }),
   permittedAmazonHosts: ['amazon.com', 'www.amazon.com'] as const,
   disclosureText: 'As an Amazon Associate I earn from qualifying purchases.',
-  articleDisclosureText: 'Chassis Signal may earn a commission from qualifying purchases made through links on this page.',
+  articleDisclosureText: 'This page contains affiliate links. Chassis Signal may earn a commission from qualifying purchases made through them, at no extra cost to you.',
   allowedCtaLabels: [
     'Check availability on Amazon',
     'View the current listing on Amazon'

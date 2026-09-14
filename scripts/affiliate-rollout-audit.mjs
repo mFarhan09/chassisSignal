@@ -94,8 +94,23 @@ if (mode === 'live') {
       const html = await readFile(outputPath, 'utf8');
       const firstLink = html.indexOf('data-affiliate-link');
       const disclosure = html.indexOf('affiliate-disclosure');
+      const firstUnit = html.indexOf('data-affiliate-unit');
       if (firstLink < 0) fail('MISSING_HTML_LINK', article.slug);
       if (disclosure < 0 || disclosure > firstLink) fail('DISCLOSURE_ORDER', article.slug);
+      // Exactly one article-level disclosure must render before the first unit
+      // (never missing, never duplicated). The footer statement uses a distinct
+      // `footer-affiliate-disclosure` class and is not counted here.
+      const articleDisclosures = (html.match(/class="affiliate-disclosure/g) ?? []).length;
+      if (articleDisclosures !== 1) fail('DISCLOSURE_COUNT', `${article.slug}: ${articleDisclosures} article disclosures (expected 1).`);
+      if (disclosure >= 0 && firstUnit >= 0 && disclosure > firstUnit) fail('DISCLOSURE_AFTER_UNIT', article.slug);
+      // The FIRST affiliate unit must surface early (after a couple of intro
+      // prose paragraphs), not after full sections near the article midpoint.
+      const proseStart = html.indexOf('<article class="prose">');
+      const proseEnd = html.indexOf('<aside class="article-aside"', proseStart);
+      if (proseStart >= 0 && proseEnd > proseStart && firstUnit >= 0) {
+        const depth = (firstUnit - proseStart) / (proseEnd - proseStart);
+        if (depth > 0.45) fail('FIRST_PLACEMENT_TOO_DEEP', `${article.slug}: first unit at ${Math.round(depth * 100)}% of the article.`);
+      }
       if (!html.includes('rel="sponsored nofollow noopener"')) fail('REL_MISSING', article.slug);
       if (!html.includes('data-affiliate-unit') || !html.includes('class="affiliate-product-card__image"')) fail('MISSING_HTML_UNIT_OR_IMAGE', article.slug);
       if (/src="https?:\/\/[^"]*amazon\./i.test(html)) fail('EXTERNAL_AMAZON_IMAGE', article.slug);
