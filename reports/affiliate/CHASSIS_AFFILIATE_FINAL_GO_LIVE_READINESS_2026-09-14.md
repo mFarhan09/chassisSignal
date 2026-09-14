@@ -389,3 +389,65 @@ is reconciled onto a canonical-main-descended local release candidate
 (`release/chassis-affiliate-go-live-2026-09-14`), the production deploy path now
 guarantees a fresh live-mode build, and no push, merge, deployment, or Cloudflare
 change was performed.
+
+---
+
+## 18. Production Release Attempt & Blocker (2026-09-14)
+
+A production release (push release branch → fast-forward + push `main` → deploy
+→ verify live) was authorized and attempted. **It is `BLOCKED_BEFORE_RELEASE`.**
+No remote action was taken: nothing was pushed, `main` was not moved, and nothing
+was deployed. The pre-release gates that passed and the gate that blocked:
+
+**Passed (local):**
+- Ancestry: `origin/main` (`5af5277`, unchanged) is an ancestor of the release
+  candidate; release-only commits are exactly `dd077a4`, `b8d68dc`, `280df0c`
+  (+ this run's deploy-doc/report commit). No unexpected commits.
+- Diff safety: `git diff --check` clean; article Markdown diff **empty**;
+  product/registry/mappings/plan/images/SEO/config all **0 bytes** changed.
+- Local validation (re-run): typecheck 0 errors; tests 16/16; `pnpm build:live`
+  (fresh live build + live audit) 0 errors; built-HTML audit 58/58 first unit
+  after 2 intro paragraphs, exactly one disclosure each, disclosure before first
+  unit and first Amazon anchor; placement totals 43×2 + 15×3 = 131.
+- Visual QA: layout/affiliate assertions PASS; only the Google-Fonts TLS
+  (`ERR_CERT_AUTHORITY_INVALID`) sandbox artifact fails → `VISUAL_QA_ENVIRONMENT_BLOCKED`.
+
+**Blocking gate — production deployment environment (Phase 4):**
+1. **No Cloudflare deployment credentials** are present in this environment
+   (no `CLOUDFLARE_*` / `CF_*` / `WRANGLER_*` env vars; no wrangler auth on disk).
+   The authoritative deploy is manual `wrangler deploy` (see this doc / Section 6),
+   which requires authentication that is unavailable here — so `pnpm deploy:live`
+   cannot run.
+2. **Live-mode cannot be verified for the production build.** `CLOUDFLARE-WORKERS.md`
+   documented the production build command as `pnpm run build` — the **draft /
+   fail-closed** default. `AFFILIATE_MODE` is a build-time variable and cannot be
+   confirmed as `live` for any Cloudflare-side / push-to-`main` build from within
+   this repository. Per the release rule, pushing `main` while a remote build
+   could publish a **draft** artifact is not permitted → **`BLOCKED_PRODUCTION_BUILD_ENV`**.
+
+**Safety correction made this run (local commit, no deploy):** `CLOUDFLARE-WORKERS.md`
+now documents the production build command as `pnpm run build:live` and the deploy
+command as `pnpm run deploy:live`, with an explicit warning that bare
+`pnpm run build` / `npx wrangler deploy` produce a draft artifact and that a remote
+(Cloudflare Workers Builds / Git-integration) production build must set its build
+command to `pnpm run build:live` (or `AFFILIATE_MODE=live`). This makes the
+*documented* production command safe; the actual Cloudflare-side setting is a
+human/dashboard step this environment cannot perform.
+
+**Exact human steps to unblock and complete go-live:**
+1. Decide the authoritative production mechanism:
+   - **Manual Wrangler:** authenticate Wrangler to the Chassis Cloudflare account
+     (`wrangler login`, or set `CLOUDFLARE_API_TOKEN`), then from the release
+     branch run `pnpm install && pnpm deploy:live` (fresh live build → live audit
+     → deploy of that exact `dist/`).
+   - **Cloudflare Git integration (auto-deploy on `main`):** in the Cloudflare
+     dashboard set the project **build command to `pnpm run build:live`** (or add
+     `AFFILIATE_MODE=live` to the build environment) **before** pushing `main`.
+2. Only after (1): push the release branch, fast-forward and push `main`
+   (fast-forward only; no force), let the authoritative path deploy, then verify
+   the live public site (`https://chassissignal.com`): 58/58 articles rendering
+   affiliate units, one visible disclosure each before the first Amazon anchor,
+   correct `tag=chassissignal-20`, images resolving, no draft suppression.
+
+**Production release status: `BLOCKED_BEFORE_RELEASE` (`BLOCKED_PRODUCTION_BUILD_ENV` + no deploy credentials).**
+Local main untouched (`821346e`); release candidate remains local and ready.
