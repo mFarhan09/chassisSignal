@@ -451,3 +451,50 @@ human/dashboard step this environment cannot perform.
 
 **Production release status: `BLOCKED_BEFORE_RELEASE` (`BLOCKED_PRODUCTION_BUILD_ENV` + no deploy credentials).**
 Local main untouched (`821346e`); release candidate remains local and ready.
+
+_(This blocker was subsequently cleared by the human in Cloudflare — see Section 19.)_
+
+---
+
+## 19. Production Release Execution (2026-09-14)
+
+The human cleared the Phase-4 blocker by setting the Cloudflare project's
+**production build command to `pnpm run build:live`** (production branch `main`,
+deploy `npx wrangler deploy`), which guarantees `AFFILIATE_MODE=live` for the
+production build. The release was then executed:
+
+**Git (performed, verified):**
+- Release branch pushed: `origin/release/chassis-affiliate-go-live-2026-09-14` = `aa13fec` (normal push, no force).
+- Local `main` fast-forwarded `821346e → 5af5277 → aa13fec` (ff-only, no merge commit).
+- `main` pushed: `5af5277..aa13fec main -> main` (fast-forward, no force, no branch-protection block).
+- `origin/main` = `aa13fec`; the canonical report and deploy-hardening files
+  (`scripts/release-live.mjs`, `src/affiliate/first-placement.ts`, …) are present on `main`.
+
+**Local live-build verification (green, this run):**
+- `pnpm run build:live` — fresh live build + live affiliate audit: 58 guides, 0 errors.
+- typecheck 0 errors; tests 16/16; built-HTML audit: 58/58 first card after 2 intro
+  paragraphs, exactly one disclosure each, disclosure before first unit and first
+  Amazon anchor; totals 43×2 + 15×3 = 131; tracking `chassissignal-20`;
+  `rel="sponsored nofollow noopener"`; 22 local hash-verified images resolve.
+
+**Cloudflare deploy:** triggered by the `main` push under the human-verified
+live-mode config. Its completion could not be observed from this environment (no
+Cloudflare credentials; wrangler API calls are blocked by the sandbox proxy).
+
+**Live-site verification — ENVIRONMENT-BLOCKED (not a production defect):** the
+sandbox network policy denies outbound access to `https://chassissignal.com`
+(agent proxy returns `403` / `connect_rejected` for `chassissignal.com:443`).
+Phases 8–17 (public homepage/robots/sitemap/canonical checks, the 58-article live
+audit, and live visual QA) therefore **could not be executed** from here. This is
+an access limitation of the build environment, not evidence of any problem with
+the deployed site.
+
+**Remaining human step to finalize:** from an unrestricted network, confirm the
+Cloudflare deployment for `aa13fec` finished, then verify `https://chassissignal.com`:
+homepage 200; robots/sitemap/canonical healthy; all 58 monetized guides live with
+their affiliate units, exactly one visible disclosure each before the first Amazon
+anchor, `tag=chassissignal-20`, images resolving, and no draft suppression; live
+visual QA at 390px and 1440px. The local live build (above) is the expected
+reference — production should match it exactly.
+
+**Production release status: `DEPLOYED (main released + Cloudflare build:live triggered); LIVE-SITE VERIFICATION ENVIRONMENT-BLOCKED` — pending human confirmation from an unrestricted network.**
