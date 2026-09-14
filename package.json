@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro check && astro build",
+    "build:live": "node scripts/release-live.mjs",
+    "deploy:live": "node scripts/release-live.mjs --deploy",
     "preview": "astro preview",
     "check": "astro check",
     "qa:visual": "node scripts/affiliate-visual-qa.mjs",
