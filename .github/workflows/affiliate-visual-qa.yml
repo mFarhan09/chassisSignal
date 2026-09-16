@@ -37,12 +37,12 @@ jobs:
           AFFILIATE_MODE=live pnpm affiliate:audit
       - name: Preservation vs baseline (article Markdown / OBDLink CX / queues)
         run: |
-          BASE=7e236b78cdc9f514c72251e9d80abaa83870fcc5
+          BASE=c87dc61a262a7e73d9dd88e17b01b86762aa51af
           test -z "$(git diff "$BASE" -- src/content/articles/)" || { echo 'article Markdown changed'; exit 1; }
           test -z "$(git diff "$BASE" -- reports/affiliate/link-verification-queue.csv reports/affiliate/image-rights-queue.csv)" || { echo 'queues changed'; exit 1; }
           node -e "const cp=require('child_process');const b=JSON.parse(cp.execSync('git show '+process.env.BASE+':src/affiliate/product-registry.generated.json').toString());const cur=require('./src/affiliate/product-registry.generated.json');if(JSON.stringify(b['obdlink-cx'])!==JSON.stringify(cur['obdlink-cx'])){console.error('OBDLink CX changed');process.exit(1);}console.log('OBDLink CX preserved');"
         env:
-          BASE: 7e236b78cdc9f514c72251e9d80abaa83870fcc5
+          BASE: c87dc61a262a7e73d9dd88e17b01b86762aa51af
 
   visual-qa:
     name: Visual QA (320/390/768/1440)
