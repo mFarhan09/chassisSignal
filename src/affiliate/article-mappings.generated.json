@@ -172,6 +172,27 @@
     "reviewedAt": "2026-09-12T19:42:08.000Z",
     "reviewedBy": "Muhammad Farhan"
   },
+  "bimmerlink-vs-bimmer-tool": {
+    "articleSlug": "bimmerlink-vs-bimmer-tool",
+    "articleIntent": "BimmerLink vs bimmer-tool: Choose by Platform, Engine, and Service Job",
+    "monetizationMode": "compatible_adapter",
+    "editorialDecision": "APPROVE",
+    "primaryProductKeys": [
+      "obdlink-cx"
+    ],
+    "alternativeProductKeys": [],
+    "placementType": "product_card",
+    "placementLocation": "after_evidence_context",
+    "recommendationRationale": "OBDLink CX is named as the supported BimmerLink adapter; the diagnostic apps are not monetized and no bimmer-tool hardware is implied.",
+    "affiliateRelationship": "compatible_interface",
+    "relationshipLabel": "Compatible interface",
+    "officialEvidenceUrl": "https://www.obdlink.com/products/obdlink-cx/",
+    "relatedBuyerGuideSlug": null,
+    "mappingStatus": "approved",
+    "approvalStatus": "approved",
+    "reviewedAt": "2026-09-12T19:42:08.000Z",
+    "reviewedBy": "Muhammad Farhan"
+  },
   "bimmerlink-vs-carly": {
     "articleSlug": "bimmerlink-vs-carly",
     "articleIntent": "BimmerLink vs Carly: Which BMW Tool Fits Your Actual Job?",
@@ -383,6 +404,27 @@
     "reviewedAt": "2026-09-12T19:42:08.000Z",
     "reviewedBy": "Muhammad Farhan"
   },
+  "bmw-dpf-regeneration-scan-tool": {
+    "articleSlug": "bmw-dpf-regeneration-scan-tool",
+    "articleIntent": "BMW DPF Regeneration Scan Tool: Verify Preconditions Before the Function",
+    "monetizationMode": "recommended_equipment",
+    "editorialDecision": "APPROVE",
+    "primaryProductKeys": [
+      "obdlink-cx"
+    ],
+    "alternativeProductKeys": [],
+    "placementType": "recommended_equipment",
+    "placementLocation": "after_evidence_context",
+    "recommendationRationale": "OBDLink CX is the documented BimmerLink adapter for the DPF service-regeneration request workflow; capability remains gated on exact BMW support.",
+    "affiliateRelationship": "supporting_equipment",
+    "relationshipLabel": "Supporting equipment for this procedure",
+    "officialEvidenceUrl": "https://www.obdlink.com/products/obdlink-cx/",
+    "relatedBuyerGuideSlug": null,
+    "mappingStatus": "approved",
+    "approvalStatus": "approved",
+    "reviewedAt": "2026-09-12T19:42:08.000Z",
+    "reviewedBy": "Muhammad Farhan"
+  },
   "bmw-electric-parking-brake-service-mode-scanner": {
     "articleSlug": "bmw-electric-parking-brake-service-mode-scanner",
     "articleIntent": "BMW Electric Parking Brake Service Mode Scanner: Identify the Brake System First",
@@ -572,6 +614,25 @@
     "reviewedAt": "2026-09-12T19:42:08.000Z",
     "reviewedBy": "Muhammad Farhan"
   },
+  "bmw-parking-sensor-diagnostic-tool": {
+    "articleSlug": "bmw-parking-sensor-diagnostic-tool",
+    "articleIntent": "BMW Parking Sensor Diagnostic Tools: PDC Codes, Live Sensor Data, and Module Output Tests",
+    "monetizationMode": "no_defensible_product",
+    "editorialDecision": null,
+    "primaryProductKeys": [],
+    "alternativeProductKeys": [],
+    "placementType": "none",
+    "placementLocation": "after_evidence_context",
+    "recommendationRationale": "CS-087: no defensible exact product for a PDC/PMA diagnostic-method guide; intentionally unmonetized.",
+    "affiliateRelationship": "exact_product",
+    "relationshipLabel": "Exact product discussed",
+    "officialEvidenceUrl": "",
+    "relatedBuyerGuideSlug": null,
+    "mappingStatus": "reviewed",
+    "approvalStatus": "pending",
+    "reviewedAt": null,
+    "reviewedBy": null
+  },
   "bmw-ride-height-calibration-scan-tool": {
     "articleSlug": "bmw-ride-height-calibration-scan-tool",
     "articleIntent": "BMW Ride-Height Calibration Scan Tool: Match the Suspension Before the Menu",
@@ -741,6 +802,48 @@
     "reviewedAt": "2026-09-12T19:42:08.000Z",
     "reviewedBy": "Muhammad Farhan"
   },
+  "bmw-vanos-diagnostic-tool": {
+    "articleSlug": "bmw-vanos-diagnostic-tool",
+    "articleIntent": "BMW VANOS Diagnostic Tools: Codes, Live Angles, and Test Plans",
+    "monetizationMode": "recommended_equipment",
+    "editorialDecision": "APPROVE",
+    "primaryProductKeys": [
+      "autel-ds808s-bt"
+    ],
+    "alternativeProductKeys": [],
+    "placementType": "recommended_equipment",
+    "placementLocation": "after_evidence_context",
+    "recommendationRationale": "Autel DS808S-BT is the recommended full-tablet route, shown only within the VANOS-capability gate; exact BMW coverage must be confirmed.",
+    "affiliateRelationship": "supporting_equipment",
+    "relationshipLabel": "Supporting equipment for this procedure",
+    "officialEvidenceUrl": "https://store.autel.com/products/maxidas-ds808s-bt",
+    "relatedBuyerGuideSlug": null,
+    "mappingStatus": "approved",
+    "approvalStatus": "approved",
+    "reviewedAt": "2026-09-12T19:42:08.000Z",
+    "reviewedBy": "Muhammad Farhan"
+  },
+  "bmw-wheel-speed-sensor-diagnostic-tool": {
+    "articleSlug": "bmw-wheel-speed-sensor-diagnostic-tool",
+    "articleIntent": "BMW Wheel-Speed Sensor Diagnostics: Choose a Tool That Shows the Evidence",
+    "monetizationMode": "recommended_equipment",
+    "editorialDecision": "APPROVE",
+    "primaryProductKeys": [
+      "autel-mx900"
+    ],
+    "alternativeProductKeys": [],
+    "placementType": "recommended_equipment",
+    "placementLocation": "after_evidence_context",
+    "recommendationRationale": "Autel MX900 is the recommended tool within the BMW DSC and live-data capability gate; four-corner wheel-speed access requires confirming the exact BMW.",
+    "affiliateRelationship": "supporting_equipment",
+    "relationshipLabel": "Supporting equipment for this procedure",
+    "officialEvidenceUrl": "https://store.autel.com/products/maxicheck-mx900",
+    "relatedBuyerGuideSlug": null,
+    "mappingStatus": "approved",
+    "approvalStatus": "approved",
+    "reviewedAt": "2026-09-12T19:42:08.000Z",
+    "reviewedBy": "Muhammad Farhan"
+  },
   "carly-subscription-cost": {
     "articleSlug": "carly-subscription-cost",
     "articleIntent": "Carly Subscription Cost: Price Variables, Renewal, and Ownership Math",
@@ -845,6 +948,25 @@
     "approvalStatus": "approved",
     "reviewedAt": "2026-09-12T19:42:08.000Z",
     "reviewedBy": "Muhammad Farhan"
+  },
+  "icarsoft-bmm-v3-vs-foxwell-nt530": {
+    "articleSlug": "icarsoft-bmm-v3-vs-foxwell-nt530",
+    "articleIntent": "iCarsoft BMM V3.0 vs Foxwell NT530 for BMW: Match the Exact SKU to the Job",
+    "monetizationMode": "no_defensible_product",
+    "editorialDecision": null,
+    "primaryProductKeys": [],
+    "alternativeProductKeys": [],
+    "placementType": "none",
+    "placementLocation": "after_evidence_context",
+    "recommendationRationale": "CS-081: iCarsoft BMM V3.0 and Foxwell NT530 SiteStripe links are verified and recorded in the registry, but no rights-cleared product image is available yet; unmonetized until an image is added, then promote to an approve() comparison.",
+    "affiliateRelationship": "exact_product",
+    "relationshipLabel": "Exact product discussed",
+    "officialEvidenceUrl": "",
+    "relatedBuyerGuideSlug": null,
+    "mappingStatus": "reviewed",
+    "approvalStatus": "pending",
+    "reviewedAt": null,
+    "reviewedBy": null
   },
   "ista-valvetronic-relearn": {
     "articleSlug": "ista-valvetronic-relearn",
@@ -1039,6 +1161,25 @@
     "approvalStatus": "approved",
     "reviewedAt": "2026-09-12T19:42:08.000Z",
     "reviewedBy": "Muhammad Farhan"
+  },
+  "obdlink-cx-vs-unicarscan-ucsi-2100": {
+    "articleSlug": "obdlink-cx-vs-unicarscan-ucsi-2100",
+    "articleIntent": "OBDLink CX vs UniCarScan UCSI-2100 for BimmerCode and BimmerLink",
+    "monetizationMode": "no_defensible_product",
+    "editorialDecision": null,
+    "primaryProductKeys": [],
+    "alternativeProductKeys": [],
+    "placementType": "none",
+    "placementLocation": "after_evidence_context",
+    "recommendationRationale": "CS-084: OBDLink CX and UniCarScan UCSI-2100 SiteStripe links are verified and recorded; UniCarScan has no rights-cleared image, so this comparison stays unmonetized (no asymmetric card) until the image is added, then promote to an approve() comparison.",
+    "affiliateRelationship": "exact_product",
+    "relationshipLabel": "Exact product discussed",
+    "officialEvidenceUrl": "",
+    "relatedBuyerGuideSlug": null,
+    "mappingStatus": "reviewed",
+    "approvalStatus": "pending",
+    "reviewedAt": null,
+    "reviewedBy": null
   },
   "obdlink-cx-vs-vlinker-bm-plus": {
     "articleSlug": "obdlink-cx-vs-vlinker-bm-plus",

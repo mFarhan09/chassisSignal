@@ -249,6 +249,33 @@
       }
     ]
   },
+  "bimmerlink-vs-bimmer-tool": {
+    "classification": "TWO_PLACEMENTS",
+    "articleType": "compatible_adapter",
+    "placements": [
+      {
+        "anchorIndex": 2,
+        "headingText": "Compare the diagnostics you will actually run",
+        "variant": "recommended_equipment",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Relevant equipment",
+        "decisionMoment": "compatibility"
+      },
+      {
+        "anchorIndex": 5,
+        "headingText": "Which app for which owner?",
+        "variant": "final_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Final pick to verify",
+        "decisionMoment": "final_recommendation",
+        "context": "Having worked through which app for which owner?, OBDLink CX is the listing to confirm for bimmerLink vs bimmer-tool — match your exact vehicle, market and software before buying."
+      }
+    ]
+  },
   "bimmerlink-vs-carly": {
     "classification": "TWO_PLACEMENTS",
     "articleType": "compatible_adapter",
@@ -528,6 +555,33 @@
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
         "context": "That makes Schumacher Electric INC100 the unit to check last for bMW Diagnostic Software for Windows 10 and 11: confirm your BMW or MINI, platform and required function on the current listing."
+      }
+    ]
+  },
+  "bmw-dpf-regeneration-scan-tool": {
+    "classification": "TWO_PLACEMENTS",
+    "articleType": "recommended_equipment",
+    "placements": [
+      {
+        "anchorIndex": 3,
+        "headingText": "Check blocking faults before you think about regeneration",
+        "variant": "recommended_equipment",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Relevant equipment",
+        "decisionMoment": "compatibility"
+      },
+      {
+        "anchorIndex": 7,
+        "headingText": "Choose the tool and know when to escalate",
+        "variant": "final_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Final pick to verify",
+        "decisionMoment": "final_recommendation",
+        "context": "If bMW DPF Regeneration Scan Tool points you here, OBDLink CX is the defensible pick to verify and buy once your exact configuration checks out."
       }
     ]
   },
@@ -999,6 +1053,60 @@
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
         "context": "If bMW Transfer Case Adaptation Reset Tool points you here, Autel MaxiSYS Ultra is the defensible pick to verify and buy once your exact configuration checks out."
+      }
+    ]
+  },
+  "bmw-vanos-diagnostic-tool": {
+    "classification": "TWO_PLACEMENTS",
+    "articleType": "recommended_equipment",
+    "placements": [
+      {
+        "anchorIndex": 2,
+        "headingText": "Compare target versus actual angle",
+        "variant": "recommended_equipment",
+        "productKeys": [
+          "autel-ds808s-bt"
+        ],
+        "role": "Relevant equipment",
+        "decisionMoment": "compatibility"
+      },
+      {
+        "anchorIndex": 6,
+        "headingText": "Capture the evidence and know when to escalate",
+        "variant": "final_cta",
+        "productKeys": [
+          "autel-ds808s-bt"
+        ],
+        "role": "Final pick to verify",
+        "decisionMoment": "final_recommendation",
+        "context": "Having worked through capture the evidence and know when to escalate, Autel MaxiDAS DS808S-BT is the listing to confirm for bMW VANOS Diagnostic Tools — match your exact vehicle, market and software before buying."
+      }
+    ]
+  },
+  "bmw-wheel-speed-sensor-diagnostic-tool": {
+    "classification": "TWO_PLACEMENTS",
+    "articleType": "recommended_equipment",
+    "placements": [
+      {
+        "anchorIndex": 2,
+        "headingText": "Compare four-corner live data",
+        "variant": "recommended_equipment",
+        "productKeys": [
+          "autel-mx900"
+        ],
+        "role": "Relevant equipment",
+        "decisionMoment": "compatibility"
+      },
+      {
+        "anchorIndex": 6,
+        "headingText": "Choose the tool and know the stop conditions",
+        "variant": "final_cta",
+        "productKeys": [
+          "autel-mx900"
+        ],
+        "role": "Final pick to verify",
+        "decisionMoment": "final_recommendation",
+        "context": "If bMW Wheel-Speed Sensor Diagnostics points you here, Autel MaxiCheck MX900 is the defensible pick to verify and buy once your exact configuration checks out."
       }
     ]
   },

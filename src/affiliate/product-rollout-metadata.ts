@@ -1,6 +1,21 @@
 import type { ProductRecord } from './types';
 
 export const rolloutProductMetadata: Record<string, Partial<ProductRecord>> = {
+  'icarsoft-bmm-v3': {
+    manufacturerUrl: 'https://www.icarsoft-us.com/products/bmw-v3-0',
+    editorialSummary: 'For the iCarsoft-versus-Foxwell decision, the BMM V3.0 is the brand-dedicated BMW/MINI/Rolls-Royce handheld; confirm the exact SKU and the specific BMW service functions for your VIN before purchase.',
+    compatibilityNotes: 'Confirm the exact BMW/MINI, model year (pre-2001 needs the 20-pin adapter path) and the specific modules and service functions before purchase.'
+  },
+  'foxwell-nt530': {
+    manufacturerUrl: 'https://www.foxwelldiag.com/products/foxwell-nt530',
+    editorialSummary: 'Foxwell NT530 with the BMW software authorization is the multi-brand-plus-software side of the comparison; this listing is the NT530, not NT530 Plus. Confirm the exact SKU, installed BMW software and the specific function before purchase.',
+    compatibilityNotes: 'Reaches BMW modules only with the BMW software authorization; coding-adjacent scope is SKU/software-revision specific and excludes ECU flash and full OEM-level programming. Confirm the exact unit and function.'
+  },
+  'unicarscan-ucsi-2100': {
+    manufacturerUrl: 'https://www.wgsoft.de/',
+    editorialSummary: 'UniCarScan UCSI-2100 is the OEM-protocol Bluetooth adapter compared against OBDLink CX for BimmerCode and BimmerLink; confirm current app support for the exact BMW before purchase.',
+    compatibilityNotes: 'Confirm the exact BMW/MINI, phone platform and current BimmerCode/BimmerLink support before purchase.'
+  },
   'obdlink-mx-plus': {
     manufacturerUrl: 'https://www.obdlink.com/products/obdlink-mxp/',
     compatibilityNotes: 'Confirm the exact vehicle, mobile platform, app and requested function before purchase.',

@@ -19,16 +19,30 @@ const registry = JSON.parse(await readFile(join(root, 'src/affiliate/product-reg
 const mappings = JSON.parse(await readFile(join(root, 'src/affiliate/article-mappings.generated.json'), 'utf8'));
 const articles = await scanEligibleGuides();
 const mapped = Object.values(mappings);
-const actionableKeys = [...new Set(mapped.flatMap((mapping) => [...mapping.primaryProductKeys, ...mapping.alternativeProductKeys]))].sort();
+// Post-batch (CS-081..087 added): some published guides are intentionally unmonetized (no defensible
+// product) or link-verified-but-image-pending (recorded, not yet live). Renderable invariants apply to
+// APPROVED mappings only; the verification queues legitimately also list candidate-referenced keys.
+const UNMONETIZED_GUIDES = new Set([
+  'bmw-parking-sensor-diagnostic-tool',   // CS-087: no defensible product (intentional)
+  'icarsoft-bmm-v3-vs-foxwell-nt530',     // CS-081: SiteStripe links verified, product images pending
+  'obdlink-cx-vs-unicarscan-ucsi-2100'    // CS-084: SiteStripe links verified, product images pending
+]);
+const approvedMapped = mapped.filter((mapping) => mapping.mappingStatus === 'approved');
+const actionableKeys = [...new Set(approvedMapped.flatMap((mapping) => [...mapping.primaryProductKeys, ...mapping.alternativeProductKeys]))].sort();
 
-test('exactly 58 published guides have approved non-HOLD mappings', () => {
-  assert.equal(articles.length, 58);
-  assert.equal(mapped.length, 58);
-  assert.equal(Object.keys(editorialMappingOverrides).length, 58);
+test('65 published guides mapped; 62 approved non-HOLD (3 intentionally unmonetized)', () => {
+  assert.equal(articles.length, 65);
+  assert.equal(mapped.length, 65);
+  assert.equal(Object.keys(editorialMappingOverrides).length, 65);
+  assert.equal(approvedMapped.length, 62);
   for (const article of articles) {
     const mapping = mappings[article.slug];
     assert.ok(mapping, article.slug);
     assert.notEqual(mapping.editorialDecision, 'HOLD', article.slug);
+    if (UNMONETIZED_GUIDES.has(article.slug)) {
+      assert.notEqual(mapping.mappingStatus, 'approved', article.slug);
+      continue;
+    }
     assert.equal(mapping.mappingStatus, 'approved', article.slug);
     assert.equal(mapping.approvalStatus, 'approved', article.slug);
     assert.ok(mapping.primaryProductKeys.length >= 1 && mapping.primaryProductKeys.length <= 2, article.slug);
@@ -36,14 +50,14 @@ test('exactly 58 published guides have approved non-HOLD mappings', () => {
   }
 });
 
-test('all 58 mappings resolve to live image-bearing affiliate links', () => {
-  for (const mapping of mapped) for (const key of mapping.primaryProductKeys) {
+test('all approved mappings resolve to live image-bearing affiliate links', () => {
+  for (const mapping of approvedMapped) for (const key of mapping.primaryProductKeys) {
     const state = getProductRenderState(registry[key], mapping, 'live', false);
     assert.equal(state.visible && state.clickable && state.showImage, true, mapping.articleSlug + ': ' + key);
   }
 });
 
-test('both queues exactly match 20 actionable keys', async () => {
+test('both verification queues exactly match the 20 renderable keys', async () => {
   assert.equal(actionableKeys.length, 20);
   const link = parseCsvRecords(await readFile(join(root, 'reports/affiliate/link-verification-queue.csv'), 'utf8'));
   const image = parseCsvRecords(await readFile(join(root, 'reports/affiliate/image-rights-queue.csv'), 'utf8'));
@@ -62,7 +76,7 @@ test('mapped links have exact tag, product path and matching ASIN', () => {
 });
 
 test('all supplied URLs are byte-identical and OBDLink CX is preserved', async () => {
-  assert.equal(Object.keys(suppliedSiteStripeInventory).length, 21);
+  assert.equal(Object.keys(suppliedSiteStripeInventory).length, 24);
   for (const [key, supplied] of Object.entries(suppliedSiteStripeInventory)) {
     assert.equal(registry[key].specialLink, supplied.specialLink, key);
     assert.equal(registry[key].asin, supplied.asin, key);
@@ -124,12 +138,12 @@ test('card markup binds identity and safe affiliate attributes without commerce 
   assert.match(page, /part\.first && <AffiliateDisclosure compact \/>[\s\S]*<PlacementRenderer/);
 });
 
-test('catalog and final reports preserve all candidates and cover 58 guides', async () => {
-  assert.equal(Object.keys(registry).length, 47);
-  assert.equal(Object.values(registry).filter((product) => product.specialLink).length, 22);
+test('catalog and final reports preserve all candidates and cover 65 guides', async () => {
+  assert.equal(Object.keys(registry).length, 49);
+  assert.equal(Object.values(registry).filter((product) => product.specialLink).length, 25);
   const report = await readFile(join(root, 'reports/affiliate/final-affiliate-rollout-report.md'), 'utf8');
   const rows = parseCsvRecords(await readFile(join(root, 'reports/affiliate/final-affiliate-coverage.csv'), 'utf8'));
-  assert.equal(rows.length, 58);
+  assert.equal(rows.length, 65);
   for (const article of articles) {
     assert.ok(rows.find((row) => row.slug === article.slug), article.slug);
     assert.ok(report.includes(String.fromCharCode(96) + article.slug + String.fromCharCode(96)), article.slug);
@@ -141,6 +155,7 @@ test('placement density plan is valid, distributed and capped', () => {
   assert.deepEqual(validatePlacementPlans(placementPlans, mappings, registry), []);
   let two = 0, three = 0, exc = 0;
   for (const article of articles) {
+    if (mappings[article.slug].mappingStatus !== 'approved') { assert.equal(placementPlans[article.slug], undefined, article.slug); continue; }
     const plan = placementPlans[article.slug];
     assert.ok(plan, article.slug);
     assert.ok(plan.placements.length >= 1 && plan.placements.length <= MAX_PLACEMENTS_PER_ARTICLE, article.slug);
@@ -148,7 +163,7 @@ test('placement density plan is valid, distributed and capped', () => {
     else if (plan.classification === 'THREE_PLACEMENTS') three++;
     else exc++;
   }
-  assert.equal(two + three + exc, 58);
+  assert.equal(two + three + exc, 62);
   // Corrected model: TWO is the normal state; THREE for comparison/alternative articles; exceptions rare.
   assert.ok(two >= 40, `expected mostly two-placement articles, got ${two}`);
   assert.ok(three >= 10, `expected several three-placement articles, got ${three}`);

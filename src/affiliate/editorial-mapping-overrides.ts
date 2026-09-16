@@ -3,7 +3,7 @@ import type { MonetizationMode } from './types';
 export type EditorialDecision = 'APPROVE' | 'CORRECTED' | 'HOLD';
 
 export interface EditorialMappingOverride {
-  editorialDecision: EditorialDecision;
+  editorialDecision: EditorialDecision | null;
   monetizationMode: MonetizationMode;
   primaryProductKeys: string[];
   alternativeProductKeys: string[];
@@ -15,11 +15,20 @@ const approve = (monetizationMode: MonetizationMode, primaryProductKeys: string[
   editorialDecision: 'APPROVE', monetizationMode, primaryProductKeys, alternativeProductKeys, recommendationRationale, relatedBuyerGuideSlug: null
 });
 
+// Intentionally unmonetized guide: no defensible product, or product links verified but images pending.
+// editorialDecision null => never auto-approved => no product card renders; the guide still publishes.
+const unmonetized = (recommendationRationale: string): EditorialMappingOverride => ({
+  editorialDecision: null, monetizationMode: 'no_defensible_product', primaryProductKeys: [], alternativeProductKeys: [], recommendationRationale, relatedBuyerGuideSlug: null
+});
+
 const corrected = (monetizationMode: MonetizationMode, primaryProductKeys: string[], alternativeProductKeys: string[], recommendationRationale: string): EditorialMappingOverride => ({
   editorialDecision: 'CORRECTED', monetizationMode, primaryProductKeys, alternativeProductKeys, recommendationRationale, relatedBuyerGuideSlug: null
 });
 
 export const editorialMappingOverrides: Record<string, EditorialMappingOverride> = {
+  'icarsoft-bmm-v3-vs-foxwell-nt530': unmonetized('CS-081: iCarsoft BMM V3.0 and Foxwell NT530 SiteStripe links are verified and recorded in the registry, but no rights-cleared product image is available yet; unmonetized until an image is added, then promote to an approve() comparison.'),
+  'obdlink-cx-vs-unicarscan-ucsi-2100': unmonetized('CS-084: OBDLink CX and UniCarScan UCSI-2100 SiteStripe links are verified and recorded; UniCarScan has no rights-cleared image, so this comparison stays unmonetized (no asymmetric card) until the image is added, then promote to an approve() comparison.'),
+  'bmw-parking-sensor-diagnostic-tool': unmonetized('CS-087: no defensible exact product for a PDC/PMA diagnostic-method guide; intentionally unmonetized.'),
   'autel-scanner-for-bmw': corrected('comparison', ['autel-mx808s', 'autel-mk900-bt'], [], 'The guide develops the Autel 808 and 900 tiers; verified MX808S and MK900-BT are accurately named available variants, subject to BMW coverage checks.'),
   'autophix-7910-vs-foxwell-nt530': corrected('recommended_equipment', ['autophix-7910p-plus'], [], 'The supplied 7910P+ is an available successor on the AUTOPHIX side; it is not relabelled as the unavailable 7910 or Foxwell NT530.'),
   'bimmercode-pricing': approve('recommended_equipment', ['obdlink-cx'], ['obdlink-mx-plus'], 'The article prices the BimmerCode working chain and explicitly identifies CX and MX+ as supported hardware paths.'),
@@ -77,5 +86,9 @@ export const editorialMappingOverrides: Record<string, EditorialMappingOverride>
   'protool-pricing': corrected('recommended_equipment', ['obdlink-cx'], [], 'With ProTool hardware unavailable, CX is only a labelled alternative BMW app interface for a different supported route.'),
   'protool-vs-carly': corrected('recommended_equipment', ['obdlink-cx'], [], 'CX is a distinct alternative BMW app route and is not claimed compatible with ProTool or Carly.'),
   'protool-vs-ista': corrected('recommended_equipment', ['schumacher-inc100'], [], 'INC100 supports coding/programming power needs and is not presented as ProTool hardware or ISTA interface.'),
-  'vlinker-bm-plus-vs-mc-plus': corrected('comparison', ['vlinker-bm-plus', 'vlinker-mc-plus'], [], 'Use exactly the two named Vgate adapter models and remove unrelated OBDLink context.')
+  'vlinker-bm-plus-vs-mc-plus': corrected('comparison', ['vlinker-bm-plus', 'vlinker-mc-plus'], [], 'Use exactly the two named Vgate adapter models and remove unrelated OBDLink context.'),
+  'bimmerlink-vs-bimmer-tool': approve('compatible_adapter', ['obdlink-cx'], [], 'OBDLink CX is named as the supported BimmerLink adapter; the diagnostic apps are not monetized and no bimmer-tool hardware is implied.'),
+  'bmw-dpf-regeneration-scan-tool': approve('recommended_equipment', ['obdlink-cx'], [], 'OBDLink CX is the documented BimmerLink adapter for the DPF service-regeneration request workflow; capability remains gated on exact BMW support.'),
+  'bmw-vanos-diagnostic-tool': approve('recommended_equipment', ['autel-ds808s-bt'], [], 'Autel DS808S-BT is the recommended full-tablet route, shown only within the VANOS-capability gate; exact BMW coverage must be confirmed.'),
+  'bmw-wheel-speed-sensor-diagnostic-tool': approve('recommended_equipment', ['autel-mx900'], [], 'Autel MX900 is the recommended tool within the BMW DSC and live-data capability gate; four-corner wheel-speed access requires confirming the exact BMW.')
 };

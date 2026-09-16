@@ -15,6 +15,8 @@ export const productCandidateCatalog: ProductCandidateDefinition[] = [
   ['vlinker-mc-plus', 'Vgate', 'vLinker MC+', 'Wireless OBD adapter', ['vLinker MC+', 'Vgate vLinker MC+']],
   ['foxwell-nt530', 'Foxwell', 'NT530', 'BMW diagnostic scanner', ['Foxwell NT530']],
   ['foxwell-nt530-plus', 'Foxwell', 'NT530 Plus', 'BMW diagnostic scanner', ['Foxwell NT530 Plus']],
+  ['icarsoft-bmm-v3', 'iCarsoft', 'BMM V3.0', 'BMW diagnostic scanner', ['iCarsoft BMM V3.0', 'iCarsoft BMM V3']],
+  ['unicarscan-ucsi-2100', 'UniCarScan', 'UCSI-2100', 'Bluetooth OBD adapter', ['UniCarScan UCSI-2100', 'UniCarScan']],
   ['foxwell-nt710', 'Foxwell', 'NT710', 'BMW diagnostic scanner', ['Foxwell NT710']],
   ['autophix-7910', 'AUTOPHIX', '7910', 'BMW diagnostic scanner', ['AUTOPHIX 7910', 'Autophix 7910']],
   ['autel-mk808s', 'Autel', 'MK808S', 'Diagnostic tablet', ['Autel MK808S']],

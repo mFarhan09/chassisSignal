@@ -2,11 +2,11 @@
 
 Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors were added.
 
-- Eligible guides: 58
-- APPROVE: 5
+- Eligible guides: 65
+- APPROVE: 9
 - CORRECTED: 53
 - HOLD: 0
-- Material before/after mapping changes: 53
+- Material before/after mapping changes: 60
 
 ## Changed mappings
 
@@ -17,7 +17,7 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
   - Before: primary=[foxwell-nt530, foxwell-nt530-plus]; alternative=[autophix-7910, creator-c310-plus]; mode=comparison
   - After: primary=[autophix-7910p-plus]; alternative=[]; mode=recommended_equipment
 - `bimmercode-vs-carly` (CORRECTED)
-  - Before: primary=[obdlink-cx, obdlink-mx-plus]; alternative=[foxwell-nt530, carly-universal-scanner]; mode=comparison
+  - Before: primary=[obdlink-cx, obdlink-mx-plus]; alternative=[foxwell-nt530, unicarscan-ucsi-2100, carly-universal-scanner]; mode=comparison
   - After: primary=[obdlink-cx]; alternative=[]; mode=compatible_adapter
 - `bimmercode-vs-foxwell-nt530` (CORRECTED)
   - Before: primary=[foxwell-nt530]; alternative=[]; mode=exact_product
@@ -26,11 +26,14 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
   - Before: primary=[]; alternative=[]; mode=related_buyer_guide
   - After: primary=[obdlink-cx]; alternative=[]; mode=compatible_adapter
 - `bimmerlink-adapter` (CORRECTED)
-  - Before: primary=[obdlink-cx]; alternative=[obdlink-mx-plus, bmw-enet-cable]; mode=recommended_equipment
+  - Before: primary=[obdlink-cx]; alternative=[obdlink-mx-plus, unicarscan-ucsi-2100, bmw-enet-cable]; mode=recommended_equipment
   - After: primary=[obdlink-cx]; alternative=[obdlink-mx-plus]; mode=recommended_equipment
 - `bimmerlink-pricing` (APPROVE)
   - Before: primary=[obdlink-cx]; alternative=[]; mode=exact_product
   - After: primary=[obdlink-cx]; alternative=[]; mode=recommended_equipment
+- `bimmerlink-vs-bimmer-tool` (APPROVE)
+  - Before: primary=[obdlink-cx, k-dcan-cable]; alternative=[]; mode=comparison
+  - After: primary=[obdlink-cx]; alternative=[]; mode=compatible_adapter
 - `bimmerlink-vs-carly` (CORRECTED)
   - Before: primary=[]; alternative=[]; mode=related_buyer_guide
   - After: primary=[obdlink-cx]; alternative=[]; mode=compatible_adapter
@@ -44,7 +47,7 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
   - Before: primary=[]; alternative=[]; mode=related_buyer_guide
   - After: primary=[fluke-88v]; alternative=[]; mode=recommended_equipment
 - `bmw-battery-registration-scanner` (CORRECTED)
-  - Before: primary=[obdlink-cx]; alternative=[obdlink-mx-plus, ancel-bm700-pro, carly-universal-scanner]; mode=recommended_equipment
+  - Before: primary=[obdlink-cx]; alternative=[obdlink-mx-plus, unicarscan-ucsi-2100, ancel-bm700-pro, carly-universal-scanner]; mode=recommended_equipment
   - After: primary=[obdlink-cx]; alternative=[]; mode=compatible_adapter
 - `bmw-bidirectional-scan-tool-functions` (CORRECTED)
   - Before: primary=[foxwell-nt530]; alternative=[foxwell-nt530-plus, autel-mk900]; mode=recommended_equipment
@@ -58,6 +61,9 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
 - `bmw-diagnostic-software-windows` (CORRECTED)
   - Before: primary=[bmw-enet-cable]; alternative=[]; mode=exact_product
   - After: primary=[schumacher-inc100]; alternative=[]; mode=recommended_equipment
+- `bmw-dpf-regeneration-scan-tool` (APPROVE)
+  - Before: primary=[obdlink-cx]; alternative=[autel-mx900]; mode=recommended_equipment
+  - After: primary=[obdlink-cx]; alternative=[]; mode=recommended_equipment
 - `bmw-electric-parking-brake-service-mode-scanner` (CORRECTED)
   - Before: primary=[autel-mk808s]; alternative=[]; mode=exact_product
   - After: primary=[autel-md909-pro]; alternative=[]; mode=exact_product
@@ -85,6 +91,9 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
 - `bmw-no-communication-with-obd-scanner` (CORRECTED)
   - Before: primary=[obdlink-ex]; alternative=[]; mode=exact_product
   - After: primary=[fluke-88v]; alternative=[]; mode=recommended_equipment
+- `bmw-parking-sensor-diagnostic-tool` (null)
+  - Before: primary=[]; alternative=[]; mode=related_buyer_guide
+  - After: primary=[]; alternative=[]; mode=no_defensible_product
 - `bmw-ride-height-calibration-scan-tool` (CORRECTED)
   - Before: primary=[]; alternative=[]; mode=related_buyer_guide
   - After: primary=[autel-maxisys-ultra]; alternative=[]; mode=recommended_equipment
@@ -109,6 +118,12 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
 - `bmw-transfer-case-adaptation-reset-tool` (CORRECTED)
   - Before: primary=[]; alternative=[]; mode=related_buyer_guide
   - After: primary=[autel-maxisys-ultra]; alternative=[]; mode=recommended_equipment
+- `bmw-vanos-diagnostic-tool` (APPROVE)
+  - Before: primary=[autel-ds808s]; alternative=[autel-ds808s-bt]; mode=recommended_equipment
+  - After: primary=[autel-ds808s-bt]; alternative=[]; mode=recommended_equipment
+- `bmw-wheel-speed-sensor-diagnostic-tool` (APPROVE)
+  - Before: primary=[autel-mx900]; alternative=[]; mode=exact_product
+  - After: primary=[autel-mx900]; alternative=[]; mode=recommended_equipment
 - `carly-subscription-cost` (CORRECTED)
   - Before: primary=[obdlink-cx]; alternative=[carly-universal-scanner]; mode=recommended_equipment
   - After: primary=[obdlink-cx]; alternative=[]; mode=recommended_equipment
@@ -124,6 +139,9 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
 - `foxwell-nt530-vs-nt710` (CORRECTED)
   - Before: primary=[foxwell-nt530, foxwell-nt710]; alternative=[autophix-7910, creator-c310-plus]; mode=comparison
   - After: primary=[autophix-7910p-plus]; alternative=[]; mode=recommended_equipment
+- `icarsoft-bmm-v3-vs-foxwell-nt530` (null)
+  - Before: primary=[foxwell-nt530, icarsoft-bmm-v3]; alternative=[]; mode=comparison
+  - After: primary=[]; alternative=[]; mode=no_defensible_product
 - `ista-valvetronic-relearn` (CORRECTED)
   - Before: primary=[]; alternative=[]; mode=related_buyer_guide
   - After: primary=[schumacher-inc100]; alternative=[]; mode=recommended_equipment
@@ -148,6 +166,9 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
 - `obdlink-cx-vs-mx-plus` (CORRECTED)
   - Before: primary=[obdlink-cx, obdlink-mx-plus]; alternative=[obdlink-ex, vlinker-bm-plus, vlinker-mc-plus]; mode=comparison
   - After: primary=[obdlink-cx, obdlink-mx-plus]; alternative=[]; mode=comparison
+- `obdlink-cx-vs-unicarscan-ucsi-2100` (null)
+  - Before: primary=[obdlink-cx, unicarscan-ucsi-2100]; alternative=[bmw-enet-cable]; mode=comparison
+  - After: primary=[]; alternative=[]; mode=no_defensible_product
 - `obdlink-cx-vs-vlinker-mc-plus` (CORRECTED)
   - Before: primary=[obdlink-cx, vlinker-bm-plus]; alternative=[vlinker-mc-plus]; mode=comparison
   - After: primary=[obdlink-cx, vlinker-mc-plus]; alternative=[]; mode=comparison

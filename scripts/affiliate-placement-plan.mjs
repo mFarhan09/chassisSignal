@@ -80,6 +80,9 @@ let totalPlacements = 0;
 for (const file of files) {
   const slug = file.replace(/\.md$/, '');
   const mapping = mappings[slug];
+  // Unmonetized guide (no approved product mapping: no-defensible-product, or link-verified-image-pending):
+  // emit no placements instead of a null-product placement. Monetized-guide behaviour is unchanged.
+  if (!mapping || mapping.mappingStatus !== 'approved' || !mapping.primaryProductKeys?.length) continue;
   const body = (await readFile(join(articlesDir, file), 'utf8')).replace(/^---\n[\s\S]*?\n---/, '');
   const headings = extractHeadings(body);
   const useful = headings.filter((h) => !/^sources consulted/i.test(h.text));

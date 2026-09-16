@@ -49,7 +49,7 @@ export interface ProductRecord {
 }
 
 export interface ArticleProductMapping {
-  editorialDecision: 'APPROVE' | 'CORRECTED' | 'HOLD';
+  editorialDecision: 'APPROVE' | 'CORRECTED' | 'HOLD' | null;
   articleSlug: string;
   articleIntent: string;
   monetizationMode: MonetizationMode;

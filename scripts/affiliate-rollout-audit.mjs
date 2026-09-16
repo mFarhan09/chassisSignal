@@ -28,16 +28,26 @@ const candidateRows = parseCsvRecords(await readFile(join(root, 'reports', 'affi
 const restrictedKeys = new Set(['bmw-enet-cable', 'k-dcan-cable', 'bmw-icom-next', 'bimmergeeks-bluetooth-adapter', 'bimmergeeks-expert-k-dcan']);
 const rejectedAsins = new Set(['B0CDGH4WFH', 'B0GX17T6Z2']);
 const allowedImageStatuses = new Set(['verified', 'manufacturer_attributed_editorial', 'site_owned']);
+// Intentionally unmonetized guides (no defensible product, or links verified but product images pending).
+// They publish normally but render no affiliate unit; every monetized-guide invariant below is unchanged.
+const UNMONETIZED_GUIDES = new Set(['bmw-parking-sensor-diagnostic-tool', 'icarsoft-bmm-v3-vs-foxwell-nt530', 'obdlink-cx-vs-unicarscan-ucsi-2100']);
 
-if (articles.length !== 58) fail('INVENTORY_COUNT', `Expected 58 published guides, found ${articles.length}.`);
-if (mapped.length !== 58 || Object.keys(editorialMappingOverrides).length !== 58) fail('MAPPING_COUNT', 'Exactly 58 reviewed mappings are required.');
-if (candidateRows.length !== 47) fail('CANDIDATE_COUNT', `Expected 47 preserved/discovered candidates, found ${candidateRows.length}.`);
+if (articles.length !== 65) fail('INVENTORY_COUNT', `Expected 65 published guides, found ${articles.length}.`);
+if (mapped.length !== 65 || Object.keys(editorialMappingOverrides).length !== 65) fail('MAPPING_COUNT', 'Exactly 65 reviewed mappings are required.');
+if (candidateRows.length !== 49) fail('CANDIDATE_COUNT', `Expected 49 preserved/discovered candidates, found ${candidateRows.length}.`);
 if (actionableKeys.length !== 20) fail('ACTIONABLE_COUNT', `Expected 20 mapped linked products, found ${actionableKeys.length}.`);
 if (mapped.some((mapping) => mapping.editorialDecision === 'HOLD')) fail('HOLD_REMAINS', 'No article-level HOLD may remain.');
 
 for (const article of articles) {
   const mapping = mappings[article.slug];
   if (!mapping) { fail('MISSING_MAPPING', article.slug); continue; }
+  if (UNMONETIZED_GUIDES.has(article.slug)) {
+    // Verify it is genuinely unmonetized (no approved card, no products) and still clean of raw Amazon links.
+    if (mapping.mappingStatus === 'approved' || mapping.primaryProductKeys.length) fail('UNEXPECTED_MONETIZATION', article.slug);
+    const src = await readFile(join(root, article.filePath), 'utf8');
+    if (findRawAmazonUrls(src).length) fail('RAW_AMAZON_URL', article.filePath);
+    continue;
+  }
   if (!editorialMappingOverrides[article.slug]) fail('MISSING_EDITORIAL_OVERRIDE', article.slug);
   if (mapping.mappingStatus !== 'approved' || mapping.approvalStatus !== 'approved') fail('UNAPPROVED_MAPPING', article.slug);
   if (!mapping.primaryProductKeys.length || mapping.primaryProductKeys.length > 2) fail('PRODUCT_COUNT', `${article.slug} must map one or two primary products.`);
@@ -76,6 +86,7 @@ if (cx.imageSha256 !== '71D0D17DD3027118E4F5B3FB35CB79A4F45DC04B50B2FE9607D019D2
 // Contextual placement-density enforcement: 1-3 placements, distributed, distinct, capped.
 for (const error of validatePlacementPlans(placementPlans, mappings, registry)) fail(`PLACEMENT_${error.code}`, error.message);
 for (const article of articles) {
+  if (UNMONETIZED_GUIDES.has(article.slug)) { if (getPlacementPlan(article.slug)) fail('UNEXPECTED_PLAN', article.slug); continue; }
   const plan = getPlacementPlan(article.slug);
   if (!plan) fail('PLACEMENT_MISSING_PLAN', article.slug);
   else if (plan.placements.length > MAX_PLACEMENTS_PER_ARTICLE) fail('PLACEMENT_COUNT_EXCEEDED', `${article.slug}: ${plan.placements.length} placements.`);
@@ -90,6 +101,14 @@ if (Object.values(registry).some((product) => product.specialLink?.includes('nod
 if (mode === 'live') {
   for (const article of articles) {
     const outputPath = join(root, 'dist', 'guides', article.slug, 'index.html');
+    if (UNMONETIZED_GUIDES.has(article.slug)) {
+      // Unmonetized guide must render as a normal page with NO affiliate unit or link (no phantom card).
+      try {
+        const html = await readFile(outputPath, 'utf8');
+        if (html.includes('data-affiliate-unit') || html.includes('data-affiliate-link')) fail('UNEXPECTED_AFFILIATE_UNIT', article.slug);
+      } catch { fail('MISSING_BUILT_PAGE', article.slug); }
+      continue;
+    }
     try {
       const html = await readFile(outputPath, 'utf8');
       const firstLink = html.indexOf('data-affiliate-link');
