@@ -50,11 +50,11 @@ Choose neither until the maker's current selector or app view confirms the exact
 
 ## What BimmerLink is built around
 
-BimmerLink's official feature page centers on diagnostics. It lists reading and clearing trouble codes from control units, a customizable live-value dashboard, CSV data logging, and several named actions. Those actions include battery registration, service reset, electric parking-brake service mode, and diesel particulate-filter functions on applicable vehicles. Other controls, such as exhaust-flap or Active Sound Design settings, depend on factory equipment.
+BimmerLink's official feature page centers on diagnostics. It lists reading and clearing trouble codes from control units, a customizable live-value dashboard, CSV data logging, and several named actions. Those actions include battery registration, service reset, electric parking-brake service mode, and [diesel particulate-filter functions](/guides/bmw-dpf-regeneration-scan-tool/) on applicable vehicles. Other controls, such as exhaust-flap or Active Sound Design settings, depend on factory equipment.
 
 That specificity is useful. It lets a buyer ask whether the desired function appears for the car instead of treating every menu item as universal. The published vehicle-family list is broad, but it is still only the first gate. Model year, engine, control unit, and adapter path can narrow what works.
 
-BimmerLink also separates the app from the interface. A supported Bluetooth, Wi-Fi, ENET, or wired adapter is a separate part of the working chain. The correct choice depends on vehicle generation and phone platform. Our [BimmerLink cost guide](/guides/bimmerlink-pricing/) explains why the adapter can materially change the first-year total.
+BimmerLink also separates the app from the interface. A supported Bluetooth, Wi-Fi, ENET, or wired adapter is a separate part of the working chain. The correct choice depends on vehicle generation and phone platform. Our [BimmerLink cost guide](/guides/bimmerlink-pricing/) explains why the adapter can materially change the first-year total. Android owners comparing two narrower diagnostic/service apps can use the [BimmerLink versus bimmer-tool guide](/guides/bimmerlink-vs-bimmer-tool/) to separate platform, adapter and engine-specific jobs.
 
 ## What Carly adds—and what it asks you to verify
 
@@ -145,4 +145,3 @@ The responsible final check is the same for both: exact BMW, exact control unit 
 - [Carly Support — BMW coding options](https://support.mycarly.com/hc/en-us/articles/20233353072786-Which-coding-options-can-I-use-on-my-BMW)
 - [Carly Support — Cancel license renewal](https://support.mycarly.com/hc/en-us/articles/360010441840-How-do-I-cancel-the-renewal-for-my-Carly-license)
 - [Apple App Store — BimmerLink](https://apps.apple.com/us/app/bimmerlink/id1065360416)
-

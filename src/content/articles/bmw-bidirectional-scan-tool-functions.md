@@ -52,11 +52,11 @@ The [BMW code reader versus scan tool guide](/guides/bmw-code-reader-vs-scan-too
 
 ## What “bidirectional” actually means
 
-Ordinary diagnosis asks a controller for stored information. A bidirectional test also asks it to do something: switch a supported output, operate a motor, open a valve, or trigger another command defined by the diagnostic software. The observed response can help isolate a control, wiring, mechanical, or communication problem.
+Ordinary diagnosis asks a controller for stored information. A bidirectional test also asks it to do something: switch a supported output, operate a motor, open a valve, or trigger another command defined by the diagnostic software. The observed response can help isolate a control, wiring, mechanical, or communication problem. The [BMW parking-sensor diagnostic guide](/guides/bmw-parking-sensor-diagnostic-tool/) applies that distinction to PDC/PMA live values and module output tests.
 
 The word does not describe how many modules or commands are implemented. Nor does it prove the command is safe in the vehicle's current state. The tool may require the engine off, a stable voltage, a particular gear or brake state, or other conditions. Those requirements belong to the current manual and vehicle service information.
 
-An active test is also not a repair. If a command produces no response, the result still needs interpretation. The cause could be the controlled part, its supply, wiring, controller logic, interlocks, or an unsupported command path. The [electronic coolant-pump diagnosis guide](/guides/bmw-electronic-water-pump-diagnostic-tool/) applies that distinction to DME evidence, activation and electrical-path checks.
+An active test is also not a repair. If a command produces no response, the result still needs interpretation. The cause could be the controlled part, its supply, wiring, controller logic, interlocks, or an unsupported command path. The [electronic coolant-pump diagnosis guide](/guides/bmw-electronic-water-pump-diagnostic-tool/) applies that distinction to DME evidence, activation and electrical-path checks. The [BMW VANOS diagnostic-tool guide](/guides/bmw-vanos-diagnostic-tool/) applies it to cam-angle evidence, solenoid activation and guided test plans.
 
 ## A responsible active-test loop
 
@@ -178,4 +178,3 @@ If a seller can prove module access but not the command, treat the tool as a rea
 - [Autel — MaxiCOM MK900 official product page](https://autel.com/mk3/4171.jhtml)
 - [Autel — MaxiCOM MK900-BT user manual](https://www.autel.com/u/cms/www/202604/20015757y06g.pdf)
 - [NHTSA — Air bags overview](https://www.nhtsa.gov/vehicle-safety/air-bags)
-

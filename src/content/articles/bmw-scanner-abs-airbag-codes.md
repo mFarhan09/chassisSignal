@@ -132,7 +132,7 @@ For ABS/DSC systems, the same discipline applies to any operation that changes h
 | Required outcome | Minimum evidence | Useful form factor |
 | --- | --- | --- |
 | Preserve ABS and airbag codes for a repair conversation | Exact module code access and report saving | App or handheld |
-| Observe an intermittent wheel-speed concern | Named live data on the exact ABS/DSC generation | Larger handheld or tablet may be easier to view |
+| Observe an [intermittent wheel-speed concern](/guides/bmw-wheel-speed-sensor-diagnostic-tool/) | Named live data on the exact ABS/DSC generation | Larger handheld or tablet may be easier to view |
 | Keep a tool in the car | Standalone power and controls, current BMW coverage | Dedicated handheld |
 | Use an existing phone and approved adapter | App, phone OS, adapter, and vehicle all listed | Mobile app path |
 | Run a named calibration or active command | Exact function-by-vehicle proof and safety procedure | Function-capable scanner; not inferred from “all systems” |
@@ -176,4 +176,3 @@ If the seller cannot resolve the car, module, and function in writing, keep shop
 - [Autel — MaxiCheck MX900 manual](https://autel.com/u/cms/www/202603/19015820hq2p.pdf)
 - [NHTSA — Air bags overview](https://www.nhtsa.gov/vehicle-safety/air-bags)
 - [Autel — MaxiCheck MX900 official product page](https://www.autel.com/mk2/4063.jhtml)
-

@@ -14,7 +14,7 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
   - Before: primary=[foxwell-nt530]; alternative=[foxwell-nt530-plus, autel-mk808s, autel-mk900, autel-mx900]; mode=recommended_equipment
   - After: primary=[autel-mx808s, autel-mk900-bt]; alternative=[]; mode=comparison
 - `autophix-7910-vs-foxwell-nt530` (CORRECTED)
-  - Before: primary=[foxwell-nt530, foxwell-nt530-plus]; alternative=[autophix-7910, creator-c310-plus]; mode=comparison
+  - Before: primary=[foxwell-nt530, foxwell-nt530-plus]; alternative=[icarsoft-bmm-v3, autophix-7910, creator-c310-plus]; mode=comparison
   - After: primary=[autophix-7910p-plus]; alternative=[]; mode=recommended_equipment
 - `bimmercode-vs-carly` (CORRECTED)
   - Before: primary=[obdlink-cx, obdlink-mx-plus]; alternative=[foxwell-nt530, unicarscan-ucsi-2100, carly-universal-scanner]; mode=comparison
@@ -137,7 +137,7 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
   - Before: primary=[foxwell-nt530, foxwell-nt530-plus]; alternative=[autel-mk808s]; mode=comparison
   - After: primary=[autel-mx808s]; alternative=[]; mode=recommended_equipment
 - `foxwell-nt530-vs-nt710` (CORRECTED)
-  - Before: primary=[foxwell-nt530, foxwell-nt710]; alternative=[autophix-7910, creator-c310-plus]; mode=comparison
+  - Before: primary=[foxwell-nt530, icarsoft-bmm-v3]; alternative=[foxwell-nt710, autophix-7910, creator-c310-plus]; mode=comparison
   - After: primary=[autophix-7910p-plus]; alternative=[]; mode=recommended_equipment
 - `icarsoft-bmm-v3-vs-foxwell-nt530` (null)
   - Before: primary=[foxwell-nt530, icarsoft-bmm-v3]; alternative=[]; mode=comparison

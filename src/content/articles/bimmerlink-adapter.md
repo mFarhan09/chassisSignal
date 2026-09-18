@@ -45,7 +45,7 @@ BimmerLink currently supports iOS and Android and publishes a broad BMW, MINI, a
 4. Match the adapter's radio or cable path to iOS or Android.
 5. Check the adapter maker's OS, firmware, and electrical documentation.
 
-This guide does not name a fastest or universally best adapter. No controlled latency, reliability, sleep-current, or connection test was performed.
+This guide does not name a fastest or universally best adapter. No controlled latency, reliability, sleep-current, or connection test was performed. For two officially recommended BLE candidates, compare [OBDLink CX with UniCarScan UCSI-2100](/guides/obdlink-cx-vs-unicarscan-ucsi-2100/) by app, platform, pairing and exact vehicle support.
 
 If the open question is application scope rather than hardware, compare [BimmerLink vs ProTool](/guides/bimmerlink-vs-protool/). For the boundary between an owner app and BMW's workshop diagnosis environment, use [ISTA vs BimmerLink](/guides/ista-vs-bimmerlink/).
 

@@ -61,7 +61,7 @@ The manufacturer page does not present a direct retail price. Use an authorized 
 
 ## Foxwell NT530 strengths
 
-Foxwell's official NT530 Plus page emphasizes bidirectional control, full-system diagnostics, ECU coding and more than 20 maintenance functions. Learn how active testing boundaries work in our [BMW bidirectional scan tool guide](/guides/bmw-bidirectional-scan-tool-functions/). The product was shown from **$159**, with lifetime free updates, lifetime support and a one-year warranty at the September 1, 2026 check; the selected page variant was also marked sold out.
+Foxwell's official NT530 Plus page emphasizes bidirectional control, full-system diagnostics, ECU coding and more than 20 maintenance functions. Learn how active testing boundaries work in our [BMW bidirectional scan tool guide](/guides/bmw-bidirectional-scan-tool-functions/). For another BMW-focused handheld decision, the [iCarsoft BMM V3.0 versus Foxwell NT530 comparison](/guides/icarsoft-bmm-v3-vs-foxwell-nt530/) applies the same exact-SKU and exact-function test. The product was shown from **$159**, with lifetime free updates, lifetime support and a one-year warranty at the September 1, 2026 check; the selected page variant was also marked sold out.
 
 “ECU coding” requires careful interpretation. It does not mean unrestricted flash programming or every BMW coding operation. Ask Foxwell to confirm the exact vehicle identification number, module and desired command in writing when that function is a purchase requirement.
 

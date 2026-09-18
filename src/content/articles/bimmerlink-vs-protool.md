@@ -56,7 +56,7 @@ This does not score “more” as automatically better. Broader scope increases 
 
 If the maintained device is iOS, BimmerLink remains a candidate and ProTool does not. ProTool's publisher describes Android only. Buying another device may be rational for a wider toolset, but include that hardware and management burden in cost.
 
-On Android, compare the actual tasks. A simple fault scan does not become more accurate merely because an app also sells coding. Conversely, a workflow needing ProTool's documented calibration or expert diagnostics cannot be evaluated only from BimmerLink's approachable interface.
+On Android, compare the actual tasks. A simple fault scan does not become more accurate merely because an app also sells coding. Conversely, a workflow needing ProTool's documented calibration or expert diagnostics cannot be evaluated only from BimmerLink's approachable interface. If the alternative is another focused diagnostic/service app rather than ProTool's wider toolset, compare [BimmerLink with bimmer-tool](/guides/bimmerlink-vs-bimmer-tool/) by phone platform, engine and required job.
 
 <picture>
   <source media="(max-width: 599px)" srcset="/images/guides/bimmerlink-vs-protool/cs027-platform-gate-mobile.svg">
@@ -65,7 +65,7 @@ On Android, compare the actual tasks. A simple fault scan does not become more a
 
 ## Service functions require exact qualification
 
-BimmerLink lists functions such as battery registration, DPF regeneration, parking-brake service mode and service reset for supported cars. ProTool Diagnostic publishes tests, resets, calibrations and initialization scope. Neither list is a universal vehicle promise.
+BimmerLink lists functions such as battery registration, [DPF regeneration](/guides/bmw-dpf-regeneration-scan-tool/), parking-brake service mode and service reset for supported cars. ProTool Diagnostic publishes tests, resets, calibrations and initialization scope. Neither list is a universal vehicle promise.
 
 Confirm chassis, build date, relevant control unit, app version and adapter. Distinguish a menu entry from a verified procedure. A service function can have physical prerequisites and safety consequences that the button label does not convey.
 

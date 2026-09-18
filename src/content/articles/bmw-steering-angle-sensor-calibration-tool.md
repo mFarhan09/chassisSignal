@@ -38,7 +38,7 @@ If the vehicle has unstable steering, unresolved mechanical damage, a failed cal
 
 ## Start with the event, not the dashboard symbol
 
-The same warning can follow different causes. Low vehicle voltage, wheel-speed faults, steering or suspension geometry, wiring, a replaced component, an interrupted service procedure and an implausible steering-angle reference can all lead the driver toward the same internet search. Calibration is only one possible disposition.
+The same warning can follow different causes. Low vehicle voltage, [wheel-speed faults](/guides/bmw-wheel-speed-sensor-diagnostic-tool/), steering or suspension geometry, wiring, a replaced component, an interrupted service procedure and an implausible steering-angle reference can all lead the driver toward the same internet search. Calibration is only one possible disposition.
 
 BMW ST608 shows why context matters: steering-angle information contributes to DSC and xDrive dynamic calculations in the documented system.
 

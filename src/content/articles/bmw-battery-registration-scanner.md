@@ -66,7 +66,7 @@ If the replacement differs from the vehicle’s existing specification, confirm 
 
 SG Software lists **Battery Registration** as a BimmerLink feature and publishes supported vehicle families beginning at model-specific years—for example, 3 Series from 2005, 5 Series from 2003, X5 from 2006 and MINI from 2006. The current US App Store listing prices the full iOS version at **$39.99**. An adapter is separate.
 
-The adapter requirement is not generic. BimmerLink directs buyers to SG Software’s supported-adapter list, which says not every adapter works with every supported vehicle. The list includes broad-coverage options such as OBDLink CX, OBDLink MX+ and UniCarScan UCSI-2100, plus series-specific ENET, Wi-Fi, Bluetooth and cable choices.
+The adapter requirement is not generic. BimmerLink directs buyers to SG Software’s supported-adapter list, which says not every adapter works with every supported vehicle. The list includes broad-coverage options such as OBDLink CX, OBDLink MX+ and UniCarScan UCSI-2100, plus series-specific ENET, Wi-Fi, Bluetooth and cable choices. The [OBDLink CX versus UniCarScan UCSI-2100 comparison](/guides/obdlink-cx-vs-unicarscan-ucsi-2100/) resolves that two-adapter choice without treating either badge as vehicle-level proof.
 
 <figure class="cs-article-visual">
   <img src="/images/guides/bmw-battery-registration-scanner/r02-obd-adapter-hardware.webp" alt="A compact plug-in OBD adapter held inside a vehicle." width="1600" height="1066" loading="lazy" decoding="async">
