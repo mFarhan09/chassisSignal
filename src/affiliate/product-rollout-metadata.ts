@@ -190,7 +190,7 @@ export const rolloutProductMetadata: Record<string, Partial<ProductRecord>> = {
     imageRightsStatus: 'site_owned',
     imageAttribution: 'Category illustration by Chassis Signal.',
     imageAlt: 'Brand-neutral BMW diagnostic scanner category illustration',
-    imageSha256: 'AE785E1F9AC278565D1D83D488A0BB635BCFE5CEA72DA30ADB91B2031A4383EC'
+    imageSha256: '694185FDEE7CAE5F4A0BD47E0929CAEE3EBA20A65EBD9E8E627098327121E39B'
   },
   'creator-c310-plus': {
     manufacturerUrl: 'https://forobd2tool.com/wp-content/download/Creator%20C310%2B/c310_manual.pdf',
@@ -201,7 +201,7 @@ export const rolloutProductMetadata: Record<string, Partial<ProductRecord>> = {
     imageRightsStatus: 'site_owned',
     imageAttribution: 'Category illustration by Chassis Signal.',
     imageAlt: 'Brand-neutral compact BMW scanner category illustration',
-    imageSha256: 'ACC7BFF56D53F92020432EC1631873909E2F7A45F521FB7147AAC7BB3053AB88'
+    imageSha256: '0DA1A521B3AF12A84C4AA03567804AB88645ACE38DC0E479FAF8E8E0178739BD'
   },
   'innova-5610-bundle': {
     manufacturerUrl: 'https://www.innova.com/collections/innova-obd2-scanners/products/carscan-pro-5610',
@@ -212,7 +212,7 @@ export const rolloutProductMetadata: Record<string, Partial<ProductRecord>> = {
     imageRightsStatus: 'site_owned',
     imageAttribution: 'Category illustration by Chassis Signal.',
     imageAlt: 'Brand-neutral scanner and inspection camera bundle illustration',
-    imageSha256: '75DB030904C06244F636C801E065D684DD3DAD3F348FC0211626EC5FFBAEE346'
+    imageSha256: '1549A787A4D8673EBE43F963798E4DFB5EBBBE67BBCADDB63F9A7EEBF31AD508'
   },
   'launch-creader-elite-bmw-v2': {
     manufacturerUrl: 'https://en.cnlaunch.com/products-detail/i-281.html',
