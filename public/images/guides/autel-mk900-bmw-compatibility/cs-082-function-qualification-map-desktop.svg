@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 700" width="1280" height="700" role="img" aria-labelledby="t2 d2">
+<title id="t2">Three zones of MK900 capability for BMW</title>
+<desc id="d2">Functions sorted into three zones: documented at platform level, conditional and requiring per-vehicle verification, and not documented by Autel at all. Coding and programming fall in the undocumented zone.</desc>
+<rect width="1280" height="700" fill="#101418"/>
+<text x="48" y="54" fill="#f4f6f8" font-family="Georgia,serif" font-size="29" font-weight="bold">Sort every function into one of three zones</text>
+<text x="48" y="84" fill="#8b9aa8" font-family="Helvetica,Arial,sans-serif" font-size="15">Zone assignment follows Autel's published wording, not inference about what the hardware might manage.</text>
+<g font-family="Helvetica,Arial,sans-serif">
+<rect x="48" y="110" width="378" height="46" rx="5" fill="#16301f"/>
+<text x="68" y="140" fill="#9be0b4" font-size="18" font-weight="bold">Zone A: platform documented</text>
+<rect x="48" y="164" width="378" height="330" rx="5" fill="#141c18" stroke="#2f6b45"/>
+<text x="68" y="196" fill="#cfe8d9" font-size="15">Read Codes and Erase Codes</text>
+<text x="68" y="226" fill="#cfe8d9" font-size="15">Live Data</text>
+<text x="68" y="256" fill="#cfe8d9" font-size="15">ECU Information</text>
+<text x="68" y="286" fill="#cfe8d9" font-size="15">Complete OBD diagnostics</text>
+<text x="68" y="316" fill="#cfe8d9" font-size="15">Pre-scan and post-scan</text>
+<text x="68" y="346" fill="#cfe8d9" font-size="15">AutoVIN</text>
+<text x="68" y="376" fill="#cfe8d9" font-size="15">DoIP and CAN FD transport</text>
+<text x="68" y="406" fill="#cfe8d9" font-size="15">All-system positioning, 1996+</text>
+<text x="68" y="452" fill="#7fae94" font-size="13">Stated for the product as a whole.</text>
+<text x="68" y="472" fill="#7fae94" font-size="13">Still confirm at VIN level.</text>
+
+<rect x="450" y="110" width="378" height="46" rx="5" fill="#2a2418"/>
+<text x="470" y="140" fill="#f0d79b" font-size="18" font-weight="bold">Zone B: conditional</text>
+<rect x="450" y="164" width="378" height="330" rx="5" fill="#1c1a14" stroke="#6b5a2f"/>
+<text x="470" y="196" fill="#e8dcbe" font-size="15">Active Test</text>
+<text x="470" y="218" fill="#a3946f" font-size="12.5">"Available tests vary by vehicle"</text>
+<text x="470" y="252" fill="#e8dcbe" font-size="15">Special Function (adaptations)</text>
+<text x="470" y="274" fill="#a3946f" font-size="12.5">Scope not enumerated per vehicle</text>
+<text x="470" y="308" fill="#e8dcbe" font-size="15">Battery Management Service</text>
+<text x="470" y="330" fill="#a3946f" font-size="12.5">"Not supported by all vehicles"</text>
+<text x="470" y="364" fill="#e8dcbe" font-size="15">Electronic Parking Brake</text>
+<text x="470" y="386" fill="#a3946f" font-size="12.5">Documented, chassis scope unstated</text>
+<text x="470" y="420" fill="#e8dcbe" font-size="15">BMW condition-based resets</text>
+<text x="470" y="442" fill="#a3946f" font-size="12.5">Named once, model years unstated</text>
+<text x="470" y="476" fill="#c9b78c" font-size="13">Verify each one against your VIN.</text>
+
+<rect x="852" y="110" width="380" height="46" rx="5" fill="#2e1a20"/>
+<text x="872" y="140" fill="#f0b6c4" font-size="18" font-weight="bold">Zone C: not documented</text>
+<rect x="852" y="164" width="380" height="330" rx="5" fill="#1d1418" stroke="#5c2b3a"/>
+<text x="872" y="196" fill="#f2d3da" font-size="15">Module coding</text>
+<text x="872" y="226" fill="#f2d3da" font-size="15">Module programming</text>
+<text x="872" y="256" fill="#f2d3da" font-size="15">Retrofit personalisation</text>
+<text x="872" y="286" fill="#f2d3da" font-size="15">Hidden feature activation</text>
+<text x="872" y="316" fill="#f2d3da" font-size="15">Replacing factory software</text>
+<text x="872" y="360" fill="#c08d9c" font-size="13">Basis: zero occurrences of "coding"</text>
+<text x="872" y="382" fill="#c08d9c" font-size="13">or "programming" across the 89-page</text>
+<text x="872" y="404" fill="#c08d9c" font-size="13">manual v2.3, and no coding row in</text>
+<text x="872" y="426" fill="#c08d9c" font-size="13">the feature comparison table.</text>
+<text x="872" y="460" fill="#e2a0b0" font-size="13" font-weight="bold">Do not buy expecting these.</text>
+<text x="872" y="482" fill="#c08d9c" font-size="12.5">Absence of claim, not proof of absence.</text>
+
+<rect x="48" y="516" width="1184" height="152" rx="6" fill="#18202a" stroke="#2a3744"/>
+<text x="76" y="548" fill="#e6edf3" font-size="17" font-weight="bold">How to use this map</text>
+<text x="76" y="580" fill="#9fb0c0" font-size="15">Write down the one function you are actually buying the tool for, then find its zone.</text>
+<text x="76" y="608" fill="#9fb0c0" font-size="15">Zone A: proceed, and still confirm at VIN level. Zone B: get written confirmation before paying.</text>
+<text x="76" y="636" fill="#9fb0c0" font-size="15">Zone C: this is the wrong product family, and a different tool should be your starting point.</text>
+</g>
+</svg>

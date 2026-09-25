@@ -1,4 +1,23 @@
 {
+  "autel-mk900-bmw-compatibility": {
+    "articleSlug": "autel-mk900-bmw-compatibility",
+    "articleIntent": "Autel MK900 BMW Compatibility: What Autel Documents, and What You Must Confirm",
+    "monetizationMode": "no_defensible_product",
+    "editorialDecision": null,
+    "primaryProductKeys": [],
+    "alternativeProductKeys": [],
+    "placementType": "none",
+    "placementLocation": "after_evidence_context",
+    "recommendationRationale": "CS-082: no exact base wired MaxiCOM MK900 listing states the vehicle communication method, and Check 1 of this article makes an ambiguous variant disqualifying. A MaxiCheck MX900 listing was offered as an alternative and declined, because a card for a different product line on a page whose central warning is MK900 variant discipline would create the wrong-buy risk the article is written to remove. Intentionally unmonetized.",
+    "affiliateRelationship": "exact_product",
+    "relationshipLabel": "Exact product discussed",
+    "officialEvidenceUrl": "",
+    "relatedBuyerGuideSlug": null,
+    "mappingStatus": "reviewed",
+    "approvalStatus": "pending",
+    "reviewedAt": null,
+    "reviewedBy": null
+  },
   "autel-scanner-for-bmw": {
     "articleSlug": "autel-scanner-for-bmw",
     "articleIntent": "Which Autel Scanner for BMW? Build a Model-and-Function Matrix",
@@ -948,6 +967,25 @@
     "approvalStatus": "approved",
     "reviewedAt": "2026-09-12T19:42:08.000Z",
     "reviewedBy": "Muhammad Farhan"
+  },
+  "foxwell-nt710-vs-autel-mk900-bmw": {
+    "articleSlug": "foxwell-nt710-vs-autel-mk900-bmw",
+    "articleIntent": "Foxwell NT710 vs Autel MK900 for BMW: The Coding Line Decides It",
+    "monetizationMode": "no_defensible_product",
+    "editorialDecision": null,
+    "primaryProductKeys": [],
+    "alternativeProductKeys": [],
+    "placementType": "none",
+    "placementLocation": "after_evidence_context",
+    "recommendationRationale": "CS-081: the BMW-software Foxwell NT710 could not be resolved to an exact standalone listing (the supplied ASIN B0CDGH4WFH is the GM-software variant and is already on the rejected list), and no base wired Autel MaxiCOM MK900 listing states the vehicle communication method the article turns on. A MaxiCheck MX900 listing was offered as an alternative and declined: it is a different product line whose own title conflates itself with MK900 and MK900BT, which is the exact confusion this comparison exists to prevent. Intentionally unmonetized.",
+    "affiliateRelationship": "exact_product",
+    "relationshipLabel": "Exact product discussed",
+    "officialEvidenceUrl": "",
+    "relatedBuyerGuideSlug": null,
+    "mappingStatus": "reviewed",
+    "approvalStatus": "pending",
+    "reviewedAt": null,
+    "reviewedBy": null
   },
   "icarsoft-bmm-v3-vs-foxwell-nt530": {
     "articleSlug": "icarsoft-bmm-v3-vs-foxwell-nt530",

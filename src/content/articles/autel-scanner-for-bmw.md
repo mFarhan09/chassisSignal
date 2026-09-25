@@ -63,7 +63,7 @@ The same Autel table distinguishes the MK808S from MK808BT Pro and MK808S-TS. Wi
 
 ## MK900: newer protocols and reporting
 
-Autel describes the MK900 as an 8-inch Android 11 all-system tablet. The current page lists code functions, live data, active tests, service functions, AutoVIN, pre/post scan reporting, DoIP, and CAN FD. Its base model uses wired vehicle communication; MK900-BT and MK900-TS are separate variants.
+Autel describes the MK900 as an 8-inch Android 11 all-system tablet. The current page lists code functions, live data, active tests, service functions, AutoVIN, pre/post scan reporting, DoIP, and CAN FD. Its base model uses wired vehicle communication; MK900-BT and MK900-TS are separate variants. Readers who have already settled on the MK900 and need the BMW-specific qualification can go to [Autel MK900 BMW compatibility](/guides/autel-mk900-bmw-compatibility/).
 
 DoIP and CAN FD can matter on newer vehicle architectures, but protocol support is not a blanket promise of BMW function coverage. It establishes that the hardware and platform advertise those communication paths. The exact vehicle software still determines the menus available after identification.
 

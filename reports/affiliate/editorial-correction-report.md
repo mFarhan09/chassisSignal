@@ -2,14 +2,17 @@
 
 Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors were added.
 
-- Eligible guides: 65
+- Eligible guides: 67
 - APPROVE: 9
 - CORRECTED: 53
 - HOLD: 0
-- Material before/after mapping changes: 60
+- Material before/after mapping changes: 62
 
 ## Changed mappings
 
+- `autel-mk900-bmw-compatibility` (null)
+  - Before: primary=[autel-mk900]; alternative=[autel-mk900-bt]; mode=recommended_equipment
+  - After: primary=[]; alternative=[]; mode=no_defensible_product
 - `autel-scanner-for-bmw` (CORRECTED)
   - Before: primary=[foxwell-nt530]; alternative=[foxwell-nt530-plus, autel-mk808s, autel-mk900, autel-mx900]; mode=recommended_equipment
   - After: primary=[autel-mx808s, autel-mk900-bt]; alternative=[]; mode=comparison
@@ -137,8 +140,11 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
   - Before: primary=[foxwell-nt530, foxwell-nt530-plus]; alternative=[autel-mk808s]; mode=comparison
   - After: primary=[autel-mx808s]; alternative=[]; mode=recommended_equipment
 - `foxwell-nt530-vs-nt710` (CORRECTED)
-  - Before: primary=[foxwell-nt530, icarsoft-bmm-v3]; alternative=[foxwell-nt710, autophix-7910, creator-c310-plus]; mode=comparison
+  - Before: primary=[foxwell-nt530, icarsoft-bmm-v3]; alternative=[foxwell-nt710, autophix-7910, autel-mk900, creator-c310-plus]; mode=comparison
   - After: primary=[autophix-7910p-plus]; alternative=[]; mode=recommended_equipment
+- `foxwell-nt710-vs-autel-mk900-bmw` (null)
+  - Before: primary=[foxwell-nt710, autel-mk900]; alternative=[]; mode=comparison
+  - After: primary=[]; alternative=[]; mode=no_defensible_product
 - `icarsoft-bmm-v3-vs-foxwell-nt530` (null)
   - Before: primary=[foxwell-nt530, icarsoft-bmm-v3]; alternative=[]; mode=comparison
   - After: primary=[]; alternative=[]; mode=no_defensible_product

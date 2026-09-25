@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1200" width="640" height="1200" role="img" aria-labelledby="t2m d2m">
+<title id="t2m">Three zones of MK900 capability for BMW</title>
+<desc id="d2m">Stacked mobile view of documented, conditional and undocumented function zones.</desc>
+<rect width="640" height="1200" fill="#101418"/>
+<text x="24" y="46" fill="#f4f6f8" font-family="Georgia,serif" font-size="22" font-weight="bold">Sort each function into a zone</text>
+<text x="24" y="72" fill="#8b9aa8" font-family="Helvetica,Arial,sans-serif" font-size="13">Zones follow Autel's wording, not inference.</text>
+<g font-family="Helvetica,Arial,sans-serif">
+<rect x="24" y="92" width="592" height="40" rx="5" fill="#16301f"/>
+<text x="44" y="119" fill="#9be0b4" font-size="16" font-weight="bold">Zone A: platform documented</text>
+<rect x="24" y="138" width="592" height="216" rx="5" fill="#141c18" stroke="#2f6b45"/>
+<text x="44" y="168" fill="#cfe8d9" font-size="14">Read and Erase Codes</text>
+<text x="44" y="194" fill="#cfe8d9" font-size="14">Live Data, ECU Information</text>
+<text x="44" y="220" fill="#cfe8d9" font-size="14">Complete OBD diagnostics</text>
+<text x="44" y="246" fill="#cfe8d9" font-size="14">Pre-scan and post-scan, AutoVIN</text>
+<text x="44" y="272" fill="#cfe8d9" font-size="14">DoIP and CAN FD transport</text>
+<text x="44" y="298" fill="#cfe8d9" font-size="14">All-system positioning, 1996+</text>
+<text x="44" y="332" fill="#7fae94" font-size="12.5">Still confirm at VIN level.</text>
+<rect x="24" y="370" width="592" height="40" rx="5" fill="#2a2418"/>
+<text x="44" y="397" fill="#f0d79b" font-size="16" font-weight="bold">Zone B: conditional</text>
+<rect x="24" y="416" width="592" height="266" rx="5" fill="#1c1a14" stroke="#6b5a2f"/>
+<text x="44" y="446" fill="#e8dcbe" font-size="14">Active Test</text>
+<text x="44" y="466" fill="#a3946f" font-size="12">"Available tests vary by vehicle"</text>
+<text x="44" y="498" fill="#e8dcbe" font-size="14">Special Function (adaptations)</text>
+<text x="44" y="518" fill="#a3946f" font-size="12">Scope not enumerated</text>
+<text x="44" y="550" fill="#e8dcbe" font-size="14">Battery Management Service</text>
+<text x="44" y="570" fill="#a3946f" font-size="12">"Not supported by all vehicles"</text>
+<text x="44" y="602" fill="#e8dcbe" font-size="14">EPB, BMW service resets</text>
+<text x="44" y="622" fill="#a3946f" font-size="12">Documented, model years unstated</text>
+<text x="44" y="658" fill="#c9b78c" font-size="12.5">Verify each against your VIN.</text>
+<rect x="24" y="698" width="592" height="40" rx="5" fill="#2e1a20"/>
+<text x="44" y="725" fill="#f0b6c4" font-size="16" font-weight="bold">Zone C: not documented</text>
+<rect x="24" y="744" width="592" height="236" rx="5" fill="#1d1418" stroke="#5c2b3a"/>
+<text x="44" y="774" fill="#f2d3da" font-size="14">Module coding and programming</text>
+<text x="44" y="800" fill="#f2d3da" font-size="14">Retrofit personalisation</text>
+<text x="44" y="826" fill="#f2d3da" font-size="14">Hidden feature activation</text>
+<text x="44" y="852" fill="#f2d3da" font-size="14">Replacing factory software</text>
+<text x="44" y="886" fill="#c08d9c" font-size="12.5">Basis: zero occurrences of "coding"</text>
+<text x="44" y="906" fill="#c08d9c" font-size="12.5">or "programming" in the 89-page</text>
+<text x="44" y="926" fill="#c08d9c" font-size="12.5">manual, and no coding row in the</text>
+<text x="44" y="946" fill="#c08d9c" font-size="12.5">feature table.</text>
+<text x="44" y="970" fill="#e2a0b0" font-size="12.5" font-weight="bold">Do not buy expecting these.</text>
+<rect x="24" y="1000" width="592" height="176" rx="6" fill="#18202a" stroke="#2a3744"/>
+<text x="44" y="1030" fill="#e6edf3" font-size="15" font-weight="bold">How to use this map</text>
+<text x="44" y="1060" fill="#9fb0c0" font-size="13">Name the one function you are buying</text>
+<text x="44" y="1080" fill="#9fb0c0" font-size="13">the tool for, then find its zone.</text>
+<text x="44" y="1110" fill="#9fb0c0" font-size="13">A: proceed, confirm at VIN level.</text>
+<text x="44" y="1132" fill="#9fb0c0" font-size="13">B: get written confirmation first.</text>
+<text x="44" y="1154" fill="#9fb0c0" font-size="13">C: wrong product family.</text>
+</g>
+</svg>

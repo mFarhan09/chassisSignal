@@ -25,15 +25,17 @@ const mapped = Object.values(mappings);
 const UNMONETIZED_GUIDES = new Set([
   'bmw-parking-sensor-diagnostic-tool',   // CS-087: no defensible product (intentional)
   'icarsoft-bmm-v3-vs-foxwell-nt530',     // CS-081: SiteStripe links verified, product images pending
-  'obdlink-cx-vs-unicarscan-ucsi-2100'    // CS-084: SiteStripe links verified, product images pending
+  'obdlink-cx-vs-unicarscan-ucsi-2100',   // CS-084: SiteStripe links verified, product images pending
+  'foxwell-nt710-vs-autel-mk900-bmw',     // no exact BMW-software NT710 or base wired MK900 listing closes
+  'autel-mk900-bmw-compatibility'         // no exact base wired MK900 listing closes; MX900 substitution declined
 ]);
 const approvedMapped = mapped.filter((mapping) => mapping.mappingStatus === 'approved');
 const actionableKeys = [...new Set(approvedMapped.flatMap((mapping) => [...mapping.primaryProductKeys, ...mapping.alternativeProductKeys]))].sort();
 
-test('65 published guides mapped; 62 approved non-HOLD (3 intentionally unmonetized)', () => {
-  assert.equal(articles.length, 65);
-  assert.equal(mapped.length, 65);
-  assert.equal(Object.keys(editorialMappingOverrides).length, 65);
+test('67 published guides mapped; 62 approved non-HOLD (5 intentionally unmonetized)', () => {
+  assert.equal(articles.length, 67);
+  assert.equal(mapped.length, 67);
+  assert.equal(Object.keys(editorialMappingOverrides).length, 67);
   assert.equal(approvedMapped.length, 62);
   for (const article of articles) {
     const mapping = mappings[article.slug];
@@ -138,12 +140,12 @@ test('card markup binds identity and safe affiliate attributes without commerce 
   assert.match(page, /part\.first && <AffiliateDisclosure compact \/>[\s\S]*<PlacementRenderer/);
 });
 
-test('catalog and final reports preserve all candidates and cover 65 guides', async () => {
+test('catalog and final reports preserve all candidates and cover 67 guides', async () => {
   assert.equal(Object.keys(registry).length, 49);
   assert.equal(Object.values(registry).filter((product) => product.specialLink).length, 25);
   const report = await readFile(join(root, 'reports/affiliate/final-affiliate-rollout-report.md'), 'utf8');
   const rows = parseCsvRecords(await readFile(join(root, 'reports/affiliate/final-affiliate-coverage.csv'), 'utf8'));
-  assert.equal(rows.length, 65);
+  assert.equal(rows.length, 67);
   for (const article of articles) {
     assert.ok(rows.find((row) => row.slug === article.slug), article.slug);
     assert.ok(report.includes(String.fromCharCode(96) + article.slug + String.fromCharCode(96)), article.slug);

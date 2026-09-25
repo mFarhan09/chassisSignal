@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 780" width="1280" height="780" role="img" aria-labelledby="t1 d1">
+<title id="t1">Five checks before buying an MK900 for a BMW</title>
+<desc id="d1">A five-gate sequence: choose the variant, read the function qualifications, locate the BMW-specific documentation, test the coding boundary, and match the transport protocol, ending in written VIN-level confirmation.</desc>
+<rect width="1280" height="780" fill="#101418"/>
+<text x="48" y="56" fill="#f4f6f8" font-family="Georgia,serif" font-size="30" font-weight="bold">Five checks, in order, before you buy</text>
+<text x="48" y="86" fill="#8b9aa8" font-family="Helvetica,Arial,sans-serif" font-size="15">Each gate is answerable from Autel's published material except the last, which requires a written reply.</text>
+<g font-family="Helvetica,Arial,sans-serif">
+<circle cx="84" cy="146" r="26" fill="#1d4e63"/><text x="84" y="154" fill="#9fdcf0" font-size="22" font-weight="bold" text-anchor="middle">1</text>
+<rect x="126" y="116" width="1106" height="60" rx="6" fill="#18202a" stroke="#2a3744"/>
+<text x="148" y="142" fill="#e6edf3" font-size="17" font-weight="bold">Variant</text>
+<text x="148" y="164" fill="#9fb0c0" font-size="14">Base MK900 is wired. MK900-BT and MK900-TS are Bluetooth. Battery analysis is absent from the base unit.</text>
+<line x1="84" y1="172" x2="84" y2="200" stroke="#2a3744" stroke-width="2"/>
+<circle cx="84" cy="226" r="26" fill="#1d4e63"/><text x="84" y="234" fill="#9fdcf0" font-size="22" font-weight="bold" text-anchor="middle">2</text>
+<rect x="126" y="196" width="1106" height="60" rx="6" fill="#18202a" stroke="#2a3744"/>
+<text x="148" y="222" fill="#e6edf3" font-size="17" font-weight="bold">Function qualifications</text>
+<text x="148" y="244" fill="#9fb0c0" font-size="14">Manual: "Available functions may vary by vehicle" and "Available tests vary by vehicle". The ceiling is not the guarantee.</text>
+<line x1="84" y1="252" x2="84" y2="280" stroke="#2a3744" stroke-width="2"/>
+<circle cx="84" cy="306" r="26" fill="#1d4e63"/><text x="84" y="314" fill="#9fdcf0" font-size="22" font-weight="bold" text-anchor="middle">3</text>
+<rect x="126" y="276" width="1106" height="60" rx="6" fill="#18202a" stroke="#2a3744"/>
+<text x="148" y="302" fill="#e6edf3" font-size="17" font-weight="bold">BMW-specific documentation</text>
+<text x="148" y="324" fill="#9fb0c0" font-size="14">One passage, in Oil Reset, naming BMW condition-based service resets. Useful, but not a coverage table.</text>
+<line x1="84" y1="332" x2="84" y2="360" stroke="#2a3744" stroke-width="2"/>
+<circle cx="84" cy="386" r="26" fill="#5c2b3a"/><text x="84" y="394" fill="#f0b6c4" font-size="22" font-weight="bold" text-anchor="middle">4</text>
+<rect x="126" y="356" width="1106" height="60" rx="6" fill="#241a20" stroke="#5c2b3a"/>
+<text x="148" y="382" fill="#f7dde4" font-size="17" font-weight="bold">Coding boundary</text>
+<text x="148" y="404" fill="#c79eaa" font-size="14">"coding" appears 0 times in the 89-page manual. No coding row in the feature table.</text>
+<line x1="84" y1="412" x2="84" y2="440" stroke="#2a3744" stroke-width="2"/>
+<circle cx="84" cy="466" r="26" fill="#1d4e63"/><text x="84" y="474" fill="#9fdcf0" font-size="22" font-weight="bold" text-anchor="middle">5</text>
+<rect x="126" y="436" width="1106" height="60" rx="6" fill="#18202a" stroke="#2a3744"/>
+<text x="148" y="462" fill="#e6edf3" font-size="17" font-weight="bold">Transport protocol</text>
+<text x="148" y="484" fill="#9fb0c0" font-size="14">DoIP and CAN FD listed on all three variants. Legacy K and L line and J1850 cover the 1996-era end of the range.</text>
+<line x1="84" y1="492" x2="84" y2="520" stroke="#2a3744" stroke-width="2"/>
+<rect x="48" y="524" width="1184" height="96" rx="6" fill="#16301f" stroke="#2f6b45" stroke-width="2"/>
+<text x="76" y="558" fill="#9be0b4" font-size="19" font-weight="bold">Gate: written VIN-level confirmation</text>
+<text x="76" y="586" fill="#8fc4a4" font-size="15">Name the VIN, the exact function in Autel's vocabulary, the exact module, and the exact variant.</text>
+<text x="76" y="608" fill="#8fc4a4" font-size="15">Ask for confirmation in writing, and close the update cost before purchase, not after.</text>
+<rect x="48" y="640" width="1184" height="106" rx="6" fill="#2a2418" stroke="#6b5a2f"/>
+<text x="76" y="672" fill="#f0d79b" font-size="17" font-weight="bold">If the reply is "compatible with European vehicles 1996 and newer"</text>
+<text x="76" y="700" fill="#c9b78c" font-size="15">That is not an answer. It was already true before you asked, and it does not predict whether your</text>
+<text x="76" y="724" fill="#c9b78c" font-size="15">specific module will respond to the specific function on the day you need it.</text>
+</g>
+</svg>

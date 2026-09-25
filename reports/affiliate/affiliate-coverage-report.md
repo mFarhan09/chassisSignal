@@ -2,12 +2,12 @@
 
 Generated deterministically from local Chassis Signal content and the supplied human-verified SiteStripe inventory.
 
-- Eligible guides: 65
+- Eligible guides: 67
 - Discovered product candidates: 49
 - Actionable linked products: 20
 - Verified actionable Special Links: 20
 - Renderable actionable images: 20
-- Monetized articles: 65
+- Monetized articles: 67
 - HOLD articles: 0
 - Verified supplied Special Links in registry: 25
 - Live mode active: no

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1160" width="640" height="1160" role="img" aria-labelledby="t2m d2m">
+<title id="t2m">Single-make licensing versus one multi-brand tool</title>
+<desc id="d2m">Stacked mobile view of two ownership paths and the conditions that select each one.</desc>
+<rect width="640" height="1160" fill="#0f1620"/>
+<text x="24" y="46" fill="#f2f6fa" font-family="Georgia,serif" font-size="23" font-weight="bold">Two ways to pay for coverage</text>
+<text x="24" y="72" fill="#8fa3b8" font-family="Helvetica,Arial,sans-serif" font-size="13">Prices verified 2026-09-24.</text>
+<rect x="24" y="92" width="592" height="44" rx="6" fill="#1f3a2e"/>
+<text x="44" y="121" fill="#7fe0a8" font-family="Helvetica,Arial,sans-serif" font-size="17" font-weight="bold">Path A: NT710, one make</text>
+<g font-family="Helvetica,Arial,sans-serif">
+<rect x="24" y="148" width="592" height="70" rx="6" fill="#16212e" stroke="#2c3e52"/>
+<text x="44" y="176" fill="#dce6f0" font-size="14" font-weight="bold">Buy unit with BMW software</text>
+<text x="44" y="202" fill="#7fe0a8" font-size="15" font-weight="bold">$259 sale / $349 regular</text>
+<rect x="24" y="228" width="592" height="70" rx="6" fill="#16212e" stroke="#2c3e52"/>
+<text x="44" y="256" fill="#dce6f0" font-size="14" font-weight="bold">Add each further make</text>
+<text x="44" y="282" fill="#f0c674" font-size="15" font-weight="bold">+$80 each, non-refundable</text>
+<rect x="24" y="308" width="592" height="48" rx="6" fill="#132b22"/>
+<text x="44" y="330" fill="#7fe0a8" font-size="13">Updates: "Lifetime Free Updates",</text>
+<text x="44" y="348" fill="#7fe0a8" font-size="13">no subscription or renewal fees</text>
+<rect x="24" y="378" width="592" height="44" rx="6" fill="#332a1c"/>
+<text x="44" y="407" fill="#f0c674" font-size="17" font-weight="bold">Path B: MK900, one tool</text>
+<rect x="24" y="434" width="592" height="78" rx="6" fill="#16212e" stroke="#2c3e52"/>
+<text x="44" y="462" fill="#dce6f0" font-size="14" font-weight="bold">Buy unit once</text>
+<text x="44" y="486" fill="#a9bccf" font-size="13">US, Asian and European vehicles,</text>
+<text x="44" y="506" fill="#a9bccf" font-size="13">1996 and newer, same purchase</text>
+<rect x="24" y="522" width="592" height="48" rx="6" fill="#33291c"/>
+<text x="44" y="544" fill="#e8bd6d" font-size="13">Updates: policy and cost not</text>
+<text x="44" y="562" fill="#e8bd6d" font-size="13">published on the product page</text>
+<rect x="24" y="594" width="592" height="150" rx="6" fill="#16212e" stroke="#2c3e52"/>
+<text x="44" y="624" fill="#7fe0a8" font-size="15" font-weight="bold">Choose Path A when</text>
+<text x="44" y="652" fill="#a9bccf" font-size="13">The BMW is the car you keep</text>
+<text x="44" y="676" fill="#a9bccf" font-size="13">You want coding and personalisation</text>
+<text x="44" y="700" fill="#a9bccf" font-size="13">You will not add many makes later</text>
+<text x="44" y="726" fill="#c98bdb" font-size="12">Confirm G-chassis coding in writing</text>
+<rect x="24" y="758" width="592" height="150" rx="6" fill="#16212e" stroke="#2c3e52"/>
+<text x="44" y="788" fill="#f0c674" font-size="15" font-weight="bold">Choose Path B when</text>
+<text x="44" y="816" fill="#a9bccf" font-size="13">You service more than one make</text>
+<text x="44" y="840" fill="#a9bccf" font-size="13">The BMW needs DoIP or CAN FD</text>
+<text x="44" y="864" fill="#a9bccf" font-size="13">Your work is diagnosis and resets</text>
+<text x="44" y="890" fill="#e8bd6d" font-size="12">Confirm the update policy and cost</text>
+<rect x="24" y="922" width="592" height="100" rx="6" fill="#2a1f2e" stroke="#c98bdb"/>
+<text x="44" y="952" fill="#f3e2fa" font-size="14" font-weight="bold">Need both breadth and coding?</text>
+<text x="44" y="980" fill="#c3aecd" font-size="13">Neither tool is documented to do</text>
+<text x="44" y="1002" fill="#c3aecd" font-size="13">both. Your product is not here.</text>
+</g>
+</svg>

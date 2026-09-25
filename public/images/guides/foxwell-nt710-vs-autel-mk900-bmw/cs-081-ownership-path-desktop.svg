@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-labelledby="t2 d2">
+<title id="t2">Single-make licensing versus one multi-brand tool</title>
+<desc id="d2">Two ownership paths. The Foxwell NT710 ships with one make and adds makes at 80 US dollars each with lifetime free updates. The Autel MK900 covers 1996 and newer US, Asian and European vehicles in one purchase with an update policy not published on the product page.</desc>
+<rect width="1280" height="720" fill="#0f1620"/>
+<text x="48" y="56" fill="#f2f6fa" font-family="Georgia,serif" font-size="29" font-weight="bold">Two ways to pay for coverage</text>
+<text x="48" y="85" fill="#8fa3b8" font-family="Helvetica,Arial,sans-serif" font-size="15">Prices as published and verified on 2026-09-24. Autel does not publish an MK900 price on its product page.</text>
+
+<rect x="48" y="112" width="560" height="52" rx="6" fill="#1f3a2e"/>
+<text x="72" y="145" fill="#7fe0a8" font-family="Helvetica,Arial,sans-serif" font-size="19" font-weight="bold">Path A: Foxwell NT710, one make at a time</text>
+<rect x="48" y="184" width="176" height="92" rx="6" fill="#16212e" stroke="#2c3e52"/>
+<text x="68" y="214" fill="#dce6f0" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold">Buy unit</text>
+<text x="68" y="238" fill="#a9bccf" font-family="Helvetica,Arial,sans-serif" font-size="14">with BMW software</text>
+<text x="68" y="262" fill="#7fe0a8" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold">$259 sale</text>
+<path d="M232 230 L262 230" stroke="#4a6076" stroke-width="2" marker-end="url(#a)"/>
+<rect x="270" y="184" width="176" height="92" rx="6" fill="#16212e" stroke="#2c3e52"/>
+<text x="290" y="214" fill="#dce6f0" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold">Add a make</text>
+<text x="290" y="238" fill="#a9bccf" font-family="Helvetica,Arial,sans-serif" font-size="14">extra software</text>
+<text x="290" y="262" fill="#f0c674" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold">+$80 each</text>
+<path d="M454 230 L484 230" stroke="#4a6076" stroke-width="2" marker-end="url(#a)"/>
+<rect x="492" y="184" width="176" height="92" rx="6" fill="#2a1f22" stroke="#7a4a52"/>
+<text x="512" y="214" fill="#f0d4d4" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold">Locked to serial</text>
+<text x="512" y="238" fill="#c39b9b" font-family="Helvetica,Arial,sans-serif" font-size="13">No refund once</text>
+<text x="512" y="258" fill="#c39b9b" font-family="Helvetica,Arial,sans-serif" font-size="13">authorised</text>
+<rect x="48" y="292" width="620" height="44" rx="6" fill="#132b22"/>
+<text x="68" y="320" fill="#7fe0a8" font-family="Helvetica,Arial,sans-serif" font-size="15">Updates: "Lifetime Free Updates", no subscription or renewal fees</text>
+
+<rect x="700" y="112" width="532" height="52" rx="6" fill="#332a1c"/>
+<text x="724" y="145" fill="#f0c674" font-family="Helvetica,Arial,sans-serif" font-size="19" font-weight="bold">Path B: Autel MK900, one tool</text>
+<rect x="700" y="184" width="532" height="92" rx="6" fill="#16212e" stroke="#2c3e52"/>
+<text x="724" y="216" fill="#dce6f0" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold">Buy unit once</text>
+<text x="724" y="244" fill="#a9bccf" font-family="Helvetica,Arial,sans-serif" font-size="14">US, Asian and European vehicles, 1996 and newer,</text>
+<text x="724" y="266" fill="#a9bccf" font-family="Helvetica,Arial,sans-serif" font-size="14">covered by the same purchase</text>
+<rect x="700" y="292" width="532" height="44" rx="6" fill="#33291c"/>
+<text x="724" y="320" fill="#e8bd6d" font-family="Helvetica,Arial,sans-serif" font-size="15">Updates: policy and cost not published on the product page</text>
+
+<rect x="48" y="376" width="1184" height="2" fill="#243242"/>
+<text x="48" y="418" fill="#f2f6fa" font-family="Georgia,serif" font-size="22" font-weight="bold">Which path fits</text>
+<rect x="48" y="440" width="580" height="150" rx="6" fill="#16212e" stroke="#2c3e52"/>
+<text x="72" y="472" fill="#7fe0a8" font-family="Helvetica,Arial,sans-serif" font-size="16" font-weight="bold">Choose Path A when</text>
+<text x="72" y="502" fill="#a9bccf" font-family="Helvetica,Arial,sans-serif" font-size="14">The BMW is the car you keep</text>
+<text x="72" y="528" fill="#a9bccf" font-family="Helvetica,Arial,sans-serif" font-size="14">You want coding and personalisation</text>
+<text x="72" y="554" fill="#a9bccf" font-family="Helvetica,Arial,sans-serif" font-size="14">You will not add many makes later</text>
+<text x="72" y="578" fill="#c98bdb" font-family="Helvetica,Arial,sans-serif" font-size="13">Confirm G-chassis coding in writing first</text>
+<rect x="652" y="440" width="580" height="150" rx="6" fill="#16212e" stroke="#2c3e52"/>
+<text x="676" y="472" fill="#f0c674" font-family="Helvetica,Arial,sans-serif" font-size="16" font-weight="bold">Choose Path B when</text>
+<text x="676" y="502" fill="#a9bccf" font-family="Helvetica,Arial,sans-serif" font-size="14">You service more than one make</text>
+<text x="676" y="528" fill="#a9bccf" font-family="Helvetica,Arial,sans-serif" font-size="14">The BMW is later and needs DoIP or CAN FD</text>
+<text x="676" y="554" fill="#a9bccf" font-family="Helvetica,Arial,sans-serif" font-size="14">Your work is diagnosis, tests and resets</text>
+<text x="676" y="578" fill="#e8bd6d" font-family="Helvetica,Arial,sans-serif" font-size="13">Confirm the update policy and cost first</text>
+<rect x="48" y="610" width="1184" height="62" rx="6" fill="#2a1f2e" stroke="#c98bdb"/>
+<text x="72" y="638" fill="#f3e2fa" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold">Needing both wide coverage and BMW coding?</text>
+<text x="72" y="662" fill="#c3aecd" font-family="Helvetica,Arial,sans-serif" font-size="14">Neither tool is documented to deliver both. Your product is not in this comparison.</text>
+<defs><marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#4a6076"/></marker></defs>
+</svg>

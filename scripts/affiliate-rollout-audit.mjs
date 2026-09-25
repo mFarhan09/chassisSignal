@@ -30,10 +30,10 @@ const rejectedAsins = new Set(['B0CDGH4WFH', 'B0GX17T6Z2']);
 const allowedImageStatuses = new Set(['verified', 'manufacturer_attributed_editorial', 'site_owned']);
 // Intentionally unmonetized guides (no defensible product, or links verified but product images pending).
 // They publish normally but render no affiliate unit; every monetized-guide invariant below is unchanged.
-const UNMONETIZED_GUIDES = new Set(['bmw-parking-sensor-diagnostic-tool', 'icarsoft-bmm-v3-vs-foxwell-nt530', 'obdlink-cx-vs-unicarscan-ucsi-2100']);
+const UNMONETIZED_GUIDES = new Set(['bmw-parking-sensor-diagnostic-tool', 'icarsoft-bmm-v3-vs-foxwell-nt530', 'obdlink-cx-vs-unicarscan-ucsi-2100', 'foxwell-nt710-vs-autel-mk900-bmw', 'autel-mk900-bmw-compatibility']);
 
-if (articles.length !== 65) fail('INVENTORY_COUNT', `Expected 65 published guides, found ${articles.length}.`);
-if (mapped.length !== 65 || Object.keys(editorialMappingOverrides).length !== 65) fail('MAPPING_COUNT', 'Exactly 65 reviewed mappings are required.');
+if (articles.length !== 67) fail('INVENTORY_COUNT', `Expected 67 published guides, found ${articles.length}.`);
+if (mapped.length !== 67 || Object.keys(editorialMappingOverrides).length !== 67) fail('MAPPING_COUNT', 'Exactly 67 reviewed mappings are required.');
 if (candidateRows.length !== 49) fail('CANDIDATE_COUNT', `Expected 49 preserved/discovered candidates, found ${candidateRows.length}.`);
 if (actionableKeys.length !== 20) fail('ACTIONABLE_COUNT', `Expected 20 mapped linked products, found ${actionableKeys.length}.`);
 if (mapped.some((mapping) => mapping.editorialDecision === 'HOLD')) fail('HOLD_REMAINS', 'No article-level HOLD may remain.');

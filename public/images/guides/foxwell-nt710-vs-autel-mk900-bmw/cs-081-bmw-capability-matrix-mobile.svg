@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1080" width="640" height="1080" role="img" aria-labelledby="t1m d1m">
+<title id="t1m">BMW capability: what each maker documents</title>
+<desc id="d1m">Stacked mobile comparison of BMW tasks against Foxwell NT710 and Autel MK900 documentation.</desc>
+<rect width="640" height="1080" fill="#0f1620"/>
+<text x="24" y="46" fill="#f2f6fa" font-family="Georgia,serif" font-size="24" font-weight="bold">BMW capability</text>
+<text x="24" y="72" fill="#8fa3b8" font-family="Helvetica,Arial,sans-serif" font-size="13">As published by each maker. Verified 2026-09-24.</text>
+<g font-family="Helvetica,Arial,sans-serif" font-size="14">
+<rect x="24" y="92" width="592" height="94" fill="#141d29"/>
+<text x="40" y="118" fill="#dce6f0" font-weight="bold">Maker-specific fault codes</text>
+<text x="40" y="146" fill="#7fe0a8">NT710: Documented</text>
+<text x="40" y="170" fill="#f0c674">MK900: Documented</text>
+<rect x="24" y="194" width="592" height="94" fill="#101923"/>
+<text x="40" y="220" fill="#dce6f0" font-weight="bold">Bidirectional control</text>
+<text x="40" y="248" fill="#7fe0a8">NT710: Documented</text>
+<text x="40" y="272" fill="#f0c674">MK900: Active Test</text>
+<rect x="24" y="296" width="592" height="94" fill="#141d29"/>
+<text x="40" y="322" fill="#dce6f0" font-weight="bold">Service routines</text>
+<text x="40" y="350" fill="#7fe0a8">NT710: 30+ stated</text>
+<text x="40" y="374" fill="#f0c674">MK900: Documented</text>
+<rect x="24" y="398" width="592" height="120" fill="#2a1f2e" stroke="#c98bdb" stroke-width="2"/>
+<text x="40" y="424" fill="#f3e2fa" font-weight="bold">Coding and personalisation</text>
+<text x="40" y="446" fill="#b79ac4" font-size="12">The deciding row</text>
+<text x="40" y="474" fill="#7fe0a8" font-weight="bold">NT710: Claimed</text>
+<text x="40" y="498" fill="#e2a0a0" font-weight="bold">MK900: Not claimed</text>
+<rect x="24" y="526" width="592" height="80" fill="#101923"/>
+<text x="40" y="552" fill="#dce6f0" font-weight="bold">DoIP transport</text>
+<text x="40" y="580" fill="#8fa3b8">NT710: Not stated</text>
+<text x="330" y="580" fill="#f0c674">MK900: Yes</text>
+<rect x="24" y="614" width="592" height="80" fill="#141d29"/>
+<text x="40" y="640" fill="#dce6f0" font-weight="bold">CAN FD transport</text>
+<text x="40" y="668" fill="#8fa3b8">NT710: Not stated</text>
+<text x="330" y="668" fill="#f0c674">MK900: Yes</text>
+<rect x="24" y="702" width="592" height="94" fill="#101923"/>
+<text x="40" y="728" fill="#dce6f0" font-weight="bold">Reach beyond BMW</text>
+<text x="40" y="756" fill="#e2a0a0">NT710: One make</text>
+<text x="40" y="780" fill="#f0c674">MK900: 1996+ multi-region</text>
+</g>
+<rect x="24" y="812" width="592" height="230" fill="#16212e" stroke="#2c3e52"/>
+<text x="42" y="842" fill="#f2f6fa" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold">Read the blanks correctly</text>
+<text x="42" y="874" fill="#a9bccf" font-family="Helvetica,Arial,sans-serif" font-size="13">"Not stated" means the maker does not</text>
+<text x="42" y="896" fill="#a9bccf" font-family="Helvetica,Arial,sans-serif" font-size="13">publish it, not that the tool cannot do it.</text>
+<text x="42" y="930" fill="#a9bccf" font-family="Helvetica,Arial,sans-serif" font-size="13">Autel: "Available functions may vary</text>
+<text x="42" y="952" fill="#a9bccf" font-family="Helvetica,Arial,sans-serif" font-size="13">by vehicle."</text>
+<text x="42" y="986" fill="#a9bccf" font-family="Helvetica,Arial,sans-serif" font-size="13">Foxwell: "Coverage varies by vehicle</text>
+<text x="42" y="1008" fill="#a9bccf" font-family="Helvetica,Arial,sans-serif" font-size="13">condition." Confirm against your VIN.</text>
+</svg>

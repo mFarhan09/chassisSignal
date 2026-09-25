@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1180" width="640" height="1180" role="img" aria-labelledby="t1m d1m">
+<title id="t1m">Five checks before buying an MK900 for a BMW</title>
+<desc id="d1m">Stacked mobile sequence of five verification gates ending in written VIN-level confirmation.</desc>
+<rect width="640" height="1180" fill="#101418"/>
+<text x="24" y="46" fill="#f4f6f8" font-family="Georgia,serif" font-size="23" font-weight="bold">Five checks, in order</text>
+<text x="24" y="72" fill="#8b9aa8" font-family="Helvetica,Arial,sans-serif" font-size="13">Answerable from Autel's material, except the last.</text>
+<g font-family="Helvetica,Arial,sans-serif">
+<rect x="24" y="92" width="592" height="116" rx="6" fill="#18202a" stroke="#2a3744"/>
+<circle cx="56" cy="124" r="20" fill="#1d4e63"/><text x="56" y="131" fill="#9fdcf0" font-size="17" font-weight="bold" text-anchor="middle">1</text>
+<text x="90" y="130" fill="#e6edf3" font-size="16" font-weight="bold">Variant</text>
+<text x="44" y="162" fill="#9fb0c0" font-size="13">Base MK900 is wired. BT and TS are</text>
+<text x="44" y="182" fill="#9fb0c0" font-size="13">Bluetooth. Base lacks battery analysis.</text>
+<rect x="24" y="220" width="592" height="116" rx="6" fill="#18202a" stroke="#2a3744"/>
+<circle cx="56" cy="252" r="20" fill="#1d4e63"/><text x="56" y="259" fill="#9fdcf0" font-size="17" font-weight="bold" text-anchor="middle">2</text>
+<text x="90" y="258" fill="#e6edf3" font-size="16" font-weight="bold">Qualifications</text>
+<text x="44" y="290" fill="#9fb0c0" font-size="13">"Available functions may vary by</text>
+<text x="44" y="310" fill="#9fb0c0" font-size="13">vehicle." The ceiling is not a promise.</text>
+<rect x="24" y="348" width="592" height="116" rx="6" fill="#18202a" stroke="#2a3744"/>
+<circle cx="56" cy="380" r="20" fill="#1d4e63"/><text x="56" y="387" fill="#9fdcf0" font-size="17" font-weight="bold" text-anchor="middle">3</text>
+<text x="90" y="386" fill="#e6edf3" font-size="16" font-weight="bold">BMW passage</text>
+<text x="44" y="418" fill="#9fb0c0" font-size="13">One mention, in Oil Reset, naming</text>
+<text x="44" y="438" fill="#9fb0c0" font-size="13">BMW service resets. Not a table.</text>
+<rect x="24" y="476" width="592" height="116" rx="6" fill="#241a20" stroke="#5c2b3a"/>
+<circle cx="56" cy="508" r="20" fill="#5c2b3a"/><text x="56" y="515" fill="#f0b6c4" font-size="17" font-weight="bold" text-anchor="middle">4</text>
+<text x="90" y="514" fill="#f7dde4" font-size="16" font-weight="bold">Coding boundary</text>
+<text x="44" y="546" fill="#c79eaa" font-size="13">"coding" appears 0 times in the</text>
+<text x="44" y="566" fill="#c79eaa" font-size="13">89-page manual v2.3.</text>
+<rect x="24" y="604" width="592" height="116" rx="6" fill="#18202a" stroke="#2a3744"/>
+<circle cx="56" cy="636" r="20" fill="#1d4e63"/><text x="56" y="643" fill="#9fdcf0" font-size="17" font-weight="bold" text-anchor="middle">5</text>
+<text x="90" y="642" fill="#e6edf3" font-size="16" font-weight="bold">Transport</text>
+<text x="44" y="674" fill="#9fb0c0" font-size="13">DoIP and CAN FD on all variants.</text>
+<text x="44" y="694" fill="#9fb0c0" font-size="13">Legacy protocols cover 1996-era cars.</text>
+<rect x="24" y="732" width="592" height="140" rx="6" fill="#16301f" stroke="#2f6b45" stroke-width="2"/>
+<text x="44" y="764" fill="#9be0b4" font-size="16" font-weight="bold">Gate: written confirmation</text>
+<text x="44" y="794" fill="#8fc4a4" font-size="13">Name the VIN, the exact function, the</text>
+<text x="44" y="814" fill="#8fc4a4" font-size="13">exact module, the exact variant.</text>
+<text x="44" y="842" fill="#8fc4a4" font-size="13">Close the update cost before buying.</text>
+<rect x="24" y="890" width="592" height="150" rx="6" fill="#2a2418" stroke="#6b5a2f"/>
+<text x="44" y="922" fill="#f0d79b" font-size="15" font-weight="bold">If the reply just repeats</text>
+<text x="44" y="944" fill="#f0d79b" font-size="15">"European vehicles 1996+"</text>
+<text x="44" y="976" fill="#c9b78c" font-size="13">That is not an answer. It was already</text>
+<text x="44" y="998" fill="#c9b78c" font-size="13">true before you asked, and predicts</text>
+<text x="44" y="1020" fill="#c9b78c" font-size="13">nothing about your module.</text>
+</g>
+</svg>
