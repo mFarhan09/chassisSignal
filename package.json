@@ -16,7 +16,7 @@
     "affiliate:plan": "node --experimental-strip-types scripts/affiliate-placement-plan.mjs",
     "affiliate:diagnose": "node --experimental-strip-types scripts/affiliate-monetization-diagnosis.mjs",
     "affiliate:placements": "node --experimental-strip-types scripts/affiliate-placement-report.mjs",
-    "test:affiliate": "pnpm affiliate:inventory && node --test --experimental-strip-types tests/affiliate-rollout.test.mjs",
+    "test:affiliate": "pnpm affiliate:inventory && node --test --experimental-strip-types tests/affiliate-rollout.test.mjs tests/affiliate.test.mjs",
     "test": "pnpm test:affiliate",
     "typecheck": "astro check",
     "deploy": "wrangler deploy"
