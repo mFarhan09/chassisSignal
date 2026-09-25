@@ -64,6 +64,10 @@ export interface ArticleProductMapping {
   reviewedAt: string | null;
   affiliateRelationship: AffiliateRelationship;
   relationshipLabel: string;
+  /** Product-relevance QA taxonomy (see `relationship-classification.ts`). */
+  relationshipType: string;
+  /** Short QA rationale for the relationship type; not rendered to readers. */
+  relationshipRationale: string;
   officialEvidenceUrl: string;
   reviewedBy: string | null;
 }

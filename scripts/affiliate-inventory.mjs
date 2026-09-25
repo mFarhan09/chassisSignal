@@ -7,6 +7,7 @@ import { editorialMappingOverrides } from '../src/affiliate/editorial-mapping-ov
 import { affiliateConfig } from '../src/affiliate/config.ts';
 import { articlePlacementOverrides } from '../src/affiliate/article-placement-overrides.ts';
 import { productVerificationOverrides } from '../src/affiliate/product-verification-overrides.ts';
+import { relationshipClassifications } from '../src/affiliate/relationship-classification.ts';
 
 const root = process.cwd();
 const reportDirectory = join(root, 'reports', 'affiliate');
@@ -30,7 +31,7 @@ function retainHumanValue(value, fallback, placeholders = []) {
 const articles = await scanEligibleGuides();
 const existingMappings = await readJson(mappingsPath);
 const detectedMappings = buildArticleMappings(articles);
-let mappings = buildArticleMappings(articles, existingMappings, editorialMappingOverrides, articlePlacementOverrides);
+let mappings = buildArticleMappings(articles, existingMappings, editorialMappingOverrides, articlePlacementOverrides, relationshipClassifications);
 const mappedProductKeys = [...new Set(Object.values(mappings).flatMap((mapping) => [
   ...mapping.primaryProductKeys,
   ...mapping.alternativeProductKeys
@@ -90,11 +91,11 @@ await writeFile(imageQueuePath, csv([
   })
 ]));
 await writeFile(join(reportDirectory, 'article-product-review.csv'), csv([
-  ['slug', 'title', 'editorialDecision', 'detectedProductKeys', 'detectedAlternativeProductKeys', 'detectedMonetizationMode', 'productKeys', 'alternativeProductKeys', 'monetizationMode', 'affiliateRelationship', 'relationshipLabel', 'placementType', 'placementLocation', 'rationale', 'officialEvidenceUrl', 'mappingStatus', 'approvalStatus', 'reviewedAt', 'reviewedBy'],
+  ['slug', 'title', 'editorialDecision', 'detectedProductKeys', 'detectedAlternativeProductKeys', 'detectedMonetizationMode', 'productKeys', 'alternativeProductKeys', 'monetizationMode', 'affiliateRelationship', 'relationshipLabel', 'relationshipType', 'relationshipRationale', 'placementType', 'placementLocation', 'rationale', 'officialEvidenceUrl', 'mappingStatus', 'approvalStatus', 'reviewedAt', 'reviewedBy'],
   ...articles.map((article) => {
     const mapping = mappings[article.slug];
     const detected = detectedMappings[article.slug];
-    return [article.slug, article.title, mapping.editorialDecision, detected.primaryProductKeys.join('|'), detected.alternativeProductKeys.join('|'), detected.monetizationMode, mapping.primaryProductKeys.join('|'), mapping.alternativeProductKeys.join('|'), mapping.monetizationMode, mapping.affiliateRelationship, mapping.relationshipLabel, mapping.placementType, mapping.placementLocation, mapping.recommendationRationale, mapping.officialEvidenceUrl, mapping.mappingStatus, mapping.approvalStatus, mapping.reviewedAt, mapping.reviewedBy];
+    return [article.slug, article.title, mapping.editorialDecision, detected.primaryProductKeys.join('|'), detected.alternativeProductKeys.join('|'), detected.monetizationMode, mapping.primaryProductKeys.join('|'), mapping.alternativeProductKeys.join('|'), mapping.monetizationMode, mapping.affiliateRelationship, mapping.relationshipLabel, mapping.relationshipType, mapping.relationshipRationale, mapping.placementType, mapping.placementLocation, mapping.recommendationRationale, mapping.officialEvidenceUrl, mapping.mappingStatus, mapping.approvalStatus, mapping.reviewedAt, mapping.reviewedBy];
   })
 ]));
 await writeFile(join(reportDirectory, 'affiliate-coverage-report.md'), `# Affiliate coverage report\n\nGenerated deterministically from local Chassis Signal content and the supplied human-verified SiteStripe inventory.\n\n- Eligible guides: ${articles.length}\n- Discovered product candidates: ${products.length}\n- Actionable linked products: ${actionableProductKeys.length}\n- Verified actionable Special Links: ${verifiedActionableLinks}\n- Renderable actionable images: ${renderableActionableImages}\n- Monetized articles: ${monetizableMappings.length}\n- HOLD articles: ${holdMappings.length}\n- Verified supplied Special Links in registry: ${products.filter((product) => product.specialLink).length}\n- Live mode active: ${affiliateConfig.mode === 'live' ? 'yes' : 'no'}\n\n## HOLD articles\n\n${holdMappings.length ? holdMappings.map((mapping) => `- \`${mapping.articleSlug}\``).join('\n') : '- None'}\n\n## Live image-rights policy\n\n- Exact images obtained from official manufacturer pages or manufacturer-hosted media CDNs render with truthful manufacturer attribution and status \`manufacturer_attributed_editorial\`; this status does not claim permission was granted.\n- Where an exact first-party image could not be obtained, a distinct Chassis Signal-owned brand-neutral category illustration renders with status \`site_owned\` and is labelled as an illustration.\n- Amazon-hosted images are prohibited.\n- Every product remains subject to exact vehicle, market, software and function verification.\n`);

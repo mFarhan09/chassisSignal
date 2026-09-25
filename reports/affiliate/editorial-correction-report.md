@@ -4,15 +4,15 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
 
 - Eligible guides: 67
 - APPROVE: 9
-- CORRECTED: 53
+- CORRECTED: 58
 - HOLD: 0
 - Material before/after mapping changes: 62
 
 ## Changed mappings
 
-- `autel-mk900-bmw-compatibility` (null)
+- `autel-mk900-bmw-compatibility` (CORRECTED)
   - Before: primary=[autel-mk900]; alternative=[autel-mk900-bt]; mode=recommended_equipment
-  - After: primary=[]; alternative=[]; mode=no_defensible_product
+  - After: primary=[autel-mk900-bt]; alternative=[]; mode=recommended_equipment
 - `autel-scanner-for-bmw` (CORRECTED)
   - Before: primary=[foxwell-nt530]; alternative=[foxwell-nt530-plus, autel-mk808s, autel-mk900, autel-mx900]; mode=recommended_equipment
   - After: primary=[autel-mx808s, autel-mk900-bt]; alternative=[]; mode=comparison
@@ -94,9 +94,9 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
 - `bmw-no-communication-with-obd-scanner` (CORRECTED)
   - Before: primary=[obdlink-ex]; alternative=[]; mode=exact_product
   - After: primary=[fluke-88v]; alternative=[]; mode=recommended_equipment
-- `bmw-parking-sensor-diagnostic-tool` (null)
+- `bmw-parking-sensor-diagnostic-tool` (CORRECTED)
   - Before: primary=[]; alternative=[]; mode=related_buyer_guide
-  - After: primary=[]; alternative=[]; mode=no_defensible_product
+  - After: primary=[autel-mk900-bt]; alternative=[]; mode=recommended_equipment
 - `bmw-ride-height-calibration-scan-tool` (CORRECTED)
   - Before: primary=[]; alternative=[]; mode=related_buyer_guide
   - After: primary=[autel-maxisys-ultra]; alternative=[]; mode=recommended_equipment
@@ -142,12 +142,12 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
 - `foxwell-nt530-vs-nt710` (CORRECTED)
   - Before: primary=[foxwell-nt530, icarsoft-bmm-v3]; alternative=[foxwell-nt710, autophix-7910, autel-mk900, creator-c310-plus]; mode=comparison
   - After: primary=[autophix-7910p-plus]; alternative=[]; mode=recommended_equipment
-- `foxwell-nt710-vs-autel-mk900-bmw` (null)
+- `foxwell-nt710-vs-autel-mk900-bmw` (CORRECTED)
   - Before: primary=[foxwell-nt710, autel-mk900]; alternative=[]; mode=comparison
-  - After: primary=[]; alternative=[]; mode=no_defensible_product
-- `icarsoft-bmm-v3-vs-foxwell-nt530` (null)
+  - After: primary=[foxwell-nt530]; alternative=[autel-mk900-bt]; mode=recommended_equipment
+- `icarsoft-bmm-v3-vs-foxwell-nt530` (CORRECTED)
   - Before: primary=[foxwell-nt530, icarsoft-bmm-v3]; alternative=[]; mode=comparison
-  - After: primary=[]; alternative=[]; mode=no_defensible_product
+  - After: primary=[foxwell-nt530]; alternative=[]; mode=recommended_equipment
 - `ista-valvetronic-relearn` (CORRECTED)
   - Before: primary=[]; alternative=[]; mode=related_buyer_guide
   - After: primary=[schumacher-inc100]; alternative=[]; mode=recommended_equipment
@@ -172,9 +172,9 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
 - `obdlink-cx-vs-mx-plus` (CORRECTED)
   - Before: primary=[obdlink-cx, obdlink-mx-plus]; alternative=[obdlink-ex, vlinker-bm-plus, vlinker-mc-plus]; mode=comparison
   - After: primary=[obdlink-cx, obdlink-mx-plus]; alternative=[]; mode=comparison
-- `obdlink-cx-vs-unicarscan-ucsi-2100` (null)
+- `obdlink-cx-vs-unicarscan-ucsi-2100` (CORRECTED)
   - Before: primary=[obdlink-cx, unicarscan-ucsi-2100]; alternative=[bmw-enet-cable]; mode=comparison
-  - After: primary=[]; alternative=[]; mode=no_defensible_product
+  - After: primary=[obdlink-cx]; alternative=[]; mode=recommended_equipment
 - `obdlink-cx-vs-vlinker-mc-plus` (CORRECTED)
   - Before: primary=[obdlink-cx, vlinker-bm-plus]; alternative=[vlinker-mc-plus]; mode=comparison
   - After: primary=[obdlink-cx, vlinker-mc-plus]; alternative=[]; mode=comparison

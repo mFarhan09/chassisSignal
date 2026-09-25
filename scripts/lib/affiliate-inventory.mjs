@@ -89,7 +89,7 @@ export function buildProductRegistry(articles, existingRegistry = {}, additional
   }));
 }
 
-export function buildArticleMappings(articles, existingMappings = {}, editorialOverrides = {}, placementOverrides = {}) {
+export function buildArticleMappings(articles, existingMappings = {}, editorialOverrides = {}, placementOverrides = {}, relationshipClassifications = {}) {
   const bySlug = new Map(articles.map((article) => [article.slug, article]));
   return Object.fromEntries(articles.map((article) => {
     const keys = article.productKeys;
@@ -132,6 +132,7 @@ export function buildArticleMappings(articles, existingMappings = {}, editorialO
         ? 'Compatible interface'
         : monetizationMode === 'comparison' ? 'Products discussed in this guide' : 'Exact product discussed';
     const placementOverride = placementOverrides[article.slug];
+    const classification = relationshipClassifications[article.slug];
     const approved = editorialOverride?.editorialDecision && editorialOverride.editorialDecision !== 'HOLD';
     return [article.slug, {
       articleSlug: article.slug,
@@ -145,6 +146,8 @@ export function buildArticleMappings(articles, existingMappings = {}, editorialO
       recommendationRationale,
       affiliateRelationship: placementOverride?.affiliateRelationship ?? defaultRelationship,
       relationshipLabel: placementOverride?.relationshipLabel ?? defaultLabel,
+      relationshipType: classification?.relationshipType ?? '',
+      relationshipRationale: classification?.relationshipRationale ?? '',
       officialEvidenceUrl: '',
       relatedBuyerGuideSlug,
       mappingStatus: approved ? 'approved' : editorialOverride ? 'reviewed' : (previous.mappingStatus ?? 'candidate'),

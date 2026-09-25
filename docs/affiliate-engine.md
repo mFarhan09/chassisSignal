@@ -1,5 +1,12 @@
 # Chassis Signal affiliate engine — Phase 1
 
+> **Portfolio policy (2026-09-25): every published guide must be monetized.** No published
+> guide may render zero affiliate links, and there is no exemption path. See
+> [`docs/monetization-policy.md`](./monetization-policy.md) for the placement contract
+> (top / middle-if-long / end), the machine-enforced long-article rule, the product-selection
+> hierarchy and truth boundary, and the Gate 2 readiness checklist. That document governs;
+> the workflow below describes how links and images get verified in the first place.
+
 The engine is intentionally locked to `draft` mode. Production builds emit no Amazon anchors until both a product and its article mapping have been human-approved and `AFFILIATE_MODE=live` is explicitly supplied at build time.
 
 ## Human link-verification workflow
@@ -11,7 +18,7 @@ The engine is intentionally locked to `draft` mode. Production builds emit no Am
 5. Paste the exact, unchanged HTTPS Amazon.com link into `exactSpecialLink`; enter the exact 10-character ASIN and `sitestripe` or `associates_central` as the source.
 6. Check that the URL contains exactly one `tag=chassissignal-20` and no other tracking tag.
 7. Record an ISO timestamp and the human reviewer's name. Mark the registry record `verified` only after the product identity, destination and article relevance all match.
-8. Review `article-product-review.csv`; approve only defensible product/article pairs, recording reviewer and timestamp.
+8. Review `article-product-review.csv`; approve only defensible product/article pairs, recording reviewer and timestamp. Every published guide must end this step with at least one approved product, a `relationshipType` and a written rationale — if the exact product has no verified listing, map the strongest verified related product and label it for what it actually is.
 9. Review `image-rights-queue.csv`. Leave `imageMode` as `none` unless permission evidence is retained and approved. A normal manufacturer product page is not rights evidence.
 10. Import the approved values into the typed JSON registries, rerun `pnpm affiliate:audit` in draft mode, and review all diffs before Phase 2.
 

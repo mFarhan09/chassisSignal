@@ -1,0 +1,4257 @@
+{
+  "summary": {
+    "generatedAt": "2026-09-25",
+    "beforeRevision": "6f3ee42d7385d4debb55b8750bd0c188693bf582",
+    "TOTAL_PUBLISHED_GUIDES": 67,
+    "CURRENTLY_MONETIZED_BEFORE": 62,
+    "UNMONETIZED_BEFORE": 5,
+    "UNMONETIZED_SLUGS_BEFORE": [
+      "autel-mk900-bmw-compatibility",
+      "bmw-parking-sensor-diagnostic-tool",
+      "foxwell-nt710-vs-autel-mk900-bmw",
+      "icarsoft-bmm-v3-vs-foxwell-nt530",
+      "obdlink-cx-vs-unicarscan-ucsi-2100"
+    ],
+    "PLACEMENT_WRONG_BEFORE": 0,
+    "TOO_FEW_PLACEMENTS_BEFORE": 45,
+    "WEAK_PRODUCT_MATCH_BEFORE": 7,
+    "MONETIZED_CORRECTLY_BEFORE": 10,
+    "LONG_ARTICLES": 65,
+    "SHORT_ARTICLES": 2,
+    "TOTAL_AFFILIATE_PLACEMENTS_BEFORE": 139,
+    "GUIDES_MONETIZED_AFTER": 67,
+    "PUBLISHED_GUIDES_WITH_ZERO_LINKS_AFTER": 0,
+    "UNMONETIZED_GUIDES_EXCEPTION_EXISTS": "NO",
+    "TOTAL_PRODUCT_MAPPINGS_AFTER": 21,
+    "TOTAL_AFFILIATE_PLACEMENTS_AFTER": 199,
+    "TOTAL_AFFILIATE_UNITS_AFTER": 212,
+    "GUIDES_WITH_TOP_PLACEMENT": 67,
+    "GUIDES_WITH_END_PLACEMENT": 67,
+    "LONG_GUIDES_WITH_MIDDLE_PLACEMENT": 65,
+    "PAGES_WITH_2_PLACEMENTS_AFTER": 2,
+    "PAGES_WITH_3_PLACEMENTS_AFTER": 65,
+    "RELATIONSHIP_TYPE_BREAKDOWN": {
+      "EXACT_VARIANT": 3,
+      "RELATED_DIAGNOSTIC_TOOL": 33,
+      "EXACT_PRODUCT": 18,
+      "SUPPORTING_EQUIPMENT": 8,
+      "RELATED_BUYER_GUIDE_PRODUCT": 1,
+      "SAME_BRAND_ALTERNATIVE": 2,
+      "PRODUCT_FAMILY_ALTERNATIVE": 2
+    }
+  },
+  "rows": [
+    {
+      "before": {
+        "slug": "autel-mk900-bmw-compatibility",
+        "title": "Autel MK900 BMW Compatibility: What Autel Documents, and What You Must Confirm",
+        "word_count": 1773,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "reviewed/pending",
+        "current_primary_products": [],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 0,
+        "current_first_placement_location": null,
+        "current_middle_placement_location": null,
+        "current_final_placement_location": null,
+        "current_product_keys": [],
+        "current_asins": [],
+        "current_tracking_ids": [],
+        "current_disclosure_count": 0,
+        "current_monetization_status": "UNMONETIZED",
+        "relationship_type": "EXACT_VARIANT",
+        "relationship_rationale": "Article subject is the Autel MaxiCOM MK900; the verified product is the MK900-BT, a variant Autel itself lists in the MK900 comparison table the article reproduces. Labelled as the wireless MK900-family option, never as the base wired MK900."
+      },
+      "after": {
+        "slug": "autel-mk900-bmw-compatibility",
+        "title": "Autel MK900 BMW Compatibility: What Autel Documents, and What You Must Confirm",
+        "word_count": 1773,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-mk900-bt"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Check 2: what \"all systems\" actually promises\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Check 3: the one place Autel names BMW\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"The short version\" (final_cta)",
+        "current_product_keys": [
+          "autel-mk900-bt"
+        ],
+        "current_asins": [
+          "B07PGYY8SS"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_VARIANT",
+        "relationship_rationale": "Article subject is the Autel MaxiCOM MK900; the verified product is the MK900-BT, a variant Autel itself lists in the MK900 comparison table the article reproduces. Labelled as the wireless MK900-family option, never as the base wired MK900."
+      }
+    },
+    {
+      "before": {
+        "slug": "autel-scanner-for-bmw",
+        "title": "Which Autel Scanner for BMW? Build a Model-and-Function Matrix",
+        "word_count": 1802,
+        "h2_count": 10,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-mx808s",
+          "autel-mk900-bt"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #3 — \"Exact comparison: MK808S and MK900\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #6 — \"When a different Autel variant makes sense\" (compact_cta)",
+        "current_final_placement_location": "after H2 #8 — \"Final selection\" (final_cta)",
+        "current_product_keys": [
+          "autel-mx808s",
+          "autel-mk900-bt"
+        ],
+        "current_asins": [
+          "B08ML7T7KZ",
+          "B07PGYY8SS"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_VARIANT",
+        "relationship_rationale": "The guide shortlists the Autel 808 and 900 tiers; MX808S and MK900-BT are the accurately named available variants of those tiers."
+      },
+      "after": {
+        "slug": "autel-scanner-for-bmw",
+        "title": "Which Autel Scanner for BMW? Build a Model-and-Function Matrix",
+        "word_count": 1802,
+        "h2_count": 10,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-mx808s",
+          "autel-mk900-bt"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #3 — \"Exact comparison: MK808S and MK900\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #4 — \"BMW coverage must resolve below the brand\" (compact_cta)",
+        "current_final_placement_location": "after H2 #8 — \"Final selection\" (final_cta)",
+        "current_product_keys": [
+          "autel-mx808s",
+          "autel-mk900-bt"
+        ],
+        "current_asins": [
+          "B08ML7T7KZ",
+          "B07PGYY8SS"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_VARIANT",
+        "relationship_rationale": "The guide shortlists the Autel 808 and 900 tiers; MX808S and MK900-BT are the accurately named available variants of those tiers."
+      }
+    },
+    {
+      "before": {
+        "slug": "autophix-7910-vs-foxwell-nt530",
+        "title": "AUTOPHIX 7910 vs Foxwell NT530: Which BMW Scanner Fits?",
+        "word_count": 856,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autophix-7910p-plus"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #2 — \"Foxwell NT530 strengths\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #5 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "autophix-7910p-plus"
+        ],
+        "current_asins": [
+          "B0DY7RJ1YP"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "EXACT_VARIANT",
+        "relationship_rationale": "The AUTOPHIX 7910 is unavailable; the 7910P+ is its named successor variant in the same family and is labelled as such, not as the 7910."
+      },
+      "after": {
+        "slug": "autophix-7910-vs-foxwell-nt530",
+        "title": "AUTOPHIX 7910 vs Foxwell NT530: Which BMW Scanner Fits?",
+        "word_count": 856,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autophix-7910p-plus"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"AUTOPHIX 7910 strengths\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Foxwell NT530 strengths\" (compact_cta)",
+        "current_final_placement_location": "after H2 #5 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "autophix-7910p-plus"
+        ],
+        "current_asins": [
+          "B0DY7RJ1YP"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_VARIANT",
+        "relationship_rationale": "The AUTOPHIX 7910 is unavailable; the 7910P+ is its named successor variant in the same family and is labelled as such, not as the 7910."
+      }
+    },
+    {
+      "before": {
+        "slug": "bimmercode-pricing",
+        "title": "BimmerCode Pricing: Full Version, Platform, and Adapter Cost",
+        "word_count": 830,
+        "h2_count": 6,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [
+          "obdlink-mx-plus"
+        ],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #2 — \"Check compatibility before price\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #4 — \"Safety boundary\" (compact_cta)",
+        "current_final_placement_location": "after H2 #5 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx",
+          "obdlink-mx-plus"
+        ],
+        "current_asins": [
+          "B08NFLL3NT",
+          "B07JFRFJG6"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "The subject is app pricing, not hardware; CX and MX+ are the hardware paths the article itself prices, documented by OBDLink for BimmerCode."
+      },
+      "after": {
+        "slug": "bimmercode-pricing",
+        "title": "BimmerCode Pricing: Full Version, Platform, and Adapter Cost",
+        "word_count": 830,
+        "h2_count": 6,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [
+          "obdlink-mx-plus"
+        ],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"The ownership-cost formula\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Check compatibility before price\" (compact_cta)",
+        "current_final_placement_location": "after H2 #5 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx",
+          "obdlink-mx-plus"
+        ],
+        "current_asins": [
+          "B08NFLL3NT",
+          "B07JFRFJG6"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "The subject is app pricing, not hardware; CX and MX+ are the hardware paths the article itself prices, documented by OBDLink for BimmerCode."
+      }
+    },
+    {
+      "before": {
+        "slug": "bimmercode-vs-carly",
+        "title": "BimmerCode vs Carly: Which BMW/MINI Tool Fits Your Use Case?",
+        "word_count": 3510,
+        "h2_count": 14,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #6 — \"Adapter compatibility: OBD fit is not enough\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #13 — \"Final decision checklist\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "OBDLink documents CX for BimmerCode; the card makes no Carly-compatibility claim."
+      },
+      "after": {
+        "slug": "bimmercode-vs-carly",
+        "title": "BimmerCode vs Carly: Which BMW/MINI Tool Fits Your Use Case?",
+        "word_count": 3510,
+        "h2_count": 14,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #3 — \"BimmerCode vs Carly product scope\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #6 — \"Adapter compatibility: OBD fit is not enough\" (compact_cta)",
+        "current_final_placement_location": "after H2 #13 — \"Final decision checklist\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "OBDLink documents CX for BimmerCode; the card makes no Carly-compatibility claim."
+      }
+    },
+    {
+      "before": {
+        "slug": "bimmercode-vs-foxwell-nt530",
+        "title": "BimmerCode vs Foxwell NT530: Coding App or Diagnostic Handheld?",
+        "word_count": 700,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #3 — \"The complete NT530 working chain\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #7 — \"Task and safety boundary\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX represents the documented BimmerCode side only; no unverified Foxwell listing is substituted."
+      },
+      "after": {
+        "slug": "bimmercode-vs-foxwell-nt530",
+        "title": "BimmerCode vs Foxwell NT530: Coding App or Diagnostic Handheld?",
+        "word_count": 700,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Write the job before choosing the tool\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #3 — \"The complete NT530 working chain\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"Task and safety boundary\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX represents the documented BimmerCode side only; no unverified Foxwell listing is substituted."
+      }
+    },
+    {
+      "before": {
+        "slug": "bimmercode-vs-protool",
+        "title": "BimmerCode vs ProTool: Coding App or BMW Toolset?",
+        "word_count": 1213,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #3 — \"Platform can settle the decision early\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #8 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX is documented for BimmerCode and is shown only for that side, not as ProTool hardware."
+      },
+      "after": {
+        "slug": "bimmercode-vs-protool",
+        "title": "BimmerCode vs ProTool: Coding App or BMW Toolset?",
+        "word_count": 1213,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #3 — \"Platform can settle the decision early\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #4 — \"Cost: price the required scope, not the biggest bundle\" (compact_cta)",
+        "current_final_placement_location": "after H2 #8 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX is documented for BimmerCode and is shown only for that side, not as ProTool hardware."
+      }
+    },
+    {
+      "before": {
+        "slug": "bimmerlink-adapter",
+        "title": "BimmerLink Adapter Guide: Choose by Car, Phone, and Function",
+        "word_count": 1420,
+        "h2_count": 10,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [
+          "obdlink-mx-plus"
+        ],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #3 — \"Third gate: iOS and Android do not accept every path equally\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #6 — \"OBDLink CX, MX+, and other listed choices\" (compact_cta)",
+        "current_final_placement_location": "after H2 #9 — \"Safety and ownership\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx",
+          "obdlink-mx-plus"
+        ],
+        "current_asins": [
+          "B08NFLL3NT",
+          "B07JFRFJG6"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "The guide is about which adapter to run with BimmerLink; OBDLink documents CX for BimmerLink, with MX+ as the single broader-network alternative."
+      },
+      "after": {
+        "slug": "bimmerlink-adapter",
+        "title": "BimmerLink Adapter Guide: Choose by Car, Phone, and Function",
+        "word_count": 1420,
+        "h2_count": 10,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [
+          "obdlink-mx-plus"
+        ],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"First gate: is the car in BimmerLink's supported scope?\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #3 — \"Third gate: iOS and Android do not accept every path equally\" (compact_cta)",
+        "current_final_placement_location": "after H2 #9 — \"Safety and ownership\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx",
+          "obdlink-mx-plus"
+        ],
+        "current_asins": [
+          "B08NFLL3NT",
+          "B07JFRFJG6"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "The guide is about which adapter to run with BimmerLink; OBDLink documents CX for BimmerLink, with MX+ as the single broader-network alternative."
+      }
+    },
+    {
+      "before": {
+        "slug": "bimmerlink-pricing",
+        "title": "BimmerLink Pricing: App, Add-On and Adapter Costs",
+        "word_count": 843,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #3 — \"Where the adapter changes the budget\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #7 — \"Pricing and compatibility note\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "The subject is the BimmerLink cost chain; CX is the documented adapter inside that chain."
+      },
+      "after": {
+        "slug": "bimmerlink-pricing",
+        "title": "BimmerLink Pricing: App, Add-On and Adapter Costs",
+        "word_count": 843,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"The price answer, with the date attached\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #3 — \"Where the adapter changes the budget\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"Pricing and compatibility note\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "The subject is the BimmerLink cost chain; CX is the documented adapter inside that chain."
+      }
+    },
+    {
+      "before": {
+        "slug": "bimmerlink-vs-bimmer-tool",
+        "title": "BimmerLink vs bimmer-tool: Choose by Platform, Engine, and Service Job",
+        "word_count": 1034,
+        "h2_count": 6,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #2 — \"Compare the diagnostics you will actually run\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #5 — \"Which app for which owner?\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX is the named supported BimmerLink adapter; the apps themselves are not monetized and no bimmer-tool hardware is implied."
+      },
+      "after": {
+        "slug": "bimmerlink-vs-bimmer-tool",
+        "title": "BimmerLink vs bimmer-tool: Choose by Platform, Engine, and Service Job",
+        "word_count": 1034,
+        "h2_count": 6,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Match the platform and adapter before anything else\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Compare the diagnostics you will actually run\" (compact_cta)",
+        "current_final_placement_location": "after H2 #5 — \"Which app for which owner?\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX is the named supported BimmerLink adapter; the apps themselves are not monetized and no bimmer-tool hardware is implied."
+      }
+    },
+    {
+      "before": {
+        "slug": "bimmerlink-vs-carly",
+        "title": "BimmerLink vs Carly: Which BMW Tool Fits Your Actual Job?",
+        "word_count": 1415,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #3 — \"Capability comparison by job\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #7 — \"Which app to choose\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "OBDLink documents CX for BimmerLink; no Carly-compatibility claim is made."
+      },
+      "after": {
+        "slug": "bimmerlink-vs-carly",
+        "title": "BimmerLink vs Carly: Which BMW Tool Fits Your Actual Job?",
+        "word_count": 1415,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"What BimmerLink is built around\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #3 — \"Capability comparison by job\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"Which app to choose\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "OBDLink documents CX for BimmerLink; no Carly-compatibility claim is made."
+      }
+    },
+    {
+      "before": {
+        "slug": "bimmerlink-vs-foxwell-nt530",
+        "title": "BimmerLink vs Foxwell NT530: Phone App or BMW Handheld?",
+        "word_count": 841,
+        "h2_count": 10,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #4 — \"Cost belongs to the whole toolchain\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #8 — \"Coverage and test boundary\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX represents the documented BimmerLink route; the unavailable Foxwell side is not mismatched."
+      },
+      "after": {
+        "slug": "bimmerlink-vs-foxwell-nt530",
+        "title": "BimmerLink vs Foxwell NT530: Phone App or BMW Handheld?",
+        "word_count": 841,
+        "h2_count": 10,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #2 — \"Two purchases with different boundaries\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #3 — \"Capability matrix without category blur\" (compact_cta)",
+        "current_final_placement_location": "after H2 #8 — \"Coverage and test boundary\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX represents the documented BimmerLink route; the unavailable Foxwell side is not mismatched."
+      }
+    },
+    {
+      "before": {
+        "slug": "bimmerlink-vs-protool",
+        "title": "BimmerLink vs ProTool: Focused Diagnostics or Full Toolset?",
+        "word_count": 838,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #4 — \"Price the needed license boundary\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #8 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX is shown only as the documented BimmerLink interface, with no ProTool claim."
+      },
+      "after": {
+        "slug": "bimmerlink-vs-protool",
+        "title": "BimmerLink vs ProTool: Focused Diagnostics or Full Toolset?",
+        "word_count": 838,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Scope comparison\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Platform is a hard gate\" (compact_cta)",
+        "current_final_placement_location": "after H2 #8 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX is shown only as the documented BimmerLink interface, with no ProTool claim."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-battery-drain-diagnostic-tool",
+        "title": "BMW Battery Drain Diagnostic Tool: Build the Evidence Before Pulling Fuses",
+        "word_count": 1555,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "fluke-88v"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #2 — \"Sleep is a state, not a stopwatch trick\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #6 — \"The decision rule\" (final_cta)",
+        "current_product_keys": [
+          "fluke-88v"
+        ],
+        "current_asins": [
+          "B005T5G38E"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "A parasitic-drain measurement is a meter task; Fluke documents the exact automotive meter and the drain workflow the article follows."
+      },
+      "after": {
+        "slug": "bmw-battery-drain-diagnostic-tool",
+        "title": "BMW Battery Drain Diagnostic Tool: Build the Evidence Before Pulling Fuses",
+        "word_count": 1555,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "fluke-88v"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"What BMW scan data contributes\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Sleep is a state, not a stopwatch trick\" (compact_cta)",
+        "current_final_placement_location": "after H2 #6 — \"The decision rule\" (final_cta)",
+        "current_product_keys": [
+          "fluke-88v"
+        ],
+        "current_asins": [
+          "B005T5G38E"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "A parasitic-drain measurement is a meter task; Fluke documents the exact automotive meter and the drain workflow the article follows."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-battery-registration-scanner",
+        "title": "BMW Battery Registration Scanner: Choose the Right Tool Before You Buy",
+        "word_count": 1789,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #2 — \"1. BimmerLink plus a supported adapter\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #8 — \"Final decision\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "The article develops the BimmerLink registration route and OBDLink documents CX as compatible equipment for it."
+      },
+      "after": {
+        "slug": "bmw-battery-registration-scanner",
+        "title": "BMW Battery Registration Scanner: Choose the Right Tool Before You Buy",
+        "word_count": 1789,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #2 — \"1. BimmerLink plus a supported adapter\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #3 — \"2. Carly Premium plus the Universal Scanner\" (compact_cta)",
+        "current_final_placement_location": "after H2 #8 — \"Final decision\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "The article develops the BimmerLink registration route and OBDLink documents CX as compatible equipment for it."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-bidirectional-scan-tool-functions",
+        "title": "BMW Bidirectional Scan Tools: Buy the Function, Not the Label",
+        "word_count": 1757,
+        "h2_count": 11,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-mk900-bt"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #4 — \"Current candidates to shortlist\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #9 — \"Purchase rule\" (final_cta)",
+        "current_product_keys": [
+          "autel-mk900-bt"
+        ],
+        "current_asins": [
+          "B07PGYY8SS"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "MK900-BT is an accurately named 900-tier bidirectional platform; exact BMW functions remain gated on Autel coverage checks."
+      },
+      "after": {
+        "slug": "bmw-bidirectional-scan-tool-functions",
+        "title": "BMW Bidirectional Scan Tools: Buy the Function, Not the Label",
+        "word_count": 1757,
+        "h2_count": 11,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-mk900-bt"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #2 — \"A responsible active-test loop\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #3 — \"Platform examples and their limits\" (compact_cta)",
+        "current_final_placement_location": "after H2 #9 — \"Purchase rule\" (final_cta)",
+        "current_product_keys": [
+          "autel-mk900-bt"
+        ],
+        "current_asins": [
+          "B07PGYY8SS"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "MK900-BT is an accurately named 900-tier bidirectional platform; exact BMW functions remain gated on Autel coverage checks."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-brake-bleed-scan-tool",
+        "title": "BMW Brake Bleed Scan Tool: Hydraulic Bleeding vs ABS Service Functions",
+        "word_count": 1542,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-md909-pro"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #3 — \"Do not confuse access, reset, and actuation\" (product_card)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #7 — \"The correct purchase test\" (final_cta)",
+        "current_product_keys": [
+          "autel-md909-pro"
+        ],
+        "current_asins": [
+          "B0FMRPF7W1"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Autel names Brake Bleeding as a supported MD909 Pro service function, so the mapped product is the tool the article is about."
+      },
+      "after": {
+        "slug": "bmw-brake-bleed-scan-tool",
+        "title": "BMW Brake Bleed Scan Tool: Hydraulic Bleeding vs ABS Service Functions",
+        "word_count": 1542,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-md909-pro"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Let the VIN-specific instruction control the decision\" (product_card)",
+        "current_middle_placement_location": "after H2 #2 — \"Prove five dimensions of coverage\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"The correct purchase test\" (final_cta)",
+        "current_product_keys": [
+          "autel-md909-pro"
+        ],
+        "current_asins": [
+          "B0FMRPF7W1"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Autel names Brake Bleeding as a supported MD909 Pro service function, so the mapped product is the tool the article is about."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-code-reader-vs-scan-tool",
+        "title": "BMW Code Reader vs Scan Tool: What Each Level Can Actually Do",
+        "word_count": 1729,
+        "h2_count": 11,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx",
+          "autel-ds808s-bt"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #4 — \"Reading a code is different from using live data\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #8 — \"Capability-by-job buyer scenarios\" (compact_cta)",
+        "current_final_placement_location": "after H2 #10 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx",
+          "autel-ds808s-bt"
+        ],
+        "current_asins": [
+          "B08NFLL3NT",
+          "B0FCSB14KN"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX and DS808S-BT are representatives of the two architectures the article compares, not two specific named products."
+      },
+      "after": {
+        "slug": "bmw-code-reader-vs-scan-tool",
+        "title": "BMW Code Reader vs Scan Tool: What Each Level Can Actually Do",
+        "word_count": 1729,
+        "h2_count": 11,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx",
+          "autel-ds808s-bt"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #2 — \"What “BMW-aware” must establish\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #4 — \"Reading a code is different from using live data\" (compact_cta)",
+        "current_final_placement_location": "after H2 #10 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx",
+          "autel-ds808s-bt"
+        ],
+        "current_asins": [
+          "B08NFLL3NT",
+          "B0FCSB14KN"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX and DS808S-BT are representatives of the two architectures the article compares, not two specific named products."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-coding-vs-programming",
+        "title": "BMW Coding vs Programming: What Changes, Which Tool Fits, and When to Stop",
+        "word_count": 1134,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "schumacher-inc100"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #1 — \"Classify the requested outcome before choosing software\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #5 — \"The decision in one line\" (final_cta)",
+        "current_product_keys": [
+          "schumacher-inc100"
+        ],
+        "current_asins": [
+          "B0756NVGHV"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "SUPPORTING_EQUIPMENT",
+        "relationship_rationale": "BMW requires external power support for programming; INC100 supports the workflow without pretending to be a coding interface."
+      },
+      "after": {
+        "slug": "bmw-coding-vs-programming",
+        "title": "BMW Coding vs Programming: What Changes, Which Tool Fits, and When to Stop",
+        "word_count": 1134,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "schumacher-inc100"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Classify the requested outcome before choosing software\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"What common tool classes actually own\" (compact_cta)",
+        "current_final_placement_location": "after H2 #5 — \"The decision in one line\" (final_cta)",
+        "current_product_keys": [
+          "schumacher-inc100"
+        ],
+        "current_asins": [
+          "B0756NVGHV"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "SUPPORTING_EQUIPMENT",
+        "relationship_rationale": "BMW requires external power support for programming; INC100 supports the workflow without pretending to be a coding interface."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-diagnostic-software-windows",
+        "title": "BMW Diagnostic Software for Windows 10 and 11: Choose the Stack, Not a Download Bundle",
+        "word_count": 1628,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "schumacher-inc100"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #2 — \"Where legacy and engineering names fit\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #7 — \"The practical shortlist\" (final_cta)",
+        "current_product_keys": [
+          "schumacher-inc100"
+        ],
+        "current_asins": [
+          "B0756NVGHV"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "SUPPORTING_EQUIPMENT",
+        "relationship_rationale": "The article covers programming infrastructure; INC100 is documented for ECU reprogramming power, not as diagnostic software."
+      },
+      "after": {
+        "slug": "bmw-diagnostic-software-windows",
+        "title": "BMW Diagnostic Software for Windows 10 and 11: Choose the Stack, Not a Download Bundle",
+        "word_count": 1628,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "schumacher-inc100"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"The supported ISTA route\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Where legacy and engineering names fit\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"The practical shortlist\" (final_cta)",
+        "current_product_keys": [
+          "schumacher-inc100"
+        ],
+        "current_asins": [
+          "B0756NVGHV"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "SUPPORTING_EQUIPMENT",
+        "relationship_rationale": "The article covers programming infrastructure; INC100 is documented for ECU reprogramming power, not as diagnostic software."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-dpf-regeneration-scan-tool",
+        "title": "BMW DPF Regeneration Scan Tool: Verify Preconditions Before the Function",
+        "word_count": 1291,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #3 — \"Check blocking faults before you think about regeneration\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #7 — \"Choose the tool and know when to escalate\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX is the documented BimmerLink adapter for the DPF service-regeneration request workflow; capability stays gated on exact BMW support."
+      },
+      "after": {
+        "slug": "bmw-dpf-regeneration-scan-tool",
+        "title": "BMW DPF Regeneration Scan Tool: Verify Preconditions Before the Function",
+        "word_count": 1291,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Prove supported BMW models and engines\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Read the live values that explain the filter\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"Choose the tool and know when to escalate\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX is the documented BimmerLink adapter for the DPF service-regeneration request workflow; capability stays gated on exact BMW support."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-electric-parking-brake-service-mode-scanner",
+        "title": "BMW Electric Parking Brake Service Mode Scanner: Identify the Brake System First",
+        "word_count": 1411,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-md909-pro"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #3 — \"Preserve evidence before changing state\" (product_card)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #8 — \"The selection verdict\" (final_cta)",
+        "current_product_keys": [
+          "autel-md909-pro"
+        ],
+        "current_asins": [
+          "B0FMRPF7W1"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Autel documents EPB and parking-brake pad relearn on the exact MD909 Pro."
+      },
+      "after": {
+        "slug": "bmw-electric-parking-brake-service-mode-scanner",
+        "title": "BMW Electric Parking Brake Service Mode Scanner: Identify the Brake System First",
+        "word_count": 1411,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-md909-pro"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #2 — \"Four locks must open before the scanner command\" (product_card)",
+        "current_middle_placement_location": "after H2 #3 — \"Preserve evidence before changing state\" (compact_cta)",
+        "current_final_placement_location": "after H2 #8 — \"The selection verdict\" (final_cta)",
+        "current_product_keys": [
+          "autel-md909-pro"
+        ],
+        "current_asins": [
+          "B0FMRPF7W1"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Autel documents EPB and parking-brake pad relearn on the exact MD909 Pro."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-electronic-water-pump-diagnostic-tool",
+        "title": "BMW Electronic Water-Pump Diagnostic Tool: Test the Command Path Before Replacing Parts",
+        "word_count": 1234,
+        "h2_count": 6,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "innova-5610-bundle"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #2 — \"Treat activation as one controlled observation\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #5 — \"A purchase test for the diagnostic tool\" (final_cta)",
+        "current_product_keys": [
+          "innova-5610-bundle"
+        ],
+        "current_asins": [
+          "B0F64263Y8"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "Innova documents coolant bleeding among 5610 functions; the verified listing is the 5610 plus 3380 bundle and is named as the bundle."
+      },
+      "after": {
+        "slug": "bmw-electronic-water-pump-diagnostic-tool",
+        "title": "BMW Electronic Water-Pump Diagnostic Tool: Test the Command Path Before Replacing Parts",
+        "word_count": 1234,
+        "h2_count": 6,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "innova-5610-bundle"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Build evidence before requesting an activation\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Treat activation as one controlled observation\" (compact_cta)",
+        "current_final_placement_location": "after H2 #5 — \"A purchase test for the diagnostic tool\" (final_cta)",
+        "current_product_keys": [
+          "innova-5610-bundle"
+        ],
+        "current_asins": [
+          "B0F64263Y8"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "Innova documents coolant bleeding among 5610 functions; the verified listing is the 5610 plus 3380 bundle and is named as the bundle."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-enet-vs-bluetooth-obd",
+        "title": "BMW ENET vs Bluetooth OBD: Choose the Right Connection Path",
+        "word_count": 1466,
+        "h2_count": 11,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #4 — \"App choice can reverse the answer\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #10 — \"The practical answer\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "OBDLink CX is the exact Bluetooth side of the comparison and is never described as ENET hardware."
+      },
+      "after": {
+        "slug": "bmw-enet-vs-bluetooth-obd",
+        "title": "BMW ENET vs Bluetooth OBD: Choose the Right Connection Path",
+        "word_count": 1466,
+        "h2_count": 11,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"What ENET means in this decision\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"What Bluetooth OBD means\" (compact_cta)",
+        "current_final_placement_location": "after H2 #10 — \"The practical answer\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "OBDLink CX is the exact Bluetooth side of the comparison and is never described as ENET hardware."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-f-series-vs-g-series-obd-adapter",
+        "title": "BMW F Series vs G Series OBD Adapter: Choose by App and Interface",
+        "word_count": 549,
+        "h2_count": 4,
+        "is_long": false,
+        "required_placements": 2,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #1 — \"F/G compatibility matrix\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #3 — \"Safety and bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "BimmerCode lists the exact CX across the supported BMW series the article splits on."
+      },
+      "after": {
+        "slug": "bmw-f-series-vs-g-series-obd-adapter",
+        "title": "BMW F Series vs G Series OBD Adapter: Choose by App and Interface",
+        "word_count": 549,
+        "h2_count": 4,
+        "is_long": false,
+        "required_placements": 2,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #1 — \"F/G compatibility matrix\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #3 — \"Safety and bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "BimmerCode lists the exact CX across the supported BMW series the article splits on."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-frm-module-diagnostic-tool",
+        "title": "BMW FRM Module Diagnostic Tool: Separate a Fault From a Repair Job",
+        "word_count": 1323,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "fluke-88v"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #2 — \"Separate supply and network evidence from module blame\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #6 — \"The diagnostic-tool purchase rule\" (final_cta)",
+        "current_product_keys": [
+          "fluke-88v"
+        ],
+        "current_asins": [
+          "B005T5G38E"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "SUPPORTING_EQUIPMENT",
+        "relationship_rationale": "The Fluke kit supports the power, ground and circuit evidence the article requires without claiming FRM module access."
+      },
+      "after": {
+        "slug": "bmw-frm-module-diagnostic-tool",
+        "title": "BMW FRM Module Diagnostic Tool: Separate a Fault From a Repair Job",
+        "word_count": 1323,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "fluke-88v"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Use the whole-vehicle scan as topology evidence\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Separate supply and network evidence from module blame\" (compact_cta)",
+        "current_final_placement_location": "after H2 #6 — \"The diagnostic-tool purchase rule\" (final_cta)",
+        "current_product_keys": [
+          "fluke-88v"
+        ],
+        "current_asins": [
+          "B005T5G38E"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "SUPPORTING_EQUIPMENT",
+        "relationship_rationale": "The Fluke kit supports the power, ground and circuit evidence the article requires without claiming FRM module access."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-icom-vs-enet",
+        "title": "BMW ICOM vs ENET: Workshop Interface or App-Specific Ethernet Cable?",
+        "word_count": 1526,
+        "h2_count": 10,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "schumacher-inc100"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #2 — \"When ICOM is the defensible choice\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #9 — \"The verdict\" (final_cta)",
+        "current_product_keys": [
+          "schumacher-inc100"
+        ],
+        "current_asins": [
+          "B0756NVGHV"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "SUPPORTING_EQUIPMENT",
+        "relationship_rationale": "INC100 supports stable power for programming-risk workflows and is not presented as ICOM or ENET hardware."
+      },
+      "after": {
+        "slug": "bmw-icom-vs-enet",
+        "title": "BMW ICOM vs ENET: Workshop Interface or App-Specific Ethernet Cable?",
+        "word_count": 1526,
+        "h2_count": 10,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "schumacher-inc100"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #2 — \"When ICOM is the defensible choice\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #3 — \"When ENET can be the cleaner path\" (compact_cta)",
+        "current_final_placement_location": "after H2 #9 — \"The verdict\" (final_cta)",
+        "current_product_keys": [
+          "schumacher-inc100"
+        ],
+        "current_asins": [
+          "B0756NVGHV"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "SUPPORTING_EQUIPMENT",
+        "relationship_rationale": "INC100 supports stable power for programming-risk workflows and is not presented as ICOM or ENET hardware."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-icom-vs-k-dcan",
+        "title": "BMW ICOM vs K+DCAN: Choose by Vehicle, Software and Risk",
+        "word_count": 775,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "schumacher-inc100"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #2 — \"What ICOM changes\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #5 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "schumacher-inc100"
+        ],
+        "current_asins": [
+          "B0756NVGHV"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "SUPPORTING_EQUIPMENT",
+        "relationship_rationale": "INC100 is programming support equipment, not ICOM or K+DCAN hardware."
+      },
+      "after": {
+        "slug": "bmw-icom-vs-k-dcan",
+        "title": "BMW ICOM vs K+DCAN: Choose by Vehicle, Software and Risk",
+        "word_count": 775,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "schumacher-inc100"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"What K+DCAN is good at\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"What ICOM changes\" (compact_cta)",
+        "current_final_placement_location": "after H2 #5 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "schumacher-inc100"
+        ],
+        "current_asins": [
+          "B0756NVGHV"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "SUPPORTING_EQUIPMENT",
+        "relationship_rationale": "INC100 is programming support equipment, not ICOM or K+DCAN hardware."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-injector-coding-tool",
+        "title": "BMW Injector Coding Tool: Does Your Engine Need Code Entry?",
+        "word_count": 1576,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-md909-pro"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #2 — \"Keep injector identity tied to the physical cylinder\" (product_card)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #6 — \"The decision\" (final_cta)",
+        "current_product_keys": [
+          "autel-md909-pro"
+        ],
+        "current_asins": [
+          "B0FMRPF7W1"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Autel documents an Injector service function on the exact MD909 Pro."
+      },
+      "after": {
+        "slug": "bmw-injector-coding-tool",
+        "title": "BMW Injector Coding Tool: Does Your Engine Need Code Entry?",
+        "word_count": 1576,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-md909-pro"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Decide whether code entry is part of this repair\" (product_card)",
+        "current_middle_placement_location": "after H2 #2 — \"Keep injector identity tied to the physical cylinder\" (compact_cta)",
+        "current_final_placement_location": "after H2 #6 — \"The decision\" (final_cta)",
+        "current_product_keys": [
+          "autel-md909-pro"
+        ],
+        "current_asins": [
+          "B0FMRPF7W1"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Autel documents an Injector service function on the exact MD909 Pro."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-no-communication-with-obd-scanner",
+        "title": "BMW No Communication With an OBD Scanner: Find the Broken Layer",
+        "word_count": 1558,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "fluke-88v"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #3 — \"Layer 3: gateway and protocol scope\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #6 — \"When replacement becomes a rational hypothesis\" (final_cta)",
+        "current_product_keys": [
+          "fluke-88v"
+        ],
+        "current_asins": [
+          "B005T5G38E"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "The diagnostic sequence is voltage, continuity and resistance evidence; Fluke documents those exact measurements on the 88V."
+      },
+      "after": {
+        "slug": "bmw-no-communication-with-obd-scanner",
+        "title": "BMW No Communication With an OBD Scanner: Find the Broken Layer",
+        "word_count": 1558,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "fluke-88v"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Layer 1: connector and tool power\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #3 — \"Layer 3: gateway and protocol scope\" (compact_cta)",
+        "current_final_placement_location": "after H2 #6 — \"When replacement becomes a rational hypothesis\" (final_cta)",
+        "current_product_keys": [
+          "fluke-88v"
+        ],
+        "current_asins": [
+          "B005T5G38E"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "The diagnostic sequence is voltage, continuity and resistance evidence; Fluke documents those exact measurements on the 88V."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-parking-sensor-diagnostic-tool",
+        "title": "BMW Parking Sensor Diagnostic Tools: PDC Codes, Live Sensor Data, and Module Output Tests",
+        "word_count": 1166,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "reviewed/pending",
+        "current_primary_products": [],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 0,
+        "current_first_placement_location": null,
+        "current_middle_placement_location": null,
+        "current_final_placement_location": null,
+        "current_product_keys": [],
+        "current_asins": [],
+        "current_tracking_ids": [],
+        "current_disclosure_count": 0,
+        "current_monetization_status": "UNMONETIZED",
+        "relationship_type": "RELATED_BUYER_GUIDE_PRODUCT",
+        "relationship_rationale": "No PDC/PMA-specific product exists in the registry. The MK900-BT is the verified bidirectional all-system platform already mapped to the related bmw-bidirectional-scan-tool-functions guide, and module output tests are exactly that capability. No BMW PDC sensor-level claim is transferred."
+      },
+      "after": {
+        "slug": "bmw-parking-sensor-diagnostic-tool",
+        "title": "BMW Parking Sensor Diagnostic Tools: PDC Codes, Live Sensor Data, and Module Output Tests",
+        "word_count": 1166,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-mk900-bt"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Reach the module — the step generic readers miss\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Read the fault code for the exact sensor\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"Choose the tool and verify before replacing\" (final_cta)",
+        "current_product_keys": [
+          "autel-mk900-bt"
+        ],
+        "current_asins": [
+          "B07PGYY8SS"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_BUYER_GUIDE_PRODUCT",
+        "relationship_rationale": "No PDC/PMA-specific product exists in the registry. The MK900-BT is the verified bidirectional all-system platform already mapped to the related bmw-bidirectional-scan-tool-functions guide, and module output tests are exactly that capability. No BMW PDC sensor-level claim is transferred."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-ride-height-calibration-scan-tool",
+        "title": "BMW Ride-Height Calibration Scan Tool: Match the Suspension Before the Menu",
+        "word_count": 1444,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-maxisys-ultra"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #3 — \"The controlled measurement environment\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #8 — \"The purchase rule\" (final_cta)",
+        "current_product_keys": [
+          "autel-maxisys-ultra"
+        ],
+        "current_asins": [
+          "B0936PQ6Y8"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "Autel documents suspension calibration on the standard MaxiSYS Ultra; exact BMW coverage remains mandatory."
+      },
+      "after": {
+        "slug": "bmw-ride-height-calibration-scan-tool",
+        "title": "BMW Ride-Height Calibration Scan Tool: Match the Suspension Before the Menu",
+        "word_count": 1444,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-maxisys-ultra"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #2 — \"When calibration is appropriate\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #3 — \"The controlled measurement environment\" (compact_cta)",
+        "current_final_placement_location": "after H2 #8 — \"The purchase rule\" (final_cta)",
+        "current_product_keys": [
+          "autel-maxisys-ultra"
+        ],
+        "current_asins": [
+          "B0936PQ6Y8"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "Autel documents suspension calibration on the standard MaxiSYS Ultra; exact BMW coverage remains mandatory."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-scanner-abs-airbag-codes",
+        "title": "How to Choose a BMW Scanner for ABS and Airbag Codes",
+        "word_count": 1655,
+        "h2_count": 11,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-mx900"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #4 — \"Three candidates worth shortlisting\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #9 — \"Final buying rule\" (final_cta)",
+        "current_product_keys": [
+          "autel-mx900"
+        ],
+        "current_asins": [
+          "B09JFXPYKL"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "The article body identifies the MX900 as the all-system route it recommends; the card is the product discussed."
+      },
+      "after": {
+        "slug": "bmw-scanner-abs-airbag-codes",
+        "title": "How to Choose a BMW Scanner for ABS and Airbag Codes",
+        "word_count": 1655,
+        "h2_count": 11,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-mx900"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #2 — \"Five levels of access that listings often collapse\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #4 — \"Three candidates worth shortlisting\" (compact_cta)",
+        "current_final_placement_location": "after H2 #9 — \"Final buying rule\" (final_cta)",
+        "current_product_keys": [
+          "autel-mx900"
+        ],
+        "current_asins": [
+          "B09JFXPYKL"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "The article body identifies the MX900 as the all-system route it recommends; the card is the product discussed."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-scanner-for-used-car-inspection",
+        "title": "BMW Scanner for a Used-Car Inspection: What to Capture Before You Buy",
+        "word_count": 1576,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-ds808s-bt"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #3 — \"Compare status, timing, and recurrence\" (product_card)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #7 — \"Use a simple purchase rule\" (final_cta)",
+        "current_product_keys": [
+          "autel-ds808s-bt"
+        ],
+        "current_asins": [
+          "B0FCSB14KN"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "The subject is an inspection workflow, not a product; DS808S-BT supports the all-system scan, live-data and report steps the guide develops."
+      },
+      "after": {
+        "slug": "bmw-scanner-for-used-car-inspection",
+        "title": "BMW Scanner for a Used-Car Inspection: What to Capture Before You Buy",
+        "word_count": 1576,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-ds808s-bt"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Understand the two diagnostic layers\" (product_card)",
+        "current_middle_placement_location": "after H2 #2 — \"Read readiness without inventing a story\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"Use a simple purchase rule\" (final_cta)",
+        "current_product_keys": [
+          "autel-ds808s-bt"
+        ],
+        "current_asins": [
+          "B0FCSB14KN"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "The subject is an inspection workflow, not a product; DS808S-BT supports the all-system scan, live-data and report steps the guide develops."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-scanner-without-subscription",
+        "title": "BMW Scanner Without a Subscription: Buy the Entitlement, Not the Label",
+        "word_count": 1539,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "innova-5610-bundle"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #3 — \"Autel MK808S: installed capability and new coverage are different\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #7 — \"The buying decision\" (final_cta)",
+        "current_product_keys": [
+          "innova-5610-bundle"
+        ],
+        "current_asins": [
+          "B0F64263Y8"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "Innova documents free updates and no subscription for the 5610; the listing is named as the 5610 plus 3380 bundle."
+      },
+      "after": {
+        "slug": "bmw-scanner-without-subscription",
+        "title": "BMW Scanner Without a Subscription: Buy the Entitlement, Not the Label",
+        "word_count": 1539,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "innova-5610-bundle"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Start with the BMW job, not the scanner category\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Foxwell NT530 Plus: verify the brand package and current terms\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"The buying decision\" (final_cta)",
+        "current_product_keys": [
+          "innova-5610-bundle"
+        ],
+        "current_asins": [
+          "B0F64263Y8"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "Innova documents free updates and no subscription for the 5610; the listing is named as the 5610 plus 3380 bundle."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-service-reset-tool",
+        "title": "BMW Service Reset Tool Guide: Dashboard Reset or Scanner?",
+        "word_count": 1223,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #2 — \"Why a brake-service reset can refuse to complete\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #5 — \"What to buy\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX is documented for the BimmerLink service route; exact BMW and service support still require checking."
+      },
+      "after": {
+        "slug": "bmw-service-reset-tool",
+        "title": "BMW Service Reset Tool Guide: Dashboard Reset or Scanner?",
+        "word_count": 1223,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"When the instrument cluster is the sensible first method\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Why a brake-service reset can refuse to complete\" (compact_cta)",
+        "current_final_placement_location": "after H2 #5 — \"What to buy\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX is documented for the BimmerLink service route; exact BMW and service support still require checking."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-steering-angle-sensor-calibration-tool",
+        "title": "BMW Steering Angle Sensor Calibration: When the Tool Is Actually Needed",
+        "word_count": 1521,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-mx808s"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #2 — \"Build a four-coordinate qualification\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #6 — \"The handoff rule\" (final_cta)",
+        "current_product_keys": [
+          "autel-mx808s"
+        ],
+        "current_asins": [
+          "B08ML7T7KZ"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "Autel documents SAS service on the exact MX808S; the function is not extended to an unverified BMW."
+      },
+      "after": {
+        "slug": "bmw-steering-angle-sensor-calibration-tool",
+        "title": "BMW Steering Angle Sensor Calibration: When the Tool Is Actually Needed",
+        "word_count": 1521,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-mx808s"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Calibration, diagnosis and alignment are different jobs\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Build a four-coordinate qualification\" (compact_cta)",
+        "current_final_placement_location": "after H2 #6 — \"The handoff rule\" (final_cta)",
+        "current_product_keys": [
+          "autel-mx808s"
+        ],
+        "current_asins": [
+          "B08ML7T7KZ"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "Autel documents SAS service on the exact MX808S; the function is not extended to an unverified BMW."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-tpms-diagnostic-tool",
+        "title": "BMW TPMS Tools: Diagnosis, Activation, Relearn and Programming Are Different",
+        "word_count": 1584,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-mx808s",
+          "autel-mx808s-ts"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #3 — \"Diagnose a warning before buying a programmer\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #6 — \"Build a four-record coverage proof\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"Three practical buying profiles\" (final_cta)",
+        "current_product_keys": [
+          "autel-mx808s",
+          "autel-mx808s-ts"
+        ],
+        "current_asins": [
+          "B08ML7T7KZ",
+          "B09QX69JQW"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "MX808S and MX808S-TS are named accurately and preserve the diagnostic-versus-TPMS-programming distinction the guide is built on."
+      },
+      "after": {
+        "slug": "bmw-tpms-diagnostic-tool",
+        "title": "BMW TPMS Tools: Diagnosis, Activation, Relearn and Programming Are Different",
+        "word_count": 1584,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-mx808s",
+          "autel-mx808s-ts"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #1 — \"Three tool classes touch three different layers\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #2 — \"Read exact-SKU tables, not brand summaries\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"Three practical buying profiles\" (final_cta)",
+        "current_product_keys": [
+          "autel-mx808s",
+          "autel-mx808s-ts"
+        ],
+        "current_asins": [
+          "B08ML7T7KZ",
+          "B09QX69JQW"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "MX808S and MX808S-TS are named accurately and preserve the diagnostic-versus-TPMS-programming distinction the guide is built on."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-transfer-case-adaptation-reset-tool",
+        "title": "BMW Transfer Case Adaptation Reset Tool: Reset, Calibrate, or Diagnose?",
+        "word_count": 1606,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-maxisys-ultra"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #2 — \"Build a coverage proof, not a feature-list impression\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #6 — \"The buying decision\" (final_cta)",
+        "current_product_keys": [
+          "autel-maxisys-ultra"
+        ],
+        "current_asins": [
+          "B0936PQ6Y8"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "MaxiSYS Ultra is a workshop platform for the pre/post checks, with no claimed BMW VTG reset."
+      },
+      "after": {
+        "slug": "bmw-transfer-case-adaptation-reset-tool",
+        "title": "BMW Transfer Case Adaptation Reset Tool: Reset, Calibrate, or Diagnose?",
+        "word_count": 1606,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-maxisys-ultra"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Diagnose the complaint before shopping for a reset\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Build a coverage proof, not a feature-list impression\" (compact_cta)",
+        "current_final_placement_location": "after H2 #6 — \"The buying decision\" (final_cta)",
+        "current_product_keys": [
+          "autel-maxisys-ultra"
+        ],
+        "current_asins": [
+          "B0936PQ6Y8"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "MaxiSYS Ultra is a workshop platform for the pre/post checks, with no claimed BMW VTG reset."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-vanos-diagnostic-tool",
+        "title": "BMW VANOS Diagnostic Tools: Codes, Live Angles, and Test Plans",
+        "word_count": 1201,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-ds808s-bt"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #2 — \"Compare target versus actual angle\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #6 — \"Capture the evidence and know when to escalate\" (final_cta)",
+        "current_product_keys": [
+          "autel-ds808s-bt"
+        ],
+        "current_asins": [
+          "B0FCSB14KN"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "DS808S-BT is the full-tablet route, shown only inside the VANOS-capability gate; exact BMW coverage must be confirmed."
+      },
+      "after": {
+        "slug": "bmw-vanos-diagnostic-tool",
+        "title": "BMW VANOS Diagnostic Tools: Codes, Live Angles, and Test Plans",
+        "word_count": 1201,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-ds808s-bt"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #2 — \"Compare target versus actual angle\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #3 — \"Use activation and guided tests\" (compact_cta)",
+        "current_final_placement_location": "after H2 #6 — \"Capture the evidence and know when to escalate\" (final_cta)",
+        "current_product_keys": [
+          "autel-ds808s-bt"
+        ],
+        "current_asins": [
+          "B0FCSB14KN"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "DS808S-BT is the full-tablet route, shown only inside the VANOS-capability gate; exact BMW coverage must be confirmed."
+      }
+    },
+    {
+      "before": {
+        "slug": "bmw-wheel-speed-sensor-diagnostic-tool",
+        "title": "BMW Wheel-Speed Sensor Diagnostics: Choose a Tool That Shows the Evidence",
+        "word_count": 1083,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-mx900"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #2 — \"Compare four-corner live data\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #6 — \"Choose the tool and know the stop conditions\" (final_cta)",
+        "current_product_keys": [
+          "autel-mx900"
+        ],
+        "current_asins": [
+          "B09JFXPYKL"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "MX900 is recommended within the BMW DSC and live-data capability gate; four-corner access requires confirming the exact BMW."
+      },
+      "after": {
+        "slug": "bmw-wheel-speed-sensor-diagnostic-tool",
+        "title": "BMW Wheel-Speed Sensor Diagnostics: Choose a Tool That Shows the Evidence",
+        "word_count": 1083,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-mx900"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #2 — \"Compare four-corner live data\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #3 — \"Gather static and dynamic evidence safely\" (compact_cta)",
+        "current_final_placement_location": "after H2 #6 — \"Choose the tool and know the stop conditions\" (final_cta)",
+        "current_product_keys": [
+          "autel-mx900"
+        ],
+        "current_asins": [
+          "B09JFXPYKL"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "MX900 is recommended within the BMW DSC and live-data capability gate; four-corner access requires confirming the exact BMW."
+      }
+    },
+    {
+      "before": {
+        "slug": "carly-subscription-cost",
+        "title": "Carly Subscription Cost: Price Variables, Renewal, and Ownership Math",
+        "word_count": 1381,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #4 — \"Optional packages can change the comparison\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #7 — \"The accurate answer\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "Carly hardware is unavailable; CX is shown only as an alternative BMW app route and never as Carly-compatible."
+      },
+      "after": {
+        "slug": "carly-subscription-cost",
+        "title": "Carly Subscription Cost: Price Variables, Renewal, and Ownership Math",
+        "word_count": 1381,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Start with the acquisition channel\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Separate hardware from software\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"The accurate answer\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "Carly hardware is unavailable; CX is shown only as an alternative BMW app route and never as Carly-compatible."
+      }
+    },
+    {
+      "before": {
+        "slug": "carly-vs-foxwell-nt530",
+        "title": "Carly vs Foxwell NT530: Subscription App or Dedicated Scanner?",
+        "word_count": 794,
+        "h2_count": 10,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autophix-7910p-plus"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #3 — \"NT530’s hardware-first structure\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #8 — \"Pricing and coverage note\" (final_cta)",
+        "current_product_keys": [
+          "autophix-7910p-plus"
+        ],
+        "current_asins": [
+          "B0DY7RJ1YP"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "Neither named side has an approved listing; the 7910P+ is a clearly separated BMW-scanner alternative."
+      },
+      "after": {
+        "slug": "carly-vs-foxwell-nt530",
+        "title": "Carly vs Foxwell NT530: Subscription App or Dedicated Scanner?",
+        "word_count": 794,
+        "h2_count": 10,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autophix-7910p-plus"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"A decision shaped by year two\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #3 — \"NT530’s hardware-first structure\" (compact_cta)",
+        "current_final_placement_location": "after H2 #8 — \"Pricing and coverage note\" (final_cta)",
+        "current_product_keys": [
+          "autophix-7910p-plus"
+        ],
+        "current_asins": [
+          "B0DY7RJ1YP"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "Neither named side has an approved listing; the 7910P+ is a clearly separated BMW-scanner alternative."
+      }
+    },
+    {
+      "before": {
+        "slug": "creator-c310-plus-vs-foxwell-nt530",
+        "title": "Creator C310+ vs Foxwell NT530: Which BMW Handheld Fits?",
+        "word_count": 1430,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "creator-c310-plus"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #3 — \"What the Foxwell NT530 evidence supports\" (product_card)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #7 — \"Final verdict\" (final_cta)",
+        "current_product_keys": [
+          "creator-c310-plus"
+        ],
+        "current_asins": [
+          "B00VSYZ2NC"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Creator C310+ is named in the title and is the available side; no Foxwell listing is substituted."
+      },
+      "after": {
+        "slug": "creator-c310-plus-vs-foxwell-nt530",
+        "title": "Creator C310+ vs Foxwell NT530: Which BMW Handheld Fits?",
+        "word_count": 1430,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "creator-c310-plus"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Capability comparison\" (product_card)",
+        "current_middle_placement_location": "after H2 #2 — \"What the Creator C310+ evidence supports\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"Final verdict\" (final_cta)",
+        "current_product_keys": [
+          "creator-c310-plus"
+        ],
+        "current_asins": [
+          "B00VSYZ2NC"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Creator C310+ is named in the title and is the available side; no Foxwell listing is substituted."
+      }
+    },
+    {
+      "before": {
+        "slug": "foxwell-nt530-vs-autel-mk808s-bmw",
+        "title": "Foxwell NT530 Plus vs Autel MK808S for BMW: Handheld Focus or Tablet Breadth?",
+        "word_count": 1444,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-mx808s"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #2 — \"Compare function claims at three levels\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #7 — \"The verdict\" (final_cta)",
+        "current_product_keys": [
+          "autel-mx808s"
+        ],
+        "current_asins": [
+          "B08ML7T7KZ"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "SAME_BRAND_ALTERNATIVE",
+        "relationship_rationale": "The article names the Autel MK808S; the available Autel listing is the MX808S, a different model from the same maker, and is labelled as such rather than relabelled MK808S."
+      },
+      "after": {
+        "slug": "foxwell-nt530-vs-autel-mk808s-bmw",
+        "title": "Foxwell NT530 Plus vs Autel MK808S for BMW: Handheld Focus or Tablet Breadth?",
+        "word_count": 1444,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autel-mx808s"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #2 — \"Compare function claims at three levels\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #3 — \"A BMW job scorecard\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"The verdict\" (final_cta)",
+        "current_product_keys": [
+          "autel-mx808s"
+        ],
+        "current_asins": [
+          "B08ML7T7KZ"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "SAME_BRAND_ALTERNATIVE",
+        "relationship_rationale": "The article names the Autel MK808S; the available Autel listing is the MX808S, a different model from the same maker, and is labelled as such rather than relabelled MK808S."
+      }
+    },
+    {
+      "before": {
+        "slug": "foxwell-nt530-vs-nt710",
+        "title": "Foxwell NT530 vs NT710: Hardware, Coverage and Update Model",
+        "word_count": 790,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autophix-7910p-plus"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #3 — \"NT710 as a touch platform\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #7 — \"Coverage and test boundary\" (final_cta)",
+        "current_product_keys": [
+          "autophix-7910p-plus"
+        ],
+        "current_asins": [
+          "B0DY7RJ1YP"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "The rejected GM NT710 and the unverified NT530 Plus listings are excluded; the 7910P+ is labelled as an available BMW-scanner alternative."
+      },
+      "after": {
+        "slug": "foxwell-nt530-vs-nt710",
+        "title": "Foxwell NT530 vs NT710: Hardware, Coverage and Update Model",
+        "word_count": 790,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "autophix-7910p-plus"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Compare hardware and entitlement separately\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #3 — \"NT710 as a touch platform\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"Coverage and test boundary\" (final_cta)",
+        "current_product_keys": [
+          "autophix-7910p-plus"
+        ],
+        "current_asins": [
+          "B0DY7RJ1YP"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "The rejected GM NT710 and the unverified NT530 Plus listings are excluded; the 7910P+ is labelled as an available BMW-scanner alternative."
+      }
+    },
+    {
+      "before": {
+        "slug": "foxwell-nt710-vs-autel-mk900-bmw",
+        "title": "Foxwell NT710 vs Autel MK900 for BMW: The Coding Line Decides It",
+        "word_count": 1667,
+        "h2_count": 6,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "reviewed/pending",
+        "current_primary_products": [],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 0,
+        "current_first_placement_location": null,
+        "current_middle_placement_location": null,
+        "current_final_placement_location": null,
+        "current_product_keys": [],
+        "current_asins": [],
+        "current_tracking_ids": [],
+        "current_disclosure_count": 0,
+        "current_monetization_status": "UNMONETIZED",
+        "relationship_type": "SAME_BRAND_ALTERNATIVE",
+        "relationship_rationale": "Article subject is the BMW-software Foxwell NT710; the verified product is the Foxwell NT530, the same maker and a different model. The approved alternative (MK900-BT) is an exact sibling variant of the article's Autel side. Neither card carries the other model's claims."
+      },
+      "after": {
+        "slug": "foxwell-nt710-vs-autel-mk900-bmw",
+        "title": "Foxwell NT710 vs Autel MK900 for BMW: The Coding Line Decides It",
+        "word_count": 1667,
+        "h2_count": 6,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "foxwell-nt530"
+        ],
+        "current_alternative_products": [
+          "autel-mk900-bt"
+        ],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"The Foxwell BMW coding claim contradicts itself\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Where the MK900 is the stronger documented answer\" (compact_cta)",
+        "current_final_placement_location": "after H2 #5 — \"Choosing\" (final_cta)",
+        "current_product_keys": [
+          "foxwell-nt530",
+          "autel-mk900-bt"
+        ],
+        "current_asins": [
+          "B0C3J1QFX4",
+          "B07PGYY8SS"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "SAME_BRAND_ALTERNATIVE",
+        "relationship_rationale": "Article subject is the BMW-software Foxwell NT710; the verified product is the Foxwell NT530, the same maker and a different model. The approved alternative (MK900-BT) is an exact sibling variant of the article's Autel side. Neither card carries the other model's claims."
+      }
+    },
+    {
+      "before": {
+        "slug": "icarsoft-bmm-v3-vs-foxwell-nt530",
+        "title": "iCarsoft BMM V3.0 vs Foxwell NT530 for BMW: Match the Exact SKU to the Job",
+        "word_count": 1453,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "reviewed/pending",
+        "current_primary_products": [],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 0,
+        "current_first_placement_location": null,
+        "current_middle_placement_location": null,
+        "current_final_placement_location": null,
+        "current_product_keys": [],
+        "current_asins": [],
+        "current_tracking_ids": [],
+        "current_disclosure_count": 0,
+        "current_monetization_status": "UNMONETIZED",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Foxwell NT530 is named in the article title and is the side of the comparison with a verified listing; the iCarsoft side is deliberately not linked."
+      },
+      "after": {
+        "slug": "icarsoft-bmm-v3-vs-foxwell-nt530",
+        "title": "iCarsoft BMM V3.0 vs Foxwell NT530 for BMW: Match the Exact SKU to the Job",
+        "word_count": 1453,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "foxwell-nt530"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Compare the hardware honestly\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Check system access and BMW software\" (compact_cta)",
+        "current_final_placement_location": "after H2 #6 — \"Which tool fits which BMW owner?\" (final_cta)",
+        "current_product_keys": [
+          "foxwell-nt530"
+        ],
+        "current_asins": [
+          "B0C3J1QFX4"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Foxwell NT530 is named in the article title and is the side of the comparison with a verified listing; the iCarsoft side is deliberately not linked."
+      }
+    },
+    {
+      "before": {
+        "slug": "ista-valvetronic-relearn",
+        "title": "ISTA Valvetronic Relearn: Qualify the Teach-In Before Running It",
+        "word_count": 1252,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "schumacher-inc100"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #2 — \"Let the fault state decide whether to proceed\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #6 — \"The responsible ISTA decision\" (final_cta)",
+        "current_product_keys": [
+          "schumacher-inc100"
+        ],
+        "current_asins": [
+          "B0756NVGHV"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "SUPPORTING_EQUIPMENT",
+        "relationship_rationale": "Schumacher documents INC100 as a stable diagnostic and ECU-reprogramming supply; it is not a claimed relearn interface."
+      },
+      "after": {
+        "slug": "ista-valvetronic-relearn",
+        "title": "ISTA Valvetronic Relearn: Qualify the Teach-In Before Running It",
+        "word_count": 1252,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "schumacher-inc100"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Separate the terms before searching the menu\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Let the fault state decide whether to proceed\" (compact_cta)",
+        "current_final_placement_location": "after H2 #6 — \"The responsible ISTA decision\" (final_cta)",
+        "current_product_keys": [
+          "schumacher-inc100"
+        ],
+        "current_asins": [
+          "B0756NVGHV"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "SUPPORTING_EQUIPMENT",
+        "relationship_rationale": "Schumacher documents INC100 as a stable diagnostic and ECU-reprogramming supply; it is not a claimed relearn interface."
+      }
+    },
+    {
+      "before": {
+        "slug": "ista-vs-bimmerlink",
+        "title": "ISTA vs BimmerLink: Workshop Diagnosis or Owner App?",
+        "word_count": 825,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #2 — \"What ISTA adds\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #6 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX is the documented BimmerLink side and is never presented as an ISTA interface or ICOM replacement."
+      },
+      "after": {
+        "slug": "ista-vs-bimmerlink",
+        "title": "ISTA vs BimmerLink: Workshop Diagnosis or Owner App?",
+        "word_count": 825,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"What BimmerLink owns\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"What ISTA adds\" (compact_cta)",
+        "current_final_placement_location": "after H2 #6 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX is the documented BimmerLink side and is never presented as an ISTA interface or ICOM replacement."
+      }
+    },
+    {
+      "before": {
+        "slug": "k-dcan-vs-enet-cable",
+        "title": "K+DCAN vs ENET Cable: BMW Interface Boundaries",
+        "word_count": 811,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "schumacher-inc100"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #1 — \"Working comparison\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #6 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "schumacher-inc100"
+        ],
+        "current_asins": [
+          "B0756NVGHV"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "SUPPORTING_EQUIPMENT",
+        "relationship_rationale": "Generic cables remain unlinked; INC100 is supporting power for coding and programming, never a cable substitute."
+      },
+      "after": {
+        "slug": "k-dcan-vs-enet-cable",
+        "title": "K+DCAN vs ENET Cable: BMW Interface Boundaries",
+        "word_count": 811,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "schumacher-inc100"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Working comparison\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Why “E uses DCAN, F uses ENET” is incomplete\" (compact_cta)",
+        "current_final_placement_location": "after H2 #6 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "schumacher-inc100"
+        ],
+        "current_asins": [
+          "B0756NVGHV"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "SUPPORTING_EQUIPMENT",
+        "relationship_rationale": "Generic cables remain unlinked; INC100 is supporting power for coding and programming, never a cable substitute."
+      }
+    },
+    {
+      "before": {
+        "slug": "launch-x431-bmw",
+        "title": "Launch X431 for BMW: Model, Coverage, Subscription, and Programming Boundaries",
+        "word_count": 1604,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "launch-creader-elite-bmw-v2",
+          "launch-x431-pro3s-plus"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #2 — \"When a professional X-431 tablet earns its cost\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #5 — \"Ownership cost is a timeline\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"Which Launch should a BMW owner choose?\" (final_cta)",
+        "current_product_keys": [
+          "launch-creader-elite-bmw-v2",
+          "launch-x431-pro3s-plus"
+        ],
+        "current_asins": [
+          "B0F4QHR93X",
+          "B0D7VS8SHS"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "PRODUCT_FAMILY_ALTERNATIVE",
+        "relationship_rationale": "The guide is about LAUNCH X-431 routes for BMW; the verified Creader Elite V2.0 for BMW and X-431 PRO3S+ are accurately named units within that family rather than any unavailable model named in the body."
+      },
+      "after": {
+        "slug": "launch-x431-bmw",
+        "title": "Launch X431 for BMW: Model, Coverage, Subscription, and Programming Boundaries",
+        "word_count": 1604,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "launch-creader-elite-bmw-v2",
+          "launch-x431-pro3s-plus"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #1 — \"The BMW-focused compact route\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #3 — \"BMW functions need verb-level evidence\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"Which Launch should a BMW owner choose?\" (final_cta)",
+        "current_product_keys": [
+          "launch-creader-elite-bmw-v2",
+          "launch-x431-pro3s-plus"
+        ],
+        "current_asins": [
+          "B0F4QHR93X",
+          "B0D7VS8SHS"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "PRODUCT_FAMILY_ALTERNATIVE",
+        "relationship_rationale": "The guide is about LAUNCH X-431 routes for BMW; the verified Creader Elite V2.0 for BMW and X-431 PRO3S+ are accurately named units within that family rather than any unavailable model named in the body."
+      }
+    },
+    {
+      "before": {
+        "slug": "launch-x431-vs-autel-for-bmw",
+        "title": "Launch X-431 vs Autel for BMW: Match the Exact Shop Platform to the Job",
+        "word_count": 1362,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "launch-x431-pro3s-plus",
+          "autel-maxisys-ultra"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #1 — \"Compare the hardware stack, not screen-size trivia\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #4 — \"Compare coverage systems and support quality\" (compact_cta)",
+        "current_final_placement_location": "after H2 #6 — \"Which platform fits which BMW shop?\" (final_cta)",
+        "current_product_keys": [
+          "launch-x431-pro3s-plus",
+          "autel-maxisys-ultra"
+        ],
+        "current_asins": [
+          "B0D7VS8SHS",
+          "B0936PQ6Y8"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "PRODUCT_FAMILY_ALTERNATIVE",
+        "relationship_rationale": "Each verified platform represents its own maker's workshop tier in the comparison; neither is presented as a specific unavailable model."
+      },
+      "after": {
+        "slug": "launch-x431-vs-autel-for-bmw",
+        "title": "Launch X-431 vs Autel for BMW: Match the Exact Shop Platform to the Job",
+        "word_count": 1362,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "launch-x431-pro3s-plus",
+          "autel-maxisys-ultra"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #1 — \"Compare the hardware stack, not screen-size trivia\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #2 — \"Score exact BMW jobs at command level\" (compact_cta)",
+        "current_final_placement_location": "after H2 #6 — \"Which platform fits which BMW shop?\" (final_cta)",
+        "current_product_keys": [
+          "launch-x431-pro3s-plus",
+          "autel-maxisys-ultra"
+        ],
+        "current_asins": [
+          "B0D7VS8SHS",
+          "B0936PQ6Y8"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "PRODUCT_FAMILY_ALTERNATIVE",
+        "relationship_rationale": "Each verified platform represents its own maker's workshop tier in the comparison; neither is presented as a specific unavailable model."
+      }
+    },
+    {
+      "before": {
+        "slug": "mini-diagnostic-app",
+        "title": "MINI Diagnostic App: Choose by Diagnosis, Service, and Adapter Fit",
+        "word_count": 600,
+        "h2_count": 4,
+        "is_long": false,
+        "required_placements": 2,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #1 — \"Match jobs to evidence\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #3 — \"Safety and bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX is documented for BimmerCode and BimmerLink; MINI, app and feature support still require publisher checks."
+      },
+      "after": {
+        "slug": "mini-diagnostic-app",
+        "title": "MINI Diagnostic App: Choose by Diagnosis, Service, and Adapter Fit",
+        "word_count": 600,
+        "h2_count": 4,
+        "is_long": false,
+        "required_placements": 2,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #1 — \"Match jobs to evidence\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #3 — \"Safety and bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX is documented for BimmerCode and BimmerLink; MINI, app and feature support still require publisher checks."
+      }
+    },
+    {
+      "before": {
+        "slug": "obd-app-vs-handheld-scanner",
+        "title": "OBD App vs Handheld Scanner: Which Tool Architecture Fits?",
+        "word_count": 1339,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx",
+          "autel-mx808s"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #3 — \"Handheld scanners span several categories\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #5 — \"Licensing and updates belong in total cost\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"A safe buyer decision\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx",
+          "autel-mx808s"
+        ],
+        "current_asins": [
+          "B08NFLL3NT",
+          "B08ML7T7KZ"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX and MX808S represent the app and tablet architectures the article compares."
+      },
+      "after": {
+        "slug": "obd-app-vs-handheld-scanner",
+        "title": "OBD App vs Handheld Scanner: Which Tool Architecture Fits?",
+        "word_count": 1339,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx",
+          "autel-mx808s"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #1 — \"Lock the task before choosing the tool\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #2 — \"The app path has four dependencies\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"A safe buyer decision\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx",
+          "autel-mx808s"
+        ],
+        "current_asins": [
+          "B08NFLL3NT",
+          "B08ML7T7KZ"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX and MX808S represent the app and tablet architectures the article compares."
+      }
+    },
+    {
+      "before": {
+        "slug": "obdlink-cx-vs-lx",
+        "title": "OBDLink CX vs LX: BLE for iPhone or Classic Bluetooth?",
+        "word_count": 685,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx",
+          "obdlink-lx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #2 — \"Protocol scope comes after pairing\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #4 — \"Put firmware and existing hardware into total cost\" (compact_cta)",
+        "current_final_placement_location": "after H2 #6 — \"Platform evidence note\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx",
+          "obdlink-lx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT",
+          "B00H9S71LW"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Both compared products are named in the title and both have verified listings."
+      },
+      "after": {
+        "slug": "obdlink-cx-vs-lx",
+        "title": "OBDLink CX vs LX: BLE for iPhone or Classic Bluetooth?",
+        "word_count": 685,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx",
+          "obdlink-lx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #1 — \"Route the host before comparing features\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #2 — \"Protocol scope comes after pairing\" (compact_cta)",
+        "current_final_placement_location": "after H2 #6 — \"Platform evidence note\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx",
+          "obdlink-lx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT",
+          "B00H9S71LW"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Both compared products are named in the title and both have verified listings."
+      }
+    },
+    {
+      "before": {
+        "slug": "obdlink-cx-vs-mx-plus",
+        "title": "OBDLink CX vs MX+: Match the Adapter to Your Car and Apps",
+        "word_count": 1386,
+        "h2_count": 11,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx",
+          "obdlink-mx-plus"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #4 — \"BLE, Windows and platform fit\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #8 — \"Costs beyond the adapter\" (compact_cta)",
+        "current_final_placement_location": "after H2 #10 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx",
+          "obdlink-mx-plus"
+        ],
+        "current_asins": [
+          "B08NFLL3NT",
+          "B07JFRFJG6"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Both compared products are named in the title and both have verified listings."
+      },
+      "after": {
+        "slug": "obdlink-cx-vs-mx-plus",
+        "title": "OBDLink CX vs MX+: Match the Adapter to Your Car and Apps",
+        "word_count": 1386,
+        "h2_count": 11,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx",
+          "obdlink-mx-plus"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #2 — \"Protocol coverage in practical terms\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #4 — \"BLE, Windows and platform fit\" (compact_cta)",
+        "current_final_placement_location": "after H2 #10 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx",
+          "obdlink-mx-plus"
+        ],
+        "current_asins": [
+          "B08NFLL3NT",
+          "B07JFRFJG6"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Both compared products are named in the title and both have verified listings."
+      }
+    },
+    {
+      "before": {
+        "slug": "obdlink-cx-vs-unicarscan-ucsi-2100",
+        "title": "OBDLink CX vs UniCarScan UCSI-2100 for BimmerCode and BimmerLink",
+        "word_count": 1095,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "reviewed/pending",
+        "current_primary_products": [],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 0,
+        "current_first_placement_location": null,
+        "current_middle_placement_location": null,
+        "current_final_placement_location": null,
+        "current_product_keys": [],
+        "current_asins": [],
+        "current_tracking_ids": [],
+        "current_disclosure_count": 0,
+        "current_monetization_status": "UNMONETIZED",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "OBDLink CX is named in the article title and is the side of the comparison with a verified, rights-cleared listing; the UniCarScan side is deliberately not linked."
+      },
+      "after": {
+        "slug": "obdlink-cx-vs-unicarscan-ucsi-2100",
+        "title": "OBDLink CX vs UniCarScan UCSI-2100 for BimmerCode and BimmerLink",
+        "word_count": 1095,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Identify the exact models\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Confirm app support and platform\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"Which adapter should you buy?\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "OBDLink CX is named in the article title and is the side of the comparison with a verified, rights-cleared listing; the UniCarScan side is deliberately not linked."
+      }
+    },
+    {
+      "before": {
+        "slug": "obdlink-cx-vs-vlinker-bm-plus",
+        "title": "OBDLink CX vs vLinker BM+: Choose by App and Vehicle",
+        "word_count": 1276,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx",
+          "vlinker-bm-plus"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #2 — \"Why the app selector outranks adapter folklore\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #7 — \"What this comparison does not claim\" (compact_cta)",
+        "current_final_placement_location": "after H2 #8 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx",
+          "vlinker-bm-plus"
+        ],
+        "current_asins": [
+          "B08NFLL3NT",
+          "B0B28KS5T2"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Both compared products are named in the title and both have verified listings."
+      },
+      "after": {
+        "slug": "obdlink-cx-vs-vlinker-bm-plus",
+        "title": "OBDLink CX vs vLinker BM+: Choose by App and Vehicle",
+        "word_count": 1276,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx",
+          "vlinker-bm-plus"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #2 — \"Why the app selector outranks adapter folklore\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #3 — \"OBDLink CX: where its documentation is strongest\" (compact_cta)",
+        "current_final_placement_location": "after H2 #8 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx",
+          "vlinker-bm-plus"
+        ],
+        "current_asins": [
+          "B08NFLL3NT",
+          "B0B28KS5T2"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Both compared products are named in the title and both have verified listings."
+      }
+    },
+    {
+      "before": {
+        "slug": "obdlink-cx-vs-vlinker-mc-plus",
+        "title": "OBDLink CX vs vLinker MC+: Pick the Exact App Path",
+        "word_count": 808,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx",
+          "vlinker-mc-plus"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #3 — \"Why CX has the clearer public record\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #5 — \"Firmware, seller and ownership checks\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"Compatibility evidence note\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx",
+          "vlinker-mc-plus"
+        ],
+        "current_asins": [
+          "B08NFLL3NT",
+          "B0CZCGXZVR"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Both compared products are named in the title and both have verified listings."
+      },
+      "after": {
+        "slug": "obdlink-cx-vs-vlinker-mc-plus",
+        "title": "OBDLink CX vs vLinker MC+: Pick the Exact App Path",
+        "word_count": 808,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx",
+          "vlinker-mc-plus"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #1 — \"Start with the named application\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #3 — \"Why CX has the clearer public record\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"Compatibility evidence note\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx",
+          "vlinker-mc-plus"
+        ],
+        "current_asins": [
+          "B08NFLL3NT",
+          "B0CZCGXZVR"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Both compared products are named in the title and both have verified listings."
+      }
+    },
+    {
+      "before": {
+        "slug": "obdlink-ex-vs-enet-cable",
+        "title": "OBDLink EX vs ENET Cable: USB Diagnostics or Ethernet Session?",
+        "word_count": 778,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-ex"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #2 — \"What an ENET cable changes\" (product_card)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #6 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-ex"
+        ],
+        "current_asins": [
+          "B081VQVD3F"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "OBDLink EX is the exact product discussed; the card retains the warning that it is FORScan/Ford-oriented and not a BMW ENET interface."
+      },
+      "after": {
+        "slug": "obdlink-ex-vs-enet-cable",
+        "title": "OBDLink EX vs ENET Cable: USB Diagnostics or Ethernet Session?",
+        "word_count": 778,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-ex"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"What OBDLink EX actually is\" (product_card)",
+        "current_middle_placement_location": "after H2 #2 — \"What an ENET cable changes\" (compact_cta)",
+        "current_final_placement_location": "after H2 #6 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-ex"
+        ],
+        "current_asins": [
+          "B081VQVD3F"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "OBDLink EX is the exact product discussed; the card retains the warning that it is FORScan/Ford-oriented and not a BMW ENET interface."
+      }
+    },
+    {
+      "before": {
+        "slug": "obdlink-mx-plus-vs-lx",
+        "title": "OBDLink MX+ vs LX: Choose by Platform and Vehicle Network",
+        "word_count": 857,
+        "h2_count": 6,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-mx-plus",
+          "obdlink-lx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #2 — \"App compatibility controls the purchase\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #4 — \"Ownership and safety\" (compact_cta)",
+        "current_final_placement_location": "after H2 #5 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-mx-plus",
+          "obdlink-lx"
+        ],
+        "current_asins": [
+          "B07JFRFJG6",
+          "B00H9S71LW"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Both compared products are named in the title and both have verified listings."
+      },
+      "after": {
+        "slug": "obdlink-mx-plus-vs-lx",
+        "title": "OBDLink MX+ vs LX: Choose by Platform and Vehicle Network",
+        "word_count": 857,
+        "h2_count": 6,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-mx-plus",
+          "obdlink-lx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #2 — \"App compatibility controls the purchase\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #3 — \"Conditional choice\" (compact_cta)",
+        "current_final_placement_location": "after H2 #5 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-mx-plus",
+          "obdlink-lx"
+        ],
+        "current_asins": [
+          "B07JFRFJG6",
+          "B00H9S71LW"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Both compared products are named in the title and both have verified listings."
+      }
+    },
+    {
+      "before": {
+        "slug": "obdlink-mx-plus-vs-vlinker-bm-plus",
+        "title": "OBDLink MX+ vs vLinker BM+: Broad Networks or BMW Focus?",
+        "word_count": 690,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-mx-plus",
+          "vlinker-bm-plus"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #3 — \"Where BM+ stays focused\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #5 — \"Use a garage scenario board\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"Compatibility evidence note\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-mx-plus",
+          "vlinker-bm-plus"
+        ],
+        "current_asins": [
+          "B07JFRFJG6",
+          "B0B28KS5T2"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Both compared products are named in the title and both have verified listings."
+      },
+      "after": {
+        "slug": "obdlink-mx-plus-vs-vlinker-bm-plus",
+        "title": "OBDLink MX+ vs vLinker BM+: Broad Networks or BMW Focus?",
+        "word_count": 690,
+        "h2_count": 9,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-mx-plus",
+          "vlinker-bm-plus"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #1 — \"Map the whole garage first\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #3 — \"Where BM+ stays focused\" (compact_cta)",
+        "current_final_placement_location": "after H2 #7 — \"Compatibility evidence note\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-mx-plus",
+          "vlinker-bm-plus"
+        ],
+        "current_asins": [
+          "B07JFRFJG6",
+          "B0B28KS5T2"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Both compared products are named in the title and both have verified listings."
+      }
+    },
+    {
+      "before": {
+        "slug": "protool-pricing",
+        "title": "ProTool Pricing: License Costs, Adapter Price & Total Setup Cost",
+        "word_count": 852,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #3 — \"Adapter choice can change the budget\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #5 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "ProTool hardware is unavailable; CX is a labelled alternative BMW app interface for a different supported route."
+      },
+      "after": {
+        "slug": "protool-pricing",
+        "title": "ProTool Pricing: License Costs, Adapter Price & Total Setup Cost",
+        "word_count": 852,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"Which license do you need?\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"Complete setup examples\" (compact_cta)",
+        "current_final_placement_location": "after H2 #5 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "ProTool hardware is unavailable; CX is a labelled alternative BMW app interface for a different supported route."
+      }
+    },
+    {
+      "before": {
+        "slug": "protool-vs-carly",
+        "title": "ProTool vs Carly: Which BMW App Fits Your Ownership Plan?",
+        "word_count": 757,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #2 — \"What you buy with Carly\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #6 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX is a distinct alternative BMW app route and is not claimed compatible with ProTool or Carly."
+      },
+      "after": {
+        "slug": "protool-vs-carly",
+        "title": "ProTool vs Carly: Which BMW App Fits Your Ownership Plan?",
+        "word_count": 757,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "obdlink-cx"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"What you buy with ProTool\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"What you buy with Carly\" (compact_cta)",
+        "current_final_placement_location": "after H2 #6 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "obdlink-cx"
+        ],
+        "current_asins": [
+          "B08NFLL3NT"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "RELATED_DIAGNOSTIC_TOOL",
+        "relationship_rationale": "CX is a distinct alternative BMW app route and is not claimed compatible with ProTool or Carly."
+      }
+    },
+    {
+      "before": {
+        "slug": "protool-vs-ista",
+        "title": "ProTool vs ISTA: Which BMW Workflow Fits the Job?",
+        "word_count": 803,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "schumacher-inc100"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 2,
+        "current_first_placement_location": "after H2 #3 — \"Cost is more than the software price\" (recommended_equipment)",
+        "current_middle_placement_location": null,
+        "current_final_placement_location": "after H2 #6 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "schumacher-inc100"
+        ],
+        "current_asins": [
+          "B0756NVGHV"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_BUT_TOO_FEW_PLACEMENTS",
+        "relationship_type": "SUPPORTING_EQUIPMENT",
+        "relationship_rationale": "INC100 supports coding and programming power needs and is not presented as ProTool hardware or an ISTA interface."
+      },
+      "after": {
+        "slug": "protool-vs-ista",
+        "title": "ProTool vs ISTA: Which BMW Workflow Fits the Job?",
+        "word_count": 803,
+        "h2_count": 8,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "schumacher-inc100"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 3,
+        "current_first_placement_location": "after H2 #1 — \"What ProTool covers\" (recommended_equipment)",
+        "current_middle_placement_location": "after H2 #2 — \"What ISTA adds\" (compact_cta)",
+        "current_final_placement_location": "after H2 #6 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "schumacher-inc100"
+        ],
+        "current_asins": [
+          "B0756NVGHV"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_WITH_WEAK_PRODUCT_MATCH",
+        "relationship_type": "SUPPORTING_EQUIPMENT",
+        "relationship_rationale": "INC100 supports coding and programming power needs and is not presented as ProTool hardware or an ISTA interface."
+      }
+    },
+    {
+      "before": {
+        "slug": "vlinker-bm-plus-vs-mc-plus",
+        "title": "vLinker BM+ vs MC+: Which Vgate Adapter Fits Your Apps?",
+        "word_count": 837,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "vlinker-bm-plus",
+          "vlinker-mc-plus"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #2 — \"Where the MC+ earns its extra scope\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #3 — \"Price is a snapshot, not the decision\" (compact_cta)",
+        "current_final_placement_location": "after H2 #5 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "vlinker-bm-plus",
+          "vlinker-mc-plus"
+        ],
+        "current_asins": [
+          "B0B28KS5T2",
+          "B0CZCGXZVR"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Both compared Vgate products are named in the title and both have verified listings."
+      },
+      "after": {
+        "slug": "vlinker-bm-plus-vs-mc-plus",
+        "title": "vLinker BM+ vs MC+: Which Vgate Adapter Fits Your Apps?",
+        "word_count": 837,
+        "h2_count": 7,
+        "is_long": true,
+        "required_placements": 3,
+        "current_mapping_status": "approved/approved",
+        "current_primary_products": [
+          "vlinker-bm-plus",
+          "vlinker-mc-plus"
+        ],
+        "current_alternative_products": [],
+        "current_affiliate_unit_count": 4,
+        "current_first_placement_location": "after H2 #1 — \"BMW compatibility comes from the app\" (comparison_card)",
+        "current_middle_placement_location": "after H2 #2 — \"Where the MC+ earns its extra scope\" (compact_cta)",
+        "current_final_placement_location": "after H2 #5 — \"Bottom line\" (final_cta)",
+        "current_product_keys": [
+          "vlinker-bm-plus",
+          "vlinker-mc-plus"
+        ],
+        "current_asins": [
+          "B0B28KS5T2",
+          "B0CZCGXZVR"
+        ],
+        "current_tracking_ids": [
+          "chassissignal-20"
+        ],
+        "current_disclosure_count": 1,
+        "current_monetization_status": "MONETIZED_CORRECTLY",
+        "relationship_type": "EXACT_PRODUCT",
+        "relationship_rationale": "Both compared Vgate products are named in the title and both have verified listings."
+      }
+    }
+  ]
+}

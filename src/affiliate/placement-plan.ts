@@ -5,21 +5,41 @@ import type { ArticleProductMapping, ProductRecord } from './types';
 /**
  * Contextual placement DENSITY plan.
  *
- * Target model: normally TWO placements per article, THREE for comparison /
- * strongly-commercial / alternative-bearing articles, ONE only as a genuine
- * exception. Placements are distributed across the article's real section
- * headings (early decision -> middle -> conclusion) and attach at H2 boundaries;
- * they never rewrite prose. The same verified product may appear at two distinct
- * reader moments provided the variant and contextual copy differ.
+ * SITE-WIDE PLACEMENT POLICY (portfolio rule, 2026-09-25). Every published guide carries:
+ *
+ *   PLACEMENT A — `position: 'top'`     mandatory, after ~2-3 short intro paragraphs
+ *   PLACEMENT C — `position: 'middle'`  mandatory for LONG articles, ~40-65% through the body
+ *   PLACEMENT B — `position: 'end'`     mandatory, at the last substantive section
+ *
+ * LONG is machine-defined: `wordCount >= 1400 || h2Count >= 6`. Long articles require three
+ * placements, shorter articles two, and three is the hard cap. Placements attach at real H2
+ * boundaries (the renderer lifts the TOP unit to an early prose boundary) and never rewrite
+ * prose. The same verified product may appear at two distinct reader moments provided the
+ * variant and contextual copy differ.
  */
 
 export type PlacementVariant = 'product_card' | 'comparison_card' | 'recommended_equipment' | 'compact_cta' | 'final_cta';
 export type DecisionMoment = 'product_category' | 'compatibility' | 'comparison' | 'technical' | 'final_recommendation';
 export type DensityClassification = 'TWO_PLACEMENTS' | 'THREE_PLACEMENTS' | 'ONE_PLACEMENT_EXCEPTION';
+export type PlacementPosition = 'top' | 'middle' | 'end';
 
 export const MAX_PLACEMENTS_PER_ARTICLE = 3;
 
+/** Machine-enforceable LONG-article definition (must stay in sync with the generator). */
+export const LONG_ARTICLE_WORD_COUNT = 1400;
+export const LONG_ARTICLE_H2_COUNT = 6;
+
+export function isLongArticle(wordCount: number, h2Count: number): boolean {
+  return wordCount >= LONG_ARTICLE_WORD_COUNT || h2Count >= LONG_ARTICLE_H2_COUNT;
+}
+
+export function requiredPlacementsFor(wordCount: number, h2Count: number): number {
+  return isLongArticle(wordCount, h2Count) ? 3 : 2;
+}
+
 export interface PlannedPlacement {
+  /** Deterministic article-body position this unit fills (top / middle / end). */
+  position: PlacementPosition;
   /** Index (into the article's full H2 list) of the section to attach AFTER. */
   anchorIndex: number;
   /** The heading text of that section (for reporting/traceability). */
@@ -35,6 +55,13 @@ export interface PlannedPlacement {
 export interface ArticlePlacementPlan {
   classification: DensityClassification;
   articleType: string;
+  /** Substantive body word count used for the LONG decision. */
+  wordCount: number;
+  /** H2 count used for the LONG decision. */
+  h2Count: number;
+  isLong: boolean;
+  /** Minimum placements this article must carry (3 when long, otherwise 2). */
+  requiredPlacements: number;
   placements: PlannedPlacement[];
 }
 
@@ -50,7 +77,14 @@ export interface PlacementPlanError {
     | 'UNKNOWN_ARTICLE'
     | 'CLASSIFICATION_MISMATCH'
     | 'PLACEMENT_COUNT_EXCEEDED'
-    | 'THREE_NOT_JUSTIFIED'
+    | 'BELOW_REQUIRED_PLACEMENTS'
+    | 'REQUIRED_COUNT_MISMATCH'
+    | 'MISSING_TOP_PLACEMENT'
+    | 'MISSING_MIDDLE_PLACEMENT'
+    | 'MISSING_END_PLACEMENT'
+    | 'UNEXPECTED_MIDDLE_PLACEMENT'
+    | 'DUPLICATE_POSITION'
+    | 'POSITION_ORDER'
     | 'PRODUCT_MISSING'
     | 'PRODUCT_NOT_APPROVED'
     | 'LINK_INVALID'
@@ -91,8 +125,29 @@ export function validatePlacementPlans(
 
     if (count > MAX_PLACEMENTS_PER_ARTICLE) push(slug, 'PLACEMENT_COUNT_EXCEEDED', `${slug}: ${count} placements (max ${MAX_PLACEMENTS_PER_ARTICLE}).`);
     if (plan.classification !== classify(count)) push(slug, 'CLASSIFICATION_MISMATCH', `${slug}: ${plan.classification} but ${count} placements.`);
-    if (count >= 3 && !(isComparison || mapping.alternativeProductKeys.length > 0)) push(slug, 'THREE_NOT_JUSTIFIED', `${slug}: three placements require a comparison or an approved alternative.`);
     if (count === 1 && !exceptionsJustified[slug]) push(slug, 'EXCEPTION_UNJUSTIFIED', `${slug}: a one-placement exception needs a written justification.`);
+
+    // --- site-wide placement policy: required count, and the top/middle/end contract ---
+    const expected = requiredPlacementsFor(plan.wordCount, plan.h2Count);
+    if (plan.requiredPlacements !== expected) push(slug, 'REQUIRED_COUNT_MISMATCH', `${slug}: requiredPlacements=${plan.requiredPlacements} but ${plan.wordCount} words / ${plan.h2Count} H2s requires ${expected}.`);
+    if (plan.isLong !== isLongArticle(plan.wordCount, plan.h2Count)) push(slug, 'REQUIRED_COUNT_MISMATCH', `${slug}: isLong=${plan.isLong} contradicts ${plan.wordCount} words / ${plan.h2Count} H2s.`);
+    if (count < expected) push(slug, 'BELOW_REQUIRED_PLACEMENTS', `${slug}: ${count} placements but ${expected} required (${plan.wordCount} words, ${plan.h2Count} H2s).`);
+
+    const byPosition = new Map<PlacementPosition, PlannedPlacement>();
+    for (const placement of plan.placements) {
+      if (byPosition.has(placement.position)) push(slug, 'DUPLICATE_POSITION', `${slug}: two placements claim position "${placement.position}".`);
+      else byPosition.set(placement.position, placement);
+    }
+    const top = byPosition.get('top');
+    const middle = byPosition.get('middle');
+    const end = byPosition.get('end');
+    if (!top) push(slug, 'MISSING_TOP_PLACEMENT', `${slug}: every published guide needs a top placement.`);
+    if (!end) push(slug, 'MISSING_END_PLACEMENT', `${slug}: every published guide needs an end placement.`);
+    if (plan.isLong && !middle) push(slug, 'MISSING_MIDDLE_PLACEMENT', `${slug}: long articles (${plan.wordCount} words, ${plan.h2Count} H2s) need a middle placement.`);
+    if (!plan.isLong && middle) push(slug, 'UNEXPECTED_MIDDLE_PLACEMENT', `${slug}: a short article must not carry a middle placement.`);
+    if (top && end && top.anchorIndex >= end.anchorIndex) push(slug, 'POSITION_ORDER', `${slug}: the top placement must anchor before the end placement.`);
+    if (top && middle && top.anchorIndex >= middle.anchorIndex) push(slug, 'POSITION_ORDER', `${slug}: the middle placement must anchor after the top placement.`);
+    if (middle && end && middle.anchorIndex >= end.anchorIndex) push(slug, 'POSITION_ORDER', `${slug}: the middle placement must anchor before the end placement.`);
 
     const anchors = new Set();
     for (const placement of plan.placements) {
@@ -129,10 +184,25 @@ export function validatePlacementPlans(
 }
 
 export function planSummary(plans: Record<string, ArticlePlacementPlan>) {
-  const summary = { TWO_PLACEMENTS: 0, THREE_PLACEMENTS: 0, ONE_PLACEMENT_EXCEPTION: 0, totalPlacements: 0 };
+  const summary = {
+    TWO_PLACEMENTS: 0,
+    THREE_PLACEMENTS: 0,
+    ONE_PLACEMENT_EXCEPTION: 0,
+    totalPlacements: 0,
+    longArticles: 0,
+    shortArticles: 0,
+    withTopPlacement: 0,
+    withMiddlePlacement: 0,
+    withEndPlacement: 0
+  };
   for (const plan of Object.values(plans)) {
     summary[plan.classification]++;
     summary.totalPlacements += plan.placements.length;
+    if (plan.isLong) summary.longArticles++; else summary.shortArticles++;
+    const positions = new Set(plan.placements.map((placement) => placement.position));
+    if (positions.has('top')) summary.withTopPlacement++;
+    if (positions.has('middle')) summary.withMiddlePlacement++;
+    if (positions.has('end')) summary.withEndPlacement++;
   }
   return summary;
 }

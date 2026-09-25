@@ -9,7 +9,17 @@ export const rolloutProductMetadata: Record<string, Partial<ProductRecord>> = {
   'foxwell-nt530': {
     manufacturerUrl: 'https://www.foxwelldiag.com/products/foxwell-nt530',
     editorialSummary: 'Foxwell NT530 with the BMW software authorization is the multi-brand-plus-software side of the comparison; this listing is the NT530, not NT530 Plus. Confirm the exact SKU, installed BMW software and the specific function before purchase.',
-    compatibilityNotes: 'Reaches BMW modules only with the BMW software authorization; coding-adjacent scope is SKU/software-revision specific and excludes ECU flash and full OEM-level programming. Confirm the exact unit and function.'
+    compatibilityNotes: 'Reaches BMW modules only with the BMW software authorization; coding-adjacent scope is SKU/software-revision specific and excludes ECU flash and full OEM-level programming. Confirm the exact unit and function.',
+    // No rights-cleared first-party NT530 photograph was obtainable, so a distinct
+    // Chassis Signal-owned brand-neutral category illustration renders instead and is
+    // labelled as an illustration (same policy as creator-c310-plus / autophix-7910p-plus).
+    imageMode: 'site_owned',
+    imagePathOrUrl: '/images/products/foxwell-nt530-category.svg',
+    imageRightsSource: '/images/products/foxwell-nt530-category.svg',
+    imageRightsStatus: 'site_owned',
+    imageAttribution: 'Category illustration by Chassis Signal.',
+    imageAlt: 'Brand-neutral handheld BMW scanner category illustration',
+    imageSha256: '4BE2319AC04BFB03CF30170997A4515412FCC924A8743D5DC825952A2D5BFE82'
   },
   'unicarscan-ucsi-2100': {
     manufacturerUrl: 'https://www.wgsoft.de/',

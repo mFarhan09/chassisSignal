@@ -1,9 +1,59 @@
 {
+  "autel-mk900-bmw-compatibility": {
+    "classification": "THREE_PLACEMENTS",
+    "articleType": "recommended_equipment",
+    "wordCount": 1773,
+    "h2Count": 8,
+    "isLong": true,
+    "requiredPlacements": 3,
+    "placements": [
+      {
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Check 2: what \"all systems\" actually promises",
+        "variant": "recommended_equipment",
+        "productKeys": [
+          "autel-mk900-bt"
+        ],
+        "role": "Relevant equipment",
+        "decisionMoment": "compatibility"
+      },
+      {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Check 3: the one place Autel names BMW",
+        "variant": "compact_cta",
+        "productKeys": [
+          "autel-mk900-bt"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time check 3: the one place Autel names BMW matters for autel MK900 BMW Compatibility, the practical question is whether Autel MaxiCOM MK900-BT actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
+        "anchorIndex": 7,
+        "headingText": "The short version",
+        "variant": "final_cta",
+        "productKeys": [
+          "autel-mk900-bt"
+        ],
+        "role": "Final pick to verify",
+        "decisionMoment": "final_recommendation",
+        "context": "If autel MK900 BMW Compatibility points you here, Autel MaxiCOM MK900-BT is the defensible pick to verify and buy once your exact configuration checks out."
+      }
+    ]
+  },
   "autel-scanner-for-bmw": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "comparison",
+    "wordCount": 1802,
+    "h2Count": 10,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
+        "position": "top",
         "anchorIndex": 3,
         "headingText": "Exact comparison: MK808S and MK900",
         "variant": "comparison_card",
@@ -15,17 +65,19 @@
         "decisionMoment": "comparison"
       },
       {
-        "anchorIndex": 6,
-        "headingText": "When a different Autel variant makes sense",
+        "position": "middle",
+        "anchorIndex": 4,
+        "headingText": "BMW coverage must resolve below the brand",
         "variant": "compact_cta",
         "productKeys": [
           "autel-mk900-bt"
         ],
         "role": "Option in focus",
         "decisionMoment": "technical",
-        "context": "For when a different Autel variant makes sense in which Autel Scanner for BMW? Build a Model-and-Function Matrix, Autel MaxiCOM MK900-BT is the specific unit to price and check against your exact BMW, app and function."
+        "context": "For bMW coverage must resolve below the brand in which Autel Scanner for BMW? Build a Model-and-Function Matrix, Autel MaxiCOM MK900-BT is the specific unit to price and check against your exact BMW, app and function."
       },
       {
+        "position": "end",
         "anchorIndex": 8,
         "headingText": "Final selection",
         "variant": "final_cta",
@@ -39,12 +91,17 @@
     ]
   },
   "autophix-7910-vs-foxwell-nt530": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 856,
+    "h2Count": 7,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 2,
-        "headingText": "Foxwell NT530 strengths",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "AUTOPHIX 7910 strengths",
         "variant": "recommended_equipment",
         "productKeys": [
           "autophix-7910p-plus"
@@ -53,6 +110,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Foxwell NT530 strengths",
+        "variant": "compact_cta",
+        "productKeys": [
+          "autophix-7910p-plus"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time foxwell NT530 strengths matters for aUTOPHIX 7910 vs Foxwell NT530, the practical question is whether AUTOPHIX 7910P+ actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 5,
         "headingText": "Bottom line",
         "variant": "final_cta",
@@ -61,17 +131,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "That makes AUTOPHIX 7910P+ the unit to check last for aUTOPHIX 7910 vs Foxwell NT530: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "If aUTOPHIX 7910 vs Foxwell NT530 points you here, AUTOPHIX 7910P+ is the defensible pick to verify and buy once your exact configuration checks out."
       }
     ]
   },
   "bimmercode-pricing": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 830,
+    "h2Count": 6,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 2,
-        "headingText": "Check compatibility before price",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "The ownership-cost formula",
         "variant": "recommended_equipment",
         "productKeys": [
           "obdlink-cx"
@@ -80,8 +155,9 @@
         "decisionMoment": "compatibility"
       },
       {
-        "anchorIndex": 4,
-        "headingText": "Safety boundary",
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Check compatibility before price",
         "variant": "compact_cta",
         "productKeys": [
           "obdlink-mx-plus"
@@ -91,6 +167,7 @@
         "context": "If you also service non-BMW vehicles or want the widest legislated-protocol coverage in the same chain, the MX+ is the broader-network hardware path this guide already prices — distinct from the focused CX pick."
       },
       {
+        "position": "end",
         "anchorIndex": 5,
         "headingText": "Bottom line",
         "variant": "final_cta",
@@ -104,12 +181,17 @@
     ]
   },
   "bimmercode-vs-carly": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "compatible_adapter",
+    "wordCount": 3510,
+    "h2Count": 14,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 6,
-        "headingText": "Adapter compatibility: OBD fit is not enough",
+        "position": "top",
+        "anchorIndex": 3,
+        "headingText": "BimmerCode vs Carly product scope",
         "variant": "recommended_equipment",
         "productKeys": [
           "obdlink-cx"
@@ -118,6 +200,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 6,
+        "headingText": "Adapter compatibility: OBD fit is not enough",
+        "variant": "compact_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time adapter compatibility: OBD fit is not enough matters for bimmerCode vs Carly, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 13,
         "headingText": "Final decision checklist",
         "variant": "final_cta",
@@ -126,17 +221,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If bimmerCode vs Carly points you here, OBDLink CX is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Having worked through final decision checklist, OBDLink CX is the listing to confirm for bimmerCode vs Carly — match your exact vehicle, market and software before buying."
       }
     ]
   },
   "bimmercode-vs-foxwell-nt530": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "compatible_adapter",
+    "wordCount": 700,
+    "h2Count": 9,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 3,
-        "headingText": "The complete NT530 working chain",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Write the job before choosing the tool",
         "variant": "recommended_equipment",
         "productKeys": [
           "obdlink-cx"
@@ -145,6 +245,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "The complete NT530 working chain",
+        "variant": "compact_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time the complete NT530 working chain matters for bimmerCode vs Foxwell NT530, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 7,
         "headingText": "Task and safety boundary",
         "variant": "final_cta",
@@ -153,15 +266,20 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "That makes OBDLink CX the unit to check last for bimmerCode vs Foxwell NT530: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "If bimmerCode vs Foxwell NT530 points you here, OBDLink CX is the defensible pick to verify and buy once your exact configuration checks out."
       }
     ]
   },
   "bimmercode-vs-protool": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "compatible_adapter",
+    "wordCount": 1213,
+    "h2Count": 9,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
+        "position": "top",
         "anchorIndex": 3,
         "headingText": "Platform can settle the decision early",
         "variant": "recommended_equipment",
@@ -172,6 +290,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 4,
+        "headingText": "Cost: price the required scope, not the biggest bundle",
+        "variant": "compact_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time cost: price the required scope, not the biggest bundle matters for bimmerCode vs ProTool, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 8,
         "headingText": "Bottom line",
         "variant": "final_cta",
@@ -180,17 +311,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through bottom line, OBDLink CX is the listing to confirm for bimmerCode vs ProTool — match your exact vehicle, market and software before buying."
+        "context": "That makes OBDLink CX the unit to check last for bimmerCode vs ProTool: confirm your BMW or MINI, platform and required function on the current listing."
       }
     ]
   },
   "bimmerlink-adapter": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 1420,
+    "h2Count": 10,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 3,
-        "headingText": "Third gate: iOS and Android do not accept every path equally",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "First gate: is the car in BimmerLink's supported scope?",
         "variant": "recommended_equipment",
         "productKeys": [
           "obdlink-cx"
@@ -199,8 +335,9 @@
         "decisionMoment": "compatibility"
       },
       {
-        "anchorIndex": 6,
-        "headingText": "OBDLink CX, MX+, and other listed choices",
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "Third gate: iOS and Android do not accept every path equally",
         "variant": "compact_cta",
         "productKeys": [
           "obdlink-mx-plus"
@@ -210,6 +347,7 @@
         "context": "For garages that also work outside the BMW/MINI lane, MX+ is the single broader-network alternative to the focused CX pick — same BimmerLink workflow, wider protocol reach."
       },
       {
+        "position": "end",
         "anchorIndex": 9,
         "headingText": "Safety and ownership",
         "variant": "final_cta",
@@ -223,12 +361,17 @@
     ]
   },
   "bimmerlink-pricing": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 843,
+    "h2Count": 9,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 3,
-        "headingText": "Where the adapter changes the budget",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "The price answer, with the date attached",
         "variant": "recommended_equipment",
         "productKeys": [
           "obdlink-cx"
@@ -237,6 +380,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "Where the adapter changes the budget",
+        "variant": "compact_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time where the adapter changes the budget matters for bimmerLink Pricing, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 7,
         "headingText": "Pricing and compatibility note",
         "variant": "final_cta",
@@ -245,17 +401,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through pricing and compatibility note, OBDLink CX is the listing to confirm for bimmerLink Pricing — match your exact vehicle, market and software before buying."
+        "context": "That makes OBDLink CX the unit to check last for bimmerLink Pricing: confirm your BMW or MINI, platform and required function on the current listing."
       }
     ]
   },
   "bimmerlink-vs-bimmer-tool": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "compatible_adapter",
+    "wordCount": 1034,
+    "h2Count": 6,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 2,
-        "headingText": "Compare the diagnostics you will actually run",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Match the platform and adapter before anything else",
         "variant": "recommended_equipment",
         "productKeys": [
           "obdlink-cx"
@@ -264,6 +425,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Compare the diagnostics you will actually run",
+        "variant": "compact_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time compare the diagnostics you will actually run matters for bimmerLink vs bimmer-tool, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 5,
         "headingText": "Which app for which owner?",
         "variant": "final_cta",
@@ -272,17 +446,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through which app for which owner?, OBDLink CX is the listing to confirm for bimmerLink vs bimmer-tool — match your exact vehicle, market and software before buying."
+        "context": "That makes OBDLink CX the unit to check last for bimmerLink vs bimmer-tool: confirm your BMW or MINI, platform and required function on the current listing."
       }
     ]
   },
   "bimmerlink-vs-carly": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "compatible_adapter",
+    "wordCount": 1415,
+    "h2Count": 9,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 3,
-        "headingText": "Capability comparison by job",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "What BimmerLink is built around",
         "variant": "recommended_equipment",
         "productKeys": [
           "obdlink-cx"
@@ -291,6 +470,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "Capability comparison by job",
+        "variant": "compact_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time capability comparison by job matters for bimmerLink vs Carly, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 7,
         "headingText": "Which app to choose",
         "variant": "final_cta",
@@ -299,17 +491,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through which app to choose, OBDLink CX is the listing to confirm for bimmerLink vs Carly — match your exact vehicle, market and software before buying."
+        "context": "That makes OBDLink CX the unit to check last for bimmerLink vs Carly: confirm your BMW or MINI, platform and required function on the current listing."
       }
     ]
   },
   "bimmerlink-vs-foxwell-nt530": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "compatible_adapter",
+    "wordCount": 841,
+    "h2Count": 10,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 4,
-        "headingText": "Cost belongs to the whole toolchain",
+        "position": "top",
+        "anchorIndex": 2,
+        "headingText": "Two purchases with different boundaries",
         "variant": "recommended_equipment",
         "productKeys": [
           "obdlink-cx"
@@ -318,6 +515,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "Capability matrix without category blur",
+        "variant": "compact_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time capability matrix without category blur matters for bimmerLink vs Foxwell NT530, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 8,
         "headingText": "Coverage and test boundary",
         "variant": "final_cta",
@@ -326,17 +536,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If bimmerLink vs Foxwell NT530 points you here, OBDLink CX is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Having worked through coverage and test boundary, OBDLink CX is the listing to confirm for bimmerLink vs Foxwell NT530 — match your exact vehicle, market and software before buying."
       }
     ]
   },
   "bimmerlink-vs-protool": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "compatible_adapter",
+    "wordCount": 838,
+    "h2Count": 9,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 4,
-        "headingText": "Price the needed license boundary",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Scope comparison",
         "variant": "recommended_equipment",
         "productKeys": [
           "obdlink-cx"
@@ -345,6 +560,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Platform is a hard gate",
+        "variant": "compact_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time platform is a hard gate matters for bimmerLink vs ProTool, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 8,
         "headingText": "Bottom line",
         "variant": "final_cta",
@@ -353,17 +581,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If bimmerLink vs ProTool points you here, OBDLink CX is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Having worked through bottom line, OBDLink CX is the listing to confirm for bimmerLink vs ProTool — match your exact vehicle, market and software before buying."
       }
     ]
   },
   "bmw-battery-drain-diagnostic-tool": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 1555,
+    "h2Count": 8,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 2,
-        "headingText": "Sleep is a state, not a stopwatch trick",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "What BMW scan data contributes",
         "variant": "recommended_equipment",
         "productKeys": [
           "fluke-88v"
@@ -372,6 +605,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Sleep is a state, not a stopwatch trick",
+        "variant": "compact_cta",
+        "productKeys": [
+          "fluke-88v"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time sleep is a state, not a stopwatch trick matters for bMW Battery Drain Diagnostic Tool, the practical question is whether Fluke 88V Deluxe Automotive Multimeter actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 6,
         "headingText": "The decision rule",
         "variant": "final_cta",
@@ -380,15 +626,20 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through the decision rule, Fluke 88V Deluxe Automotive Multimeter is the listing to confirm for bMW Battery Drain Diagnostic Tool — match your exact vehicle, market and software before buying."
+        "context": "That makes Fluke 88V Deluxe Automotive Multimeter the unit to check last for bMW Battery Drain Diagnostic Tool: confirm your BMW or MINI, platform and required function on the current listing."
       }
     ]
   },
   "bmw-battery-registration-scanner": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "compatible_adapter",
+    "wordCount": 1789,
+    "h2Count": 9,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
+        "position": "top",
         "anchorIndex": 2,
         "headingText": "1. BimmerLink plus a supported adapter",
         "variant": "recommended_equipment",
@@ -399,6 +650,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "2. Carly Premium plus the Universal Scanner",
+        "variant": "compact_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time 2. Carly Premium plus the Universal Scanner matters for bMW Battery Registration Scanner, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 8,
         "headingText": "Final decision",
         "variant": "final_cta",
@@ -407,17 +671,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "That makes OBDLink CX the unit to check last for bMW Battery Registration Scanner: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "If bMW Battery Registration Scanner points you here, OBDLink CX is the defensible pick to verify and buy once your exact configuration checks out."
       }
     ]
   },
   "bmw-bidirectional-scan-tool-functions": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 1757,
+    "h2Count": 11,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 4,
-        "headingText": "Current candidates to shortlist",
+        "position": "top",
+        "anchorIndex": 2,
+        "headingText": "A responsible active-test loop",
         "variant": "recommended_equipment",
         "productKeys": [
           "autel-mk900-bt"
@@ -426,6 +695,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "Platform examples and their limits",
+        "variant": "compact_cta",
+        "productKeys": [
+          "autel-mk900-bt"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time platform examples and their limits matters for bMW Bidirectional Scan Tools, the practical question is whether Autel MaxiCOM MK900-BT actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 9,
         "headingText": "Purchase rule",
         "variant": "final_cta",
@@ -434,17 +716,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If bMW Bidirectional Scan Tools points you here, Autel MaxiCOM MK900-BT is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Having worked through purchase rule, Autel MaxiCOM MK900-BT is the listing to confirm for bMW Bidirectional Scan Tools — match your exact vehicle, market and software before buying."
       }
     ]
   },
   "bmw-brake-bleed-scan-tool": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "exact_product",
+    "wordCount": 1542,
+    "h2Count": 9,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 3,
-        "headingText": "Do not confuse access, reset, and actuation",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Let the VIN-specific instruction control the decision",
         "variant": "product_card",
         "productKeys": [
           "autel-md909-pro"
@@ -453,6 +740,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Prove five dimensions of coverage",
+        "variant": "compact_cta",
+        "productKeys": [
+          "autel-md909-pro"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time prove five dimensions of coverage matters for bMW Brake Bleed Scan Tool, the practical question is whether Autel MaxiDiag MD909 Pro actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 7,
         "headingText": "The correct purchase test",
         "variant": "final_cta",
@@ -461,17 +761,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through the correct purchase test, Autel MaxiDiag MD909 Pro is the listing to confirm for bMW Brake Bleed Scan Tool — match your exact vehicle, market and software before buying."
+        "context": "That makes Autel MaxiDiag MD909 Pro the unit to check last for bMW Brake Bleed Scan Tool: confirm your BMW or MINI, platform and required function on the current listing."
       }
     ]
   },
   "bmw-code-reader-vs-scan-tool": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "comparison",
+    "wordCount": 1729,
+    "h2Count": 11,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 4,
-        "headingText": "Reading a code is different from using live data",
+        "position": "top",
+        "anchorIndex": 2,
+        "headingText": "What “BMW-aware” must establish",
         "variant": "comparison_card",
         "productKeys": [
           "obdlink-cx",
@@ -481,17 +786,19 @@
         "decisionMoment": "comparison"
       },
       {
-        "anchorIndex": 8,
-        "headingText": "Capability-by-job buyer scenarios",
+        "position": "middle",
+        "anchorIndex": 4,
+        "headingText": "Reading a code is different from using live data",
         "variant": "compact_cta",
         "productKeys": [
           "autel-ds808s-bt"
         ],
         "role": "Option in focus",
         "decisionMoment": "technical",
-        "context": "For capability-by-job buyer scenarios in bMW Code Reader vs Scan Tool, Autel MaxiDAS DS808S-BT is the specific unit to price and check against your exact BMW, app and function."
+        "context": "For reading a code is different from using live data in bMW Code Reader vs Scan Tool, Autel MaxiDAS DS808S-BT is the specific unit to price and check against your exact BMW, app and function."
       },
       {
+        "position": "end",
         "anchorIndex": 10,
         "headingText": "Bottom line",
         "variant": "final_cta",
@@ -505,10 +812,15 @@
     ]
   },
   "bmw-coding-vs-programming": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 1134,
+    "h2Count": 7,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
+        "position": "top",
         "anchorIndex": 1,
         "headingText": "Classify the requested outcome before choosing software",
         "variant": "recommended_equipment",
@@ -519,6 +831,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "What common tool classes actually own",
+        "variant": "compact_cta",
+        "productKeys": [
+          "schumacher-inc100"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time what common tool classes actually own matters for bMW Coding vs Programming, the practical question is whether Schumacher Electric INC100 actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 5,
         "headingText": "The decision in one line",
         "variant": "final_cta",
@@ -527,17 +852,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If bMW Coding vs Programming points you here, Schumacher Electric INC100 is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Having worked through the decision in one line, Schumacher Electric INC100 is the listing to confirm for bMW Coding vs Programming — match your exact vehicle, market and software before buying."
       }
     ]
   },
   "bmw-diagnostic-software-windows": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 1628,
+    "h2Count": 9,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 2,
-        "headingText": "Where legacy and engineering names fit",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "The supported ISTA route",
         "variant": "recommended_equipment",
         "productKeys": [
           "schumacher-inc100"
@@ -546,6 +876,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Where legacy and engineering names fit",
+        "variant": "compact_cta",
+        "productKeys": [
+          "schumacher-inc100"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time where legacy and engineering names fit matters for bMW Diagnostic Software for Windows 10 and 11, the practical question is whether Schumacher Electric INC100 actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 7,
         "headingText": "The practical shortlist",
         "variant": "final_cta",
@@ -554,17 +897,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "That makes Schumacher Electric INC100 the unit to check last for bMW Diagnostic Software for Windows 10 and 11: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "If bMW Diagnostic Software for Windows 10 and 11 points you here, Schumacher Electric INC100 is the defensible pick to verify and buy once your exact configuration checks out."
       }
     ]
   },
   "bmw-dpf-regeneration-scan-tool": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 1291,
+    "h2Count": 8,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 3,
-        "headingText": "Check blocking faults before you think about regeneration",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Prove supported BMW models and engines",
         "variant": "recommended_equipment",
         "productKeys": [
           "obdlink-cx"
@@ -573,6 +921,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Read the live values that explain the filter",
+        "variant": "compact_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time read the live values that explain the filter matters for bMW DPF Regeneration Scan Tool, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 7,
         "headingText": "Choose the tool and know when to escalate",
         "variant": "final_cta",
@@ -581,17 +942,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If bMW DPF Regeneration Scan Tool points you here, OBDLink CX is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Having worked through choose the tool and know when to escalate, OBDLink CX is the listing to confirm for bMW DPF Regeneration Scan Tool — match your exact vehicle, market and software before buying."
       }
     ]
   },
   "bmw-electric-parking-brake-service-mode-scanner": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "exact_product",
+    "wordCount": 1411,
+    "h2Count": 9,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 3,
-        "headingText": "Preserve evidence before changing state",
+        "position": "top",
+        "anchorIndex": 2,
+        "headingText": "Four locks must open before the scanner command",
         "variant": "product_card",
         "productKeys": [
           "autel-md909-pro"
@@ -600,6 +966,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "Preserve evidence before changing state",
+        "variant": "compact_cta",
+        "productKeys": [
+          "autel-md909-pro"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time preserve evidence before changing state matters for bMW Electric Parking Brake Service Mode Scanner, the practical question is whether Autel MaxiDiag MD909 Pro actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 8,
         "headingText": "The selection verdict",
         "variant": "final_cta",
@@ -608,17 +987,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through the selection verdict, Autel MaxiDiag MD909 Pro is the listing to confirm for bMW Electric Parking Brake Service Mode Scanner — match your exact vehicle, market and software before buying."
+        "context": "That makes Autel MaxiDiag MD909 Pro the unit to check last for bMW Electric Parking Brake Service Mode Scanner: confirm your BMW or MINI, platform and required function on the current listing."
       }
     ]
   },
   "bmw-electronic-water-pump-diagnostic-tool": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 1234,
+    "h2Count": 6,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 2,
-        "headingText": "Treat activation as one controlled observation",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Build evidence before requesting an activation",
         "variant": "recommended_equipment",
         "productKeys": [
           "innova-5610-bundle"
@@ -627,6 +1011,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Treat activation as one controlled observation",
+        "variant": "compact_cta",
+        "productKeys": [
+          "innova-5610-bundle"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time treat activation as one controlled observation matters for bMW Electronic Water-Pump Diagnostic Tool, the practical question is whether Innova 5610 + 3380 bundle actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 5,
         "headingText": "A purchase test for the diagnostic tool",
         "variant": "final_cta",
@@ -635,17 +1032,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If bMW Electronic Water-Pump Diagnostic Tool points you here, Innova 5610 + 3380 bundle is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Having worked through a purchase test for the diagnostic tool, Innova 5610 + 3380 bundle is the listing to confirm for bMW Electronic Water-Pump Diagnostic Tool — match your exact vehicle, market and software before buying."
       }
     ]
   },
   "bmw-enet-vs-bluetooth-obd": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "compatible_adapter",
+    "wordCount": 1466,
+    "h2Count": 11,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 4,
-        "headingText": "App choice can reverse the answer",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "What ENET means in this decision",
         "variant": "recommended_equipment",
         "productKeys": [
           "obdlink-cx"
@@ -654,6 +1056,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "What Bluetooth OBD means",
+        "variant": "compact_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time what Bluetooth OBD means matters for bMW ENET vs Bluetooth OBD, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 10,
         "headingText": "The practical answer",
         "variant": "final_cta",
@@ -662,15 +1077,20 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "That makes OBDLink CX the unit to check last for bMW ENET vs Bluetooth OBD: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "If bMW ENET vs Bluetooth OBD points you here, OBDLink CX is the defensible pick to verify and buy once your exact configuration checks out."
       }
     ]
   },
   "bmw-f-series-vs-g-series-obd-adapter": {
     "classification": "TWO_PLACEMENTS",
     "articleType": "compatible_adapter",
+    "wordCount": 549,
+    "h2Count": 4,
+    "isLong": false,
+    "requiredPlacements": 2,
     "placements": [
       {
+        "position": "top",
         "anchorIndex": 1,
         "headingText": "F/G compatibility matrix",
         "variant": "recommended_equipment",
@@ -681,6 +1101,7 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "end",
         "anchorIndex": 3,
         "headingText": "Safety and bottom line",
         "variant": "final_cta",
@@ -694,12 +1115,17 @@
     ]
   },
   "bmw-frm-module-diagnostic-tool": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 1323,
+    "h2Count": 7,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 2,
-        "headingText": "Separate supply and network evidence from module blame",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Use the whole-vehicle scan as topology evidence",
         "variant": "recommended_equipment",
         "productKeys": [
           "fluke-88v"
@@ -708,6 +1134,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Separate supply and network evidence from module blame",
+        "variant": "compact_cta",
+        "productKeys": [
+          "fluke-88v"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time separate supply and network evidence from module blame matters for bMW FRM Module Diagnostic Tool, the practical question is whether Fluke 88V Deluxe Automotive Multimeter actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 6,
         "headingText": "The diagnostic-tool purchase rule",
         "variant": "final_cta",
@@ -716,15 +1155,20 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If bMW FRM Module Diagnostic Tool points you here, Fluke 88V Deluxe Automotive Multimeter is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Having worked through the diagnostic-tool purchase rule, Fluke 88V Deluxe Automotive Multimeter is the listing to confirm for bMW FRM Module Diagnostic Tool — match your exact vehicle, market and software before buying."
       }
     ]
   },
   "bmw-icom-vs-enet": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 1526,
+    "h2Count": 10,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
+        "position": "top",
         "anchorIndex": 2,
         "headingText": "When ICOM is the defensible choice",
         "variant": "recommended_equipment",
@@ -735,6 +1179,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "When ENET can be the cleaner path",
+        "variant": "compact_cta",
+        "productKeys": [
+          "schumacher-inc100"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time when ENET can be the cleaner path matters for bMW ICOM vs ENET, the practical question is whether Schumacher Electric INC100 actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 9,
         "headingText": "The verdict",
         "variant": "final_cta",
@@ -743,17 +1200,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If bMW ICOM vs ENET points you here, Schumacher Electric INC100 is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Having worked through the verdict, Schumacher Electric INC100 is the listing to confirm for bMW ICOM vs ENET — match your exact vehicle, market and software before buying."
       }
     ]
   },
   "bmw-icom-vs-k-dcan": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 775,
+    "h2Count": 7,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 2,
-        "headingText": "What ICOM changes",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "What K+DCAN is good at",
         "variant": "recommended_equipment",
         "productKeys": [
           "schumacher-inc100"
@@ -762,6 +1224,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "What ICOM changes",
+        "variant": "compact_cta",
+        "productKeys": [
+          "schumacher-inc100"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time what ICOM changes matters for bMW ICOM vs K+DCAN, the practical question is whether Schumacher Electric INC100 actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 5,
         "headingText": "Bottom line",
         "variant": "final_cta",
@@ -770,17 +1245,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If bMW ICOM vs K+DCAN points you here, Schumacher Electric INC100 is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Having worked through bottom line, Schumacher Electric INC100 is the listing to confirm for bMW ICOM vs K+DCAN — match your exact vehicle, market and software before buying."
       }
     ]
   },
   "bmw-injector-coding-tool": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "exact_product",
+    "wordCount": 1576,
+    "h2Count": 8,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 2,
-        "headingText": "Keep injector identity tied to the physical cylinder",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Decide whether code entry is part of this repair",
         "variant": "product_card",
         "productKeys": [
           "autel-md909-pro"
@@ -789,6 +1269,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Keep injector identity tied to the physical cylinder",
+        "variant": "compact_cta",
+        "productKeys": [
+          "autel-md909-pro"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time keep injector identity tied to the physical cylinder matters for bMW Injector Coding Tool, the practical question is whether Autel MaxiDiag MD909 Pro actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 6,
         "headingText": "The decision",
         "variant": "final_cta",
@@ -797,17 +1290,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "That makes Autel MaxiDiag MD909 Pro the unit to check last for bMW Injector Coding Tool: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "If bMW Injector Coding Tool points you here, Autel MaxiDiag MD909 Pro is the defensible pick to verify and buy once your exact configuration checks out."
       }
     ]
   },
   "bmw-no-communication-with-obd-scanner": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 1558,
+    "h2Count": 8,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 3,
-        "headingText": "Layer 3: gateway and protocol scope",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Layer 1: connector and tool power",
         "variant": "recommended_equipment",
         "productKeys": [
           "fluke-88v"
@@ -816,6 +1314,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "Layer 3: gateway and protocol scope",
+        "variant": "compact_cta",
+        "productKeys": [
+          "fluke-88v"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time layer 3: gateway and protocol scope matters for bMW No Communication With an OBD Scanner, the practical question is whether Fluke 88V Deluxe Automotive Multimeter actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 6,
         "headingText": "When replacement becomes a rational hypothesis",
         "variant": "final_cta",
@@ -824,17 +1335,67 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If bMW No Communication With an OBD Scanner points you here, Fluke 88V Deluxe Automotive Multimeter is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Having worked through when replacement becomes a rational hypothesis, Fluke 88V Deluxe Automotive Multimeter is the listing to confirm for bMW No Communication With an OBD Scanner — match your exact vehicle, market and software before buying."
+      }
+    ]
+  },
+  "bmw-parking-sensor-diagnostic-tool": {
+    "classification": "THREE_PLACEMENTS",
+    "articleType": "recommended_equipment",
+    "wordCount": 1166,
+    "h2Count": 8,
+    "isLong": true,
+    "requiredPlacements": 3,
+    "placements": [
+      {
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Reach the module — the step generic readers miss",
+        "variant": "recommended_equipment",
+        "productKeys": [
+          "autel-mk900-bt"
+        ],
+        "role": "Relevant equipment",
+        "decisionMoment": "compatibility"
+      },
+      {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Read the fault code for the exact sensor",
+        "variant": "compact_cta",
+        "productKeys": [
+          "autel-mk900-bt"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time read the fault code for the exact sensor matters for bMW Parking Sensor Diagnostic Tools, the practical question is whether Autel MaxiCOM MK900-BT actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
+        "anchorIndex": 7,
+        "headingText": "Choose the tool and verify before replacing",
+        "variant": "final_cta",
+        "productKeys": [
+          "autel-mk900-bt"
+        ],
+        "role": "Final pick to verify",
+        "decisionMoment": "final_recommendation",
+        "context": "Having worked through choose the tool and verify before replacing, Autel MaxiCOM MK900-BT is the listing to confirm for bMW Parking Sensor Diagnostic Tools — match your exact vehicle, market and software before buying."
       }
     ]
   },
   "bmw-ride-height-calibration-scan-tool": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 1444,
+    "h2Count": 9,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 3,
-        "headingText": "The controlled measurement environment",
+        "position": "top",
+        "anchorIndex": 2,
+        "headingText": "When calibration is appropriate",
         "variant": "recommended_equipment",
         "productKeys": [
           "autel-maxisys-ultra"
@@ -843,6 +1404,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "The controlled measurement environment",
+        "variant": "compact_cta",
+        "productKeys": [
+          "autel-maxisys-ultra"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time the controlled measurement environment matters for bMW Ride-Height Calibration Scan Tool, the practical question is whether Autel MaxiSYS Ultra actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 8,
         "headingText": "The purchase rule",
         "variant": "final_cta",
@@ -851,17 +1425,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If bMW Ride-Height Calibration Scan Tool points you here, Autel MaxiSYS Ultra is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Having worked through the purchase rule, Autel MaxiSYS Ultra is the listing to confirm for bMW Ride-Height Calibration Scan Tool — match your exact vehicle, market and software before buying."
       }
     ]
   },
   "bmw-scanner-abs-airbag-codes": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 1655,
+    "h2Count": 11,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 4,
-        "headingText": "Three candidates worth shortlisting",
+        "position": "top",
+        "anchorIndex": 2,
+        "headingText": "Five levels of access that listings often collapse",
         "variant": "recommended_equipment",
         "productKeys": [
           "autel-mx900"
@@ -870,6 +1449,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 4,
+        "headingText": "Three candidates worth shortlisting",
+        "variant": "compact_cta",
+        "productKeys": [
+          "autel-mx900"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time three candidates worth shortlisting matters for how to Choose a BMW Scanner for ABS and Airbag Codes, the practical question is whether Autel MaxiCheck MX900 actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 9,
         "headingText": "Final buying rule",
         "variant": "final_cta",
@@ -878,17 +1470,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If how to Choose a BMW Scanner for ABS and Airbag Codes points you here, Autel MaxiCheck MX900 is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Having worked through final buying rule, Autel MaxiCheck MX900 is the listing to confirm for how to Choose a BMW Scanner for ABS and Airbag Codes — match your exact vehicle, market and software before buying."
       }
     ]
   },
   "bmw-scanner-for-used-car-inspection": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "exact_product",
+    "wordCount": 1576,
+    "h2Count": 9,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 3,
-        "headingText": "Compare status, timing, and recurrence",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Understand the two diagnostic layers",
         "variant": "product_card",
         "productKeys": [
           "autel-ds808s-bt"
@@ -897,6 +1494,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Read readiness without inventing a story",
+        "variant": "compact_cta",
+        "productKeys": [
+          "autel-ds808s-bt"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time read readiness without inventing a story matters for bMW Scanner for a Used-Car Inspection, the practical question is whether Autel MaxiDAS DS808S-BT actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 7,
         "headingText": "Use a simple purchase rule",
         "variant": "final_cta",
@@ -905,17 +1515,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through use a simple purchase rule, Autel MaxiDAS DS808S-BT is the listing to confirm for bMW Scanner for a Used-Car Inspection — match your exact vehicle, market and software before buying."
+        "context": "That makes Autel MaxiDAS DS808S-BT the unit to check last for bMW Scanner for a Used-Car Inspection: confirm your BMW or MINI, platform and required function on the current listing."
       }
     ]
   },
   "bmw-scanner-without-subscription": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 1539,
+    "h2Count": 8,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 3,
-        "headingText": "Autel MK808S: installed capability and new coverage are different",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Start with the BMW job, not the scanner category",
         "variant": "recommended_equipment",
         "productKeys": [
           "innova-5610-bundle"
@@ -924,6 +1539,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Foxwell NT530 Plus: verify the brand package and current terms",
+        "variant": "compact_cta",
+        "productKeys": [
+          "innova-5610-bundle"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time foxwell NT530 Plus: verify the brand package and current terms matters for bMW Scanner Without a Subscription, the practical question is whether Innova 5610 + 3380 bundle actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 7,
         "headingText": "The buying decision",
         "variant": "final_cta",
@@ -932,17 +1560,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through the buying decision, Innova 5610 + 3380 bundle is the listing to confirm for bMW Scanner Without a Subscription — match your exact vehicle, market and software before buying."
+        "context": "That makes Innova 5610 + 3380 bundle the unit to check last for bMW Scanner Without a Subscription: confirm your BMW or MINI, platform and required function on the current listing."
       }
     ]
   },
   "bmw-service-reset-tool": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "compatible_adapter",
+    "wordCount": 1223,
+    "h2Count": 7,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 2,
-        "headingText": "Why a brake-service reset can refuse to complete",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "When the instrument cluster is the sensible first method",
         "variant": "recommended_equipment",
         "productKeys": [
           "obdlink-cx"
@@ -951,6 +1584,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Why a brake-service reset can refuse to complete",
+        "variant": "compact_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time why a brake-service reset can refuse to complete matters for bMW Service Reset Tool Guide, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 5,
         "headingText": "What to buy",
         "variant": "final_cta",
@@ -959,17 +1605,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "That makes OBDLink CX the unit to check last for bMW Service Reset Tool Guide: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "If bMW Service Reset Tool Guide points you here, OBDLink CX is the defensible pick to verify and buy once your exact configuration checks out."
       }
     ]
   },
   "bmw-steering-angle-sensor-calibration-tool": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 1521,
+    "h2Count": 8,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 2,
-        "headingText": "Build a four-coordinate qualification",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Calibration, diagnosis and alignment are different jobs",
         "variant": "recommended_equipment",
         "productKeys": [
           "autel-mx808s"
@@ -978,6 +1629,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Build a four-coordinate qualification",
+        "variant": "compact_cta",
+        "productKeys": [
+          "autel-mx808s"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time build a four-coordinate qualification matters for bMW Steering Angle Sensor Calibration, the practical question is whether Autel MaxiCheck MX808S actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 6,
         "headingText": "The handoff rule",
         "variant": "final_cta",
@@ -986,17 +1650,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through the handoff rule, Autel MaxiCheck MX808S is the listing to confirm for bMW Steering Angle Sensor Calibration — match your exact vehicle, market and software before buying."
+        "context": "That makes Autel MaxiCheck MX808S the unit to check last for bMW Steering Angle Sensor Calibration: confirm your BMW or MINI, platform and required function on the current listing."
       }
     ]
   },
   "bmw-tpms-diagnostic-tool": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "comparison",
+    "wordCount": 1584,
+    "h2Count": 9,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 3,
-        "headingText": "Diagnose a warning before buying a programmer",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Three tool classes touch three different layers",
         "variant": "comparison_card",
         "productKeys": [
           "autel-mx808s",
@@ -1006,17 +1675,19 @@
         "decisionMoment": "comparison"
       },
       {
-        "anchorIndex": 6,
-        "headingText": "Build a four-record coverage proof",
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Read exact-SKU tables, not brand summaries",
         "variant": "compact_cta",
         "productKeys": [
           "autel-mx808s-ts"
         ],
         "role": "Option in focus",
         "decisionMoment": "technical",
-        "context": "This is where Autel MaxiCheck MX808S-TS earns its place in bMW TPMS Tools: confirm build a four-record coverage proof maps to your vehicle and software before you commit."
+        "context": "This is where Autel MaxiCheck MX808S-TS earns its place in bMW TPMS Tools: confirm read exact-SKU tables, not brand summaries maps to your vehicle and software before you commit."
       },
       {
+        "position": "end",
         "anchorIndex": 7,
         "headingText": "Three practical buying profiles",
         "variant": "final_cta",
@@ -1030,12 +1701,17 @@
     ]
   },
   "bmw-transfer-case-adaptation-reset-tool": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 1606,
+    "h2Count": 8,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 2,
-        "headingText": "Build a coverage proof, not a feature-list impression",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Diagnose the complaint before shopping for a reset",
         "variant": "recommended_equipment",
         "productKeys": [
           "autel-maxisys-ultra"
@@ -1044,6 +1720,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Build a coverage proof, not a feature-list impression",
+        "variant": "compact_cta",
+        "productKeys": [
+          "autel-maxisys-ultra"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time build a coverage proof, not a feature-list impression matters for bMW Transfer Case Adaptation Reset Tool, the practical question is whether Autel MaxiSYS Ultra actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 6,
         "headingText": "The buying decision",
         "variant": "final_cta",
@@ -1052,15 +1741,20 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If bMW Transfer Case Adaptation Reset Tool points you here, Autel MaxiSYS Ultra is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Having worked through the buying decision, Autel MaxiSYS Ultra is the listing to confirm for bMW Transfer Case Adaptation Reset Tool — match your exact vehicle, market and software before buying."
       }
     ]
   },
   "bmw-vanos-diagnostic-tool": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 1201,
+    "h2Count": 7,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
+        "position": "top",
         "anchorIndex": 2,
         "headingText": "Compare target versus actual angle",
         "variant": "recommended_equipment",
@@ -1071,6 +1765,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "Use activation and guided tests",
+        "variant": "compact_cta",
+        "productKeys": [
+          "autel-ds808s-bt"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time use activation and guided tests matters for bMW VANOS Diagnostic Tools, the practical question is whether Autel MaxiDAS DS808S-BT actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 6,
         "headingText": "Capture the evidence and know when to escalate",
         "variant": "final_cta",
@@ -1079,15 +1786,20 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through capture the evidence and know when to escalate, Autel MaxiDAS DS808S-BT is the listing to confirm for bMW VANOS Diagnostic Tools — match your exact vehicle, market and software before buying."
+        "context": "That makes Autel MaxiDAS DS808S-BT the unit to check last for bMW VANOS Diagnostic Tools: confirm your BMW or MINI, platform and required function on the current listing."
       }
     ]
   },
   "bmw-wheel-speed-sensor-diagnostic-tool": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 1083,
+    "h2Count": 7,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
+        "position": "top",
         "anchorIndex": 2,
         "headingText": "Compare four-corner live data",
         "variant": "recommended_equipment",
@@ -1098,6 +1810,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "Gather static and dynamic evidence safely",
+        "variant": "compact_cta",
+        "productKeys": [
+          "autel-mx900"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time gather static and dynamic evidence safely matters for bMW Wheel-Speed Sensor Diagnostics, the practical question is whether Autel MaxiCheck MX900 actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 6,
         "headingText": "Choose the tool and know the stop conditions",
         "variant": "final_cta",
@@ -1106,17 +1831,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If bMW Wheel-Speed Sensor Diagnostics points you here, Autel MaxiCheck MX900 is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Having worked through choose the tool and know the stop conditions, Autel MaxiCheck MX900 is the listing to confirm for bMW Wheel-Speed Sensor Diagnostics — match your exact vehicle, market and software before buying."
       }
     ]
   },
   "carly-subscription-cost": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 1381,
+    "h2Count": 8,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 4,
-        "headingText": "Optional packages can change the comparison",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Start with the acquisition channel",
         "variant": "recommended_equipment",
         "productKeys": [
           "obdlink-cx"
@@ -1125,6 +1855,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Separate hardware from software",
+        "variant": "compact_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time separate hardware from software matters for carly Subscription Cost, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 7,
         "headingText": "The accurate answer",
         "variant": "final_cta",
@@ -1133,17 +1876,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through the accurate answer, OBDLink CX is the listing to confirm for carly Subscription Cost — match your exact vehicle, market and software before buying."
+        "context": "That makes OBDLink CX the unit to check last for carly Subscription Cost: confirm your BMW or MINI, platform and required function on the current listing."
       }
     ]
   },
   "carly-vs-foxwell-nt530": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 794,
+    "h2Count": 10,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 3,
-        "headingText": "NT530’s hardware-first structure",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "A decision shaped by year two",
         "variant": "recommended_equipment",
         "productKeys": [
           "autophix-7910p-plus"
@@ -1152,6 +1900,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "NT530’s hardware-first structure",
+        "variant": "compact_cta",
+        "productKeys": [
+          "autophix-7910p-plus"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time nT530’s hardware-first structure matters for carly vs Foxwell NT530, the practical question is whether AUTOPHIX 7910P+ actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 8,
         "headingText": "Pricing and coverage note",
         "variant": "final_cta",
@@ -1160,17 +1921,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through pricing and coverage note, AUTOPHIX 7910P+ is the listing to confirm for carly vs Foxwell NT530 — match your exact vehicle, market and software before buying."
+        "context": "That makes AUTOPHIX 7910P+ the unit to check last for carly vs Foxwell NT530: confirm your BMW or MINI, platform and required function on the current listing."
       }
     ]
   },
   "creator-c310-plus-vs-foxwell-nt530": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "exact_product",
+    "wordCount": 1430,
+    "h2Count": 9,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 3,
-        "headingText": "What the Foxwell NT530 evidence supports",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Capability comparison",
         "variant": "product_card",
         "productKeys": [
           "creator-c310-plus"
@@ -1179,6 +1945,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "What the Creator C310+ evidence supports",
+        "variant": "compact_cta",
+        "productKeys": [
+          "creator-c310-plus"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time what the Creator C310+ evidence supports matters for creator C310+ vs Foxwell NT530, the practical question is whether Creator C310+ actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 7,
         "headingText": "Final verdict",
         "variant": "final_cta",
@@ -1187,15 +1966,20 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If creator C310+ vs Foxwell NT530 points you here, Creator C310+ is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Having worked through final verdict, Creator C310+ is the listing to confirm for creator C310+ vs Foxwell NT530 — match your exact vehicle, market and software before buying."
       }
     ]
   },
   "foxwell-nt530-vs-autel-mk808s-bmw": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 1444,
+    "h2Count": 8,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
+        "position": "top",
         "anchorIndex": 2,
         "headingText": "Compare function claims at three levels",
         "variant": "recommended_equipment",
@@ -1206,6 +1990,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "A BMW job scorecard",
+        "variant": "compact_cta",
+        "productKeys": [
+          "autel-mx808s"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time a BMW job scorecard matters for foxwell NT530 Plus vs Autel MK808S for BMW, the practical question is whether Autel MaxiCheck MX808S actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 7,
         "headingText": "The verdict",
         "variant": "final_cta",
@@ -1214,17 +2011,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through the verdict, Autel MaxiCheck MX808S is the listing to confirm for foxwell NT530 Plus vs Autel MK808S for BMW — match your exact vehicle, market and software before buying."
+        "context": "That makes Autel MaxiCheck MX808S the unit to check last for foxwell NT530 Plus vs Autel MK808S for BMW: confirm your BMW or MINI, platform and required function on the current listing."
       }
     ]
   },
   "foxwell-nt530-vs-nt710": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 790,
+    "h2Count": 9,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 3,
-        "headingText": "NT710 as a touch platform",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Compare hardware and entitlement separately",
         "variant": "recommended_equipment",
         "productKeys": [
           "autophix-7910p-plus"
@@ -1233,6 +2035,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "NT710 as a touch platform",
+        "variant": "compact_cta",
+        "productKeys": [
+          "autophix-7910p-plus"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time nT710 as a touch platform matters for foxwell NT530 vs NT710, the practical question is whether AUTOPHIX 7910P+ actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 7,
         "headingText": "Coverage and test boundary",
         "variant": "final_cta",
@@ -1241,17 +2056,112 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "That makes AUTOPHIX 7910P+ the unit to check last for foxwell NT530 vs NT710: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "If foxwell NT530 vs NT710 points you here, AUTOPHIX 7910P+ is the defensible pick to verify and buy once your exact configuration checks out."
+      }
+    ]
+  },
+  "foxwell-nt710-vs-autel-mk900-bmw": {
+    "classification": "THREE_PLACEMENTS",
+    "articleType": "recommended_equipment",
+    "wordCount": 1667,
+    "h2Count": 6,
+    "isLong": true,
+    "requiredPlacements": 3,
+    "placements": [
+      {
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "The Foxwell BMW coding claim contradicts itself",
+        "variant": "recommended_equipment",
+        "productKeys": [
+          "foxwell-nt530"
+        ],
+        "role": "Relevant equipment",
+        "decisionMoment": "compatibility"
+      },
+      {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Where the MK900 is the stronger documented answer",
+        "variant": "compact_cta",
+        "productKeys": [
+          "autel-mk900-bt"
+        ],
+        "role": "Wireless MK900-family alternative",
+        "decisionMoment": "compatibility",
+        "context": "On the Autel side of this comparison, the MaxiCOM MK900-BT is the variant with a verified listing. It is the wireless MK900-family tablet, not the base wired MK900 this article opens on, and Autel documents no coding capability for either — confirm your VIN and the exact function in writing first."
+      },
+      {
+        "position": "end",
+        "anchorIndex": 5,
+        "headingText": "Choosing",
+        "variant": "final_cta",
+        "productKeys": [
+          "foxwell-nt530"
+        ],
+        "role": "Final pick to verify",
+        "decisionMoment": "final_recommendation",
+        "context": "Having worked through choosing, Foxwell NT530 is the listing to confirm for foxwell NT710 vs Autel MK900 for BMW — match your exact vehicle, market and software before buying."
+      }
+    ]
+  },
+  "icarsoft-bmm-v3-vs-foxwell-nt530": {
+    "classification": "THREE_PLACEMENTS",
+    "articleType": "recommended_equipment",
+    "wordCount": 1453,
+    "h2Count": 7,
+    "isLong": true,
+    "requiredPlacements": 3,
+    "placements": [
+      {
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Compare the hardware honestly",
+        "variant": "recommended_equipment",
+        "productKeys": [
+          "foxwell-nt530"
+        ],
+        "role": "Relevant equipment",
+        "decisionMoment": "compatibility"
+      },
+      {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Check system access and BMW software",
+        "variant": "compact_cta",
+        "productKeys": [
+          "foxwell-nt530"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time check system access and BMW software matters for iCarsoft BMM V3.0 vs Foxwell NT530 for BMW, the practical question is whether Foxwell NT530 actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
+        "anchorIndex": 6,
+        "headingText": "Which tool fits which BMW owner?",
+        "variant": "final_cta",
+        "productKeys": [
+          "foxwell-nt530"
+        ],
+        "role": "Final pick to verify",
+        "decisionMoment": "final_recommendation",
+        "context": "Having worked through which tool fits which BMW owner?, Foxwell NT530 is the listing to confirm for iCarsoft BMM V3.0 vs Foxwell NT530 for BMW — match your exact vehicle, market and software before buying."
       }
     ]
   },
   "ista-valvetronic-relearn": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 1252,
+    "h2Count": 7,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 2,
-        "headingText": "Let the fault state decide whether to proceed",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Separate the terms before searching the menu",
         "variant": "recommended_equipment",
         "productKeys": [
           "schumacher-inc100"
@@ -1260,6 +2170,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Let the fault state decide whether to proceed",
+        "variant": "compact_cta",
+        "productKeys": [
+          "schumacher-inc100"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time let the fault state decide whether to proceed matters for iSTA Valvetronic Relearn, the practical question is whether Schumacher Electric INC100 actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 6,
         "headingText": "The responsible ISTA decision",
         "variant": "final_cta",
@@ -1268,17 +2191,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "That makes Schumacher Electric INC100 the unit to check last for iSTA Valvetronic Relearn: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "If iSTA Valvetronic Relearn points you here, Schumacher Electric INC100 is the defensible pick to verify and buy once your exact configuration checks out."
       }
     ]
   },
   "ista-vs-bimmerlink": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "compatible_adapter",
+    "wordCount": 825,
+    "h2Count": 7,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 2,
-        "headingText": "What ISTA adds",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "What BimmerLink owns",
         "variant": "recommended_equipment",
         "productKeys": [
           "obdlink-cx"
@@ -1287,6 +2215,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "What ISTA adds",
+        "variant": "compact_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time what ISTA adds matters for iSTA vs BimmerLink, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 6,
         "headingText": "Bottom line",
         "variant": "final_cta",
@@ -1295,15 +2236,20 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If iSTA vs BimmerLink points you here, OBDLink CX is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Having worked through bottom line, OBDLink CX is the listing to confirm for iSTA vs BimmerLink — match your exact vehicle, market and software before buying."
       }
     ]
   },
   "k-dcan-vs-enet-cable": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 811,
+    "h2Count": 7,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
+        "position": "top",
         "anchorIndex": 1,
         "headingText": "Working comparison",
         "variant": "recommended_equipment",
@@ -1314,6 +2260,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Why “E uses DCAN, F uses ENET” is incomplete",
+        "variant": "compact_cta",
+        "productKeys": [
+          "schumacher-inc100"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time why “E uses DCAN, F uses ENET” is incomplete matters for k+DCAN vs ENET Cable, the practical question is whether Schumacher Electric INC100 actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 6,
         "headingText": "Bottom line",
         "variant": "final_cta",
@@ -1322,17 +2281,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through bottom line, Schumacher Electric INC100 is the listing to confirm for k+DCAN vs ENET Cable — match your exact vehicle, market and software before buying."
+        "context": "That makes Schumacher Electric INC100 the unit to check last for k+DCAN vs ENET Cable: confirm your BMW or MINI, platform and required function on the current listing."
       }
     ]
   },
   "launch-x431-bmw": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "comparison",
+    "wordCount": 1604,
+    "h2Count": 9,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 2,
-        "headingText": "When a professional X-431 tablet earns its cost",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "The BMW-focused compact route",
         "variant": "comparison_card",
         "productKeys": [
           "launch-creader-elite-bmw-v2",
@@ -1342,17 +2306,19 @@
         "decisionMoment": "comparison"
       },
       {
-        "anchorIndex": 5,
-        "headingText": "Ownership cost is a timeline",
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "BMW functions need verb-level evidence",
         "variant": "compact_cta",
         "productKeys": [
           "launch-x431-pro3s-plus"
         ],
         "role": "Option in focus",
         "decisionMoment": "technical",
-        "context": "This is where LAUNCH X-431 PRO3S+ earns its place in launch X431 for BMW: confirm ownership cost is a timeline maps to your vehicle and software before you commit."
+        "context": "This is where LAUNCH X-431 PRO3S+ earns its place in launch X431 for BMW: confirm bMW functions need verb-level evidence maps to your vehicle and software before you commit."
       },
       {
+        "position": "end",
         "anchorIndex": 7,
         "headingText": "Which Launch should a BMW owner choose?",
         "variant": "final_cta",
@@ -1368,8 +2334,13 @@
   "launch-x431-vs-autel-for-bmw": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "comparison",
+    "wordCount": 1362,
+    "h2Count": 7,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
+        "position": "top",
         "anchorIndex": 1,
         "headingText": "Compare the hardware stack, not screen-size trivia",
         "variant": "comparison_card",
@@ -1381,17 +2352,19 @@
         "decisionMoment": "comparison"
       },
       {
-        "anchorIndex": 4,
-        "headingText": "Compare coverage systems and support quality",
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Score exact BMW jobs at command level",
         "variant": "compact_cta",
         "productKeys": [
           "autel-maxisys-ultra"
         ],
         "role": "Option in focus",
         "decisionMoment": "technical",
-        "context": "For compare coverage systems and support quality in launch X-431 vs Autel for BMW, Autel MaxiSYS Ultra is the specific unit to price and check against your exact BMW, app and function."
+        "context": "For score exact BMW jobs at command level in launch X-431 vs Autel for BMW, Autel MaxiSYS Ultra is the specific unit to price and check against your exact BMW, app and function."
       },
       {
+        "position": "end",
         "anchorIndex": 6,
         "headingText": "Which platform fits which BMW shop?",
         "variant": "final_cta",
@@ -1407,8 +2380,13 @@
   "mini-diagnostic-app": {
     "classification": "TWO_PLACEMENTS",
     "articleType": "compatible_adapter",
+    "wordCount": 600,
+    "h2Count": 4,
+    "isLong": false,
+    "requiredPlacements": 2,
     "placements": [
       {
+        "position": "top",
         "anchorIndex": 1,
         "headingText": "Match jobs to evidence",
         "variant": "recommended_equipment",
@@ -1419,6 +2397,7 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "end",
         "anchorIndex": 3,
         "headingText": "Safety and bottom line",
         "variant": "final_cta",
@@ -1434,10 +2413,15 @@
   "obd-app-vs-handheld-scanner": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "comparison",
+    "wordCount": 1339,
+    "h2Count": 8,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 3,
-        "headingText": "Handheld scanners span several categories",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Lock the task before choosing the tool",
         "variant": "comparison_card",
         "productKeys": [
           "obdlink-cx",
@@ -1447,17 +2431,19 @@
         "decisionMoment": "comparison"
       },
       {
-        "anchorIndex": 5,
-        "headingText": "Licensing and updates belong in total cost",
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "The app path has four dependencies",
         "variant": "compact_cta",
         "productKeys": [
           "autel-mx808s"
         ],
         "role": "Option in focus",
         "decisionMoment": "technical",
-        "context": "For licensing and updates belong in total cost in oBD App vs Handheld Scanner, Autel MaxiCheck MX808S is the specific unit to price and check against your exact BMW, app and function."
+        "context": "For the app path has four dependencies in oBD App vs Handheld Scanner, Autel MaxiCheck MX808S is the specific unit to price and check against your exact BMW, app and function."
       },
       {
+        "position": "end",
         "anchorIndex": 7,
         "headingText": "A safe buyer decision",
         "variant": "final_cta",
@@ -1473,10 +2459,15 @@
   "obdlink-cx-vs-lx": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "comparison",
+    "wordCount": 685,
+    "h2Count": 8,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 2,
-        "headingText": "Protocol scope comes after pairing",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Route the host before comparing features",
         "variant": "comparison_card",
         "productKeys": [
           "obdlink-cx",
@@ -1486,17 +2477,19 @@
         "decisionMoment": "comparison"
       },
       {
-        "anchorIndex": 4,
-        "headingText": "Put firmware and existing hardware into total cost",
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Protocol scope comes after pairing",
         "variant": "compact_cta",
         "productKeys": [
           "obdlink-lx"
         ],
         "role": "Option in focus",
         "decisionMoment": "technical",
-        "context": "For put firmware and existing hardware into total cost in oBDLink CX vs LX, OBDLink LX is the specific unit to price and check against your exact BMW, app and function."
+        "context": "For protocol scope comes after pairing in oBDLink CX vs LX, OBDLink LX is the specific unit to price and check against your exact BMW, app and function."
       },
       {
+        "position": "end",
         "anchorIndex": 6,
         "headingText": "Platform evidence note",
         "variant": "final_cta",
@@ -1512,10 +2505,15 @@
   "obdlink-cx-vs-mx-plus": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "comparison",
+    "wordCount": 1386,
+    "h2Count": 11,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 4,
-        "headingText": "BLE, Windows and platform fit",
+        "position": "top",
+        "anchorIndex": 2,
+        "headingText": "Protocol coverage in practical terms",
         "variant": "comparison_card",
         "productKeys": [
           "obdlink-cx",
@@ -1525,17 +2523,19 @@
         "decisionMoment": "comparison"
       },
       {
-        "anchorIndex": 8,
-        "headingText": "Costs beyond the adapter",
+        "position": "middle",
+        "anchorIndex": 4,
+        "headingText": "BLE, Windows and platform fit",
         "variant": "compact_cta",
         "productKeys": [
           "obdlink-mx-plus"
         ],
         "role": "Option in focus",
         "decisionMoment": "technical",
-        "context": "On costs beyond the adapter, OBDLink MX+ is the option to weigh for oBDLink CX vs MX+ — verify current vehicle and app support on its listing."
+        "context": "On bLE, Windows and platform fit, OBDLink MX+ is the option to weigh for oBDLink CX vs MX+ — verify current vehicle and app support on its listing."
       },
       {
+        "position": "end",
         "anchorIndex": 10,
         "headingText": "Bottom line",
         "variant": "final_cta",
@@ -1548,11 +2548,61 @@
       }
     ]
   },
+  "obdlink-cx-vs-unicarscan-ucsi-2100": {
+    "classification": "THREE_PLACEMENTS",
+    "articleType": "recommended_equipment",
+    "wordCount": 1095,
+    "h2Count": 8,
+    "isLong": true,
+    "requiredPlacements": 3,
+    "placements": [
+      {
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Identify the exact models",
+        "variant": "recommended_equipment",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Relevant equipment",
+        "decisionMoment": "compatibility"
+      },
+      {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Confirm app support and platform",
+        "variant": "compact_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time confirm app support and platform matters for oBDLink CX vs UniCarScan UCSI-2100 for BimmerCode and BimmerLink, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
+        "anchorIndex": 7,
+        "headingText": "Which adapter should you buy?",
+        "variant": "final_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Final pick to verify",
+        "decisionMoment": "final_recommendation",
+        "context": "Having worked through which adapter should you buy?, OBDLink CX is the listing to confirm for oBDLink CX vs UniCarScan UCSI-2100 for BimmerCode and BimmerLink — match your exact vehicle, market and software before buying."
+      }
+    ]
+  },
   "obdlink-cx-vs-vlinker-bm-plus": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "comparison",
+    "wordCount": 1276,
+    "h2Count": 9,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
+        "position": "top",
         "anchorIndex": 2,
         "headingText": "Why the app selector outranks adapter folklore",
         "variant": "comparison_card",
@@ -1564,17 +2614,19 @@
         "decisionMoment": "comparison"
       },
       {
-        "anchorIndex": 7,
-        "headingText": "What this comparison does not claim",
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "OBDLink CX: where its documentation is strongest",
         "variant": "compact_cta",
         "productKeys": [
           "vlinker-bm-plus"
         ],
         "role": "Option in focus",
         "decisionMoment": "technical",
-        "context": "On what this comparison does not claim, Vgate vLinker BM+ is the option to weigh for oBDLink CX vs vLinker BM+ — verify current vehicle and app support on its listing."
+        "context": "On oBDLink CX: where its documentation is strongest, Vgate vLinker BM+ is the option to weigh for oBDLink CX vs vLinker BM+ — verify current vehicle and app support on its listing."
       },
       {
+        "position": "end",
         "anchorIndex": 8,
         "headingText": "Bottom line",
         "variant": "final_cta",
@@ -1590,10 +2642,15 @@
   "obdlink-cx-vs-vlinker-mc-plus": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "comparison",
+    "wordCount": 808,
+    "h2Count": 9,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 3,
-        "headingText": "Why CX has the clearer public record",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Start with the named application",
         "variant": "comparison_card",
         "productKeys": [
           "obdlink-cx",
@@ -1603,17 +2660,19 @@
         "decisionMoment": "comparison"
       },
       {
-        "anchorIndex": 5,
-        "headingText": "Firmware, seller and ownership checks",
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "Why CX has the clearer public record",
         "variant": "compact_cta",
         "productKeys": [
           "vlinker-mc-plus"
         ],
         "role": "Option in focus",
         "decisionMoment": "technical",
-        "context": "This is where Vgate vLinker MC+ earns its place in oBDLink CX vs vLinker MC+: confirm firmware, seller and ownership checks maps to your vehicle and software before you commit."
+        "context": "This is where Vgate vLinker MC+ earns its place in oBDLink CX vs vLinker MC+: confirm why CX has the clearer public record maps to your vehicle and software before you commit."
       },
       {
+        "position": "end",
         "anchorIndex": 7,
         "headingText": "Compatibility evidence note",
         "variant": "final_cta",
@@ -1627,12 +2686,17 @@
     ]
   },
   "obdlink-ex-vs-enet-cable": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "exact_product",
+    "wordCount": 778,
+    "h2Count": 8,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 2,
-        "headingText": "What an ENET cable changes",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "What OBDLink EX actually is",
         "variant": "product_card",
         "productKeys": [
           "obdlink-ex"
@@ -1641,6 +2705,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "What an ENET cable changes",
+        "variant": "compact_cta",
+        "productKeys": [
+          "obdlink-ex"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time what an ENET cable changes matters for oBDLink EX vs ENET Cable, the practical question is whether OBDLink EX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 6,
         "headingText": "Bottom line",
         "variant": "final_cta",
@@ -1649,15 +2726,20 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through bottom line, OBDLink EX is the listing to confirm for oBDLink EX vs ENET Cable — match your exact vehicle, market and software before buying."
+        "context": "That makes OBDLink EX the unit to check last for oBDLink EX vs ENET Cable: confirm your BMW or MINI, platform and required function on the current listing."
       }
     ]
   },
   "obdlink-mx-plus-vs-lx": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "comparison",
+    "wordCount": 857,
+    "h2Count": 6,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
+        "position": "top",
         "anchorIndex": 2,
         "headingText": "App compatibility controls the purchase",
         "variant": "comparison_card",
@@ -1669,17 +2751,19 @@
         "decisionMoment": "comparison"
       },
       {
-        "anchorIndex": 4,
-        "headingText": "Ownership and safety",
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "Conditional choice",
         "variant": "compact_cta",
         "productKeys": [
           "obdlink-lx"
         ],
         "role": "Option in focus",
         "decisionMoment": "technical",
-        "context": "On ownership and safety, OBDLink LX is the option to weigh for oBDLink MX+ vs LX — verify current vehicle and app support on its listing."
+        "context": "On conditional choice, OBDLink LX is the option to weigh for oBDLink MX+ vs LX — verify current vehicle and app support on its listing."
       },
       {
+        "position": "end",
         "anchorIndex": 5,
         "headingText": "Bottom line",
         "variant": "final_cta",
@@ -1695,10 +2779,15 @@
   "obdlink-mx-plus-vs-vlinker-bm-plus": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "comparison",
+    "wordCount": 690,
+    "h2Count": 9,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 3,
-        "headingText": "Where BM+ stays focused",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Map the whole garage first",
         "variant": "comparison_card",
         "productKeys": [
           "obdlink-mx-plus",
@@ -1708,17 +2797,19 @@
         "decisionMoment": "comparison"
       },
       {
-        "anchorIndex": 5,
-        "headingText": "Use a garage scenario board",
+        "position": "middle",
+        "anchorIndex": 3,
+        "headingText": "Where BM+ stays focused",
         "variant": "compact_cta",
         "productKeys": [
           "vlinker-bm-plus"
         ],
         "role": "Option in focus",
         "decisionMoment": "technical",
-        "context": "For use a garage scenario board in oBDLink MX+ vs vLinker BM+, Vgate vLinker BM+ is the specific unit to price and check against your exact BMW, app and function."
+        "context": "For where BM+ stays focused in oBDLink MX+ vs vLinker BM+, Vgate vLinker BM+ is the specific unit to price and check against your exact BMW, app and function."
       },
       {
+        "position": "end",
         "anchorIndex": 7,
         "headingText": "Compatibility evidence note",
         "variant": "final_cta",
@@ -1732,12 +2823,17 @@
     ]
   },
   "protool-pricing": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 852,
+    "h2Count": 7,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 3,
-        "headingText": "Adapter choice can change the budget",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "Which license do you need?",
         "variant": "recommended_equipment",
         "productKeys": [
           "obdlink-cx"
@@ -1746,6 +2842,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Complete setup examples",
+        "variant": "compact_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time complete setup examples matters for proTool Pricing, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 5,
         "headingText": "Bottom line",
         "variant": "final_cta",
@@ -1754,17 +2863,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "That makes OBDLink CX the unit to check last for proTool Pricing: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "If proTool Pricing points you here, OBDLink CX is the defensible pick to verify and buy once your exact configuration checks out."
       }
     ]
   },
   "protool-vs-carly": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 757,
+    "h2Count": 8,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 2,
-        "headingText": "What you buy with Carly",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "What you buy with ProTool",
         "variant": "recommended_equipment",
         "productKeys": [
           "obdlink-cx"
@@ -1773,6 +2887,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "What you buy with Carly",
+        "variant": "compact_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time what you buy with Carly matters for proTool vs Carly, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 6,
         "headingText": "Bottom line",
         "variant": "final_cta",
@@ -1781,17 +2908,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through bottom line, OBDLink CX is the listing to confirm for proTool vs Carly — match your exact vehicle, market and software before buying."
+        "context": "That makes OBDLink CX the unit to check last for proTool vs Carly: confirm your BMW or MINI, platform and required function on the current listing."
       }
     ]
   },
   "protool-vs-ista": {
-    "classification": "TWO_PLACEMENTS",
+    "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
+    "wordCount": 803,
+    "h2Count": 8,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 3,
-        "headingText": "Cost is more than the software price",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "What ProTool covers",
         "variant": "recommended_equipment",
         "productKeys": [
           "schumacher-inc100"
@@ -1800,6 +2932,19 @@
         "decisionMoment": "compatibility"
       },
       {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "What ISTA adds",
+        "variant": "compact_cta",
+        "productKeys": [
+          "schumacher-inc100"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time what ISTA adds matters for proTool vs ISTA, the practical question is whether Schumacher Electric INC100 actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
         "anchorIndex": 6,
         "headingText": "Bottom line",
         "variant": "final_cta",
@@ -1808,17 +2953,22 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If proTool vs ISTA points you here, Schumacher Electric INC100 is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Having worked through bottom line, Schumacher Electric INC100 is the listing to confirm for proTool vs ISTA — match your exact vehicle, market and software before buying."
       }
     ]
   },
   "vlinker-bm-plus-vs-mc-plus": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "comparison",
+    "wordCount": 837,
+    "h2Count": 7,
+    "isLong": true,
+    "requiredPlacements": 3,
     "placements": [
       {
-        "anchorIndex": 2,
-        "headingText": "Where the MC+ earns its extra scope",
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "BMW compatibility comes from the app",
         "variant": "comparison_card",
         "productKeys": [
           "vlinker-bm-plus",
@@ -1828,17 +2978,19 @@
         "decisionMoment": "comparison"
       },
       {
-        "anchorIndex": 3,
-        "headingText": "Price is a snapshot, not the decision",
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Where the MC+ earns its extra scope",
         "variant": "compact_cta",
         "productKeys": [
           "vlinker-mc-plus"
         ],
         "role": "Option in focus",
         "decisionMoment": "technical",
-        "context": "This is where Vgate vLinker MC+ earns its place in vLinker BM+ vs MC+: confirm price is a snapshot, not the decision maps to your vehicle and software before you commit."
+        "context": "This is where Vgate vLinker MC+ earns its place in vLinker BM+ vs MC+: confirm where the MC+ earns its extra scope maps to your vehicle and software before you commit."
       },
       {
+        "position": "end",
         "anchorIndex": 5,
         "headingText": "Bottom line",
         "variant": "final_cta",

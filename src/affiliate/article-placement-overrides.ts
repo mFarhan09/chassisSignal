@@ -6,6 +6,14 @@ export interface ArticlePlacementOverride {
 }
 
 export const articlePlacementOverrides: Record<string, ArticlePlacementOverride> = {
+  // 2026-09-25 monetization repair: the five formerly unmonetized guides. Each label names what
+  // the verified product IS, never the exact product the article is about.
+  'autel-mk900-bmw-compatibility': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Available wireless MK900-family option - not the base wired MK900' },
+  'bmw-parking-sensor-diagnostic-tool': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Available bidirectional all-system scanner alternative' },
+  'foxwell-nt710-vs-autel-mk900-bmw': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Available BMW-focused Foxwell alternative - not the NT710' },
+  'icarsoft-bmm-v3-vs-foxwell-nt530': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Available Foxwell side of this comparison' },
+  'obdlink-cx-vs-unicarscan-ucsi-2100': { affiliateRelationship: 'exact_product', relationshipLabel: 'Exact OBDLink CX side of this comparison' },
+
   'autel-scanner-for-bmw': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Available Autel scanner alternatives' },
   'autophix-7910-vs-foxwell-nt530': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Available AUTOPHIX-side alternative' },
   'bmw-bidirectional-scan-tool-functions': { affiliateRelationship: 'workshop_alternative', relationshipLabel: 'Available bidirectional workshop alternative' },

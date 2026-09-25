@@ -11,7 +11,8 @@ import { getProductRenderState } from '../src/affiliate/render-policy.ts';
 import { validateSpecialLink } from '../src/affiliate/validator.ts';
 import { findRawAmazonUrls, scanEligibleGuides } from '../scripts/lib/affiliate-inventory.mjs';
 import { parseCsvRecords } from '../scripts/lib/csv.mjs';
-import { placementPlans, validatePlacementPlans, planSummary, MAX_PLACEMENTS_PER_ARTICLE } from '../src/affiliate/placement-plan.ts';
+import { placementPlans, validatePlacementPlans, planSummary, MAX_PLACEMENTS_PER_ARTICLE, isLongArticle, requiredPlacementsFor, LONG_ARTICLE_WORD_COUNT, LONG_ARTICLE_H2_COUNT } from '../src/affiliate/placement-plan.ts';
+import { relationshipClassifications, relationshipTypes } from '../src/affiliate/relationship-classification.ts';
 import { resolveFirstPlacementOffset } from '../src/affiliate/first-placement.ts';
 
 const root = process.cwd();
@@ -19,36 +20,62 @@ const registry = JSON.parse(await readFile(join(root, 'src/affiliate/product-reg
 const mappings = JSON.parse(await readFile(join(root, 'src/affiliate/article-mappings.generated.json'), 'utf8'));
 const articles = await scanEligibleGuides();
 const mapped = Object.values(mappings);
-// Post-batch (CS-081..087 added): some published guides are intentionally unmonetized (no defensible
-// product) or link-verified-but-image-pending (recorded, not yet live). Renderable invariants apply to
-// APPROVED mappings only; the verification queues legitimately also list candidate-referenced keys.
-const UNMONETIZED_GUIDES = new Set([
-  'bmw-parking-sensor-diagnostic-tool',   // CS-087: no defensible product (intentional)
-  'icarsoft-bmm-v3-vs-foxwell-nt530',     // CS-081: SiteStripe links verified, product images pending
-  'obdlink-cx-vs-unicarscan-ucsi-2100',   // CS-084: SiteStripe links verified, product images pending
-  'foxwell-nt710-vs-autel-mk900-bmw',     // no exact BMW-software NT710 or base wired MK900 listing closes
-  'autel-mk900-bmw-compatibility'         // no exact base wired MK900 listing closes; MX900 substitution declined
-]);
+// PORTFOLIO POLICY (2026-09-25): there is no unmonetized-guide exemption. Every published
+// guide carries an approved mapping and at least one verified, renderable product.
 const approvedMapped = mapped.filter((mapping) => mapping.mappingStatus === 'approved');
 const actionableKeys = [...new Set(approvedMapped.flatMap((mapping) => [...mapping.primaryProductKeys, ...mapping.alternativeProductKeys]))].sort();
 
-test('67 published guides mapped; 62 approved non-HOLD (5 intentionally unmonetized)', () => {
+test('every published guide is mapped, approved and monetized (no exemptions)', () => {
   assert.equal(articles.length, 67);
-  assert.equal(mapped.length, 67);
-  assert.equal(Object.keys(editorialMappingOverrides).length, 67);
-  assert.equal(approvedMapped.length, 62);
+  assert.equal(mapped.length, articles.length);
+  assert.equal(Object.keys(editorialMappingOverrides).length, articles.length);
+  assert.equal(approvedMapped.length, articles.length);
   for (const article of articles) {
     const mapping = mappings[article.slug];
     assert.ok(mapping, article.slug);
     assert.notEqual(mapping.editorialDecision, 'HOLD', article.slug);
-    if (UNMONETIZED_GUIDES.has(article.slug)) {
-      assert.notEqual(mapping.mappingStatus, 'approved', article.slug);
-      continue;
-    }
     assert.equal(mapping.mappingStatus, 'approved', article.slug);
     assert.equal(mapping.approvalStatus, 'approved', article.slug);
+    assert.notEqual(mapping.monetizationMode, 'no_defensible_product', article.slug);
     assert.ok(mapping.primaryProductKeys.length >= 1 && mapping.primaryProductKeys.length <= 2, article.slug);
     assert.ok(mapping.relationshipLabel && mapping.recommendationRationale && mapping.officialEvidenceUrl, article.slug);
+  }
+});
+
+test('the five formerly unmonetized guides now map verified products with truthful labels', () => {
+  const repaired = {
+    'foxwell-nt710-vs-autel-mk900-bmw': { primary: ['foxwell-nt530'], alternative: ['autel-mk900-bt'] },
+    'autel-mk900-bmw-compatibility': { primary: ['autel-mk900-bt'], alternative: [] },
+    'icarsoft-bmm-v3-vs-foxwell-nt530': { primary: ['foxwell-nt530'], alternative: [] },
+    'obdlink-cx-vs-unicarscan-ucsi-2100': { primary: ['obdlink-cx'], alternative: [] },
+    'bmw-parking-sensor-diagnostic-tool': { primary: ['autel-mk900-bt'], alternative: [] }
+  };
+  for (const [slug, expected] of Object.entries(repaired)) {
+    const mapping = mappings[slug];
+    assert.ok(mapping, slug);
+    assert.deepEqual(mapping.primaryProductKeys, expected.primary, slug);
+    assert.deepEqual(mapping.alternativeProductKeys, expected.alternative, slug);
+    for (const key of [...expected.primary, ...expected.alternative]) {
+      assert.equal(validateSpecialLink(registry[key]).valid, true, `${slug}: ${key}`);
+      assert.equal(getProductRenderState(registry[key], mapping, 'live', false).clickable, true, `${slug}: ${key}`);
+    }
+    assert.ok(placementPlans[slug], `${slug} must have a placement plan`);
+  }
+  // Variant identity must never be transferred: the MK900-BT card may not claim to be the
+  // base wired MK900, and the NT530 card may not claim to be the NT710.
+  assert.doesNotMatch(mappings['autel-mk900-bmw-compatibility'].relationshipLabel, /^Autel MaxiCOM MK900$/);
+  assert.match(mappings['autel-mk900-bmw-compatibility'].relationshipLabel, /MK900-family/i);
+  assert.match(mappings['foxwell-nt710-vs-autel-mk900-bmw'].relationshipLabel, /not the NT710/i);
+  assert.equal(registry['foxwell-nt530'].model, 'NT530');
+  assert.equal(registry['autel-mk900-bt'].model, 'MaxiCOM MK900-BT');
+});
+
+test('every mapping carries a valid relationship type and a written rationale', () => {
+  assert.equal(Object.keys(relationshipClassifications).length, articles.length);
+  for (const article of articles) {
+    const mapping = mappings[article.slug];
+    assert.ok(relationshipTypes.includes(mapping.relationshipType), `${article.slug}: ${mapping.relationshipType}`);
+    assert.ok(mapping.relationshipRationale.trim().length >= 30, article.slug);
   }
 });
 
@@ -59,8 +86,8 @@ test('all approved mappings resolve to live image-bearing affiliate links', () =
   }
 });
 
-test('both verification queues exactly match the 20 renderable keys', async () => {
-  assert.equal(actionableKeys.length, 20);
+test('both verification queues exactly match the 21 renderable keys', async () => {
+  assert.equal(actionableKeys.length, 21);
   const link = parseCsvRecords(await readFile(join(root, 'reports/affiliate/link-verification-queue.csv'), 'utf8'));
   const image = parseCsvRecords(await readFile(join(root, 'reports/affiliate/image-rights-queue.csv'), 'utf8'));
   assert.deepEqual(link.map((row) => row.productKey).sort(), actionableKeys);
@@ -153,24 +180,45 @@ test('catalog and final reports preserve all candidates and cover 67 guides', as
   assert.match(report, /Remaining HOLD articles: 0/);
 });
 
-test('placement density plan is valid, distributed and capped', () => {
+test('every published guide has a plan meeting the top/middle/end placement policy', () => {
   assert.deepEqual(validatePlacementPlans(placementPlans, mappings, registry), []);
   let two = 0, three = 0, exc = 0;
   for (const article of articles) {
-    if (mappings[article.slug].mappingStatus !== 'approved') { assert.equal(placementPlans[article.slug], undefined, article.slug); continue; }
     const plan = placementPlans[article.slug];
-    assert.ok(plan, article.slug);
-    assert.ok(plan.placements.length >= 1 && plan.placements.length <= MAX_PLACEMENTS_PER_ARTICLE, article.slug);
+    assert.ok(plan, `${article.slug} must have a placement plan — no published guide may be unplanned`);
+    assert.ok(plan.placements.length >= 2 && plan.placements.length <= MAX_PLACEMENTS_PER_ARTICLE, article.slug);
+    // The LONG definition is machine-enforced, and long articles require the middle unit.
+    assert.equal(plan.isLong, isLongArticle(plan.wordCount, plan.h2Count), article.slug);
+    assert.equal(plan.requiredPlacements, requiredPlacementsFor(plan.wordCount, plan.h2Count), article.slug);
+    assert.ok(plan.placements.length >= plan.requiredPlacements, `${article.slug}: below required placements`);
+    const positions = plan.placements.map((placement) => placement.position);
+    assert.ok(positions.includes('top'), `${article.slug}: missing TOP placement`);
+    assert.ok(positions.includes('end'), `${article.slug}: missing END placement`);
+    assert.equal(positions.includes('middle'), plan.isLong, `${article.slug}: middle placement must exist iff long`);
+    assert.equal(new Set(positions).size, positions.length, `${article.slug}: duplicate positions`);
     if (plan.classification === 'TWO_PLACEMENTS') two++;
     else if (plan.classification === 'THREE_PLACEMENTS') three++;
     else exc++;
   }
-  assert.equal(two + three + exc, 62);
-  // Corrected model: TWO is the normal state; THREE for comparison/alternative articles; exceptions rare.
-  assert.ok(two >= 40, `expected mostly two-placement articles, got ${two}`);
-  assert.ok(three >= 10, `expected several three-placement articles, got ${three}`);
+  assert.equal(two + three + exc, articles.length);
+  assert.equal(exc, 0, 'no published guide may fall back to a one-placement exception');
   const s = planSummary(placementPlans);
   assert.equal(s.totalPlacements, two * 2 + three * 3 + exc);
+  assert.equal(s.withTopPlacement, articles.length);
+  assert.equal(s.withEndPlacement, articles.length);
+  assert.equal(s.withMiddlePlacement, s.longArticles);
+  assert.equal(s.longArticles + s.shortArticles, articles.length);
+});
+
+test('the LONG-article rule is exactly word_count >= 1400 OR h2_count >= 6', () => {
+  assert.equal(LONG_ARTICLE_WORD_COUNT, 1400);
+  assert.equal(LONG_ARTICLE_H2_COUNT, 6);
+  assert.equal(isLongArticle(1400, 1), true);
+  assert.equal(isLongArticle(1, 6), true);
+  assert.equal(isLongArticle(1399, 5), false);
+  assert.equal(requiredPlacementsFor(1399, 5), 2);
+  assert.equal(requiredPlacementsFor(1400, 5), 3);
+  assert.equal(requiredPlacementsFor(100, 6), 3);
 });
 
 test('every planned placement is approved, verified-linkable, distributed and non-repetitive', () => {
@@ -206,10 +254,10 @@ test('placement validator actually fails on broken plans (mutation tests)', () =
   const clustered = clone(); clustered.placements.forEach((p) => { p.anchorIndex = 5; });
   assert.ok(codes(clustered).has('ALL_PLACEMENTS_AT_END') || codes(clustered).has('DUPLICATE_ANCHOR'));
   // 2. over the cap (four placements)
-  const over = clone(); over.placements.push({ ...over.placements[0], anchorIndex: 99 }); over.classification = 'THREE_PLACEMENTS';
+  const over = clone(); over.placements.push({ ...over.placements[0], anchorIndex: 99, position: 'top' }); over.classification = 'THREE_PLACEMENTS';
   assert.ok(codes(over).has('PLACEMENT_COUNT_EXCEEDED'));
   // 3. unapproved product
-  const bad = clone(); bad.placements[0].productKeys = ['foxwell-nt530']; bad.placements[0].variant = 'product_card';
+  const bad = clone(); bad.placements[0].productKeys = ['ancel-ds500bt']; bad.placements[0].variant = 'product_card';
   assert.ok(codes(bad).has('PRODUCT_NOT_APPROVED') || codes(bad).has('LINK_INVALID'));
   // 4. duplicate contextual copy across two CTAs
   const dup = clone();
@@ -218,6 +266,57 @@ test('placement validator actually fails on broken plans (mutation tests)', () =
   // 5. classification/count mismatch
   const mism = clone(); mism.classification = 'TWO_PLACEMENTS';
   assert.ok(codes(mism).has('CLASSIFICATION_MISMATCH'));
+});
+
+test('the top/middle/end policy actually fails on broken plans (mutation tests)', () => {
+  const slug = Object.keys(placementPlans).find((s) => placementPlans[s].isLong && placementPlans[s].placements.length === 3);
+  assert.ok(slug, 'a long three-placement article is needed for these mutations');
+  const base = placementPlans[slug];
+  const clone = () => JSON.parse(JSON.stringify(base));
+  const codes = (plan) => new Set(validatePlacementPlans({ [slug]: plan }, mappings, registry).map((e) => e.code));
+  // clean plan passes
+  assert.deepEqual([...codes(clone())], []);
+  // 1. a long article that drops to two placements loses its middle unit and falls below the minimum
+  const dropped = clone();
+  dropped.placements = dropped.placements.filter((p) => p.position !== 'middle');
+  dropped.classification = 'TWO_PLACEMENTS';
+  const droppedCodes = codes(dropped);
+  assert.ok(droppedCodes.has('MISSING_MIDDLE_PLACEMENT'), 'long article without a middle placement must fail');
+  assert.ok(droppedCodes.has('BELOW_REQUIRED_PLACEMENTS'), 'long article with two placements must fail');
+  // 2. no top placement
+  const noTop = clone(); noTop.placements.find((p) => p.position === 'top').position = 'middle';
+  assert.ok(codes(noTop).has('MISSING_TOP_PLACEMENT'));
+  // 3. no end placement
+  const noEnd = clone(); noEnd.placements.find((p) => p.position === 'end').position = 'middle';
+  assert.ok(codes(noEnd).has('MISSING_END_PLACEMENT'));
+  // 4. duplicate positions
+  const dupPos = clone(); dupPos.placements[1].position = 'top';
+  assert.ok(codes(dupPos).has('DUPLICATE_POSITION'));
+  // 5. middle anchored after the end placement (out of order)
+  const outOfOrder = clone();
+  outOfOrder.placements.find((p) => p.position === 'middle').anchorIndex = 999;
+  assert.ok(codes(outOfOrder).has('POSITION_ORDER'));
+  // 6. a plan that lies about its own length no longer matches the machine-enforced rule
+  const lying = clone(); lying.isLong = false; lying.requiredPlacements = 2;
+  const lyingCodes = codes(lying);
+  assert.ok(lyingCodes.has('REQUIRED_COUNT_MISMATCH'));
+  assert.ok(lyingCodes.has('UNEXPECTED_MIDDLE_PLACEMENT'));
+});
+
+test('no published guide renders zero affiliate links (built pages, live mode only)', async (t) => {
+  const built = [];
+  for (const article of articles) {
+    try { built.push([article.slug, await readFile(join(root, 'dist/guides', article.slug, 'index.html'), 'utf8')]); } catch { /* not built */ }
+  }
+  if (built.length !== articles.length) return t.skip('no complete live dist/ present; the live affiliate audit covers this gate');
+  if (!built.some(([, html]) => html.includes('data-affiliate-link'))) return t.skip('dist/ was built in draft mode');
+  for (const [slug, html] of built) {
+    const links = (html.match(/data-affiliate-link/g) ?? []).length;
+    const plan = placementPlans[slug];
+    assert.ok(links > 0, `${slug} rendered zero affiliate links`);
+    assert.ok(links >= plan.requiredPlacements, `${slug}: ${links} links, ${plan.requiredPlacements} required`);
+    assert.equal((html.match(/class="affiliate-disclosure/g) ?? []).length, 1, `${slug}: exactly one article disclosure`);
+  }
 });
 
 test('first placement surfaces after ~2 intro prose paragraphs (early, safe, never later)', () => {
