@@ -2107,9 +2107,9 @@
   },
   "foxwell-nt710-vs-nt809bt-bmw": {
     "classification": "THREE_PLACEMENTS",
-    "articleType": "recommended_equipment",
-    "wordCount": 1191,
-    "h2Count": 7,
+    "articleType": "comparison",
+    "wordCount": 2357,
+    "h2Count": 8,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -2117,24 +2117,25 @@
         "position": "top",
         "anchorIndex": 2,
         "headingText": "BMW ECU coding is the one-way decision",
-        "variant": "recommended_equipment",
+        "variant": "comparison_card",
         "productKeys": [
+          "foxwell-nt809bt",
           "foxwell-nt530"
         ],
-        "role": "Relevant equipment",
-        "decisionMoment": "compatibility"
+        "role": "Compare the two options",
+        "decisionMoment": "comparison"
       },
       {
         "position": "middle",
         "anchorIndex": 3,
-        "headingText": "The update clock: lifetime against three years",
+        "headingText": "The update clock: lifetime against three years, then a published renewal",
         "variant": "compact_cta",
         "productKeys": [
           "foxwell-nt530"
         ],
-        "role": "Coverage check before you commit",
+        "role": "Related Foxwell alternative - not the NT710",
         "decisionMoment": "technical",
-        "context": "By the time the update clock: lifetime against three years matters for foxwell NT710 vs NT809BT for BMW, the practical question is whether Foxwell NT530 actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "The NT710 has no verified listing, so this is the Foxwell NT530: the available single-make BMW handheld from the same maker. It carries neither the NT710 coding claim nor its lifetime update term, and it is not a stand-in for the NT809BT. Check the model and serial prefix before buying."
       },
       {
         "position": "end",
@@ -2142,11 +2143,11 @@
         "headingText": "Which one belongs on your BMW",
         "variant": "final_cta",
         "productKeys": [
-          "foxwell-nt530"
+          "foxwell-nt809bt"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "That makes Foxwell NT530 the unit to check last for foxwell NT710 vs NT809BT for BMW: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "If the mixed-fleet, wireless-VCI side fits, the Foxwell NT809BT is the exact tool to check. Confirm your BMW in Foxwell coverage, accept that ECU coding is not on its list, and price the renewal past year three."
       }
     ]
   },
@@ -2379,18 +2380,18 @@
   "launch-x431-pro-elite-vs-foxwell-nt710-bmw": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "comparison",
-    "wordCount": 1192,
-    "h2Count": 6,
+    "wordCount": 2519,
+    "h2Count": 8,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
       {
         "position": "top",
         "anchorIndex": 1,
-        "headingText": "Documented capability, side by side",
+        "headingText": "Start with the protocol era, not the screen size",
         "variant": "comparison_card",
         "productKeys": [
-          "launch-x431-pro3s-plus",
+          "launch-x431-pro-elite",
           "foxwell-nt530"
         ],
         "role": "Compare the two options",
@@ -2399,26 +2400,26 @@
       {
         "position": "middle",
         "anchorIndex": 2,
-        "headingText": "The coding claim runs backwards here",
+        "headingText": "Documented capability, side by side",
         "variant": "compact_cta",
         "productKeys": [
           "foxwell-nt530"
         ],
-        "role": "Option in focus",
+        "role": "Related Foxwell alternative - not the NT710",
         "decisionMoment": "technical",
-        "context": "This is where Foxwell NT530 earns its place in launch X431 Pro Elite vs Foxwell NT710 for BMW: confirm the coding claim runs backwards here maps to your vehicle and software before you commit."
+        "context": "The NT710 has no verified listing, so this is the Foxwell NT530: the available single-make BMW handheld from the same maker. It is not the NT710 and makes none of its coding claims. Check the model and the installed BMW software before buying."
       },
       {
         "position": "end",
-        "anchorIndex": 5,
+        "anchorIndex": 6,
         "headingText": "Which tool for which BMW",
         "variant": "final_cta",
         "productKeys": [
-          "launch-x431-pro3s-plus"
+          "launch-x431-pro-elite"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If launch X431 Pro Elite vs Foxwell NT710 for BMW points you here, LAUNCH X-431 PRO3S+ is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "If documented CAN FD and DoIP support decides it, the LAUNCH X-431 PRO ELITE is the exact tool to check. Confirm which of the three models on that shared page you are being sold, and get the update period in writing first."
       }
     ]
   },

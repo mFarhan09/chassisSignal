@@ -146,6 +146,8 @@ export function buildArticleMappings(articles, existingMappings = {}, editorialO
       recommendationRationale,
       affiliateRelationship: placementOverride?.affiliateRelationship ?? defaultRelationship,
       relationshipLabel: placementOverride?.relationshipLabel ?? defaultLabel,
+      productRelationshipLabels: placementOverride?.productRelationshipLabels ?? {},
+      productRelationships: placementOverride?.productRelationships ?? {},
       relationshipType: classification?.relationshipType ?? '',
       relationshipRationale: classification?.relationshipRationale ?? '',
       officialEvidenceUrl: '',

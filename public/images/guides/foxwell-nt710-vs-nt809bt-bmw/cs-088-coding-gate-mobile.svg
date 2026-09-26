@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 486" width="360" height="486" role="img" aria-labelledby="t088m d088m">
 <title id="t088m">The BMW ECU coding question separates the two Foxwell tools</title>
-<desc id="d088m">A single decision. If BMW ECU coding is in scope, the NT710 is the tool Foxwell lists for coding, with one make and lifetime updates. If it is not, or the fleet spans several makes, the NT809BT covers multiple brands with no coding listed and a three year update term.</desc>
+<desc id="d088m">A single decision. If BMW ECU coding is in scope, the NT710 is the tool Foxwell ticks for coding, with one make and a lifetime free update term. If it is not, or the fleet spans several makes, the NT809BT covers multiple brands with no coding tick and a three year free update term followed by a published renewal charge of one hundred and fifty US dollars per year.</desc>
 <defs>
   <marker id="a088m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
     <path d="M0 0 L10 5 L0 10 z" fill="#4a6076"/>
@@ -28,7 +28,7 @@
 <text x="40" y="352" fill="#9fdcf0" font-family="Georgia,serif" font-size="22" font-weight="bold">NT809BT</text>
 <text x="40" y="382" fill="#dce6f0" font-family="Helvetica,Arial,sans-serif" font-size="15">Multi-brand, no coding</text>
 <text x="40" y="404" fill="#dce6f0" font-family="Helvetica,Arial,sans-serif" font-size="15">on the Foxwell list</text>
-<text x="40" y="430" fill="#8fa3b8" font-family="Helvetica,Arial,sans-serif" font-size="14">Three year updates</text>
+<text x="40" y="430" fill="#8fa3b8" font-family="Helvetica,Arial,sans-serif" font-size="14">3 yr, then US$150/yr</text>
 
-<text x="18" y="472" fill="#6f8296" font-family="Helvetica,Arial,sans-serif" font-size="12">Source: Foxwell buyer guide. Confirm your VIN.</text>
+<text x="18" y="472" fill="#6f8296" font-family="Helvetica,Arial,sans-serif" font-size="12">Foxwell pages, checked 26 Sep 2026. Confirm your VIN.</text>
 </svg>

@@ -86,8 +86,8 @@ test('all approved mappings resolve to live image-bearing affiliate links', () =
   }
 });
 
-test('both verification queues exactly match the 21 renderable keys', async () => {
-  assert.equal(actionableKeys.length, 21);
+test('both verification queues exactly match the 23 renderable keys', async () => {
+  assert.equal(actionableKeys.length, 23);
   const link = parseCsvRecords(await readFile(join(root, 'reports/affiliate/link-verification-queue.csv'), 'utf8'));
   const image = parseCsvRecords(await readFile(join(root, 'reports/affiliate/image-rights-queue.csv'), 'utf8'));
   assert.deepEqual(link.map((row) => row.productKey).sort(), actionableKeys);
@@ -105,7 +105,7 @@ test('mapped links have exact tag, product path and matching ASIN', () => {
 });
 
 test('all supplied URLs are byte-identical and OBDLink CX is preserved', async () => {
-  assert.equal(Object.keys(suppliedSiteStripeInventory).length, 24);
+  assert.equal(Object.keys(suppliedSiteStripeInventory).length, 26);
   for (const [key, supplied] of Object.entries(suppliedSiteStripeInventory)) {
     assert.equal(registry[key].specialLink, supplied.specialLink, key);
     assert.equal(registry[key].asin, supplied.asin, key);
@@ -168,8 +168,8 @@ test('card markup binds identity and safe affiliate attributes without commerce 
 });
 
 test('catalog and final reports preserve all candidates and cover 69 guides', async () => {
-  assert.equal(Object.keys(registry).length, 49);
-  assert.equal(Object.values(registry).filter((product) => product.specialLink).length, 25);
+  assert.equal(Object.keys(registry).length, 51);
+  assert.equal(Object.values(registry).filter((product) => product.specialLink).length, 27);
   const report = await readFile(join(root, 'reports/affiliate/final-affiliate-rollout-report.md'), 'utf8');
   const rows = parseCsvRecords(await readFile(join(root, 'reports/affiliate/final-affiliate-coverage.csv'), 'utf8'));
   assert.equal(rows.length, 69);

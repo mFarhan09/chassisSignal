@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 560" width="1100" height="560" role="img" aria-labelledby="t088 d088">
 <title id="t088">The BMW ECU coding question separates the two Foxwell tools</title>
-<desc id="d088">A single decision. If BMW ECU coding is in scope, the NT710 is the tool Foxwell lists for coding, with one make and lifetime updates. If it is not, or the fleet spans several makes, the NT809BT covers multiple brands with no coding listed and a three year update term.</desc>
+<desc id="d088">A single decision. If BMW ECU coding is in scope, the NT710 is the tool Foxwell ticks for coding, with one make and a lifetime free update term. If it is not, or the fleet spans several makes, the NT809BT covers multiple brands with no coding tick and a three year free update term followed by a published renewal charge of one hundred and fifty US dollars per year.</desc>
 <defs>
   <marker id="a088" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
     <path d="M0 0 L10 5 L0 10 z" fill="#4a6076"/>
@@ -27,7 +27,7 @@
 <text x="646" y="336" fill="#9fdcf0" font-family="Georgia,serif" font-size="27" font-weight="bold">NT809BT</text>
 <text x="646" y="382" fill="#dce6f0" font-family="Helvetica,Arial,sans-serif" font-size="17">Multi-brand, no coding</text>
 <text x="646" y="416" fill="#dce6f0" font-family="Helvetica,Arial,sans-serif" font-size="17">on the Foxwell list</text>
-<text x="646" y="452" fill="#8fa3b8" font-family="Helvetica,Arial,sans-serif" font-size="16">Three year updates</text>
+<text x="646" y="452" fill="#8fa3b8" font-family="Helvetica,Arial,sans-serif" font-size="16">3 yr updates, then US$150/yr</text>
 
-<text x="64" y="524" fill="#6f8296" font-family="Helvetica,Arial,sans-serif" font-size="14">Source: Foxwell buyer guide and product pages. Coverage varies by vehicle; confirm your VIN.</text>
+<text x="64" y="524" fill="#6f8296" font-family="Helvetica,Arial,sans-serif" font-size="14">Source: Foxwell buyer guide, product pages and update-tools page, checked 26 Sep 2026. Coverage and terms vary; confirm your VIN and serial.</text>
 </svg>

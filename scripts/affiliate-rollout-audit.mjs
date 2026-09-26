@@ -54,8 +54,8 @@ const MAX_INTRO_PARAGRAPHS = 4;
 
 if (articles.length !== EXPECTED_PUBLISHED_GUIDES) fail('INVENTORY_COUNT', `Expected ${EXPECTED_PUBLISHED_GUIDES} published guides, found ${articles.length}.`);
 if (mapped.length !== articles.length || Object.keys(editorialMappingOverrides).length !== articles.length) fail('MAPPING_COUNT', `Exactly ${articles.length} reviewed mappings are required (one per published guide).`);
-if (candidateRows.length !== 49) fail('CANDIDATE_COUNT', `Expected 49 preserved/discovered candidates, found ${candidateRows.length}.`);
-if (actionableKeys.length !== 21) fail('ACTIONABLE_COUNT', `Expected 21 mapped linked products, found ${actionableKeys.length}.`);
+if (candidateRows.length !== 51) fail('CANDIDATE_COUNT', `Expected 51 preserved/discovered candidates, found ${candidateRows.length}.`);
+if (actionableKeys.length !== 23) fail('ACTIONABLE_COUNT', `Expected 23 mapped linked products, found ${actionableKeys.length}.`);
 if (mapped.some((mapping) => mapping.editorialDecision === 'HOLD')) fail('HOLD_REMAINS', 'No article-level HOLD may remain.');
 if (mapped.some((mapping) => mapping.monetizationMode === 'no_defensible_product')) fail('UNMONETIZED_MODE_PRESENT', 'The no_defensible_product publication path is retired; every published guide must map a product.');
 

@@ -55,7 +55,9 @@ export const productCandidateCatalog: ProductCandidateDefinition[] = [
   ['ancel-ds500bt', 'ANCEL', 'DS500BT', 'Wireless diagnostic tablet', ['ANCEL DS500BT']],
   ['mhd-universal-wifi-adapter', 'MHD Tuning', 'Universal Wi-Fi Adapter', 'Wireless BMW diagnostic adapter', ['MHD Universal Wi-Fi Adapter', 'MHD Universal WIFI Adapter']],
   ['launch-crp919-max', 'LAUNCH', 'CRP 919 MAX', 'Diagnostic tablet', ['LAUNCH CRP 919 MAX', 'CRP 919 MAX', 'CRP-919 MAX']],
-  ['schumacher-inc100', 'Schumacher Electric', 'INC100', 'Programming power supply', ['Schumacher INC100', 'INC100']]
+  ['schumacher-inc100', 'Schumacher Electric', 'INC100', 'Programming power supply', ['Schumacher INC100', 'INC100']],
+  ['foxwell-nt809bt', 'Foxwell', 'NT809BT', 'Multi-brand diagnostic tablet', ['Foxwell NT809BT', 'Foxwell NT809 BT', 'NT809BT', 'NT809 BT']],
+  ['launch-x431-pro-elite', 'LAUNCH', 'X-431 PRO ELITE', 'Workshop diagnostic tablet', ['LAUNCH X-431 PRO ELITE', 'LAUNCH X431 PRO ELITE', 'X-431 PRO ELITE', 'X431 Pro Elite']]
 ].map(([productKey, brand, model, category, aliases]) => ({ productKey, brand, model, category, aliases })) as ProductCandidateDefinition[];
 
 function normalize(value: string): string {

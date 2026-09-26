@@ -64,6 +64,19 @@ export interface ArticleProductMapping {
   reviewedAt: string | null;
   affiliateRelationship: AffiliateRelationship;
   relationshipLabel: string;
+  /**
+   * Per-product overrides for the reader-facing relationship eyebrow and the machine-readable
+   * relationship attribute, keyed by productKey.
+   *
+   * `relationshipLabel` / `affiliateRelationship` above are ARTICLE-level. On a two-product
+   * comparison card that is a truth-boundary hazard: one label is rendered above BOTH product
+   * names, so a card holding the exact product and a card holding a labelled alternative would
+   * claim the same relationship. Where a guide mixes an exact product with an alternative, the
+   * per-product entry wins and each card states what THAT product actually is. Products absent
+   * from the map fall back to the article-level values, so single-product guides are unchanged.
+   */
+  productRelationshipLabels: Record<string, string>;
+  productRelationships: Record<string, AffiliateRelationship>;
   /** Product-relevance QA taxonomy (see `relationship-classification.ts`). */
   relationshipType: string;
   /** Short QA rationale for the relationship type; not rendered to readers. */

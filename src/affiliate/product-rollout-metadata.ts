@@ -246,6 +246,34 @@ export const rolloutProductMetadata: Record<string, Partial<ProductRecord>> = {
     imageAlt: 'LAUNCH X-431 PRO3S+ workshop diagnostic tablet',
     imageSha256: '6D4354D9376EF72CDCFCAC01026E91BFFCDD3F681D7D91F5CB6BDB68E7A9D082'
   },
+  'foxwell-nt809bt': {
+    manufacturerUrl: 'https://www.foxwelldiag.com/products/foxwell-nt809bt',
+    editorialSummary: 'The exact multi-brand side of this comparison: a 7-inch Android 9.0 Foxwell tablet with a Bluetooth VCI, bidirectional control and 30+ reset services.',
+    compatibilityNotes: 'Not an ECU coding tool - Foxwell ticks neither ECU Coding nor Key Programming for it, and its "Injector Coding" entry is a fuel-injector service routine. Free updates run three years, then a published renewal. Confirm your exact BMW or MINI and the specific function in Foxwell coverage first.',
+    imageMode: 'manufacturer_source',
+    imagePathOrUrl: '/images/products/foxwell-nt809bt-official.jpg',
+    imageRightsSource: 'https://www.foxwelldiag.com/cdn/shop/files/NT809BT-1.jpg',
+    imageRightsStatus: 'manufacturer_attributed_editorial',
+    imageAttribution: 'Product image: Foxwell.',
+    imageAlt: 'Foxwell NT809BT Bluetooth diagnostic tablet with its wireless VCI',
+    imageSha256: '998814C9C9901D8DED8D580388C4EA01E32CE00D5801D48378B4EF8F05CB77EC'
+  },
+  'launch-x431-pro-elite': {
+    manufacturerUrl: 'https://en.cnlaunch.com/products-detail/i-242.html',
+    editorialSummary: 'The exact LAUNCH side of this comparison: an 8-inch Android 10.0 tablet LAUNCH states supports CAN FD and DoIP, on a page shared with the PROS ELITE and PRO STAR.',
+    compatibilityNotes: 'LAUNCH publishes no ECU coding claim and no update or renewal term for this tablet; a seller advertising "coding" is not manufacturer documentation. Its CAN FD and DoIP statement is made on a page shared with the PROS ELITE and PRO STAR - confirm the exact model string, transport support and update period with LAUNCH first.',
+    // LAUNCH publishes no model-specific PRO ELITE page, only the shared X-431 Classic
+    // 8-inch page covering three models, so no first-party photograph can be attributed to
+    // the PRO ELITE specifically. A distinct Chassis Signal-owned brand-neutral category
+    // illustration renders instead and is labelled as an illustration.
+    imageMode: 'site_owned',
+    imagePathOrUrl: '/images/products/launch-x431-pro-elite-category.svg',
+    imageRightsSource: '/images/products/launch-x431-pro-elite-category.svg',
+    imageRightsStatus: 'site_owned',
+    imageAttribution: 'Category illustration by Chassis Signal.',
+    imageAlt: 'Brand-neutral workshop diagnostic tablet category illustration',
+    imageSha256: '23C31032EAC4DDB09B46B7433F1C36259A259A40C4076FAB9FB4A512F6557798'
+  },
   'ancel-ds500bt': {
     manufacturerUrl: 'https://www.ancel.com/blogs/news/ancel-february-2026-scanner-update-new-versions-features',
     compatibilityNotes: 'No exact first-party product page was found; confirm model, BMW coverage and function.',

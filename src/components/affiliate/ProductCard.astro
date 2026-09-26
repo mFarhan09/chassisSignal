@@ -27,13 +27,18 @@ const mode = resolveAffiliateMode(import.meta.env.AFFILIATE_MODE);
 const state = getProductRenderState(product, mapping, mode, import.meta.env.DEV);
 const Heading = headingLevel;
 const ctaLabel = affiliateConfig.allowedCtaLabels[0];
+// Per-product relationship wins over the article-level pair: on a two-product comparison the
+// article-level label is rendered above BOTH product names, which would let a labelled
+// alternative inherit the exact product's claim. Falls back to the article-level values.
+const relationshipLabel = mapping?.productRelationshipLabels?.[productKey] ?? mapping?.relationshipLabel;
+const affiliateRelationship = mapping?.productRelationships?.[productKey] ?? mapping?.affiliateRelationship;
 ---
-{state.visible && product && mapping && <article class:list={['affiliate-product-card', { 'affiliate-product-card--image': state.showImage }]} data-affiliate-unit data-product-key={product.productKey} data-product-name={`${product.brand} ${product.model}`} data-product-asin={product.asin} data-affiliate-relationship={mapping.affiliateRelationship}>
+{state.visible && product && mapping && <article class:list={['affiliate-product-card', { 'affiliate-product-card--image': state.showImage }]} data-affiliate-unit data-product-key={product.productKey} data-product-name={`${product.brand} ${product.model}`} data-product-asin={product.asin} data-affiliate-relationship={affiliateRelationship}>
   {state.pilot && <span class="affiliate-draft-badge">Draft pilot - verified link</span>}
   {state.draftPreview && <span class="affiliate-draft-badge">Draft preview · not clickable</span>}
   {state.showImage && <img class="affiliate-product-card__image" src={product.imagePathOrUrl!} alt={product.imageAlt || `${product.brand} ${product.model}`} width="720" height="540" loading="lazy" decoding="async" data-image-source={product.imageRightsSource} data-image-sha256={product.imageSha256} />}
   <div class="affiliate-product-card__body">
-    <p class="affiliate-product-card__relationship">{mapping.relationshipLabel}</p>
+    <p class="affiliate-product-card__relationship">{relationshipLabel}</p>
     <p class="affiliate-product-card__category">{product.category}</p>
     <Heading>{`${product.brand} ${product.model}`}</Heading>
     <p>{mapping.recommendationRationale}</p>
