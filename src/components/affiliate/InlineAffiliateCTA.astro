@@ -19,8 +19,10 @@ const product = getProduct(productKey);
 const mapping = getArticleProductMapping(articleSlug);
 const state = getProductRenderState(product, mapping, resolveAffiliateMode(import.meta.env.AFFILIATE_MODE), import.meta.env.DEV);
 const lead = context || product?.editorialSummary || 'Exact product link pending editorial review.';
+// Per-product relationship wins over the article-level value (see ProductCard).
+const affiliateRelationship = mapping?.productRelationships?.[productKey] ?? mapping?.affiliateRelationship;
 ---
-{state.visible && product && <aside class="affiliate-inline-cta" data-affiliate-unit data-product-key={product.productKey} data-affiliate-relationship={mapping?.affiliateRelationship}>
+{state.visible && product && <aside class="affiliate-inline-cta" data-affiliate-unit data-product-key={product.productKey} data-affiliate-relationship={affiliateRelationship}>
   {state.draftPreview && <span class="affiliate-draft-badge">Draft preview · not clickable</span>}
   <div>{role && <p class="affiliate-inline-cta__role">{role}</p>}<strong>{product.brand} {product.model}</strong><p>{lead}</p></div>
   <AffiliateLink productKey={productKey} articleSlug={articleSlug} placement={placement} cardVariant="inline_cta" class="affiliate-button"><span>{state.draftPreview ? 'Amazon link awaiting verification' : label}</span></AffiliateLink>

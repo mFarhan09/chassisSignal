@@ -2,11 +2,11 @@
 
 Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors were added.
 
-- Eligible guides: 67
+- Eligible guides: 69
 - APPROVE: 9
-- CORRECTED: 58
+- CORRECTED: 60
 - HOLD: 0
-- Material before/after mapping changes: 62
+- Material before/after mapping changes: 64
 
 ## Changed mappings
 
@@ -140,11 +140,14 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
   - Before: primary=[foxwell-nt530, foxwell-nt530-plus]; alternative=[autel-mk808s]; mode=comparison
   - After: primary=[autel-mx808s]; alternative=[]; mode=recommended_equipment
 - `foxwell-nt530-vs-nt710` (CORRECTED)
-  - Before: primary=[foxwell-nt530, icarsoft-bmm-v3]; alternative=[foxwell-nt710, autophix-7910, autel-mk900, creator-c310-plus]; mode=comparison
+  - Before: primary=[foxwell-nt530, icarsoft-bmm-v3]; alternative=[foxwell-nt710, autophix-7910, autel-mk900, creator-c310-plus, foxwell-nt809bt]; mode=comparison
   - After: primary=[autophix-7910p-plus]; alternative=[]; mode=recommended_equipment
 - `foxwell-nt710-vs-autel-mk900-bmw` (CORRECTED)
-  - Before: primary=[foxwell-nt710, autel-mk900]; alternative=[]; mode=comparison
+  - Before: primary=[foxwell-nt710, autel-mk900]; alternative=[foxwell-nt809bt]; mode=comparison
   - After: primary=[foxwell-nt530]; alternative=[autel-mk900-bt]; mode=recommended_equipment
+- `foxwell-nt710-vs-nt809bt-bmw` (CORRECTED)
+  - Before: primary=[foxwell-nt710, autel-mk900]; alternative=[foxwell-nt809bt]; mode=comparison
+  - After: primary=[foxwell-nt809bt, foxwell-nt530]; alternative=[]; mode=comparison
 - `icarsoft-bmm-v3-vs-foxwell-nt530` (CORRECTED)
   - Before: primary=[foxwell-nt530, icarsoft-bmm-v3]; alternative=[]; mode=comparison
   - After: primary=[foxwell-nt530]; alternative=[]; mode=recommended_equipment
@@ -160,6 +163,9 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
 - `launch-x431-bmw` (CORRECTED)
   - Before: primary=[foxwell-nt530]; alternative=[launch-creader-elite-bmw, launch-creader-elite-x, launch-x431-throttle-v, launch-x431-torque-link, launch-smartlink-c]; mode=recommended_equipment
   - After: primary=[launch-creader-elite-bmw-v2, launch-x431-pro3s-plus]; alternative=[]; mode=comparison
+- `launch-x431-pro-elite-vs-foxwell-nt710-bmw` (CORRECTED)
+  - Before: primary=[foxwell-nt710, autel-mk900]; alternative=[foxwell-nt809bt, launch-x431-pro-elite]; mode=comparison
+  - After: primary=[launch-x431-pro-elite, foxwell-nt530]; alternative=[]; mode=comparison
 - `launch-x431-vs-autel-for-bmw` (CORRECTED)
   - Before: primary=[foxwell-nt530, foxwell-nt530-plus]; alternative=[autel-mk808s, autel-maxisys-ultra-s2, launch-x431-throttle-v, autel-vcmi-2, autel-maxisys-ultra]; mode=comparison
   - After: primary=[launch-x431-pro3s-plus, autel-maxisys-ultra]; alternative=[]; mode=comparison

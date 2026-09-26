@@ -22,7 +22,10 @@ const representative = new Set([
   'obdlink-cx-vs-mx-plus',               // comparison article
   'bmw-f-series-vs-g-series-obd-adapter',// compatibility article
   'bmw-scanner-abs-airbag-codes',        // scanner guide
-  'bimmerlink-adapter'                   // alternative-bearing article
+  'bimmerlink-adapter',                  // alternative-bearing article
+  // 2026-09-26 batch: exact product + labelled alternative on one comparison card.
+  'foxwell-nt710-vs-nt809bt-bmw',
+  'launch-x431-pro-elite-vs-foxwell-nt710-bmw'
 ]);
 const widths = [375, 390, 430, 768, 1024, 1440];
 const viewportHeight = (width) => (width <= 480 ? 720 : width <= 820 ? 1024 : 900);

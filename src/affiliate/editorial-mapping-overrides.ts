@@ -97,5 +97,16 @@ export const editorialMappingOverrides: Record<string, EditorialMappingOverride>
   'bimmerlink-vs-bimmer-tool': approve('compatible_adapter', ['obdlink-cx'], [], 'OBDLink CX is named as the supported BimmerLink adapter; the diagnostic apps are not monetized and no bimmer-tool hardware is implied.'),
   'bmw-dpf-regeneration-scan-tool': approve('recommended_equipment', ['obdlink-cx'], [], 'OBDLink CX is the documented BimmerLink adapter for the DPF service-regeneration request workflow; capability remains gated on exact BMW support.'),
   'bmw-vanos-diagnostic-tool': approve('recommended_equipment', ['autel-ds808s-bt'], [], 'Autel DS808S-BT is the recommended full-tablet route, shown only within the VANOS-capability gate; exact BMW coverage must be confirmed.'),
+  // --- 2026-09-26 controlled production batch: CS-088 and CS-089. ---
+  // UPDATED 2026-09-26 (second pass): the user supplied exact SiteStripe links for the Foxwell
+  // NT809BT (B0D2D5MMP5) and the LAUNCH X-431 PRO ELITE (B0C6TGKYLF), so both are now in the
+  // catalog as exact products and the earlier stand-ins are retired from those slots. The
+  // LAUNCH X-431 PRO3S+ substitution is GONE from CS-089 because the exact PRO ELITE now fits.
+  // There is still NO user-supplied exact link for the BMW-software Foxwell NT710, so the
+  // NT530 stays on both guides only as a clearly labelled related alternative for that side.
+  // It is not the NT710 and must never be shown as carrying the NT710 BMW coding claim.
+  'foxwell-nt710-vs-nt809bt-bmw': corrected('comparison', ['foxwell-nt809bt', 'foxwell-nt530'], [], 'The NT809BT below is the exact multi-brand tool this guide compares. The NT710 has no verified listing, so the second card is the Foxwell NT530 as a related single-make alternative only - it is not the NT710 and carries none of the NT710 coding or lifetime-update claims. Check each card for what that unit actually is.'),
+  'launch-x431-pro-elite-vs-foxwell-nt710-bmw': corrected('comparison', ['launch-x431-pro-elite', 'foxwell-nt530'], [], 'The X-431 PRO ELITE below is the exact LAUNCH tool this guide compares. The NT710 has no verified listing, so the second card is the Foxwell NT530 as a related single-make alternative only - it is not the NT710 and makes none of its coding claims. Check each card for what that unit actually is.'),
+
   'bmw-wheel-speed-sensor-diagnostic-tool': approve('recommended_equipment', ['autel-mx900'], [], 'Autel MX900 is the recommended tool within the BMW DSC and live-data capability gate; four-corner wheel-speed access requires confirming the exact BMW.')
 };

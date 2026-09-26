@@ -73,6 +73,30 @@ const ALT_ROLE = {
   'foxwell-nt710-vs-autel-mk900-bmw': 'Wireless MK900-family alternative',
 };
 
+/**
+ * Article-specific copy for a TWO-PRIMARY COMPARISON guide's middle and end CTAs.
+ *
+ * The generated `compactLead` / `finalLead` templates assert that the featured unit is "the
+ * specific unit to price" for the section it lands in. That is safe when both compared
+ * products are the article's own subjects. It is NOT safe on a guide where one card is a
+ * labelled ALTERNATIVE standing in for a subject with no verified listing: the template would
+ * silently promote the alternative into the subject's role, inside a section discussing the
+ * subject's capabilities. Where that risk exists, the copy is written explicitly here and
+ * states what the product actually is. Slugs absent from these maps keep the generated copy.
+ */
+const MID_ROLE = {
+  'foxwell-nt710-vs-nt809bt-bmw': 'Related Foxwell alternative - not the NT710',
+  'launch-x431-pro-elite-vs-foxwell-nt710-bmw': 'Related Foxwell alternative - not the NT710',
+};
+const MID_CONTEXT = {
+  'foxwell-nt710-vs-nt809bt-bmw': 'The NT710 has no verified listing, so this is the Foxwell NT530: the available single-make BMW handheld from the same maker. It carries neither the NT710 coding claim nor its lifetime update term, and it is not a stand-in for the NT809BT. Check the model and serial prefix before buying.',
+  'launch-x431-pro-elite-vs-foxwell-nt710-bmw': 'The NT710 has no verified listing, so this is the Foxwell NT530: the available single-make BMW handheld from the same maker. It is not the NT710 and makes none of its coding claims. Check the model and the installed BMW software before buying.',
+};
+const FINAL_CONTEXT = {
+  'foxwell-nt710-vs-nt809bt-bmw': 'If the mixed-fleet, wireless-VCI side fits, the Foxwell NT809BT is the exact tool to check. Confirm your BMW in Foxwell coverage, accept that ECU coding is not on its list, and price the renewal past year three.',
+  'launch-x431-pro-elite-vs-foxwell-nt710-bmw': 'If documented CAN FD and DoIP support decides it, the LAUNCH X-431 PRO ELITE is the exact tool to check. Confirm which of the three models on that shared page you are being sold, and get the update period in writing first.',
+};
+
 // Second reader-moment copy for LONG articles whose approved mapping has a single product.
 // The same verified unit appears at a distinct decision moment with distinct copy — never a
 // second identical card, and never a second product identity.
@@ -217,7 +241,7 @@ for (const file of files) {
     if (isComparison && primary.length === 2) {
       placements.push({ position: 'top', anchorIndex: useful[firstIdx].index, headingText: useful[firstIdx].text, variant: 'comparison_card', productKeys: primary, role: 'Compare the two options', decisionMoment: 'comparison' });
       // Placement C (middle) — feature the second compared product individually.
-      placements.push({ position: 'middle', anchorIndex: useful[midIdx].index, headingText: useful[midIdx].text, variant: 'compact_cta', productKeys: [primary[1]], role: 'Option in focus', decisionMoment: 'technical', context: compactLead(primary[1], useful[midIdx].text, topic, hash(slug)) });
+      placements.push({ position: 'middle', anchorIndex: useful[midIdx].index, headingText: useful[midIdx].text, variant: 'compact_cta', productKeys: [primary[1]], role: MID_ROLE[slug] || 'Option in focus', decisionMoment: 'technical', context: MID_CONTEXT[slug] || compactLead(primary[1], useful[midIdx].text, topic, hash(slug)) });
     } else if (alt.length > 0) {
       // Alternative-bearing single-primary article (e.g. CX primary + MX+ approved alternative).
       const primaryVariant = mapping.monetizationMode === 'exact_product' ? 'product_card' : 'recommended_equipment';
@@ -231,7 +255,7 @@ for (const file of files) {
       placements.push({ position: 'middle', anchorIndex: useful[midIdx].index, headingText: useful[midIdx].text, variant: 'compact_cta', productKeys: [primary[0]], role: 'Coverage check before you commit', decisionMoment: 'technical', context: midSoloLead(primary[0], useful[midIdx].text, topic) });
     }
     // Placement B (end) — final pick.
-    placements.push({ position: 'end', anchorIndex: finalIdx, headingText: finalHeadingText, variant: 'final_cta', productKeys: [primary[0]], role: 'Final pick to verify', decisionMoment: 'final_recommendation', context: finalLead(primary[0], finalHeadingText, topic, hash(slug) + 1) });
+    placements.push({ position: 'end', anchorIndex: finalIdx, headingText: finalHeadingText, variant: 'final_cta', productKeys: [primary[0]], role: 'Final pick to verify', decisionMoment: 'final_recommendation', context: FINAL_CONTEXT[slug] || finalLead(primary[0], finalHeadingText, topic, hash(slug) + 1) });
     counts.THREE_PLACEMENTS++;
   } else {
     // SHORT article: TWO placements — primary decision card early + restrained final CTA.
@@ -241,7 +265,7 @@ for (const file of files) {
       const primaryVariant = mapping.monetizationMode === 'exact_product' ? 'product_card' : 'recommended_equipment';
       placements.push({ position: 'top', anchorIndex: useful[firstIdx].index, headingText: useful[firstIdx].text, variant: primaryVariant, productKeys: [primary[0]], role: 'Relevant equipment', decisionMoment: 'compatibility' });
     }
-    placements.push({ position: 'end', anchorIndex: finalIdx, headingText: finalHeadingText, variant: 'final_cta', productKeys: [primary[0]], role: 'Final pick to verify', decisionMoment: 'final_recommendation', context: finalLead(primary[0], finalHeadingText, topic, hash(slug)) });
+    placements.push({ position: 'end', anchorIndex: finalIdx, headingText: finalHeadingText, variant: 'final_cta', productKeys: [primary[0]], role: 'Final pick to verify', decisionMoment: 'final_recommendation', context: FINAL_CONTEXT[slug] || finalLead(primary[0], finalHeadingText, topic, hash(slug)) });
     counts.TWO_PLACEMENTS++;
   }
 
