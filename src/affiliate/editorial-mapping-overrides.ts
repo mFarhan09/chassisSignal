@@ -97,5 +97,13 @@ export const editorialMappingOverrides: Record<string, EditorialMappingOverride>
   'bimmerlink-vs-bimmer-tool': approve('compatible_adapter', ['obdlink-cx'], [], 'OBDLink CX is named as the supported BimmerLink adapter; the diagnostic apps are not monetized and no bimmer-tool hardware is implied.'),
   'bmw-dpf-regeneration-scan-tool': approve('recommended_equipment', ['obdlink-cx'], [], 'OBDLink CX is the documented BimmerLink adapter for the DPF service-regeneration request workflow; capability remains gated on exact BMW support.'),
   'bmw-vanos-diagnostic-tool': approve('recommended_equipment', ['autel-ds808s-bt'], [], 'Autel DS808S-BT is the recommended full-tablet route, shown only within the VANOS-capability gate; exact BMW coverage must be confirmed.'),
+  // --- 2026-09-26 controlled production batch: CS-088 and CS-089. ---
+  // Neither batch article's exact subject products have a verified listing: the BMW-software
+  // NT710 still resolves to no standalone listing, and neither the Foxwell NT809BT nor the
+  // LAUNCH X-431 PRO ELITE is in the registry at all. Each guide is therefore mapped to the
+  // strongest VERIFIED product on the relevant side and labelled for what that product IS.
+  'foxwell-nt710-vs-nt809bt-bmw': corrected('recommended_equipment', ['foxwell-nt530'], [], 'Neither tool in this comparison has a verified listing. The Foxwell NT530 is the verified Foxwell single-make BMW handheld, and Foxwell groups it with the NT710 in the same "one brand, add extra brands" range in its own buyer guide, so it accurately represents that side of the architecture. It is NOT the NT710 and carries none of the NT710 BMW E/F/G coding claims, and it is not a substitute for the multi-brand NT809BT. Confirm the exact model, installed BMW software and the specific function before buying.'),
+  'launch-x431-pro-elite-vs-foxwell-nt710-bmw': corrected('comparison', ['launch-x431-pro3s-plus', 'foxwell-nt530'], [], 'Neither exact tool compared here has a verified listing. The LAUNCH X-431 PRO3S+ is the verified professional X-431 tablet and represents the LAUNCH platform side; it is NOT the PRO ELITE and its CAN FD and DoIP support must be confirmed separately. The Foxwell NT530 is the verified Foxwell single-make BMW handheld representing the brand-specific side; it is NOT the NT710 and makes none of the NT710 coding claims. Confirm the exact SKU, transport support and update terms before purchase.'),
+
   'bmw-wheel-speed-sensor-diagnostic-tool': approve('recommended_equipment', ['autel-mx900'], [], 'Autel MX900 is the recommended tool within the BMW DSC and live-data capability gate; four-corner wheel-speed access requires confirming the exact BMW.')
 };

@@ -14,6 +14,9 @@ export const articlePlacementOverrides: Record<string, ArticlePlacementOverride>
   'icarsoft-bmm-v3-vs-foxwell-nt530': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Available Foxwell side of this comparison' },
   'obdlink-cx-vs-unicarscan-ucsi-2100': { affiliateRelationship: 'exact_product', relationshipLabel: 'Exact OBDLink CX side of this comparison' },
 
+  'foxwell-nt710-vs-nt809bt-bmw': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Available Foxwell single-make BMW handheld - not the NT710 or NT809BT' },
+  'launch-x431-pro-elite-vs-foxwell-nt710-bmw': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Available LAUNCH and Foxwell alternatives - neither is the exact tool compared' },
+
   'autel-scanner-for-bmw': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Available Autel scanner alternatives' },
   'autophix-7910-vs-foxwell-nt530': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Available AUTOPHIX-side alternative' },
   'bmw-bidirectional-scan-tool-functions': { affiliateRelationship: 'workshop_alternative', relationshipLabel: 'Available bidirectional workshop alternative' },

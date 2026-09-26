@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 560" width="1100" height="560" role="img" aria-labelledby="t088 d088">
+<title id="t088">The BMW ECU coding question separates the two Foxwell tools</title>
+<desc id="d088">A single decision. If BMW ECU coding is in scope, the NT710 is the tool Foxwell lists for coding, with one make and lifetime updates. If it is not, or the fleet spans several makes, the NT809BT covers multiple brands with no coding listed and a three year update term.</desc>
+<defs>
+  <marker id="a088" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0 0 L10 5 L0 10 z" fill="#4a6076"/>
+  </marker>
+</defs>
+<rect width="1100" height="560" fill="#0f1620"/>
+<text x="64" y="72" fill="#f2f6fa" font-family="Georgia,serif" font-size="30" font-weight="bold">One question decides it</text>
+
+<rect x="330" y="118" width="440" height="74" rx="37" fill="#1b2d3a" stroke="#3d6070" stroke-width="2"/>
+<text x="550" y="163" fill="#9fdcf0" font-family="Helvetica,Arial,sans-serif" font-size="20" font-weight="bold" text-anchor="middle">Is BMW ECU coding in scope?</text>
+
+<path d="M430 192 L300 268" stroke="#4a6076" stroke-width="2" fill="none" marker-end="url(#a088)"/>
+<path d="M670 192 L800 268" stroke="#4a6076" stroke-width="2" fill="none" marker-end="url(#a088)"/>
+<text x="356" y="238" fill="#7fe0a8" font-family="Helvetica,Arial,sans-serif" font-size="16" font-weight="bold">Yes</text>
+<text x="726" y="238" fill="#f0c674" font-family="Helvetica,Arial,sans-serif" font-size="16" font-weight="bold">No</text>
+
+<rect x="90" y="284" width="400" height="188" rx="10" fill="#16212e" stroke="#2f6b45" stroke-width="2"/>
+<text x="126" y="336" fill="#7fe0a8" font-family="Georgia,serif" font-size="27" font-weight="bold">NT710</text>
+<text x="126" y="382" fill="#dce6f0" font-family="Helvetica,Arial,sans-serif" font-size="17">One make, coding listed</text>
+<text x="126" y="416" fill="#dce6f0" font-family="Helvetica,Arial,sans-serif" font-size="17">for specific models</text>
+<text x="126" y="452" fill="#8fa3b8" font-family="Helvetica,Arial,sans-serif" font-size="16">Lifetime updates</text>
+
+<rect x="610" y="284" width="400" height="188" rx="10" fill="#16212e" stroke="#2c3e52" stroke-width="2"/>
+<text x="646" y="336" fill="#9fdcf0" font-family="Georgia,serif" font-size="27" font-weight="bold">NT809BT</text>
+<text x="646" y="382" fill="#dce6f0" font-family="Helvetica,Arial,sans-serif" font-size="17">Multi-brand, no coding</text>
+<text x="646" y="416" fill="#dce6f0" font-family="Helvetica,Arial,sans-serif" font-size="17">on the Foxwell list</text>
+<text x="646" y="452" fill="#8fa3b8" font-family="Helvetica,Arial,sans-serif" font-size="16">Three year updates</text>
+
+<text x="64" y="524" fill="#6f8296" font-family="Helvetica,Arial,sans-serif" font-size="14">Source: Foxwell buyer guide and product pages. Coverage varies by vehicle; confirm your VIN.</text>
+</svg>

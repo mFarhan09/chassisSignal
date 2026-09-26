@@ -37,7 +37,7 @@ const relationshipTypeSet = new Set(relationshipTypes);
  * placement, a middle placement when the article is long, and at least the required number of
  * rendered affiliate links. The former `UNMONETIZED_GUIDES` allow-list is deliberately gone.
  */
-const EXPECTED_PUBLISHED_GUIDES = 67;
+const EXPECTED_PUBLISHED_GUIDES = 69;
 // Rendered-position gates, measured against the substantive article body.
 const TOP_MAX_FRACTION = 0.30;
 // Below this word count, "fraction of the body above the first unit" stops being a useful

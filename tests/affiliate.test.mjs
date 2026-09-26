@@ -223,13 +223,13 @@ test('research candidates stay unverified until a human verifies them, and inven
   assert.deepEqual(inventory.map((row) => row.slug).sort(), articles.map((article) => article.slug).sort());
 });
 
-test('published guide count is 67 (tripwire against accidental content deletion)', async () => {
+test('published guide count is 69 (tripwire against accidental content deletion)', async () => {
   // This count is INTENTIONALLY fixed, unlike the derived assertions above. Every other test
   // here derives the inventory, so a guide silently disappearing would shrink the set and still
   // pass. This one exists purely to detect accidental deletion or an un-drafted guide. When
   // guides are legitimately published or retired, update this number in the same commit.
   const articles = await scanEligibleGuides();
-  assert.equal(articles.length, 67, 'published guide inventory changed — update deliberately, in the same commit');
+  assert.equal(articles.length, 69, 'published guide inventory changed — update deliberately, in the same commit');
 });
 
 test('every published guide has top and bottom placements, and long guides a middle one', async () => {

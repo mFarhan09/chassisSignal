@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 500" width="1100" height="500" role="img" aria-labelledby="t089 d089">
+<title id="t089">Which vehicle transports each maker documents</title>
+<desc id="d089">Launch states support for CAN FD and DoIP on the X-431 Pro Elite. Foxwell publishes neither protocol for the NT710, which is an absence of a published claim rather than proof that the tool cannot communicate.</desc>
+<rect width="1100" height="500" fill="#0f1620"/>
+<text x="64" y="70" fill="#f2f6fa" font-family="Georgia,serif" font-size="30" font-weight="bold">What each maker puts in writing</text>
+<text x="64" y="102" fill="#8fa3b8" font-family="Helvetica,Arial,sans-serif" font-size="16">Transport support for newer BMW architecture</text>
+
+<rect x="64" y="146" width="972" height="130" rx="10" fill="#16212e" stroke="#2f6b45" stroke-width="2"/>
+<text x="100" y="196" fill="#7fe0a8" font-family="Georgia,serif" font-size="24" font-weight="bold">LAUNCH X-431 PRO ELITE</text>
+<rect x="640" y="176" width="150" height="54" rx="27" fill="#1f3a2e" stroke="#2f6b45" stroke-width="2"/>
+<text x="715" y="210" fill="#7fe0a8" font-family="Helvetica,Arial,sans-serif" font-size="19" font-weight="bold" text-anchor="middle">CAN FD</text>
+<rect x="818" y="176" width="150" height="54" rx="27" fill="#1f3a2e" stroke="#2f6b45" stroke-width="2"/>
+<text x="893" y="210" fill="#7fe0a8" font-family="Helvetica,Arial,sans-serif" font-size="19" font-weight="bold" text-anchor="middle">DoIP</text>
+<text x="100" y="246" fill="#8fa3b8" font-family="Helvetica,Arial,sans-serif" font-size="16">Stated on the product page</text>
+
+<rect x="64" y="300" width="972" height="130" rx="10" fill="#16212e" stroke="#2c3e52" stroke-width="2"/>
+<text x="100" y="350" fill="#9fdcf0" font-family="Georgia,serif" font-size="24" font-weight="bold">Foxwell NT710</text>
+<rect x="640" y="330" width="328" height="54" rx="27" fill="#241d24" stroke="#6b5570" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="804" y="364" fill="#c9b3d4" font-family="Helvetica,Arial,sans-serif" font-size="19" font-weight="bold" text-anchor="middle">Neither protocol published</text>
+<text x="100" y="400" fill="#8fa3b8" font-family="Helvetica,Arial,sans-serif" font-size="16">Absence of a claim, not proof of incapability</text>
+
+<text x="64" y="470" fill="#6f8296" font-family="Helvetica,Arial,sans-serif" font-size="14">Confirm transport support for your exact chassis with the maker before purchase.</text>
+</svg>

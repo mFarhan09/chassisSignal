@@ -26,7 +26,7 @@ const approvedMapped = mapped.filter((mapping) => mapping.mappingStatus === 'app
 const actionableKeys = [...new Set(approvedMapped.flatMap((mapping) => [...mapping.primaryProductKeys, ...mapping.alternativeProductKeys]))].sort();
 
 test('every published guide is mapped, approved and monetized (no exemptions)', () => {
-  assert.equal(articles.length, 67);
+  assert.equal(articles.length, 69);
   assert.equal(mapped.length, articles.length);
   assert.equal(Object.keys(editorialMappingOverrides).length, articles.length);
   assert.equal(approvedMapped.length, articles.length);
@@ -167,12 +167,12 @@ test('card markup binds identity and safe affiliate attributes without commerce 
   assert.match(page, /part\.first && <AffiliateDisclosure compact \/>[\s\S]*<PlacementRenderer/);
 });
 
-test('catalog and final reports preserve all candidates and cover 67 guides', async () => {
+test('catalog and final reports preserve all candidates and cover 69 guides', async () => {
   assert.equal(Object.keys(registry).length, 49);
   assert.equal(Object.values(registry).filter((product) => product.specialLink).length, 25);
   const report = await readFile(join(root, 'reports/affiliate/final-affiliate-rollout-report.md'), 'utf8');
   const rows = parseCsvRecords(await readFile(join(root, 'reports/affiliate/final-affiliate-coverage.csv'), 'utf8'));
-  assert.equal(rows.length, 67);
+  assert.equal(rows.length, 69);
   for (const article of articles) {
     assert.ok(rows.find((row) => row.slug === article.slug), article.slug);
     assert.ok(report.includes(String.fromCharCode(96) + article.slug + String.fromCharCode(96)), article.slug);
