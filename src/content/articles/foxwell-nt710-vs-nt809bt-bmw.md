@@ -27,7 +27,7 @@ draft: false
 
 Buy the **NT710** if BMW ECU coding is part of the job and the BMW is effectively the only make you will scan. Buy the **NT809BT** if one tool has to cover a mixed fleet and you can work without ECU coding.
 
-(Foxwell writes the second tool's name both ways — "NT809BT" on the product page, "NT809 BT" in the buyer guide and the update table. They are the same unit. This page uses NT809BT except where it quotes a Foxwell row label verbatim.)
+(Foxwell writes the second tool's name both ways: "NT809BT" on the product page, "NT809 BT" in the buyer guide and the update table. They are the same unit. This page uses NT809BT except where it quotes a Foxwell row label verbatim.)
 
 Foxwell publishes both tools in a single [buyer guide](https://www.foxwelldiag.com/pages/buyer-guide) matrix, which makes this an unusually clean comparison: one vendor, one table, no reconciliation between competing marketing pages. Both run Android 9.0, both are bidirectional, both list 30+ reset and service functions, and neither is listed for offline programming.
 
@@ -76,7 +76,7 @@ None of this establishes real-world speed, connection stability or BMW module co
 
 The NT710 page describes "Exclusive ECU Coding fit for BMW E/F/G Chassis" and personalisation including hidden feature activation, immediately qualified with "This features are only supported on select models". Foxwell states the coverage boundary itself; it does not claim every function on every BMW.
 
-Two cautions matter before you treat that as settled. First, the contradiction is on that one page. The headline reads "BMW E/F/G Chassis", while the function description further down the same page reads "ECU Coding enables the customization of vehicle settings and the unlocking of hidden features tailored for BMW F and E chassis" — G is in the headline and absent from the description. We worked the same contradiction through in the [NT710 versus Autel MK900 comparison](/guides/foxwell-nt710-vs-autel-mk900-bmw/). Treat G chassis coding as unconfirmed until Foxwell verifies it against your VIN in writing.
+Two cautions matter before you treat that as settled. First, the contradiction is on that one page. The headline reads "BMW E/F/G Chassis", while the function description further down the same page reads "ECU Coding enables the customization of vehicle settings and the unlocking of hidden features tailored for BMW F and E chassis". G is in the headline and absent from the description. We worked the same contradiction through in the [NT710 versus Autel MK900 comparison](/guides/foxwell-nt710-vs-autel-mk900-bmw/). Treat G chassis coding as unconfirmed until Foxwell verifies it against your VIN in writing.
 
 Second, do not read the NT809BT's function list as a quiet coding claim. It includes "Injector Coding", which Foxwell describes as writing or updating "injector codes in the ECU after replacing or swapping fuel injectors, enabling precise control of fuel injection per cylinder". That is a service routine inside a defined procedure, and it sits in the same 30+ reset list as oil reset and ABS bleeding. It is not module personalisation, and it does not make the NT809BT a substitute for a coding tool. Note too that the NT710 lists Injector as a service function as well, so this is not even a point of difference. The distinction between a reset routine and genuine coding is the same one covered in [BMW coding vs programming](/guides/bmw-coding-vs-programming/).
 
@@ -105,7 +105,7 @@ What this means for the decision is narrower than a multiplied lifetime total. O
 
 ## Corded handheld against wireless VCI
 
-The NT710 connects by cable and is powered through the OBD port; the buyer guide lists its connection as "Cable". Its Wi-Fi module exists for over-the-air software updates, not for vehicle communication. The NT809BT is listed as "VCI" and uses a Bluetooth vehicle communication interface that stays in the OBD socket while the tablet moves around the car — Foxwell's own framing is "Connect via Bluetooth VCI and move freely around the vehicle during diagnostics".
+The NT710 connects by cable and is powered through the OBD port; the buyer guide lists its connection as "Cable". Its Wi-Fi module exists for over-the-air software updates, not for vehicle communication. The NT809BT is listed as "VCI" and uses a Bluetooth vehicle communication interface that stays in the OBD socket while the tablet moves around the car. Foxwell's own framing is "Connect via Bluetooth VCI and move freely around the vehicle during diagnostics".
 
 This decides more about the work than the spec sheet suggests. Anything requiring you to sit in the driver's seat, operate a switch, or watch a component while reading live data is easier with a wireless VCI. Anything done leaning into the footwell for a few minutes is unaffected. A cable also removes pairing as a failure mode, which is worth something on a tool you use twice a year.
 
@@ -113,7 +113,7 @@ This decides more about the work than the spec sheet suggests. Anything requirin
 
 The NT710 ships with one vehicle make chosen at purchase. Foxwell sells [extra brand software](https://www.foxwelldiag.com/products/extra-vehicle-software) at $80.00 per manufacturer package, and "BMW/ Mini/ Rolls-Royce" is one package, so a BMW and a MINI in the same household cost one addition, not two. Foxwell states that the software "is a virtual product and cannot be refunded once it is authorized" against your serial number, and that you supply the serial number by email after payment.
 
-Two limits on that page are easy to miss and both are worth checking before you buy a used unit. Foxwell states that serial numbers beginning "N5B" and "N5V" "cannot add software for the time being", and it groups the add-on entitlement as being for the "NT510 Elite / NT530 Plus / NT710" — so the serial in front of you, not the model name on the box, decides whether the $80 route is open at all.
+Two limits on that page are easy to miss and both are worth checking before you buy a used unit. Foxwell states that serial numbers beginning "N5B" and "N5V" "cannot add software for the time being", and it groups the add-on entitlement as being for the "NT510 Elite / NT530 Plus / NT710", so the serial in front of you, not the model name on the box, decides whether the $80 route is open at all.
 
 That non-refundable, serial-locked model is the thing to price honestly. One BMW plus one unrelated make is the tool plus $80. Three unrelated makes starts to approach the multi-brand tool you did not buy. The cross-brand version of that arithmetic is worked through in the [NT710 versus Autel MK900 comparison](/guides/foxwell-nt710-vs-autel-mk900-bmw/).
 
@@ -123,7 +123,7 @@ Choose the **NT710** when the BMW or MINI is the car you are buying the tool for
 
 Choose the **NT809BT** when the household or workshop spans several makes, when a wireless VCI genuinely changes how you work, and when full-system diagnostics with bidirectional control and 30+ service resets is the actual requirement. Accept three things: ECU coding, key programming and hidden-feature activation are not ticked for it; the free update term ends at three years; and renewal after that is currently priced at US$150 for one year.
 
-If the deciding factor is the update bill rather than the capability, the honest boundary is this. Inside three years the terms are equivalent in cash. Beyond three years the NT809BT starts costing money for software and the NT710 currently does not — but the NT710 only covers one make until you add $80 packages, and it is not documented for the multi-brand work the NT809BT is bought for. There is no horizon at which the cheaper-to-update tool becomes the right tool for a mixed fleet.
+If the deciding factor is the update bill rather than the capability, the honest boundary is this. Inside three years the terms are equivalent in cash. Beyond three years the NT809BT starts costing money for software and the NT710 currently does not. But the NT710 only covers one make until you add $80 packages, and it is not documented for the multi-brand work the NT809BT is bought for. There is no horizon at which the cheaper-to-update tool becomes the right tool for a mixed fleet.
 
 If you are still deciding between a handheld and a full tablet rather than between these two units, [BMW code reader vs scan tool](/guides/bmw-code-reader-vs-scan-tool/) frames that choice first. If the NT710 is already the shortlist and the question is which Foxwell generation, [NT530 vs NT710](/guides/foxwell-nt530-vs-nt710/) separates the hardware from the licensed coverage.
 
