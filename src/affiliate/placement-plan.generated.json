@@ -1,4 +1,49 @@
 {
+  "autel-mk808s-bmw-compatibility": {
+    "classification": "THREE_PLACEMENTS",
+    "articleType": "recommended_equipment",
+    "wordCount": 1544,
+    "h2Count": 8,
+    "isLong": true,
+    "requiredPlacements": 3,
+    "placements": [
+      {
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "What the MK808S does on a BMW",
+        "variant": "recommended_equipment",
+        "productKeys": [
+          "autel-mx808s"
+        ],
+        "role": "Relevant equipment",
+        "decisionMoment": "compatibility"
+      },
+      {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "Where it stops: no BMW coding or programming",
+        "variant": "compact_cta",
+        "productKeys": [
+          "autel-mx808s"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time where it stops: no BMW coding or programming matters for autel MK808S BMW Compatibility, the practical question is whether Autel MaxiCheck MX808S actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
+        "anchorIndex": 6,
+        "headingText": "Which BMW owner the MK808S fits",
+        "variant": "final_cta",
+        "productKeys": [
+          "autel-mx808s"
+        ],
+        "role": "Final pick to verify",
+        "decisionMoment": "final_recommendation",
+        "context": "That makes Autel MaxiCheck MX808S the unit to check last for autel MK808S BMW Compatibility: confirm your BMW or MINI, platform and required function on the current listing."
+      }
+    ]
+  },
   "autel-mk900-bmw-compatibility": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
@@ -1967,6 +2012,51 @@
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
         "context": "Having worked through final verdict, Creator C310+ is the listing to confirm for creator C310+ vs Foxwell NT530 — match your exact vehicle, market and software before buying."
+      }
+    ]
+  },
+  "enet-cable-vs-obdlink-cx-for-bimmercode": {
+    "classification": "THREE_PLACEMENTS",
+    "articleType": "compatible_adapter",
+    "wordCount": 1410,
+    "h2Count": 6,
+    "isLong": true,
+    "requiredPlacements": 3,
+    "placements": [
+      {
+        "position": "top",
+        "anchorIndex": 1,
+        "headingText": "The OBDLink CX: the adapter BimmerCode recommends",
+        "variant": "recommended_equipment",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Relevant equipment",
+        "decisionMoment": "compatibility"
+      },
+      {
+        "position": "middle",
+        "anchorIndex": 2,
+        "headingText": "The ENET cable: wired, F/G/I only, and awkward on iPhone",
+        "variant": "compact_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Coverage check before you commit",
+        "decisionMoment": "technical",
+        "context": "By the time the ENET cable: wired, F/G/I only, and awkward on iPhone matters for eNET Cable vs OBDLink CX for BimmerCode, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+      },
+      {
+        "position": "end",
+        "anchorIndex": 4,
+        "headingText": "Which one for your car and phone",
+        "variant": "final_cta",
+        "productKeys": [
+          "obdlink-cx"
+        ],
+        "role": "Final pick to verify",
+        "decisionMoment": "final_recommendation",
+        "context": "That makes OBDLink CX the unit to check last for eNET Cable vs OBDLink CX for BimmerCode: confirm your BMW or MINI, platform and required function on the current listing."
       }
     ]
   },

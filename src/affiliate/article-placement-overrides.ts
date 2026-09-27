@@ -70,5 +70,7 @@ export const articlePlacementOverrides: Record<string, ArticlePlacementOverride>
   'launch-x431-vs-autel-for-bmw': { affiliateRelationship: 'workshop_alternative', relationshipLabel: 'Available workshop alternatives' },
   'obdlink-ex-vs-enet-cable': { affiliateRelationship: 'exact_product', relationshipLabel: 'Exact OBDLink EX product discussed - not a BMW ENET interface' },
   'protool-pricing': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Alternative BMW app interface' },
-  'protool-vs-carly': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Alternative BMW app route' }
+  'protool-vs-carly': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Alternative BMW app route' },
+  'autel-mk808s-bmw-compatibility': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Available Autel MaxiCheck sibling - the MX808S, not the exact MK808S' },
+  'enet-cable-vs-obdlink-cx-for-bimmercode': { affiliateRelationship: 'exact_product', relationshipLabel: 'Exact OBDLink CX adapter compared - the ENET cable has no verified listing' }
 };
