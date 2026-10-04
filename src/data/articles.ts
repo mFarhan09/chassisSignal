@@ -17,5 +17,5 @@ export function articlePath(article: { data: { section: 'guides' | 'research'; s
 export function articleCardImage(article: { data: { cardImage?: string; heroImage?: string | { src: string } } }) {
   if (article.data.cardImage) return article.data.cardImage;
   if (typeof article.data.heroImage === 'string') return article.data.heroImage;
-  return article.data.heroImage?.src;
+  return article.data.heroImage?.src ?? '/images/research-workshop.jpg';
 }
