@@ -11,9 +11,16 @@ const actionLabel = article.data.section === 'guides' ? 'Read guide' : 'Read res
 const cardImage = articleCardImage(article);
 ---
 <article class="article-card card-3d" data-tilt>
-  {visual && <div class:list={['article-card__visual', { 'article-card__visual--abstract': !cardImage }]} style={cardImage ? `--article-image:url(${cardImage})` : undefined} aria-hidden="true"></div>}
+  {visual && (cardImage
+    ? <div class="article-card__visual article-card__visual--image" aria-hidden="true"><img src={cardImage} alt="" loading="lazy" decoding="async" /></div>
+    : <div class="article-card__visual article-card__visual--abstract" aria-hidden="true"></div>
+  )}
   <div class="article-card__meta"><span>{article.data.category}</span><EvidenceBadge level={article.data.evidenceLevel} /></div>
   <h3><a href={href}>{article.data.title}</a></h3>
   <p>{article.data.description}</p>
   <a class="text-link" href={href}>{actionLabel} <span aria-hidden="true">→</span></a>
 </article>
+
+<style>
+  .article-card__visual--image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+</style>
