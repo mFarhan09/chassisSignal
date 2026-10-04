@@ -38,7 +38,7 @@ const related = (explicitRelated.length > 0 ? explicitRelated : articles
 const published = article.data.publishedAt.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 const updated = article.data.updatedAt?.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 const pricingChecked = article.data.pricingChecked?.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
-const image = typeof article.data.heroImage === 'string' ? article.data.heroImage : undefined;
+const image = articleCardImage(article);
 const affiliateMode = resolveAffiliateMode(import.meta.env.AFFILIATE_MODE);
 const affiliateMapping = getArticleProductMapping(article.data.slug);
 const hasLiveAffiliateProducts = mappingHasLiveProducts(affiliateMapping, productRegistry, affiliateMode);
