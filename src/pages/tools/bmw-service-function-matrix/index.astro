@@ -1,0 +1,92 @@
+---
+import ResearchToolArticleLayout from '../../../components/ResearchToolArticleLayout.astro';
+import ServiceFunctionResearch from '../../../components/ServiceFunctionResearch.astro';
+import ServiceFunctionCases from '../../../components/ServiceFunctionCases.astro';
+const functions=[
+{title:'Condition-Based Service reminder',kind:'reset',risk:'low',module:'CBS / vehicle maintenance indicator',evidence:'Actual service completed, corresponding interval item, supported cluster or tool method',guide:'bmw-service-reset-tool',limit:'A cleared reminder does not document that the service was performed.'},
+{title:'12 V replacement battery registration',kind:'registration',risk:'medium',module:'Energy management / battery-monitoring system',evidence:'Replacement type, vehicle generation, registration support and possible separate capacity configuration',guide:'bmw-battery-registration-scanner',limit:'Registration and battery coding are not interchangeable.'},
+{title:'Injector calibration-code entry',kind:'coding',risk:'high',module:'Engine management / DME or DDE',evidence:'Exact engine, injector identification, cylinder assignment and approved code type',guide:'bmw-injector-coding-tool',limit:'Not every replacement injector requires the same coding operation.'},
+{title:'Valvetronic teach-in',kind:'adaptation',risk:'high',module:'Engine management / Valvetronic control',evidence:'Engine architecture, fault state, repair trigger and official relearn prerequisites',guide:'ista-valvetronic-relearn',limit:'Repeated teach-in after a failed attempt is not a substitute for diagnosis.'},
+{title:'Transfer-case adaptation / oil service',kind:'adaptation',risk:'high',module:'VTG / xDrive transfer-case controller',evidence:'Transfer-case type, work completed, exact adaptation versus calibration procedure',guide:'bmw-transfer-case-adaptation-reset-tool',limit:'An adaptation reset cannot repair damaged hardware.'},
+{title:'Electronic parking brake service position',kind:'service',risk:'critical',module:'EMF / rear brake electronic control',evidence:'Exact parking-brake architecture, approved maintenance mode and mechanical prerequisites',guide:'bmw-electric-parking-brake-service-mode-scanner',limit:'Not equivalent to fault clearing or hydraulic bleeding.'},
+{title:'ABS hydraulic bleed actuation',kind:'service',risk:'critical',module:'DSC / ABS hydraulic unit',evidence:'Approved brake system procedure, named pump/valve routine and bleeding equipment',guide:'bmw-brake-bleed-scan-tool',limit:'A menu labeled ABS does not prove a safe bleed procedure for this vehicle.'},
+{title:'Steering-angle sensor calibration',kind:'calibration',risk:'critical',module:'DSC / steering-angle system',evidence:'Alignment or component-repair trigger, wheel position and specific calibration prerequisites',guide:'bmw-steering-angle-sensor-calibration-tool',limit:'Calibration is not automatically appropriate for every warning lamp.'},
+{title:'TPMS sensor diagnosis, relearn or programming',kind:'relearn',risk:'medium',module:'RDC / TPMS sensor and control system',evidence:'Direct/indirect TPMS type, sensor SKU, tool capabilities and vehicle relearn requirement',guide:'bmw-tpms-diagnostic-tool',limit:'An MK900 base model and an MK900-TS have different listed TPMS features.'},
+{title:'Diesel particulate filter guided operation',kind:'service',risk:'high',module:'Engine emission/DPF system',evidence:'DPF load/fault context, supported engine, environmental and thermal safety conditions',guide:'bmw-dpf-regeneration-scan-tool',limit:'Regeneration is not a universal fault remedy and can be hazardous.'},
+{title:'Water-pump diagnostic activation',kind:'active',risk:'high',module:'Engine cooling / pump controller',evidence:'Engine family, fault state, vehicle temperature and official active-test conditions',guide:'bmw-electronic-water-pump-diagnostic-tool',limit:'Actuator activation may have temperature and electrical hazards.'},
+{title:'Ride-height recalibration',kind:'calibration',risk:'critical',module:'Suspension / level control',evidence:'Vehicle load, suspension version, ride-height measurements and approved calibration',guide:'bmw-ride-height-calibration-scan-tool',limit:'Incorrect values can affect ride dynamics and safety.'},
+{title:'Bidirectional component command',kind:'active',risk:'high',module:'Named ECU and specific output',evidence:'Explicit ECU/command in coverage list, approved test conditions and response observation',guide:'bmw-bidirectional-scan-tool-functions',limit:'A generic active-test icon is not a universal command library.'},
+{title:'ECU software programming',kind:'programming',risk:'critical',module:'BMW ECU programming environment',evidence:'Authorized ISTA/ISTA-P eligibility, supported interface, stable power and qualified operator',guide:'bmw-coding-vs-programming',limit:'Feature coding and firmware programming have separate hardware and safety requirements.'}
+];
+const related=[
+['bmw-service-reset-tool','Service reminders and CBS','Dashboard versus documented service resets'],
+['bmw-battery-registration-scanner','Battery registration','Battery replacement record versus capacity/chemistry coding'],
+['bmw-injector-coding-tool','Injector coding','When engine-specific calibration-code entry is required'],
+['ista-valvetronic-relearn','Valvetronic relearn','Engine and fault prerequisites for approved teach-in'],
+['bmw-transfer-case-adaptation-reset-tool','Transfer-case adaptation','VTG reset, oil service, calibration and diagnosis'],
+['bmw-electric-parking-brake-service-mode-scanner','Electronic parking brake','Service-position architecture and high-risk boundaries'],
+['bmw-brake-bleed-scan-tool','ABS brake bleeding','Hydraulic bleeding versus actuated pump routine'],
+['bmw-steering-angle-sensor-calibration-tool','Steering-angle calibration','DSC, alignment and vehicle-specific preconditions'],
+['bmw-tpms-diagnostic-tool','TPMS/RDC tool selection','Diagnosis, activation, sensor programming and relearn'],
+['bmw-dpf-regeneration-scan-tool','DPF diagnostic functions','Investigate emissions faults before regeneration'],
+['bmw-electronic-water-pump-diagnostic-tool','Electric water pump','Separate fault reading from active activation'],
+['bmw-ride-height-calibration-scan-tool','Ride-height calibration','Suspension architecture and measurement prerequisites'],
+['bmw-bidirectional-scan-tool-functions','BMW bidirectional test functions','Command eligibility, evidence and risks'],
+['bmw-coding-vs-programming','BMW coding versus programming','Control-unit configuration versus software installation']
+];
+---
+<ResearchToolArticleLayout title="BMW Service Function Eligibility and Safety Matrix" description="Evidence-led BMW reset, registration, adaptation, calibration and active-test matrix: learn what each operation does, what vehicle support must be verified, and which original specialist guide applies." section="Guides" sectionHref="/guides/" readingTime="20 min read" reviewedAt="10 October 2026" safety="HIGH" toc={[{id:'function-finder',label:'Find the exact operation'},{id:'boundaries',label:'What operations mean'},{id:'evidence',label:'Eligibility and evidence'},{id:'safety',label:'Risk and stop conditions'},{id:'case-studies',label:'Case studies'},{id:'sources',label:'Primary sources'},{id:'related-guides',label:'Related articles'}]}>
+<div class="capability-shell service-matrix">
+<p class="lede">A BMW scanner's service menu can show the word <strong>reset</strong> for a maintenance indicator, a battery replacement record, a calibration, an adaptation or a control-unit write. Those are not interchangeable operations. Choose the exact task before choosing the device, software license or workshop procedure.</p>
+<p>This evidence directory explains <strong>fourteen separate task families</strong> already covered by specialist Chassis Signal articles. Each row describes what must be verified before treating a scanner or app as eligible on a particular vehicle; it does not claim independent vehicle tests or certify a model-year fit. The original guides, including their source research, existing diagrams and detailed exceptions, stay available rather than being collapsed into this matrix.</p>
+<figure><picture><source media="(max-width:650px)" srcset="/images/tools/bmw-service-function-matrix/service-operation-ladder-mobile.svg"/><img src="/images/tools/bmw-service-function-matrix/service-operation-ladder.svg" width="1200" height="480" alt="Evidence ladder separating read-only scan, reminder reset, adaptation, active service operation and ECU programming"/></picture><figcaption>Increasingly consequential operations need stronger module, safety, equipment and authorization evidence—not simply a more expensive scan tablet.</figcaption></figure>
+<section id="function-finder" class="panel">
+<h2>Find the exact BMW service operation</h2>
+<p>Filter by the *kind of operation* and by a conservative risk classification. Risk labels are editorial workflow boundaries, not a safety certification or permission to perform a procedure. All vehicle compatibility remains conditional on exact chassis, installed ECU, software release and named command.</p>
+<div class="filters">
+<label>Operation family <select id="kind"><option value="all">All operation families</option><option value="reset">Reminder reset</option><option value="registration">Registration</option><option value="coding">Coding / configuration</option><option value="adaptation">Adaptation / teach-in</option><option value="calibration">Calibration</option><option value="relearn">Relearn</option><option value="service">Active service procedure</option><option value="active">Actuator / bidirectional test</option><option value="programming">Programming</option></select></label>
+<label>Editorial risk <select id="risk"><option value="all">All risk levels</option><option value="low">Lower-risk recordkeeping</option><option value="medium">Qualified service review</option><option value="high">High-risk operation</option><option value="critical">Safety-critical / workshop-only</option></select></label>
+</div>
+<p id="result-count" role="status" aria-live="polite">Showing all documented task families.</p>
+<div class="scroll"><table><caption>Task eligibility prompts—not a claim that any device supports every listed BMW</caption><thead><tr><th>Job and module</th><th>Evidence required</th><th>Do not assume</th><th>Detailed guide</th></tr></thead><tbody>{functions.map(f=><tr data-kind={f.kind} data-risk={f.risk}><th>{f.title}<span class="secondary-cell">{f.module}</span><span class="secondary-cell">Risk: {f.risk}</span></th><td>{f.evidence}</td><td>{f.limit}</td><td><a href={`/guides/${f.guide}/`}>Read specialist guide →</a></td></tr>)}</tbody></table></div>
+<p id="empty-state" hidden>No task in this curated matrix matches that combination. The empty result is not proof that a supported manufacturer procedure doesn't exist; check the exact vehicle's service documentation.</p>
+</section>
+<section id="boundaries">
+<h2>Which kind of service function do you actually need?</h2>
+<div class="scroll"><table><thead><tr><th>Category</th><th>Typical user intent</th><th>What the tool might change</th><th>What it does not prove</th></tr></thead><tbody>
+<tr><th>Read-only diagnosis</th><td>Collect existing fault and live values</td><td>Nothing intentionally written to the vehicle</td><td>That the stored code identifies the failed component</td></tr>
+<tr><th>Reminder reset</th><td>Record completed scheduled work</td><td>Service interval / CBS record</td><td>That the maintenance was performed or fault solved</td></tr>
+<tr><th>Registration/coding</th><td>Declare installed component or configure its data</td><td>Specific identity, battery or injector parameters</td><td>That hardware is correctly installed or mechanically sound</td></tr>
+<tr><th>Adaptation / calibration</th><td>Relearn a system after a verified repair</td><td>Learned values or calibration references</td><td>That the physical cause of a symptom has been fixed</td></tr>
+<tr><th>Active service function</th><td>Request a specified actuator/service state</td><td>Brake, pump, DPF or related ECU outputs</td><td>That a menu label alone grants safe use on the vehicle</td></tr>
+<tr><th>Firmware programming</th><td>Install or update ECU software</td><td>Control-unit software and related dependencies</td><td>Equivalence with a consumer coding-app option</td></tr>
+</tbody></table></div>
+</section>
+<figure><picture><source media="(max-width:650px)" srcset="/images/tools/bmw-service-function-matrix/eligibility-proof-chain-mobile.svg"/><img src="/images/tools/bmw-service-function-matrix/eligibility-proof-chain.svg" width="1200" height="480" alt="Service function eligibility requires exact vehicle, control unit, named software function, accepted interface and official safety instructions"/></picture><figcaption>A scan tool's advertised *service functions* category is the beginning of verification, not the end.</figcaption></figure>
+<section id="evidence"><ServiceFunctionResearch /></section>
+<section id="safety"><h2>Safety rules that change the tool decision</h2>
+<p><strong>Read-only tasks and vehicle-writing tasks belong in different purchasing decisions.</strong> For fault collection, record the original codes, responder list and relevant live values before clearing anything. For a reset, registration or calibration, establish what service was actually performed and confirm the particular control unit, supported function and OEM preparation requirements. For brakes, steering, suspension or other safety-critical systems, use the approved professional procedure and the correct qualifications. Firmware programming additionally requires the authorized software environment, compatible interface, supported vehicle and prescribed stable electrical supply.</p>
+<p>The <a href="/guides/bmw-coding-vs-programming/">coding-versus-programming guide</a> explains why an app being able to change a convenience setting is not evidence it can install ECU firmware. The <a href="/tools/bmw-scanner-capability-database/">scanner capability database</a> provides hardware-level context, and the <a href="/guides/bmw-module-troubleshooting/">diagnostic evidence hub</a> helps decide whether a service command is even the correct next step. None replaces official service instructions.</p>
+</section>
+<section id="case-studies"><ServiceFunctionCases /></section>
+<section class="panel" id="sources">
+<h2>Primary evidence and verification limitations</h2>
+<p>Research reviewed 10 October 2026. Manufacturer documentation establishes categories and constraints, but is not a real-world compatibility test of a specified BMW. No coding, bleeding, calibration, programming or actuator operation was performed for this article. Source manuals can be revised; use the current vehicle-specific instructions rather than assuming a generic model list grants coverage.</p>
+<ul>
+<li><a href="https://bmwtechinfo.bmwgroup.com/assets/system_requirements.pdf">BMW Group technical information/AOS user guide — ISTA diagnosis, programming and workshop hardware/power prerequisites</a></li>
+<li><a href="https://www.autel.com/u/cms/www/202405/210403469jvo.pdf">Autel MaxiCOM MK900-TS official user manual — active tests and special functions, dependent on exact vehicle</a></li>
+<li><a href="https://www.autel.com/mk2/4171.jhtml">Autel MK900 official product comparison — common functions and distinct TPMS tiers</a></li>
+<li><a href="https://bimmerlink.app/">BimmerLink official app description and conditional service functions</a></li>
+<li><a href="https://bimmercode.app/manual/">BimmerCode official coding manual and expert-mode cautions</a></li>
+</ul>
+</section>
+<section class="related" id="related-guides"><h2>Related Chassis Signal service-function guides</h2><p>These original, narrowly focused investigations are independently useful. They retain their complete research, diagrams, sources and existing URLs. Choose the exact task rather than treating all “reset” guides as duplicates.</p><div class="related-grid">{related.map(([slug,title,desc])=><article class="service-related"><h3><a href={`/guides/${slug}/`}>{title} →</a></h3><p>{desc}</p></article>)}</div></section>
+</div>
+<script>
+const kind=document.querySelector<HTMLSelectElement>('#kind')!,risk=document.querySelector<HTMLSelectElement>('#risk')!,rows=[...document.querySelectorAll<HTMLTableRowElement>('tbody tr[data-kind]')],count=document.querySelector('#result-count')!,empty=document.querySelector<HTMLElement>('#empty-state')!;
+function update(){let total=0;for(const row of rows){const show=(kind.value==='all'||row.dataset.kind===kind.value)&&(risk.value==='all'||row.dataset.risk===risk.value);row.hidden=!show;if(show)total++}count.textContent=`Showing ${total} of ${rows.length} documented task families.`;empty.hidden=total>0;}kind.addEventListener('change',update);risk.addEventListener('change',update);update();
+</script>
+<style is:global>
+.service-matrix .scroll{overflow-x:auto;max-width:100%}.service-matrix table{min-width:680px;width:100%;border-collapse:collapse;font:13px/1.55 var(--sans)}.service-matrix td,.service-matrix th{padding:12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.service-matrix .secondary-cell{display:block;margin-top:6px;font:12px/1.45 var(--sans);color:var(--muted)}.service-matrix tr[hidden]{display:none}.service-matrix .filters{display:flex;flex-wrap:wrap;gap:15px}.service-matrix .filters label{display:grid;flex:1 1 205px;gap:6px;font:600 13px/1.4 var(--sans)}.service-matrix select{width:100%;min-width:0;border:1px solid #9ba9a1;background:#fff;padding:12px;border-radius:8px}.service-matrix figure img{width:100%;height:auto}.service-matrix figcaption{font:13px/1.5 var(--sans)}.service-matrix .related-grid{display:grid;grid-template-columns:1fr;gap:13px}.service-matrix .service-related{padding:18px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.65)}.service-matrix .service-related h3{font-size:22px;margin:0 0 8px}.service-matrix .service-related p{font:14px/1.5 var(--sans);margin:0}
+</style>
+</ResearchToolArticleLayout>
