@@ -144,3 +144,8 @@ The winning purchase is not the tool with the loudest “lifetime” badge. It i
 
 
 **Related resource:** Our [BMW Scanner Capability Database](/tools/bmw-scanner-capability-database/) explains broader model, feature, vehicle-coverage and safety verification. This specialist article remains available with its original diagrams, sources and task-specific evidence.
+
+
+## Cross-check the license against our dated pricing ledger
+
+A scanner's update entitlement and a mobile app's one-time Full Version purchase are different licensing categories. The shared ledger helps keep those independent ownership decisions separate. Use the [BMW Diagnostic Software Pricing and Entitlement Ledger](/tools/bmw-diagnostic-software-price-ledger/) for the October 10, 2026 source snapshot, the full ownership-cost worksheet and explicit regional caveats. The original price evidence, figures, citations and SVGs on this page are preserved as the earlier dated research record; always confirm the local checkout before purchasing.
