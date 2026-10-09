@@ -1,0 +1,52 @@
+<section>
+  <h2>Seven operator scenarios that change the adapter decision</h2>
+  <p>Record the exact vehicle chassis, production year, phone or computer, application, adapter identifier and diagnostic job. A Bluetooth link that retrieves a generic powertrain code does not by itself establish permission or capability to change a body controller. The following scenarios explain why the same hardware can be suitable for one user yet inappropriate for another.</p>
+  <h3>One BMW, BimmerCode and an iPhone</h3>
+  <p>Start with BimmerCode's current vehicle selector and supported-adapter list for the selected chassis. OBDLink CX and MX+ are manufacturer-listed iOS adapters. BimmerCode also documents particular other models. But a compatible mobile operating system and app-listed Bluetooth device do not imply that the vehicle exposes a particular coding option. The final check is the supported control module and feature on the exact car and software version.</p>
+  <h3>Several generations of BMW on Android</h3>
+  <p>Do not extrapolate from one F- or G-series example to an early E-series vehicle. Check the oldest and most restrictive target first. Some vehicle-specific app lists identify different connection categories, including wired Ethernet. A two-interface strategy may be more defensible than forcing every vehicle through one inexpensive generic adapter.</p>
+  <h3>BMW plus older Ford and GM vehicles</h3>
+  <p>Here the published distinction between J1850 protocol families, Ford MS-CAN and GM SW-CAN becomes material. OBDLink's model matrix describes broader network support on MX+ than on CX. A BMW-optimized BLE product may meet the owner's BMW coding workflow yet be a poor choice for an older mixed-brand fleet. Verify the exact model year, software, host platform and manufacturer-specific diagnostics separately.</p>
+  <h3>Windows laptop and a workshop interface</h3>
+  <p>Ask what the diagnostic application actually requires. OBDLink EX is a wired USB adapter with documented Windows support, but that does not make it an alternative to every ENET, ICOM or K+DCAN workshop path. These are different interface families with different software and vehicle dependencies. See <a href="/guides/bmw-icom-vs-enet/">ICOM versus ENET</a> and <a href="/guides/k-dcan-vs-enet-cable/">K+DCAN versus ENET</a> for the exact interface choice.</p>
+  <h3>BimmerLink maintenance operations</h3>
+  <p>Confirm BimmerLink's own supported adapter and feature tables instead of assuming that BimmerCode compatibility transfers. For a task such as battery registration, the car, battery specification and application procedure matter independently of the physical OBD connection. See the <a href="/guides/bimmerlink-adapter/">BimmerLink adapter guide</a> and <a href="/guides/bmw-battery-registration-scanner/">battery registration guide</a>.</p>
+  <h3>vLinker BM+ versus MC+</h3>
+  <p>The BimmerCode developer lists exact Bluetooth model names including BM+ and MC+. That supports the app-integration claim, but does not establish identical hardware, power draw, firmware update procedure, operating-system coverage or compatibility with every other app. BM, BM+, MC, MC+ and Wi-Fi variants are not interchangeable identifiers. Check the physical label against the app selector and revisit the <a href="/guides/vlinker-bm-plus-vs-mc-plus/">exact-model comparison</a>.</p>
+  <h3>UniCarScan UCSI-2100</h3>
+  <p>BimmerCode lists the specific UCSI-2100 Bluetooth adapter. This is evidence of app-developer support under documented conditions. Claims about its compatibility with other diagnostic applications, BMW motorcycles, or special connector cables require separate source checks. The preserved <a href="/guides/obdlink-cx-vs-unicarscan-ucsi-2100/">OBDLink CX versus UniCarScan article</a> explores that narrower choice.</p>
+</section>
+<section>
+  <h2>Record evidence before buying or consolidating a comparison</h2>
+  <p>A defensible model assessment records who makes a claim, the exact hardware revision it applies to, and which compatibility layer the claim reaches. Preserve manufacturer URLs and an observation date; online specifications can change. A product page is evidence of manufacturer-listed transport but is not proof of independent field testing. A third-party app's approved-adapter list may establish application support, yet still require vehicle selection to confirm a particular module function.</p>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Evidence field</th><th>What must be recorded</th><th>Insufficient substitute</th></tr></thead>
+    <tbody>
+      <tr><td>Vehicle</td><td>Chassis, production year, market, engine or module when relevant</td><td>“Works with BMW”</td></tr>
+      <tr><td>Operator host</td><td>iOS, Android or Windows version and radio/USB requirements</td><td>“Bluetooth supported”</td></tr>
+      <tr><td>Physical model</td><td>Manufacturer, complete suffix and hardware revision if known</td><td>“vLinker adapter”</td></tr>
+      <tr><td>Software</td><td>Exact app version, platform and official compatibility URL</td><td>Marketplace image</td></tr>
+      <tr><td>Protocol</td><td>Relevant documented transport/network families and exclusions</td><td>“OBD2 compatible”</td></tr>
+      <tr><td>Function</td><td>App's listed module, coding, read-only or service capability for exact vehicle</td><td>Successful pairing</td></tr>
+      <tr><td>Evidence date</td><td>Review date and versioned primary document</td><td>Undated comparison chart</td></tr>
+    </tbody>
+  </table></div>
+  <p>When the right answer is not documented, record <strong>not verified</strong> rather than filling it with a guessed feature. A model omitted from this short database is not automatically incompatible; it may require a more detailed specification review.</p>
+</section>
+<section>
+  <h2>Read-only commissioning test before any coding or reset</h2>
+  <p>This checklist tests connectivity, not permission to undertake a high-risk intervention. It does not replace the app or vehicle manufacturer's safety procedure. Where diagnostic operations could affect an ECU or safety system, stop until the exact instructions and supporting power conditions are confirmed.</p>
+  <ol>
+    <li>Save the exact manufacturer model and application compatibility reference for the chosen vehicle.</li>
+    <li>Confirm a safe stationary environment, the required ignition mode and suitable battery condition.</li>
+    <li>Inspect the physical adapter's complete model number; record the firmware revision if visible.</li>
+    <li>Ensure no other application owns the Bluetooth or wired OBD connection.</li>
+    <li>Follow the app's own BLE, Classic Bluetooth, USB or Ethernet connection sequence.</li>
+    <li>Perform a supported, non-destructive device identification or status read only.</li>
+    <li>Reopen the session and document connectivity, error messages and host/app versions.</li>
+    <li>Stop at the write boundary. A working connection is not proof of a supported coding or adaptation operation.</li>
+  </ol>
+  <p>If communication fails, isolate power to the OBD interface, the host transport, the application pairing method, the device's exact supported model and the car's underlying diagnostic network. Change one variable at a time. The <a href="/guides/bmw-no-communication-with-obd-scanner/">no-communication troubleshooting guide</a> addresses that independent problem in detail.</p>
+  <h3>What a zero-result filter means</h3>
+  <p>The main filter works on four models sharing one comparable manufacturer's protocol and platform matrix. No matching row means no candidate in that <em>documented set</em>, not that the market has no compatible device. A vehicle-specific Ethernet interface, a vetted alternative Bluetooth product or an exact-app USB dongle may be appropriate. The three other app-listed models appear in a separate evidence tier intentionally, rather than inheriting unproven support for J1850 or proprietary Ford/GM networks.</p>
+</section>

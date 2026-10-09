@@ -119,3 +119,8 @@ Those exclusions improve the buying advice. Most buyers do not need a mythical u
 ## Bottom line
 
 OBDLink CX is the easier documentation-first recommendation because its maker publishes the transport, protocol and BMW-oriented scope in unusual detail. vLinker BM+ remains a sound candidate when the current BimmerCode or BimmerLink selector approves the exact combination and the commercial terms are better. Make the vehicle/app/platform check the gate. Treat performance anecdotes as unresolved unless a reproducible test states the hardware, firmware, app, phone and car used.
+
+
+---
+
+**Compare the broader adapter decision:** The [BMW OBD Adapter Comparison Database](/tools/bmw-obd-adapter-comparison/) screens platform, physical connection and documented protocol support across related models. This page remains available for its narrower product-specific evidence and caveats.

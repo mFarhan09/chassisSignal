@@ -140,3 +140,8 @@ For the adjacent software decision, the [BimmerCode vs Carly guide](/guides/bimm
 ## Bottom line
 
 CX is the cleaner fit for BMW/MINI-first BimmerCode use when its protocol limits are irrelevant. MX+ is the stronger architecture for a mixed-brand fleet, older Ford/GM needs or buyers who value included OBDLink OEM diagnostics. Match the adapter to the whole vehicle-and-app plan.
+
+
+---
+
+**Compare the broader adapter decision:** The [BMW OBD Adapter Comparison Database](/tools/bmw-obd-adapter-comparison/) screens platform, physical connection and documented protocol support across related models. This page remains available for its narrower product-specific evidence and caveats.

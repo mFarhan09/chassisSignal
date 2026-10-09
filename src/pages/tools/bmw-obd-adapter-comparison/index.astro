@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AdapterEvidenceDeepDive from '../../../components/AdapterEvidenceDeepDive.astro';
+import AdapterComparisonFAQ from '../../../components/AdapterComparisonFAQ.astro';
+const models = [
+ {name:'OBDLink CX',transport:'Bluetooth LE',ios:true,android:true,windows:true,legacy:false,fordgm:false,bmw:true,notes:'BMW/BimmerCode-focused. Windows requires separate BLE adapter. Manufacturer warns against older Ford/GM and some FCA.',source:'https://support.obdlink.com/support/solutions/articles/43000713351-which-obdlink-adapter-is-right-for-me-',slug:'obdlink-cx-vs-mx-plus'},
+ {name:'OBDLink MX+',transport:'Bluetooth Classic',ios:true,android:true,windows:true,legacy:true,fordgm:true,bmw:true,notes:'Broad legislated OBD-II and Ford MS-CAN / GM SW-CAN; broad iOS, Android and Windows host support.',source:'https://www.obdlink.com/products/obdlink-mxp/',slug:'obdlink-cx-vs-mx-plus'},
+ {name:'OBDLink LX',transport:'Bluetooth Classic',ios:false,android:true,windows:true,legacy:true,fordgm:false,bmw:true,notes:'Not iOS-compatible in manufacturer matrix. Supports J1850 families, not Ford MS-CAN or GM SW-CAN.',source:'https://support.obdlink.com/support/solutions/articles/43000713351-which-obdlink-adapter-is-right-for-me-',slug:'obdlink-cx-vs-lx'},
+ {name:'OBDLink EX',transport:'USB wired',ios:false,android:true,windows:true,legacy:true,fordgm:false,bmw:false,notes:'Windows USB-focused, with Android OTG caveat; manufacturer documents Ford MS-CAN, not GM SW-CAN. No universal BMW app entitlement is implied.',source:'https://www.obdlink.com/products/obdlink-ex/',slug:'obdlink-ex-vs-enet-cable'}
+];
+const specialists=['obdlink-cx-vs-lx','obdlink-cx-vs-mx-plus','obdlink-cx-vs-unicarscan-ucsi-2100','obdlink-cx-vs-vlinker-bm-plus','obdlink-cx-vs-vlinker-mc-plus','obdlink-ex-vs-enet-cable','obdlink-mx-plus-vs-lx','obdlink-mx-plus-vs-vlinker-bm-plus','vlinker-bm-plus-vs-mc-plus'];
+---
+<BaseLayout title="BMW OBD Adapter Comparison Database: Protocol, Device and App Fit" description="Compare documented OBDLink interfaces and review BMW adapter families by vehicle, phone, protocol and software. Source-led compatibility screening, not an unsupported universal fit guarantee.">
+  <main class="adapter-shell">
+    <nav aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/guides/">Guides</a> / BMW OBD Adapter Comparison</nav>
+    <header class="adapter-intro">
+      <p class="kicker">Technical reference · Last evidence review 9 October 2026</p>
+      <h1>BMW OBD Adapter Comparison Database</h1>
+      <p class="lede">Choose the adapter by <strong>vehicle and protocol × diagnostic application × phone or computer × connection method × exact requested function</strong> — not by a pairwise winner, a Bluetooth logo or a generic “supports BMW” label.</p>
+      <p>This is a <strong>screening database</strong>, not a universal compatibility certificate. Manufacturer documentation supports different facts at different levels: some claims describe hardware transport and protocol, others describe an application’s approved model list, and neither guarantees the control module function on every vehicle. Use the filters to reject obviously unsuitable combinations, then confirm the exact application, vehicle generation and operation with its current support list.</p>
+    </header>
+    <figure class="technical-figure">
+      <picture><source media="(max-width: 640px)" srcset="/images/tools/bmw-obd-adapter-comparison/compatibility-gates-mobile.svg"/><img src="/images/tools/bmw-obd-adapter-comparison/compatibility-gates.svg" width="1200" height="480" alt="Five-gate flow for vehicle, application, host platform, transport and exact diagnostic function" loading="lazy"/></picture>
+      <figcaption>Qualify each gate independently. A successful Bluetooth connection is not evidence that an ECU coding or service routine is supported.</figcaption>
+    </figure>
+    <section aria-labelledby="filter-title" class="panel">
+      <h2 id="filter-title">Filter documented adapters</h2>
+      <p>The list is intentionally conservative. Four OBDLink models have comparable manufacturer protocol-level evidence in the filterable table. UniCarScan and vLinker models have explicit application-developer documentation in the next section but are not presented as if they share the same full protocol evidence.</p>
+      <div class="controls">
+        <label>Operator platform <select id="platform"><option value="all">Any platform</option><option value="ios">iPhone / iPad</option><option value="android">Android</option><option value="windows">Windows</option></select></label>
+        <label>Connection <select id="transport"><option value="all">Any connection</option><option value="Bluetooth LE">Bluetooth LE</option><option value="Bluetooth Classic">Bluetooth Classic</option><option value="USB wired">USB wired</option></select></label>
+        <label>Requirement <select id="purpose"><option value="all">Not specified</option><option value="legacy">Older J1850 protocol families</option><option value="fordgm">Both Ford MS-CAN and GM SW-CAN</option><option value="bmw">BMW-focused shortlist</option></select></label>
+      </div>
+      <p id="results-status" role="status" aria-live="polite">Showing all four documented adapter models.</p>
+      <div class="table-scroll"><table><caption>Manufacturer-level differences; see exact source in the last column</caption><thead><tr><th scope="col">Adapter</th><th scope="col">Host platforms</th><th scope="col">Transport</th><th scope="col">Protocol / application boundary</th><th scope="col">Documentation</th></tr></thead><tbody>
+      {models.map(m=><tr data-ios={String(m.ios)} data-android={String(m.android)} data-windows={String(m.windows)} data-transport={m.transport} data-legacy={String(m.legacy)} data-fordgm={String(m.fordgm)} data-bmw={String(m.bmw)}><th scope="row">{m.name}</th><td>{[m.ios?'iOS':null,m.android?'Android':null,m.windows?'Windows':null].filter(Boolean).join(' · ')}</td><td>{m.transport}</td><td>{m.notes}</td><td><a href={m.source} rel="noopener noreferrer" target="_blank">Primary source ↗</a></td></tr>)}
+      </tbody></table></div>
+      <p id="no-results" hidden>No models in this evidence set satisfy all selected filters. That does not establish that no suitable product exists; broaden the screen and verify manufacturer-specific options.</p>
+    </section>
+    <section class="panel">
+      <h2>Additional adapter models documented by the BimmerCode application developer</h2>
+      <p>These are <strong>app-listed candidates</strong>, not manufacturer-protocol-verified equivalents of the four OBDLink rows above. The current <a href="https://bimmercode.app/adapters/">BimmerCode adapter selector</a> and <a href="https://bimmercode.app/manual/">connection guide</a> list the specific models below; compatibility still varies by app platform, BMW series, model year, installed modules and selected function. In particular, do not mistake the selector's model-specific labels for a promise about all cars.</p>
+      <div class="table-scroll"><table><caption>Application-developer evidence tier: select an exact vehicle in the linked selector</caption><thead><tr><th scope="col">Exact model</th><th scope="col">Documented BimmerCode connection</th><th scope="col">Evidence boundary</th><th scope="col">Verify</th></tr></thead><tbody>
+        <tr><th scope="row">UniCarScan UCSI-2100</th><td>Bluetooth adapter listed in BimmerCode's supported adapter and connection guidance</td><td>Do not infer exact firmware, sleep current or all BMW module functions without additional model-specific evidence.</td><td><a href="https://bimmercode.app/adapters/">BimmerCode selector ↗</a></td></tr>
+        <tr><th scope="row">vLinker BM+</th><td>Bluetooth adapter listed by BimmerCode; selection varies by vehicle and platform</td><td>Not equivalent to vLinker BM Wi-Fi or a generic ELM327 adapter; confirm exact SKU and app settings.</td><td><a href="https://bimmercode.app/manual/">BimmerCode guidance ↗</a></td></tr>
+        <tr><th scope="row">vLinker MC+</th><td>Bluetooth adapter listed by BimmerCode; selection varies by vehicle and platform</td><td>Not equivalent to vLinker MC Wi-Fi, BM+ or all OEM networks without primary specification evidence.</td><td><a href="https://bimmercode.app/adapters/">BimmerCode selector ↗</a></td></tr>
+      </tbody></table></div>
+      <p>**Status:** App-developer-listed for BimmerCode only. Whether BimmerLink, MotoScan, other coding applications, iOS versus Android, older BMW E-series or later G-series configurations work must be separately verified. This distinction is exactly why the nine specialist comparisons have been preserved.</p>
+    </section>
+    <section>
+      <h2>How to read this database without making a costly mistake</h2>
+      <h3>1. Start with the job, not the adapter brand</h3>
+      <p>Read-only emissions-related fault code retrieval is different from BMW-specific module access, service functions, adaptations, programming or configuration coding. Generic OBD-II protocol compatibility does not promise airbag, ABS, body module or feature coding. If your job requires a particular BMW electronic control unit, locate its supported function in the application documentation before treating any adapter as approved. The words “diagnostic adapter” describe the transport, not the software license, supported function or shop procedure.</p>
+      <h3>2. Match the host platform and Bluetooth generation</h3>
+      <p>Bluetooth Low Energy and Bluetooth Classic are different host interfaces. An iPhone-compatible BLE product is not interchangeable with a Classic Bluetooth-only Android/Windows adapter. Even when a manufacturer lists Windows support for a BLE adapter, a computer may need a separate BLE-capable host radio. A USB adapter can remove pairing ambiguity but may require an OTG adapter on Android; it will not connect to an iPhone by magic. Check supported application and operating-system versions separately from the device’s transport layer.</p>
+      <h3>3. Recognize legacy vehicle and extended-network exceptions</h3>
+      <p>The OBDLink manufacturer comparison specifically separates ordinary legislated OBD-II protocol families, Ford MS-CAN, GM SW-CAN, and the older J1850 families. OBDLink CX is not equivalent to MX+ on an older mixed-marque fleet. The manufacturer warns that CX does not support certain older Ford, GM and FCA vehicles. Conversely, someone buying only for a supported BMW coding app should not assume that a broad multi-brand diagnostic specification provides better BMW software support. Different vehicle and app requirements select different products.</p>
+      <h3>4. Confirm the exact application compatibility matrix</h3>
+      <p>For example, OBDLink's <a href="https://www.obdlink.com/compatible-apps/">third-party app compatibility directory</a> lists different adapters depending on BimmerCode platform. That means broad “works with BimmerCode” claims are incomplete unless the phone platform and product version are also specified. Recheck the <a href="https://bimmercode.app/adapters/">BimmerCode supported adapter list</a> and the vehicle function compatibility list at the time of installation. For BimmerLink, check its own supported adapters and features. Never infer BimmerLink entitlement solely because BimmerCode is supported.</p>
+      <h3>5. Separate evidence from marketing assurance</h3>
+      <p>Official product pages sometimes make broad assurances about speed, coding safety or reliable connections. We cite them to identify manufacturer claims, not to guarantee zero interruptions or risk-free ECU programming. Coding and reset operations may require stable vehicle voltage, the correct vehicle identification, the intended app version and explicit manufacturer instructions. This database reports transport and advertised compatibility; it has not physically tested the adapters.</p>
+    </section>
+    <section>
+      <h2>Which adapter architecture fits the task?</h2>
+      <div class="table-scroll"><table><thead><tr><th>Scenario</th><th>Initial category to inspect</th><th>Mandatory verification</th></tr></thead><tbody>
+      <tr><td>BMW BimmerCode on current iOS/Android phone</td><td>Manufacturer-listed iOS/Android adapters such as CX or MX+</td><td>Exact BMW chassis, app, adapter revision and supported function</td></tr>
+      <tr><td>One adapter shared among newer BMW and older Ford/GM</td><td>Broader protocol/network coverage such as MX+</td><td>Model-year, J1850 and manufacturer network support, device OS</td></tr>
+      <tr><td>Wired Windows diagnostic workstation</td><td>USB interface such as EX for documented compatible jobs</td><td>App acceptance and vehicle-specific feature coverage</td></tr>
+      <tr><td>BMW-specific programming or workshop-grade interface session</td><td>Specialized interface such as ENET/ICOM where required</td><td>Vehicle generation, protocol, job risk, application and supported interface</td></tr>
+      <tr><td>iPhone with OBDLink LX</td><td>Reject this pairing</td><td>Manufacturer does not list iOS for LX</td></tr>
+      <tr><td>Unknown vLinker or UniCarScan model</td><td>Undetermined pending exact SKU evidence</td><td>Exact manufacturer model, connectivity standard, supported app and vehicle</td></tr>
+      </tbody></table></div>
+    </section>
+    <figure class="technical-figure"><picture><source media="(max-width: 640px)" srcset="/images/tools/bmw-obd-adapter-comparison/evidence-tiers-mobile.svg"/><img src="/images/tools/bmw-obd-adapter-comparison/evidence-tiers.svg" width="1200" height="440" alt="Evidence tiers from physical protocol support through host connection, app certification and individual vehicle function" loading="lazy"/></picture><figcaption>Capabilities cannot be extrapolated upward: an adapter protocol only enables a connection; it does not certify a vehicle-specific feature.</figcaption></figure>
+    <AdapterEvidenceDeepDive />
+    <AdapterComparisonFAQ />
+    <section>
+      <h2>Why these nine older comparisons remain available</h2>
+      <p>The legacy comparisons contain narrower research about particular app integrations, Bluetooth implementations and exact adapters. This first recovery wave <strong>does not retire their URLs, SVGs, references, or evidence</strong>. Where conclusions duplicate this database, future consolidation must be supported by a source-by-source preservation checklist and separately approved redirect map. Until that approval, use the linked specialist articles for nuanced pairs and the database for the first architecture screen.</p>
+      <ul class="specialists">{specialists.map(slug=><li><a href={`/guides/${slug}/`}>{slug.replaceAll('-',' ')}</a></li>)}</ul>
+    </section>
+    <section class="panel">
+      <h2>Sources, evidence status and maintenance</h2>
+      <p><strong>Evidence reviewed:</strong> October 9, 2026. Manufacturer documentation, not first-hand product tests. The filterable protocol comparison is limited to four models with directly comparable published specifications. Three additional app-listed models are presented separately as a lower evidence tier. Treat unspecified capabilities as <em>not verified</em>, not automatically unsupported. No affiliate placements or product endorsements are attached to this database.</p>
+      <ul>
+        <li><a href="https://support.obdlink.com/support/solutions/articles/43000713351-which-obdlink-adapter-is-right-for-me-">OBDLink — Which adapter is right for me? (official protocol/platform matrix)</a></li>
+        <li><a href="https://www.obdlink.com/compatible-apps/">OBDLink — Third-party compatible applications, by platform</a></li>
+        <li><a href="https://www.obdlink.com/products/obdlink-cx/">OBDLink CX product specifications</a></li>
+        <li><a href="https://www.obdlink.com/products/obdlink-mxp/">OBDLink MX+ product specifications</a></li>
+        <li><a href="https://www.obdlink.com/products/obdlink-ex/">OBDLink EX product specifications</a></li>
+        <li><a href="https://bimmercode.app/adapters/">BimmerCode supported adapters (verify current list)</a></li><li><a href="https://bimmercode.app/manual/">BimmerCode quick-start and exact Bluetooth adapter connection lists</a></li>
+      </ul>
+      <p>For BMW coding procedures or interventions, confirm safe voltage support and the correct application procedure. Do not start a high-risk programming task based only on an adapter comparison chart.</p>
+    </section>
+  </main>
+  <script>
+    const selects = ['platform','transport','purpose'].map(id => document.getElementById(id) as HTMLSelectElement);
+    const rows = Array.from(document.querySelectorAll<HTMLTableRowElement>('tbody tr[data-transport]'));
+    const status = document.getElementById('results-status')!;
+    const empty = document.getElementById('no-results')!;
+    const refresh = () => {
+      const [platform,transport,purpose] = selects.map(el=>el.value);
+      let shown = 0;
+      for (const row of rows) {
+        const accepted = (platform==='all'||row.dataset[platform]==='true') && (transport==='all'||row.dataset.transport===transport) && (purpose==='all'||row.dataset[purpose]==='true');
+        row.hidden=!accepted;
+        if(accepted) shown++;
+      }
+      status.textContent = `Showing ${shown} of ${rows.length} documented adapter models.`;
+      empty.hidden = shown!==0;
+    };
+    selects.forEach(s=>s.addEventListener('change',refresh));
+    refresh();
+  </script>
+  <style is:global>
+    .adapter-shell{max-width:1100px;margin:auto;padding:2.5rem 1.35rem 6rem;color:var(--text,#222);line-height:1.75}
+    .adapter-shell h1{font-size:clamp(2.1rem,5vw,3.65rem);line-height:1.13;max-width:21ch;margin:1rem 0}
+    .adapter-shell h2{font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.25;margin:2.5rem 0 1rem}
+    .adapter-shell h3{font-size:1.25rem;margin:2rem 0 .5rem}.adapter-shell p{max-width:82ch}.lede{font-size:1.18rem}
+    .kicker{font-size:.82rem;letter-spacing:.09em;text-transform:uppercase}.panel{border:1px solid #c7cbc9;border-radius:14px;padding:clamp(1rem,3vw,2rem);margin:2rem 0;background:rgba(125,135,130,.05)}
+    .controls{display:flex;gap:1rem;flex-wrap:wrap}.controls label{display:grid;gap:.35rem;flex:1 1 210px;font-weight:650}
+    select{width:100%;max-width:100%;border:1px solid #8a9290;border-radius:8px;background:white;color:#17252a;padding:.7rem;font:inherit}
+    .table-scroll{overflow-x:auto;width:100%;margin:1.5rem 0}table{border-collapse:collapse;width:100%;min-width:650px;line-height:1.5;font-size:.93rem}td,th{border-bottom:1px solid #b6bfbc;padding:.9rem;text-align:left;vertical-align:top}th{font-weight:750}tbody tr:nth-child(odd){background:rgba(125,135,130,.08)}tr[hidden]{display:none}
+    .technical-figure{margin:2.5rem 0}.technical-figure img{max-width:100%;height:auto;background:#f7f8f6;border-radius:10px}.technical-figure figcaption{font-size:.9rem;margin-top:.5rem}
+    .specialists{columns:2;column-gap:2rem}.specialists li{break-inside:avoid;margin-bottom:.6rem}a{overflow-wrap:anywhere}
+    @media(max-width:600px){.adapter-shell{padding:1.5rem 1rem 4rem}.specialists{columns:1}}
+  </style>
+</BaseLayout>
