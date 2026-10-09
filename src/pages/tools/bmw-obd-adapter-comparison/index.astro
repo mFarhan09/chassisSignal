@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import AdapterEvidenceDeepDive from '../../../components/AdapterEvidenceDeepDive.astro';
+import AdapterComparisonFAQ from '../../../components/AdapterComparisonFAQ.astro';
 const models = [
  {name:'OBDLink CX',transport:'Bluetooth LE',ios:true,android:true,windows:true,legacy:false,fordgm:false,bmw:true,notes:'BMW/BimmerCode-focused. Windows requires separate BLE adapter. Manufacturer warns against older Ford/GM and some FCA.',source:'https://support.obdlink.com/support/solutions/articles/43000713351-which-obdlink-adapter-is-right-for-me-',slug:'obdlink-cx-vs-mx-plus'},
  {name:'OBDLink MX+',transport:'Bluetooth Classic',ios:true,android:true,windows:true,legacy:true,fordgm:true,bmw:true,notes:'Broad legislated OBD-II and Ford MS-CAN / GM SW-CAN; broad iOS, Android and Windows host support.',source:'https://www.obdlink.com/products/obdlink-mxp/',slug:'obdlink-cx-vs-mx-plus'},
@@ -72,6 +73,7 @@ const specialists=['obdlink-cx-vs-lx','obdlink-cx-vs-mx-plus','obdlink-cx-vs-uni
     </section>
     <figure class="technical-figure"><picture><source media="(max-width: 640px)" srcset="/images/tools/bmw-obd-adapter-comparison/evidence-tiers-mobile.svg"/><img src="/images/tools/bmw-obd-adapter-comparison/evidence-tiers.svg" width="1200" height="440" alt="Evidence tiers from physical protocol support through host connection, app certification and individual vehicle function" loading="lazy"/></picture><figcaption>Capabilities cannot be extrapolated upward: an adapter protocol only enables a connection; it does not certify a vehicle-specific feature.</figcaption></figure>
     <AdapterEvidenceDeepDive />
+    <AdapterComparisonFAQ />
     <section>
       <h2>Why these nine older comparisons remain available</h2>
       <p>The legacy comparisons contain narrower research about particular app integrations, Bluetooth implementations and exact adapters. This first recovery wave <strong>does not retire their URLs, SVGs, references, or evidence</strong>. Where conclusions duplicate this database, future consolidation must be supported by a source-by-source preservation checklist and separately approved redirect map. Until that approval, use the linked specialist articles for nuanced pairs and the database for the first architecture screen.</p>
