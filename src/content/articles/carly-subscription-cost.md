@@ -133,3 +133,8 @@ Then verify vehicle and adapter compatibility. A low price has no value if the d
 Carly subscription cost is a variable quote, not a universal list price. Website bundles can combine an annual license and scanner. App stores can expose brand-specific or All Brands subscriptions and optional packages. Region, platform, current eligibility and date can change the displayed amount.
 
 The right decision record shows both first-year cash cost and renewal-year cash cost, keeps hardware and options visible, and preserves the cancellation path for the actual merchant. Recheck the live offer immediately before purchase or renewal. That is less satisfying than a single headline number, but it is the only price answer another buyer can reproduce safely.
+
+
+## Cross-check the license against our dated pricing ledger
+
+The shared ledger marks current Carly Premium cost as quote-required rather than copying one public promotional figure into a universal BMW annual price. Use this original guide to understand renewal assumptions, package variations and marketplace conditions. Use the [BMW Diagnostic Software Pricing and Entitlement Ledger](/tools/bmw-diagnostic-software-price-ledger/) for the October 10, 2026 source snapshot, the full ownership-cost worksheet and explicit regional caveats. The original price evidence, figures, citations and SVGs on this page are preserved as the earlier dated research record; always confirm the local checkout before purchasing.
