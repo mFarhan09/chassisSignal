@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SoftwareComparisonResearch from '../../../components/SoftwareComparisonResearch.astro';
+const apps=[
+{name:'BimmerCode',type:'Feature and configuration coding',os:'iOS / Android / desktop (check current platform offering)',diagnostics:false,coding:true,service:false,workshop:false,source:'https://bimmercode.app/',limit:'Vehicle-option and module dependent; expert-mode risk'},
+{name:'BimmerLink',type:'Diagnostics, live data and selected service functions',os:'iOS / Android',diagnostics:true,coding:false,service:true,workshop:false,source:'https://bimmerlink.app/',limit:'Function and installed-equipment dependent; not BimmerCode'},
+{name:'Carly',type:'Diagnostics and selected coding / maintenance',os:'iOS / Android',diagnostics:true,coding:true,service:true,workshop:false,source:'https://www.mycarly.com/',limit:'Feature varies by model; check annual license and scanner terms'},
+{name:'ProTool',type:'BMW diagnostics and coding toolset',os:'Android',diagnostics:true,coding:true,service:true,workshop:false,source:'https://www.bimmergeeks.net/protool',limit:'Coding and diagnostic entitlements separate; older chassis exclusions'},
+{name:'BMW ISTA',type:'Workshop diagnosis, test plans and programming workflows',os:'Workshop Windows environment through BMW AOS',diagnostics:true,coding:false,service:true,workshop:true,source:'https://bmwtechinfo.bmwgroup.com/tisUI/',limit:'Workshop access, training, interface and power prerequisites'},
+];
+const specialists=['bimmercode-vs-carly','bimmercode-vs-foxwell-nt530','bimmercode-vs-protool','bimmerlink-vs-bimmer-tool','bimmerlink-vs-carly','bimmerlink-vs-foxwell-nt530','bimmerlink-vs-protool','ista-vs-bimmerlink','protool-vs-carly','protool-vs-ista'];
+---
+<BaseLayout title="BMW Diagnostic Software Comparison: Coding, Diagnostics, Service and ISTA" description="Evidence-led matrix for BimmerCode, BimmerLink, Carly, ProTool and BMW ISTA: compare capabilities, platform, licensing, vehicle coverage and safety boundaries.">
+<main class="software-shell">
+<nav><a href="/">Home</a> / <a href="/software/">Software</a> / BMW software comparison</nav>
+<header>
+<p class="eyebrow">Recovery resource · Evidence reviewed 9 October 2026</p>
+<h1>BMW Diagnostic Software Comparison Matrix</h1>
+<p class="lead">BimmerCode, BimmerLink, Carly, ProTool and ISTA are <strong>different software architectures</strong>, not interchangeable price points. Select by the job you actually need to complete, then verify the particular vehicle, control unit, operating system, physical interface, version and license before buying or making a change.</p>
+<p>Many articles compare two brand names while hiding the more important distinction between coding an optional feature, investigating a fault, performing a supported maintenance routine, and programming a vehicle's software. This resource separates those tasks. A supported adapter and a successful diagnostic connection do not authorize a programming operation. The matrix is editorial guidance based on vendor documentation, not hands-on testing or a certification of support for every BMW.</p>
+</header>
+<figure><picture><source media="(max-width: 650px)" srcset="/images/tools/bmw-diagnostic-software-comparison/software-control-planes-mobile.svg"/><img src="/images/tools/bmw-diagnostic-software-comparison/software-control-planes.svg" alt="Diagram separates coding, diagnostic readout, service functions and high-risk workshop programming workflows" width="1200" height="480" loading="lazy"/></picture><figcaption>Four different task categories are often advertised under one broad “BMW diagnostics” label.</figcaption></figure>
+<section class="panel" aria-labelledby="matrix-heading">
+<h2 id="matrix-heading">Compare software by the required job</h2>
+<div class="controls"><label>Primary task <select id="job"><option value="all">Show all platforms</option><option value="coding">Feature coding</option><option value="diagnostics">Diagnostic investigation</option><option value="service">Maintenance / service</option><option value="workshop">Factory workshop workflow</option></select></label><label>Product <select id="product"><option value="all">All five products</option>{apps.map(a=><option value={a.name}>{a.name}</option>)}</select></label></div>
+<p role="status" aria-live="polite" id="match-count">Showing all five software categories.</p>
+<div class="scroll"><table><caption>“Yes” indicates a documented primary product category, not a guarantee of a specific module function.</caption><thead><tr><th>Software</th><th>Best-defined purpose</th><th>Operator environment</th><th>Important limitation</th><th>Primary source</th></tr></thead><tbody>{apps.map(a=><tr data-product={a.name} data-coding={String(a.coding)} data-diagnostics={String(a.diagnostics)} data-service={String(a.service)} data-workshop={String(a.workshop)}><th>{a.name}</th><td>{a.type}</td><td>{a.os}</td><td>{a.limit}</td><td><a href={a.source} target="_blank" rel="noopener noreferrer">Vendor ↗</a></td></tr>)}</tbody></table></div><p hidden id="empty">No product in this high-level matrix matches that combination. Broaden the filter; this is not proof that no supported workflow exists.</p>
+</section>
+<section>
+<h2>At-a-glance task boundaries</h2>
+<div class="scroll"><table><thead><tr><th>User need</th><th>Initially investigate</th><th>Must still verify</th></tr></thead><tbody>
+<tr><td>Change a documented comfort or interface option</td><td>BimmerCode; selected coding features of Carly or ProTool</td><td>Available options for exact chassis, control unit and license</td></tr>
+<tr><td>Read BMW fault memories and live data</td><td>BimmerLink, Carly, ProTool or ISTA</td><td>Module visibility, data fields, adapter and app version</td></tr>
+<tr><td>Register a battery after replacement</td><td>BimmerLink, ProTool, Carly or official workshop procedure where supported</td><td>Battery type, correct vehicle, registration versus coding distinction</td></tr>
+<tr><td>Diagnose a fault using official test plans</td><td>BMW ISTA workshop workflow</td><td>Official access, supported interface, correct diagnostic plan</td></tr>
+<tr><td>Update control module firmware</td><td>Authorized BMW programming workflow, not generic coding app</td><td>Professional competence, stable power, approved interface, recovery procedure</td></tr>
+</tbody></table></div>
+</section>
+<figure><picture><source media="(max-width: 650px)" srcset="/images/tools/bmw-diagnostic-software-comparison/verification-chain-mobile.svg"/><img src="/images/tools/bmw-diagnostic-software-comparison/verification-chain.svg" alt="Evidence chain from car and generation to exact function, software, adapter, licensing and safe operating environment" width="1200" height="460" loading="lazy"/></picture><figcaption>A platform is only a candidate after the full evidence chain is checked.</figcaption></figure>
+<SoftwareComparisonResearch />
+<section>
+<h2>Keep the specialist comparisons and pricing guides</h2>
+<p>The ten original software-related comparison guides below remain published and linked. This wave does not discard their detailed research, citations or existing diagrams. Some compare an application against a dedicated handheld scanner, which is a narrower and potentially independent decision. We will only consider future redirects when every source-specific claim and asset has a documented destination and a separate human approval.</p>
+<ul class="specialists">{specialists.map(s=><li><a href={`/guides/${s}/`}>{s.replaceAll('-',' ')}</a></li>)}</ul>
+<p>Cost and licensing should be checked from dated vendor material rather than copied as a permanent price. Retained specialist pricing references include <a href="/guides/bimmercode-pricing/">BimmerCode pricing</a>, <a href="/guides/bimmerlink-pricing/">BimmerLink pricing</a>, <a href="/guides/carly-subscription-cost/">Carly subscriptions</a> and <a href="/guides/protool-pricing/">ProTool license choices</a>.</p>
+</section>
+<section class="panel">
+<h2>Primary source ledger and evidence standard</h2><p><strong>Review date:</strong> 9 October 2026. Evidence is from software publishers and BMW's authorized technical information service. Product scope can change after release. Where first-party information is insufficient for a particular model or firmware, the responsible answer is “requires verification.” No vehicle was connected, no programming performed and no affiliate products are recommended by this resource.</p>
+<ul><li><a href="https://bimmercode.app/manual/">BimmerCode official manual and expert-mode caution</a></li><li><a href="https://bimmercode.app/vehicles/">BimmerCode vehicle and option selector</a></li><li><a href="https://bimmerlink.app/">BimmerLink official features and support</a></li><li><a href="https://support.mycarly.com/hc/en-us/articles/360011226299-What-features-does-Carly-support-for-my-car">Carly model-specific coverage</a></li><li><a href="https://www.mycarly.com/">Carly official feature and product information</a></li><li><a href="https://www.bimmergeeks.net/protool">BimmerGeeks ProTool function and license scope</a></li><li><a href="https://bmwtechinfo.bmwgroup.com/tisUI/">BMW AOS/TIS authorized access and workshop software information</a></li></ul>
+</section>
+</main>
+<script>
+const job=document.querySelector<HTMLSelectElement>('#job')!,product=document.querySelector<HTMLSelectElement>('#product')!,rows=[...document.querySelectorAll<HTMLTableRowElement>('tbody tr[data-product]')];const label=document.querySelector('#match-count')!,empty=document.querySelector<HTMLElement>('#empty')!;function refresh(){let count=0;for(const row of rows){const pass=(job.value==='all'||row.dataset[job.value]==='true')&&(product.value==='all'||row.dataset.product===product.value);row.hidden=!pass;if(pass)count++;}label.textContent=`Showing ${count} of ${rows.length} documented software profiles.`;empty.hidden=count>0;}job.addEventListener('change',refresh);product.addEventListener('change',refresh);refresh();
+</script>
+<style is:global>
+.software-shell{max-width:1110px;margin:auto;padding:2rem 1.25rem 5rem;line-height:1.75}.software-shell h1{font-size:clamp(2.2rem,5vw,3.7rem);line-height:1.14;max-width:22ch}.software-shell h2{font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.25;margin:2.4rem 0 1rem}.software-shell h3{font-size:1.28rem;margin:2rem 0 .5rem}.software-shell p{max-width:85ch}.software-shell .lead{font-size:1.2rem}.software-shell .panel{background:rgba(70,100,85,.06);border:1px solid #afbeb5;border-radius:12px;padding:clamp(1rem,3vw,2rem);margin:2.3rem 0}.software-shell figure{margin:2rem 0}.software-shell figure img{width:100%;height:auto;border-radius:12px;background:#f4f8f5}.software-shell figcaption{font-size:.9rem}.software-shell .scroll{overflow-x:auto;width:100%}.software-shell table{border-collapse:collapse;width:100%;min-width:660px;font-size:.95rem;line-height:1.55}.software-shell td,.software-shell th{padding:.85rem;border-bottom:1px solid #b8c7bd;text-align:left;vertical-align:top}.software-shell tbody tr:nth-child(odd){background:rgba(90,120,100,.07)}.software-shell tr[hidden]{display:none}.software-shell .controls{display:flex;gap:1rem;flex-wrap:wrap}.software-shell label{display:grid;gap:.3rem;flex:1 1 220px}.software-shell select{font:inherit;padding:.65rem;width:100%;border:1px solid #879c91;border-radius:7px;background:white;color:#152621}.software-shell .specialists{columns:2}.software-shell .specialists li{break-inside:avoid;margin:.5rem 0}.software-shell a{overflow-wrap:anywhere}@media(max-width:600px){.software-shell .specialists{columns:1}}
+</style>
+</BaseLayout>
