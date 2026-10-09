@@ -194,3 +194,8 @@ If the battery type/capacity changes, the vehicle has multiple 12-volt batteries
 
 
 **Related resource:** Our [BMW Scanner Capability Database](/tools/bmw-scanner-capability-database/) explains broader model, feature, vehicle-coverage and safety verification. This specialist article remains available with its original diagrams, sources and task-specific evidence.
+
+
+## Related service-function eligibility and safety matrix
+
+Confirm replacement battery details and differentiate registration from capacity/chemistry configuration before selecting an app or scanner function. For the cross-system qualification checklist, see the [BMW Service Function Eligibility and Safety Matrix](/tools/bmw-service-function-matrix/). This specialist guide remains the original, detailed explanation of its specific procedure and retains all existing diagrams, tables and source evidence. Do not interpret the matrix as permission to run an unsupported reset, calibration or active test.
