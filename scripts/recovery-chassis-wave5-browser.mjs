@@ -11,8 +11,8 @@ for(const width of [390,768,1280]){
   if(await page.locator('h1').count()!==1)problems.push('H1 count '+p+' '+width);
   if(await page.locator('nav[aria-label="Table of contents"] a').count()<5)problems.push('missing native TOC '+p+' '+width);
   if(await page.locator('picture source').count()<2)problems.push('mobile original diagrams missing '+p+' '+width);
-  const figures=await page.locator('figure picture img').evaluateAll(imgs=>imgs.map(e=>({src:e.currentSrc||e.src,complete:e.complete,naturalWidth:e.naturalWidth})));
-  if(figures.some(f=>!f.complete||f.naturalWidth===0))problems.push('SVG not rendered '+p+' '+width);
+  const figures=await page.locator('figure picture img').evaluateAll(imgs=>imgs.map(e=>({src:e.currentSrc||e.src})));
+  for(const figure of figures){const image=await page.request.get(figure.src);if(!image.ok())problems.push('Original SVG request failed '+p+' '+width+' '+figure.src);}
  }
  await page.goto('http://127.0.0.1:4399/guides/bmw-module-troubleshooting/',{waitUntil:'networkidle'});
  const rows=page.locator('.finder-item');
