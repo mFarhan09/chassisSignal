@@ -137,3 +137,6 @@ All checked 26 September 2026. Prices and update terms are the rows most likely 
 - [Foxwell — NT809BT](https://www.foxwelldiag.com/products/foxwell-nt809bt) — "3 Years Free Update", the Bluetooth VCI framing, the 30+ reset list including the Injector Coding description, and the vehicle compatibility list
 - [Foxwell — Extra vehicle software](https://www.foxwelldiag.com/products/extra-vehicle-software) — $80.00 per manufacturer package, "BMW/ Mini/ Rolls-Royce" as one package, the non-refundable authorization terms and the N5B / N5V serial exclusion
 
+
+
+**Related resource:** Our [BMW Scanner Capability Database](/tools/bmw-scanner-capability-database/) explains broader model, feature, vehicle-coverage and safety verification. This specialist article remains available with its original diagrams, sources and task-specific evidence.
