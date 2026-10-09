@@ -143,3 +143,8 @@ If the procedure does not require code entry, do not manufacture a coding job fr
 - [Autel — Service-function product documentation](https://autel.com/mk3/4292.jhtml)
 - [Autel — Vehicle coverage database](https://autel.com/vehicle-coverage/coverage2)
 - [Foxwell — Vehicle coverage search](https://foxwelltech.us/oeSearch/support_oe_search_app.html)
+
+
+## Related service-function eligibility and safety matrix
+
+Injector calibration-code entry depends on engine/controller strategy and cylinder-to-injector identity; it should not be inferred from a generic programming menu. For the cross-system qualification checklist, see the [BMW Service Function Eligibility and Safety Matrix](/tools/bmw-service-function-matrix/). This specialist guide remains the original, detailed explanation of its specific procedure and retains all existing diagrams, tables and source evidence. Do not interpret the matrix as permission to run an unsupported reset, calibration or active test.
