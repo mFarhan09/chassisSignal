@@ -4,6 +4,15 @@ const check=(c,m)=>{if(!c)throw Error(m)};
 const slugs=['foxwell-nt530-vs-nt710','foxwell-nt710-vs-autel-mk900-bmw','foxwell-nt710-vs-nt809bt-bmw','autel-scanner-for-bmw','launch-x431-vs-autel-for-bmw','bmw-bidirectional-scan-tool-functions','bmw-scanner-abs-airbag-codes','bmw-battery-registration-scanner','bmw-scanner-for-used-car-inspection','bmw-scanner-without-subscription','bmw-brake-bleed-scan-tool','bmw-code-reader-vs-scan-tool'];
 const route='/tools/bmw-scanner-capability-database/';
 check(fs.existsSync('dist'+route+'index.html'),'missing scanner route');
+check(fs.existsSync('dist/sitemap-index.xml'),'generated sitemap index missing');
+const sitemapNames=fs.readdirSync('dist').filter(n=>/^sitemap.*\.xml$/.test(n));
+const sitemapText=sitemapNames.map(n=>fs.readFileSync('dist/'+n,'utf8')).join('\n');
+check(sitemapText.includes('https://chassissignal.com'+route),'new scanner route missing from generated XML sitemap');
+check(fs.readFileSync('public/robots.txt','utf8').includes('https://chassissignal.com/sitemap-index.xml'),'robots sitemap discovery missing');
+const redirectRules=fs.readFileSync('public/_redirects','utf8').trim().split(/\r?\n/).filter(Boolean);
+check(redirectRules.includes('/home / 301')&&redirectRules.includes('/articles /research/ 301'),'original 301 mapping missing');
+check(redirectRules.length===2,'unexpected redirect introduced without preservation approval');
+
 const h=fs.readFileSync('dist'+route+'index.html','utf8');
 for(const term of ['Foxwell NT530','Foxwell NT710','Autel MK808S','Autel MK900','Launch X-431'])check(h.includes(term),'model not rendered '+term);
 for(const s of slugs){const f='src/content/articles/'+s+'.md';check(fs.existsSync(f),'source removed '+s);check(fs.readFileSync(f,'utf8').includes(route),'no reciprocal link '+s);check(h.includes('/guides/'+s+'/'),'missing internal link '+s);check(fs.existsSync('dist/guides/'+s+'/index.html'),'published source route missing '+s)}
