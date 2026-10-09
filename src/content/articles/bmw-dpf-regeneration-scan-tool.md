@@ -89,3 +89,8 @@ For many owners, a capable app plus a quality adapter — a BimmerLink-class app
 </figure>
 
 Escalate to a workshop when a regeneration will not complete, when blocking faults recur, or when soot load climbs abnormally fast — those are mechanical or sensor problems, and the scan tool's job there is to hand a technician clear evidence, not to keep forcing a process the car is refusing for a reason.
+
+
+## How this investigation fits the wider BMW diagnostic method
+
+Regeneration is not a universal answer to a stored DPF fault. The hub helps distinguish collecting exhaust-system evidence from issuing a safety-critical service command. If the problem is still unclassified, start with the [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) and its evidence-first symptom directory. This guide remains the detailed resource for its distinct controller, procedure and original technical visuals; no source research or SVG is being retired.
