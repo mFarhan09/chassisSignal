@@ -107,3 +107,6 @@ Also compare the support path around the software. Record the app version, Andro
 ## Bottom line
 
 BimmerLink wins on focused cross-platform access. ProTool wins when an Android workflow genuinely needs its broader licensed diagnostic or coding surface. Let platform eliminate impossible choices, let the exact task set the scope, and let current vehicle/adapter documentation make the final compatibility decision.
+
+
+**Broader software context:** Use the [BMW Diagnostic Software Comparison Matrix](/tools/bmw-diagnostic-software-comparison/) to check the separate coding, fault diagnosis, maintenance, licensing and workshop system boundaries. This specialist comparison remains available with its original research and evidence.
