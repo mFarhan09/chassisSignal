@@ -1,0 +1,36 @@
+name: Chassis Recovery Wave 6 QA
+on:
+  push:
+    branches: [recovery/chassis-wave-6-service-function-evidence]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  wave-6:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.14.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.19.0
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: pnpm build
+      - run: node scripts/recovery-chassis-wave6-qa.mjs
+      - run: pnpm exec playwright-core install chromium
+      - name: Chromium original visuals and interaction QA
+        run: |
+          pnpm exec astro preview --host 127.0.0.1 --port 4399 > /tmp/chassis-wave6.log 2>&1 &
+          for i in {1..40}; do
+            if curl -fsS http://127.0.0.1:4399/tools/bmw-service-function-matrix/ >/dev/null 2>&1; then break; fi
+            sleep 1
+          done
+          curl -fsS http://127.0.0.1:4399/tools/bmw-service-function-matrix/ >/dev/null || { cat /tmp/chassis-wave6.log; exit 1; }
+          node scripts/recovery-chassis-wave6-browser.mjs
