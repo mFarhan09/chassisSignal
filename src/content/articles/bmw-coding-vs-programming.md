@@ -98,6 +98,24 @@ Coding is a reasonable owner task when the exact car and option are documented, 
 
 Programming is not defined as “coding with a better cable.” It is a separate service operation. If a diagnostic plan calls for it, obtain the applicable BMW instructions and have a qualified shop execute it when power support, approved data, interface validation, or recovery capability is missing. The [ProTool versus ISTA comparison](/guides/protool-vs-ista/) helps separate an owner diagnostic/coding workflow from factory service work.
 
+
+### Confirm the operation before comparing the tools
+
+A buyer may see the word coding in an owner-facing app and assume it covers programming a replacement ECU. Those are different decisions. Feature or configuration coding normally changes supported controller options or parameters. Software programming changes the software installed on the ECU and can have dependencies, communication demands, approved interface restrictions and failure-recovery considerations that the simpler setting change does not.
+
+BMW's authorized AOS [user guide](https://bmwtechinfo.bmwgroup.com/assets/system_requirements.pdf) distinguishes ISTA diagnosis/test plans, modern vehicle programming and legacy ISTA/P cases. It describes workshop vehicle communication interfaces, an appropriate PC/network environment and dedicated external electrical power support. None of those conditions follows merely from pairing a Bluetooth adapter or seeing an Expert Mode option in a phone app. The application developer's documented supported coding feature remains the correct source for a consumer configuration operation.
+
+| Decision question | Coding/configuration | Software programming |
+| --- | --- | --- |
+| Intended result | Documented vehicle feature/parameter | Installation or updating ECU software |
+| Coverage proof | Exact app, vehicle and controller option | Authorized programming plan and vehicle release |
+| Interface | Supported app-specific device | Approved workshop equipment and software |
+| Main risk | Unsupported settings or incorrect configuration | Interrupted ECU flash and dependent-module issues |
+| Safe next step | Verify exact option and original state | Qualified workshop / approved power and recovery process |
+
+If the current problem is an unidentified diagnostic fault, neither a coding tweak nor a flash should be used as trial-and-error troubleshooting. Preserve original fault data and consult the specified service plan. The [BMW service-function matrix](/tools/bmw-service-function-matrix/) keeps coding, active service routines, calibration and ECU programming in distinct categories. The existing <a href="/guides/bmw-diagnostic-interface-map/">interface architecture guide</a> provides additional hardware context.
+
+
 ## The decision in one line
 
 Choose coding for a supported configuration change in software already installed. Choose a validated programming workflow when control-unit software itself must be installed, coordinated, or recovered. If you cannot name which layer will be written, pause before connecting a tool. That pause is cheaper than discovering the distinction after an unsupported write has already begun.
@@ -117,19 +135,3 @@ Choose coding for a supported configuration change in software already installed
 
 An app-supported coding change and an authorized ECU software installation are distinct jobs with different access, electrical and recovery prerequisites. For the cross-system qualification checklist, see the [BMW Service Function Eligibility and Safety Matrix](/tools/bmw-service-function-matrix/). This specialist guide remains the original, detailed explanation of its specific procedure and retains all existing diagrams, tables and source evidence. Do not interpret the matrix as permission to run an unsupported reset, calibration or active test.
 
-
-### Confirm the operation before comparing the tools
-
-A buyer may see the word coding in an owner-facing app and assume it covers programming a replacement ECU. Those are different decisions. Feature or configuration coding normally changes supported controller options or parameters. Software programming changes the software installed on the ECU and can have dependencies, communication demands, approved interface restrictions and failure-recovery considerations that the simpler setting change does not.
-
-BMW's authorized AOS [user guide](https://bmwtechinfo.bmwgroup.com/assets/system_requirements.pdf) distinguishes ISTA diagnosis/test plans, modern vehicle programming and legacy ISTA/P cases. It describes workshop vehicle communication interfaces, an appropriate PC/network environment and dedicated external electrical power support. None of those conditions follows merely from pairing a Bluetooth adapter or seeing an Expert Mode option in a phone app. The application developer's documented supported coding feature remains the correct source for a consumer configuration operation.
-
-| Decision question | Coding/configuration | Software programming |
-| --- | --- | --- |
-| Intended result | Documented vehicle feature/parameter | Installation or updating ECU software |
-| Coverage proof | Exact app, vehicle and controller option | Authorized programming plan and vehicle release |
-| Interface | Supported app-specific device | Approved workshop equipment and software |
-| Main risk | Unsupported settings or incorrect configuration | Interrupted ECU flash and dependent-module issues |
-| Safe next step | Verify exact option and original state | Qualified workshop / approved power and recovery process |
-
-If the current problem is an unidentified diagnostic fault, neither a coding tweak nor a flash should be used as trial-and-error troubleshooting. Preserve original fault data and consult the specified service plan. The [BMW service-function matrix](/tools/bmw-service-function-matrix/) keeps coding, active service routines, calibration and ECU programming in distinct categories. The existing <a href="/guides/bmw-diagnostic-interface-map/">interface architecture guide</a> provides additional hardware context.
