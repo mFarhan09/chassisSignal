@@ -2,8 +2,8 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import ScannerResearch from '../../../components/ScannerResearch.astro';
 const models=[
-{name:'Foxwell NT530',maker:'Foxwell',category:'BMW-focused handheld',link:'https://www.foxwelldiag.com/',coverage:'Verify purchased BMW software, chassis and service functions',caveat:'Do not infer all-system function from registration list'},
-{name:'Foxwell NT710',maker:'Foxwell',category:'BMW diagnostic handheld',link:'https://www.foxwelldiag.com/',coverage:'Verify specific OEM coverage, coding and supported service routines',caveat:'Vehicle generation, update rights and modules vary'},
+{name:'Foxwell NT530',maker:'Foxwell',category:'BMW-focused handheld',link:'https://www.foxwelltech.us/product-detail-524.html',coverage:'Foxwell identifies multi-system diagnosis and commonly required service/coding features; verify licensed BMW software and chassis',caveat:'Do not infer all-system function from registration list'},
+{name:'Foxwell NT710',maker:'Foxwell',category:'BMW diagnostic handheld',link:'https://www.foxwelldiag.com/products/foxwell-nt710',coverage:'Foxwell lists supported ECU coding, active tests and 30+ service categories; exact chassis and vehicle equipment can restrict each',caveat:'Vehicle generation, update rights and modules vary'},
 {name:'Autel MK808S',maker:'Autel',category:'Multibrand service tablet',link:'https://www.autel.com/mk2/3990.jhtml',coverage:'Official product lists all-system readout, active tests and several maintenance categories',caveat:'Manufacturer states features vary by vehicle'},
 {name:'Autel MK900',maker:'Autel',category:'Multibrand diagnostic tablet',link:'https://autel.com/mk3/4171.jhtml',coverage:'Official material lists live data, active tests, DoIP and CAN FD',caveat:'TPMS basic tier differs from MK900-TS; do not infer ECU programming'},
 {name:'Launch X-431',maker:'Launch',category:'Professional multibrand platform family',link:'https://www.cnlaunch.com/',coverage:'Must choose exact X-431 model and its function coverage',caveat:'Family names are not an exact model specification'}
@@ -54,7 +54,7 @@ const related=[
 <li><a href="https://www.autel.com/mk2/3990.jhtml">Autel MK808S/MK808Z official specifications</a></li>
 <li><a href="https://autel.com/mk3/4171.jhtml">Autel MK900 official product information and comparison</a></li>
 <li><a href="https://www.autel.com/u/cms/www/202604/200157383ity.pdf">Autel MK900 user manual — ECU info, live data, tests and special functions</a></li>
-<li><a href="https://www.foxwelldiag.com/">Foxwell manufacturer — verify exact NT530 or NT710 series</a></li>
+<li><a href="https://www.foxwelltech.us/product-detail-524.html">Foxwell NT530 technical specifications and manuals</a></li><li><a href="https://www.foxwelldiag.com/products/foxwell-nt710">Foxwell NT710 model-specific description, supported BMW coding and service categories</a></li><li><a href="https://www.foxwelldiag.com/pages/buyer-guide">Foxwell model comparison and coverage disclaimer</a></li>
 <li><a href="https://www.cnlaunch.com/">Launch manufacturer — verify exact X-431 model and VCI</a></li>
 </ul></section>
 <section class="panel"><h2>Related Chassis Signal articles</h2><p>These original research articles are intentionally retained. They offer deeper comparisons, module-specific cautions, documented model exceptions and original diagrams that should not be lost to a generic database.</p><div class="related-grid">{related.map(([slug,title,desc])=><article><h3><a href={`/guides/${slug}/`}>{title} →</a></h3><p>{desc}</p></article>)}</div></section>
