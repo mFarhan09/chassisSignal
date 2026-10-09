@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import SoftwareComparisonResearch from '../../../components/SoftwareComparisonResearch.astro';
+import SoftwareUseCaseDeepDive from '../../../components/SoftwareUseCaseDeepDive.astro';
 const apps=[
 {name:'BimmerCode',type:'Feature and configuration coding',os:'iOS / Android / desktop (check current platform offering)',diagnostics:false,coding:true,service:false,workshop:false,source:'https://bimmercode.app/',limit:'Vehicle-option and module dependent; expert-mode risk'},
 {name:'BimmerLink',type:'Diagnostics, live data and selected service functions',os:'iOS / Android',diagnostics:true,coding:false,service:true,workshop:false,source:'https://bimmerlink.app/',limit:'Function and installed-equipment dependent; not BimmerCode'},
@@ -38,6 +39,7 @@ const specialists=['bimmercode-vs-carly','bimmercode-vs-foxwell-nt530','bimmerco
 </section>
 <figure><picture><source media="(max-width: 650px)" srcset="/images/tools/bmw-diagnostic-software-comparison/verification-chain-mobile.svg"/><img src="/images/tools/bmw-diagnostic-software-comparison/verification-chain.svg" alt="Evidence chain from car and generation to exact function, software, adapter, licensing and safe operating environment" width="1200" height="460" loading="lazy"/></picture><figcaption>A platform is only a candidate after the full evidence chain is checked.</figcaption></figure>
 <SoftwareComparisonResearch />
+<SoftwareUseCaseDeepDive />
 <section>
 <h2>Keep the specialist comparisons and pricing guides</h2>
 <p>The ten original software-related comparison guides below remain published and linked. This wave does not discard their detailed research, citations or existing diagrams. Some compare an application against a dedicated handheld scanner, which is a narrower and potentially independent decision. We will only consider future redirects when every source-specific claim and asset has a documented destination and a separate human approval.</p>
