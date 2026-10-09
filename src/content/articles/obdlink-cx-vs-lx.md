@@ -99,3 +99,8 @@ Bluetooth transport, host-platform and protocol claims were checked against the 
 - [OBDLink - Compatible OBD-II apps](https://www.obdlink.com/compatible-apps/)
 - [OBDLink Support - Update OBDLink adapter firmware](https://support.obdlink.com/support/solutions/articles/43000705180-update-obdlink-adapter-firmware)
 - [SG Software - BimmerCode supported adapters](https://bimmercode.app/adapters/?series=g)
+
+
+---
+
+**Compare the broader adapter decision:** The [BMW OBD Adapter Comparison Database](/tools/bmw-obd-adapter-comparison/) screens platform, physical connection and documented protocol support across related models. This page remains available for its narrower product-specific evidence and caveats.
