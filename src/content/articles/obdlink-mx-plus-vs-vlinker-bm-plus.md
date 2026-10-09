@@ -104,3 +104,6 @@ Platform, network and BMW-application claims were checked against the cited manu
 - [Vgate - Vgate vLinker BM+](https://www.vgatemall.com/products-detail/i-15/?s=2)
 - [SG Software - BimmerCode supported adapters](https://bimmercode.app/adapters/?series=g)
 - [SG Software - BimmerLink for BMW and MINI](https://bimmerlink.app/)
+
+
+**Broader model evidence:** Use the [BMW OBD Adapter Comparison Database](/tools/bmw-obd-adapter-comparison/) for the cross-model platform and protocol screen; this specialist article remains independent and available.
