@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {execFileSync} from 'node:child_process';
 const assert=(value,message)=>{if(!value)throw new Error(message)};
 const slugs=['bimmercode-vs-carly','bimmercode-vs-foxwell-nt530','bimmercode-vs-protool','bimmerlink-vs-bimmer-tool','bimmerlink-vs-carly','bimmerlink-vs-foxwell-nt530','bimmerlink-vs-protool','ista-vs-bimmerlink','protool-vs-carly','protool-vs-ista'];
 const path='/tools/bmw-diagnostic-software-comparison/',file='dist'+path+'index.html';
@@ -12,5 +13,7 @@ for(const slug of slugs)assert(!fs.readFileSync('public/_redirects','utf8').incl
 assert(!html.includes('data-affiliate-link'),'no affiliate placements on matrix');
 assert(html.includes('rel="canonical"')&&html.includes(path),'self-canonical absent');
 assert(html.includes('id="job"')&&html.includes('id="product"'),'filter inputs missing');
+let changed=[];try{changed=execFileSync('git',['diff','--name-only','origin/main','--','src/content/articles/'],{encoding:'utf8'}).split('\n').filter(Boolean)}catch(e){console.warn('Source whitelist diff requires origin/main reference: '+e.message)}
+if(changed.length){assert(changed.length===slugs.length,'Only ten approved specialist files can change; actual '+changed.length);for(const file of changed)assert(slugs.includes(file.replace('src/content/articles/','').replace('.md','')),'Unapproved article changed: '+file)}
 const count=fs.readdirSync('src/content/articles').filter(n=>n.endsWith('.md')).length;assert(count===69,'69 legacy articles expected, got '+count);
 console.log('Chassis Wave 2 PASS: 69 original articles, ten source links, five software categories, four original SVGs, two hubs, no redirects, no affiliate units.');
