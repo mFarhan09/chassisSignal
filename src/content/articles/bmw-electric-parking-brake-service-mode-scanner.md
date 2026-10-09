@@ -159,3 +159,8 @@ The correct tool is not the one with the longest service-menu list. It is the on
 ## How this investigation fits the wider BMW diagnostic method
 
 Do not confuse reading EMF fault memory with an active parking-brake service operation. The diagnostic hub separates the two and preserves this page's procedure-specific safety and architecture distinctions. If the problem is still unclassified, start with the [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) and its evidence-first symptom directory. This guide remains the detailed resource for its distinct controller, procedure and original technical visuals; no source research or SVG is being retired.
+
+
+## Related service-function eligibility and safety matrix
+
+EMF maintenance mode requires the exact rear-brake architecture and safe procedure; it is distinct from hydraulic ABS bleeding. For the cross-system qualification checklist, see the [BMW Service Function Eligibility and Safety Matrix](/tools/bmw-service-function-matrix/). This specialist guide remains the original, detailed explanation of its specific procedure and retains all existing diagrams, tables and source evidence. Do not interpret the matrix as permission to run an unsupported reset, calibration or active test.

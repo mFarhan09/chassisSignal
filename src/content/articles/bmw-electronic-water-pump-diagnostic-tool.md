@@ -127,3 +127,8 @@ The right BMW electronic water-pump diagnostic tool is the one that fits the ide
 ## How this investigation fits the wider BMW diagnostic method
 
 A stored cooling-system fault and an approved pump activation are different diagnostic stages. Keep the vehicle state and safety procedure central before any active tests. If the problem is still unclassified, start with the [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) and its evidence-first symptom directory. This guide remains the detailed resource for its distinct controller, procedure and original technical visuals; no source research or SVG is being retired.
+
+
+## Related service-function eligibility and safety matrix
+
+A water-pump active test is different from reading cooling faults or logging temperature values and must follow the actual safe procedure. For the cross-system qualification checklist, see the [BMW Service Function Eligibility and Safety Matrix](/tools/bmw-service-function-matrix/). This specialist guide remains the original, detailed explanation of its specific procedure and retains all existing diagrams, tables and source evidence. Do not interpret the matrix as permission to run an unsupported reset, calibration or active test.

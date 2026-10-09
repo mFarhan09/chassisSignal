@@ -127,3 +127,8 @@ Escalate when the current plan is missing, the engine identity is uncertain, a m
 Run an ISTA Valvetronic relearn when three things align: the exact engine's current BMW information requires the function, the service event or diagnostic state makes it relevant, and all stated prerequisites are satisfied. Verify the result through the test plan and preserve post-run faults/data.
 
 Do not use a relearn to silence evidence. Engine identification, fault classification and mechanical plausibility come first; the guided function is a narrow completion or diagnostic step inside that larger process. That boundary is what keeps a useful ISTA feature from becoming generic procedure spam.
+
+
+## Related service-function eligibility and safety matrix
+
+A Valvetronic teach-in is a vehicle/engine-specific adaptation under an approved repair and fault state, not a routine warning reset. For the cross-system qualification checklist, see the [BMW Service Function Eligibility and Safety Matrix](/tools/bmw-service-function-matrix/). This specialist guide remains the original, detailed explanation of its specific procedure and retains all existing diagrams, tables and source evidence. Do not interpret the matrix as permission to run an unsupported reset, calibration or active test.

@@ -149,3 +149,8 @@ If you cannot name the diagnosed fault, completed service event, target VTG modu
 ## How this investigation fits the broader diagnostic method
 
 A transfer-case adaptation reset is not evidence that the underlying driveline fault has been identified. The [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) explains how to preserve original fault data, verify ECU access and select an evidence-backed next step. This specialist guide keeps its independent original diagrams and source-specific research. Do not use a write-capable procedure as a trial-and-error diagnostic shortcut.
+
+
+## Related service-function eligibility and safety matrix
+
+A VTG oil-service record, learned adaptation and a mechanical calibration can be distinct operations; preserve the diagnosed work trigger before any write. For the cross-system qualification checklist, see the [BMW Service Function Eligibility and Safety Matrix](/tools/bmw-service-function-matrix/). This specialist guide remains the original, detailed explanation of its specific procedure and retains all existing diagrams, tables and source evidence. Do not interpret the matrix as permission to run an unsupported reset, calibration or active test.

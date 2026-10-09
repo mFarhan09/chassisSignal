@@ -158,3 +158,8 @@ The decision rule is the verb. If you cannot state which action must happen, whe
 - [Autel — source reference](https://www.autel.com/mk3/3990.jhtml)
 - [Autel — source reference](https://www.autel.com/mk2/3991.jhtml)
 - [Autel — source reference](https://www.autel.com/vehicle-coverage/coverage2)
+
+
+## Related service-function eligibility and safety matrix
+
+Separate TPMS diagnosis, sensor activation, replacement-sensor programming and initialization/relearn; scanner suffixes and the vehicle's RDC architecture matter. For the cross-system qualification checklist, see the [BMW Service Function Eligibility and Safety Matrix](/tools/bmw-service-function-matrix/). This specialist guide remains the original, detailed explanation of its specific procedure and retains all existing diagrams, tables and source evidence. Do not interpret the matrix as permission to run an unsupported reset, calibration or active test.

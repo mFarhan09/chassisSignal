@@ -94,3 +94,8 @@ Escalate to a workshop when a regeneration will not complete, when blocking faul
 ## How this investigation fits the wider BMW diagnostic method
 
 Regeneration is not a universal answer to a stored DPF fault. The hub helps distinguish collecting exhaust-system evidence from issuing a safety-critical service command. If the problem is still unclassified, start with the [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) and its evidence-first symptom directory. This guide remains the detailed resource for its distinct controller, procedure and original technical visuals; no source research or SVG is being retired.
+
+
+## Related service-function eligibility and safety matrix
+
+DPF regeneration is a thermal intervention with engine and fault prerequisites, not a reset to be tried for every warning. For the cross-system qualification checklist, see the [BMW Service Function Eligibility and Safety Matrix](/tools/bmw-service-function-matrix/). This specialist guide remains the original, detailed explanation of its specific procedure and retains all existing diagrams, tables and source evidence. Do not interpret the matrix as permission to run an unsupported reset, calibration or active test.

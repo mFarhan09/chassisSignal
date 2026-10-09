@@ -148,3 +148,8 @@ The reliable chain is simple: documented repair event, exact BMW instruction, ve
 
 
 **Related resource:** Our [BMW Scanner Capability Database](/tools/bmw-scanner-capability-database/) screens broader device and function claims. This original guide, its technical diagrams and its task-specific evidence remain intact.
+
+
+## Related service-function eligibility and safety matrix
+
+ABS hydraulic bleed operations require the named DSC routine, equipment and safe workshop conditions, not just an ABS menu badge. For the cross-system qualification checklist, see the [BMW Service Function Eligibility and Safety Matrix](/tools/bmw-service-function-matrix/). This specialist guide remains the original, detailed explanation of its specific procedure and retains all existing diagrams, tables and source evidence. Do not interpret the matrix as permission to run an unsupported reset, calibration or active test.
