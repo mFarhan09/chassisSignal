@@ -156,3 +156,6 @@ Ask what happens if the session is interrupted, what recovery path exists, and w
 Choose ICOM for the BMW service environment that recommends it, for cross-generation workshop use and for high-consequence workflows requiring the documented VCI. Choose ENET when the exact application, BMW and bounded operation explicitly support it. Choose neither on the basis of connector appearance, theoretical bandwidth or forum habit.
 
 Software approves the interface; the vehicle exposes the transport; the job sets the risk. Once those are locked, the hardware decision becomes defensible.
+
+
+**Interface architecture context:** For a conservative vehicle-family screen, read the [BMW Vehicle/Interface Compatibility Lookup](/tools/bmw-vehicle-interface-compatibility/). For differences among ENET, K+DCAN, ICOM and app-approved wireless links, see the [BMW Diagnostic Interface Map](/guides/bmw-diagnostic-interface-map/). This specialist article and its original diagrams, evidence and detailed scope remain intact.

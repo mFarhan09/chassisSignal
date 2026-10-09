@@ -1,0 +1,37 @@
+name: Chassis Recovery Wave 4 QA
+on:
+  push:
+    branches: [recovery/chassis-wave-4-vehicle-interface]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  wave-4:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.14.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.19.0
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: pnpm build
+      - run: node scripts/recovery-tool-article-presentation-qa.mjs
+      - run: node scripts/recovery-chassis-wave4-qa.mjs
+      - run: pnpm exec playwright-core install chromium
+      - name: Native article and interactive lookup browser QA
+        run: |
+          pnpm exec astro preview --host 127.0.0.1 --port 4399 > /tmp/chassis-wave4-preview.log 2>&1 &
+          for i in {1..40}; do
+            if curl -fsS http://127.0.0.1:4399/tools/bmw-vehicle-interface-compatibility/ >/dev/null 2>&1; then break; fi
+            sleep 1
+          done
+          curl -fsS http://127.0.0.1:4399/tools/bmw-vehicle-interface-compatibility/ >/dev/null || { cat /tmp/chassis-wave4-preview.log; exit 1; }
+          node scripts/recovery-chassis-wave4-browser.mjs

@@ -98,3 +98,6 @@ K+DCAN is the economical specialist for supported cable-based BMW work. ICOM Nex
 - [BMW — ISTA system requirements](https://bmwtechinfo.bmwgroup.com/assets/system_requirements.pdf)
 - [BMW — Site information](https://bmwtechinfo.bmwgroup.com/assets/site_information.pdf)
 - [BimmerGeeks — Expert K+DCAN cable](https://www.bimmergeeks.net/product-page/bimmergeeks-expert-edition-k-dcan1)
+
+
+**Interface architecture context:** For a conservative vehicle-family screen, read the [BMW Vehicle/Interface Compatibility Lookup](/tools/bmw-vehicle-interface-compatibility/). For differences among ENET, K+DCAN, ICOM and app-approved wireless links, see the [BMW Diagnostic Interface Map](/guides/bmw-diagnostic-interface-map/). This specialist article and its original diagrams, evidence and detailed scope remain intact.

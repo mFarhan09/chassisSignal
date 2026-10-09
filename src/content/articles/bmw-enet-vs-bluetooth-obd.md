@@ -147,3 +147,6 @@ For coding or configuration work, follow the app's dedicated instructions and re
 Choose **ENET** when the exact F/G/I vehicle, app, operating system, and physical Ethernet path are documented. Choose **Bluetooth OBD** when the exact adapter model is listed for the car, app, and platform and wireless operation fits the workflow. Use **Wi-Fi or DCAN/USB** when the official table directs that generation and platform there.
 
 The winner is not cable or wireless in the abstract. It is the shortest fully documented path from the required control unit to the supported application.
+
+
+**Interface architecture context:** For a conservative vehicle-family screen, read the [BMW Vehicle/Interface Compatibility Lookup](/tools/bmw-vehicle-interface-compatibility/). For differences among ENET, K+DCAN, ICOM and app-approved wireless links, see the [BMW Diagnostic Interface Map](/guides/bmw-diagnostic-interface-map/). This specialist article and its original diagrams, evidence and detailed scope remain intact.

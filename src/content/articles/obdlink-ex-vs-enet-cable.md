@@ -106,3 +106,6 @@ EX versus ENET is an interface-contract decision, not a generic cable contest. S
 
 
 **Wider selection:** The [BMW OBD Adapter Comparison Database](/tools/bmw-obd-adapter-comparison/) screens the documented adapter and platform matrix. This specific guide remains available for its independent evidence.
+
+
+**Interface architecture context:** For a conservative vehicle-family screen, read the [BMW Vehicle/Interface Compatibility Lookup](/tools/bmw-vehicle-interface-compatibility/). For differences among ENET, K+DCAN, ICOM and app-approved wireless links, see the [BMW Diagnostic Interface Map](/guides/bmw-diagnostic-interface-map/). This specialist article and its original diagrams, evidence and detailed scope remain intact.

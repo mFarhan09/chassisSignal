@@ -1,0 +1,54 @@
+---
+import ResearchToolArticleLayout from '../../components/ResearchToolArticleLayout.astro';
+import DiagnosticInterfaceMapResearch from '../../components/DiagnosticInterfaceMapResearch.astro';
+import InterfaceMapCaseStudies from '../../components/InterfaceMapCaseStudies.astro';
+import InterfaceEvidenceBoundaries from '../../components/InterfaceEvidenceBoundaries.astro';
+const related=[
+ ['bmw-icom-vs-enet','ICOM vs ENET','Workshop network interface and scope'],
+ ['bmw-icom-vs-k-dcan','ICOM vs K+DCAN','Different architecture and vehicle generations'],
+ ['k-dcan-vs-enet-cable','K+DCAN vs ENET cable','K-line/CAN versus Ethernet diagnostic access'],
+ ['bmw-enet-vs-bluetooth-obd','ENET vs Bluetooth OBD','Physical transport and app acceptance'],
+ ['bmw-f-series-vs-g-series-obd-adapter','F-series vs G-series adapters','Generation and software caveats'],
+ ['obdlink-ex-vs-enet-cable','OBDLink EX vs ENET cable','USB OBD and Ethernet are not equivalents'],
+ ['bimmerlink-adapter','BimmerLink adapters','Exact mobile app and adapter support']
+];
+---
+<ResearchToolArticleLayout title="BMW Diagnostic Interface Map: ICOM, ENET, K+DCAN and OBD" description="A comprehensive BMW interface architecture guide separating early K-line, K+DCAN, Ethernet ENET, approved Bluetooth adapters and ICOM/J2534 workshop systems." section="Guides" sectionHref="/guides/" readingTime="17 min read" toc={[{id:'architecture',label:'Interface architecture'},{id:'comparison',label:'Detailed distinctions'},{id:'decision',label:'Choose by task'},{id:'interface-research',label:'Technical research'},{id:'sources',label:'Primary sources'},{id:'related-guides',label:'Related articles'}]}>
+<div class="interface-shell">
+<p class="lede">K+DCAN, ENET, ICOM and Bluetooth OBD adapters are not interchangeable names for the same diagnostic hardware. The right path depends on vehicle architecture, software, intended task, and whether the operator is an owner or an authorized workshop.</p>
+<p>This map explains the physical and software boundaries before you pick an interface. It does not recommend unsupported flashing, bypass official BMW access, or guarantee that a menu option works on a particular ECU. If you need an actual vehicle-family starting point, use our <a href="/tools/bmw-vehicle-interface-compatibility/">BMW vehicle/interface lookup</a>.</p>
+<figure><picture><source media="(max-width:650px)" srcset="/images/guides/bmw-diagnostic-interface-map/interface-topology-mobile.svg"/><img src="/images/guides/bmw-diagnostic-interface-map/interface-topology.svg" width="1200" height="450" loading="lazy" alt="Four separate BMW interface paths: K+DCAN wired, ENET Ethernet, app-approved wireless OBD and authorized workshop ICOM/J2534"/></picture><figcaption>Each path has a distinct transport and software context; no path is universally valid for all vehicles and jobs.</figcaption></figure>
+<section id="architecture">
+<h2>Four different architectures, not four grades of the same adapter</h2>
+<div class="scroll"><table><thead><tr><th>Interface</th><th>Physical/host path</th><th>Typical documented use</th><th>Do not assume</th></tr></thead><tbody>
+<tr><th>K+DCAN / K-line</th><td>USB or vendor-specific OBD diagnostic adapter; earlier BMW networks</td><td>E-series software diagnostics where the exact chassis, pins and program support it</td><td>Automatic access to all older K-line modules</td></tr>
+<tr><th>ENET</th><td>Vehicle OBD connection to Ethernet/Wi-Fi-ENET bridge to operator host</td><td>Supported F/G/i-series app coding or diagnostic workflows</td><td>Every ECU or later car is supported by any ENET device</td></tr>
+<tr><th>Approved wireless OBD</th><td>OBD adapter using BLE, Classic Bluetooth or Wi-Fi</td><td>Specific owner-facing app and vehicle combinations</td><td>Adapter hardware protocol support proves app support</td></tr>
+<tr><th>ICOM / supported J2534</th><td>Workshop vehicle communications system and approved software host</td><td>BMW AOS/ISTA diagnosis and appropriate programming environments</td><td>Works like an unrestricted mobile consumer app</td></tr>
+</tbody></table></div></section>
+<section id="comparison">
+<h2>Interface differences by failure domain</h2>
+<div class="scroll"><table><thead><tr><th>Question</th><th>K+DCAN</th><th>ENET</th><th>App-approved OBD</th><th>ICOM / J2534</th></tr></thead><tbody>
+<tr><td>Host path</td><td>USB / compatible diagnostic cable</td><td>Ethernet or ENET Wi-Fi</td><td>BLE / Bluetooth / Wi-Fi app</td><td>Workshop interface to authorized PC/software</td></tr>
+<tr><td>Primary gating factor</td><td>Chassis K-line/CAN wiring</td><td>App and car Ethernet diagnostic support</td><td>Exact product in app support list</td><td>AOS/ISTA interface and entitlement</td></tr>
+<tr><td>Common confusion</td><td>Older double K-line exceptions</td><td>Ethernet link mistaken for universal coding rights</td><td>Phone pairing mistaken for ECU coverage</td><td>Authorized programming mistaken for simple OBD reading</td></tr>
+<tr><td>Independent evidence</td><td>BimmerGeeks chassis FAQ</td><td>BimmerCode ENET manual</td><td>BimmerCode adapter selector</td><td>BMW Group AOS system requirements</td></tr>
+</tbody></table></div></section>
+<figure><picture><source media="(max-width:650px)" srcset="/images/guides/bmw-diagnostic-interface-map/operation-boundaries-mobile.svg"/><img src="/images/guides/bmw-diagnostic-interface-map/operation-boundaries.svg" width="1200" height="450" loading="lazy" alt="Separate boundaries for read-only diagnosis, supported coding, workshop active procedures and ECU programming"/></picture><figcaption>Interface connectivity and permission for consequential software changes are separate questions.</figcaption></figure>
+<section id="decision"><h2>Match the real job before buying an interface</h2>
+<p>For a specific supported BimmerCode option, start with the developer's exact vehicle and supported-adapter selector, rather than selecting by brand or a retail listing. For older BMW diagnostics, verify the double K-line and PC software constraints before assuming any USB cable is suitable. For official BMW workshop programming, follow BMW AOS/ISTA system requirements; a successful owner app connection does not certify the necessary programming setup.</p>
+<ul><li><strong>Read a specific module:</strong> verify controller and chassis coverage before selecting a tool.</li><li><strong>Change a documented comfort option:</strong> verify app, vehicle, feature, interface, safe coding conditions.</li><li><strong>Use a workshop test plan:</strong> verify authorized ISTA access, computer and BMW-approved interface.</li><li><strong>Update ECU software:</strong> do not proceed from an interface comparison alone; programming-specific training, equipment and recovery prerequisites are essential.</li></ul>
+</section>
+<section id="interface-research"><DiagnosticInterfaceMapResearch /><InterfaceMapCaseStudies /><InterfaceEvidenceBoundaries /></section>
+<section class="panel" id="sources"><h2>Sources and verification standard</h2><p>Reviewed 9 October 2026 using official BMW and application developer documentation. No hands-on car testing or high-risk programming was undertaken.</p><ul>
+<li><a href="https://bmwtechinfo.bmwgroup.com/assets/system_requirements.pdf">BMW Group AOS technical information / ISTA and ICOM/J2534 system requirements</a></li>
+<li><a href="https://bimmercode.app/manual/">BimmerCode supported systems, safe connection and ENET setup</a></li>
+<li><a href="https://bimmercode.app/adapters/">BimmerCode adapter selector by vehicle family and operating system</a></li>
+<li><a href="https://www.bimmergeeks.net/faqs">BimmerGeeks ProTool FAQ — double K-line and chassis exceptions</a></li>
+<li><a href="https://www.bimmergeeks.net/protool">BimmerGeeks ProTool vehicle eligibility and software licensing</a></li></ul></section>
+<section class="related" id="related-guides"><h2>Related Chassis Signal articles</h2><p>These independent comparisons preserve the deeper, original technical research behind the interface map.</p><div class="related-grid">{related.map(([slug,title,desc])=><article><h3><a href={`/guides/${slug}/`}>{title} →</a></h3><p>{desc}</p></article>)}</div></section>
+</div>
+<style is:global>
+.interface-shell .scroll{overflow-x:auto}.interface-shell table{min-width:640px;border-collapse:collapse;width:100%;font:13px/1.6 var(--sans)}.interface-shell th,.interface-shell td{padding:12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.interface-shell figure img{max-width:100%;height:auto}.interface-shell figcaption{font:13px/1.5 var(--sans);color:var(--muted)}.interface-shell .related-grid{display:grid;gap:13px}.interface-shell .related-grid article{padding:18px;background:#fff;border:1px solid var(--line);border-radius:14px}.interface-shell .related-grid article h3{font-size:22px;margin:0 0 6px}.interface-shell .related-grid article p{font-size:15px;margin:0}
+</style>
+</ResearchToolArticleLayout>

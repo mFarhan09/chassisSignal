@@ -138,3 +138,6 @@ Close other apps that may own the adapter connection, grant required Bluetooth o
 Diagnostics can expose sensitive vehicle data and service actions. Keep the vehicle in the state specified by the app, use stable battery conditions for extended sessions, and stop if the app warns that a function is unavailable. Do not operate an interactive diagnostic session while driving. Remove or manage an adapter according to its maker's power guidance rather than leaving an unknown device connected indefinitely.
 
 The best BimmerLink adapter is therefore not a universal product. It is the exact documented intersection of car, platform, interface, and job—and a purchase record that lets you verify that intersection again when the app or hardware changes.
+
+
+**Interface architecture context:** For a conservative vehicle-family screen, read the [BMW Vehicle/Interface Compatibility Lookup](/tools/bmw-vehicle-interface-compatibility/). For differences among ENET, K+DCAN, ICOM and app-approved wireless links, see the [BMW Diagnostic Interface Map](/guides/bmw-diagnostic-interface-map/). This specialist article and its original diagrams, evidence and detailed scope remain intact.
