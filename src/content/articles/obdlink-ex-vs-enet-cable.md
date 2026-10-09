@@ -103,3 +103,6 @@ EX versus ENET is an interface-contract decision, not a generic cable contest. S
 - [OBDLink — Compatible apps](https://www.obdlink.com/compatible-apps/)
 - [BimmerCode — Supported adapters](https://bimmercode.app/adapters/)
 - [BimmerCode — Connection manual](https://bimmercode.app/manual/)
+
+
+**Wider selection:** The [BMW OBD Adapter Comparison Database](/tools/bmw-obd-adapter-comparison/) screens the documented adapter and platform matrix. This specific guide remains available for its independent evidence.
