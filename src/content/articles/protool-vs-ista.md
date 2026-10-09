@@ -104,3 +104,6 @@ ProTool wins on portability and a straightforward app-license model. ISTA wins w
 - [BMW — Technical Information System](https://bmwtechinfo.bmwgroup.com/)
 - [BMW — Site information](https://bmwtechinfo.bmwgroup.com/assets/site_information.pdf)
 - [BMW — ISTA system requirements](https://bmwtechinfo.bmwgroup.com/assets/system_requirements.pdf)
+
+
+**Broader software context:** Use the [BMW Diagnostic Software Comparison Matrix](/tools/bmw-diagnostic-software-comparison/) to check the separate coding, fault diagnosis, maintenance, licensing and workshop system boundaries. This specialist comparison remains available with its original research and evidence.
