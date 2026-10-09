@@ -146,3 +146,8 @@ For a used vehicle with unknown repair history, capture faults, sensor data and 
 Choose a BMW ride-height calibration scan tool only after the suspension fingerprint, service trigger, measurement specification and named function all match. Prefer documented coverage tied to the exact chassis and software version. Reject broad air-suspension or bidirectional labels as proof.
 
 The tool’s role is narrow but important: it carries out a verified service function inside a controlled mechanical and measurement process. It is not a shortcut around diagnosis, specifications or safe support.
+
+
+## How this investigation fits the wider BMW diagnostic method
+
+Ride-height correction requires the particular suspension controller and proper workshop loading conditions. The hub links to this independent specialist guidance rather than absorbing its cautions. If the problem is still unclassified, start with the [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) and its evidence-first symptom directory. This guide remains the detailed resource for its distinct controller, procedure and original technical visuals; no source research or SVG is being retired.

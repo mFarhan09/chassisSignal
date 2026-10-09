@@ -5,7 +5,7 @@ description: "Choose a BMW VANOS diagnostic tool by evidence: fault codes, targe
 slug: "bmw-vanos-diagnostic-tool"
 section: "guides"
 publishedAt: 2026-09-17T12:00:00+05:00
-updatedAt: 2026-09-17
+updatedAt: 2026-10-10
 category: "BMW Diagnostics"
 tags: ["BMW VANOS", "camshaft timing", "target vs actual angle", "activation test", "ISTA", "diagnostic evidence"]
 relatedSlugs: ["bmw-bidirectional-scan-tool-functions", "bmw-code-reader-vs-scan-tool", "bmw-diagnostic-software-windows"]
@@ -83,3 +83,20 @@ VANOS implementations differ across BMW engine families — single versus double
 ## Capture the evidence and know when to escalate
 
 Save what you find: the codes, the target-versus-actual traces, the activation response, and the guided-test result. That record is what turns a diagnosis into a defensible repair decision and what a workshop needs if you escalate. Software has done its job when it has shown that the system does not respond correctly; the causes it points to — solenoids, oil supply and pressure, mechanical binding, timing components — are then confirmed by physical inspection, not by another scan. Escalate when the evidence points to a mechanical cause, when angles are extreme or stuck, or when a relearn does not hold, and hand the technician the traces rather than a single code.
+
+
+## How this investigation fits the wider BMW diagnostic method
+
+Camshaft target-versus-actual readings matter only under the relevant engine and operating conditions. The cross-system diagnostic framework explains why that is stronger evidence than a single trouble-code description. If the problem is still unclassified, start with the [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) and its evidence-first symptom directory. This guide remains the detailed resource for its distinct controller, procedure and original technical visuals; no source research or SVG is being retired.
+
+### Retained-article evidence checklist
+
+| Record before intervention | Why it matters |
+| --- | --- |
+| Exact chassis, module, operating condition | A different vehicle generation can change the architecture |
+| Original faults and which ECUs responded | Clearing codes or losing the module inventory erases context |
+| Supported software and interface version | A missing feature may be a compatibility limitation |
+| Appropriate independent observation | A scan result alone rarely identifies a failed component |
+| Manufacturer-approved safe next step | Diagnosis and programming/service work have different risk levels |
+
+The original figures and source-specific discussion above remain the primary explanation of this particular fault family. Where a consequential test is required, use the exact official procedure rather than extrapolating from another module.

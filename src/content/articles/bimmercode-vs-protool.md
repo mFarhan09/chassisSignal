@@ -129,3 +129,8 @@ BimmerCode versus ProTool is not a contest between a small and a large feature l
 
 
 **Broader software context:** Use the [BMW Diagnostic Software Comparison Matrix](/tools/bmw-diagnostic-software-comparison/) to check the separate coding, fault diagnosis, maintenance, licensing and workshop system boundaries. This specialist comparison remains available with its original research and evidence.
+
+
+## Cross-check the license against our dated pricing ledger
+
+A license-cost comparison only makes sense after coding and diagnostic scope, Android/iOS platform, exact chassis and adapter eligibility are established. The central price ledger records documented charges without treating the apps as interchangeable. Use the [BMW Diagnostic Software Pricing and Entitlement Ledger](/tools/bmw-diagnostic-software-price-ledger/) for the October 10, 2026 source snapshot, the full ownership-cost worksheet and explicit regional caveats. The original price evidence, figures, citations and SVGs on this page are preserved as the earlier dated research record; always confirm the local checkout before purchasing.

@@ -144,3 +144,8 @@ If you cannot name the diagnosed fault, completed service event, target VTG modu
 - [Autel — Vehicle coverage database](https://autel.com/vehicle-coverage/coverage2)
 - [Autel — Special-function service tools](https://support.autel.com/support/solutions/articles/8000037458-special-function-service-tools)
 - [Foxwell — Vehicle coverage search](https://foxwelltech.us/oeSearch/support_oe_search_app.html)
+
+
+## How this investigation fits the broader diagnostic method
+
+A transfer-case adaptation reset is not evidence that the underlying driveline fault has been identified. The [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) explains how to preserve original fault data, verify ECU access and select an evidence-backed next step. This specialist guide keeps its independent original diagrams and source-specific research. Do not use a write-capable procedure as a trial-and-error diagnostic shortcut.

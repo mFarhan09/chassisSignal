@@ -148,3 +148,8 @@ The responsible final check is the same for both: exact BMW, exact control unit 
 
 
 **Broader software context:** Use the [BMW Diagnostic Software Comparison Matrix](/tools/bmw-diagnostic-software-comparison/) to check the separate coding, fault diagnosis, maintenance, licensing and workshop system boundaries. This specialist comparison remains available with its original research and evidence.
+
+
+## Cross-check the license against our dated pricing ledger
+
+BimmerLink's Full Version and Carly's annual Premium plan have different renewal assumptions and scopes. The ledger offers a dated economic cross-check while this original comparison keeps its product- and workflow-specific research. Use the [BMW Diagnostic Software Pricing and Entitlement Ledger](/tools/bmw-diagnostic-software-price-ledger/) for the October 10, 2026 source snapshot, the full ownership-cost worksheet and explicit regional caveats. The original price evidence, figures, citations and SVGs on this page are preserved as the earlier dated research record; always confirm the local checkout before purchasing.

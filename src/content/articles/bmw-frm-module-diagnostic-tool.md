@@ -5,7 +5,7 @@ description: "Diagnose BMW FRM symptoms by vehicle architecture, module communic
 slug: "bmw-frm-module-diagnostic-tool"
 section: "guides"
 publishedAt: 2026-09-11T12:00:00+05:00
-updatedAt: 2026-09-11
+updatedAt: 2026-10-10
 category: "BMW Diagnostics"
 tags: ["Guides","BMW","Diagnostics","BMW FRM","Footwell Module","K-CAN","fault memory","live status","BMW TIS"]
 relatedSlugs: ["bmw-no-communication-with-obd-scanner","bmw-bidirectional-scan-tool-functions","bmw-code-reader-vs-scan-tool"]
@@ -129,3 +129,20 @@ That packet lets a specialist distinguish a configuration problem, external circ
 Choose a tool that proves BMW manufacturer-specific access for the exact vehicle, saves a full scan, reaches the FRM and peers, exposes documented status data, and supports only the output tests you actually need. Do not pay for vague EEPROM or “repair” promises as if they were ordinary diagnostics.
 
 An FRM scanner is valuable when it narrows the fault domain. It can establish identity, reachability, fault patterns and selected inputs/outputs. It cannot replace wiring evidence, current BMW repair information or specialist judgment about coding and internal repair. Keep that line visible and the diagnostic session becomes evidence instead of a shortcut.
+
+
+## How this investigation fits the wider BMW diagnostic method
+
+Preserve the original FRM fault and power/network evidence before considering coding, replacement or specialist repair. The broader hub separates module inventory from fault interpretation and links back to this body-electronics-specific explanation. If the problem is still unclassified, start with the [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) and its evidence-first symptom directory. This guide remains the detailed resource for its distinct controller, procedure and original technical visuals; no source research or SVG is being retired.
+
+### Retained-article evidence checklist
+
+| Record before intervention | Why it matters |
+| --- | --- |
+| Exact chassis, module, operating condition | A different vehicle generation can change the architecture |
+| Original faults and which ECUs responded | Clearing codes or losing the module inventory erases context |
+| Supported software and interface version | A missing feature may be a compatibility limitation |
+| Appropriate independent observation | A scan result alone rarely identifies a failed component |
+| Manufacturer-approved safe next step | Diagnosis and programming/service work have different risk levels |
+
+The original figures and source-specific discussion above remain the primary explanation of this particular fault family. Where a consequential test is required, use the exact official procedure rather than extrapolating from another module.
