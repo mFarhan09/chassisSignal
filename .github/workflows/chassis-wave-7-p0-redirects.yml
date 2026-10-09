@@ -1,0 +1,44 @@
+name: Chassis Audit 32-URL 301 Consolidation QA
+on:
+  push:
+    branches: [recovery/chassis-wave-7-p0-actual-301-consolidation]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  p0-redirects:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.14.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.19.0
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: pnpm build
+      - run: node scripts/recovery-chassis-wave7-p0-qa.mjs
+      - name: Validate real Cloudflare Workers 301 responses
+        run: |
+          pnpm exec wrangler dev --local --port 8793 --ip 127.0.0.1 > /tmp/chassis-cloudflare-redirects.log 2>&1 &
+          for i in {1..40}; do
+            if curl -s -o /dev/null http://127.0.0.1:8793/; then break; fi
+            sleep 1
+          done
+          node --input-type=module <<'NODE'
+          import {consolidatedRedirects} from './src/data/consolidated-redirects.mjs';
+          for (const [slug,target] of Object.entries(consolidatedRedirects)){
+            for (const path of [`/guides/${slug}/`,`/guides/${slug}`]){
+              const res=await fetch('http://127.0.0.1:8793'+path,{redirect:'manual'});
+              const location=res.headers.get('location')||'';
+              if(res.status!==301||!(new URL(location,'http://127.0.0.1:8793').pathname===target)||!location.includes('#'+slug))throw Error(`Broken 301: ${path} => ${res.status} ${location}`);
+            }
+          }
+          console.log('Cloudflare runtime: 64 exact real HTTP 301s to 32 preserved evidence anchors, PASS');
+          NODE

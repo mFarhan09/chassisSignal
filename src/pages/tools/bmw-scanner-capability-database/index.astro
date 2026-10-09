@@ -1,4 +1,5 @@
 ---
+import ConsolidatedScannerLegacyResearch from '../../../components/ConsolidatedScannerLegacyResearch.astro';
 import ResearchToolArticleLayout from '../../../components/ResearchToolArticleLayout.astro';
 import ScannerResearch from '../../../components/ScannerResearch.astro';
 const models=[
@@ -8,6 +9,7 @@ const models=[
 {name:'Autel MK900',maker:'Autel',category:'Multibrand diagnostic tablet',link:'https://autel.com/mk3/4171.jhtml',coverage:'Official material lists live data, active tests, DoIP and CAN FD',caveat:'TPMS basic tier differs from MK900-TS; do not infer ECU programming'},
 {name:'Launch X-431',maker:'Launch',category:'Professional multibrand platform family',link:'https://www.cnlaunch.com/',coverage:'Must choose exact X-431 model and its function coverage',caveat:'Family names are not an exact model specification'}
 ];
+import {consolidatedRedirects} from  '../../../data/consolidated-redirects.mjs';
 const related=[
 ['foxwell-nt530-vs-nt710','Foxwell NT530 vs NT710','Hardware, licensing and coverage differences'],
 ['foxwell-nt710-vs-autel-mk900-bmw','Foxwell NT710 vs Autel MK900','Coding-versus-diagnostic scope and model evidence'],
@@ -39,7 +41,7 @@ const related=[
 </tbody></table></div><p id="empty" hidden>No rows in this limited source set fit the selection. This does not establish that no suitable diagnostic device exists.</p>
 </section>
 <section><h2 id="functions">Functions that must be checked individually</h2><div class="scroll"><table><thead><tr><th>Required BMW task</th><th>Documentable general category</th><th>Vehicle-level verification still required</th><th>Related research</th></tr></thead><tbody>
-<tr><td>Full-vehicle fault survey</td><td>OEM-level or full-system diagnostics where listed</td><td>Accessible ECU list, supported chassis, age and installed systems</td><td><a href="/guides/bmw-code-reader-vs-scan-tool/">Reader versus scanner</a></td></tr>
+<tr><td>Full-vehicle fault survey</td><td>OEM-level or full-system diagnostics where listed</td><td>Accessible ECU list, supported chassis, age and installed systems</td><td><a href="/tools/bmw-scanner-capability-database/#bmw-code-reader-vs-scan-tool">Reader versus scanner</a></td></tr>
 <tr><td>ABS / airbag diagnosis</td><td>Module read/erase and live data</td><td>Exact brake or restraint ECU coverage and fault context</td><td><a href="/guides/bmw-scanner-abs-airbag-codes/">ABS / airbag scanners</a></td></tr>
 <tr><td>Battery registration</td><td>Battery management service function</td><td>Battery type, model year, registration versus coding distinction</td><td><a href="/guides/bmw-battery-registration-scanner/">Battery registration</a></td></tr>
 <tr><td>Active component testing</td><td>Bidirectional active test where manufacturer lists it</td><td>Specific module, command, prerequisite, safety risk</td><td><a href="/guides/bmw-bidirectional-scan-tool-functions/">Active-test guide</a></td></tr>
@@ -49,6 +51,7 @@ const related=[
 </tbody></table></div></section>
 <figure><picture><source media="(max-width:650px)" srcset="/images/tools/bmw-scanner-capability-database/risk-boundaries-mobile.svg"/><img src="/images/tools/bmw-scanner-capability-database/risk-boundaries.svg" width="1200" height="450" loading="lazy" alt="Read-only scan, active tests, service procedures and programming have increasing operation-specific prerequisites"/></picture><figcaption>A scanner that reads codes cannot automatically perform active tests, adaptations or firmware programming.</figcaption></figure>
 <section id="source-led-research"><ScannerResearch/></section>
+<ConsolidatedScannerLegacyResearch />
 <section class="panel"><h2 id="primary-sources">Primary sources and disclosure of evidence quality</h2><p>Evidence reviewed October 9, 2026. Vendor literature states platform-wide feature categories; the manufacturer or tool's exact vehicle-function lookup determines eligibility. We have not connected these devices to a car, verified a live scan, or performed workshop repairs. No affiliate ranking or live retailer pricing is embedded in this reference.</p><ul>
 <li><a href="https://www.autel.com/mk2/3990.jhtml">Autel MK808S/MK808Z official specifications</a></li>
 <li><a href="https://autel.com/mk3/4171.jhtml">Autel MK900 official product information and comparison</a></li>
@@ -56,7 +59,7 @@ const related=[
 <li><a href="https://www.foxwelltech.us/product-detail-524.html">Foxwell NT530 technical specifications and manuals</a></li><li><a href="https://www.foxwelldiag.com/products/foxwell-nt710">Foxwell NT710 model-specific description, supported BMW coding and service categories</a></li><li><a href="https://www.foxwelldiag.com/pages/buyer-guide">Foxwell model comparison and coverage disclaimer</a></li>
 <li><a href="https://www.cnlaunch.com/">Launch manufacturer — verify exact X-431 model and VCI</a></li>
 </ul></section>
-<section class="panel"><h2 id="related-guides">Related Chassis Signal articles</h2><p>These original research articles are intentionally retained. They offer deeper comparisons, module-specific cautions, documented model exceptions and original diagrams that should not be lost to a generic database.</p><div class="related-grid">{related.map(([slug,title,desc])=><article><h3><a href={`/guides/${slug}/`}>{title} →</a></h3><p>{desc}</p></article>)}</div></section>
+<section class="panel"><h2 id="related-guides">Related Chassis Signal articles</h2><p>The original pairwise comparisons have been merged into this resource and now 301-redirect here. They offer deeper comparisons, module-specific cautions, documented model exceptions and original diagrams that should not be lost to a generic database.</p><div class="related-grid">{related.map(([slug,title,desc])=><article><h3><a href={consolidatedRedirects[slug as keyof typeof consolidatedRedirects] ? `${consolidatedRedirects[slug as keyof typeof consolidatedRedirects]}#${slug}` : `/guides/${slug}/`}>{title} →</a></h3><p>{desc}</p></article>)}</div></section>
 </div>
 <script>
 const maker=document.querySelector<HTMLSelectElement>('#manufacturer')!,kind=document.querySelector<HTMLSelectElement>('#rowtype')!,rows=[...document.querySelectorAll<HTMLTableRowElement>('tr[data-maker]')],count=document.querySelector('#result-count')!,empty=document.querySelector<HTMLElement>('#empty')!;function update(){let n=0;for(const row of rows){const keep=(maker.value==='all'||row.dataset.maker===maker.value)&&(kind.value==='all'||row.dataset.kind===kind.value);row.hidden=!keep;if(keep)n++}count.textContent=`Showing ${n} of ${rows.length} researched models and families.`;empty.hidden=n>0}maker.addEventListener('change',update);kind.addEventListener('change',update);update();

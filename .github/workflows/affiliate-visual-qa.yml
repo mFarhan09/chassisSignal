@@ -38,7 +38,10 @@ jobs:
       - name: Preservation vs baseline (article Markdown / OBDLink CX / queues)
         run: |
           BASE=c87dc61a262a7e73d9dd88e17b01b86762aa51af
-          if [ "${GITHUB_HEAD_REF:-}" = "recovery/chassis-wave-6-service-function-evidence" ]; then
+          if [ "${GITHUB_HEAD_REF:-}" = "recovery/chassis-wave-7-p0-actual-301-consolidation" ]; then
+            BASE=origin/main
+            node scripts/recovery-chassis-wave7-p0-qa.mjs
+          elif [ "${GITHUB_HEAD_REF:-}" = "recovery/chassis-wave-6-service-function-evidence" ]; then
             BASE=origin/main
             node scripts/recovery-chassis-wave6-qa.mjs
           elif [ "${GITHUB_HEAD_REF:-}" = "recovery/chassis-wave-5-diagnostics-pricing" ]; then

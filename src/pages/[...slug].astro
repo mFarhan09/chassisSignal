@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import EvidenceBadge from '../components/EvidenceBadge.astro';
-import { articleCardImage, articlePath, getPublishedArticles } from '../data/articles';
+import { articleCardImage, articlePath, getVisibleArticles } from '../data/articles';
 import { hubs, editorialPages } from '../data/site';
 import type { Hub } from '../data/site';
 
@@ -15,7 +15,7 @@ const { kind, page } = Astro.props;
 type EditorialPage = (typeof editorialPages)[number];
 const hubPage = kind === 'hub' ? page as Hub : undefined;
 const editorialPage = kind === 'editorial' ? page as EditorialPage : undefined;
-const articles = (await getPublishedArticles()).sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
+const articles = (await getVisibleArticles()).sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
 const relevant = hubPage ? articles.filter((article) =>
   hubPage.slug === 'research' ||
   (hubPage.slug === 'guides' && article.data.section === 'guides') ||

@@ -1,8 +1,10 @@
 ---
+import ConsolidatedInterfaceLegacyResearch from '../../components/ConsolidatedInterfaceLegacyResearch.astro';
 import ResearchToolArticleLayout from '../../components/ResearchToolArticleLayout.astro';
 import DiagnosticInterfaceMapResearch from '../../components/DiagnosticInterfaceMapResearch.astro';
 import InterfaceMapCaseStudies from '../../components/InterfaceMapCaseStudies.astro';
 import InterfaceEvidenceBoundaries from '../../components/InterfaceEvidenceBoundaries.astro';
+import {consolidatedRedirects} from '../../data/consolidated-redirects.mjs';
 const related=[
  ['bmw-icom-vs-enet','ICOM vs ENET','Workshop network interface and scope'],
  ['bmw-icom-vs-k-dcan','ICOM vs K+DCAN','Different architecture and vehicle generations'],
@@ -40,13 +42,14 @@ const related=[
 <ul><li><strong>Read a specific module:</strong> verify controller and chassis coverage before selecting a tool.</li><li><strong>Change a documented comfort option:</strong> verify app, vehicle, feature, interface, safe coding conditions.</li><li><strong>Use a workshop test plan:</strong> verify authorized ISTA access, computer and BMW-approved interface.</li><li><strong>Update ECU software:</strong> do not proceed from an interface comparison alone; programming-specific training, equipment and recovery prerequisites are essential.</li></ul>
 </section>
 <section id="interface-research"><DiagnosticInterfaceMapResearch /><InterfaceMapCaseStudies /><InterfaceEvidenceBoundaries /></section>
+<ConsolidatedInterfaceLegacyResearch />
 <section class="panel" id="sources"><h2>Sources and verification standard</h2><p>Reviewed 9 October 2026 using official BMW and application developer documentation. No hands-on car testing or high-risk programming was undertaken.</p><ul>
 <li><a href="https://bmwtechinfo.bmwgroup.com/assets/system_requirements.pdf">BMW Group AOS technical information / ISTA and ICOM/J2534 system requirements</a></li>
 <li><a href="https://bimmercode.app/manual/">BimmerCode supported systems, safe connection and ENET setup</a></li>
 <li><a href="https://bimmercode.app/adapters/">BimmerCode adapter selector by vehicle family and operating system</a></li>
 <li><a href="https://www.bimmergeeks.net/faqs">BimmerGeeks ProTool FAQ — double K-line and chassis exceptions</a></li>
 <li><a href="https://www.bimmergeeks.net/protool">BimmerGeeks ProTool vehicle eligibility and software licensing</a></li></ul></section>
-<section class="related" id="related-guides"><h2>Related Chassis Signal articles</h2><p>These independent comparisons preserve the deeper, original technical research behind the interface map.</p><div class="related-grid">{related.map(([slug,title,desc])=><article><h3><a href={`/guides/${slug}/`}>{title} →</a></h3><p>{desc}</p></article>)}</div></section>
+<section class="related" id="related-guides"><h2>Related Chassis Signal articles</h2><p>The pairwise interface decisions are now integrated above, with original diagrams and specific research preserved.</p><div class="related-grid">{related.map(([slug,title,desc])=><article><h3><a href={consolidatedRedirects[slug as keyof typeof consolidatedRedirects] ? `${consolidatedRedirects[slug as keyof typeof consolidatedRedirects]}#${slug}` : `/guides/${slug}/`}>{title} →</a></h3><p>{desc}</p></article>)}</div></section>
 </div>
 <style is:global>
 .interface-shell .scroll{overflow-x:auto}.interface-shell table{min-width:640px;border-collapse:collapse;width:100%;font:13px/1.6 var(--sans)}.interface-shell th,.interface-shell td{padding:12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.interface-shell figure img{max-width:100%;height:auto}.interface-shell figcaption{font:13px/1.5 var(--sans);color:var(--muted)}.interface-shell .related-grid{display:grid;gap:13px}.interface-shell .related-grid article{padding:18px;background:#fff;border:1px solid var(--line);border-radius:14px}.interface-shell .related-grid article h3{font-size:22px;margin:0 0 6px}.interface-shell .related-grid article p{font-size:15px;margin:0}
