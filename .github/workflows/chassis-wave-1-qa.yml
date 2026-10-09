@@ -28,9 +28,10 @@ jobs:
       - run: pnpm exec playwright-core install chromium
       - name: Browser test of responsive database
         run: |
-          pnpm preview -- --host 127.0.0.1 --port 4399 > /tmp/chassis-wave1-preview.log 2>&1 &
+          pnpm exec astro preview --host 127.0.0.1 --port 4399 > /tmp/chassis-wave1-preview.log 2>&1 &
           for i in {1..40}; do
             if curl -fsS http://127.0.0.1:4399/tools/bmw-obd-adapter-comparison/ > /dev/null; then break; fi
             sleep 1
           done
+          curl -fsS http://127.0.0.1:4399/tools/bmw-obd-adapter-comparison/ >/dev/null || { cat /tmp/chassis-wave1-preview.log; exit 1; }
           node scripts/recovery-chassis-wave1-browser.mjs
