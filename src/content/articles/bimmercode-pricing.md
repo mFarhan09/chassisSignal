@@ -97,3 +97,8 @@ Use only documented coding options for the exact vehicle. Maintain stable power,
 ## Bottom line
 
 Treat BimmerCode as a platform-specific Full Version purchase plus compatible hardware. Verify the exact vehicle and option first, then capture the current local storefront amount, adapter cost, tax and shipping. The US iOS price is a useful dated reference—not a worldwide quote.
+
+
+## Cross-check the license against our dated pricing ledger
+
+The shared ledger now records the US iOS Full Version storefront figure with a dated source and a separate interface-cost requirement. The original guide remains the detailed explanation of BimmerCode-specific platform and adapter choices. Use the [BMW Diagnostic Software Pricing and Entitlement Ledger](/tools/bmw-diagnostic-software-price-ledger/) for the October 10, 2026 source snapshot, the full ownership-cost worksheet and explicit regional caveats. The original price evidence, figures, citations and SVGs on this page are preserved as the earlier dated research record; always confirm the local checkout before purchasing.
