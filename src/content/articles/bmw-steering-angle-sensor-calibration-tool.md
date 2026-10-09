@@ -159,3 +159,8 @@ The right steering-angle calibration tool is not the scanner with the longest se
 - [BMW of North America — source reference](https://bmwtechinfo.bmwgroup.com/)
 - [Autel — source reference](https://www.autel.com/mk3/3990.jhtml)
 - [Autel — source reference](https://www.autel.com/vehicle-coverage/coverage2)
+
+
+## How this investigation fits the wider BMW diagnostic method
+
+A calibration function requires an exact vehicle/ECU and the conditions prescribed by the manufacturer. The hub treats it as a controlled intervention rather than a generic reset. If the problem is still unclassified, start with the [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) and its evidence-first symptom directory. This guide remains the detailed resource for its distinct controller, procedure and original technical visuals; no source research or SVG is being retired.
