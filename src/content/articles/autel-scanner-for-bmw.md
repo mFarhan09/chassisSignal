@@ -189,3 +189,6 @@ If the required function remains unresolved, neither model has passed. For ABS o
 - [Autel — MaxiCheck MX900 manual](https://autel.com/u/cms/www/202603/19015820hq2p.pdf)
 - [Autel — Current diagnostic-tool family index](https://www.autel.com/c/www/diagnostictools.jhtml)
 
+
+
+**Related resource:** Our [BMW Scanner Capability Database](/tools/bmw-scanner-capability-database/) explains broader model, feature, vehicle-coverage and safety verification. This specialist article remains available with its original diagrams, sources and task-specific evidence.
