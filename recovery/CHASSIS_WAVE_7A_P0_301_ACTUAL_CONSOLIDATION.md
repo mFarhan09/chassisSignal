@@ -1,4 +1,4 @@
-# Chassis Signal Wave 7A — Original forensic P0 actual 301 consolidations
+# Chassis Signal Wave 7 — All 32 audited merger/redirect consolidations
 
 Date: October 10, 2026. Branch: `recovery/chassis-wave-7-p0-actual-301-consolidation`.
 
@@ -10,9 +10,10 @@ The October 4 forensic audit had **65 Chassis rows**:
 - 5 `KEEP + MINOR IMPROVEMENT`
 - 2 `CONVERT TO DATABASE/TOOL`.
 
-Waves 1–6 added destinations and cross-links, **but did not implement the prescribed 19 P0 301 redirects**. The old pairwise pages remained reachable, a serious gap given the original page-necessity/query-atomization diagnosis.
+Waves 1–6 added destinations and cross-links, **but did not implement the prescribed 32 source mergers and public 301 redirects**. The old pairwise pages remained reachable, a serious gap given the original page-necessity/query-atomization diagnosis.
 
 ## Now implemented on the release branch
+**Final scope: 32 original audit MERGE / REDIRECT AFTER MERGE candidates into five flagship destinations.**
 - Ten software pair comparisons 301 to `/tools/bmw-diagnostic-software-comparison/#<original-slug>`.
 - Nine OBDLink / UniCarScan / vLinker pair comparisons 301 to `/tools/bmw-obd-adapter-comparison/#<original-slug>`.
 - Both trailing-slash and no-slash source variants receive exact HTTP 301s in `public/_redirects`. This is 38 added rules, no 302, no chains and no broad wildcard redirect.
@@ -36,7 +37,7 @@ obdlink-cx-vs-lx, obdlink-cx-vs-mx-plus, obdlink-cx-vs-unicarscan-ucsi-2100, obd
 4. No Google Search Console indexing request is necessary for old 301 sources. After deployment, verify live canonical targets and submit the two targets only if needed and quota permits; ensure server responses really emit 301 after production update.
 
 ## What still remains
-The 13 `MERGE` candidates in the October 4 forensic file are **not silently redirected** by this PR: 7 scanner-selection pairs, 5 K+DCAN/ENET/ICOM interface comparisons and 1 MINI vehicle/app lookup. Their specific claims and diagrams must be folded into their existing relevant destinations before a second redirect batch. The 26 `SUBSTANTIAL REBUILD` candidates also need article-by-article decisions; backlinks alone do not satisfy those audits.
+The other 13 original `MERGE` candidates have now been integrated as source-specific cases with their original diagrams: seven scanner comparison pages into the scanner database, five interface comparison pages into the diagnostic interface map, and the MINI app selection page into the vehicle/interface lookup. The 26 `SUBSTANTIAL REBUILD` candidates still need page-by-page editorial decisions.
 
 ## SEO scope and caveats
 A correct 301 and consolidation reduce *publicly available overlapping URLs*; they do **not** automatically remove a domain-wide spam classification or guarantee rankings recover. Record baseline and post-deployment GSC query/page/indexation data. Do not mistake retained internal repository source files for retained public indexable pages.
@@ -45,3 +46,6 @@ A correct 301 and consolidation reduce *publicly available overlapping URLs*; th
 Cloudflare Workers Static Assets official redirects:
 https://developers.cloudflare.com/workers/static-assets/redirects/
 It documents `_redirects` support, static 301s, fragments, and that static redirect rules win regardless of an existing matching asset.
+
+## Final audited scope extension
+All **32** canonical mappings live in `src/data/consolidated-redirects.mjs`, with **64 exact HTTP 301 rules** plus two existing redirects. After release, 32 redundant public URL variants redirect to anchored case studies; just **37 original guide URLs** remain independently discoverable. The 69 Markdown source files stay in Git for evidence and affiliate rights preservation, but static Cloudflare redirects take precedence over old HTML assets. The additional 13 cases are supported by `ConsolidatedScannerLegacyResearch.astro`, `ConsolidatedInterfaceLegacyResearch.astro`, and `ConsolidatedMiniLegacyResearch.astro`. All five destination pages carry their original source-specific decision summaries and up to two original desktop/mobile diagrams per case.
