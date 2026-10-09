@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ConsolidatedAdapterLegacyResearch from '../../../components/ConsolidatedAdapterLegacyResearch.astro';
 import AdapterEvidenceDeepDive from '../../../components/AdapterEvidenceDeepDive.astro';
 import AdapterComparisonFAQ from '../../../components/AdapterComparisonFAQ.astro';
 const models = [
@@ -8,7 +9,6 @@ const models = [
  {name:'OBDLink LX',transport:'Bluetooth Classic',ios:false,android:true,windows:true,legacy:true,fordgm:false,bmw:true,notes:'Not iOS-compatible in manufacturer matrix. Supports J1850 families, not Ford MS-CAN or GM SW-CAN.',source:'https://support.obdlink.com/support/solutions/articles/43000713351-which-obdlink-adapter-is-right-for-me-',slug:'obdlink-cx-vs-lx'},
  {name:'OBDLink EX',transport:'USB wired',ios:false,android:true,windows:true,legacy:true,fordgm:false,bmw:false,notes:'Windows USB-focused, with Android OTG caveat; manufacturer documents Ford MS-CAN, not GM SW-CAN. No universal BMW app entitlement is implied.',source:'https://www.obdlink.com/products/obdlink-ex/',slug:'obdlink-ex-vs-enet-cable'}
 ];
-const specialists=['obdlink-cx-vs-lx','obdlink-cx-vs-mx-plus','obdlink-cx-vs-unicarscan-ucsi-2100','obdlink-cx-vs-vlinker-bm-plus','obdlink-cx-vs-vlinker-mc-plus','obdlink-ex-vs-enet-cable','obdlink-mx-plus-vs-lx','obdlink-mx-plus-vs-vlinker-bm-plus','vlinker-bm-plus-vs-mc-plus'];
 ---
 <BaseLayout title="BMW OBD Adapter Comparison Database: Protocol, Device and App Fit" description="Compare documented OBDLink interfaces and review BMW adapter families by vehicle, phone, protocol and software. Source-led compatibility screening, not an unsupported universal fit guarantee.">
   <main class="adapter-shell">
@@ -74,11 +74,7 @@ const specialists=['obdlink-cx-vs-lx','obdlink-cx-vs-mx-plus','obdlink-cx-vs-uni
     <figure class="technical-figure"><picture><source media="(max-width: 640px)" srcset="/images/tools/bmw-obd-adapter-comparison/evidence-tiers-mobile.svg"/><img src="/images/tools/bmw-obd-adapter-comparison/evidence-tiers.svg" width="1200" height="440" alt="Evidence tiers from physical protocol support through host connection, app certification and individual vehicle function" loading="lazy"/></picture><figcaption>Capabilities cannot be extrapolated upward: an adapter protocol only enables a connection; it does not certify a vehicle-specific feature.</figcaption></figure>
     <AdapterEvidenceDeepDive />
     <AdapterComparisonFAQ />
-    <section>
-      <h2>Why these nine older comparisons remain available</h2>
-      <p>The legacy comparisons contain narrower research about particular app integrations, Bluetooth implementations and exact adapters. This first recovery wave <strong>does not retire their URLs, SVGs, references, or evidence</strong>. Where conclusions duplicate this database, future consolidation must be supported by a source-by-source preservation checklist and separately approved redirect map. Until that approval, use the linked specialist articles for nuanced pairs and the database for the first architecture screen.</p>
-      <ul class="specialists">{specialists.map(slug=><li><a href={`/guides/${slug}/`}>{slug.replaceAll('-',' ')}</a></li>)}</ul>
-    </section>
+    <ConsolidatedAdapterLegacyResearch />
     <section class="panel">
       <h2>Sources, evidence status and maintenance</h2>
       <p><strong>Evidence reviewed:</strong> October 9, 2026. Manufacturer documentation, not first-hand product tests. The filterable protocol comparison is limited to four models with directly comparable published specifications. Three additional app-listed models are presented separately as a lower evidence tier. Treat unspecified capabilities as <em>not verified</em>, not automatically unsupported. No affiliate placements or product endorsements are attached to this database.</p>
