@@ -25,10 +25,10 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - name: Typecheck
         run: pnpm typecheck
+      - name: Affiliate unit tests (before draft build)
+        run: pnpm test:affiliate
       - name: Production build (draft)
         run: pnpm build
-      - name: Affiliate tests
-        run: pnpm test:affiliate
       - name: Draft affiliate audit
         run: pnpm affiliate:audit
       - name: Controlled live affiliate audit
@@ -38,7 +38,11 @@ jobs:
       - name: Preservation vs baseline (article Markdown / OBDLink CX / queues)
         run: |
           BASE=c87dc61a262a7e73d9dd88e17b01b86762aa51af
-          test -z "$(git diff "$BASE" -- src/content/articles/)" || { echo 'article Markdown changed'; exit 1; }
+          if [ "${GITHUB_HEAD_REF:-}" = "recovery/chassis-wave-1-obd-adapters" ]; then
+            node scripts/recovery-chassis-wave1-qa.mjs
+          else
+            test -z "$(git diff "$BASE" -- src/content/articles/)" || { echo 'article Markdown changed'; exit 1; }
+          fi
           test -z "$(git diff "$BASE" -- reports/affiliate/link-verification-queue.csv reports/affiliate/image-rights-queue.csv)" || { echo 'queues changed'; exit 1; }
           node -e "const cp=require('child_process');const b=JSON.parse(cp.execSync('git show '+process.env.BASE+':src/affiliate/product-registry.generated.json').toString());const cur=require('./src/affiliate/product-registry.generated.json');if(JSON.stringify(b['obdlink-cx'])!==JSON.stringify(cur['obdlink-cx'])){console.error('OBDLink CX changed');process.exit(1);}console.log('OBDLink CX preserved');"
         env:
