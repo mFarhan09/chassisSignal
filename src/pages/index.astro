@@ -1,10 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
-import { getPublishedArticles } from '../data/articles';
+import { getVisibleArticles } from '../data/articles';
 import { categories } from '../data/site';
 
-const featuredArticles = (await getPublishedArticles())
+const featuredArticles = (await getVisibleArticles())
   .filter((article) => article.data.featured)
   .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
   .slice(0, 2);
