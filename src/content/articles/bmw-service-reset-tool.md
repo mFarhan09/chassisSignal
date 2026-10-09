@@ -120,3 +120,8 @@ Save the original service values and the post-reset confirmation with the mainte
 - [Foxwell — NT530 Plus](https://www.foxwelldiag.com/products/foxwell-nt530)
 - [Foxwell — NT710](https://www.foxwelldiag.com/products/foxwell-nt710)
 - [LAUNCH Tech USA — X-431 Throttle V manual](https://launchtechusa.com/wp-content/uploads/2025/10/X-431-Throttle-V-User-Manual.pdf)
+
+
+## Related service-function eligibility and safety matrix
+
+A Condition-Based Service reminder reset records completed work; it is not the same task as battery registration, DSC active braking tests or adaptation after repair. For the cross-system qualification checklist, see the [BMW Service Function Eligibility and Safety Matrix](/tools/bmw-service-function-matrix/). This specialist guide remains the original, detailed explanation of its specific procedure and retains all existing diagrams, tables and source evidence. Do not interpret the matrix as permission to run an unsupported reset, calibration or active test.
