@@ -107,3 +107,8 @@ App-store prices, add-ons and adapter requirements were checked against the cite
 - [SG Software - BimmerLink for BMW and MINI](https://bimmerlink.app/)
 - [OBDLink - OBDLink products](https://www.obdlink.com/products/)
 - [OBDLink Support - Which OBDLink adapter is right for me?](https://support.obdlink.com/support/solutions/articles/43000713351-which-obdlink-adapter-is-right-for-me-)
+
+
+## Cross-check the license against our dated pricing ledger
+
+The shared ledger separately lists the US iOS Full Version and optional CarPlay Add-On instead of conflating both with a generic app price. The original platform, adapter and service-function caveats in this article remain valid research context. Use the [BMW Diagnostic Software Pricing and Entitlement Ledger](/tools/bmw-diagnostic-software-price-ledger/) for the October 10, 2026 source snapshot, the full ownership-cost worksheet and explicit regional caveats. The original price evidence, figures, citations and SVGs on this page are preserved as the earlier dated research record; always confirm the local checkout before purchasing.
