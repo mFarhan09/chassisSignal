@@ -107,3 +107,8 @@ ProTool wins on portability and a straightforward app-license model. ISTA wins w
 
 
 **Broader software context:** Use the [BMW Diagnostic Software Comparison Matrix](/tools/bmw-diagnostic-software-comparison/) to check the separate coding, fault diagnosis, maintenance, licensing and workshop system boundaries. This specialist comparison remains available with its original research and evidence.
+
+
+## Cross-check the license against our dated pricing ledger
+
+ProTool's application license is not equivalent to BMW AOS/TIS workshop technical-information access. The ledger keeps the regional AOS subscription and separate approved interface/workshop prerequisites explicit. Use the [BMW Diagnostic Software Pricing and Entitlement Ledger](/tools/bmw-diagnostic-software-price-ledger/) for the October 10, 2026 source snapshot, the full ownership-cost worksheet and explicit regional caveats. The original price evidence, figures, citations and SVGs on this page are preserved as the earlier dated research record; always confirm the local checkout before purchasing.
