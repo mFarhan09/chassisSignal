@@ -116,3 +116,20 @@ Choose coding for a supported configuration change in software already installed
 ## Related service-function eligibility and safety matrix
 
 An app-supported coding change and an authorized ECU software installation are distinct jobs with different access, electrical and recovery prerequisites. For the cross-system qualification checklist, see the [BMW Service Function Eligibility and Safety Matrix](/tools/bmw-service-function-matrix/). This specialist guide remains the original, detailed explanation of its specific procedure and retains all existing diagrams, tables and source evidence. Do not interpret the matrix as permission to run an unsupported reset, calibration or active test.
+
+
+### Confirm the operation before comparing the tools
+
+A buyer may see the word coding in an owner-facing app and assume it covers programming a replacement ECU. Those are different decisions. Feature or configuration coding normally changes supported controller options or parameters. Software programming changes the software installed on the ECU and can have dependencies, communication demands, approved interface restrictions and failure-recovery considerations that the simpler setting change does not.
+
+BMW's authorized AOS [user guide](https://bmwtechinfo.bmwgroup.com/assets/system_requirements.pdf) distinguishes ISTA diagnosis/test plans, modern vehicle programming and legacy ISTA/P cases. It describes workshop vehicle communication interfaces, an appropriate PC/network environment and dedicated external electrical power support. None of those conditions follows merely from pairing a Bluetooth adapter or seeing an Expert Mode option in a phone app. The application developer's documented supported coding feature remains the correct source for a consumer configuration operation.
+
+| Decision question | Coding/configuration | Software programming |
+| --- | --- | --- |
+| Intended result | Documented vehicle feature/parameter | Installation or updating ECU software |
+| Coverage proof | Exact app, vehicle and controller option | Authorized programming plan and vehicle release |
+| Interface | Supported app-specific device | Approved workshop equipment and software |
+| Main risk | Unsupported settings or incorrect configuration | Interrupted ECU flash and dependent-module issues |
+| Safe next step | Verify exact option and original state | Qualified workshop / approved power and recovery process |
+
+If the current problem is an unidentified diagnostic fault, neither a coding tweak nor a flash should be used as trial-and-error troubleshooting. Preserve original fault data and consult the specified service plan. The [BMW service-function matrix](/tools/bmw-service-function-matrix/) keeps coding, active service routines, calibration and ECU programming in distinct categories. The existing <a href="/guides/bmw-diagnostic-interface-map/">interface architecture guide</a> provides additional hardware context.
