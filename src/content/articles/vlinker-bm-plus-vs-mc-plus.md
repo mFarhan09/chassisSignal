@@ -101,3 +101,6 @@ BM+ is the cleaner default for a verified BimmerCode/BimmerLink-only use case. M
 - [BimmerCode — Supported adapters](https://bimmercode.app/adapters/)
 - [BimmerCode — Connection manual](https://bimmercode.app/manual/)
 - [BimmerCode — Frequently asked questions](https://bimmercode.app/faq/)
+
+
+**Broader model evidence:** Use the [BMW OBD Adapter Comparison Database](/tools/bmw-obd-adapter-comparison/) for the cross-model platform and protocol screen; this specialist article remains independent and available.
