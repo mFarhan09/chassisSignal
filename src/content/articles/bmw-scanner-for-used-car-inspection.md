@@ -141,3 +141,6 @@ If any of those layers is missing, price the uncertainty honestly or pause. Rech
 - [Autel — DS808S product documentation](https://www.autel.com/mk3/4078.jhtml)
 - [BMW Group — Technical Information System](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
 - [Foxwell — Vehicle coverage search](https://foxwelltech.us/oeSearch/support_oe_search_app.html)
+
+
+**Related resource:** Our [BMW Scanner Capability Database](/tools/bmw-scanner-capability-database/) explains broader model, feature, vehicle-coverage and safety verification. This specialist article remains available with its original diagrams, sources and task-specific evidence.
