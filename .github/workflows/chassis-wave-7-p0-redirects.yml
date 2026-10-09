@@ -1,4 +1,4 @@
-name: Chassis P0 301 Consolidation QA
+name: Chassis Audit 32-URL 301 Consolidation QA
 on:
   push:
     branches: [recovery/chassis-wave-7-p0-actual-301-consolidation]
@@ -40,5 +40,5 @@ jobs:
               if(res.status!==301||!(new URL(location,'http://127.0.0.1:8793').pathname===target)||!location.includes('#'+slug))throw Error(`Broken 301: ${path} => ${res.status} ${location}`);
             }
           }
-          console.log('Cloudflare runtime: 38 exact real HTTP 301s to 19 preserved evidence anchors, PASS');
+          console.log('Cloudflare runtime: 64 exact real HTTP 301s to 32 preserved evidence anchors, PASS');
           NODE
