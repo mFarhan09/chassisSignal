@@ -122,3 +122,8 @@ Before buying, send the vendor this five-part request:
 Reject an answer that merely repeats “full-system,” “all active tests” or “supports BMW.” If the tool can collect DME evidence but cannot execute the factory test plan, it may still be useful for triage; price it as a diagnostic reader, not as proof of pump control.
 
 The right BMW electronic water-pump diagnostic tool is the one that fits the identified engine and supports the evidence steps the current repair plan actually requires. Use it to preserve faults, evaluate relevant data and perform a documented command when available. Replace the pump only after the command, electrical and cooling-system branches make that conclusion defensible.
+
+
+## How this investigation fits the wider BMW diagnostic method
+
+A stored cooling-system fault and an approved pump activation are different diagnostic stages. Keep the vehicle state and safety procedure central before any active tests. If the problem is still unclassified, start with the [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) and its evidence-first symptom directory. This guide remains the detailed resource for its distinct controller, procedure and original technical visuals; no source research or SVG is being retired.
