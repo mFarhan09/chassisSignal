@@ -112,3 +112,8 @@ The realistic entry point is **$149.98 before tax and shipping** for the checked
 - [BimmerGeeks — ProTool Bluetooth adapter](https://www.bimmergeeks.net/product-page/bimmergeeks-protool-bluetooth-adapter)
 - [BimmerGeeks — Expert K+DCAN cable](https://www.bimmergeeks.net/product-page/bimmergeeks-expert-edition-k-dcan1)
 - [BimmerGeeks — Bundle](https://www.bimmergeeks.net/product-page/bimmergeeks-bundle)
+
+
+## Cross-check the license against our dated pricing ledger
+
+The shared ledger cross-checks the current official Diagnostic, Coding and Master license amounts and highlights that adapters and an Android host are not bundled with the license. Use the [BMW Diagnostic Software Pricing and Entitlement Ledger](/tools/bmw-diagnostic-software-price-ledger/) for the October 10, 2026 source snapshot, the full ownership-cost worksheet and explicit regional caveats. The original price evidence, figures, citations and SVGs on this page are preserved as the earlier dated research record; always confirm the local checkout before purchasing.
