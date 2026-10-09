@@ -1,0 +1,36 @@
+name: Chassis Recovery Wave 3 QA
+on:
+  push:
+    branches: [recovery/chassis-wave-3-scanner-capabilities]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  wave-3:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.14.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.19.0
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: pnpm build
+      - run: node scripts/recovery-chassis-wave3-qa.mjs
+      - run: pnpm exec playwright-core install chromium
+      - name: Scanner responsive browser tests
+        run: |
+          pnpm exec astro preview --host 127.0.0.1 --port 4399 > /tmp/chassis-wave3.log 2>&1 &
+          for i in {1..40}; do
+            if curl -fsS http://127.0.0.1:4399/tools/bmw-scanner-capability-database/ >/dev/null 2>&1; then break; fi
+            sleep 1
+          done
+          curl -fsS http://127.0.0.1:4399/tools/bmw-scanner-capability-database/ >/dev/null || { cat /tmp/chassis-wave3.log; exit 1; }
+          node scripts/recovery-chassis-wave3-browser.mjs
