@@ -1,0 +1,99 @@
+---
+import ResearchToolArticleLayout from '../../../components/ResearchToolArticleLayout.astro';
+import PricingEntitlementResearch from '../../../components/PricingEntitlementResearch.astro';
+import PricingDecisionCases from '../../../components/PricingDecisionCases.astro';
+import {pricingEvidence, evidenceReviewed} from '../../../data/pricing-evidence';
+const related=[
+ ['bimmercode-pricing','BimmerCode pricing','Original storefront, app unlock and adapter-cost research'],
+ ['bimmerlink-pricing','BimmerLink pricing','CarPlay add-on, app tier and service function boundaries'],
+ ['carly-subscription-cost','Carly subscription cost','Contract term, package options and brand-specific pricing'],
+ ['protool-pricing','ProTool pricing','Diagnostic, Coding and Master entitlement details'],
+ ['bmw-scanner-without-subscription','BMW scanners without subscriptions','Hardware coverage and update-right distinctions'],
+ ['bimmercode-vs-protool','BimmerCode vs ProTool','Software tasks and license scope differ'],
+ ['bimmerlink-vs-carly','BimmerLink vs Carly','Diagnostics and renewal models'],
+ ['protool-vs-ista','ProTool vs ISTA','Owner app versus workshop authorization']
+];
+const chargeNames={'one-time-unlock':'One-time app/license unlock','annual':'Annual subscription (quote required)','access-period':'Time-limited authorized access','quote-required':'Quote required'};
+---
+<ResearchToolArticleLayout title="BMW Diagnostic Software Pricing and Entitlement Ledger" description="A source-dated comparison of BimmerCode, BimmerLink, Carly, ProTool and BMW AOS/TIS license prices, adapter exclusions and multi-year ownership costs." section="Software" sectionHref="/software/" readingTime="18 min read" toc={[{id:'ledger',label:'Source-dated price ledger'},{id:'total-cost',label:'Ownership-cost calculator'},{id:'entitlement-matrix',label:'What each license includes'},{id:'pricing-research',label:'Pricing and regional rules'},{id:'decisions',label:'Decision scenarios'},{id:'source-ledger',label:'Source and update ledger'},{id:'related-guides',label:'Related articles'}]}>
+<div class="software-shell pricing-shell">
+<p class="lede">A one-time coding-app unlock, an annual diagnostic subscription, a licensed Android coding package and authorized BMW workshop access cannot be compared by the smallest headline price. This ledger records <strong>what was actually priced, where, on which date, and what the purchase does not include.</strong></p>
+<p>The amounts below are specific to a US App Store listing, an official US-dollar ProTool storefront, or the North American BMW TIS portal. Carly's quote is intentionally marked <strong>not fixed</strong> because exact country, vehicle brand, package and checkout channel change the answer. A source-dated claim is more useful than copying an apparently universal retail price into four competing articles.</p>
+<figure><picture><source media="(max-width:650px)" srcset="/images/tools/bmw-diagnostic-software-price-ledger/ownership-cost-components-mobile.svg"/><img src="/images/tools/bmw-diagnostic-software-price-ledger/ownership-cost-components.svg" alt="Total cost includes a dated software entitlement, approved interface, hardware host, applicable renewals and optional add-ons" width="1200" height="460" loading="lazy"/></picture><figcaption>Software, adapter and renewal costs are separate inputs, not a single automatically comparable sticker price.</figcaption></figure>
+<section class="panel" id="ledger">
+<h2>Verified price and entitlement snapshots</h2>
+<p><strong>Evidence reviewed {evidenceReviewed}.</strong> Prices can change without notice. These are published first-party figures from the identified country/storefront, not a globally valid live checkout quote. “Not quoted” is intentional rather than a guessed price.</p>
+<div class="scroll"><table><caption>Officially observed figures for a specific storefront, not final purchase recommendations</caption><thead><tr><th>Product / entitlement</th><th>Published amount</th><th>Charge basis and scope</th><th>Market / reviewed date</th><th>Official reference</th></tr></thead><tbody>
+{pricingEvidence.map(r=><tr><th scope="row">{r.product}<small class="table-secondary">{r.entitlement}</small></th><td class="amount">{r.usd===null?'Get exact quote':`$${r.usd.toFixed(2)} USD`}</td><td>{chargeNames[r.charge]}<span class="table-secondary">{r.scope}</span></td><td>{r.market}<span class="table-secondary">{r.observed}</span></td><td><a href={r.source} target="_blank" rel="noopener noreferrer">First-party source ↗</a></td></tr>)}
+</tbody></table></div>
+<p>This ledger is intentionally precise about <strong>BimmerLink CarPlay</strong> being an optional add-on rather than another full app license, and about <strong>BMW AOS/TIS</strong> being regional, time-limited technical access rather than a consumer mobile diagnostic subscription.</p>
+</section>
+<section id="total-cost" class="panel">
+<h2>Calculate an ownership scenario</h2>
+<p>Choose an evidenced entitlement and enter any actual hardware quote or recurring costs. The calculator is local to this page; it does not fetch prices, charge money or claim to know your tax rate. For Carly, you must provide your own quoted annual price. A blank adapter or host cost means the equipment cost is <em>not known</em> and the result remains incomplete.</p>
+<div class="price-form">
+<label>Entitlement <select id="license">{pricingEvidence.map(r=><option value={r.id}>{r.product}: {r.entitlement}</option>)}</select></label>
+<label>Ownership horizon <select id="years"><option value="1">1 year</option><option value="2">2 years</option><option value="3">3 years</option></select></label>
+<label>Adapter/interface quote (USD) <input id="adapter" type="number" min="0" step="0.01" placeholder="Enter actual price" inputmode="decimal"/></label>
+<label>Host and accessories (USD) <input id="host" type="number" min="0" step="0.01" placeholder="Enter actual price" inputmode="decimal"/></label>
+<label>Extra recurring annual costs (USD) <input id="extra" type="number" min="0" step="0.01" placeholder="Optional; enter 0 if none" inputmode="decimal"/></label>
+<label>Annual quoted license (USD, Carly only) <input id="quote" type="number" min="0" step="0.01" placeholder="Required for unpriced annual license" inputmode="decimal"/></label>
+</div>
+<p id="cost-status" role="status" aria-live="polite">Select an entitlement and enter all relevant hardware costs to calculate a complete estimate.</p>
+<div id="breakdown" class="estimate" aria-live="polite"></div>
+<p><strong>Important:</strong> for BMW AOS access periods, the selected pass price is only counted <em>once</em>; the calculator does not assume you will renew the same pass every month or year. For the annual Carly case, the entered annual quote is multiplied by the years selected. Optional extra annual costs are also multiplied by the horizon, but that multiplication is a user assumption, not a provider contract claim.</p>
+</section>
+<section id="entitlement-matrix">
+<h2>What the visible price does — and does not — cover</h2>
+<div class="scroll"><table><thead><tr><th>Platform</th><th>Core product category</th><th>Hardware usually separate?</th><th>Pricing caveat</th><th>Best follow-up</th></tr></thead><tbody>
+<tr><th>BimmerCode</th><td>Supported feature coding; separate full unlock</td><td>Yes — app-listed adapter</td><td>US iOS figure does not certify Android regional pricing</td><td><a href="/guides/bimmercode-pricing/">BimmerCode pricing guide</a></td></tr>
+<tr><th>BimmerLink</th><td>Fault memory, live data, selected service functions</td><td>Yes — approved adapter</td><td>CarPlay option is additional; functions depend on equipment</td><td><a href="/guides/bimmerlink-pricing/">BimmerLink pricing guide</a></td></tr>
+<tr><th>Carly</th><td>Brand/vehicle-conditioned diagnostics/coding subscription</td><td>Package-dependent</td><td>Annual renewal, storefront and included scanner vary</td><td><a href="/guides/carly-subscription-cost/">Carly subscriptions</a></td></tr>
+<tr><th>ProTool</th><td>Separate Diagnostic/Coding/Master entitlements</td><td>Yes — requires approved adapter and Android device</td><td>Older chassis coding exceptions; different access scopes</td><td><a href="/guides/protool-pricing/">ProTool licenses</a></td></tr>
+<tr><th>BMW AOS/TIS</th><td>Authorized regional workshop technical access</td><td>Yes — approved interface and workshop PC</td><td>North America figures are not worldwide ISTA quotes</td><td><a href="/guides/protool-vs-ista/">ProTool vs ISTA</a></td></tr>
+</tbody></table></div>
+</section>
+<figure><picture><source media="(max-width:650px)" srcset="/images/tools/bmw-diagnostic-software-price-ledger/entitlement-decision-mobile.svg"/><img src="/images/tools/bmw-diagnostic-software-price-ledger/entitlement-decision.svg" alt="Decision chain from requested BMW diagnostic task to eligible vehicle, matching license, compliant adapter, regional price and checkout verification" width="1200" height="460" loading="lazy"/></picture><figcaption>Choose the required function before treating an advertised license price as a purchase decision.</figcaption></figure>
+<section id="pricing-research"><PricingEntitlementResearch /></section>
+<section id="decisions"><PricingDecisionCases /></section>
+<section class="panel" id="source-ledger"><h2>Primary pricing sources and maintenance rules</h2>
+<p>Data checked on <strong>October 10, 2026</strong>. Every priced row links to the specific vendor or storefront source. Recheck checkout price, tax, platform, region, renewals and adapter compatibility before paying. A quoted price does not certify that your vehicle and module support the task. No hands-on scanner testing was performed and no affiliate recommendations are attached to this worksheet.</p>
+<ul><li><a href="https://apps.apple.com/us/app/bimmercode/id1130787459">Apple US App Store — BimmerCode Full Version in-app purchase</a></li><li><a href="https://apps.apple.com/us/app/bimmerlink/id1065360416">Apple US App Store — BimmerLink Full Version and optional CarPlay Add-On</a></li><li><a href="https://www.bimmergeeks.net/protool">BimmerGeeks — ProTool Diagnostic/Coding/Master license prices and vehicle restrictions</a></li><li><a href="https://www.bimmergeeks.net/product-page/master-license">BimmerGeeks — Master license and separate adapter disclaimer</a></li><li><a href="https://www.mycarly.com/pricing/">Carly current location/brand pricing selector</a></li><li><a href="https://support.mycarly.com/hc/en-us/articles/20084641053586-What-is-Carly-Premium-Package">Carly support — Premium package and scanner relationship</a></li><li><a href="https://bmwtechinfo.bmwgroup.com/tisUI/">BMW TIS/AOS — North America subscription prices and registration</a></li><li><a href="https://www.bmwtechinfo.com/tisUI/assets/site_information.pdf">BMW Group AOS user guide — official software and hardware environment</a></li></ul>
+</section>
+<section class="related" id="related-guides"><h2>Related Chassis Signal pricing and software articles</h2><p>These original guides retain their detailed price-history notes, compatibility research, tables and original diagrams. This shared ledger makes the figures easier to compare without retiring those distinct user decisions.</p><div class="related-grid">{related.map(([slug,title,desc])=><article class="price-related"><h3><a href={`/guides/${slug}/`}>{title} →</a></h3><p>{desc}</p></article>)}</div></section>
+</div>
+<script define:vars={{records:pricingEvidence}}>
+const all=records;
+const f=(id)=>document.getElementById(id);
+const fields=['license','years','adapter','host','extra','quote'].map(f);
+const [license,years,adapter,host,extra,quote]=fields;
+const status=f('cost-status'),breakdown=f('breakdown');
+const dollar=n=>'$'+n.toFixed(2);
+function update(){
+ const record=all.find(row=>row.id===license.value);
+ const horizon=Number(years.value);
+ const costFields=[adapter,host,extra];
+ const values=costFields.map(el=>el.value.trim()===''?null:Number(el.value));
+ const [adapterCost,hostCost,extraCost]=values;
+ if(!record){status.textContent='No matching dated source entry';breakdown.textContent='';return}
+ const annualPrice=record.charge==='annual' ? (quote.value.trim()===''?null:Number(quote.value)) : record.usd;
+ const missing=[];
+ if(adapterCost===null)missing.push('adapter/interface quote');
+ if(hostCost===null)missing.push('host/accessory quote');
+ if(extraCost===null)missing.push('annual extra-cost assumption');
+ if(annualPrice===null)missing.push('quoted annual license');
+ if([adapterCost,hostCost,extraCost,annualPrice].some(v=>v!==null&&(!Number.isFinite(v)||v<0))){status.textContent='Enter only nonnegative monetary figures.';breakdown.textContent='';return}
+ if(missing.length){status.textContent='Estimate incomplete: enter '+missing.join(', ')+'. Enter 0 if you already own equipment or expect no extra annual fees.';breakdown.textContent='';return}
+ const entitlement=(record.charge==='annual'?annualPrice*horizon:annualPrice);
+ const annualExtras=extraCost*horizon;
+ const total=entitlement+adapterCost+hostCost+annualExtras;
+ status.textContent='Illustrative '+horizon+'-year total: '+dollar(total)+' USD, before tax and any unknown fees.';
+ breakdown.textContent='License/access: '+dollar(entitlement)+' · Adapter/interface: '+dollar(adapterCost)+' · Host/accessories: '+dollar(hostCost)+' · Your assumed extras: '+dollar(annualExtras)+'.';
+}
+fields.forEach(el=>el.addEventListener('input',update));
+update();
+</script>
+<style is:global>
+.pricing-shell .scroll{overflow-x:auto}.pricing-shell table{min-width:680px;border-collapse:collapse;width:100%;font:13px/1.55 var(--sans)}.pricing-shell th,.pricing-shell td{padding:12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}.pricing-shell .table-secondary{display:block;font:12px/1.5 var(--sans);color:var(--muted);margin-top:5px}.pricing-shell .amount{white-space:nowrap;font-weight:700}.pricing-shell .price-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:18px 0}.pricing-shell .price-form label{display:grid;gap:7px;font:600 13px/1.4 var(--sans)}.pricing-shell .price-form select,.pricing-shell .price-form input{width:100%;min-width:0;border:1px solid #97a99d;border-radius:8px;padding:12px;background:#fff;color:var(--ink)}.pricing-shell .estimate{padding:12px 16px;background:var(--paper-3);font:600 14px/1.7 var(--sans);border-radius:8px}.pricing-shell .related-grid{display:grid;gap:14px;grid-template-columns:1fr}.pricing-shell .price-related{padding:18px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:14px}.pricing-shell .price-related h3{margin:0 0 8px;font-size:22px}.pricing-shell .price-related p{margin:0;font:14px/1.6 var(--sans)}@media(max-width:650px){.pricing-shell .price-form{grid-template-columns:1fr}}
+</style>
+</ResearchToolArticleLayout>
