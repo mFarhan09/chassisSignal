@@ -151,3 +151,8 @@ The tool’s role is narrow but important: it carries out a verified service fun
 ## How this investigation fits the wider BMW diagnostic method
 
 Ride-height correction requires the particular suspension controller and proper workshop loading conditions. The hub links to this independent specialist guidance rather than absorbing its cautions. If the problem is still unclassified, start with the [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) and its evidence-first symptom directory. This guide remains the detailed resource for its distinct controller, procedure and original technical visuals; no source research or SVG is being retired.
+
+
+## Related service-function eligibility and safety matrix
+
+Ride-height calibration uses a vehicle-specific suspension reference and correct loading conditions; avoid extrapolating another chassis's settings. For the cross-system qualification checklist, see the [BMW Service Function Eligibility and Safety Matrix](/tools/bmw-service-function-matrix/). This specialist guide remains the original, detailed explanation of its specific procedure and retains all existing diagrams, tables and source evidence. Do not interpret the matrix as permission to run an unsupported reset, calibration or active test.
