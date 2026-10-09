@@ -111,3 +111,8 @@ Choose coding for a supported configuration change in software already installed
 - [BimmerCode — Manual](https://bimmercode.app/manual/)
 - [BimmerCode — FAQ](https://bimmercode.app/faq/)
 - [BimmerGeeks — ProTool](https://www.bimmergeeks.net/protool)
+
+
+## Related service-function eligibility and safety matrix
+
+An app-supported coding change and an authorized ECU software installation are distinct jobs with different access, electrical and recovery prerequisites. For the cross-system qualification checklist, see the [BMW Service Function Eligibility and Safety Matrix](/tools/bmw-service-function-matrix/). This specialist guide remains the original, detailed explanation of its specific procedure and retains all existing diagrams, tables and source evidence. Do not interpret the matrix as permission to run an unsupported reset, calibration or active test.
