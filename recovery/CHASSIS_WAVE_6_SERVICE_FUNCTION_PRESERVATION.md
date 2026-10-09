@@ -52,7 +52,7 @@ The following **14** existing pages remain independent, published and explicitly
 - `bmw-bidirectional-scan-tool-functions`
 - `bmw-coding-vs-programming`
 
-The two shorter guides `bmw-service-reset-tool` and `bmw-coding-vs-programming` also receive substantial append-only eligibility comparisons/tables with documented source references. All original source text and all referenced diagrams are preserved verbatim before new content. No `301`, no `410`, no `noindex`, no affiliate link insertions and no source files deleted.
+The two shorter guides `bmw-service-reset-tool` and `bmw-coding-vs-programming` also receive substantial additional eligibility comparisons/tables with documented source references, inserted before each existing final buyer-decision section so the original affiliate placement policy remains valid. The QA compares all original nonblank lines in order for these two pages, and requires strict original-prefix preservation for the other twelve; no existing source text, claims or referenced diagrams are removed or rewritten. No `301`, no `410`, no `noindex`, no affiliate link insertions and no source files deleted.
 
 ## Navigation
 The main Guides, Scanners, Battery & Service and Research hubs link to the Wave 6 resource. Its content links to the existing BMW scanner capability, troubleshooting, pricing and coding distinctions where relevant. No other new URL variants were created.
