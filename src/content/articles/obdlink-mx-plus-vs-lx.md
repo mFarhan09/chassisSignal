@@ -95,3 +95,6 @@ Read [OBD app vs handheld scanner](/guides/obd-app-vs-handheld-scanner/) when ph
 ## Bottom line
 
 MX+ earns its higher current price when iOS or documented Ford/GM proprietary-network access is required. LX is the lower-cost fit for supported Android/Windows apps and standard OBD-II work that does not need those networks. Verify the exact app, vehicle and function before buying either.
+
+
+**Wider selection:** The [BMW OBD Adapter Comparison Database](/tools/bmw-obd-adapter-comparison/) screens the documented adapter and platform matrix. This specific guide remains available for its independent evidence.
