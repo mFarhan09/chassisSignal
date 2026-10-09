@@ -87,3 +87,8 @@ On camera-equipped and modern PMA systems, the fix is often not a physical part 
 ## Choose the tool and verify before replacing
 
 For BMW parking diagnosis, buy a tool that reaches the PDC/PMA module, names the exact sensor, shows live sensor data, and supports module output tests — and for coding or calibration on newer systems, an ISTA-class environment. A basic code reader is not enough. And remember the limits of any driver-assistance system: parking sensors aid the driver, they do not replace attention, and a system reporting a fault should not be trusted until it is fixed. Verify the module, the code, the live sensor data, the module output tests and the wiring, and consider software, before you replace a single sensor — because on these systems the part is often not the problem.
+
+
+## How this investigation fits the broader diagnostic method
+
+PDC faults need controller and sensor context, not simply a generic code label. The [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) explains how to preserve original fault data, verify ECU access and select an evidence-backed next step. This specialist guide keeps its independent original diagrams and source-specific research. Do not use a write-capable procedure as a trial-and-error diagnostic shortcut.
