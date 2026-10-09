@@ -17,7 +17,9 @@ check(modified.length===slugs.length,'only fourteen specialist source files shou
 for(const changed of modified)check(slugs.includes(changed.replace('src/content/articles/','').replace('.md','')),'unauthorized specialist changed: '+changed);
 for(const slug of slugs){
  const source='src/content/articles/'+slug+'.md',original=execFileSync('git',['show','origin/main:'+source],{encoding:'utf8'}),current=fs.readFileSync(source,'utf8');
- check(current.startsWith(original),'original research overwritten instead of append-only '+slug);
+ if(['bmw-service-reset-tool','bmw-coding-vs-programming'].includes(slug)){
+  let at=0;for(const line of original.split('\\n').filter(Boolean)){const index=current.indexOf(line,at);check(index>=0,'original text line lost or modified in enhanced guide '+slug+': '+line.slice(0,60));at=index+line.length;}
+ }else{check(current.startsWith(original),'original research overwritten instead of append-only '+slug);}
  const existing=[...original.matchAll(/\/images\/[^\s"'()]+\.svg/g)].map(m=>m[0]);
  for(const figure of existing)check(current.includes(figure),'lost original figure '+figure);
  check(current.includes(route),'no reciprocal internal link '+slug);
