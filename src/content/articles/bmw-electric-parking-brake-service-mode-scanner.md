@@ -154,3 +154,8 @@ BMW’s current Technical Information System is the authority for the identified
 Choose a BMW electric parking-brake service scanner only when four facts line up: the vehicle has the relevant EMF architecture, the service event requires a diagnostic state change, the exact scanner supports the named commands, and the current BMW prerequisites can be met safely. Reject “EPB supported” as a complete answer.
 
 The correct tool is not the one with the longest service-menu list. It is the one that can enter and restore the exact documented state while the mechanical repair remains inside a controlled safety envelope.
+
+
+## How this investigation fits the wider BMW diagnostic method
+
+Do not confuse reading EMF fault memory with an active parking-brake service operation. The diagnostic hub separates the two and preserves this page's procedure-specific safety and architecture distinctions. If the problem is still unclassified, start with the [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) and its evidence-first symptom directory. This guide remains the detailed resource for its distinct controller, procedure and original technical visuals; no source research or SVG is being retired.
