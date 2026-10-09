@@ -1,4 +1,5 @@
 import { getCollection } from 'astro:content';
+import {consolidatedRedirects} from './consolidated-redirects.mjs';
 
 const articleSources = import.meta.glob('../content/articles/**/*.{md,mdx}');
 
@@ -8,6 +9,12 @@ export async function getPublishedArticles() {
   if (!hasArticleSources) return [];
 
   return getCollection('articles', ({ data }) => !data.draft);
+}
+
+// Public discovery excludes URLs receiving Cloudflare HTTP 301s.
+// Build/affiliate inventories retain originals for preservation and accounting.
+export async function getVisibleArticles(){
+  return (await getPublishedArticles()).filter(article => !(article.data.slug in consolidatedRedirects));
 }
 
 export function articlePath(article: { data: { section: 'guides' | 'research'; slug: string } }) {
