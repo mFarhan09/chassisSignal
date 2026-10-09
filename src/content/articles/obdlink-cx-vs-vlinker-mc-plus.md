@@ -106,3 +106,6 @@ Adapter, platform and application claims were checked against the cited manufact
 - [OBDLink Support - Update OBDLink adapter firmware](https://support.obdlink.com/support/solutions/articles/43000705180-update-obdlink-adapter-firmware)
 - [Vgate - Vgate vLinker MC+](https://www.vgatemall.com/products-detail/i-5/)
 - [SG Software - BimmerCode supported adapters](https://bimmercode.app/adapters/?series=g)
+
+
+**For the wider decision:** Consult the [BMW OBD Adapter Comparison Database](/tools/bmw-obd-adapter-comparison/) for manufacturer-led protocol and application fit; this specialist comparison remains intact.
