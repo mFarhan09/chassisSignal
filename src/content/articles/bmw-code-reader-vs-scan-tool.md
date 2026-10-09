@@ -148,3 +148,6 @@ If the seller exposes only broad marketing categories, ask for the underlying fu
 ## Bottom line
 
 Choose from the required job backward. A basic reader is sufficient when the problem is genuinely limited to standard emissions diagnostics. Move to BMW-aware coverage for manufacturer modules, then verify service functions, active tests and coding independently. The exact coverage record is a safer buying signal than the most capable-sounding label.
+
+
+**Related resource:** Our [BMW Scanner Capability Database](/tools/bmw-scanner-capability-database/) screens broader device and function claims. This original guide, its technical diagrams and its task-specific evidence remain intact.

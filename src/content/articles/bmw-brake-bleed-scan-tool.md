@@ -145,3 +145,6 @@ The reliable chain is simple: documented repair event, exact BMW instruction, ve
 - [Autel — Service-function product documentation](https://autel.com/mk3/4292.jhtml)
 - [Autel — Vehicle coverage database](https://autel.com/vehicle-coverage/coverage2)
 - [Foxwell — Vehicle coverage search](https://foxwelltech.us/oeSearch/support_oe_search_app.html)
+
+
+**Related resource:** Our [BMW Scanner Capability Database](/tools/bmw-scanner-capability-database/) screens broader device and function claims. This original guide, its technical diagrams and its task-specific evidence remain intact.

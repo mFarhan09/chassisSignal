@@ -103,3 +103,6 @@ Hardware, package and update terms were checked against the cited Foxwell docume
 
 - [Foxwell - Foxwell NT530 multi-system scanner](https://www.foxwelldiag.com/products/foxwell-nt530)
 - [Foxwell - Foxwell NT710 bi-directional scan tool](https://www.foxwelldiag.com/products/foxwell-nt710)
+
+
+**Related resource:** Our [BMW Scanner Capability Database](/tools/bmw-scanner-capability-database/) explains broader model, feature, vehicle-coverage and safety verification. This specialist article remains available with its original diagrams, sources and task-specific evidence.

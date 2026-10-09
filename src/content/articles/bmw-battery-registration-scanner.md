@@ -191,3 +191,6 @@ If the battery type/capacity changes, the vehicle has multiple 12-volt batteries
 </aside>
 
 *Product scope and pricing checked August 23, 2026. Verify current compatibility, license and seller terms before purchase.*
+
+
+**Related resource:** Our [BMW Scanner Capability Database](/tools/bmw-scanner-capability-database/) explains broader model, feature, vehicle-coverage and safety verification. This specialist article remains available with its original diagrams, sources and task-specific evidence.

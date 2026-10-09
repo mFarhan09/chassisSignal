@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ScannerResearch from '../../../components/ScannerResearch.astro';
+const models=[
+{name:'Foxwell NT530',maker:'Foxwell',category:'BMW-focused handheld',link:'https://www.foxwelltech.us/product-detail-524.html',coverage:'Foxwell identifies multi-system diagnosis and commonly required service/coding features; verify licensed BMW software and chassis',caveat:'Do not infer all-system function from registration list'},
+{name:'Foxwell NT710',maker:'Foxwell',category:'BMW diagnostic handheld',link:'https://www.foxwelldiag.com/products/foxwell-nt710',coverage:'Foxwell lists supported ECU coding, active tests and 30+ service categories; exact chassis and vehicle equipment can restrict each',caveat:'Vehicle generation, update rights and modules vary'},
+{name:'Autel MK808S',maker:'Autel',category:'Multibrand service tablet',link:'https://www.autel.com/mk2/3990.jhtml',coverage:'Official product lists all-system readout, active tests and several maintenance categories',caveat:'Manufacturer states features vary by vehicle'},
+{name:'Autel MK900',maker:'Autel',category:'Multibrand diagnostic tablet',link:'https://autel.com/mk3/4171.jhtml',coverage:'Official material lists live data, active tests, DoIP and CAN FD',caveat:'TPMS basic tier differs from MK900-TS; do not infer ECU programming'},
+{name:'Launch X-431',maker:'Launch',category:'Professional multibrand platform family',link:'https://www.cnlaunch.com/',coverage:'Must choose exact X-431 model and its function coverage',caveat:'Family names are not an exact model specification'}
+];
+const related=[
+['foxwell-nt530-vs-nt710','Foxwell NT530 vs NT710','Hardware, licensing and coverage differences'],
+['foxwell-nt710-vs-autel-mk900-bmw','Foxwell NT710 vs Autel MK900','Coding-versus-diagnostic scope and model evidence'],
+['foxwell-nt710-vs-nt809bt-bmw','Foxwell NT710 vs NT809BT','Device tier and connectivity distinctions'],
+['autel-scanner-for-bmw','Autel scanners for BMW','Pick an exact Autel platform by required BMW operation'],
+['launch-x431-vs-autel-for-bmw','Launch X-431 vs Autel','Compare like-for-like workshop tiers'],
+['bmw-bidirectional-scan-tool-functions','BMW bidirectional scan tool functions','Understand active tests, their limits and risk'],
+['bmw-scanner-abs-airbag-codes','BMW ABS and airbag scanner coverage','Module-level diagnostic capability'],
+['bmw-battery-registration-scanner','BMW battery registration scanners','Battery registration versus other service tasks'],
+['bmw-scanner-for-used-car-inspection','BMW scanner for a used-car inspection','Read-only pre-purchase diagnostic protocol'],
+['bmw-scanner-without-subscription','BMW scanners without subscriptions','Ownership cost and update entitlements'],
+['bmw-brake-bleed-scan-tool','BMW brake bleeding scanner requirements','Safety-critical service support'],
+['bmw-code-reader-vs-scan-tool','BMW code reader vs scan tool','Define the tool category before buying']
+];
+---
+<BaseLayout title="BMW Scanner Capability Database: Compare Real Diagnostic Functions" description="Compare Foxwell, Autel and Launch scanner capabilities by evidence level, vehicle coverage, service tasks, scan depth and ownership model.">
+<main class="capability-shell">
+<nav><a href="/">Home</a> / <a href="/scanners/">Scanners</a> / Capability database</nav>
+<header><p class="kicker">Technical reference · Evidence review October 2026</p><h1>BMW Scanner Capability Database</h1>
+<p class="lede">The useful question is not which scan-tool brand is best. It is <strong>which exact hardware SKU and software entitlement can perform your required operation on the specific BMW chassis, model year, and control module</strong> — with adequate safety and documented update rights.</p>
+<p>Generic “all-systems” language rarely tells a BMW owner whether a device supports a specific ABS fault, parking brake service routine, battery registration, coding procedure, or official guided test plan. We separate vendor-described product capabilities from verified vehicle-specific eligibility. This tool has not been independently tested on actual vehicles. Read the source and its limitations before assuming support.</p>
+</header>
+<figure><picture><source media="(max-width:650px)" srcset="/images/tools/bmw-scanner-capability-database/capability-layers-mobile.svg"/><img src="/images/tools/bmw-scanner-capability-database/capability-layers.svg" width="1200" height="450" loading="lazy" alt="BMW scanner selection through chassis, control module, operation, tool SKU, software license and safe procedure"/></picture><figcaption>A brand-level scan-tool feature list is only one part of the compatibility decision.</figcaption></figure>
+<section class="panel">
+<h2>Filter the documented scanner shortlist</h2><p>Five <strong>product families or exact models</strong> are presented with candid evidence limits; this is a research directory, not a laboratory ranking. The Launch family row is not an exact device specification and is excluded when you filter for exact model records.</p>
+<div class="filters"><label>Manufacturer <select id="manufacturer"><option value="all">All manufacturers</option><option value="Foxwell">Foxwell</option><option value="Autel">Autel</option><option value="Launch">Launch</option></select></label><label>Evidence row type <select id="rowtype"><option value="all">All rows</option><option value="exact">Exact model identified</option><option value="family">Family; exact model still needed</option></select></label></div>
+<p id="result-count" role="status" aria-live="polite">Showing five researched rows.</p>
+<div class="scroll"><table><caption>Vendor-claimed general capabilities; vehicle-specific functions require confirmation</caption><thead><tr><th>Scanner</th><th>Product category</th><th>Documented boundary</th><th>What cannot be inferred</th><th>Source</th></tr></thead><tbody>
+{models.map(m=><tr data-maker={m.maker} data-kind={m.name==='Launch X-431'?'family':'exact'}><th scope="row">{m.name}</th><td>{m.category}</td><td>{m.coverage}</td><td>{m.caveat}</td><td><a href={m.link} target="_blank" rel="noopener noreferrer">Manufacturer ↗</a></td></tr>)}
+</tbody></table></div><p id="empty" hidden>No rows in this limited source set fit the selection. This does not establish that no suitable diagnostic device exists.</p>
+</section>
+<section><h2>Functions that must be checked individually</h2><div class="scroll"><table><thead><tr><th>Required BMW task</th><th>Documentable general category</th><th>Vehicle-level verification still required</th><th>Related research</th></tr></thead><tbody>
+<tr><td>Full-vehicle fault survey</td><td>OEM-level or full-system diagnostics where listed</td><td>Accessible ECU list, supported chassis, age and installed systems</td><td><a href="/guides/bmw-code-reader-vs-scan-tool/">Reader versus scanner</a></td></tr>
+<tr><td>ABS / airbag diagnosis</td><td>Module read/erase and live data</td><td>Exact brake or restraint ECU coverage and fault context</td><td><a href="/guides/bmw-scanner-abs-airbag-codes/">ABS / airbag scanners</a></td></tr>
+<tr><td>Battery registration</td><td>Battery management service function</td><td>Battery type, model year, registration versus coding distinction</td><td><a href="/guides/bmw-battery-registration-scanner/">Battery registration</a></td></tr>
+<tr><td>Active component testing</td><td>Bidirectional active test where manufacturer lists it</td><td>Specific module, command, prerequisite, safety risk</td><td><a href="/guides/bmw-bidirectional-scan-tool-functions/">Active-test guide</a></td></tr>
+<tr><td>EPB service mode or brake bleed</td><td>Service and actuator functions on supported vehicles</td><td>OEM brake service procedure and tool coverage</td><td><a href="/guides/bmw-brake-bleed-scan-tool/">Brake bleed guide</a></td></tr>
+<tr><td>DoIP / CAN FD support</td><td>Vendor protocol and VCI transport specification</td><td>Required vehicle-generation network path and interface revision</td><td><a href="/guides/foxwell-nt710-vs-autel-mk900-bmw/">NT710 versus MK900</a></td></tr>
+<tr><td>Coding / ECU programming</td><td>Separate operation class; never infer from active-test support</td><td>Exact approved model, official program and recovery environment</td><td><a href="/guides/bmw-coding-vs-programming/">Coding versus programming</a></td></tr>
+</tbody></table></div></section>
+<figure><picture><source media="(max-width:650px)" srcset="/images/tools/bmw-scanner-capability-database/risk-boundaries-mobile.svg"/><img src="/images/tools/bmw-scanner-capability-database/risk-boundaries.svg" width="1200" height="450" loading="lazy" alt="Read-only scan, active tests, service procedures and programming have increasing operation-specific prerequisites"/></picture><figcaption>A scanner that reads codes cannot automatically perform active tests, adaptations or firmware programming.</figcaption></figure>
+<ScannerResearch/>
+<section class="panel"><h2>Primary sources and disclosure of evidence quality</h2><p>Evidence reviewed October 9, 2026. Vendor literature states platform-wide feature categories; the manufacturer or tool's exact vehicle-function lookup determines eligibility. We have not connected these devices to a car, verified a live scan, or performed workshop repairs. No affiliate ranking or live retailer pricing is embedded in this reference.</p><ul>
+<li><a href="https://www.autel.com/mk2/3990.jhtml">Autel MK808S/MK808Z official specifications</a></li>
+<li><a href="https://autel.com/mk3/4171.jhtml">Autel MK900 official product information and comparison</a></li>
+<li><a href="https://www.autel.com/u/cms/www/202604/200157383ity.pdf">Autel MK900 user manual — ECU info, live data, tests and special functions</a></li>
+<li><a href="https://www.foxwelltech.us/product-detail-524.html">Foxwell NT530 technical specifications and manuals</a></li><li><a href="https://www.foxwelldiag.com/products/foxwell-nt710">Foxwell NT710 model-specific description, supported BMW coding and service categories</a></li><li><a href="https://www.foxwelldiag.com/pages/buyer-guide">Foxwell model comparison and coverage disclaimer</a></li>
+<li><a href="https://www.cnlaunch.com/">Launch manufacturer — verify exact X-431 model and VCI</a></li>
+</ul></section>
+<section class="panel"><h2>Related Chassis Signal articles</h2><p>These original research articles are intentionally retained. They offer deeper comparisons, module-specific cautions, documented model exceptions and original diagrams that should not be lost to a generic database.</p><div class="related-grid">{related.map(([slug,title,desc])=><article><h3><a href={`/guides/${slug}/`}>{title} →</a></h3><p>{desc}</p></article>)}</div></section>
+</main>
+<script>
+const maker=document.querySelector<HTMLSelectElement>('#manufacturer')!,kind=document.querySelector<HTMLSelectElement>('#rowtype')!,rows=[...document.querySelectorAll<HTMLTableRowElement>('tr[data-maker]')],count=document.querySelector('#result-count')!,empty=document.querySelector<HTMLElement>('#empty')!;function update(){let n=0;for(const row of rows){const keep=(maker.value==='all'||row.dataset.maker===maker.value)&&(kind.value==='all'||row.dataset.kind===kind.value);row.hidden=!keep;if(keep)n++}count.textContent=`Showing ${n} of ${rows.length} researched models and families.`;empty.hidden=n>0}maker.addEventListener('change',update);kind.addEventListener('change',update);update();
+</script>
+<style is:global>
+.capability-shell{max-width:1120px;margin:auto;padding:2rem 1.25rem 5rem;line-height:1.75}.capability-shell h1{font-size:clamp(2.1rem,5vw,3.8rem);line-height:1.14;max-width:22ch}.capability-shell h2{font-size:clamp(1.55rem,3vw,2.2rem);line-height:1.2;margin:2.3rem 0 1rem}.capability-shell h3{font-size:1.2rem;margin:1.7rem 0 .5rem}.capability-shell p{max-width:85ch}.capability-shell .lede{font-size:1.2rem}.capability-shell .panel{border:1px solid #b9c9bd;background:rgba(90,110,95,.05);border-radius:14px;padding:clamp(1rem,3vw,2rem);margin:2rem 0}.capability-shell .scroll{overflow-x:auto}.capability-shell table{width:100%;min-width:660px;border-collapse:collapse;font-size:.93rem;line-height:1.55}.capability-shell td,.capability-shell th{padding:.8rem;text-align:left;vertical-align:top;border-bottom:1px solid #b9c9bd}.capability-shell tbody tr:nth-child(odd){background:rgba(80,110,90,.06)}.capability-shell tr[hidden]{display:none}.capability-shell figure{margin:2rem 0}.capability-shell figure img{width:100%;height:auto;background:#f4f7f5;border-radius:12px}.capability-shell figcaption{font-size:.9rem}.capability-shell .filters{display:flex;gap:1rem;flex-wrap:wrap}.capability-shell label{display:grid;gap:.3rem;flex:1 1 210px}.capability-shell select{font:inherit;padding:.65rem;background:white;color:#183128;border:1px solid #90a79a;border-radius:8px}.capability-shell .related-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.capability-shell .related-grid article{padding:1rem;background:white;border:1px solid #b9c9bd;border-radius:12px}.capability-shell .related-grid h3{margin:0 0 .5rem}.capability-shell .related-grid p{margin:0}.capability-shell a{overflow-wrap:anywhere}@media(max-width:650px){.capability-shell .related-grid{grid-template-columns:1fr}}
+</style></BaseLayout>

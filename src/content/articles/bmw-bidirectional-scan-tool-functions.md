@@ -178,3 +178,6 @@ If a seller can prove module access but not the command, treat the tool as a rea
 - [Autel — MaxiCOM MK900 official product page](https://autel.com/mk3/4171.jhtml)
 - [Autel — MaxiCOM MK900-BT user manual](https://www.autel.com/u/cms/www/202604/20015757y06g.pdf)
 - [NHTSA — Air bags overview](https://www.nhtsa.gov/vehicle-safety/air-bags)
+
+
+**Related resource:** Our [BMW Scanner Capability Database](/tools/bmw-scanner-capability-database/) explains broader model, feature, vehicle-coverage and safety verification. This specialist article remains available with its original diagrams, sources and task-specific evidence.

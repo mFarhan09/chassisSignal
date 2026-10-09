@@ -176,3 +176,6 @@ If the seller cannot resolve the car, module, and function in writing, keep shop
 - [Autel — MaxiCheck MX900 manual](https://autel.com/u/cms/www/202603/19015820hq2p.pdf)
 - [NHTSA — Air bags overview](https://www.nhtsa.gov/vehicle-safety/air-bags)
 - [Autel — MaxiCheck MX900 official product page](https://www.autel.com/mk2/4063.jhtml)
+
+
+**Related resource:** Our [BMW Scanner Capability Database](/tools/bmw-scanner-capability-database/) explains broader model, feature, vehicle-coverage and safety verification. This specialist article remains available with its original diagrams, sources and task-specific evidence.
