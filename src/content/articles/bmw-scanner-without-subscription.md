@@ -141,3 +141,6 @@ BMW’s current Technical Information System is separately versioned and subscri
 Choose a no-subscription BMW scanner when the vendor proves the named functions for your exact vehicle, the included brand package is clear, and the documented post-expiry state is useful without mandatory renewal. Choose a renewable platform when current coverage, support and new-model access are worth the ongoing cost. If the seller cannot explain what remains after expiry, the recurring cost is unknown—not zero.
 
 The winning purchase is not the tool with the loudest “lifetime” badge. It is the tool whose present capability, future update path and ownership terms are all explicit enough to audit.
+
+
+**Related resource:** Our [BMW Scanner Capability Database](/tools/bmw-scanner-capability-database/) explains broader model, feature, vehicle-coverage and safety verification. This specialist article remains available with its original diagrams, sources and task-specific evidence.
