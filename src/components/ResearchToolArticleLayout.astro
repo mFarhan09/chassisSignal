@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+interface TocItem { id: string; label: string }
+interface Props {
+ title: string; description: string; section: string; sectionHref: string;
+ toc: TocItem[]; readingTime: string; evidence?: string; safety?: string;
+}
+const {title,description,section,sectionHref,toc,readingTime,evidence='DOCUMENTED',safety='MEDIUM'}=Astro.props;
+---
+<BaseLayout title={title} description={description} type="article">
+<header class="article-header shell">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href={sectionHref}>{section}</a><span>/</span><span aria-current="page">{title}</span></nav>
+  <h1>{title}</h1>
+  <p class="article-dek">{description}</p>
+  <div class="article-meta"><span>Chassis Signal Research</span><span>Evidence review 9 October 2026</span><span>{readingTime}</span><span>Safety / {safety}</span><span>Evidence / {evidence}</span></div>
+</header>
+<div class="article-layout article-layout--no-hero tool-reading-layout">
+ <nav class="toc" aria-label="Table of contents"><strong>On this page</strong>{toc.map(item=><a href={`#${item.id}`}>{item.label}</a>)}</nav>
+ <article class="prose tool-article-prose">
+  <div class="key-findings"><strong>Evidence &amp; safety context</strong><p>Documentation-based research, not hands-on testing. Manufacturer claims do not guarantee a feature on every BMW. Verify your exact model, software version, interface and intended function before any change to a vehicle.</p></div>
+  <slot />
+ </article>
+ <aside class="article-aside">
+  <div class="evidence-panel">
+   <h2>Evidence label</h2><p><strong>{evidence}</strong></p>
+   <p>Official product documentation and developer compatibility material; no independent vehicle testing claimed.</p>
+   <h2 class="rail-heading">Safety</h2><p><strong>Safety / {safety}</strong></p><p>Start with non-destructive identification. Stop before coding, active tests or programming without the correct vehicle procedure.</p>
+   <h2 class="rail-heading">Testing status</h2><p>Documentation-based; no hands-on claim.</p>
+  </div>
+  <div class="research-note"><strong>Methodology</strong><p><a href="/methodology/">How we classify evidence →</a></p></div>
+ </aside>
+</div>
+</BaseLayout>
+<style is:global>
+ .tool-reading-layout .tool-article-prose .software-shell,.tool-reading-layout .tool-article-prose .capability-shell,.tool-reading-layout .tool-article-prose .interface-shell,.tool-reading-layout .tool-article-prose .vehicle-shell{width:100%;max-width:100%;padding:0;margin:0;line-height:inherit}
+ .tool-article-prose .software-shell h2,.tool-article-prose .capability-shell h2,.tool-article-prose .interface-shell h2,.tool-article-prose .vehicle-shell h2{font-family:var(--serif);font-size:clamp(32px,3vw,38px);margin:2em 0 .55em;line-height:1.1}
+ .tool-article-prose .software-shell h3,.tool-article-prose .capability-shell h3,.tool-article-prose .interface-shell h3,.tool-article-prose .vehicle-shell h3{font-family:var(--serif);font-size:clamp(23px,2vw,28px);margin:1.7em 0 .5em}
+ .tool-article-prose .software-shell .panel,.tool-article-prose .capability-shell .panel,.tool-article-prose .interface-shell .panel,.tool-article-prose .vehicle-shell .panel{background:rgba(255,255,255,.4);border:1px solid var(--line);border-radius:16px;padding:clamp(16px,3vw,24px);margin:2em 0}
+ .tool-article-prose .software-shell table,.tool-article-prose .capability-shell table,.tool-article-prose .interface-shell table,.tool-article-prose .vehicle-shell table{font-family:var(--sans);font-size:13px;line-height:1.5}
+ .tool-article-prose .software-shell figure img,.tool-article-prose .capability-shell figure img,.tool-article-prose .interface-shell figure img,.tool-article-prose .vehicle-shell figure img{border:1px solid var(--line);border-radius:18px}
+ .tool-article-prose .software-shell .related-grid,.tool-article-prose .capability-shell .related-grid,.tool-article-prose .interface-shell .related-grid,.tool-article-prose .vehicle-shell .related-grid{display:grid;grid-template-columns:1fr;gap:12px}
+ .tool-article-prose .software-shell .related-grid article,.tool-article-prose .capability-shell .related-grid article,.tool-article-prose .interface-shell .related-grid article,.tool-article-prose .vehicle-shell .related-grid article{padding:20px 24px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.55);box-shadow:var(--shadow-sm)}
+ .tool-article-prose .software-shell .related-grid article h3,.tool-article-prose .capability-shell .related-grid article h3,.tool-article-prose .interface-shell .related-grid article h3,.tool-article-prose .vehicle-shell .related-grid article h3{font-size:22px;margin:0 0 6px}
+ .tool-article-prose .software-shell .related-grid article p,.tool-article-prose .capability-shell .related-grid article p,.tool-article-prose .interface-shell .related-grid article p,.tool-article-prose .vehicle-shell .related-grid article p{font-size:15px;margin:0}
+ .tool-article-prose .software-shell .scroll,.tool-article-prose .capability-shell .scroll,.tool-article-prose .interface-shell .scroll,.tool-article-prose .vehicle-shell .scroll{overflow-x:auto;max-width:100%}
+ .tool-article-prose .software-shell select,.tool-article-prose .capability-shell select,.tool-article-prose .interface-shell select,.tool-article-prose .vehicle-shell select{max-width:100%;min-width:0;font-family:var(--sans);font-size:14px}
+ .tool-article-prose .software-shell .filters,.tool-article-prose .capability-shell .filters,.tool-article-prose .interface-shell .filters,.tool-article-prose .vehicle-shell .filters{display:flex;flex-wrap:wrap;gap:14px}
+ .tool-article-prose .tool-research-meta{margin:20px 0;font:700 11px var(--sans);text-transform:uppercase;letter-spacing:.11em;color:var(--teal)}
+ .tool-article-prose .related{margin-top:65px}
+ @media(max-width:760px){.tool-article-prose .software-shell .related-grid,.tool-article-prose .capability-shell .related-grid{grid-template-columns:1fr}}
+</style>

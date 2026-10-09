@@ -1,0 +1,23 @@
+name: Tool Article Presentation QA
+on:
+  push:
+    branches: [fix/chassis-tools-article-presentation]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  design-and-preservation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.14.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.19.0
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: pnpm build
+      - run: node scripts/recovery-tool-article-presentation-qa.mjs
