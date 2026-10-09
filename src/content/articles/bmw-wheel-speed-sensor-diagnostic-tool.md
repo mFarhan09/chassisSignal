@@ -83,3 +83,8 @@ For this job, buy the tool that reaches the DSC module and shows four-corner liv
 </figure>
 
 Stop and escalate — rather than keep replacing parts — when the four-corner data is clean but faults persist, when a corner's problem tracks bearing play or noise, or when a calibration will not hold. The rule that prevents most wasted money is simple: an ABS or DSC code is not an instruction to replace a sensor. Show the evidence first, isolate the layer, and repair the cause the data actually identifies.
+
+
+## How this investigation fits the wider BMW diagnostic method
+
+A wheel-speed fault may involve controller reachability, supply and physical signal evidence, not just a sensor. The hub helps route readers to the right independent checks. If the problem is still unclassified, start with the [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) and its evidence-first symptom directory. This guide remains the detailed resource for its distinct controller, procedure and original technical visuals; no source research or SVG is being retired.
