@@ -10,7 +10,7 @@ The forensic audit found repeated pairwise permutations among BimmerCode, Bimmer
 ## New destination
 `/tools/bmw-diagnostic-software-comparison/`
 
-A detailed matrix with five primary software categories, interactive job and product filters, structured task-by-task comparison, an evidence worksheet, conservative read-only acceptance checklist, licensing discussion, and architecture/safety analysis. The illustrated resource contains two original diagrams, each with desktop and mobile SVG variants. The five products occupy four distinct task families: feature coding, diagnosis, service operations and professional workshop programming.
+A long-form (more than 3,200 editorial words; statically enforced), evidence-led matrix with five software categories, interactive job and product filters, task-by-task comparisons, an evidence worksheet, conservative read-only acceptance checklist, detailed vehicle-specific pathways, a three-year ownership cost framework, troubleshooting guidance, licensing analysis, and workshop versus consumer safety boundaries. The illustrated resource contains two original diagrams, each with desktop and mobile SVG variants. The five products occupy four distinct task families: feature coding, diagnosis, service operations and professional workshop programming.
 
 **Evidence review:** 2026-10-09, manufacturer/application-developer documentation. Product marketing is not independent hands-on testing, and broad platform compatibility does not guarantee control-unit coverage.
 
@@ -45,7 +45,7 @@ All ten original article files remain in place. They link to the new matrix, whi
 
 ## Build and production gates
 - Astro check and build and the existing affiliate test suite.
-- Wave 2 source-preservation checks: all ten existing sources retained, link reciprocity, five software categories, four SVGs, two hub routes, canonical, 69 published articles, no new redirects.
+- Wave 2 source-preservation checks: all ten existing sources retained, link reciprocity, five software categories, four SVGs, two hub routes, >3,200 editorial words, official primary sources, canonical, 69 published articles, no new redirects.
 - Playwright Chromium responsive/layout/filter behavior at 390, 768 and 1280 pixels, including two conflicting filters and empty state.
 - Existing site-wide affiliate release workflow: draft and live audits, visual checks and protected queues/registry; branch-specific allowlist for exactly ten append-only article edits.
 - Check the exact final head SHA before release and verify all required checks completed successfully.
