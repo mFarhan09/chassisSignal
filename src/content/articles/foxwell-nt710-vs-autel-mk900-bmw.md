@@ -126,3 +126,6 @@ Buy the MK900 if you service more than one make, if you have established that yo
 If you need both wide coverage and BMW coding, neither of these two tools is documented to deliver both, and the honest answer is that this comparison does not contain your product.
 
 Before you buy either one, send the seller your VIN and the exact function you intend to run, and ask for confirmation in writing. Both vendors qualify their coverage claims; getting a specific answer is the only way to convert a marketing claim into something you can rely on.
+
+
+**Related resource:** Our [BMW Scanner Capability Database](/tools/bmw-scanner-capability-database/) explains broader model, feature, vehicle-coverage and safety verification. This specialist article remains available with its original diagrams, sources and task-specific evidence.
