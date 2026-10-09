@@ -164,3 +164,8 @@ The right steering-angle calibration tool is not the scanner with the longest se
 ## How this investigation fits the wider BMW diagnostic method
 
 A calibration function requires an exact vehicle/ECU and the conditions prescribed by the manufacturer. The hub treats it as a controlled intervention rather than a generic reset. If the problem is still unclassified, start with the [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) and its evidence-first symptom directory. This guide remains the detailed resource for its distinct controller, procedure and original technical visuals; no source research or SVG is being retired.
+
+
+## Related service-function eligibility and safety matrix
+
+Steering angle recalibration depends on the event, DSC system and approved setup; it is not a universal fault-memory cure. For the cross-system qualification checklist, see the [BMW Service Function Eligibility and Safety Matrix](/tools/bmw-service-function-matrix/). This specialist guide remains the original, detailed explanation of its specific procedure and retains all existing diagrams, tables and source evidence. Do not interpret the matrix as permission to run an unsupported reset, calibration or active test.
