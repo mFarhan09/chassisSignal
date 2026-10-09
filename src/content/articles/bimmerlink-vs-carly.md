@@ -145,3 +145,6 @@ The responsible final check is the same for both: exact BMW, exact control unit 
 - [Carly Support — BMW coding options](https://support.mycarly.com/hc/en-us/articles/20233353072786-Which-coding-options-can-I-use-on-my-BMW)
 - [Carly Support — Cancel license renewal](https://support.mycarly.com/hc/en-us/articles/360010441840-How-do-I-cancel-the-renewal-for-my-Carly-license)
 - [Apple App Store — BimmerLink](https://apps.apple.com/us/app/bimmerlink/id1065360416)
+
+
+**Broader software context:** Use the [BMW Diagnostic Software Comparison Matrix](/tools/bmw-diagnostic-software-comparison/) to check the separate coding, fault diagnosis, maintenance, licensing and workshop system boundaries. This specialist comparison remains available with its original research and evidence.

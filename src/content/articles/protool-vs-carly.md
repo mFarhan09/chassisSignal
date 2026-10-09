@@ -100,3 +100,6 @@ ProTool versus Carly is mainly a platform, entitlement and ownership-model decis
 - [Carly — Supported features by car](https://support.mycarly.com/hc/en-us/articles/360011226299-What-features-does-Carly-support-for-my-car)
 - [Carly — BMW coding options](https://support.mycarly.com/hc/en-us/articles/20233353072786-Which-coding-options-can-I-use-on-my-BMW)
 - [Carly — Restore coding from backup](https://support.mycarly.com/hc/en-us/articles/20186432585106-How-can-I-restore-Carly-coding-from-a-backup)
+
+
+**Broader software context:** Use the [BMW Diagnostic Software Comparison Matrix](/tools/bmw-diagnostic-software-comparison/) to check the separate coding, fault diagnosis, maintenance, licensing and workshop system boundaries. This specialist comparison remains available with its original research and evidence.

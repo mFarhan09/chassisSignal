@@ -1,0 +1,34 @@
+name: Chassis Recovery Wave 2 QA
+on:
+  push:
+    branches: [recovery/chassis-wave-2-software-matrix]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  wave-2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.14.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.19.0
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: pnpm build
+      - run: node scripts/recovery-chassis-wave2-qa.mjs
+      - run: pnpm exec playwright-core install chromium
+      - name: Browser QA for matrix at phone, tablet, desktop
+        run: |
+          pnpm exec astro preview --host 127.0.0.1 --port 4399 > /tmp/chassis-wave2-preview.log 2>&1 &
+          for i in {1..40}; do
+            if curl -fsS http://127.0.0.1:4399/tools/bmw-diagnostic-software-comparison/ >/dev/null 2>&1; then break; fi
+            sleep 1
+          done
+          curl -fsS http://127.0.0.1:4399/tools/bmw-diagnostic-software-comparison/ >/dev/null || { cat /tmp/chassis-wave2-preview.log; exit 1; }
+          node scripts/recovery-chassis-wave2-browser.mjs

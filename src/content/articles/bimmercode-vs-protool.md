@@ -126,3 +126,6 @@ Use these operating rules regardless of app:
 ## Bottom line
 
 BimmerCode versus ProTool is not a contest between a small and a large feature list. It is a choice between a focused cross-platform coding workflow and an Android-only modular toolset. Start with the exact vehicle and job, eliminate unsupported platforms and generations, price only the needed license, and preserve a recovery path. That produces a better answer than choosing whichever app appears more powerful in isolation.
+
+
+**Broader software context:** Use the [BMW Diagnostic Software Comparison Matrix](/tools/bmw-diagnostic-software-comparison/) to check the separate coding, fault diagnosis, maintenance, licensing and workshop system boundaries. This specialist comparison remains available with its original research and evidence.

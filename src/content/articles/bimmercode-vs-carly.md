@@ -281,3 +281,6 @@ Before paying for software or hardware:
 8. Recheck compatibility, prices, and billing terms immediately before purchase.
 
 That process is less satisfying than a one-word winner, but it is much more likely to produce a toolchain that fits the car and the job.
+
+
+**Broader software context:** Use the [BMW Diagnostic Software Comparison Matrix](/tools/bmw-diagnostic-software-comparison/) to check the separate coding, fault diagnosis, maintenance, licensing and workshop system boundaries. This specialist comparison remains available with its original research and evidence.

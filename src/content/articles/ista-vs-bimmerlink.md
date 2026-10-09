@@ -93,3 +93,6 @@ For a write or service function, use current publisher instructions and confirm 
 ## Bottom line
 
 BimmerLink is the practical mobile choice for documented scans, live data and selected owner service functions. ISTA is the deeper BMW workshop environment for guided diagnosis, repair information and generation-specific programming. Use BimmerLink while the task fits its published boundary; escalate when the evidence path—not the desire for a bigger tool—requires workshop depth.
+
+
+**Broader software context:** Use the [BMW Diagnostic Software Comparison Matrix](/tools/bmw-diagnostic-software-comparison/) to check the separate coding, fault diagnosis, maintenance, licensing and workshop system boundaries. This specialist comparison remains available with its original research and evidence.

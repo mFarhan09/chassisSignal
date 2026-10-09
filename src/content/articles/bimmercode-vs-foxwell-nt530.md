@@ -102,3 +102,6 @@ Coding, diagnostic and service categories were checked against the cited manufac
 - [SG Software - BimmerCode supported adapters](https://bimmercode.app/adapters/?series=g)
 - [Foxwell - Foxwell NT530 multi-system scanner](https://www.foxwelldiag.com/products/foxwell-nt530)
 - [SG Software - BimmerLink for BMW and MINI](https://bimmerlink.app/)
+
+
+**Broader software context:** Use the [BMW Diagnostic Software Comparison Matrix](/tools/bmw-diagnostic-software-comparison/) to check the separate coding, fault diagnosis, maintenance, licensing and workshop system boundaries. This specialist comparison remains available with its original research and evidence.

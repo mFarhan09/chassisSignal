@@ -89,3 +89,6 @@ Choose **BimmerLink** if you use an iPhone, want tight integration with the Bimm
 Choose **bimmer-tool** if you are on Android, focus heavily on diesel and DPF work, and want detailed DPF data with adaptation-value resets — and you have the right adapter, ideally a K+DCAN cable on an older car.
 
 For either app, the rule is the same: confirm your phone platform, match the adapter, and verify the exact function for your model and software before you rely on it. Both are primarily diagnostic and service apps rather than full BMW module-programming environments, so if coding or ECU flashing is the real goal, the answer is a dedicated coding or OEM-grade tool, not a diagnostic app. The honest recommendation is a use-case fit, not a trophy for one name.
+
+
+**Broader software context:** Use the [BMW Diagnostic Software Comparison Matrix](/tools/bmw-diagnostic-software-comparison/) to check the separate coding, fault diagnosis, maintenance, licensing and workshop system boundaries. This specialist comparison remains available with its original research and evidence.

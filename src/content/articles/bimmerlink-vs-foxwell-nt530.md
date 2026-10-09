@@ -105,3 +105,6 @@ Product scope, bundle terms and vehicle coverage were checked against the cited 
 - [Apple App Store - BimmerLink](https://apps.apple.com/us/app/bimmerlink/id1065360416)
 - [Foxwell - Foxwell NT530 multi-system scanner](https://www.foxwelldiag.com/products/foxwell-nt530)
 - [SG Software - BimmerCode for BMW and MINI](https://bimmercode.app/)
+
+
+**Broader software context:** Use the [BMW Diagnostic Software Comparison Matrix](/tools/bmw-diagnostic-software-comparison/) to check the separate coding, fault diagnosis, maintenance, licensing and workshop system boundaries. This specialist comparison remains available with its original research and evidence.
