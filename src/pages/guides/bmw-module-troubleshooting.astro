@@ -1,0 +1,72 @@
+---
+import ResearchToolArticleLayout from '../../components/ResearchToolArticleLayout.astro';
+import ModuleTroubleshootingResearch from '../../components/ModuleTroubleshootingResearch.astro';
+import ModuleTroubleshootingScenarios from '../../components/ModuleTroubleshootingScenarios.astro';
+const symptoms = [
+ {name:'No scanner communication',category:'communications',evidence:'OBD socket power, interface identification, gateway response, module reachability',guide:'bmw-no-communication-with-obd-scanner',caution:'Do not condemn the ECU until the failed communication layer is isolated'},
+ {name:'Body electronics / FRM',category:'body',evidence:'Vehicle architecture, footwell module presence, stored faults, power and K-CAN context',guide:'bmw-frm-module-diagnostic-tool',caution:'Coding and module repair are different from diagnosis'},
+ {name:'Battery drain / sleep',category:'electrical',evidence:'Battery health, charge state, wake history, sleep timing and current measurement',guide:'bmw-battery-drain-diagnostic-tool',caution:'A wake event is not by itself a defective module'},
+ {name:'VANOS / cam timing',category:'powertrain',evidence:'Code context, commanded versus measured angle, engine family and guided tests',guide:'bmw-vanos-diagnostic-tool',caution:'One camshaft fault code does not prove a solenoid failed'},
+ {name:'Cooling / water pump',category:'powertrain',evidence:'Power, faults, temperature data, pump control and cooling system state',guide:'bmw-electronic-water-pump-diagnostic-tool',caution:'Never run a cooling test without the correct vehicle precautions'},
+ {name:'ABS / wheel-speed',category:'chassis',evidence:'Affected brake ECU, live wheel-speed signals, network and safety context',guide:'bmw-wheel-speed-sensor-diagnostic-tool',caution:'ABS warnings can have network, supply or sensor causes'},
+ {name:'Electronic parking brake',category:'chassis',evidence:'Brake system architecture, EMF module, command and service prerequisites',guide:'bmw-electric-parking-brake-service-mode-scanner',caution:'Service mode is not the mechanical brake repair'},
+ {name:'Steering angle / DSC',category:'chassis',evidence:'Relevant controller, stored faults, alignment and sensor plausibility',guide:'bmw-steering-angle-sensor-calibration-tool',caution:'Calibration requires correct vehicle-specific conditions'},
+ {name:'DPF / diesel warning',category:'powertrain',evidence:'Filter status, DPF sensors, related faults and OEM procedure',guide:'bmw-dpf-regeneration-scan-tool',caution:'Regeneration is not a generic reset and can be unsafe'},
+ {name:'Ride height / suspension',category:'chassis',evidence:'Sensor values, suspension architecture, loading and documented calibration',guide:'bmw-ride-height-calibration-scan-tool',caution:'Incorrect ride-height settings can affect safety'},
+ {name:'Parking assistance',category:'body',evidence:'PDC module availability, individual sensor data and wiring checks',guide:'bmw-parking-sensor-diagnostic-tool',caution:'A missing beep is not proof of one sensor'},
+ {name:'Transfer case adaptation',category:'chassis',evidence:'Transfer-case controller, drivetrain symptoms and adaptation context',guide:'bmw-transfer-case-adaptation-reset-tool',caution:'Resetting learned values is not fault repair'}
+];
+const related=[
+ ['bmw-no-communication-with-obd-scanner','Scanner cannot communicate','Diagnose port, adapter and gateway layers'],
+ ['bmw-frm-module-diagnostic-tool','FRM/body module diagnosis','Body electronics and evidence before repair'],
+ ['bmw-battery-drain-diagnostic-tool','Battery drain diagnosis','Sleep/wake and electrical measurement'],
+ ['bmw-vanos-diagnostic-tool','VANOS diagnostic research','Fault context and requested/actual cam data'],
+ ['bmw-electronic-water-pump-diagnostic-tool','Electric water pump evidence','Cooling operation and scanner boundaries'],
+ ['bmw-electric-parking-brake-service-mode-scanner','Electric parking brake service','Brake system identification and safety'],
+ ['bmw-wheel-speed-sensor-diagnostic-tool','Wheel-speed sensor diagnosis','ABS signals and module context'],
+ ['bmw-dpf-regeneration-scan-tool','DPF regeneration diagnostics','Investigate before running a service command'],
+ ['bmw-steering-angle-sensor-calibration-tool','Steering-angle calibration','Vehicle-specific calibration prerequisites'],
+ ['bmw-ride-height-calibration-scan-tool','Ride-height calibration','Suspension module and setup evidence'],
+ ['bmw-scanner-abs-airbag-codes','ABS and airbag scanner coverage','When generic code reading is insufficient'],
+ ['bmw-code-reader-vs-scan-tool','Code reader versus BMW scan tool','Choose the right diagnostic class']
+];
+---
+<ResearchToolArticleLayout title="BMW Module Troubleshooting: An Evidence-First Diagnostic Hub" description="Trace BMW symptoms to the correct module, measurements, scanner capabilities and specialist guide without mistaking a fault code for a failed part." section="Guides" sectionHref="/guides/" readingTime="19 min read" safety="HIGH" toc={[{id:'symptom-finder',label:'Symptom finder'},{id:'diagnostic-layers',label:'Diagnostic evidence layers'},{id:'triage',label:'Stepwise troubleshooting'},{id:'case-studies',label:'Case studies'},{id:'sources',label:'Sources and limitations'},{id:'related-guides',label:'Related articles'}]}>
+<div class="module-hub">
+<p class="lede">A BMW fault message names a detected condition, not necessarily the part to replace. This reference connects symptoms to the <strong>right control unit, the evidence that can support a diagnosis, and the original specialist article</strong>. It is a navigation and reasoning guide, not a menu of unsafe reset commands.</p>
+<p>Existing Chassis Signal articles already examine FRM faults, VANOS angles, battery drain, steering calibration, DPF status and communication problems in detail. We are preserving their original diagrams, tables and sources. This hub makes those distinct investigations easier to find without merging them into shallow variations of the same topic.</p>
+<figure><picture><source media="(max-width:650px)" srcset="/images/guides/bmw-module-troubleshooting/diagnostic-evidence-ladder-mobile.svg"/><img src="/images/guides/bmw-module-troubleshooting/diagnostic-evidence-ladder.svg" width="1200" height="460" loading="lazy" alt="Diagnostic evidence advances from identifying a symptom to reading modules, correlating live data, testing independent systems and using approved procedures"/></picture><figcaption>Evidence increases step by step. A stored code alone should not become an unsupported replacement recommendation.</figcaption></figure>
+<section id="symptom-finder" class="panel">
+<h2>Find the relevant BMW module or symptom</h2>
+<p>Select a general category to narrow the existing research. The list is a directory of independently useful investigations, not a vehicle coverage certificate. Individual chassis and installed controllers may differ.</p>
+<label class="finder-control">Symptom area <select id="area"><option value="all">All symptom families</option><option value="communications">Scanner and communication</option><option value="body">Body electronics</option><option value="electrical">Battery and charging</option><option value="powertrain">Engine and emissions</option><option value="chassis">Brakes, steering and chassis</option></select></label>
+<p id="result-count" role="status" aria-live="polite">Showing all 12 independent diagnostic topics.</p>
+<div class="finder-results">{symptoms.map(s=><article class="finder-item" data-category={s.category}><h3><a href={`/guides/${s.guide}/`}>{s.name} →</a></h3><p><strong>Evidence to collect:</strong> {s.evidence}</p><p><strong>Do not assume:</strong> {s.caution}</p></article>)}</div>
+<p id="empty-state" hidden>No preserved diagnostic topic currently appears under this filter. Try another symptom family or use <a href="/guides/">the full guides index</a>; absence from this directory does not prove the vehicle lacks that system.</p>
+</section>
+<section id="diagnostic-layers"><h2>What the scanner can and cannot establish</h2>
+<div class="scroll"><table><thead><tr><th>Evidence layer</th><th>What is actually demonstrated</th><th>What remains unknown</th><th>Related research</th></tr></thead><tbody>
+<tr><th>1. Physical connection</th><td>Socket/interface communicates under stated conditions</td><td>Whether every vehicle controller is accessible</td><td><a href="/tools/bmw-vehicle-interface-compatibility/">Vehicle/interface lookup</a></td></tr>
+<tr><th>2. Module inventory</th><td>Responding ECUs and diagnostic route</td><td>Why one module or gateway is absent</td><td><a href="/guides/bmw-no-communication-with-obd-scanner/">Communication troubleshooting</a></td></tr>
+<tr><th>3. Fault memory</th><td>ECU stored a specific condition at a point in time</td><td>Underlying failed component or cause</td><td><a href="/guides/bmw-code-reader-vs-scan-tool/">Code reader vs scan tool</a></td></tr>
+<tr><th>4. Live data</th><td>Observed parameter values in the operating context</td><td>Whether sensors, wiring or actuators explain the deviation</td><td><a href="/guides/bmw-vanos-diagnostic-tool/">VANOS evidence</a></td></tr>
+<tr><th>5. Guided and active tests</th><td>Approved response under controlled procedure</td><td>Independent permission to reset or program</td><td><a href="/guides/bmw-bidirectional-scan-tool-functions/">Bidirectional functions</a></td></tr>
+</tbody></table></div></section>
+<figure><picture><source media="(max-width:650px)" srcset="/images/guides/bmw-module-troubleshooting/diagnostic-failure-domains-mobile.svg"/><img src="/images/guides/bmw-module-troubleshooting/diagnostic-failure-domains.svg" width="1200" height="460" loading="lazy" alt="Fault isolation across vehicle electrical state, communication, module, sensor data and authorized service functions"/></picture><figcaption>When a module is unavailable, isolate electrical, network, interface, software and ECU causes instead of swapping parts.</figcaption></figure>
+<section id="triage"><ModuleTroubleshootingResearch /></section>
+<section id="case-studies"><ModuleTroubleshootingScenarios /></section>
+<section id="sources" class="panel"><h2>Methodology, primary sources and safety boundary</h2>
+<p>Evidence review: October 10, 2026. This is a documented diagnostic decision framework, not physical testing or a universal repair procedure. The linked specialist articles retain their original source documents, tool-specific exceptions, diagrams and diagnostic methods. Independent shop access and individual vehicle condition can affect any test.</p>
+<ul><li><a href="https://www.bmwtechinfo.com/tisUI/assets/site_information.pdf">BMW Group AOS/TIS overview: ISTA fault diagnosis, test plans, repair instructions and wiring diagrams</a></li><li><a href="https://bmwtechinfo.bmwgroup.com/tisUI/">BMW North America technical information service and authorized support</a></li><li><a href="https://bimmerlink.app/">BimmerLink developer: fault memory, sensor data and vehicle-conditioned service functions</a></li><li><a href="https://www.bimmergeeks.net/protool">BimmerGeeks ProTool: diagnostic versus coding scope and vehicle exceptions</a></li></ul>
+<p>For airbags, braking, steering, high voltage, active tests or ECU programming, obtain the applicable manufacturer procedure and qualified technician support. Do not command a write or clear evidence merely because this hub links to a tool that advertises the menu entry.</p>
+</section>
+<section class="related" id="related-guides"><h2>Related Chassis Signal diagnostic guides</h2><p>Original topic-specific research stays published. Choose the guide that matches the observed problem, then check its exact chassis, module and safety conditions.</p><div class="related-grid">{related.map(([slug,label,desc])=><article class="wave5-related"><h3><a href={`/guides/${slug}/`}>{label} →</a></h3><p>{desc}</p></article>)}</div></section>
+</div>
+<script>
+const select=document.querySelector<HTMLSelectElement>('#area')!,items=[...document.querySelectorAll<HTMLElement>('.finder-item')],count=document.querySelector<HTMLElement>('#result-count')!,empty=document.querySelector<HTMLElement>('#empty-state')!;
+function refresh(){let visible=0;for(const item of items){const show=select.value==='all'||item.dataset.category===select.value;item.hidden=!show;if(show)visible++;}count.textContent=`Showing ${visible} of ${items.length} independently researched topics.`;empty.hidden=visible!==0;}select.addEventListener('change',refresh);refresh();
+</script>
+<style is:global>
+.module-hub .scroll{max-width:100%;overflow-x:auto}.module-hub table{width:100%;min-width:600px;border-collapse:collapse;font:13px/1.5 var(--sans)}.module-hub td,.module-hub th{padding:13px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}.module-hub .finder-control{display:grid;gap:6px;font:600 14px var(--sans)}.module-hub select{background:#fff;border:1px solid #8f9e98;border-radius:8px;padding:12px;max-width:100%}.module-hub .finder-results{display:grid;grid-template-columns:1fr;gap:12px}.module-hub .finder-item{padding:16px 20px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.57)}.module-hub .finder-item h3{font-size:22px;margin:0 0 8px}.module-hub .finder-item p{font:14px/1.55 var(--sans);margin:6px 0}.module-hub .finder-item[hidden]{display:none}.module-hub figure img{height:auto;width:100%}.module-hub figcaption{font:13px/1.5 var(--sans)}.module-hub .related-grid{display:grid;grid-template-columns:1fr;gap:13px}.module-hub .wave5-related{background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px}.module-hub .wave5-related h3{margin:0 0 8px;font-size:22px}.module-hub .wave5-related p{font:14px/1.5 var(--sans);margin:0}
+</style>
+</ResearchToolArticleLayout>
