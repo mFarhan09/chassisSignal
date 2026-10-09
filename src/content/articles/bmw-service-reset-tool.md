@@ -102,6 +102,24 @@ First verify the maintenance schedule and finish the physical job. Second, read 
   <figcaption>Preserve the original CBS values and verify the new interval.</figcaption>
 </figure>
 
+
+### A stronger service-record eligibility check
+
+A maintenance reminder should only be reset after the corresponding work has been completed. Before choosing the cluster method or a scanner, establish the vehicle generation, the specific CBS item, the maintenance event and whether the car reports an underlying fault that prevents the normal sequence. A product's generic service-reset badge is not proof of support for each item: oil, front/rear brake service and statutory inspection reminders can be exposed through different interfaces or workflows.
+
+If the car still reports an unresolved brake-wear or diagnostic condition, repeatedly clearing the reminder can obscure rather than solve the problem. Check the exact manufacturer's service procedure and the software's supported function list; a successful read-only vehicle scan is insufficient evidence that a reset is appropriate. For the purchasing decision, compare a manual supported cluster route, a documented scanner-level CBS function and an actual workshop fault investigation as distinct options.
+
+| Evidence to record | What it resolves |
+| --- | --- |
+| Chassis and CBS entry | Which service item and controller are involved |
+| Original warning and completed work | Whether the reminder corresponds to a genuine service event |
+| Existing faults or refused operation | Whether the problem is service recordkeeping or diagnosis |
+| Software and interface version | Whether the advertised reset applies to that vehicle |
+| Post-service record | Whether the correct indicator and interval were updated |
+
+This is a recordkeeping issue, not a substitute for a brake procedure or control-unit software change. The [service-function matrix](/tools/bmw-service-function-matrix/) classifies this boundary; BMW's [authorized technical information portal](https://bmwtechinfo.bmwgroup.com/tisUI/) provides the vehicle-specific service literature where needed.
+
+
 ## What to buy
 
 Buy no tool when the documented cluster method covers the occasional completed service and accepts the reset. Choose a supported app when you already have the right phone and adapter and want additional BMW diagnosis. Choose a BMW-aware handheld for repeat independent use, or a professional tablet for documented multi-brand work.
@@ -126,19 +144,3 @@ Save the original service values and the post-reset confirmation with the mainte
 
 A Condition-Based Service reminder reset records completed work; it is not the same task as battery registration, DSC active braking tests or adaptation after repair. For the cross-system qualification checklist, see the [BMW Service Function Eligibility and Safety Matrix](/tools/bmw-service-function-matrix/). This specialist guide remains the original, detailed explanation of its specific procedure and retains all existing diagrams, tables and source evidence. Do not interpret the matrix as permission to run an unsupported reset, calibration or active test.
 
-
-### A stronger service-record eligibility check
-
-A maintenance reminder should only be reset after the corresponding work has been completed. Before choosing the cluster method or a scanner, establish the vehicle generation, the specific CBS item, the maintenance event and whether the car reports an underlying fault that prevents the normal sequence. A product's generic service-reset badge is not proof of support for each item: oil, front/rear brake service and statutory inspection reminders can be exposed through different interfaces or workflows.
-
-If the car still reports an unresolved brake-wear or diagnostic condition, repeatedly clearing the reminder can obscure rather than solve the problem. Check the exact manufacturer's service procedure and the software's supported function list; a successful read-only vehicle scan is insufficient evidence that a reset is appropriate. For the purchasing decision, compare a manual supported cluster route, a documented scanner-level CBS function and an actual workshop fault investigation as distinct options.
-
-| Evidence to record | What it resolves |
-| --- | --- |
-| Chassis and CBS entry | Which service item and controller are involved |
-| Original warning and completed work | Whether the reminder corresponds to a genuine service event |
-| Existing faults or refused operation | Whether the problem is service recordkeeping or diagnosis |
-| Software and interface version | Whether the advertised reset applies to that vehicle |
-| Post-service record | Whether the correct indicator and interval were updated |
-
-This is a recordkeeping issue, not a substitute for a brake procedure or control-unit software change. The [service-function matrix](/tools/bmw-service-function-matrix/) classifies this boundary; BMW's [authorized technical information portal](https://bmwtechinfo.bmwgroup.com/tisUI/) provides the vehicle-specific service literature where needed.
