@@ -1,0 +1,58 @@
+---
+import { getCollection, render } from 'astro:content';
+const all=await getCollection('articles');
+const autel=all.find(article => article.data.slug==='autel-scanner-for-bmw');
+const active=all.find(article => article.data.slug==='bmw-bidirectional-scan-tool-functions');
+if(!autel || !active) throw new Error('Both original forensic conversion research sources are mandatory');
+const AutelContent=(await render(autel)).Content;
+const ActiveContent=(await render(active)).Content;
+---
+<section class="source-archive" id="final-two-tool-conversions" aria-label="Autel and bidirectional scanner original research">
+  <h2>Two specialist research sources integrated into the scanner database</h2>
+  <p>Both original guides were classified as <strong>convert to database/tool</strong> in the October 4 forensic audit. The independent model and command-level evidence now sits beside the filterable scanner index. Expand either preserved research section to inspect the full original model comparisons, practical tables, primary sources and diagrams. The underlying Markdown and image assets are retained without altering the original evidence. This is <strong>not</strong> new vehicle-level hands-on testing.</p>
+  <article id="autel-scanner-for-bmw" class="source-article">
+    <h3>Autel MK808S versus MK900: exact model, interface and update decision</h3>
+    <p>For BMW owners comparing Autel devices, the key question is whether the exact model, connection path and licensed software support a required BMW module or task. The MK900 manufacturer comparison lists additional pre/post reporting and support for DoIP and CAN FD; the base MK808S and BT/TS variants must not be mixed. See <a href="https://autel.com/mk3/4171.jhtml">Autel MK900 product specifications</a> and <a href="https://www.autel.com/mk2/3990.jhtml">Autel MK808S family specifications</a>. These are maker-level claims, not actual live vehicle eligibility results.</p>
+    <div class="source-scroll"><table>
+    <caption>Original Autel source preserved as a model-specific decision aid</caption><thead><tr><th>Buyer requirement</th><th>MK808S wired tablet</th><th>MK900 wired tablet</th><th>Must verify separately</th></tr></thead><tbody>
+    <tr><td>Read BMW enhanced faults and live data</td><td>General capability listed</td><td>General capability listed</td><td>VIN, engine, controller and app/software version</td></tr>
+    <tr><td>Component command / active test</td><td>Category advertised</td><td>Category advertised</td><td>Exact named function and safe preconditions</td></tr>
+    <tr><td>DoIP or CAN FD requirement</td><td>Check hardware/adapter limitations</td><td>Manufacturer lists support</td><td>Vehicle network and exact package</td></tr>
+    <tr><td>Wireless link or complete TPMS workflow</td><td>Not implied by base suffix</td><td>Not implied by base suffix</td><td>BT/TS exact models and included VCI</td></tr>
+    <tr><td>Long-term use</td><td>Update license must be checked</td><td>Update license must be checked</td><td>Market, expiry and offline functionality</td></tr>
+    </tbody></table></div>
+    <details><summary>Read the complete archived Autel specialist guide and original diagrams</summary><div class="archived-body"><AutelContent /></div></details>
+  </article>
+  <article id="bmw-bidirectional-scan-tool-functions" class="source-article">
+    <h3>BMW bidirectional functions: exact ECU command versus a marketing badge</h3>
+    <p>Bidirectional means <strong>some</strong> output commands may be issued to a supported controller. It does not establish exact-vehicle eligibility, safe operating conditions or permission for actuator programming. The <a href="https://autel.com/mk3/4171.jhtml">Autel MK900</a> and <a href="https://www.foxwelldiag.com/products/foxwell-nt530">Foxwell NT530 Plus</a> descriptions advertise active tests, but the correct workflow requires a specific module and command, OEM test plan, physical prerequisites and documented observed result.</p>
+    <div class="source-scroll"><table>
+    <caption>Command-level evidence hierarchy migrated from the original guide</caption><thead><tr><th>Job</th><th>What the device must demonstrate</th><th>Not sufficient</th></tr></thead><tbody>
+    <tr><td>Read fault memory</td><td>Exact control-unit connectivity and DTC detail</td><td>Generic vehicle-brand compatibility</td></tr>
+    <tr><td>Graph a live parameter</td><td>Named ECU sensor channel and context</td><td>General “live data” checkbox</td></tr>
+    <tr><td>Command an output</td><td>Exact supported ECU test and approved operating conditions</td><td>“Bidirectional” advertising</td></tr>
+    <tr><td>Run a service procedure</td><td>Approved vehicle-specific routine with safety requirements</td><td>Reset-count headline</td></tr>
+    <tr><td>Write configuration or ECU firmware</td><td>Separate authorized coding/programming workflow</td><td>Ability to read or command a component</td></tr>
+    </tbody></table></div>
+    <p>High-risk brakes, restraint, steering, fuel, coolant or electronically actuated systems require exact manufacturer instructions and qualified operators. The <a href="/tools/bmw-service-function-matrix/">BMW Service Function Eligibility Matrix</a> cross-checks safe categories, not exact VIN support.</p>
+    <details><summary>Read the complete archived bidirectional guide and original diagrams</summary><div class="archived-body"><ActiveContent /></div></details>
+  </article>
+</section>
+<style>
+.source-archive{margin-block:3rem;max-width:100%;scroll-margin-top:2rem}
+.source-archive .source-article{margin:2.25rem 0;border-top:1px solid #becfc7;padding-top:1rem;scroll-margin-top:2rem}
+.source-archive h3{font-size:clamp(1.15rem,2vw,1.5rem)}
+.source-archive .source-scroll,.source-archive .archived-body{overflow-x:auto;max-width:100%}
+.source-archive table{border-collapse:collapse;width:100%;min-width:630px;font-size:.94rem}
+.source-archive th,.source-archive td{padding:.8rem;border-bottom:1px solid #becfc7;text-align:left;vertical-align:top}
+.source-archive details{border:1px solid #b6c5bc;background:#f8faf8;padding:1rem;border-radius:12px;margin:1.25rem 0}
+.source-archive summary{cursor:pointer;font-weight:700}
+.source-archive .archived-body{padding:1rem 0;line-height:1.75}
+.source-archive .archived-body :global(h2){font-size:1.4rem}
+.source-archive .archived-body :global(h3){font-size:1.15rem}
+.source-archive .archived-body :global(img){max-width:100%;height:auto}
+.source-archive .archived-body :global(figure){margin:1.5rem 0}
+.source-archive .archived-body :global(figcaption){font-size:.9rem}
+.source-archive .archived-body :global(table){width:100%;min-width:660px}
+@media(max-width:650px){.source-archive details{padding:.75rem}.source-archive .archived-body{padding:.65rem 0}}
+</style>

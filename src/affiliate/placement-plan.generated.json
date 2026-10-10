@@ -588,8 +588,8 @@
   "bmw-battery-drain-diagnostic-tool": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 1555,
-    "h2Count": 8,
+    "wordCount": 2399,
+    "h2Count": 10,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -606,8 +606,8 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "Sleep is a state, not a stopwatch trick",
+        "anchorIndex": 3,
+        "headingText": "When direct electrical measurement becomes necessary",
         "variant": "compact_cta",
         "productKeys": [
           "fluke-88v"
@@ -618,8 +618,8 @@
       },
       {
         "position": "end",
-        "anchorIndex": 6,
-        "headingText": "The decision rule",
+        "anchorIndex": 7,
+        "headingText": "October 2026 controlled parasitic-draw evidence packet",
         "variant": "final_cta",
         "productKeys": [
           "fluke-88v"
@@ -814,8 +814,8 @@
   "bmw-coding-vs-programming": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 1134,
-    "h2Count": 7,
+    "wordCount": 2080,
+    "h2Count": 9,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -832,8 +832,8 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "What common tool classes actually own",
+        "anchorIndex": 3,
+        "headingText": "Risk rises when the write is longer and more coordinated",
         "variant": "compact_cta",
         "productKeys": [
           "schumacher-inc100"
@@ -844,8 +844,8 @@
       },
       {
         "position": "end",
-        "anchorIndex": 5,
-        "headingText": "The decision in one line",
+        "anchorIndex": 6,
+        "headingText": "October 2026 software-operation authorization matrix",
         "variant": "final_cta",
         "productKeys": [
           "schumacher-inc100"
@@ -1117,8 +1117,8 @@
   "bmw-frm-module-diagnostic-tool": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 1323,
-    "h2Count": 7,
+    "wordCount": 2075,
+    "h2Count": 9,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -1135,8 +1135,8 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "Separate supply and network evidence from module blame",
+        "anchorIndex": 4,
+        "headingText": "Keep coding, programming and repair separate",
         "variant": "compact_cta",
         "productKeys": [
           "fluke-88v"
@@ -1147,8 +1147,8 @@
       },
       {
         "position": "end",
-        "anchorIndex": 6,
-        "headingText": "The diagnostic-tool purchase rule",
+        "anchorIndex": 7,
+        "headingText": "October 2026 FRM architecture and evidence — do not misidentify the ECU",
         "variant": "final_cta",
         "productKeys": [
           "fluke-88v"
@@ -1297,8 +1297,8 @@
   "bmw-no-communication-with-obd-scanner": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 1558,
-    "h2Count": 8,
+    "wordCount": 2383,
+    "h2Count": 10,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -1315,8 +1315,8 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 3,
-        "headingText": "Layer 3: gateway and protocol scope",
+        "anchorIndex": 4,
+        "headingText": "Layer 4: use the missing-module pattern",
         "variant": "compact_cta",
         "productKeys": [
           "fluke-88v"
@@ -1327,8 +1327,8 @@
       },
       {
         "position": "end",
-        "anchorIndex": 6,
-        "headingText": "When replacement becomes a rational hypothesis",
+        "anchorIndex": 7,
+        "headingText": "October 2026 no-communication failure-location worksheet",
         "variant": "final_cta",
         "productKeys": [
           "fluke-88v"
@@ -1432,8 +1432,8 @@
   "bmw-scanner-abs-airbag-codes": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 1655,
-    "h2Count": 11,
+    "wordCount": 2257,
+    "h2Count": 12,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -1450,8 +1450,8 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 4,
-        "headingText": "Three candidates worth shortlisting",
+        "anchorIndex": 6,
+        "headingText": "Code reading, clearing, and repair are three different events",
         "variant": "compact_cta",
         "productKeys": [
           "autel-mx900"
@@ -1462,8 +1462,8 @@
       },
       {
         "position": "end",
-        "anchorIndex": 9,
-        "headingText": "Final buying rule",
+        "anchorIndex": 10,
+        "headingText": "October 2026 ABS and SRS scan-tool capability truth table",
         "variant": "final_cta",
         "productKeys": [
           "autel-mx900"

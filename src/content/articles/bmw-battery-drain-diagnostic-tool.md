@@ -130,6 +130,37 @@ Buy or use the tool that can answer the next unresolved question. If the battery
 
 The winning workflow is evidence first: preserve history, separate the failure layer, verify the exact BMW test plan, then measure only what the plan requires. A battery-drain tool is valuable when its proof boundary is clear.
 
+
+## October 2026 controlled parasitic-draw evidence packet
+
+BMW's [E70 energy-management training reference (ST605)](https://bmwtechinfo.bmwgroup.com/tech_training_manual/ST605%20E70%20Complete%20Vehicle.pdf) treats battery diagnosis, **closed-circuit current**, **energy-history memory**, **sleep blockers** and **bus wake-ups** as different investigative layers. That is useful historical engineering evidence, not a specification that can be transplanted from E70 to every F-, G- or later BMW. The [F01 ST811 training reference](https://bmwtechinfo.bmwgroup.com/tech_training_manual/ST811%20F01%20Complete%20Vehicle.pdf) further shows how load shut-down depends on system state; one universal number of minutes or milliamps is not an adequate buying rule.
+
+| Distinct complaint | First objective proof | BMW-specific follow-up | False inference to avoid |
+| --- | --- | --- | --- |
+| No start after several days | Battery condition, measured rest state, usage and age | IBS faults and relevant energy history | Condemning the alternator from a dead battery alone |
+| Battery recovers after external charging but discharges again | Controlled current record *using the VIN repair plan* | Sleep-blocker and bus-wakeup histories if the ECU exposes them | Declaring a module defective from one wake event |
+| Charging warning while driving | Charging-system faults and voltage under the proper procedure | Power management or LIN/IBS supply diagnosis as specified | Calling this a key-off parasitic drain |
+| Low-voltage errors across many modules | Chronology, supply state, last jump start and original faults | Whole-vehicle fault/network record before clearing | Replacing several modules because each logged voltage faults |
+| New battery, warning persists | Battery type/capacity, installation history and registration | Identify whether a separate coding/configuration task is required | Repeated battery registration as a repair experiment |
+
+### Technician handoff: capture once, preserve chronology
+
+Record VIN, battery make/type/capacity, manufacturing/service history, recent charging or jump-start events, aftermarket accessories and whether the car was recently remotely awakened. Attach the **entire pre-clear vehicle scan**, a dated log of key-off/sleep observations according to the *exact BMW chassis procedure*, diagnostic app/ISTA version and the measurement method. Explain whether the probe itself or opening the car could have disturbed sleep. Do **not** quote a single “acceptable current” from a different BMW generation.
+
+Record a distinct result for each layer: **(1)** battery capacity and charge state, **(2)** charging operation, **(3)** commanded/observed sleep, **(4)** measured load where professionally safe, and **(5)** suspected circuit only after authorized isolation. Stop and refer electrical work to a qualified technician when the measurement method, meter protection rating, high-current path, or state of the vehicle is uncertain. This is not an invitation to put a handheld multimeter in series with an unknown high-load circuit.
+
+### Tool purchase decision based on missing evidence
+
+| Your next unanswered question | Instrument class | Required proof |
+| --- | --- | --- |
+| Does the replacement battery still have usable capacity? | Battery condition tester | Battery type/CCA/test constraints actually supported |
+| What caused energy management to complain or prevent sleep? | BMW-enhanced diagnostic suite | Named VIN/ECU energy-history and sleep-monitor channels, report export |
+| What current is flowing in the approved rest state? | Properly rated current-measurement equipment operated professionally | Vehicle test plan, safe connection and suitable resolution |
+| Can a general OBD reader substitute? | **No**, not by default | Generic emissions DTCs do not establish body/gateway energy-management access |
+
+The [BMW scanner database](/tools/bmw-scanner-capability-database/) is a product-category index. This guide independently owns the **parasitic-draw evidence chain**; the [battery-registration guide](/guides/bmw-battery-registration-scanner/) owns a replacement-registration workflow, not the cause of a repeated discharge. Reviewed **10 October 2026** from BMW primary training references; no live parasitic-load measurements were performed.
+
+
 ## Sources consulted
 
 - [BMW Group — source reference](https://bmwtechinfo.bmwgroup.com/tech_training_manual/ST605%20E70%20Complete%20Vehicle.pdf)

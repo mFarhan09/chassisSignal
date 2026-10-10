@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import {execFileSync} from 'node:child_process';
-import {consolidatedRedirects,retiredGuidePaths,publishedGuidesAfterAuditMerges} from '../src/data/consolidated-redirects.mjs';
+import {consolidatedRedirects,convertedToolSourceRedirects,retiredGuidePaths,publishedGuidesAfterAuditMerges} from '../src/data/consolidated-redirects.mjs';
 const assert=(v,msg)=>{if(!v)throw Error(msg)};
 const entries=Object.entries(consolidatedRedirects);
 assert(entries.length===32,'forensic audit must contain 32 merge/redirect candidates');
@@ -11,8 +11,17 @@ assert(entries.filter(x=>x[1]==='/guides/bmw-diagnostic-interface-map/').length=
 assert(entries.filter(x=>x[1]==='/tools/bmw-vehicle-interface-compatibility/').length===1,'MINI merge count');
 const lines=fs.readFileSync('dist/_redirects','utf8').trim().split(/\r?\n/);
 assert(lines.includes('/home / 301')&&lines.includes('/articles /research/ 301'),'existing redirects lost');
-assert(lines.length===66,'64 exact source redirect variants and two originals required; got '+lines.length);
+assert(lines.length===70,'64 Wave7 variants, four separately approved tool-conversion variants and two originals required; got '+lines.length);
 assert(new Set(lines.map(x=>x.split(' ')[0])).size===lines.length,'duplicate 301 source');
+// Additive conversion audit: never reclassify the original 32 wave7 sources.
+assert(Object.keys(convertedToolSourceRedirects).length===2,'two approved tool conversions required');
+for(const [slug,target] of Object.entries(convertedToolSourceRedirects)){
+ for(const variant of ['/guides/'+slug+'/','/guides/'+slug]){
+  assert(lines.includes(variant+' '+target+'#'+slug+' 301'),'tool conversion 301 missing '+variant);
+  assert(retiredGuidePaths.has(variant),'tool conversion exclusion missing '+variant);
+ }
+}
+
 const sitemapFiles=fs.readdirSync('dist').filter(n=>n.startsWith('sitemap')&&n.endsWith('.xml'));assert(sitemapFiles.includes('sitemap-index.xml'),'sitemap index missing');
 const sitemap=sitemapFiles.map(x=>fs.readFileSync('dist/'+x,'utf8')).join('\n');
 const mainLinks=['/guides/','/software/','/comparisons/','/coding-adapters/','/compatibility/'];
@@ -67,7 +76,16 @@ const explicit8d=(process.env.CHASSIS_WAVE8D_BATCH3_REBUILD==='1' && modified.le
   modified.every(p=>approved8d.includes(p)));
 // These three original intent-decision-gate sources may be *enhanced in place*,
 // but this exception does not authorize any 301, retirement or proven intent claim.
-assert(!originalChanges||explicit8b||explicit8c||explicit8d,
- 'retirement should preserve the 32 archived source guides except governed 8B/8C/8D rebuild cohorts');
+const approvedFinalMinor=[
+ 'bmw-battery-drain-diagnostic-tool','bmw-coding-vs-programming',
+ 'bmw-frm-module-diagnostic-tool','bmw-no-communication-with-obd-scanner',
+ 'bmw-scanner-abs-airbag-codes'
+].map(s=>'src/content/articles/'+s+'.md');
+const explicitFinalMinor=(process.env.CHASSIS_FINAL_MINOR_REBUILD==='1' && modified.length===5 &&
+  modified.every(p=>approvedFinalMinor.includes(p)));
+// This opt-in protects every prior source; Wave 9 conversion source Markdown
+// is unchanged and its complete public evidence is rendered by the canonical.
+assert(!originalChanges||explicit8b||explicit8c||explicit8d||explicitFinalMinor,
+ '32 archived sources must remain untouched; allow only exact 8B/8C/8D or final-five rebuild cohort');
 assert(sitemapFiles.length>1,'sitemap content file missing');
 console.log('AUDIT MERGE+301 CONSOLIDATION PASS:',{retiredPublicURLs:entries.length,redirectRules:entries.length*2,publishedDiscoveryGuides:publishedGuidesAfterAuditMerges,preservedSourceArticles:69,sitemap:true,destinations:5});
