@@ -33,5 +33,5 @@ jobs:
       - run: node scripts/recovery-chassis-wave8b-pricing-qa.mjs
       - run: pnpm test
       - run: pnpm build
-      - run: node scripts/recovery-chassis-wave7-p0-qa.mjs
+      - run: CHASSIS_WAVE8B_EDITORIAL_REBUILD=1 node scripts/recovery-chassis-wave7-p0-qa.mjs
       - run: node scripts/recovery-chassis-wave8a-editorial.mjs
