@@ -109,13 +109,13 @@ export const relationshipClassifications: Record<string, RelationshipClassificat
   'bmw-transfer-case-adaptation-reset-tool': c('RELATED_DIAGNOSTIC_TOOL', 'MaxiSYS Ultra is a workshop platform for the pre/post checks, with no claimed BMW VTG reset.'),
   'bmw-vanos-diagnostic-tool': c('RELATED_DIAGNOSTIC_TOOL', 'DS808S-BT is the full-tablet route, shown only inside the VANOS-capability gate; exact BMW coverage must be confirmed.'),
   'bmw-wheel-speed-sensor-diagnostic-tool': c('RELATED_DIAGNOSTIC_TOOL', 'MX900 is recommended within the BMW DSC and live-data capability gate; four-corner access requires confirming the exact BMW.'),
-  'carly-subscription-cost': c('RELATED_DIAGNOSTIC_TOOL', 'Carly hardware is unavailable; CX is shown only as an alternative BMW app route and never as Carly-compatible.'),
+  'carly-subscription-cost': c('RELATED_DIAGNOSTIC_TOOL', 'No Carly scanner is present as a verified affiliate offer in the current registry. This OBDLink CX card is for a different, developer-supported app workflow, not a claim of Carly compatibility.'),
   'carly-vs-foxwell-nt530': c('RELATED_DIAGNOSTIC_TOOL', 'Neither named side has an approved listing; the 7910P+ is a clearly separated BMW-scanner alternative.'),
   'foxwell-nt530-vs-nt710': c('RELATED_DIAGNOSTIC_TOOL', 'The rejected GM NT710 and the unverified NT530 Plus listings are excluded; the 7910P+ is labelled as an available BMW-scanner alternative.'),
   'ista-vs-bimmerlink': c('RELATED_DIAGNOSTIC_TOOL', 'CX is the documented BimmerLink side and is never presented as an ISTA interface or ICOM replacement.'),
   'mini-diagnostic-app': c('RELATED_DIAGNOSTIC_TOOL', 'CX is documented for BimmerCode and BimmerLink; MINI, app and feature support still require publisher checks.'),
   'obd-app-vs-handheld-scanner': c('RELATED_DIAGNOSTIC_TOOL', 'CX and MX808S represent the app and tablet architectures the article compares.'),
-  'protool-pricing': c('RELATED_DIAGNOSTIC_TOOL', 'ProTool hardware is unavailable; CX is a labelled alternative BMW app interface for a different supported route.'),
+  'protool-pricing': c('RELATED_DIAGNOSTIC_TOOL', 'The currently approved affiliate registry lacks a ProTool-approved interface offer. This OBDLink CX card belongs to another supported app route, and must not imply ProTool compatibility.'),
   'protool-vs-carly': c('RELATED_DIAGNOSTIC_TOOL', 'CX is a distinct alternative BMW app route and is not claimed compatible with ProTool or Carly.'),
 
   // --- supporting equipment: needed by the procedure, not the tool the article is about ---
