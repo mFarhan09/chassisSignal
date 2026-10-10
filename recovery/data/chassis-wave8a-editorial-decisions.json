@@ -1,0 +1,346 @@
+{
+  "auditDate": "2026-10-10",
+  "auditSource": "recovery/data/chassis-forensic-audit-2026-10-04.json",
+  "status": "EDIT_OR_MERGE_DECISIONS_PROVISIONAL_GSC_PAGE_QUERY_JOIN_UNAVAILABLE",
+  "notes": "No article retired or 301 added by 8A. Intent gate requires query-by-page source and claim/diagram preservation; recommended actions are editorial triage judgments, not fresh SERP or hands-on test results.",
+  "entries": {
+    "bimmercode-pricing": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P1",
+      "editorialGoal": "Separate the current US/iOS unlock, platform differences and approved adapter expense; add date- and market-specific checkouts and 1/3-year ownership examples without pretending every locale has the same price.",
+      "verificationNeeded": "First-party App Store price capture with review date; BimmerCode adapter and vehicle selectors; updated pricing ledger cross-check.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "bimmerlink-adapter": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P2",
+      "editorialGoal": "Make an exact BMW model + host OS + BimmerLink feature/adapter decision table; disclose the unsupported cases and avoid universal dongle endorsements.",
+      "verificationNeeded": "BimmerLink/BimmerCode official adapter paths, car-family restrictions and separate BLE/ENET evidence.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "bimmerlink-pricing": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P1",
+      "editorialGoal": "Distinguish BimmerLink full unlock from CarPlay option and hardware; give regional checkout and 1/3-year equations, with dated verified sources.",
+      "verificationNeeded": "Official Apple storefront, BimmerLink scope and dated price-ledger entries.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "bmw-battery-registration-scanner": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P1",
+      "editorialGoal": "Add BMW battery type/capacity decision worksheet distinguishing replacement registration and separate vehicle configuration; tabulate exact scanner/app functions.",
+      "verificationNeeded": "BMW service guidance, BimmerLink official support and independent electrical-safety qualifications.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "bmw-brake-bleed-scan-tool": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P1",
+      "editorialGoal": "Identify ordinary hydraulic bleeding versus BMW DSC/ABS pump/valve activation, affected control units and documented safe eligibility—not procedural experimentation.",
+      "verificationNeeded": "Manufacturer-specific DSC brake service manuals and tool ECU/function support; safety stop matrix.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "bmw-diagnostic-software-windows": {
+      "action": "INTENT_DECISION_GATE",
+      "originalPriority": "P2",
+      "editorialGoal": "Decide whether Windows-specific driver, host, ISTA environment and software provenance justify a standalone page versus software-matrix coverage; only rebuild if task-specific diagnostic workflow survives.",
+      "verificationNeeded": "BMW AOS system requirements, permitted installation/driver compatibility and separate Windows host checklists.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "bmw-dpf-regeneration-scan-tool": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P1",
+      "editorialGoal": "Develop model/engine/DPF eligibility table, blocking-fault and passive-versus-forced-regeneration distinctions, qualifying thermal constraints and service evidence checklist.",
+      "verificationNeeded": "BMW diesel-system service literature, supported software function evidence and high-temperature safety boundaries.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "bmw-electric-parking-brake-service-mode-scanner": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P1",
+      "editorialGoal": "Add an EMF architecture and function-verb chart (service position, reset, DSC brake bleed), module-level coverage proof and technician stop conditions.",
+      "verificationNeeded": "BMW EMF/parking brake service documentation; explicit vehicle-level tool functions.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "bmw-electronic-water-pump-diagnostic-tool": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P2",
+      "editorialGoal": "Include engine-family coolant-pump architecture, commanded-vs-observed data, risk of hot coolant and a no-unsafe-active-test fault-isolation worksheet.",
+      "verificationNeeded": "BMW engine-specific pump and cooling service references; authorized control function support.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "bmw-injector-coding-tool": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P1",
+      "editorialGoal": "Differentiate injector families and engine strategies, cylinder-code identity capture and legitimate ECU-level tool support; provide a non-actionable verify-before-buying matrix.",
+      "verificationNeeded": "BMW engine/injector repair information and first-party tool coverage; prevent arbitrary writes.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "bmw-parking-sensor-diagnostic-tool": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P1",
+      "editorialGoal": "Create PDC architecture and module reachability fault-tree by type, source-supported sensor/live data and wiring/retrofit caveats.",
+      "verificationNeeded": "BMW PDC module/service info, verified sensor status/ECU function sources.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "bmw-ride-height-calibration-scan-tool": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P1",
+      "editorialGoal": "Distinguish sensor read, height measurement, repair-trigger calibration and variant-specific approved vehicle loading; build precise eligibility table.",
+      "verificationNeeded": "BMW suspension/level-control service instructions; calibrated measurement safety.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "bmw-scanner-for-used-car-inspection": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P2",
+      "editorialGoal": "Keep inspection intent distinct from scanner shopping: produce downloadable diagnostic reporting worksheet, completeness and missing-module rubric, independent physical inspection checklist.",
+      "verificationNeeded": "BMW scanner module availability and OBD readiness sources; data-handling limits.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "bmw-scanner-without-subscription": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P1",
+      "editorialGoal": "Create evidence-led license/update entitlements matrix, expired-plan effect and true multiyear TCO rather than a simplistic lifetime badge.",
+      "verificationNeeded": "Dated Foxwell/Autel/Launch official policies and scanner capability database cross-check.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "bmw-service-reset-tool": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P1",
+      "editorialGoal": "Differentiate CBS oil/brake service items and cluster versus scan routes by supported chassis, precondition/fault blocking and post-service evidence.",
+      "verificationNeeded": "BMW CBS manufacturer service guidance, exact vehicle conditions and recordkeeping clarity.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "bmw-steering-angle-sensor-calibration-tool": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P1",
+      "editorialGoal": "Build DSC/SAS diagnostic-vs-calibration decision tree after approved alignment/repair, with vehicle-specific prerequisites and a safe stop decision.",
+      "verificationNeeded": "BMW chassis/DSC official procedures, steering/alignment safety and exact tool command.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "bmw-tpms-diagnostic-tool": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P1",
+      "editorialGoal": "Separate indirect/direct RDC, diagnosis, RF activation, programming, and relearn by exact SKU; explain Autel MK900 vs MK900-TS differences accurately.",
+      "verificationNeeded": "Autel official SKU manual, BMW TPMS system documentation and sensor compatibility evidence.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "bmw-transfer-case-adaptation-reset-tool": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P1",
+      "editorialGoal": "Make VTG service/reset/adaptation/calibration distinctions vehicle-specific; tie each to verified repair trigger, fluid work and safe post-check.",
+      "verificationNeeded": "BMW xDrive VTG service procedures, qualified tool function listings.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "bmw-vanos-diagnostic-tool": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P1",
+      "editorialGoal": "Differentiate engine families, actual-versus-target timing and electrical/mechanical failure domains; chart evidence before solenoid purchases.",
+      "verificationNeeded": "BMW VANOS control/fault service information and ECU live-data support.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "bmw-wheel-speed-sensor-diagnostic-tool": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P2",
+      "editorialGoal": "Add DSC four-wheel signal comparison worksheet, encoder/wiring/bearing alternative explanations and safe speed/context constraints.",
+      "verificationNeeded": "BMW DSC wheel-speed sensor service documentation and read-only live-data sources.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "carly-subscription-cost": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P1",
+      "editorialGoal": "Model the actual market and acquisition channel, renewal period, brand add-on, included hardware and cancellation conditions; no invented global quote.",
+      "verificationNeeded": "Carly official pricing and support, current checkout evidence and price ledger.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "carly-vs-foxwell-nt530": {
+      "action": "INTENT_DECISION_GATE",
+      "originalPriority": "P1",
+      "editorialGoal": "Pairwise subscription-versus-handheld framing overlaps existing canonical software/scanner pages; require independent query/page and unique asset review before deciding rebuild or exact 301.",
+      "verificationNeeded": "Fresh query/page GSC evidence, original SVG/value preservation, Carly/NT530 verified license/capability rows.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "ista-valvetronic-relearn": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P1",
+      "editorialGoal": "Create exact engine/controller teach-in versus diagnosis eligibility and failure-branch chart; emphasize qualified conditions rather than retry instructions.",
+      "verificationNeeded": "BMW ISTA Valvetronic service guides, software/coding and mechanical safety requirements.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "launch-x431-bmw": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P1",
+      "editorialGoal": "Disambiguate Launch X-431 model variants and BMW-coverage by software tier, subscription and ECU function; add dated model entitlement matrix.",
+      "verificationNeeded": "Launch official product/model manuals and licensing updates, scanner capability reference.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "obd-app-vs-handheld-scanner": {
+      "action": "INTENT_DECISION_GATE",
+      "originalPriority": "P2",
+      "editorialGoal": "Broad app-versus-handheld choice may duplicate scanner database and software matrix: retain only for a unique device-form/ownership workflow with evidence; otherwise merge and 301.",
+      "verificationNeeded": "Google query/page intent join, mobile/handheld hardware and safety comparison, original SVG migration.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    },
+    "protool-pricing": {
+      "action": "REBUILD_IN_PLACE",
+      "originalPriority": "P1",
+      "editorialGoal": "Map diagnostics/coding/master entitlements including exceptions, Android host/adapter and 1/3-year total ownership; verify original prices by date.",
+      "verificationNeeded": "BimmerGeeks official license and platform documents, price ledger update.",
+      "releaseConditions": [
+        "Intent independent from current canonical resource",
+        "Source-led claims with versioned citations",
+        "Retain useful original SVG/table evidence",
+        "Mobile/desktop and affiliate QA",
+        "No 301 without an approved claim-and-asset mapping"
+      ]
+    }
+  }
+}

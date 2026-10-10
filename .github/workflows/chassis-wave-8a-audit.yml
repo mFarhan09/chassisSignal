@@ -1,0 +1,55 @@
+name: Chassis Recovery Wave 8A — Content & Live HTTP Audit
+on:
+  push:
+    branches: [recovery/chassis-wave-8a-live-redirect-and-rebuild-audit]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  content-audit:
+    name: Forensic 26-page source and build audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.14.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.19.0
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: pnpm build
+      - name: Verify original 32 merge sources and redirects remain intact
+        run: node scripts/recovery-chassis-wave7-p0-qa.mjs
+      - name: Generate exact 26-page forensic editorial scorecard
+        run: node scripts/recovery-chassis-wave8a-editorial.mjs
+      - name: Attach editorial scorecard
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chassis-wave8a-rebuild-audit
+          path: reports/recovery/wave8a-editorial/
+          if-no-files-found: warn
+  production-http:
+    name: 64 real redirects + 5 live canonicals and sitemap
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.19.0
+      - name: Observe live production HTTP, fail on incomplete deployment
+        run: node scripts/recovery-chassis-wave8a-live.mjs --strict
+      - name: Attach all observed HTTP outcomes, including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chassis-wave8a-production-redirect-check
+          path: reports/recovery/wave8a-live/
+          if-no-files-found: warn
