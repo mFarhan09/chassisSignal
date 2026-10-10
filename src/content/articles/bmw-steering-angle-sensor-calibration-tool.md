@@ -153,20 +153,6 @@ Proceed only when the mechanical work is complete, the service trigger is docume
 
 The right steering-angle calibration tool is not the scanner with the longest service menu. It is the verified tool for one justified command on one identified BMW—used after diagnosis and mechanical work, never in place of them.
 
-## Sources consulted
-
-- [BMW Group — source reference](https://bmwtechinfo.bmwgroup.com/tech_training_manual/ST608%20xDrive%20Dynamics.pdf)
-- [BMW of North America — source reference](https://bmwtechinfo.bmwgroup.com/)
-- [Autel — source reference](https://www.autel.com/mk3/3990.jhtml)
-- [Autel — source reference](https://www.autel.com/vehicle-coverage/coverage2)
-
-
-## How this investigation fits the wider BMW diagnostic method
-
-A calibration function requires an exact vehicle/ECU and the conditions prescribed by the manufacturer. The hub treats it as a controlled intervention rather than a generic reset. If the problem is still unclassified, start with the [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) and its evidence-first symptom directory. This guide remains the detailed resource for its distinct controller, procedure and original technical visuals; no source research or SVG is being retired.
-
-
-
 ## October 2026 DSC/SAS fault-versus-calibration decision sheet
 
 **Research review: 10 October 2026.** BMW’s [advanced vehicle-diagnosis material](https://bmwtechinfo.bmwgroup.com/tech_training_manual/ST1102%20Advanced%20Vehicle%20Diagnosis.pdf) lays out a verify/isolate/repair/recheck discipline. The [AOS/ISTA applications](https://bmwtechinfo.bmwgroup.com/assets/site_information.pdf) provide VIN-specific test plans, relevant fault memory and repair instructions. Autel publishes [vehicle coverage](https://www.autel.com/vehicle-coverage/coverage2), but a category-level “SAS reset” is not an approval for a particular BMW steering/DSC system.
@@ -193,6 +179,19 @@ A calibration function requires an exact vehicle/ECU and the conditions prescrib
 There are two independent failure domains: the **physical geometry/sensor signal** and the **software initialisation/reference**. An intermittent supply, incorrect steering wheel position, unrelated DSC fault or unresolved mechanical issue can invalidate a calibration attempt. Repeating an unsupported “SAS reset” because the lamp returned is not systematic diagnosis.
 
 The [BMW service-function eligibility matrix](/tools/bmw-service-function-matrix/) compares which broad tools claim SAS access, while this page provides the specific *before-buying calibration proof*. Do not road-test a vehicle with unresolved steering or stability-system safety faults. No vehicle geometry, SAS signal or actual calibration was independently measured for this review.
+
+## Sources consulted
+
+- [BMW Group — source reference](https://bmwtechinfo.bmwgroup.com/tech_training_manual/ST608%20xDrive%20Dynamics.pdf)
+- [BMW of North America — source reference](https://bmwtechinfo.bmwgroup.com/)
+- [Autel — source reference](https://www.autel.com/mk3/3990.jhtml)
+- [Autel — source reference](https://www.autel.com/vehicle-coverage/coverage2)
+
+
+## How this investigation fits the wider BMW diagnostic method
+
+A calibration function requires an exact vehicle/ECU and the conditions prescribed by the manufacturer. The hub treats it as a controlled intervention rather than a generic reset. If the problem is still unclassified, start with the [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) and its evidence-first symptom directory. This guide remains the detailed resource for its distinct controller, procedure and original technical visuals; no source research or SVG is being retired.
+
 
 
 ## Related service-function eligibility and safety matrix
