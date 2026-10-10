@@ -138,8 +138,8 @@
   "bimmercode-pricing": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 830,
-    "h2Count": 6,
+    "wordCount": 1896,
+    "h2Count": 12,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -156,27 +156,27 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "Check compatibility before price",
+        "anchorIndex": 4,
+        "headingText": "October 2026 price and entitlement review",
         "variant": "compact_cta",
         "productKeys": [
           "obdlink-mx-plus"
         ],
         "role": "Broader-compatibility alternative",
         "decisionMoment": "compatibility",
-        "context": "If you also service non-BMW vehicles or want the widest legislated-protocol coverage in the same chain, the MX+ is the broader-network hardware path this guide already prices — distinct from the focused CX pick."
+        "context": "The dated price review raises the adapter decision. OBDLink MX+ is a broader hardware option to verify against BimmerCode's model- and platform-specific adapter list, not proof of every control-unit function."
       },
       {
         "position": "end",
-        "anchorIndex": 5,
-        "headingText": "Bottom line",
+        "anchorIndex": 9,
+        "headingText": "Safety boundary",
         "variant": "final_cta",
         "productKeys": [
           "obdlink-cx"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through bottom line, OBDLink CX is the listing to confirm for bimmerCode Pricing — match your exact vehicle, market and software before buying."
+        "context": "Before the final BimmerCode purchase, check OBDLink CX against the developer's current adapter/vehicle list and use the actual store price; this card is not a coding-support guarantee."
       }
     ]
   },
@@ -363,8 +363,8 @@
   "bimmerlink-pricing": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 843,
-    "h2Count": 9,
+    "wordCount": 1941,
+    "h2Count": 15,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -381,19 +381,19 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 3,
-        "headingText": "Where the adapter changes the budget",
+        "anchorIndex": 6,
+        "headingText": "Which BimmerLink function justifies which payment?",
         "variant": "compact_cta",
         "productKeys": [
           "obdlink-cx"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time where the adapter changes the budget matters for bimmerLink Pricing, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "For each intended BimmerLink operation, verify OBDLink CX against the developer's supported interface and exact vehicle before treating this separate hardware price as part of the budget."
       },
       {
         "position": "end",
-        "anchorIndex": 7,
+        "anchorIndex": 12,
         "headingText": "Pricing and compatibility note",
         "variant": "final_cta",
         "productKeys": [
@@ -401,7 +401,7 @@
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "That makes OBDLink CX the unit to check last for bimmerLink Pricing: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "Before checking out a BimmerLink and interface setup, verify the chosen OBDLink CX configuration for your car and the specific function on the official adapter/support pages."
       }
     ]
   },
@@ -1838,8 +1838,8 @@
   "carly-subscription-cost": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 1381,
-    "h2Count": 8,
+    "wordCount": 2419,
+    "h2Count": 13,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -1847,36 +1847,36 @@
         "position": "top",
         "anchorIndex": 1,
         "headingText": "Start with the acquisition channel",
-        "variant": "recommended_equipment",
+        "variant": "product_card",
         "productKeys": [
           "obdlink-cx"
         ],
-        "role": "Relevant equipment",
+        "role": "Alternative BMW app route (not Carly-compatible hardware)",
         "decisionMoment": "compatibility"
       },
       {
         "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "Separate hardware from software",
+        "anchorIndex": 5,
+        "headingText": "Renewal and cancellation depend on where you bought",
         "variant": "compact_cta",
         "productKeys": [
           "obdlink-cx"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time separate hardware from software matters for carly Subscription Cost, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "For Carly, only its own compatibility instructions can establish which scanner is supported. OBDLink CX is shown here as a separate generic interface comparison, not as a verified Carly Premium accessory."
       },
       {
         "position": "end",
-        "anchorIndex": 7,
-        "headingText": "The accurate answer",
+        "anchorIndex": 10,
+        "headingText": "What to capture before buying",
         "variant": "final_cta",
         "productKeys": [
           "obdlink-cx"
         ],
-        "role": "Final pick to verify",
+        "role": "Interface support must be checked",
         "decisionMoment": "final_recommendation",
-        "context": "That makes OBDLink CX the unit to check last for carly Subscription Cost: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "At the final Carly ownership review, a separate OBDLink CX listing is not a substitute for confirming which scanner Carly officially supports; do not infer compatibility from this product card."
       }
     ]
   },
@@ -2917,8 +2917,8 @@
   "protool-pricing": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 852,
-    "h2Count": 7,
+    "wordCount": 2046,
+    "h2Count": 13,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -2926,36 +2926,36 @@
         "position": "top",
         "anchorIndex": 1,
         "headingText": "Which license do you need?",
-        "variant": "recommended_equipment",
+        "variant": "product_card",
         "productKeys": [
           "obdlink-cx"
         ],
-        "role": "Relevant equipment",
+        "role": "Alternative BMW app route (not ProTool-compatible hardware)",
         "decisionMoment": "compatibility"
       },
       {
         "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "Complete setup examples",
+        "anchorIndex": 5,
+        "headingText": "What each entitlement buys—and does not buy",
         "variant": "compact_cta",
         "productKeys": [
           "obdlink-cx"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time complete setup examples matters for proTool Pricing, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "Check any ProTool interface directly against BimmerGeeks' platform, car and function documentation. An OBDLink CX equipment card does not by itself establish ProTool compatibility."
       },
       {
         "position": "end",
-        "anchorIndex": 5,
-        "headingText": "Bottom line",
+        "anchorIndex": 9,
+        "headingText": "The cheapest defensible route",
         "variant": "final_cta",
         "productKeys": [
           "obdlink-cx"
         ],
-        "role": "Final pick to verify",
+        "role": "Interface support must be checked",
         "decisionMoment": "final_recommendation",
-        "context": "If proTool Pricing points you here, OBDLink CX is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "After confirming ProTool license scope, verify an interface using BimmerGeeks' guidance before any purchase. This OBDLink CX listing does not certify compatibility with a specific ECU."
       }
     ]
   },

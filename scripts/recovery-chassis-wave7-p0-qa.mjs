@@ -41,6 +41,12 @@ assert(fs.readdirSync('src/content/articles').filter(n=>n.endsWith('.md')).lengt
 assert(publishedGuidesAfterAuditMerges===37,'visible guide count expected 37');
 for(const page of mainLinks){const file='dist'+page+'index.html';if(fs.existsSync(file)){const h=fs.readFileSync(file,'utf8');for(const slug of Object.keys(consolidatedRedirects))assert(!h.includes('href="/guides/'+slug+'/"'),'hub advertises retired comparison '+slug+' in '+page)}}
 const originalChanges=execFileSync('git',['diff','--name-only','origin/main','--','src/content/articles/'],{encoding:'utf8'}).trim();
-assert(!originalChanges,'retirement should preserve raw research unchanged, not delete original');
+const modified=originalChanges.split('\n').filter(Boolean);
+const approved8b=['bimmercode-pricing','bimmerlink-pricing','carly-subscription-cost','protool-pricing'].map(s=>'src/content/articles/'+s+'.md');
+const explicit8b=(process.env.CHASSIS_WAVE8B_EDITORIAL_REBUILD==='1' && modified.length===4 && modified.every(p=>approved8b.includes(p)));
+// Wave 7's archive rule applies unchanged in every context other than this explicitly
+// audited four-file Wave 8B rebuild. Wave 8B must also pass the separate original-H2,
+// image, SVG, frontmatter and 69-source preservation gate.
+assert(!originalChanges||explicit8b,'retirement should preserve raw research unchanged except the four governed Wave 8B rebuilds');
 assert(sitemapFiles.length>1,'sitemap content file missing');
 console.log('AUDIT MERGE+301 CONSOLIDATION PASS:',{retiredPublicURLs:entries.length,redirectRules:entries.length*2,publishedDiscoveryGuides:publishedGuidesAfterAuditMerges,preservedSourceArticles:69,sitemap:true,destinations:5});
