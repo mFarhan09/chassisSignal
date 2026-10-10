@@ -131,7 +131,7 @@ Before changing a working workstation, export its version inventory and confirm 
 
 ## October 2026 Windows workstation preflight — the independent reader task
 
-**Intent-review state: provisional standalone; no new redirect authorized without query-by-page GSC evidence.** Unlike a general BMW software feature comparison, this page answers a narrower question: *Will the Windows computer, licensed service software, driver, interface and local network form a supported BMW diagnostic environment?*
+Unlike a general BMW software feature comparison, this guide answers a narrower practical question: **will the Windows computer, licensed service software, driver, interface and local network form a supported BMW diagnostic environment?**
 
 As documented in the BMW [AOS technical requirements](https://aos-i.bmwgroup.com/technical-requirements) (stated by BMW as of **21 October 2025**), its workshop applications support 64-bit Windows 10/11 **Professional or Enterprise**, require **250 GB free space on drive C:**, at least a **1280 × 1024** display and a supported vehicle communication interface. The same document calls for stable wired LAN and explicitly says passthrough tools must not be activated by Bluetooth. This is a dated AOS requirement, not independent proof that every third-party installation or each legacy BMW engineering program supports Windows 11. Separately, [Microsoft states](https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/windows-10-support-has-ended-on-october-14-2025) that general Windows 10 support ended 14 October 2025; BMW listing that OS for some AOS applications does **not** reverse Microsoft's security-support policy.
 
