@@ -44,6 +44,24 @@ for(const slug of slugs){
  }
  report.push({slug,bodyWords:words,headings:heads(current).length,originalFigureAssetsKept:origAssets.length,externalLinks:firstPartyLinks.length});
 }
+// Reflow the existing affiliate units after the longer articles without changing product
+// identities, quantities, variant types or any unrelated published placement plan.
+const oldPlans=JSON.parse(original('src/affiliate/placement-plan.generated.json'));
+const newPlans=JSON.parse(fs.readFileSync('src/affiliate/placement-plan.generated.json','utf8'));
+assert(Object.keys(oldPlans).length===Object.keys(newPlans).length,'affiliate placement inventory changed');
+for(const [slug,plan] of Object.entries(oldPlans)){
+  const next=newPlans[slug];
+  assert(next,'missing affiliate placement plan '+slug);
+  if(!slugs.includes(slug)){
+    assert(JSON.stringify(plan)===JSON.stringify(next),'unrelated affiliate placement modified '+slug);
+    continue;
+  }
+  assert(plan.placements.length===next.placements.length,'affiliate unit count changed '+slug);
+  for(let i=0;i<plan.placements.length;i++){
+    const a=plan.placements[i],b=next.placements[i];
+    assert(a.position===b.position&&a.variant===b.variant&&JSON.stringify(a.productKeys)===JSON.stringify(b.productKeys),'affiliate product or position changed '+slug);
+  }
+}
 assert(fs.readdirSync('src/content/articles').filter(f=>f.endsWith('.md')).length===69,'source inventory drifted');
 assert(Object.keys(consolidatedRedirects).length===32,'original redirect cohort drifted');
 for(const r of report)console.log('WAVE8B GUIDE PASS',JSON.stringify(r));
