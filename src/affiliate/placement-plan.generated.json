@@ -633,8 +633,8 @@
   "bmw-battery-registration-scanner": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "compatible_adapter",
-    "wordCount": 1789,
-    "h2Count": 9,
+    "wordCount": 2553,
+    "h2Count": 13,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -651,27 +651,27 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 3,
-        "headingText": "2. Carly Premium plus the Universal Scanner",
+        "anchorIndex": 4,
+        "headingText": "3. ANCEL BM700 Pro dedicated handheld",
         "variant": "compact_cta",
         "productKeys": [
           "obdlink-cx"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time 2. Carly Premium plus the Universal Scanner matters for bMW Battery Registration Scanner, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "For bmw battery registration scanner, verify the named obdlink-cx against the exact BMW chassis, ECU, documented operation and vendor software version; a broad service-function icon is not proof of this vehicle's eligibility."
       },
       {
         "position": "end",
-        "anchorIndex": 8,
-        "headingText": "Final decision",
+        "anchorIndex": 10,
+        "headingText": "What counts as a credible supported-function claim?",
         "variant": "final_cta",
         "productKeys": [
           "obdlink-cx"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If bMW Battery Registration Scanner points you here, OBDLink CX is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Before selecting equipment for bmw battery registration scanner, retain the VIN-specific manufacturer procedure, read-only fault evidence and the seller's confirmed exact-function coverage. Do not use an unsupported write as a test."
       }
     ]
   },
@@ -723,8 +723,8 @@
   "bmw-brake-bleed-scan-tool": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "exact_product",
-    "wordCount": 1542,
-    "h2Count": 9,
+    "wordCount": 2219,
+    "h2Count": 12,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -741,27 +741,27 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "Prove five dimensions of coverage",
+        "anchorIndex": 4,
+        "headingText": "Stop at the right warning signs",
         "variant": "compact_cta",
         "productKeys": [
           "autel-md909-pro"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time prove five dimensions of coverage matters for bMW Brake Bleed Scan Tool, the practical question is whether Autel MaxiDiag MD909 Pro actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "For bmw brake bleed scan tool, verify the named autel-md909-pro against the exact BMW chassis, ECU, documented operation and vendor software version; a broad service-function icon is not proof of this vehicle's eligibility."
       },
       {
         "position": "end",
-        "anchorIndex": 7,
-        "headingText": "The correct purchase test",
+        "anchorIndex": 9,
+        "headingText": "The technician handoff record",
         "variant": "final_cta",
         "productKeys": [
           "autel-md909-pro"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "That makes Autel MaxiDiag MD909 Pro the unit to check last for bMW Brake Bleed Scan Tool: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "Before selecting equipment for bmw brake bleed scan tool, retain the VIN-specific manufacturer procedure, read-only fault evidence and the seller's confirmed exact-function coverage. Do not use an unsupported write as a test."
       }
     ]
   },
@@ -904,8 +904,8 @@
   "bmw-dpf-regeneration-scan-tool": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 1291,
-    "h2Count": 8,
+    "wordCount": 2050,
+    "h2Count": 13,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -922,35 +922,35 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "Read the live values that explain the filter",
+        "anchorIndex": 6,
+        "headingText": "Understand replacement resets",
         "variant": "compact_cta",
         "productKeys": [
           "obdlink-cx"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time read the live values that explain the filter matters for bMW DPF Regeneration Scan Tool, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "For bmw dpf regeneration scan tool, verify the named obdlink-cx against the exact BMW chassis, ECU, documented operation and vendor software version; a broad service-function icon is not proof of this vehicle's eligibility."
       },
       {
         "position": "end",
-        "anchorIndex": 7,
-        "headingText": "Choose the tool and know when to escalate",
+        "anchorIndex": 10,
+        "headingText": "What the diagnostic record must contain before any decision",
         "variant": "final_cta",
         "productKeys": [
           "obdlink-cx"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through choose the tool and know when to escalate, OBDLink CX is the listing to confirm for bMW DPF Regeneration Scan Tool — match your exact vehicle, market and software before buying."
+        "context": "Before selecting equipment for bmw dpf regeneration scan tool, retain the VIN-specific manufacturer procedure, read-only fault evidence and the seller's confirmed exact-function coverage. Do not use an unsupported write as a test."
       }
     ]
   },
   "bmw-electric-parking-brake-service-mode-scanner": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "exact_product",
-    "wordCount": 1411,
-    "h2Count": 9,
+    "wordCount": 2039,
+    "h2Count": 13,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -967,27 +967,27 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 3,
-        "headingText": "Preserve evidence before changing state",
+        "anchorIndex": 5,
+        "headingText": "Do not confuse EPB service with hydraulic bleeding",
         "variant": "compact_cta",
         "productKeys": [
           "autel-md909-pro"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time preserve evidence before changing state matters for bMW Electric Parking Brake Service Mode Scanner, the practical question is whether Autel MaxiDiag MD909 Pro actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "For bmw electric parking brake service mode scanner, verify the named autel-md909-pro against the exact BMW chassis, ECU, documented operation and vendor software version; a broad service-function icon is not proof of this vehicle's eligibility."
       },
       {
         "position": "end",
-        "anchorIndex": 8,
-        "headingText": "The selection verdict",
+        "anchorIndex": 11,
+        "headingText": "Before-and-after record for a qualified brake service",
         "variant": "final_cta",
         "productKeys": [
           "autel-md909-pro"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "That makes Autel MaxiDiag MD909 Pro the unit to check last for bMW Electric Parking Brake Service Mode Scanner: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "Before selecting equipment for bmw electric parking brake service mode scanner, retain the VIN-specific manufacturer procedure, read-only fault evidence and the seller's confirmed exact-function coverage. Do not use an unsupported write as a test."
       }
     ]
   },
@@ -1252,8 +1252,8 @@
   "bmw-injector-coding-tool": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "exact_product",
-    "wordCount": 1576,
-    "h2Count": 8,
+    "wordCount": 2242,
+    "h2Count": 12,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -1270,27 +1270,27 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "Keep injector identity tied to the physical cylinder",
+        "anchorIndex": 3,
+        "headingText": "Scanner, factory software, or neither?",
         "variant": "compact_cta",
         "productKeys": [
           "autel-md909-pro"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time keep injector identity tied to the physical cylinder matters for bMW Injector Coding Tool, the practical question is whether Autel MaxiDiag MD909 Pro actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "For bmw injector coding tool, verify the named autel-md909-pro against the exact BMW chassis, ECU, documented operation and vendor software version; a broad service-function icon is not proof of this vehicle's eligibility."
       },
       {
         "position": "end",
-        "anchorIndex": 6,
-        "headingText": "The decision",
+        "anchorIndex": 9,
+        "headingText": "Why \"supports injector coding\" is not enough",
         "variant": "final_cta",
         "productKeys": [
           "autel-md909-pro"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If bMW Injector Coding Tool points you here, Autel MaxiDiag MD909 Pro is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Before selecting equipment for bmw injector coding tool, retain the VIN-specific manufacturer procedure, read-only fault evidence and the seller's confirmed exact-function coverage. Do not use an unsupported write as a test."
       }
     ]
   },
@@ -1342,8 +1342,8 @@
   "bmw-parking-sensor-diagnostic-tool": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 1166,
-    "h2Count": 8,
+    "wordCount": 1813,
+    "h2Count": 11,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -1360,35 +1360,35 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "Read the fault code for the exact sensor",
+        "anchorIndex": 5,
+        "headingText": "Respect the wiring boundary",
         "variant": "compact_cta",
         "productKeys": [
           "autel-mk900-bt"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time read the fault code for the exact sensor matters for bMW Parking Sensor Diagnostic Tools, the practical question is whether Autel MaxiCOM MK900-BT actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "For bmw parking sensor diagnostic tool, verify the named autel-mk900-bt against the exact BMW chassis, ECU, documented operation and vendor software version; a broad service-function icon is not proof of this vehicle's eligibility."
       },
       {
         "position": "end",
-        "anchorIndex": 7,
-        "headingText": "Choose the tool and verify before replacing",
+        "anchorIndex": 9,
+        "headingText": "Model, communication and signal checklist",
         "variant": "final_cta",
         "productKeys": [
           "autel-mk900-bt"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through choose the tool and verify before replacing, Autel MaxiCOM MK900-BT is the listing to confirm for bMW Parking Sensor Diagnostic Tools — match your exact vehicle, market and software before buying."
+        "context": "Before selecting equipment for bmw parking sensor diagnostic tool, retain the VIN-specific manufacturer procedure, read-only fault evidence and the seller's confirmed exact-function coverage. Do not use an unsupported write as a test."
       }
     ]
   },
   "bmw-ride-height-calibration-scan-tool": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 1444,
-    "h2Count": 9,
+    "wordCount": 2107,
+    "h2Count": 14,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -1405,27 +1405,27 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 3,
-        "headingText": "The controlled measurement environment",
+        "anchorIndex": 4,
+        "headingText": "Calibration is a closed evidence loop",
         "variant": "compact_cta",
         "productKeys": [
           "autel-maxisys-ultra"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time the controlled measurement environment matters for bMW Ride-Height Calibration Scan Tool, the practical question is whether Autel MaxiSYS Ultra actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "For bmw ride height calibration scan tool, verify the named autel-maxisys-ultra against the exact BMW chassis, ECU, documented operation and vendor software version; a broad service-function icon is not proof of this vehicle's eligibility."
       },
       {
         "position": "end",
-        "anchorIndex": 8,
-        "headingText": "The purchase rule",
+        "anchorIndex": 11,
+        "headingText": "Calibrated measurement record",
         "variant": "final_cta",
         "productKeys": [
           "autel-maxisys-ultra"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through the purchase rule, Autel MaxiSYS Ultra is the listing to confirm for bMW Ride-Height Calibration Scan Tool — match your exact vehicle, market and software before buying."
+        "context": "Before selecting equipment for bmw ride height calibration scan tool, retain the VIN-specific manufacturer procedure, read-only fault evidence and the seller's confirmed exact-function coverage. Do not use an unsupported write as a test."
       }
     ]
   },
@@ -1612,8 +1612,8 @@
   "bmw-steering-angle-sensor-calibration-tool": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 1521,
-    "h2Count": 8,
+    "wordCount": 2121,
+    "h2Count": 12,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -1630,35 +1630,35 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "Build a four-coordinate qualification",
+        "anchorIndex": 3,
+        "headingText": "Use live data to test the premise, not to invent a procedure",
         "variant": "compact_cta",
         "productKeys": [
           "autel-mx808s"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time build a four-coordinate qualification matters for bMW Steering Angle Sensor Calibration, the practical question is whether Autel MaxiCheck MX808S actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "For bmw steering angle sensor calibration tool, verify the named autel-mx808s against the exact BMW chassis, ECU, documented operation and vendor software version; a broad service-function icon is not proof of this vehicle's eligibility."
       },
       {
         "position": "end",
-        "anchorIndex": 6,
-        "headingText": "The handoff rule",
+        "anchorIndex": 8,
+        "headingText": "What a capable diagnostic report looks like",
         "variant": "final_cta",
         "productKeys": [
           "autel-mx808s"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "That makes Autel MaxiCheck MX808S the unit to check last for bMW Steering Angle Sensor Calibration: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "Before selecting equipment for bmw steering angle sensor calibration tool, retain the VIN-specific manufacturer procedure, read-only fault evidence and the seller's confirmed exact-function coverage. Do not use an unsupported write as a test."
       }
     ]
   },
   "bmw-tpms-diagnostic-tool": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "comparison",
-    "wordCount": 1584,
-    "h2Count": 9,
+    "wordCount": 2245,
+    "h2Count": 12,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -1676,35 +1676,35 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "Read exact-SKU tables, not brand summaries",
+        "anchorIndex": 4,
+        "headingText": "Replacement is a chain, not a single button",
         "variant": "compact_cta",
         "productKeys": [
           "autel-mx808s-ts"
         ],
         "role": "Option in focus",
         "decisionMoment": "technical",
-        "context": "This is where Autel MaxiCheck MX808S-TS earns its place in bMW TPMS Tools: confirm read exact-SKU tables, not brand summaries maps to your vehicle and software before you commit."
+        "context": "For bmw tpms diagnostic tool, verify the named autel-mx808s-ts against the exact BMW chassis, ECU, documented operation and vendor software version; a broad service-function icon is not proof of this vehicle's eligibility."
       },
       {
         "position": "end",
-        "anchorIndex": 7,
-        "headingText": "Three practical buying profiles",
+        "anchorIndex": 9,
+        "headingText": "Read-first troubleshooting record",
         "variant": "final_cta",
         "productKeys": [
           "autel-mx808s"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If bMW TPMS Tools points you here, Autel MaxiCheck MX808S is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Before selecting equipment for bmw tpms diagnostic tool, retain the VIN-specific manufacturer procedure, read-only fault evidence and the seller's confirmed exact-function coverage. Do not use an unsupported write as a test."
       }
     ]
   },
   "bmw-transfer-case-adaptation-reset-tool": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 1606,
-    "h2Count": 8,
+    "wordCount": 2237,
+    "h2Count": 13,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -1721,27 +1721,27 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "Build a coverage proof, not a feature-list impression",
+        "anchorIndex": 3,
+        "headingText": "Reset is not calibration, even when a menu blurs them",
         "variant": "compact_cta",
         "productKeys": [
           "autel-maxisys-ultra"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time build a coverage proof, not a feature-list impression matters for bMW Transfer Case Adaptation Reset Tool, the practical question is whether Autel MaxiSYS Ultra actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "For bmw transfer case adaptation reset tool, verify the named autel-maxisys-ultra against the exact BMW chassis, ECU, documented operation and vendor software version; a broad service-function icon is not proof of this vehicle's eligibility."
       },
       {
         "position": "end",
-        "anchorIndex": 6,
-        "headingText": "The buying decision",
+        "anchorIndex": 9,
+        "headingText": "Preserve the decision history",
         "variant": "final_cta",
         "productKeys": [
           "autel-maxisys-ultra"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through the buying decision, Autel MaxiSYS Ultra is the listing to confirm for bMW Transfer Case Adaptation Reset Tool — match your exact vehicle, market and software before buying."
+        "context": "Before selecting equipment for bmw transfer case adaptation reset tool, retain the VIN-specific manufacturer procedure, read-only fault evidence and the seller's confirmed exact-function coverage. Do not use an unsupported write as a test."
       }
     ]
   },
@@ -2199,8 +2199,8 @@
   "ista-valvetronic-relearn": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 1252,
-    "h2Count": 7,
+    "wordCount": 1932,
+    "h2Count": 11,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -2217,27 +2217,27 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "Let the fault state decide whether to proceed",
+        "anchorIndex": 3,
+        "headingText": "Prerequisites are part of the procedure",
         "variant": "compact_cta",
         "productKeys": [
           "schumacher-inc100"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time let the fault state decide whether to proceed matters for iSTA Valvetronic Relearn, the practical question is whether Schumacher Electric INC100 actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "For ista valvetronic relearn, verify the named schumacher-inc100 against the exact BMW chassis, ECU, documented operation and vendor software version; a broad service-function icon is not proof of this vehicle's eligibility."
       },
       {
         "position": "end",
-        "anchorIndex": 6,
-        "headingText": "The responsible ISTA decision",
+        "anchorIndex": 8,
+        "headingText": "Technician-ready observation log",
         "variant": "final_cta",
         "productKeys": [
           "schumacher-inc100"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If iSTA Valvetronic Relearn points you here, Schumacher Electric INC100 is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Before selecting equipment for ista valvetronic relearn, retain the VIN-specific manufacturer procedure, read-only fault evidence and the seller's confirmed exact-function coverage. Do not use an unsupported write as a test."
       }
     ]
   },
