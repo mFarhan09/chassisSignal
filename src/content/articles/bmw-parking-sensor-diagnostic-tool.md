@@ -33,7 +33,7 @@ BMW's parking systems have evolved from simple ultrasonic Park Distance Control 
 </figure>
 
 <figure class="cs-article-visual">
-  <img src="/images/guides/obdlink-cx-vs-mx-plus/cs009-in-car-diagnostic-context.webp" alt="An OBD-II diagnostic adapter connected inside a car near the dashboard" width="1600" height="900" loading="lazy" decoding="async">
+  <img src="/images/tools/bmw-obd-adapter-comparison/#obdlink-cx-vs-mx-pluscs009-in-car-diagnostic-context.webp" alt="An OBD-II diagnostic adapter connected inside a car near the dashboard" width="1600" height="900" loading="lazy" decoding="async">
   <figcaption>In-car diagnostic context. This is not a photo of a BMW PDC/PMA parking module or its live sensor data, and is not tied to a specific tool tested here. Photo by Fatih Erden via Pexels.</figcaption>
 </figure>
 
@@ -50,7 +50,7 @@ This matters because advice written for one generation misleads on another. A pr
 
 ## Reach the module — the step generic readers miss
 
-This is the requirement that eliminates most cheap tools. The parking fault lives in the PDC/PMA module, and a standard OBD-II scanner that only reads emissions data will not communicate with it. You need a BMW/MINI-capable diagnostic tool — ISTA, or a capable aftermarket scanner or app that explicitly reaches the parking module — to see its codes at all. If your current reader shows nothing under "parking," that is a tool limitation, not a clean bill of health. See [BMW code reader vs scan tool](/guides/bmw-code-reader-vs-scan-tool/) for the general boundary, and [BMW scanner for ABS and airbag codes](/guides/bmw-scanner-abs-airbag-codes/) for reaching chassis and body modules.
+This is the requirement that eliminates most cheap tools. The parking fault lives in the PDC/PMA module, and a standard OBD-II scanner that only reads emissions data will not communicate with it. You need a BMW/MINI-capable diagnostic tool — ISTA, or a capable aftermarket scanner or app that explicitly reaches the parking module — to see its codes at all. If your current reader shows nothing under "parking," that is a tool limitation, not a clean bill of health. See [BMW code reader vs scan tool](/tools/bmw-scanner-capability-database/#bmw-code-reader-vs-scan-tool) for the general boundary, and [BMW scanner for ABS and airbag codes](/guides/bmw-scanner-abs-airbag-codes/) for reaching chassis and body modules.
 
 ## Read the fault code for the exact sensor
 
