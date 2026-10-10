@@ -1,0 +1,23 @@
+name: Chassis Final Live 65-URL Verification
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    name: Live 68 redirects, 31 guide canonicals and sitemap
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.19.0
+      - run: node scripts/recovery-chassis-final-live.mjs --strict
+      - name: Upload real production response report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chassis-final-65url-live-verification
+          path: reports/recovery/final-65-live/
+          if-no-files-found: warn
