@@ -1,5 +1,6 @@
 ---
 import ConsolidatedScannerLegacyResearch from '../../../components/ConsolidatedScannerLegacyResearch.astro';
+import ScannerConvertedEvidence from '../../../components/ScannerConvertedEvidence.astro';
 import ResearchToolArticleLayout from '../../../components/ResearchToolArticleLayout.astro';
 import ScannerResearch from '../../../components/ScannerResearch.astro';
 const models=[
@@ -9,14 +10,14 @@ const models=[
 {name:'Autel MK900',maker:'Autel',category:'Multibrand diagnostic tablet',link:'https://autel.com/mk3/4171.jhtml',coverage:'Official material lists live data, active tests, DoIP and CAN FD',caveat:'TPMS basic tier differs from MK900-TS; do not infer ECU programming'},
 {name:'Launch X-431',maker:'Launch',category:'Professional multibrand platform family',link:'https://www.cnlaunch.com/',coverage:'Must choose exact X-431 model and its function coverage',caveat:'Family names are not an exact model specification'}
 ];
-import {consolidatedRedirects} from  '../../../data/consolidated-redirects.mjs';
+import {publicGuideRedirects} from  '../../../data/consolidated-redirects.mjs';
 const related=[
 ['foxwell-nt530-vs-nt710','Foxwell NT530 vs NT710','Hardware, licensing and coverage differences'],
 ['foxwell-nt710-vs-autel-mk900-bmw','Foxwell NT710 vs Autel MK900','Coding-versus-diagnostic scope and model evidence'],
 ['foxwell-nt710-vs-nt809bt-bmw','Foxwell NT710 vs NT809BT','Device tier and connectivity distinctions'],
-['autel-scanner-for-bmw','Autel scanners for BMW','Pick an exact Autel platform by required BMW operation'],
+['autel-scanner-for-bmw','Autel scanners for BMW','Archived original MK808S-versus-MK900 evidence, model distinctions and diagrams'],
 ['launch-x431-vs-autel-for-bmw','Launch X-431 vs Autel','Compare like-for-like workshop tiers'],
-['bmw-bidirectional-scan-tool-functions','BMW bidirectional scan tool functions','Understand active tests, their limits and risk'],
+['bmw-bidirectional-scan-tool-functions','BMW bidirectional scan tool functions','Archived exact ECU-command, prerequisites and safety evidence'],
 ['bmw-scanner-abs-airbag-codes','BMW ABS and airbag scanner coverage','Module-level diagnostic capability'],
 ['bmw-battery-registration-scanner','BMW battery registration scanners','Battery registration versus other service tasks'],
 ['bmw-scanner-for-used-car-inspection','BMW scanner for a used-car inspection','Read-only pre-purchase diagnostic protocol'],
@@ -52,6 +53,7 @@ const related=[
 <figure><picture><source media="(max-width:650px)" srcset="/images/tools/bmw-scanner-capability-database/risk-boundaries-mobile.svg"/><img src="/images/tools/bmw-scanner-capability-database/risk-boundaries.svg" width="1200" height="450" loading="lazy" alt="Read-only scan, active tests, service procedures and programming have increasing operation-specific prerequisites"/></picture><figcaption>A scanner that reads codes cannot automatically perform active tests, adaptations or firmware programming.</figcaption></figure>
 <section id="source-led-research"><ScannerResearch/></section>
 <ConsolidatedScannerLegacyResearch />
+<ScannerConvertedEvidence />
 <section class="panel"><h2 id="primary-sources">Primary sources and disclosure of evidence quality</h2><p>Evidence reviewed October 9, 2026. Vendor literature states platform-wide feature categories; the manufacturer or tool's exact vehicle-function lookup determines eligibility. We have not connected these devices to a car, verified a live scan, or performed workshop repairs. No affiliate ranking or live retailer pricing is embedded in this reference.</p><ul>
 <li><a href="https://www.autel.com/mk2/3990.jhtml">Autel MK808S/MK808Z official specifications</a></li>
 <li><a href="https://autel.com/mk3/4171.jhtml">Autel MK900 official product information and comparison</a></li>
@@ -59,7 +61,7 @@ const related=[
 <li><a href="https://www.foxwelltech.us/product-detail-524.html">Foxwell NT530 technical specifications and manuals</a></li><li><a href="https://www.foxwelldiag.com/products/foxwell-nt710">Foxwell NT710 model-specific description, supported BMW coding and service categories</a></li><li><a href="https://www.foxwelldiag.com/pages/buyer-guide">Foxwell model comparison and coverage disclaimer</a></li>
 <li><a href="https://www.cnlaunch.com/">Launch manufacturer — verify exact X-431 model and VCI</a></li>
 </ul></section>
-<section class="panel"><h2 id="related-guides">Related Chassis Signal articles</h2><p>The original pairwise comparisons have been merged into this resource and now 301-redirect here. They offer deeper comparisons, module-specific cautions, documented model exceptions and original diagrams that should not be lost to a generic database.</p><div class="related-grid">{related.map(([slug,title,desc])=><article><h3><a href={consolidatedRedirects[slug as keyof typeof consolidatedRedirects] ? `${consolidatedRedirects[slug as keyof typeof consolidatedRedirects]}#${slug}` : `/guides/${slug}/`}>{title} →</a></h3><p>{desc}</p></article>)}</div></section>
+<section class="panel"><h2 id="related-guides">Related Chassis Signal articles</h2><p>Original pairwise comparisons and the two approved tool-conversion guides have been migrated into this canonical resource. Their distinctive model comparisons, source citations, command-level safety distinctions and original figures remain accessible here.</p><div class="related-grid">{related.map(([slug,title,desc])=><article><h3><a href={publicGuideRedirects[slug as keyof typeof publicGuideRedirects] ? `${publicGuideRedirects[slug as keyof typeof publicGuideRedirects]}#${slug}` : `/guides/${slug}/`}>{title} →</a></h3><p>{desc}</p></article>)}</div></section>
 </div>
 <script>
 const maker=document.querySelector<HTMLSelectElement>('#manufacturer')!,kind=document.querySelector<HTMLSelectElement>('#rowtype')!,rows=[...document.querySelectorAll<HTMLTableRowElement>('tr[data-maker]')],count=document.querySelector('#result-count')!,empty=document.querySelector<HTMLElement>('#empty')!;function update(){let n=0;for(const row of rows){const keep=(maker.value==='all'||row.dataset.maker===maker.value)&&(kind.value==='all'||row.dataset.kind===kind.value);row.hidden=!keep;if(keep)n++}count.textContent=`Showing ${n} of ${rows.length} researched models and families.`;empty.hidden=n>0}maker.addEventListener('change',update);kind.addEventListener('change',update);update();
