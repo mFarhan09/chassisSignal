@@ -5,7 +5,7 @@ description: "Choose a BMW TPMS tool by the exact RDC task: module diagnosis, fa
 slug: "bmw-tpms-diagnostic-tool"
 section: "guides"
 publishedAt: 2026-09-09T12:00:00+05:00
-updatedAt: 2026-09-09
+updatedAt: 2026-10-10
 category: "BMW Diagnostics"
 tags: ["Guides", "BMW", "Diagnostics", "RDC TPMS sensor activation sensor programming relearn initialization fault memory"]
 relatedSlugs: ["bmw-bidirectional-scan-tool-functions", "autel-scanner-for-bmw", "bmw-service-reset-tool"]
@@ -158,6 +158,37 @@ The decision rule is the verb. If you cannot state which action must happen, whe
 - [Autel — source reference](https://www.autel.com/mk3/3990.jhtml)
 - [Autel — source reference](https://www.autel.com/mk2/3991.jhtml)
 - [Autel — source reference](https://www.autel.com/vehicle-coverage/coverage2)
+
+
+
+## October 2026 hardware-level TPMS feature separation
+
+**Research review: 10 October 2026.** Autel’s [official MX900-TS comparison table](https://www.autel.com/mk2/4106.jhtml) explicitly distinguishes ordinary **MX900** “Basic” TPMS support from **MX900-TS** “Complete” support. The TS model lists activating sensors, programming Autel MX-Sensors and OBD relearn; those rows show product-category capability, **not** that any particular BMW sensor frequency, RDC generation or service event is supported. Autel's [2026 MX900-TS manual](https://autel.com/u/cms/www/202603/190159109qfc.pdf) illustrates different program, copy and relearn workflows and their identity/interference prerequisites. Only the exact BMW vehicle/support record determines the available method.
+
+| Task and hardware tier | Basic BMW-capable OBD scan tool | MX900-TS style full TPMS unit | Required independent proof |
+| --- | --- | --- | --- |
+| Read faults from supported BMW RDC ECU | Possible if this ECU is in actual coverage | Also may be possible | Correct BMW ECU and software coverage |
+| Read all four live wheel-sensor identifiers/pressures | Depends on vehicle and ECU data availability | Depends on vehicle and ECU data availability | Correct protocol/data support |
+| Wake/activate physical RF sensors | **Not** implied by “Basic TPMS” | Explicitly marketed as an advanced TS capability | Compatible sensor family and radio frequency |
+| Program replacement Autel MX-Sensor | Not in Autel’s Basic MX900 column | Explicitly listed for MX900-TS | Correct Autel replacement part and approved vehicle profile |
+| Relearn/register sensors to vehicle | Not implied by generic DTC access | OBD relearn marketed for covered applications | BMW system and relearn strategy, exact support |
+| Reset tyre-warning indication | May be a cluster/vehicle-menu function on some cars | Separate from sensor RF programming | Whether the vehicle uses direct RDC or indirect wheel-speed monitoring |
+
+This matrix prevents a costly mis-buy: the “-TS” suffix changes meaningful hardware capability. Autel’s manufacturer claims should be verified through [official coverage](https://www.autel.com/vehicle-coverage/coverage2), not generalized from a similarly named model. For BMW’s underlying system instructions use the [authorized AOS/ISTA resource](https://bmwtechinfo.bmwgroup.com/assets/site_information.pdf).
+
+## Read-first troubleshooting record
+
+A useful report preserves the exact warning text, VIN/build and wheel/tire equipment, direct-RDC versus indirect system identification, fault memory, sensor ID and pressure/temperature *when available*, evidence of communication at each wheel, sensor part/frequency and software version. A wheel not reporting may reflect sensor battery failure, wrong frequency, a damaged/wrong sensor, receiver/configuration issue, or simply a missing supported diagnostic channel. Do not conclude “replace sensor” from one absent number.
+
+| Scenario | Choose the first supported step | Avoid |
+| --- | --- | --- |
+| Warning after pressure adjustment | Correct approved pressure and identify BMW’s required monitoring reset method | Programming new sensors without evidence |
+| One wheel not reporting on direct RDC | Record identity/part/frequency, check other wheel signals and RDC faults | Assuming the sensor code was erased |
+| New wheels with aftermarket sensors | Verify exact approved replacement profile and relearn path | Treating all programmable sensors as BMW-compatible |
+| Four readings absent | Check whether the car/ECU and diagnostic session are supported | Buying four sensors because a generic reader shows zeros |
+| Tyre-service safety warning | Physical tyre/pressure inspection before electronic operations | Using a reset to hide an unsafe tyre condition |
+
+**Safety and evidence limits:** TPMS is a warning/monitoring aid, not a substitute for safe inflation and tyre inspection. This article does not instruct cloning identifiers, defeating alarms or claiming a demonstrated relearn. No RF sensor was activated or programmed for this review. Primary references: [Autel MX900-TS product comparison](https://www.autel.com/mk2/4106.jhtml), [2026 manual](https://autel.com/u/cms/www/202603/190159109qfc.pdf), [BMW TIS/AOS](https://bmwtechinfo.bmwgroup.com/assets/site_information.pdf).
 
 
 ## Related service-function eligibility and safety matrix
