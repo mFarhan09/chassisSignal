@@ -61,7 +61,7 @@ Keep screenshots or a dated PDF of the manufacturer and seller terms. If the res
 
 Write down the vehicle and task in one line: chassis, model year, market, target module and desired operation. “Reads BMW codes” is too broad. Full-vehicle scanning, live data, an active test, battery registration and an electronic parking-brake service function are different coverage cells.
 
-The [BMW code reader versus scan tool](/guides/bmw-code-reader-vs-scan-tool/) guide establishes that capability ladder. If the requirement is a commanded test or service operation, the [BMW bidirectional scan-tool functions](/guides/bmw-bidirectional-scan-tool-functions/) guide explains why the exact command must be verified. Cost comes after that proof. A permanently owned tool that cannot reach the required module is more expensive than a renewable tool that reliably completes the job.
+The [BMW code reader versus scan tool](/tools/bmw-scanner-capability-database/#bmw-code-reader-vs-scan-tool) guide establishes that capability ladder. If the requirement is a commanded test or service operation, the [BMW bidirectional scan-tool functions](/guides/bmw-bidirectional-scan-tool-functions/) guide explains why the exact command must be verified. Cost comes after that proof. A permanently owned tool that cannot reach the required module is more expensive than a renewable tool that reliably completes the job.
 
 <figure>
   <picture>
@@ -85,7 +85,7 @@ The response should distinguish current coverage from a general product-family d
 
 Foxwell’s current US documentation identifies the NT530 Plus as a Wi-Fi-updatable multi-system scanner. The product and support pages establish the platform and its update mechanism; they do not justify converting every regional listing into one universal promise about lifetime coverage, included makes or future BMW functions.
 
-For a BMW-focused purchase, confirm that the specific package includes BMW software, whether additional makes are separate purchases, and what the installed BMW package does after optional updates are declined. Then obtain exact vehicle/function confirmation. The [Foxwell NT530 versus NT710](/guides/foxwell-nt530-vs-nt710/) comparison owns the hardware step-up question; this page owns the recurring-cost and post-expiry contract.
+For a BMW-focused purchase, confirm that the specific package includes BMW software, whether additional makes are separate purchases, and what the installed BMW package does after optional updates are declined. Then obtain exact vehicle/function confirmation. The [Foxwell NT530 versus NT710](/tools/bmw-scanner-capability-database/#foxwell-nt530-vs-nt710) comparison owns the hardware step-up question; this page owns the recurring-cost and post-expiry contract.
 
 Do not transfer terms from an older NT530 listing to NT530 Plus, or from one country’s store to another. Model suffix, seller and region belong in the evidence record.
 
