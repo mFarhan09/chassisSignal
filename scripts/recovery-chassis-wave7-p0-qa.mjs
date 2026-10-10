@@ -57,6 +57,17 @@ const explicit8c=(process.env.CHASSIS_WAVE8C_BATCH1_REBUILD==='1' && modified.le
   modified.every(p=>approved8c.includes(p)));
 // Preserve the original 32 merged-source Markdown files byte-for-byte. Only the 11
 // independently audited, non-retired specialist guides can change under this opt-in.
-assert(!originalChanges||explicit8b||explicit8c,'retirement should preserve the raw research except approved Wave 8B or Wave 8C in-place rebuild cohorts');
+const approved8d=[
+ 'bimmerlink-adapter','bmw-electronic-water-pump-diagnostic-tool',
+ 'bmw-scanner-for-used-car-inspection','bmw-scanner-without-subscription','bmw-service-reset-tool',
+ 'bmw-vanos-diagnostic-tool','bmw-wheel-speed-sensor-diagnostic-tool','launch-x431-bmw',
+ 'bmw-diagnostic-software-windows','carly-vs-foxwell-nt530','obd-app-vs-handheld-scanner'
+].map(s=>'src/content/articles/'+s+'.md');
+const explicit8d=(process.env.CHASSIS_WAVE8D_BATCH3_REBUILD==='1' && modified.length===11 &&
+  modified.every(p=>approved8d.includes(p)));
+// These three original intent-decision-gate sources may be *enhanced in place*,
+// but this exception does not authorize any 301, retirement or proven intent claim.
+assert(!originalChanges||explicit8b||explicit8c||explicit8d,
+ 'retirement should preserve the 32 archived source guides except governed 8B/8C/8D rebuild cohorts');
 assert(sitemapFiles.length>1,'sitemap content file missing');
 console.log('AUDIT MERGE+301 CONSOLIDATION PASS:',{retiredPublicURLs:entries.length,redirectRules:entries.length*2,publishedDiscoveryGuides:publishedGuidesAfterAuditMerges,preservedSourceArticles:69,sitemap:true,destinations:5});

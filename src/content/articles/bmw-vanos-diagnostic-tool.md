@@ -43,7 +43,7 @@ VANOS diagnosis is a chain of evidence, not a lookup. You start from a fault cod
 
 ## Read the codes as a lead, not a verdict
 
-VANOS-related fault codes generally fall into a few families — camshaft position or "camshaft stuck" faults, VANOS solenoid or activation faults, and cold-start control faults — and they point you toward the subsystem rather than a specific part. The exact code numbers and their wording depend on the engine and DME, and the reliable list for your car is the one BMW service data assigns to that engine, not a code borrowed from a different chassis. Treat a stored code as the opening of the investigation. Clearing it and hoping is not diagnosis, and buying a solenoid because a code mentions the camshaft is the mistake this whole workflow exists to prevent. See [BMW code reader vs scan tool](/guides/bmw-code-reader-vs-scan-tool/) for why a reader is not enough here.
+VANOS-related fault codes generally fall into a few families — camshaft position or "camshaft stuck" faults, VANOS solenoid or activation faults, and cold-start control faults — and they point you toward the subsystem rather than a specific part. The exact code numbers and their wording depend on the engine and DME, and the reliable list for your car is the one BMW service data assigns to that engine, not a code borrowed from a different chassis. Treat a stored code as the opening of the investigation. Clearing it and hoping is not diagnosis, and buying a solenoid because a code mentions the camshaft is the mistake this whole workflow exists to prevent. See [BMW code reader vs scan tool](/tools/bmw-scanner-capability-database/#bmw-code-reader-vs-scan-tool) for why a reader is not enough here.
 
 ## Compare target versus actual angle
 
@@ -83,6 +83,42 @@ VANOS implementations differ across BMW engine families — single versus double
 ## Capture the evidence and know when to escalate
 
 Save what you find: the codes, the target-versus-actual traces, the activation response, and the guided-test result. That record is what turns a diagnosis into a defensible repair decision and what a workshop needs if you escalate. Software has done its job when it has shown that the system does not respond correctly; the causes it points to — solenoids, oil supply and pressure, mechanical binding, timing components — are then confirmed by physical inspection, not by another scan. Escalate when the evidence points to a mechanical cause, when angles are extreme or stuck, or when a relearn does not hold, and hand the technician the traces rather than a single code.
+
+
+
+## October 2026 target-versus-actual cam timing worksheet
+
+**Source review: 10 October 2026.** BMW [technical information](https://bmwtechinfo.bmwgroup.com/) is the authority for engine-specific VANOS design, diagnostic values and guided test plans. [Autel's vehicle-coverage lookup](https://www.autel.com/vehicle-coverage/coverage2) is a tool-family screen, not proof that a particular BMW DME exposes target and measured cam-angle channels on the suggested scanner. The core reader problem is distinguishing **the DME's requested timing, the reported physical response, and what the fault state means for that exact engine**.
+
+| Data or complaint | What can be concluded | What cannot be inferred |
+| --- | --- | --- |
+| VANOS-related fault number | DME observed a condition worth investigating | That an oil-control solenoid must be replaced |
+| Target intake/exhaust angle | What the ECU is requesting in the current state, if the PID exists | Actual cam movement or timing-chain condition |
+| Actual angle/position | DME-reported measured timing, with units and engine state | Independent mechanical measurement or sensor accuracy |
+| Target/actual discrepancy | A dynamic control mismatch may require a guided test plan | A universal fault threshold across BMW engine families |
+| Oil-pressure or oil condition fault | Supply/viscosity and mechanical control may matter | That a software reset will repair hydraulic operation |
+| Intermittent fault after component repair | Original event context plus qualified post-repair observations | That any one commanded active test is safely supported |
+
+**A key analysis trap:** software channels labeled “actual” may be calculated or interpreted by the ECU. Record the scanner PID identifier, units, DME software version, engine temperature/operating state and capture timestamp before comparing values. Do not use a single static difference to order replacement parts.
+
+## Engine-family diagnosis: preserve control architecture
+
+| Vehicle-specific input | Why it changes the buying decision |
+| --- | --- |
+| VIN, engine code and fitted VANOS configuration | Single/dual VANOS, actuators and available angle channels vary |
+| Exact DME software/hardware identity | Scanner support may be module/software-dependent |
+| Fault-memory chronology, freeze-frame and other oil/temperature faults | VANOS codes may follow another upstream system problem |
+| Authorized BMW test plan and specified read-only measurements | Distinguishes diagnosis from speculative actuator commands |
+| Scanner report with named intake/exhaust target + actual PIDs | Verifies the tool does more than read generic OBD codes |
+| Post-repair verified fault recurrence or resolution | Prevents treating one cleared light as a successful mechanical repair |
+
+A buyer comparing a basic reader to an enhanced scanner should demand a sample or documented coverage for both **desired camshaft channels**. If a tool does not show them for the exact BMW ECU, mark the feature unverified; paying for a more expensive tablet is not automatically a solution.
+
+## Mechanical, electrical and oil-related failure branches
+
+A fault may stem from oil condition/pressure, blocked or failed hydraulic control, solenoid/actuator electrical integrity, camshaft position feedback, wiring, timing hardware or the software/ECU. A scan helps prioritize the test plan, but **does not replace approved physical measurements**. Use manufacturer procedures to decide whether a technician should progress to electrical or mechanical work. Do not force activation, clear evidence before capture, or try repeated adaptations as a substitute for troubleshooting.
+
+The [BMW module troubleshooting hub](/guides/bmw-module-troubleshooting/) explains general ECU access; this guide owns **VANOS target-versus-actual evidence**. Source authority: [BMW technical documentation](https://bmwtechinfo.bmwgroup.com/), [Autel coverage](https://www.autel.com/vehicle-coverage/coverage2). No cam timing, oil pressure or VANOS actuator was physically tested.
 
 
 ## How this investigation fits the wider BMW diagnostic method

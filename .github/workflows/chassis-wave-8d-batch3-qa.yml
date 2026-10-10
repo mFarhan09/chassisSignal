@@ -1,21 +1,20 @@
-name: Chassis Recovery Wave 8C — Batch 1 Eleven Specialist Articles
+name: Chassis Recovery Wave 8D — Final Eleven and Intent Gate QA
 on:
   pull_request:
     branches: [main]
     paths:
       - 'src/content/articles/**'
       - 'src/affiliate/placement-plan.generated.json'
-      - 'scripts/recovery-chassis-wave8c-batch1-qa.mjs'
+      - 'scripts/recovery-chassis-wave8d-batch3-qa.mjs'
       - 'scripts/recovery-chassis-wave7-p0-qa.mjs'
-      - 'recovery/CHASSIS_WAVE_8C_BATCH1_RELEASE.md'
-      - '.github/workflows/chassis-wave-8c-batch1-qa.yml'
+      - 'recovery/CHASSIS_WAVE_8D_BATCH3_RELEASE.md'
+      - '.github/workflows/chassis-wave-8d-batch3-qa.yml'
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
   recovery:
-    name: Eleven source-preserving specialist rebuilds and legacy redirect QA
-    if: github.head_ref == 'recovery/chassis-wave-8c-batch1-eleven-specialist-guides' || github.event_name == 'workflow_dispatch'
+    name: Eight evidence-led rebuilds plus three provisional intent gates
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -30,8 +29,8 @@ jobs:
           node-version: 22.19.0
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: node scripts/recovery-chassis-wave8c-batch1-qa.mjs
+      - run: node scripts/recovery-chassis-wave8d-batch3-qa.mjs
       - run: pnpm test
       - run: pnpm build
-      - run: CHASSIS_WAVE8C_BATCH1_REBUILD=1 node scripts/recovery-chassis-wave7-p0-qa.mjs
+      - run: CHASSIS_WAVE8D_BATCH3_REBUILD=1 node scripts/recovery-chassis-wave7-p0-qa.mjs
       - run: node scripts/recovery-chassis-wave8a-editorial.mjs

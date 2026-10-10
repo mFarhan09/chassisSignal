@@ -318,8 +318,8 @@
   "bimmerlink-adapter": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 1420,
-    "h2Count": 10,
+    "wordCount": 2165,
+    "h2Count": 12,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -336,27 +336,27 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 3,
-        "headingText": "Third gate: iOS and Android do not accept every path equally",
+        "anchorIndex": 5,
+        "headingText": "Common adapter routes",
         "variant": "compact_cta",
         "productKeys": [
           "obdlink-mx-plus"
         ],
         "role": "Broader-compatibility alternative",
         "decisionMoment": "compatibility",
-        "context": "For garages that also work outside the BMW/MINI lane, MX+ is the single broader-network alternative to the focused CX pick — same BimmerLink workflow, wider protocol reach."
+        "context": "For bimmerlink adapter, verify the exact vehicle/ECU task, app or device version, authorizing source and supported function before purchasing this equipment. This card is not universal BMW capability proof."
       },
       {
         "position": "end",
         "anchorIndex": 9,
-        "headingText": "Safety and ownership",
+        "headingText": "An auditable adapter evidence card",
         "variant": "final_cta",
         "productKeys": [
           "obdlink-cx"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through safety and ownership, OBDLink CX is the listing to confirm for bimmerLink Adapter Guide — match your exact vehicle, market and software before buying."
+        "context": "Before committing to hardware for bimmerlink adapter, check the vendor's exact-model coverage and license, source date and alternatives discussed above. Do not infer unsupported BMW programming or service commands."
       }
     ]
   },
@@ -859,8 +859,8 @@
   "bmw-diagnostic-software-windows": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 1628,
-    "h2Count": 9,
+    "wordCount": 2363,
+    "h2Count": 11,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -877,27 +877,27 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "Where legacy and engineering names fit",
+        "anchorIndex": 4,
+        "headingText": "Native Windows or a virtual machine?",
         "variant": "compact_cta",
         "productKeys": [
           "schumacher-inc100"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time where legacy and engineering names fit matters for bMW Diagnostic Software for Windows 10 and 11, the practical question is whether Schumacher Electric INC100 actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "For bmw diagnostic software windows, verify the exact vehicle/ECU task, app or device version, authorizing source and supported function before purchasing this equipment. This card is not universal BMW capability proof."
       },
       {
         "position": "end",
-        "anchorIndex": 7,
-        "headingText": "The practical shortlist",
+        "anchorIndex": 8,
+        "headingText": "October 2026 Windows workstation preflight — the independent reader task",
         "variant": "final_cta",
         "productKeys": [
           "schumacher-inc100"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If bMW Diagnostic Software for Windows 10 and 11 points you here, Schumacher Electric INC100 is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Before committing to hardware for bmw diagnostic software windows, check the vendor's exact-model coverage and license, source date and alternatives discussed above. Do not infer unsupported BMW programming or service commands."
       }
     ]
   },
@@ -994,8 +994,8 @@
   "bmw-electronic-water-pump-diagnostic-tool": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 1234,
-    "h2Count": 6,
+    "wordCount": 1991,
+    "h2Count": 11,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -1012,27 +1012,27 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "Treat activation as one controlled observation",
+        "anchorIndex": 3,
+        "headingText": "Separate command failure from electrical failure",
         "variant": "compact_cta",
         "productKeys": [
           "innova-5610-bundle"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time treat activation as one controlled observation matters for bMW Electronic Water-Pump Diagnostic Tool, the practical question is whether Innova 5610 + 3380 bundle actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "For bmw electronic water pump diagnostic tool, verify the exact vehicle/ECU task, app or device version, authorizing source and supported function before purchasing this equipment. This card is not universal BMW capability proof."
       },
       {
         "position": "end",
-        "anchorIndex": 5,
-        "headingText": "A purchase test for the diagnostic tool",
+        "anchorIndex": 8,
+        "headingText": "Three-layer diagnostic report: observation, hypothesis, authorization",
         "variant": "final_cta",
         "productKeys": [
           "innova-5610-bundle"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through a purchase test for the diagnostic tool, Innova 5610 + 3380 bundle is the listing to confirm for bMW Electronic Water-Pump Diagnostic Tool — match your exact vehicle, market and software before buying."
+        "context": "Before committing to hardware for bmw electronic water pump diagnostic tool, check the vendor's exact-model coverage and license, source date and alternatives discussed above. Do not infer unsupported BMW programming or service commands."
       }
     ]
   },
@@ -1477,8 +1477,8 @@
   "bmw-scanner-for-used-car-inspection": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "exact_product",
-    "wordCount": 1576,
-    "h2Count": 9,
+    "wordCount": 2288,
+    "h2Count": 11,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -1495,35 +1495,35 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "Read readiness without inventing a story",
+        "anchorIndex": 4,
+        "headingText": "Keep the physical inspection in the foreground",
         "variant": "compact_cta",
         "productKeys": [
           "autel-ds808s-bt"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time read readiness without inventing a story matters for bMW Scanner for a Used-Car Inspection, the practical question is whether Autel MaxiDAS DS808S-BT actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "For bmw scanner for used car inspection, verify the exact vehicle/ECU task, app or device version, authorizing source and supported function before purchasing this equipment. This card is not universal BMW capability proof."
       },
       {
         "position": "end",
-        "anchorIndex": 7,
-        "headingText": "Use a simple purchase rule",
+        "anchorIndex": 9,
+        "headingText": "Fillable pre-purchase checklist",
         "variant": "final_cta",
         "productKeys": [
           "autel-ds808s-bt"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "That makes Autel MaxiDAS DS808S-BT the unit to check last for bMW Scanner for a Used-Car Inspection: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "Before committing to hardware for bmw scanner for used car inspection, check the vendor's exact-model coverage and license, source date and alternatives discussed above. Do not infer unsupported BMW programming or service commands."
       }
     ]
   },
   "bmw-scanner-without-subscription": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 1539,
-    "h2Count": 8,
+    "wordCount": 2315,
+    "h2Count": 11,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -1540,35 +1540,35 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "Foxwell NT530 Plus: verify the brand package and current terms",
+        "anchorIndex": 4,
+        "headingText": "What an expired update period can and cannot tell you",
         "variant": "compact_cta",
         "productKeys": [
           "innova-5610-bundle"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time foxwell NT530 Plus: verify the brand package and current terms matters for bMW Scanner Without a Subscription, the practical question is whether Innova 5610 + 3380 bundle actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "For bmw scanner without subscription, verify the exact vehicle/ECU task, app or device version, authorizing source and supported function before purchasing this equipment. This card is not universal BMW capability proof."
       },
       {
         "position": "end",
-        "anchorIndex": 7,
-        "headingText": "The buying decision",
+        "anchorIndex": 8,
+        "headingText": "October 2026 subscription-free scanner contract comparison",
         "variant": "final_cta",
         "productKeys": [
           "innova-5610-bundle"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "That makes Innova 5610 + 3380 bundle the unit to check last for bMW Scanner Without a Subscription: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "Before committing to hardware for bmw scanner without subscription, check the vendor's exact-model coverage and license, source date and alternatives discussed above. Do not infer unsupported BMW programming or service commands."
       }
     ]
   },
   "bmw-service-reset-tool": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "compatible_adapter",
-    "wordCount": 1223,
-    "h2Count": 7,
+    "wordCount": 2258,
+    "h2Count": 11,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -1585,27 +1585,27 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "Why a brake-service reset can refuse to complete",
+        "anchorIndex": 3,
+        "headingText": "What a useful BMW service scanner should prove",
         "variant": "compact_cta",
         "productKeys": [
           "obdlink-cx"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time why a brake-service reset can refuse to complete matters for bMW Service Reset Tool Guide, the practical question is whether OBDLink CX actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "For bmw service reset tool, verify the exact vehicle/ECU task, app or device version, authorizing source and supported function before purchasing this equipment. This card is not universal BMW capability proof."
       },
       {
         "position": "end",
-        "anchorIndex": 5,
-        "headingText": "What to buy",
+        "anchorIndex": 8,
+        "headingText": "Payment decision: when no scanner purchase is justified",
         "variant": "final_cta",
         "productKeys": [
           "obdlink-cx"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If bMW Service Reset Tool Guide points you here, OBDLink CX is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Before committing to hardware for bmw service reset tool, check the vendor's exact-model coverage and license, source date and alternatives discussed above. Do not infer unsupported BMW programming or service commands."
       }
     ]
   },
@@ -1748,8 +1748,8 @@
   "bmw-vanos-diagnostic-tool": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 1201,
-    "h2Count": 7,
+    "wordCount": 1983,
+    "h2Count": 11,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -1766,35 +1766,35 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 3,
-        "headingText": "Use activation and guided tests",
+        "anchorIndex": 4,
+        "headingText": "Match the tool class to the evidence you need",
         "variant": "compact_cta",
         "productKeys": [
           "autel-ds808s-bt"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time use activation and guided tests matters for bMW VANOS Diagnostic Tools, the practical question is whether Autel MaxiDAS DS808S-BT actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "For bmw vanos diagnostic tool, verify the exact vehicle/ECU task, app or device version, authorizing source and supported function before purchasing this equipment. This card is not universal BMW capability proof."
       },
       {
         "position": "end",
-        "anchorIndex": 6,
-        "headingText": "Capture the evidence and know when to escalate",
+        "anchorIndex": 9,
+        "headingText": "Mechanical, electrical and oil-related failure branches",
         "variant": "final_cta",
         "productKeys": [
           "autel-ds808s-bt"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "That makes Autel MaxiDAS DS808S-BT the unit to check last for bMW VANOS Diagnostic Tools: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "Before committing to hardware for bmw vanos diagnostic tool, check the vendor's exact-model coverage and license, source date and alternatives discussed above. Do not infer unsupported BMW programming or service commands."
       }
     ]
   },
   "bmw-wheel-speed-sensor-diagnostic-tool": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 1083,
-    "h2Count": 7,
+    "wordCount": 1971,
+    "h2Count": 11,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -1811,27 +1811,27 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 3,
-        "headingText": "Gather static and dynamic evidence safely",
+        "anchorIndex": 5,
+        "headingText": "Consider calibration and the wider system",
         "variant": "compact_cta",
         "productKeys": [
           "autel-mx900"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time gather static and dynamic evidence safely matters for bMW Wheel-Speed Sensor Diagnostics, the practical question is whether Autel MaxiCheck MX900 actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "For bmw wheel speed sensor diagnostic tool, verify the exact vehicle/ECU task, app or device version, authorizing source and supported function before purchasing this equipment. This card is not universal BMW capability proof."
       },
       {
         "position": "end",
-        "anchorIndex": 6,
-        "headingText": "Choose the tool and know the stop conditions",
+        "anchorIndex": 9,
+        "headingText": "Safety envelope for ABS/DSC diagnosis",
         "variant": "final_cta",
         "productKeys": [
           "autel-mx900"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Having worked through choose the tool and know the stop conditions, Autel MaxiCheck MX900 is the listing to confirm for bMW Wheel-Speed Sensor Diagnostics — match your exact vehicle, market and software before buying."
+        "context": "Before committing to hardware for bmw wheel speed sensor diagnostic tool, check the vendor's exact-model coverage and license, source date and alternatives discussed above. Do not infer unsupported BMW programming or service commands."
       }
     ]
   },
@@ -1883,8 +1883,8 @@
   "carly-vs-foxwell-nt530": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 794,
-    "h2Count": 10,
+    "wordCount": 1733,
+    "h2Count": 13,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -1901,27 +1901,27 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 3,
-        "headingText": "NT530’s hardware-first structure",
+        "anchorIndex": 8,
+        "headingText": "Pricing and coverage note",
         "variant": "compact_cta",
         "productKeys": [
           "autophix-7910p-plus"
         ],
         "role": "Coverage check before you commit",
         "decisionMoment": "technical",
-        "context": "By the time nT530’s hardware-first structure matters for carly vs Foxwell NT530, the practical question is whether AUTOPHIX 7910P+ actually covers your exact BMW and the one function you are buying it for — check that on the current listing before you go further."
+        "context": "For carly vs foxwell nt530, verify the exact vehicle/ECU task, app or device version, authorizing source and supported function before purchasing this equipment. This card is not universal BMW capability proof."
       },
       {
         "position": "end",
-        "anchorIndex": 8,
-        "headingText": "Pricing and coverage note",
+        "anchorIndex": 11,
+        "headingText": "Decision examples tied to real workflow needs",
         "variant": "final_cta",
         "productKeys": [
           "autophix-7910p-plus"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "That makes AUTOPHIX 7910P+ the unit to check last for carly vs Foxwell NT530: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "Before committing to hardware for carly vs foxwell nt530, check the vendor's exact-model coverage and license, source date and alternatives discussed above. Do not infer unsupported BMW programming or service commands."
       }
     ]
   },
@@ -2334,8 +2334,8 @@
   "launch-x431-bmw": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "comparison",
-    "wordCount": 1604,
-    "h2Count": 9,
+    "wordCount": 2301,
+    "h2Count": 12,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -2353,27 +2353,27 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 3,
-        "headingText": "BMW functions need verb-level evidence",
+        "anchorIndex": 5,
+        "headingText": "Ownership cost is a timeline",
         "variant": "compact_cta",
         "productKeys": [
           "launch-x431-pro3s-plus"
         ],
         "role": "Option in focus",
         "decisionMoment": "technical",
-        "context": "This is where LAUNCH X-431 PRO3S+ earns its place in launch X431 for BMW: confirm bMW functions need verb-level evidence maps to your vehicle and software before you commit."
+        "context": "For launch x431 bmw, verify the exact vehicle/ECU task, app or device version, authorizing source and supported function before purchasing this equipment. This card is not universal BMW capability proof."
       },
       {
         "position": "end",
-        "anchorIndex": 7,
-        "headingText": "Which Launch should a BMW owner choose?",
+        "anchorIndex": 9,
+        "headingText": "Exact purchase evidence ledger",
         "variant": "final_cta",
         "productKeys": [
           "launch-creader-elite-bmw-v2"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "If launch X431 for BMW points you here, LAUNCH Creader Elite V2.0 for BMW is the defensible pick to verify and buy once your exact configuration checks out."
+        "context": "Before committing to hardware for launch x431 bmw, check the vendor's exact-model coverage and license, source date and alternatives discussed above. Do not infer unsupported BMW programming or service commands."
       }
     ]
   },
@@ -2505,8 +2505,8 @@
   "obd-app-vs-handheld-scanner": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "comparison",
-    "wordCount": 1339,
-    "h2Count": 8,
+    "wordCount": 2029,
+    "h2Count": 11,
     "isLong": true,
     "requiredPlacements": 3,
     "placements": [
@@ -2524,27 +2524,27 @@
       },
       {
         "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "The app path has four dependencies",
+        "anchorIndex": 5,
+        "headingText": "Licensing and updates belong in total cost",
         "variant": "compact_cta",
         "productKeys": [
           "autel-mx808s"
         ],
         "role": "Option in focus",
         "decisionMoment": "technical",
-        "context": "For the app path has four dependencies in oBD App vs Handheld Scanner, Autel MaxiCheck MX808S is the specific unit to price and check against your exact BMW, app and function."
+        "context": "For obd app vs handheld scanner, verify the exact vehicle/ECU task, app or device version, authorizing source and supported function before purchasing this equipment. This card is not universal BMW capability proof."
       },
       {
         "position": "end",
-        "anchorIndex": 7,
-        "headingText": "A safe buyer decision",
+        "anchorIndex": 9,
+        "headingText": "Evidence you should insist on before selecting a format",
         "variant": "final_cta",
         "productKeys": [
           "obdlink-cx"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "That makes OBDLink CX the unit to check last for oBD App vs Handheld Scanner: confirm your BMW or MINI, platform and required function on the current listing."
+        "context": "Before committing to hardware for obd app vs handheld scanner, check the vendor's exact-model coverage and license, source date and alternatives discussed above. Do not infer unsupported BMW programming or service commands."
       }
     ]
   },
