@@ -31,6 +31,8 @@ There are **69 article source files and 32 audited redirected guide slugs** afte
 
 Existing preserved diagrams remain original; no new decorative diagram was added solely to raise figure count. Article presentation still uses the existing centered prose/template, with original inline responsive picture sources and related reading.
 
+After the article expansions changed vertical placement positions, the four corresponding entries in `src/affiliate/placement-plan.generated.json` were re-anchored so top/middle/end units remain appropriately distributed. Product keys, unit variants, count and all **other** article placement plans are unchanged. No affiliate links or product registry entries were replaced.
+
 ## Source review and evidence boundaries
 
 - BimmerCode: [US App Store](https://apps.apple.com/us/app/bimmercode/id1130787459), [developer FAQ](https://bimmercode.app/faq/), [supported vehicles](https://bimmercode.app/vehicles/), [supported adapters](https://bimmercode.app/adapters/), [quick-start](https://bimmercode.app/manual/).
