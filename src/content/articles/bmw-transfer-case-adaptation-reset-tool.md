@@ -99,7 +99,7 @@ Record this evidence:
 
 Then ask what successful completion looks like. Does the tool display a completion state, provide a service record, or allow the relevant values and faults to be checked again? A screenshot of a menu entry is weaker than proof that the function is available after the vehicle is identified.
 
-The [Autel scanner for BMW guide](/guides/autel-scanner-for-bmw/) helps compare Autel classes without moving capability between models. The [code-reader versus scan-tool guide](/guides/bmw-code-reader-vs-scan-tool/) explains why generic OBD access cannot prove VTG support.
+The [Autel scanner for BMW guide](/guides/autel-scanner-for-bmw/) helps compare Autel classes without moving capability between models. The [code-reader versus scan-tool guide](/tools/bmw-scanner-capability-database/#bmw-code-reader-vs-scan-tool) explains why generic OBD access cannot prove VTG support.
 
 ## Reset is not calibration, even when a menu blurs them
 
