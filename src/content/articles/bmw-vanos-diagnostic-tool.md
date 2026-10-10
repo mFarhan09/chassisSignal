@@ -43,7 +43,7 @@ VANOS diagnosis is a chain of evidence, not a lookup. You start from a fault cod
 
 ## Read the codes as a lead, not a verdict
 
-VANOS-related fault codes generally fall into a few families — camshaft position or "camshaft stuck" faults, VANOS solenoid or activation faults, and cold-start control faults — and they point you toward the subsystem rather than a specific part. The exact code numbers and their wording depend on the engine and DME, and the reliable list for your car is the one BMW service data assigns to that engine, not a code borrowed from a different chassis. Treat a stored code as the opening of the investigation. Clearing it and hoping is not diagnosis, and buying a solenoid because a code mentions the camshaft is the mistake this whole workflow exists to prevent. See [BMW code reader vs scan tool](/guides/bmw-code-reader-vs-scan-tool/) for why a reader is not enough here.
+VANOS-related fault codes generally fall into a few families — camshaft position or "camshaft stuck" faults, VANOS solenoid or activation faults, and cold-start control faults — and they point you toward the subsystem rather than a specific part. The exact code numbers and their wording depend on the engine and DME, and the reliable list for your car is the one BMW service data assigns to that engine, not a code borrowed from a different chassis. Treat a stored code as the opening of the investigation. Clearing it and hoping is not diagnosis, and buying a solenoid because a code mentions the camshaft is the mistake this whole workflow exists to prevent. See [BMW code reader vs scan tool](/tools/bmw-scanner-capability-database/#bmw-code-reader-vs-scan-tool) for why a reader is not enough here.
 
 ## Compare target versus actual angle
 
