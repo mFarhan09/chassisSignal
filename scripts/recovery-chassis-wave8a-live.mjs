@@ -35,7 +35,7 @@ async function inspect(input){
   }else if(input.kind==='canonical'){
    record.ok=r.status===200;
    if(!record.ok)record.reason='Canonical destination must return 200 (no further redirect)';
-   if(record.ok){const h=await r.text();record.hasCanonical=/<link[^>]*rel=["']canonical["']/i.test(h)||/<link[^>]*href=["'][^"']+["'][^>]*rel=["']canonical["']/i.test(h);if(!record.hasCanonical){record.ok=false;record.reason='HTML missing canonical link'}}}
+   if(record.ok){const h=await r.text();record.hasCanonical=/<link[^>]*rel=["']canonical["']/i.test(h)||/<link[^>]*href=["'][^"']+["'][^>]*rel=["']canonical["']/i.test(h);if(!record.hasCanonical){record.ok=false;record.reason='HTML missing canonical link'}}
   }else{
    record.ok=r.status===200;
    if(!record.ok)record.reason='Expected HTTP 200';
