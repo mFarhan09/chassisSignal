@@ -20,6 +20,10 @@ for(const slug of slugs){
  const p='src/content/articles/'+slug+'.md';
  const old=original(p),current=fs.readFileSync(p,'utf8');
  assert(current!==old,slug+' has not changed');
+ // ArticlePage already supplies the visible H1: a second Markdown H1 would
+ // produce duplicate primary headings and weaken presentation quality.
+ const body=current.replace(/^---[\\s\\S]*?---/,'');
+ assert(!/^# [^#]/m.test(body),slug+' embeds a duplicate H1 in article body');
  for(const k of ['slug','section','publishedAt','heroImage','affiliate','draft']){
    const pattern=new RegExp('^'+k+':.*$','m');
    assert(old.match(pattern)?.[0]===current.match(pattern)?.[0],slug+' changed historical frontmatter '+k);
@@ -59,7 +63,10 @@ for(const [slug,plan] of Object.entries(oldPlans)){
   assert(plan.placements.length===next.placements.length,'affiliate unit count changed '+slug);
   for(let i=0;i<plan.placements.length;i++){
     const a=plan.placements[i],b=next.placements[i];
-    assert(a.position===b.position&&a.variant===b.variant&&JSON.stringify(a.productKeys)===JSON.stringify(b.productKeys),'affiliate product or position changed '+slug);
+    const routeOnlyAlternative=['carly-subscription-cost','protool-pricing'].includes(slug);
+    const permittedVariantShift=routeOnlyAlternative&&a.position==='top'&&a.variant==='recommended_equipment'&&b.variant==='product_card';
+    assert(a.position===b.position&&(a.variant===b.variant||permittedVariantShift)&&JSON.stringify(a.productKeys)===JSON.stringify(b.productKeys),'affiliate product or position changed '+slug);
+    if(routeOnlyAlternative&&a.position==='top')assert(b.variant==='product_card'&&b.role.includes('not ')&&b.role.includes('compatible hardware'),'alternative app route presented as recommended compatible equipment: '+slug);
   }
 }
 assert(fs.readdirSync('src/content/articles').filter(f=>f.endsWith('.md')).length===69,'source inventory drifted');
