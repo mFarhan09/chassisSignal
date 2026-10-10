@@ -62,3 +62,12 @@ The affiliate workflow is permitted to review **only these four specific article
 - Once reviewed and merged, **request indexing of updated canonical guide URLs selectively**, not the existing Wave 7 retired redirect paths.
 
 **Status:** Awaiting human PR approval. No deployment, GSC indexing, Google canonical acceptance or organic-traffic recovery is claimed here.
+
+
+## Pre-merge editorial spot-check and correction — October 10
+
+In addition to automated production checks, the final review revisited first-party vendor pages and public search-result samples for the four pricing tasks. It established: BimmerCode's free app/adapter/vehicle-option preflight from the official quick-start guide; BimmerLink's two distinct iOS purchase options from its US App Store listing; Carly's BMW/All Brands examples from its US and UK country-specific vendor articles and its website-vs-app-store cancellation rules; and ProTool's actual Diagnostic/Coding/Master catalog prices, Android-only platform, older-chassis coding caveat and hardware-exclusion note from BimmerGeeks. Numbers are restricted to those documented market, product and observation contexts. **No live buyer checkout, independent hands-on validation, full top-N SERP scrape or fresh GSC query join was available**; none is represented as completed.
+
+The extra editorial pass identified a pre-existing duplicate top-level Markdown heading and repeated image caption in the Carly article; these were removed without losing research. It also found that Carly/ProTool affiliate mapping intentionally promotes OBDLink CX **only as a separate supported-app alternative**, not as an adapter for either article's main software. Their lead placements had incorrectly used the "Recommended equipment" visual treatment. They now use a regular product card with the existing explicitly labeled *Alternative BMW app route/interface* relationship, while preserving the approved product, original affiliate image and link, and all 3 placement positions. The new QA gate refuses to present these alternatives as compatible equipment. The two relevant pieces of first-party compatibility evidence are BimmerCode's official supported-adapter list and the Carly/BimmerGeeks product-specific hardware paths.
+
+These are focused quality repairs, not additional topical URLs or modified original 301s. The evidence check supports cautious editorial publication **without implying Google has approved the content or that it is guaranteed to rank**. Source-currency, checkout, and indexing rechecks remain normal maintenance tasks.
