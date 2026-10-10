@@ -22,7 +22,7 @@ for(const slug of slugs){
  assert(current!==old,slug+' has not changed');
  // ArticlePage already supplies the visible H1: a second Markdown H1 would
  // produce duplicate primary headings and weaken presentation quality.
- const body=current.replace(/^---[\\s\\S]*?---/,'');
+ const body=current.replace(/^---[\s\S]*?---/,'');
  assert(!/^# [^#]/m.test(body),slug+' embeds a duplicate H1 in article body');
  for(const k of ['slug','section','publishedAt','heroImage','affiliate','draft']){
    const pattern=new RegExp('^'+k+':.*$','m');
