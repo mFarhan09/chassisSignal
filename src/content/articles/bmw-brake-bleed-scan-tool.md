@@ -137,20 +137,6 @@ Buy a scanner for this job only if you already know the exact service function t
 
 The reliable chain is simple: documented repair event, exact BMW instruction, verified function coverage, qualified execution, and physical plus diagnostic confirmation. Recheck the instruction and tool coverage if the vehicle, DSC unit, software, or repair scope changes. Preserve the pre-service evidence rather than clearing it to make the dashboard look settled. Break any link and the right action is to pause, not improvise.
 
-## Sources consulted
-
-- [BMW Group — Brake System Service training manual](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
-- [BMW / NHTSA — Model-specific recall repair instruction](https://static.nhtsa.gov/odi/rcl/2024/RCRIT-24V739-5692.pdf)
-- [BMW Group — Technical Information System](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
-- [Autel — Service-function product documentation](https://autel.com/mk3/4292.jhtml)
-- [Autel — Vehicle coverage database](https://autel.com/vehicle-coverage/coverage2)
-- [Foxwell — Vehicle coverage search](https://foxwelltech.us/oeSearch/support_oe_search_app.html)
-
-
-**Related resource:** Our [BMW Scanner Capability Database](/tools/bmw-scanner-capability-database/) screens broader device and function claims. This original guide, its technical diagrams and its task-specific evidence remain intact.
-
-
-
 ## October 2026 brake-job classification: choose the operation before the scanner
 
 **Research review: 10 October 2026.** BMW’s [AOS/ISTA service environment](https://bmwtechinfo.bmwgroup.com/assets/site_information.pdf) supplies vehicle-specific repair instructions and diagnostic test plans. Autel’s [MX900-TS product page](https://store.autel.com/products/maxicheck-mx900-ts) advertises “ABS Bleed” in a broad list of service functions, but a general feature list **does not certify** the named hydraulic-unit procedure for a particular BMW DSC variant. Treat the approved BMW repair instruction as the deciding evidence.
@@ -181,6 +167,19 @@ This page intentionally does **not** provide a pedal sequence, valve-actuation p
 **Stop and escalate** for uncertain hydraulic integrity, recurring brake/DSC warnings, unsupported module access, inadequate electrical supply, an unavailable repair instruction or a failed procedure. The broader [BMW service-function matrix](/tools/bmw-service-function-matrix/) compares service verbs across systems; it is not a replacement for this brake-specific risk and qualification record.
 
 **Evidence limitations:** BMW [TIS/AOS](https://bmwtechinfo.bmwgroup.com/assets/site_information.pdf), [Autel MX900-TS](https://store.autel.com/products/maxicheck-mx900-ts) and [Autel coverage](https://www.autel.com/vehicle-coverage/coverage2) establish *where* function evidence can be checked, not proof of a performed bleed. No vehicle, scanner, fluid or hydraulic unit was tested in this review.
+
+## Sources consulted
+
+- [BMW Group — Brake System Service training manual](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
+- [BMW / NHTSA — Model-specific recall repair instruction](https://static.nhtsa.gov/odi/rcl/2024/RCRIT-24V739-5692.pdf)
+- [BMW Group — Technical Information System](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
+- [Autel — Service-function product documentation](https://autel.com/mk3/4292.jhtml)
+- [Autel — Vehicle coverage database](https://autel.com/vehicle-coverage/coverage2)
+- [Foxwell — Vehicle coverage search](https://foxwelltech.us/oeSearch/support_oe_search_app.html)
+
+
+**Related resource:** Our [BMW Scanner Capability Database](/tools/bmw-scanner-capability-database/) screens broader device and function claims. This original guide, its technical diagrams and its task-specific evidence remain intact.
+
 
 
 ## Related service-function eligibility and safety matrix
