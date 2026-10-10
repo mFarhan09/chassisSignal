@@ -137,21 +137,6 @@ Keep the coverage proof with the service record. A dated screenshot or manufactu
 
 If you cannot name the diagnosed fault, completed service event, target VTG module, and required command, do not shop for a reset button yet. Diagnose first. The right tool is the one that can prove the justified function on this BMW—not the one with the longest generic service menu.
 
-## Sources consulted
-
-- [BMW Group — xDrive Dynamics training manual](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
-- [BMW Group — Technical Information System](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
-- [Autel — Vehicle coverage database](https://autel.com/vehicle-coverage/coverage2)
-- [Autel — Special-function service tools](https://support.autel.com/support/solutions/articles/8000037458-special-function-service-tools)
-- [Foxwell — Vehicle coverage search](https://foxwelltech.us/oeSearch/support_oe_search_app.html)
-
-
-## How this investigation fits the broader diagnostic method
-
-A transfer-case adaptation reset is not evidence that the underlying driveline fault has been identified. The [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) explains how to preserve original fault data, verify ECU access and select an evidence-backed next step. This specialist guide keeps its independent original diagrams and source-specific research. Do not use a write-capable procedure as a trial-and-error diagnostic shortcut.
-
-
-
 ## October 2026 VTG repair-trigger versus software-function matrix
 
 **Research review: 10 October 2026.** BMW’s [AOS/ISTA service environment](https://bmwtechinfo.bmwgroup.com/assets/site_information.pdf) supplies fault-directed diagnostics and vehicle-specific repair instructions. An aftermarket vendor’s generic “transmission,” “drivetrain,” “adaptation” or “4WD reset” entry is **not** sufficient evidence for a particular BMW VTG controller. Obtain the exact module/routine identity through vendor [coverage lookup](https://www.autel.com/vehicle-coverage/coverage2) and the BMW repair instruction.
@@ -183,6 +168,20 @@ A qualified professional must match the exact BMW procedure, repair event and so
 Keep a dated job sheet containing pre-repair DTC snapshots, transfer-case controller identity, tyres/rolling-circumference concerns, repair order, approved replacement-fluid/part record, tool version and named routine support, and the result of the manufacturer-specified verification. If adaptation is unnecessary or not supported, record that decision; avoiding an unjustified software write is itself a successful diagnostic outcome.
 
 The [BMW service-function matrix](/tools/bmw-service-function-matrix/) categorizes general controller operations, while this article owns **VTG/xDrive service-state and repair-trigger decisions**. The [BMW module troubleshooting hub](/guides/bmw-module-troubleshooting/) addresses ECU reachability. No transfer case was serviced, calibrated or experimentally reset during the source review.
+
+## Sources consulted
+
+- [BMW Group — xDrive Dynamics training manual](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
+- [BMW Group — Technical Information System](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
+- [Autel — Vehicle coverage database](https://autel.com/vehicle-coverage/coverage2)
+- [Autel — Special-function service tools](https://support.autel.com/support/solutions/articles/8000037458-special-function-service-tools)
+- [Foxwell — Vehicle coverage search](https://foxwelltech.us/oeSearch/support_oe_search_app.html)
+
+
+## How this investigation fits the broader diagnostic method
+
+A transfer-case adaptation reset is not evidence that the underlying driveline fault has been identified. The [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) explains how to preserve original fault data, verify ECU access and select an evidence-backed next step. This specialist guide keeps its independent original diagrams and source-specific research. Do not use a write-capable procedure as a trial-and-error diagnostic shortcut.
+
 
 
 ## Related service-function eligibility and safety matrix
