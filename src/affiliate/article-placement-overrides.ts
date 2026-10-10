@@ -62,13 +62,13 @@ export const articlePlacementOverrides: Record<string, ArticlePlacementOverride>
   'bmw-scanner-without-subscription': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Available no-subscription scanner alternative' },
   'bmw-steering-angle-sensor-calibration-tool': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Available SAS-capable scanner alternative' },
   'bmw-transfer-case-adaptation-reset-tool': { affiliateRelationship: 'workshop_alternative', relationshipLabel: 'Available workshop diagnostic alternative' },
-  'carly-subscription-cost': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Alternative BMW app route' },
+  'carly-subscription-cost': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Alternative for other BMW apps — NOT a Carly scanner' },
   'carly-vs-foxwell-nt530': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Available BMW scanner alternative' },
   'foxwell-nt530-vs-autel-mk808s-bmw': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Available Autel-side alternative' },
   'foxwell-nt530-vs-nt710': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Available BMW scanner alternative' },
   'launch-x431-bmw': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Available LAUNCH diagnostic routes' },
   'launch-x431-vs-autel-for-bmw': { affiliateRelationship: 'workshop_alternative', relationshipLabel: 'Available workshop alternatives' },
   'obdlink-ex-vs-enet-cable': { affiliateRelationship: 'exact_product', relationshipLabel: 'Exact OBDLink EX product discussed - not a BMW ENET interface' },
-  'protool-pricing': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Alternative BMW app interface' },
+  'protool-pricing': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Alternative for other BMW apps — NOT a ProTool adapter' },
   'protool-vs-carly': { affiliateRelationship: 'available_alternative', relationshipLabel: 'Alternative BMW app route' }
 };
