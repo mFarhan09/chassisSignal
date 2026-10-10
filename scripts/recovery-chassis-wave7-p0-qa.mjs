@@ -76,7 +76,16 @@ const explicit8d=(process.env.CHASSIS_WAVE8D_BATCH3_REBUILD==='1' && modified.le
   modified.every(p=>approved8d.includes(p)));
 // These three original intent-decision-gate sources may be *enhanced in place*,
 // but this exception does not authorize any 301, retirement or proven intent claim.
-assert(!originalChanges||explicit8b||explicit8c||explicit8d,
- 'retirement should preserve the 32 archived source guides except governed 8B/8C/8D rebuild cohorts');
+const approvedFinalMinor=[
+ 'bmw-battery-drain-diagnostic-tool','bmw-coding-vs-programming',
+ 'bmw-frm-module-diagnostic-tool','bmw-no-communication-with-obd-scanner',
+ 'bmw-scanner-abs-airbag-codes'
+].map(s=>'src/content/articles/'+s+'.md');
+const explicitFinalMinor=(process.env.CHASSIS_FINAL_MINOR_REBUILD==='1' && modified.length===5 &&
+  modified.every(p=>approvedFinalMinor.includes(p)));
+// This opt-in protects every prior source; Wave 9 conversion source Markdown
+// is unchanged and its complete public evidence is rendered by the canonical.
+assert(!originalChanges||explicit8b||explicit8c||explicit8d||explicitFinalMinor,
+ '32 archived sources must remain untouched; allow only exact 8B/8C/8D or final-five rebuild cohort');
 assert(sitemapFiles.length>1,'sitemap content file missing');
 console.log('AUDIT MERGE+301 CONSOLIDATION PASS:',{retiredPublicURLs:entries.length,redirectRules:entries.length*2,publishedDiscoveryGuides:publishedGuidesAfterAuditMerges,preservedSourceArticles:69,sitemap:true,destinations:5});
