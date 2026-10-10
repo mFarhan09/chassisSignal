@@ -5,7 +5,7 @@ description: "Compare BimmerLink, Carly, and a BMW handheld scanner by registrat
 slug: "bmw-battery-registration-scanner"
 section: "guides"
 publishedAt: 2026-08-23T12:00:00+05:00
-updatedAt: 2026-08-23T12:00:00+05:00
+updatedAt: 2026-10-10
 pricingChecked: 2026-08-23
 category: "Buying Guides"
 tags: ["Guides", "BMW", "MINI", "Diagnostics", "Battery Registration", "BimmerLink", "Carly", "ANCEL"]
@@ -194,6 +194,40 @@ If the battery type/capacity changes, the vehicle has multiple 12-volt batteries
 
 
 **Related resource:** Our [BMW Scanner Capability Database](/tools/bmw-scanner-capability-database/) explains broader model, feature, vehicle-coverage and safety verification. This specialist article remains available with its original diagrams, sources and task-specific evidence.
+
+
+
+## October 2026 repair-event worksheet: registration is not configuration
+
+**Research review: 10 October 2026.** BimmerLink’s [official feature page](https://bimmerlink.app/) explicitly names battery registration after replacement. That substantiates the app’s general advertised function, **not** a promise for every BMW model, battery technology, energy-management system, device or adapter. BMW’s [authorized technical-information platform](https://bmwtechinfo.bmwgroup.com/assets/site_information.pdf) provides the vehicle-specific ISTA and repair-instruction path; that remains the controlling source when the new battery differs from the vehicle’s previous approved specification.
+
+| Replacement event | What must be checked | Why a scanner menu alone is insufficient |
+| --- | --- | --- |
+| Like-for-like approved battery, same technology and rated capacity | Correct battery specification, registration support for the exact chassis, power-management faults | Registration documents replacement; it does not prove the battery is suitable or healthy |
+| Approved new battery with different Ah rating | Manufacturer-permitted change and separate capacity/vehicle-order coding requirement | A successful registration may leave the car configured for the previous capacity |
+| Different technology, such as flooded to AGM | Vehicle-specific battery approval, technology coding and registration availability | An app advertising “register battery” is not necessarily able to change charging strategy |
+| Replacement after voltage or IBS-related faults | Diagnose Intelligent Battery Sensor, charging system, quiescent draw and stored energy-management codes | Registering a new battery cannot repair a bad sensor, wiring fault or parasitic load |
+| Unknown previous battery or missing service history | Battery label, VIN-specific installed specifications, prior repair record and actual configuration | Neither the sticker nor a diagnostic report alone proves factory battery configuration |
+
+This table is a **purchase and diagnosis gate**, not a universal workshop procedure. In particular, never select an arbitrary capacity or chemistry from a list merely because the tool exposes it.
+
+## What counts as a credible supported-function claim?
+
+A buyer should ask the seller for a screenshot, official support entry or written confirmation referencing *all* of the following: the VIN/chassis and production year, the current software or firmware version, the exact “battery replacement registration” operation, and whether changing Ah/AGM technology is a **separate** supported action. An ordinary OBD-II fault read is not proof of registration access. The same distinction applies to a standalone handheld advertised with “BMS reset.”
+
+For the mobile route, [BimmerLink](https://bimmerlink.app/) identifies a supported iOS/Android host and an approved OBD adapter as prerequisites. If an existing interface is available, test non-destructive identification first, but do not assume that connecting to engine fault codes guarantees access to the energy-management function. For a workshop route, the BMW [AOS/TIS description](https://bmwtechinfo.bmwgroup.com/assets/site_information.pdf) distinguishes ISTA diagnostic test plans from generic fault-code access; the VIN-specific test plan determines eligibility.
+
+## Post-service evidence record and failure branches
+
+| Evidence to retain | Expected interpretation | Escalation if missing or inconsistent |
+| --- | --- | --- |
+| Before/after battery label and dated invoice | Confirms the exact installed battery, chemistry and capacity | Do not continue with an unknown or unapproved replacement |
+| Initial energy-management and charging-system fault report | Documents the complaint *before* any operation clears context | Diagnose supply, sensor or charging issue before attributing it to registration |
+| Tool report with named registration result | Shows what the controller acknowledged, not a generic “success” toast | Retry only where the official vehicle instruction identifies a recoverable connection error |
+| Battery configuration readout where available | Separates recorded capacity/technology from “replacement registered” state | Refer to qualified configuration support if the new battery requires coding |
+| Later voltage, charging and recurrence assessment | Checks that the original complaint did not recur | Registration is not a fix for a continuing discharge condition |
+
+The [service-function eligibility matrix](/tools/bmw-service-function-matrix/) explains comparable read, reset and write boundaries, while the [BimmerLink adapter guide](/guides/bimmerlink-adapter/) owns exact interface choice. This page specifically owns the **battery replacement/registration versus configuration** decision. No battery was installed or registered for this research; price and support still require the real buyer’s checkout and VIN-specific confirmation.
 
 
 ## Related service-function eligibility and safety matrix
