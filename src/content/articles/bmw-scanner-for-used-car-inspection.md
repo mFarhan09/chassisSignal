@@ -60,7 +60,7 @@ The report should name the tool and software version. If it silently omits unsup
 
 Standardized OBD II and BMW-specific diagnosis overlap, but they are not the same inspection. SAE standards define scan-tool requirements and diagnostic modes for emissions-related information such as live data, freeze frame, and trouble codes. BMW-specific access can extend into chassis, restraint, body, comfort, and network modules when the tool genuinely supports them.
 
-Our [BMW code reader versus scan tool](/guides/bmw-code-reader-vs-scan-tool/) guide explains that boundary. The [BMW scanner for ABS and airbag codes](/guides/bmw-scanner-abs-airbag-codes/) guide shows why chassis and restraint systems need explicit coverage rather than a generic OBD logo.
+Our [BMW code reader versus scan tool](/tools/bmw-scanner-capability-database/#bmw-code-reader-vs-scan-tool) guide explains that boundary. The [BMW scanner for ABS and airbag codes](/guides/bmw-scanner-abs-airbag-codes/) guide shows why chassis and restraint systems need explicit coverage rather than a generic OBD logo.
 
 Before buying a scanner, use its official coverage lookup with the exact vehicle and the exact product. Autel's DS808S is one documented example of an all-system class with freeze-frame and report-management features, not a promise that every Autel or every BMW combination behaves alike. Foxwell likewise supplies a coverage-search tool. Save the dated coverage result with the inspection packet.
 
