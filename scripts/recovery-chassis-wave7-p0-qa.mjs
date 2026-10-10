@@ -47,6 +47,16 @@ const explicit8b=(process.env.CHASSIS_WAVE8B_EDITORIAL_REBUILD==='1' && modified
 // Wave 7's archive rule applies unchanged in every context other than this explicitly
 // audited four-file Wave 8B rebuild. Wave 8B must also pass the separate original-H2,
 // image, SVG, frontmatter and 69-source preservation gate.
-assert(!originalChanges||explicit8b,'retirement should preserve raw research unchanged except the four governed Wave 8B rebuilds');
+const approved8c=[
+ 'bmw-battery-registration-scanner','bmw-brake-bleed-scan-tool','bmw-dpf-regeneration-scan-tool',
+ 'bmw-electric-parking-brake-service-mode-scanner','bmw-injector-coding-tool','bmw-parking-sensor-diagnostic-tool',
+ 'bmw-ride-height-calibration-scan-tool','bmw-steering-angle-sensor-calibration-tool',
+ 'bmw-tpms-diagnostic-tool','bmw-transfer-case-adaptation-reset-tool','ista-valvetronic-relearn'
+].map(s=>'src/content/articles/'+s+'.md');
+const explicit8c=(process.env.CHASSIS_WAVE8C_BATCH1_REBUILD==='1' && modified.length===11 &&
+  modified.every(p=>approved8c.includes(p)));
+// Preserve the original 32 merged-source Markdown files byte-for-byte. Only the 11
+// independently audited, non-retired specialist guides can change under this opt-in.
+assert(!originalChanges||explicit8b||explicit8c,'retirement should preserve the raw research except approved Wave 8B or Wave 8C in-place rebuild cohorts');
 assert(sitemapFiles.length>1,'sitemap content file missing');
 console.log('AUDIT MERGE+301 CONSOLIDATION PASS:',{retiredPublicURLs:entries.length,redirectRules:entries.length*2,publishedDiscoveryGuides:publishedGuidesAfterAuditMerges,preservedSourceArticles:69,sitemap:true,destinations:5});
