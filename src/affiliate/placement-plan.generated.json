@@ -1847,11 +1847,11 @@
         "position": "top",
         "anchorIndex": 1,
         "headingText": "Start with the acquisition channel",
-        "variant": "recommended_equipment",
+        "variant": "product_card",
         "productKeys": [
           "obdlink-cx"
         ],
-        "role": "Relevant equipment",
+        "role": "Alternative BMW app route (not Carly-compatible hardware)",
         "decisionMoment": "compatibility"
       },
       {
@@ -2926,11 +2926,11 @@
         "position": "top",
         "anchorIndex": 1,
         "headingText": "Which license do you need?",
-        "variant": "recommended_equipment",
+        "variant": "product_card",
         "productKeys": [
           "obdlink-cx"
         ],
-        "role": "Relevant equipment",
+        "role": "Alternative BMW app route (not ProTool-compatible hardware)",
         "decisionMoment": "compatibility"
       },
       {
