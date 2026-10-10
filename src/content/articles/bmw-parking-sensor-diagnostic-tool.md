@@ -33,7 +33,7 @@ BMW's parking systems have evolved from simple ultrasonic Park Distance Control 
 </figure>
 
 <figure class="cs-article-visual">
-  <img src="/images/tools/bmw-obd-adapter-comparison/#obdlink-cx-vs-mx-pluscs009-in-car-diagnostic-context.webp" alt="An OBD-II diagnostic adapter connected inside a car near the dashboard" width="1600" height="900" loading="lazy" decoding="async">
+  <img src="/images/guides/obdlink-cx-vs-mx-plus/cs009-in-car-diagnostic-context.webp" alt="An OBD-II diagnostic adapter connected inside a car near the dashboard" width="1600" height="900" loading="lazy" decoding="async">
   <figcaption>In-car diagnostic context. This is not a photo of a BMW PDC/PMA parking module or its live sensor data, and is not tied to a specific tool tested here. Photo by Fatih Erden via Pexels.</figcaption>
 </figure>
 
