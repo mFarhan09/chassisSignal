@@ -25,8 +25,6 @@ affiliate: false
 draft: false
 ---
 
-# Carly Subscription Cost: Price Variables, Renewal, and Ownership Math
-
 There is no single universal **Carly subscription cost**. Carly's own support material says package pricing depends on location, currency and selected car brand. The Carly website, Apple App Store and Google Play can also present different purchase paths, bundles and renewal controls. A current answer therefore needs a market, platform, package and date—not one number copied from an old review.
 
 This guide was checked on August 26, 2026. It explains the ownership model and uses visible US App Store examples only to demonstrate the math. Those examples are not a quote for another country, platform, account or checkout date.
@@ -35,8 +33,6 @@ This guide was checked on August 26, 2026. It explains the ownership model and u
   <img src='/images/guides/carly-subscription-cost/cs020-phone-in-car-context.webp' alt='Smartphone diagnostic app beside an OBD scanner and mechanic&#39;s tools.' loading='lazy' decoding='async'>
   <figcaption>OBD-app and scanner context. The pictured app and scanner are BlueDriver, not Carly, and were not tested for this guide. Photo by Erik Mclean via Pexels.</figcaption>
 </figure>
-
-*OBD-app and scanner context. The pictured app and scanner are BlueDriver, not Carly, and were not tested for this guide. Photo by Erik Mclean via Pexels.*
 
 ## Carly subscription cost at a glance
 
