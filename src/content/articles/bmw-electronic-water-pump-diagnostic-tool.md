@@ -61,7 +61,7 @@ Begin with a complete DME fault scan and preserve freeze-frame or environmental 
 
 Next review the engine-specific data named by the current test plan. Useful categories may include measured temperatures, requested cooling state, pump-related status or supply information, but parameter names and normal ranges are application-specific. A displayed value can be substituted, stale or calculated, so compare its behavior with the physical condition and other sensors rather than declaring it true because it appears on screen.
 
-Generic emissions access does not prove BMW module data or service-test capability; use the [BMW code reader versus scan tool](/guides/bmw-code-reader-vs-scan-tool/) boundary to select the required diagnostic class.
+Generic emissions access does not prove BMW module data or service-test capability; use the [BMW code reader versus scan tool](/tools/bmw-scanner-capability-database/#bmw-code-reader-vs-scan-tool) boundary to select the required diagnostic class.
 
 <figure>
   <picture>
