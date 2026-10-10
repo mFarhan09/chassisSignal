@@ -121,6 +121,20 @@ Never jack a vehicle unsafely, spin driven wheels on unapproved supports, simula
 Use the [BMW ABS and airbag code reader guide](/guides/bmw-scanner-abs-airbag-codes/) for broad system access; this page owns **wheel-speed signal comparison and encoder/bearing alternatives**. Primary evidence: [BMW ISTA/technical platform](https://bmwtechinfo.bmwgroup.com/), [Autel coverage](https://www.autel.com/vehicle-coverage/coverage2). No wheel-speed measurements were obtained on a live car for this editorial review.
 
 
+### A time-synchronized comparison is not four isolated screenshots
+
+If the BMW DSC and software expose four wheel-speed channels, an inspection record should show whether all values were observed **in the same approved measurement session**, with consistent units, sample interval and the operating condition documented. A graph made from four recordings captured at different times is not a valid side-by-side proof of one corner's intermittent behavior. An absent or stale channel can also represent a scanner refresh limitation rather than a failed sensor. Record these uncertainties rather than inventing a numerical tolerance.
+
+| Comparison integrity question | What to record |
+| --- | --- |
+| Were the four channels sampled together? | Scanner live-data screen/report, time base, number of channels and sampling mode |
+| Was the DSC controller fully identified? | ECU module address/identity, supported PID list and software version |
+| Did a saved trace miss packets or lose connection? | Raw warnings, timestamp discontinuity, connection state and firmware |
+| Was the data collected under permitted safe conditions? | Referenced BMW procedure and professional operator, not a public-road experiment |
+| Are sensor parts and wheel bearings correctly matched? | Vehicle part-number/repair history, approved inspection method and previous work |
+
+**A decisive distinction:** read-only fault and live-signal observations help select the next professional test. They do not authorize a vehicle to be driven with an active ABS/DSC safety fault, nor do they verify the physical encoder ring or prove that a particular replacement sensor will solve the complaint. If the physical safety or test prerequisites are uncertain, the successful buyer decision may be to **defer the equipment purchase** and pay for a qualified DSC diagnosis first.
+
 ## How this investigation fits the wider BMW diagnostic method
 
 A wheel-speed fault may involve controller reachability, supply and physical signal evidence, not just a sensor. The hub helps route readers to the right independent checks. If the problem is still unclassified, start with the [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) and its evidence-first symptom directory. This guide remains the detailed resource for its distinct controller, procedure and original technical visuals; no source research or SVG is being retired.
