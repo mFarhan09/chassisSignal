@@ -110,7 +110,7 @@ Ask to see the export format, sample report and storage policy. Confirm whether 
 
 ## October 2026 operational-architecture decision worksheet
 
-**Intent-review state: provisional standalone; independent query intent must be checked using GSC page-to-query data before any merge/301.** This page has a different reader job from the [BMW scanner capability database](/tools/bmw-scanner-capability-database/): choosing an *operating workflow architecture*—phone app + VCI versus standalone handheld/tablet—when connectivity, device ownership, offline use, evidence exports and support complexity matter as much as BMW feature lists.
+The decision differs from looking up BMW model coverage in the [BMW scanner capability database](/tools/bmw-scanner-capability-database/). Here the question is the **operating architecture**—phone app plus VCI versus standalone handheld/tablet—when connectivity, device ownership, offline use, report exports and support complexity matter as much as feature lists.
 
 The [OBDLink model comparison](https://support.obdlink.com/support/solutions/articles/43000713351-which-obdlink-adapter-is-right-for-me-) establishes that adapter models differ in BLE/classic Bluetooth, OS and protocol support. [OBDLink's compatible-app statement](https://www.obdlink.com/compatible-apps/) warns that third-party applications have different capabilities and not all apps support all adapters. [BimmerLink](https://bimmerlink.app/) explicitly requires a supported OBD adapter and iOS/Android host. Those facts show **why the phone/adapter/app chain creates more independently maintained compatibility decisions**; they do not prove handhelds support more BMW functions or guarantee that every app lacks offline access.
 
@@ -143,7 +143,7 @@ The [OBDLink model comparison](https://support.obdlink.com/support/solutions/art
 | Service safety | Named manufacturer test plan for any write/activation |
 | Failure recovery | Return terms, app refund and support responsibility across vendors |
 
-This article **does not** recommend running active tests to see whether a tool works. Read-only identification and manufacturer-supported diagnostics must come first; safety-critical commands require the exact approved instruction. No product was purchased, paired, bench-tested or operated on a vehicle in this editorial update. The ongoing intent gate remains open until query-by-page evidence demonstrates enough independent demand and non-overlapping value to justify this separate page.
+This article **does not** recommend running active tests to see whether a tool works. Read-only identification and manufacturer-supported diagnostics must come first; safety-critical commands require the exact approved instruction. No product was purchased, paired, bench-tested or operated on a vehicle in this editorial update. For a final purchase, use exact BMW vehicle and function evidence along with the device ownership, account, connectivity and support conditions above.
 
 
 ## A safe buyer decision
