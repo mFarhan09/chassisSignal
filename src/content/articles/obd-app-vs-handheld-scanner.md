@@ -60,7 +60,7 @@ Write a requirements list in diagnostic language: read generic powertrain codes,
 
 Generic emissions OBD is narrower than manufacturer diagnostics. A product that reads an engine fault is not automatically able to access ABS, airbag, body or battery-management modules. Likewise, a menu label such as “service reset” does not establish support for every vehicle. Verify the exact combination in the vendor's current coverage information.
 
-For BMW-specific purchase boundaries, [BMW code reader vs scan tool](/guides/bmw-code-reader-vs-scan-tool/) explains why code depth and service functions are separate decisions. If battery registration is the job, use the dedicated [BMW battery registration scanner guide](/guides/bmw-battery-registration-scanner/) instead of assuming every diagnostic product includes it.
+For BMW-specific purchase boundaries, [BMW code reader vs scan tool](/tools/bmw-scanner-capability-database/#bmw-code-reader-vs-scan-tool) explains why code depth and service functions are separate decisions. If battery registration is the job, use the dedicated [BMW battery registration scanner guide](/guides/bmw-battery-registration-scanner/) instead of assuming every diagnostic product includes it.
 
 ## The app path has four dependencies
 
@@ -86,9 +86,9 @@ These examples show range, not winners. A dedicated display can make the tool ea
 
 Do not write “Bluetooth is slow” or “wired is reliable” as universal claims. Adapter chipset, protocol implementation, radio environment, cable, software and requested data all affect an exact setup. Some wired tools are basic; some wireless adapters and apps document high-rate logging and enhanced modules. Some dedicated tablets use wireless vehicle interfaces themselves.
 
-Compare documented compatibility and task completion, not connection stereotypes. If a BMW/MINI app is under consideration, the [BimmerLink adapter guide](/guides/bimmerlink-adapter/) maps the app/vehicle/interface boundary. The [OBDLink CX vs MX+](/guides/obdlink-cx-vs-mx-plus/) guide owns that specific adapter decision.
+Compare documented compatibility and task completion, not connection stereotypes. If a BMW/MINI app is under consideration, the [BimmerLink adapter guide](/guides/bimmerlink-adapter/) maps the app/vehicle/interface boundary. The [OBDLink CX vs MX+](/tools/bmw-obd-adapter-comparison/#obdlink-cx-vs-mx-plus) guide owns that specific adapter decision.
 
-For a MINI-specific app shortlist, see the [MINI diagnostic app guide](/guides/mini-diagnostic-app/) before choosing the adapter or license.
+For a MINI-specific app shortlist, see the [MINI diagnostic app guide](/tools/bmw-vehicle-interface-compatibility/#mini-diagnostic-app) before choosing the adapter or license.
 
 <picture>
   <source media='(max-width: 599px)' srcset='/images/guides/obd-app-vs-handheld-scanner/cs012-task-decision-mobile.svg'>
