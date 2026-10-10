@@ -26,9 +26,9 @@ ok(Object.keys(audit.entries).length===26,'original candidate count changed');
 ok(cohort.every(s=>audit.entries[s]?.action===(intentGates.has(s)?'INTENT_DECISION_GATE':'REBUILD_IN_PLACE')),
  'one or more cohort entries contradict original Wave 8A editorial status');
 ok(intentGates.size===3,'three independent intent review gates are required');
-const report=fs.readFileSync('recovery/CHASSIS_WAVE_8D_BATCH3_RELEASE.md','utf8');
+const releaseReport=fs.readFileSync('recovery/CHASSIS_WAVE_8D_BATCH3_RELEASE.md','utf8');
 for(const gate of intentGates){
- ok(report.includes(gate)&&report.includes('GSC'),gate+': missing documented unresolved intent decision');
+ ok(releaseReport.includes(gate)&&releaseReport.includes('GSC'),gate+': missing documented unresolved intent decision');
  ok(!consolidatedRedirects[gate],gate+': protected intent gate silently redirected');
 }
 ok(cohort.every(s=>!excludedPricing.has(s)),'Wave 8B article touched');
