@@ -1793,7 +1793,7 @@
   "bmw-wheel-speed-sensor-diagnostic-tool": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
-    "wordCount": 1710,
+    "wordCount": 1971,
     "h2Count": 11,
     "isLong": true,
     "requiredPlacements": 3,
@@ -1823,8 +1823,8 @@
       },
       {
         "position": "end",
-        "anchorIndex": 8,
-        "headingText": "Minimum evidence capture before buying a replacement sensor",
+        "anchorIndex": 9,
+        "headingText": "Safety envelope for ABS/DSC diagnosis",
         "variant": "final_cta",
         "productKeys": [
           "autel-mx900"
