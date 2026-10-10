@@ -663,15 +663,15 @@
       },
       {
         "position": "end",
-        "anchorIndex": 10,
-        "headingText": "What counts as a credible supported-function claim?",
+        "anchorIndex": 11,
+        "headingText": "Post-service evidence record and failure branches",
         "variant": "final_cta",
         "productKeys": [
           "obdlink-cx"
         ],
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
-        "context": "Before selecting equipment for bmw battery registration scanner, retain the VIN-specific manufacturer procedure, read-only fault evidence and the seller's confirmed exact-function coverage. Do not use an unsupported write as a test."
+        "context": "At the final BMW battery-replacement decision, preserve actual registration acknowledgement, the controller's configured battery type/capacity and the verified approved adapter path; hardware selection does not prove the battery installation is correct."
       }
     ]
   },
