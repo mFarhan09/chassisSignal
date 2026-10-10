@@ -34,5 +34,13 @@ export const consolidatedRedirects = {
   "k-dcan-vs-enet-cable": "/guides/bmw-diagnostic-interface-map/",
   "mini-diagnostic-app": "/tools/bmw-vehicle-interface-compatibility/"
 };
-export const retiredGuidePaths = new Set(Object.keys(consolidatedRedirects).flatMap(slug => [`/guides/${slug}/`,`/guides/${slug}`]));
+// Additive, separately governed conversion decisions from the two ORIGINAL
+// CONVERT TO DATABASE/TOOL forensic actions. Keep old 32 P0 cohort immutable.
+export const convertedToolSourceRedirects = {
+  "autel-scanner-for-bmw": "/tools/bmw-scanner-capability-database/",
+  "bmw-bidirectional-scan-tool-functions": "/tools/bmw-scanner-capability-database/"
+};
+export const publicGuideRedirects = {...consolidatedRedirects, ...convertedToolSourceRedirects};
+export const retiredGuidePaths = new Set(Object.keys(publicGuideRedirects).flatMap(slug => [`/guides/${slug}/`,`/guides/${slug}`]));
 export const publishedGuidesAfterAuditMerges = 69 - Object.keys(consolidatedRedirects).length;
+export const visibleGuidesAfterApprovedToolConversions = 69 - Object.keys(publicGuideRedirects).length;
