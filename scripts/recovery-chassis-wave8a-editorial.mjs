@@ -37,7 +37,7 @@ for(const original of rebuild){
  const headings=[...body.matchAll(/^## (.+)$/gm)].map(x=>x[1]);
  const svgPaths=[...new Set([...source.matchAll(/\/images\/guides\/[^\s"'()<>]+\.svg/g)].map(x=>x[0]))];
  const externalLinks=[...new Set([...source.matchAll(/https?:\/\/[^\s"'()<>)]+/g)].map(x=>x[0].replace(/[.,;]+$/,'')))].filter(x=>!x.startsWith('https://chassissignal.com/'));
- const related=[...new Set([...source.matchAll(/\/(?:tools|guides)\/[a-z0-9-/]+\/?/g)].map(x=>x[0]))];
+ const related=[...new Set([...source.matchAll(/\/(?:tools|guides)\/[a-z0-9/-]+\/?/g)].map(x=>x[0]))];
  const readRevisions=[...source.matchAll(/updatedAt:\s*([^\s]+)/g)].map(x=>x[1]);
  const historicalImpressions=numeric(original.export_period_impressions);
  const historicalPosition=numeric(original.export_period_position);
