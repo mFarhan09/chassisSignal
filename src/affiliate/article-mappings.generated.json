@@ -1667,7 +1667,7 @@
     "alternativeProductKeys": [],
     "placementType": "recommended_equipment",
     "placementLocation": "after_evidence_context",
-    "recommendationRationale": "ProTool interface eligibility comes from BimmerGeeks' own approved-adapter guidance. OBDLink CX is an alternative interface for different supported BMW app workflows, not a verified ProTool adapter or part of its license packages.",
+    "recommendationRationale": "ProTool interface eligibility comes from official BimmerGeeks approved-adapter guidance. OBDLink CX is an alternative interface for different supported BMW app workflows, not a verified ProTool adapter or part of its license packages.",
     "affiliateRelationship": "available_alternative",
     "relationshipLabel": "Alternative for other BMW apps — NOT a ProTool adapter",
     "productRelationshipLabels": {},
