@@ -106,7 +106,7 @@ The [BMW diagnostic software on Windows](/guides/bmw-diagnostic-software-windows
 
 Relevant position or command data can help test plausibility before and after a guided routine, but only when the parameter meaning is known for that engine. Graph related signals rather than watching one number. Look for consistency with the service event, fault record and commanded state. A flat or implausible signal can indicate a blocked prerequisite, sensor problem or communication issue; it does not automatically name the failed part.
 
-If your tool shows only generic powertrain data, it may not expose the BMW DME details needed for this decision. The [BMW code reader versus scan tool guide](/guides/bmw-code-reader-vs-scan-tool/) owns the capability boundary for live data and full-system diagnosis.
+If your tool shows only generic powertrain data, it may not expose the BMW DME details needed for this decision. The [BMW code reader versus scan tool guide](/tools/bmw-scanner-capability-database/#bmw-code-reader-vs-scan-tool) owns the capability boundary for live data and full-system diagnosis.
 
 ## Treat a failed teach-in as a branch, not a prompt to retry
 
