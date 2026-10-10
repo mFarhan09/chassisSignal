@@ -50,6 +50,25 @@ for(const slug of slugs){
 }
 // Reflow the existing affiliate units after the longer articles without changing product
 // identities, quantities, variant types or any unrelated published placement plan.
+// The two affiliate alternative descriptions must not imply support for a competitor's app.
+const oldMappings=JSON.parse(original('src/affiliate/article-mappings.generated.json'));
+const newMappings=JSON.parse(fs.readFileSync('src/affiliate/article-mappings.generated.json','utf8'));
+assert(Object.keys(oldMappings).length===Object.keys(newMappings).length,'affiliate mapping inventory changed');
+for(const [slug,mapping] of Object.entries(oldMappings)){
+  const currentMapping=newMappings[slug];
+  assert(currentMapping,'affiliate mapping missing '+slug);
+  if(!['carly-subscription-cost','protool-pricing'].includes(slug)){
+    assert(JSON.stringify(mapping)===JSON.stringify(currentMapping),'unrelated affiliate mapping changed '+slug);
+    continue;
+  }
+  for(const field of Object.keys(mapping)){
+    if(['recommendationRationale','relationshipLabel','relationshipRationale'].includes(field))continue;
+    assert(JSON.stringify(mapping[field])===JSON.stringify(currentMapping[field]),'affiliate approval/product metadata changed '+slug+': '+field);
+  }
+  const productName=slug.startsWith('carly')?'Carly':'ProTool';
+  assert(currentMapping.relationshipLabel.includes('NOT a '+productName),'alternative relationship label does not warn against assuming '+productName+' support');
+  assert(currentMapping.recommendationRationale.includes('not')&&currentMapping.recommendationRationale.includes(productName),'alternative rationale lacks support boundary '+slug);
+}
 const oldPlans=JSON.parse(original('src/affiliate/placement-plan.generated.json'));
 const newPlans=JSON.parse(fs.readFileSync('src/affiliate/placement-plan.generated.json','utf8'));
 assert(Object.keys(oldPlans).length===Object.keys(newPlans).length,'affiliate placement inventory changed');
