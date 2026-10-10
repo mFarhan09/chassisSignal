@@ -42,7 +42,11 @@ for(const slug of cohort){
  ok(oldH.every(h=>newH.includes(h)),slug+': original research section was deleted');
  ok(now.includes('October 2026'),slug+': no dated evidence update');
  ok(now.includes('/tools/bmw-service-function-matrix/')||slug==='bmw-parking-sensor-diagnostic-tool',slug+': lost function evidence canonical');
- ok(!Object.keys(consolidatedRedirects).some(s=>now.includes('/guides/'+s+'/')),slug+': link to retired guide remains');
+ // Do not mistake an archived image's /images/guides/<retired-slug>/ asset
+ // path for a live hyperlink. Only Markdown/HTML link destinations are blocked.
+ ok(!Object.keys(consolidatedRedirects).some(s=>
+   now.includes('](/guides/'+s+'/') || now.includes('href="/guides/'+s+'/') ||
+   now.includes("href='/guides/"+s+"/")),slug+': direct link to retired guide remains');
  const urls=[...now.matchAll(/https?:\/\/[^\s)]+/g)].map(m=>m[0]);
  ok(urls.length>=2,slug+': insufficient cited primary source links');
  const beforeMedia=media(before), afterMedia=media(now);
