@@ -5,7 +5,7 @@ description: Choose a BimmerLink adapter by BMW or MINI generation, iOS or Andro
 slug: bimmerlink-adapter
 section: guides
 publishedAt: 2026-08-26T12:00:00+05:00
-updatedAt: 2026-08-26
+updatedAt: 2026-10-10
 category: 'Buying Guides'
 tags: [Guides, BMW, MINI, Diagnostics, Adapters, BimmerLink, Compatibility]
 relatedSlugs: [mini-diagnostic-app, bmw-f-series-vs-g-series-obd-adapter, obdlink-mx-plus-vs-lx]
@@ -120,6 +120,40 @@ Close other apps that may own the adapter connection, grant required Bluetooth o
   <source media='(max-width: 599px)' srcset='/images/guides/bimmerlink-adapter/cs014-adapter-purchase-check-mobile.svg'>
   <img src='/images/guides/bimmerlink-adapter/cs014-adapter-purchase-check.svg' alt='Purchase record covering app evidence, adapter evidence, vendor documentation, and operational limits.' loading='lazy' decoding='async'>
 </picture>
+
+
+## October 2026 verified interface choice: vehicle, app, phone and purpose
+
+**Source review: 10 October 2026.** The [BimmerLink publisher](https://bimmerlink.app/) says that a supported OBD adapter and an iOS or Android host are prerequisites. It lists broad BMW and MINI families, but the make-and-year range alone **does not certify that a particular service function exists for that exact control unit**. [OBDLink's official model comparison](https://support.obdlink.com/support/solutions/articles/43000713351-which-obdlink-adapter-is-right-for-me-) separately confirms that CX uses Bluetooth Low Energy while MX+ uses classic Bluetooth, and distinguishes the computer/phone operating systems supported at the **adapter level**. Adapter-level support and app-level pairing are not identical claims.
+
+| Exact buying question | What the manufacturer can verify | Disqualifier or follow-up |
+| --- | --- | --- |
+| BMW/MINI generation and fitted ECU | BimmerLink supported-vehicle list and app's own connection instructions | A supported model family still needs exact fault-module or service-function confirmation |
+| Phone/tablet OS | Publisher's current iOS/Android requirements and selected adapter's pairing protocol | “Works with Bluetooth” is too vague; classic Bluetooth, BLE and wired paths differ |
+| Generic OBD emission faults | OBD protocol and hardware communication with an approved app | A generic emission scan is not proof of BMW-specific body/chassis ECU coverage |
+| Battery replacement registration | BimmerLink publisher names the function; support depends on the fitted vehicle | If new battery capacity/chemistry differs, that may require separate configuration |
+| DPF status or requested regeneration | Publisher names a diesel-DPF feature on qualified vehicles | Not every BMW has DPF equipment; a request isn't a completed or safe burn |
+| Parking-brake service mode | Publisher names the feature | Requires exact approved EMF architecture and vehicle-specific repair plan |
+| Multiple phone ownership | License, device compatibility and adapter firmware/pairing steps | Do not assume app purchases transfer freely between platforms |
+
+**Important hardware nuance:** [OBDLink's CX/MX+ comparison](https://support.obdlink.com/support/solutions/articles/43000713351-which-obdlink-adapter-is-right-for-me-) describes CX as optimized for BMW; it does not mean CX works with every BMW third-party app or performs all available BMW services. An **OBDLink EX** USB interface being suitable for other desktop programs is not evidence that it is a supported BimmerLink mobile interface. Check [the vendor's current compatible-app list](https://www.obdlink.com/compatible-apps/) and BimmerLink's own adapter selector before checkout.
+
+## An auditable adapter evidence card
+
+Record **vehicle VIN/chassis**, production year, chosen operating system and OS version, app version, exact adapter SKU, adapter firmware, connection method, selected BMW control unit, specific desired read/write feature, and the official compatibility URL with observation date. This prevents a future firmware or app update from turning a formerly correct product recommendation into a misleading universal one.
+
+| Discovery outcome | Buyer's next step |
+| --- | --- |
+| Car identified, BimmerLink lists adapter, intended module and task are documented | Confirm country store/price and return policy; retain the compatibility evidence |
+| Car connects for generic DTCs, but named service function is absent | Treat advanced support as **unverified**, not as an adapter hardware failure |
+| App works on iOS, different Android host planned | Independently verify the second OS; licenses and pairing routes can differ |
+| Purchase is mainly for BimmerCode coding rather than BimmerLink diagnosis | Follow the [BimmerCode adapter/manufacturer path](https://bimmercode.app/adapters/), not an extrapolated BimmerLink claim |
+| Controller write/active function is uncertain | Seek manufacturer-level vehicle instruction and a qualified operator instead of testing commands experimentally |
+
+A frequent false positive is treating successful pairing as full functionality. The connection proves the phone can communicate **through** the dongle. It does not prove that the software exposes the selected ECU, understands its software variant, or safely supports a battery/DPF/EMF write.
+
+The [BMW vehicle/interface lookup](/tools/bmw-vehicle-interface-compatibility/) is a broader network-architecture screen; this guide owns the **specific BimmerLink phone/adapter/feature purchase**. No dongle, phone or real BMW controller was connected for this October research review; all functional claims remain publisher/vendor assertions pending exact-vehicle verification.
+
 
 ## The purchase checklist
 
