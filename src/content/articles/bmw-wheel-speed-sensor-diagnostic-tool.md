@@ -34,7 +34,7 @@ This is a braking and stability system, so the goal is a correct diagnosis, not 
 
 ## Reach the DSC module first
 
-Wheel-speed faults live in the DSC (or ABS/DSC) control module, not the engine ECU, so you need a BMW-capable scanner that reads that module and its manufacturer-specific fault codes and detail. A basic generic reader that only sees emissions codes will miss the detail entirely. Our [BMW scanner for ABS and airbag codes](/guides/bmw-scanner-abs-airbag-codes/) guide covers reaching these chassis modules, and [BMW code reader vs scan tool](/guides/bmw-code-reader-vs-scan-tool/) explains why a reader is not enough here.
+Wheel-speed faults live in the DSC (or ABS/DSC) control module, not the engine ECU, so you need a BMW-capable scanner that reads that module and its manufacturer-specific fault codes and detail. A basic generic reader that only sees emissions codes will miss the detail entirely. Our [BMW scanner for ABS and airbag codes](/guides/bmw-scanner-abs-airbag-codes/) guide covers reaching these chassis modules, and [BMW code reader vs scan tool](/tools/bmw-scanner-capability-database/#bmw-code-reader-vs-scan-tool) explains why a reader is not enough here.
 
 ## Read the fault memory as a starting point
 
