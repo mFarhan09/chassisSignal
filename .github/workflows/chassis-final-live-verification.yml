@@ -1,5 +1,10 @@
 name: Chassis Final Live 65-URL Verification
 on:
+  push:
+    branches:
+      - ops/chassis-live-verify-2026-10-10
+    paths:
+      - '.github/workflows/chassis-final-live-verification.yml'
   workflow_dispatch:
 permissions:
   contents: read
