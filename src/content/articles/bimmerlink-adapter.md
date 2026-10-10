@@ -24,8 +24,6 @@ affiliate: false
 draft: false
 ---
 
-# BimmerLink Adapter Guide: Choose by Car, Phone, and Function
-
 The right BimmerLink adapter is the one supported across four layers: **your exact vehicle, your phone or tablet, the connection method, and the BimmerLink function you intend to use**. “Works with BMW,” “Bluetooth OBD2,” or even “works with BimmerCode” is not enough evidence by itself.
 
 BimmerLink currently supports iOS and Android and publishes a broad BMW, MINI, and Toyota Supra vehicle-family list. It also states that a supported OBD adapter is required. Coverage can still depend on generation, equipment, engine, control unit, and function, so buy from the intersection rather than from a generic bestseller list.
@@ -45,9 +43,9 @@ BimmerLink currently supports iOS and Android and publishes a broad BMW, MINI, a
 4. Match the adapter's radio or cable path to iOS or Android.
 5. Check the adapter maker's OS, firmware, and electrical documentation.
 
-This guide does not name a fastest or universally best adapter. No controlled latency, reliability, sleep-current, or connection test was performed. For two officially recommended BLE candidates, compare [OBDLink CX with UniCarScan UCSI-2100](/guides/obdlink-cx-vs-unicarscan-ucsi-2100/) by app, platform, pairing and exact vehicle support.
+This guide does not name a fastest or universally best adapter. No controlled latency, reliability, sleep-current, or connection test was performed. For two officially recommended BLE candidates, compare [OBDLink CX with UniCarScan UCSI-2100](/tools/bmw-obd-adapter-comparison/#obdlink-cx-vs-unicarscan-ucsi-2100) by app, platform, pairing and exact vehicle support.
 
-If the open question is application scope rather than hardware, compare [BimmerLink vs ProTool](/guides/bimmerlink-vs-protool/). For the boundary between an owner app and BMW's workshop diagnosis environment, use [ISTA vs BimmerLink](/guides/ista-vs-bimmerlink/).
+If the open question is application scope rather than hardware, compare [BimmerLink vs ProTool](/tools/bmw-diagnostic-software-comparison/#bimmerlink-vs-protool). For the boundary between an owner app and BMW's workshop diagnosis environment, use [ISTA vs BimmerLink](/tools/bmw-diagnostic-software-comparison/#ista-vs-bimmerlink).
 
 If the open question is total app, add-on, and adapter spend, use the dated [BimmerLink pricing guide](/guides/bimmerlink-pricing/).
 
@@ -66,11 +64,11 @@ Write the chassis or series generation, model year, engine, region, and optional
 
 BimmerLink describes all-control-unit trouble-code reading and clearing, real-time values, CSV logging, exhaust-flap control, Active Sound Design control, DPF functions, battery registration, parking-brake service mode, and service reset. Each is a different job and can have different vehicle coverage.
 
-For a check-engine-light-only task, first ask whether a simpler generic reader would be enough. Our [BMW code reader versus scan tool](/guides/bmw-code-reader-vs-scan-tool/) guide explains why generic emissions access and BMW-aware module access are not equivalent.
+For a check-engine-light-only task, first ask whether a simpler generic reader would be enough. Our [BMW code reader versus scan tool](/tools/bmw-scanner-capability-database/#bmw-code-reader-vs-scan-tool) guide explains why generic emissions access and BMW-aware module access are not equivalent.
 
 For battery replacement, adapter compatibility is only one part of the workflow. The vehicle may require registration, capacity or chemistry handling, or a different level of configuration. Use the [BMW battery registration scanner](/guides/bmw-battery-registration-scanner/) guide for that specific decision.
 
-For MINI owners choosing the app role before the adapter, the [MINI diagnostic app guide](/guides/mini-diagnostic-app/) separates diagnostics, service functions, and coding.
+For MINI owners choosing the app role before the adapter, the [MINI diagnostic app guide](/tools/bmw-vehicle-interface-compatibility/#mini-diagnostic-app) separates diagnostics, service functions, and coding.
 
 ## Third gate: iOS and Android do not accept every path equally
 
@@ -84,7 +82,7 @@ Do not assume an adapter that pairs in Android settings will work on iOS, or tha
 
 BMW generations can use different diagnostic transports and adapter families. The [supported-adapter table published by SG Software](https://bimmercode.app/adapters/) distinguishes series coverage across Bluetooth, Wi-Fi, ENET, and cable products. BimmerLink's own adapter button routes into this publisher-controlled adapter ecosystem.
 
-Treat the table as dynamic: select the series and recheck it at purchase time. An ENET cable entry for F, G, or I Series does not prove that the same cable is the correct path for an earlier E Series. A Bluetooth adapter listed broadly may still have app, OS, or control-unit qualifications. For the connection-architecture decision behind those paths, see [BMW ENET versus Bluetooth OBD](/guides/bmw-enet-vs-bluetooth-obd/).
+Treat the table as dynamic: select the series and recheck it at purchase time. An ENET cable entry for F, G, or I Series does not prove that the same cable is the correct path for an earlier E Series. A Bluetooth adapter listed broadly may still have app, OS, or control-unit qualifications. For the connection-architecture decision behind those paths, see [BMW ENET versus Bluetooth OBD](/guides/bmw-diagnostic-interface-map/#bmw-enet-vs-bluetooth-obd).
 
 ## Common adapter routes
 
@@ -108,7 +106,7 @@ ENET routes diagnostic traffic through an Ethernet-based physical path for liste
 
 OBDLink describes CX as BLE and optimized for BMW use, while MX+ uses classic Bluetooth and has broader vendor-stated vehicle and platform characteristics. That does not create a universal CX-versus-MX+ winner. If both appear for your exact app, vehicle, and phone, compare the remaining documented needs: other apps, other vehicle makes, platform coverage, and vendor support.
 
-Our [OBDLink CX versus MX+](/guides/obdlink-cx-vs-mx-plus/) article owns that pairwise decision. This page only establishes the gate: the BimmerLink path must be documented before broader adapter features matter.
+Our [OBDLink CX versus MX+](/tools/bmw-obd-adapter-comparison/#obdlink-cx-vs-mx-plus) article owns that pairwise decision. This page only establishes the gate: the BimmerLink path must be documented before broader adapter features matter.
 
 ## Firmware and setup are part of compatibility
 
