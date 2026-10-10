@@ -151,16 +151,6 @@ The [used-car inspection scanner](/guides/bmw-scanner-for-used-car-inspection/) 
 
 The decision rule is the verb. If you cannot state which action must happen, where it happens and what proof confirms it, do not buy from a TPMS badge. Match the BMW, sensor, exact tool and exact function; then verify the result through the vehicle's current procedure.
 
-## Sources consulted
-
-- [BMW Group — source reference](https://bmwtechinfo.bmwgroup.com/tech_training_manual/ST1451%20Maintenance%20Technician.pdf)
-- [BMW of North America — source reference](https://bmwtechinfo.bmwgroup.com/)
-- [Autel — source reference](https://www.autel.com/mk3/3990.jhtml)
-- [Autel — source reference](https://www.autel.com/mk2/3991.jhtml)
-- [Autel — source reference](https://www.autel.com/vehicle-coverage/coverage2)
-
-
-
 ## October 2026 hardware-level TPMS feature separation
 
 **Research review: 10 October 2026.** Autel’s [official MX900-TS comparison table](https://www.autel.com/mk2/4106.jhtml) explicitly distinguishes ordinary **MX900** “Basic” TPMS support from **MX900-TS** “Complete” support. The TS model lists activating sensors, programming Autel MX-Sensors and OBD relearn; those rows show product-category capability, **not** that any particular BMW sensor frequency, RDC generation or service event is supported. Autel's [2026 MX900-TS manual](https://autel.com/u/cms/www/202603/190159109qfc.pdf) illustrates different program, copy and relearn workflows and their identity/interference prerequisites. Only the exact BMW vehicle/support record determines the available method.
@@ -189,6 +179,15 @@ A useful report preserves the exact warning text, VIN/build and wheel/tire equip
 | Tyre-service safety warning | Physical tyre/pressure inspection before electronic operations | Using a reset to hide an unsafe tyre condition |
 
 **Safety and evidence limits:** TPMS is a warning/monitoring aid, not a substitute for safe inflation and tyre inspection. This article does not instruct cloning identifiers, defeating alarms or claiming a demonstrated relearn. No RF sensor was activated or programmed for this review. Primary references: [Autel MX900-TS product comparison](https://www.autel.com/mk2/4106.jhtml), [2026 manual](https://autel.com/u/cms/www/202603/190159109qfc.pdf), [BMW TIS/AOS](https://bmwtechinfo.bmwgroup.com/assets/site_information.pdf).
+
+## Sources consulted
+
+- [BMW Group — source reference](https://bmwtechinfo.bmwgroup.com/tech_training_manual/ST1451%20Maintenance%20Technician.pdf)
+- [BMW of North America — source reference](https://bmwtechinfo.bmwgroup.com/)
+- [Autel — source reference](https://www.autel.com/mk3/3990.jhtml)
+- [Autel — source reference](https://www.autel.com/mk2/3991.jhtml)
+- [Autel — source reference](https://www.autel.com/vehicle-coverage/coverage2)
+
 
 
 ## Related service-function eligibility and safety matrix
