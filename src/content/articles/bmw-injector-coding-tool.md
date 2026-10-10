@@ -135,17 +135,6 @@ Store the before-and-after record with the injector part information and cylinde
 
 If the procedure does not require code entry, do not manufacture a coding job from a scanner's feature list. Engine identity comes first, required data second, module operation third, and tool selection last.
 
-## Sources consulted
-
-- [BMW Group — N57TU Diesel Engine training manual](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
-- [BMW Group — S55 Engine training manual](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
-- [BMW Group — Technical Information System](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
-- [Autel — Service-function product documentation](https://autel.com/mk3/4292.jhtml)
-- [Autel — Vehicle coverage database](https://autel.com/vehicle-coverage/coverage2)
-- [Foxwell — Vehicle coverage search](https://foxwelltech.us/oeSearch/support_oe_search_app.html)
-
-
-
 ## October 2026 engine-and-injector identification matrix
 
 **Research review: 10 October 2026.** Autel lists “Injector Coding” among general service functions for its [MX900-TS](https://store.autel.com/products/maxicheck-mx900-ts), while BMW’s [authorized AOS/ISTA documentation](https://bmwtechinfo.bmwgroup.com/assets/site_information.pdf) supplies vehicle-specific DME/DDE test plans and repair instructions. Neither a general Autel menu label nor the existence of a printed injector number proves that a replacement on a particular engine needs the same coding method.
@@ -178,6 +167,16 @@ The chart is a **qualification framework**, not an engine-family capability asse
 A product comparison must distinguish read-only DME diagnosis, recording injector compensation, writing replacement values, and resetting learned values. These are separate operations. Ask the manufacturer or seller for a **VIN-specific BMW function transcript**, software version, supported ECU and prerequisites; if the tool only offers a generic injector screen, classify support as unverified. For a dealer/independent workshop, BMW [AOS/ISTA](https://bmwtechinfo.bmwgroup.com/assets/site_information.pdf) is the authorized pathway to the controlling test plan.
 
 The [BMW service-function matrix](/tools/bmw-service-function-matrix/) tracks broad service eligibility, whereas this guide owns injector identity, cylinder assignment and fault-driven need. A vehicle that still misfires after code entry requires independent diagnosis, not repeated arbitrary writing. No injector was removed, coded or driven in this editorial review.
+
+## Sources consulted
+
+- [BMW Group — N57TU Diesel Engine training manual](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
+- [BMW Group — S55 Engine training manual](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
+- [BMW Group — Technical Information System](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
+- [Autel — Service-function product documentation](https://autel.com/mk3/4292.jhtml)
+- [Autel — Vehicle coverage database](https://autel.com/vehicle-coverage/coverage2)
+- [Foxwell — Vehicle coverage search](https://foxwelltech.us/oeSearch/support_oe_search_app.html)
+
 
 
 ## Related service-function eligibility and safety matrix
