@@ -5,17 +5,17 @@ description: 'Understand BimmerCode pricing by iOS or Android license, storefron
 slug: bimmercode-pricing
 section: guides
 publishedAt: 2026-08-28T12:00:00+05:00
-updatedAt: 2026-08-28
-pricingChecked: 2026-08-27
+updatedAt: 2026-10-10
+pricingChecked: 2026-10-10
 category: Buying Guides
 tags: [Guides, BMW, MINI, BimmerCode, Coding, Pricing, Adapters]
-relatedSlugs: [bimmercode-vs-carly, carly-subscription-cost, mini-diagnostic-app]
+relatedSlugs: [bimmerlink-pricing, carly-subscription-cost, bmw-scanner-without-subscription]
 featured: true
 heroImage: /images/guides/bimmercode-pricing/cs019-bmw-interior-context.webp
 heroAlt: Close-up of a BMW steering wheel and dashboard inside a vehicle
 showHero: false
 author: Chassis Signal Editorial
-readingTime: 6 min read
+readingTime: 12 min read
 safetyLevel: MEDIUM
 evidenceLevel: DOCUMENTED
 products: [BimmerCode, BimmerLink, OBDLink CX, OBDLink MX+]
@@ -88,7 +88,59 @@ For an Android buyer, record the in-app Google Play amount visible to that accou
 
 No universal total is published here because adapter choice, seller, location, storefront and taxes change the result.
 
-Use [BimmerCode vs Carly](/guides/bimmercode-vs-carly/) for the app decision and [Carly subscription cost](/guides/carly-subscription-cost/) for Carly's recurring ownership model. If the alternative is an Android-only modular BMW toolset, use [BimmerCode vs ProTool](/guides/bimmercode-vs-protool/) to compare platform and license boundaries. [BimmerLink adapter](/guides/bimmerlink-adapter/) covers BimmerLink's separate compatibility job, while [OBDLink CX vs MX+](/guides/obdlink-cx-vs-mx-plus/) compares two supported hardware paths. For MINI-specific diagnostic and service roles, use the [MINI diagnostic app guide](/guides/mini-diagnostic-app/).
+Use [BimmerCode vs Carly](/tools/bmw-diagnostic-software-comparison/) for the app decision and [Carly subscription cost](/guides/carly-subscription-cost/) for Carly's recurring ownership model. If the alternative is an Android-only modular BMW toolset, use [BimmerCode vs ProTool](/tools/bmw-diagnostic-software-comparison/) to compare platform and license boundaries. [BimmerLink adapter](/guides/bimmerlink-adapter/) covers BimmerLink's separate compatibility job, while [OBDLink CX vs MX+](/tools/bmw-obd-adapter-comparison/) compares two supported hardware paths. For MINI-specific diagnostic and service roles, use the [MINI diagnostic app guide](/tools/bmw-vehicle-interface-compatibility/).
+
+
+## October 2026 price and entitlement review
+
+**Research update: 10 October 2026.** The [US iOS App Store listing](https://apps.apple.com/us/app/bimmercode/id1130787459) still displays a $49.99 Full Version in-app purchase. This is a country- and platform-specific observation; the original August 27 snapshot above remains a separate historical check. The [developer FAQ](https://bimmercode.app/faq/) confirms that licenses cannot move between iOS and Android, while purchases can be restored on another device using the original account on the same platform. The developer now offers [Windows and macOS download paths](https://bimmercode.app/); their desktop price and license terms should be checked separately, not copied from the iPhone checkout.
+
+The decision on this page is **how much a particular owner must spend to unlock the intended coding options**. The wider [software comparison](/tools/bmw-diagnostic-software-comparison/) helps select between products; the [shared pricing ledger](/tools/bmw-diagnostic-software-price-ledger/) maintains cross-product snapshots. Neither substitutes for confirming a specific car, option, host and adapter before paying.
+
+## Three real purchasing decisions—not three versions of the same quote
+
+| Buyer situation | License decision | Hardware decision | What can invalidate the estimate |
+| --- | --- | --- | --- |
+| One supported BMW and one iPhone | US iOS Full Version is $49.99 in the dated US listing | Add a supported OBD interface only if one is not owned | Requested coding option unavailable on this ECU/software version |
+| Two supported BMWs, same Apple account | The FAQ permits use across devices on the same platform; do **not** assume separate per-car app purchases | Check adapter compatibility for **both** vehicles; one interface may be reusable | Different generations needing different interfaces or unsupported functions |
+| Android phone now, iPhone later | Price the Android purchase in its own store; budget a second iOS unlock if switching platforms | Recheck Bluetooth/Wi-Fi/host support on both devices | Treating a Play license or a desktop license as transferable |
+
+The official [vehicle-and-option selector](https://bimmercode.app/vehicles/) is more specific than a broad model-year claim. Even a listed option can depend on installed control units and vehicle software. The [adapter catalog](https://bimmercode.app/adapters/) also warns that not every listed interface supports every vehicle. Do not interpret an adapter retailer's generic “BMW compatible” label as a BimmerCode feature guarantee.
+
+## One- and three-year purchase worksheet
+
+For the **same eligible car and same platform**, a one-time purchase is different from an annual subscription. The following example assumes a US iOS checkout of $49.99 and a **hypothetical** supported adapter quote of $80.00. The $80.00 is an illustration, not a current retailer price or verified recommendation.
+
+| Cost component | Year 1 | Years 2–3, if no new purchases | Three-year cash total |
+| --- | ---: | ---: | ---: |
+| Dated US iOS Full Version | $49.99 | $0 assumed | $49.99 |
+| Example adapter quote | $80.00 | $0 assumed | $80.00 |
+| New second-platform license | Not included | Not included | Not included |
+| Taxes, shipping, replacement hardware | Buyer-specific | Buyer-specific | Buyer-specific |
+| **Illustrative subtotal before those unknowns** | **$129.99** | **$0** | **$129.99** |
+
+This is a cash-flow model, **not** a guarantee of perpetual support, product updates or future policy. If the adapter needs replacing, the customer moves platform, or a future charge is disclosed, enter it in the affected year. Do not divide the app price by three and present the resulting average as the checkout amount.
+
+For a reproducible personal total, write down (a) storefront and checkout date, (b) Full Version amount, (c) the actual supported adapter quote, (d) shipping and taxes, and (e) any additional platform license. Preserve that record alongside the chosen vehicle, installed equipment and requested feature. The [pricing ledger calculator](/tools/bmw-diagnostic-software-price-ledger/) can handle a different hardware quote.
+
+## What the free download can and cannot establish
+
+The developer's [quick-start documentation](https://bimmercode.app/manual/) says the free app can inspect available control units and coding options after connecting with a supported adapter. That is a valuable **pre-purchase compatibility check**, although it still requires a working interface and does not prove that an actual coding write will succeed. Checking the options first is particularly important when the proposed job involves an advertised model feature that may not exist on the vehicle's exact hardware.
+
+A coding purchase is **not** a substitute for diagnosis. BimmerCode is for supported coding changes; BimmerLink is positioned for fault reads, live data and listed service functions. If the task is battery registration, do not buy BimmerCode solely because both apps come from the same developer. Use the [BMW service-function matrix](/tools/bmw-service-function-matrix/) and the actual developer's function listing to decide which product and control unit are relevant.
+
+## Buyer failure modes and evidence to keep
+
+| Failure mode | Better pre-purchase evidence | Financial consequence |
+| --- | --- | --- |
+| The model is supported but the desired option is absent | Vehicle/option selector plus free-app control-unit inspection | You may pay for an unlock that cannot do the desired job |
+| An inexpensive adapter connects to generic OBD but not the required module | Developer's platform-specific adapter selector | You may need to replace the interface |
+| A purchase is made under the wrong family member's store account | Store receipt and the developer's restoration FAQ | Restoring to another device can fail |
+| A user wants to switch between iOS and Android | Account/platform license policy | A separate Full Version may be needed |
+| Buyer assumes coding is risk free | Original car-specific instructions, suitable power and documented basic coding scope | Cost and risk can far exceed the software price |
+
+**Evidence and limits:** The [US App Store](https://apps.apple.com/us/app/bimmercode/id1130787459), [BimmerCode FAQ](https://bimmercode.app/faq/), [vehicle selector](https://bimmercode.app/vehicles/), [supported adapters](https://bimmercode.app/adapters/) and [quick-start guide](https://bimmercode.app/manual/) are first-party sources reviewed for this update. No purchase, coding session or live vehicle test was carried out. No Android, desktop or non-US checkout amount is asserted here.
+
 
 ## Safety boundary
 
