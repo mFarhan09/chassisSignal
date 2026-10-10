@@ -129,7 +129,7 @@ This list is a diagnostic map, not permission to test each item casually. Steeri
 
 The [BMW service reset tool](/guides/bmw-service-reset-tool/) page covers maintenance-indicator functions. Steering-angle calibration is not a dashboard service reset, even when both appear under a scanner's “service” menu.
 
-The [code-reader versus scan-tool](/guides/bmw-code-reader-vs-scan-tool/) distinction also explains why reading a steering-related fault never proves command support.
+The [code-reader versus scan-tool](/tools/bmw-scanner-capability-database/#bmw-code-reader-vs-scan-tool) distinction also explains why reading a steering-related fault never proves command support.
 
 ## A buyer's evidence request
 
