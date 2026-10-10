@@ -73,7 +73,7 @@ This handheld device communicates near the wheel with compatible sensors. Depend
 
 This tool communicates with vehicle control units. If exact coverage exists, it may read RDC faults and data, identify the module and run a documented initialization or relearn function. The phrase “basic TPMS” often means a narrower service set than sensor-level activation and programming.
 
-The [BMW code reader versus scan tool](/guides/bmw-code-reader-vs-scan-tool/) guide explains why generic emissions access does not establish RDC communication. The [BMW bidirectional scan-tool functions](/guides/bmw-bidirectional-scan-tool-functions/) guide shows how to verify a named service command.
+The [BMW code reader versus scan tool](/tools/bmw-scanner-capability-database/#bmw-code-reader-vs-scan-tool) guide explains why generic emissions access does not establish RDC communication. The [BMW bidirectional scan-tool functions](/guides/bmw-bidirectional-scan-tool-functions/) guide shows how to verify a named service command.
 
 ### TPMS programming tool
 
