@@ -164,6 +164,33 @@ Preserve the original vehicle test and each controlled comparison. A list showin
 
 The decisive question is not “which scanner should I try next?” It is “which layer has been proven, and which is still unknown?” Once the failure is placed on the connector-to-module map, the next test becomes smaller, safer and much less likely to sacrifice a healthy ECU.
 
+
+## October 2026 no-communication failure-location worksheet
+
+A scanner that powers on at the DLC has not demonstrated that it reached the desired BMW ECU. The [BMW AOS technical requirements](https://aos-i.bmwgroup.com/technical-requirements) describe host/network/VCI conditions for BMW workshop diagnostic software, while [SAE J2534-1](https://www.sae.org/standards/content/j2534_1_202202/) defines a pass-through communication interface specification, **not a guarantee of every BMW programming or diagnostic function**. Check the correct BMW repair and connector diagram using [BMW Technical Information](https://bmwtechinfo.bmwgroup.com/) rather than probing undocumented pins.
+
+| Observable failure | What it does establish | Most useful next evidence |
+| --- | --- | --- |
+| Scanner remains off at DLC | Tool lacks usable power in its current connection path | Inspect tool itself and qualified technician's DLC supply/ground diagnosis |
+| Scanner is powered, cannot initiate generic OBD session | Power alone is present, vehicle/protocol/host may still fail | Test another *known-good* supported interface, record error and protocol |
+| Generic engine codes work, BMW enhanced modules do not | Generic protocol path works | Validate BMW software license, ECU coverage, DoIP/CAN gateway needs and ECU identity |
+| Several modules unavailable in one network group | Potential common bus/gateway/supply, or scanner reporting artifact | Save whole-vehicle module inventory, software build and physical network context |
+| Only one named ECU unavailable | Individual ECU/supply/network problem or variant absent in this car | Compare actual vehicle equipment and OEM module list |
+| Connectivity fails only on one phone/computer | Host permission, driver, BLE/USB/LAN or interface firmware | Reproduce with one changed variable and log device/software versions |
+
+### Reproducible fault-isolation record
+
+Identify **exact VIN/chassis/build**, requested module, scanner/adapter model and firmware, phone or Windows OS version, vehicle battery condition, whether generic emissions access worked, and the **full list of ECUs that did and did not respond**. Capture the first error verbatim. A test with a second adapter is useful only if its own vehicle/software compatibility is documented. If one tool works and another fails, the conclusion is an **interface/software difference**, not automatically that the entire vehicle network is healthy.
+
+Three subtle traps deserve explicit notes. First, a gateway path can differ between older K-line/CAN and newer Ethernet/DoIP cars. Second, two apps using the same dongle may legitimately expose different BMW modules. Third, repeated fault clearing or unsupported resets can destroy the very communication chronology needed for diagnosis. The [BMW interface map](/guides/bmw-diagnostic-interface-map/) and [Windows workstation guide](/guides/bmw-diagnostic-software-windows/) are supporting prerequisites, not replacements for the physical no-communication investigation.
+
+### Stop versus continue
+
+Continue only with **non-invasive, read-only** vehicle identification, authorized coverage and known-good host/interface validation. Stop at a suspected missing gateway power, uncertain DLC pinout, water-damaged wiring, restraint warning, or proposed bypass/coding/flash intended merely to “see if communication returns.” Preserve saved scans and ask a qualified technician for circuit-level diagnosis and power safety. The result of this investigation is a **located failed layer or clearly classified unknown**, not a speculative module replacement.
+
+Sources reviewed **10 October 2026**: [BMW AOS](https://aos-i.bmwgroup.com/technical-requirements), [BMW technical portal](https://bmwtechinfo.bmwgroup.com/), [SAE interface standard](https://www.sae.org/standards/content/j2534_1_202202/). No network faults or physical diagnostic connectors were tested in this editorial review.
+
+
 ## Sources consulted
 
 - [BMW Group — source reference](https://bmwtechinfo.bmwgroup.com/tech_training_manual/ST401%20Body%20Electronics%20II.pdf)
