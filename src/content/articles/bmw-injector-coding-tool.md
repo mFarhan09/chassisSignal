@@ -103,7 +103,7 @@ Foxwell likewise provides an official vehicle-coverage search. The same principl
 
 Factory ISTA may be the correct path when BMW's service plan calls for a guided routine, the aftermarket tool cannot prove support, or diagnosis and post-operation checks need factory test plans. "Factory" does not make an operation automatically appropriate; the exact repair event and prerequisites still control.
 
-A generic OBD-II reader is not an injector coding tool. It may read regulated emissions data and powertrain codes, but the required BMW-specific module access and data-writing operation sit outside that basic role. See [BMW code reader versus scan tool](/guides/bmw-code-reader-vs-scan-tool/) for the capability boundary.
+A generic OBD-II reader is not an injector coding tool. It may read regulated emissions data and powertrain codes, but the required BMW-specific module access and data-writing operation sit outside that basic role. See [BMW code reader versus scan tool](/tools/bmw-scanner-capability-database/#bmw-code-reader-vs-scan-tool) for the capability boundary.
 
 <figure>
   <picture>
