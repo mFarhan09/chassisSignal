@@ -4,7 +4,10 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - 'src/content/articles/**'
+      - 'src/content/articles/bimmercode-pricing.md'
+      - 'src/content/articles/bimmerlink-pricing.md'
+      - 'src/content/articles/carly-subscription-cost.md'
+      - 'src/content/articles/protool-pricing.md'
       - 'scripts/recovery-chassis-wave8b-pricing-qa.mjs'
       - 'recovery/CHASSIS_WAVE_8B_PRICING_REBUILD_RELEASE.md'
       - '.github/workflows/chassis-wave-8b-pricing-qa.yml'
@@ -16,6 +19,7 @@ permissions:
 jobs:
   wave8b:
     name: Four pricing articles, legacy preservation and production build
+    if: github.head_ref == 'recovery/chassis-wave-8b-pricing-rebuild' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
