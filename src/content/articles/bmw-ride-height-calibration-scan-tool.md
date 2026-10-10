@@ -5,7 +5,7 @@ description: "Identify the BMW suspension system, service event, measurement met
 slug: "bmw-ride-height-calibration-scan-tool"
 section: "guides"
 publishedAt: 2026-09-10T12:00:00+05:00
-updatedAt: 2026-09-10
+updatedAt: 2026-10-10
 category: "BMW Diagnostics"
 tags: ["Guides","BMW","Diagnostics","BMW EHC","Electronic Height Control","VDM","ride-height sensor","ISTA","vehicle level"]
 relatedSlugs: ["bmw-bidirectional-scan-tool-functions","bmw-steering-angle-sensor-calibration-tool","bmw-diagnostic-software-windows"]
@@ -151,6 +151,39 @@ The tool’s role is narrow but important: it carries out a verified service fun
 ## How this investigation fits the wider BMW diagnostic method
 
 Ride-height correction requires the particular suspension controller and proper workshop loading conditions. The hub links to this independent specialist guidance rather than absorbing its cautions. If the problem is still unclassified, start with the [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) and its evidence-first symptom directory. This guide remains the detailed resource for its distinct controller, procedure and original technical visuals; no source research or SVG is being retired.
+
+
+
+## October 2026 loading, measurement and controller proof
+
+**Research review: 10 October 2026.** BMW [ISTA/AOS](https://bmwtechinfo.bmwgroup.com/assets/site_information.pdf) provides VIN-linked technical data, wiring diagrams, test plans and repair instructions. That matters because height calibration is **not** a generic fixed-millimetre target and BMWs may use different self-leveling, EHC, VDM or adaptive-chassis configurations. A scanner’s “suspension calibration” badge alone is not credible evidence that it can write the correct values on this car.
+
+| Repair event | Is calibration automatically justified? | Required evidence |
+| --- | --- | --- |
+| Height sensor or relevant suspension component replaced | Only if named in the current BMW repair instruction | Repair order, sensor channel, module identity and measurement conditions |
+| Air-suspension corner has dropped | No—mechanical leak, power supply or compressor faults may be primary | Fault memory and approved leak/electrical diagnosis before any write |
+| Vehicle not level after tyres changed | Not by itself | Tire spec, pressure, loading, parking surface and chassis measurements |
+| Coding/programming or ECU replacement | Depends on the module and commissioning procedure | Official BMW test-plan branch and exact calibration/initialisation name |
+| Prior calibration attempt failed | **No automatic retry** | Original errors, real physical height and fault state; qualified review |
+
+## Calibrated measurement record
+
+| Field | Buyer/technician must capture | Why it cannot be inferred from the scanner |
+| --- | --- | --- |
+| Chassis and control architecture | VIN, EHC/VDM module identifier and production date | Same model badge can include different suspension equipment |
+| Physical measurement reference | BMW-specified measurement points and approved units | Generic wheel-arch measurements are not automatically equivalent |
+| Vehicle state | Specified fuel/load, tyre state, suspension condition and level work area | Uncontrolled loading changes reported height |
+| Before-state | Physical heights, sensor plausibility, DTCs and controller states | A single live value cannot prove a sensor or linkage is healthy |
+| Allowed action | Exact guided repair-plan calibration command and prerequisites | “Reset adaptation” may be a different procedure |
+| After-state | Measured heights, module response, warning status and approved road test if required | A green completion message is only one piece of evidence |
+
+The record should be generated **before** paying for any aftermarket capability upgrade. Require written confirmation of the exact ECU/routine and software version; record “unknown” rather than guessing a loading requirement or measurement target from another BMW variant.
+
+## Diagnostic stop conditions
+
+Suspension may move unexpectedly when actuators respond. Do not work beneath an unsupported vehicle, bypass interlocks, command height actuators to diagnose a leak, or change calibration values to mask a mechanical defect. Escalate for physical instability, erroneous height data, unsupported module, unclear lifting/support requirements, leaking components, recurring errors or a failed adaptation. The [BMW service-function matrix](/tools/bmw-service-function-matrix/) shows high-level category access; this page owns **height measurement and system-specific calibration eligibility**.
+
+**Evidence limitations:** BMW [AOS/ISTA scope](https://bmwtechinfo.bmwgroup.com/assets/site_information.pdf) establishes the correct authorized information path, but the exact chassis instructions require selecting the identified vehicle. No suspension was raised, calibrated or driven during this review.
 
 
 ## Related service-function eligibility and safety matrix

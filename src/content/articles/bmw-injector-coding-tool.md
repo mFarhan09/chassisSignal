@@ -5,7 +5,7 @@ description: "Determine whether a replacement BMW injector needs calibration-cod
 slug: "bmw-injector-coding-tool"
 section: "guides"
 publishedAt: 2026-09-07T12:00:00+05:00
-updatedAt: 2026-09-07
+updatedAt: 2026-10-10
 category: "BMW Diagnostics"
 tags: ["Guides", "BMW", "Diagnostics", "DME", "DDE", "Injectors", "ISTA", "Autel", "Foxwell"]
 relatedSlugs: ["bmw-diagnostic-software-windows", "bmw-bidirectional-scan-tool-functions", "autel-scanner-for-bmw"]
@@ -103,7 +103,7 @@ Foxwell likewise provides an official vehicle-coverage search. The same principl
 
 Factory ISTA may be the correct path when BMW's service plan calls for a guided routine, the aftermarket tool cannot prove support, or diagnosis and post-operation checks need factory test plans. "Factory" does not make an operation automatically appropriate; the exact repair event and prerequisites still control.
 
-A generic OBD-II reader is not an injector coding tool. It may read regulated emissions data and powertrain codes, but the required BMW-specific module access and data-writing operation sit outside that basic role. See [BMW code reader versus scan tool](/guides/bmw-code-reader-vs-scan-tool/) for the capability boundary.
+A generic OBD-II reader is not an injector coding tool. It may read regulated emissions data and powertrain codes, but the required BMW-specific module access and data-writing operation sit outside that basic role. See [BMW code reader versus scan tool](/tools/bmw-scanner-capability-database/#bmw-code-reader-vs-scan-tool) for the capability boundary.
 
 <figure>
   <picture>
@@ -135,6 +135,39 @@ Store the before-and-after record with the injector part information and cylinde
 
 If the procedure does not require code entry, do not manufacture a coding job from a scanner's feature list. Engine identity comes first, required data second, module operation third, and tool selection last.
 
+## October 2026 engine-and-injector identification matrix
+
+**Research review: 10 October 2026.** Autel lists “Injector Coding” among general service functions for its [MX900-TS](https://store.autel.com/products/maxicheck-mx900-ts), while BMW’s [authorized AOS/ISTA documentation](https://bmwtechinfo.bmwgroup.com/assets/site_information.pdf) supplies vehicle-specific DME/DDE test plans and repair instructions. Neither a general Autel menu label nor the existence of a printed injector number proves that a replacement on a particular engine needs the same coding method.
+
+| Injector or repair category | Evidence to collect | Decision boundary |
+| --- | --- | --- |
+| Diesel common-rail replacement with individual adjustment/calibration marking | Engine/DDE ID, original and replacement part numbers, cylinder assignment, manufacturer code format | Verify whether BMW requires cylinder-specific data entry for **that** strategy |
+| Direct-injection petrol replacement | DME software and engine family; current BMW repair procedure; replacement part data | Do not copy a diesel adjustment-code workflow into a petrol engine |
+| Injector removed and reinstalled in the same position | Original injector-to-cylinder record and repair order | Determine whether any DME write is instructed rather than assuming a code reset |
+| Injectors swapped between cylinders during diagnosis | Traceable before/after identity map and original fault evidence | Avoid a blind code-write that breaks injector/cylinder traceability |
+| Misfire, rough running or mixture complaint without injector replacement | Fault memory, fuel-pressure and related engine evidence | Diagnosis is not synonymous with injector coding; a scanner may only need read functions |
+
+The chart is a **qualification framework**, not an engine-family capability assertion for an aftermarket model. Different DME/DDE generations can use substantially different coding, adaptation or no-writing strategies.
+
+## Cylinder traceability worksheet
+
+| Recorded item | Example field (fill from the actual repair) | Why it matters |
+| --- | --- | --- |
+| Vehicle and ECU | VIN, engine designation, DME/DDE software ID | Links procedure to correct system |
+| Before intervention | Cylinder 1–6/other actual cylinder count, removed part and original code where relevant | Prevents losing initial calibration identity |
+| Approved replacement | Supplier, exact part number and approved specification | Avoids treating a generic-fit injector as authorized |
+| New injector identity | Photograph or transcription of the marking *before installation* | Permits a qualified technician to verify cylinder mapping |
+| Tool support evidence | Exact ECU menu path, app/software release and vendor confirmation | A generic vehicle-brand badge is insufficient |
+| Completion | Tool-reported result, remaining DME/DDE faults, approved post-service check | Distinguishes successful command acknowledgement from completed repair |
+
+**Never invent, transpose or normalize a calibration string** to satisfy a scanner input format. Codes, injector positions, control-unit routines and required adaptations belong to the manufacturer-specific instruction. If marking is unreadable, old mapping is unknown or the tool refuses a value, preserve the state and seek qualified BMW support rather than guessing.
+
+## Why "supports injector coding" is not enough
+
+A product comparison must distinguish read-only DME diagnosis, recording injector compensation, writing replacement values, and resetting learned values. These are separate operations. Ask the manufacturer or seller for a **VIN-specific BMW function transcript**, software version, supported ECU and prerequisites; if the tool only offers a generic injector screen, classify support as unverified. For a dealer/independent workshop, BMW [AOS/ISTA](https://bmwtechinfo.bmwgroup.com/assets/site_information.pdf) is the authorized pathway to the controlling test plan.
+
+The [BMW service-function matrix](/tools/bmw-service-function-matrix/) tracks broad service eligibility, whereas this guide owns injector identity, cylinder assignment and fault-driven need. A vehicle that still misfires after code entry requires independent diagnosis, not repeated arbitrary writing. No injector was removed, coded or driven in this editorial review.
+
 ## Sources consulted
 
 - [BMW Group — N57TU Diesel Engine training manual](https://bmwtechinfo.bmwgroup.com/tisUI/?oss_module=AIR)
@@ -143,6 +176,7 @@ If the procedure does not require code entry, do not manufacture a coding job fr
 - [Autel — Service-function product documentation](https://autel.com/mk3/4292.jhtml)
 - [Autel — Vehicle coverage database](https://autel.com/vehicle-coverage/coverage2)
 - [Foxwell — Vehicle coverage search](https://foxwelltech.us/oeSearch/support_oe_search_app.html)
+
 
 
 ## Related service-function eligibility and safety matrix

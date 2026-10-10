@@ -5,7 +5,7 @@ description: "Understand when an ISTA Valvetronic relearn may apply, how engine 
 slug: "ista-valvetronic-relearn"
 section: "guides"
 publishedAt: 2026-09-11T12:00:00+05:00
-updatedAt: 2026-09-11
+updatedAt: 2026-10-10
 category: "BMW Diagnostics"
 tags: ["Guides","BMW","Diagnostics","BMW ISTA","Valvetronic","eccentric shaft","DME","servomotor","teach-in"]
 relatedSlugs: ["bmw-diagnostic-software-windows","bmw-bidirectional-scan-tool-functions","bmw-code-reader-vs-scan-tool"]
@@ -106,7 +106,7 @@ The [BMW diagnostic software on Windows](/guides/bmw-diagnostic-software-windows
 
 Relevant position or command data can help test plausibility before and after a guided routine, but only when the parameter meaning is known for that engine. Graph related signals rather than watching one number. Look for consistency with the service event, fault record and commanded state. A flat or implausible signal can indicate a blocked prerequisite, sensor problem or communication issue; it does not automatically name the failed part.
 
-If your tool shows only generic powertrain data, it may not expose the BMW DME details needed for this decision. The [BMW code reader versus scan tool guide](/guides/bmw-code-reader-vs-scan-tool/) owns the capability boundary for live data and full-system diagnosis.
+If your tool shows only generic powertrain data, it may not expose the BMW DME details needed for this decision. The [BMW code reader versus scan tool guide](/tools/bmw-scanner-capability-database/#bmw-code-reader-vs-scan-tool) owns the capability boundary for live data and full-system diagnosis.
 
 ## Treat a failed teach-in as a branch, not a prompt to retry
 
@@ -127,6 +127,41 @@ Escalate when the current plan is missing, the engine identity is uncertain, a m
 Run an ISTA Valvetronic relearn when three things align: the exact engine's current BMW information requires the function, the service event or diagnostic state makes it relevant, and all stated prerequisites are satisfied. Verify the result through the test plan and preserve post-run faults/data.
 
 Do not use a relearn to silence evidence. Engine identification, fault classification and mechanical plausibility come first; the guided function is a narrow completion or diagnostic step inside that larger process. That boundary is what keeps a useful ISTA feature from becoming generic procedure spam.
+
+
+
+## October 2026 Valvetronic fault branches and test-plan ownership
+
+**Research review: 10 October 2026.** The official [BMW TIS/AOS overview](https://bmwtechinfo.bmwgroup.com/assets/site_information.pdf) identifies ISTA diagnostic fault-code test plans, repair instructions, technical data and wiring diagrams as authorized workshop resources. BMW’s [diagnostic methodology guide](https://bmwtechinfo.bmwgroup.com/tech_training_manual/ST1102%20Advanced%20Vehicle%20Diagnosis.pdf) distinguishes verifying a complaint, isolating causes, performing approved repair and checking for recurrence. None of those sources offers a universal manual “relearn” sequence for all engines; the **identified DME, engine and fault state** control the correct test plan.
+
+| Situation | Question that determines the next branch | Why “run relearn” is not automatically correct |
+| --- | --- | --- |
+| Eccentric-shaft motor or related component replaced | Does the current BMW repair instruction call for position/stop adaptation or teach-in for this exact engine? | Mechanical installation, wiring or part eligibility may be outstanding |
+| Fault after disconnection or low-voltage episode | Are supply, connections and other DME faults still present? | Low supply can create implausible reference symptoms |
+| Actuator motion or target/actual values implausible | Is signal plausibility broken, or is a mechanical fault suspected? | A learned stop cannot repair an obstructed mechanism |
+| Previously failed teach-in | What fault and step were reported, and what physical prerequisites failed? | Blind repetition can worsen hardware or hide useful evidence |
+| “Valvetronic fault” on an engine with different valve-control architecture | Is Valvetronic fitted and controlled by this DME? | Menu names are not a substitute for engine identification |
+
+The correct owner task is *qualifying the requested ISTA operation*, not teaching a driver to move an actuator with no guardrails. A reader who needs a Windows host or compatible diagnostic interface should use the [BMW interface map](/guides/bmw-diagnostic-interface-map/), but host setup by itself does not establish service-function authorization.
+
+## Technician-ready observation log
+
+| Observation | Capture method | What it tells you |
+| --- | --- | --- |
+| VIN, engine family, DME hardware/software ID | Authorized vehicle identification | Which BMW test plan can apply |
+| Service event and parts involved | Dated repair order | Whether adaptation is a required post-repair operation |
+| Initial fault and freeze-frame context | Read-only ISTA test-plan diagnosis | Whether the fault predated the intervention |
+| Electrical and sensor plausibility results | Approved, non-invasive measurements under the plan | Whether prerequisite diagnosis is complete |
+| Requested teach-in name and prerequisites | Exact BMW instruction reference | Prevents substituting an unrelated “reset adaptation” menu |
+| Outcome, faults and post-repair symptoms | Saved test-plan report and manufacturer-specified checks | Distinguishes acknowledged software step from proven repair |
+
+A successful “teach-in completed” acknowledgement does not prove that the original driveability fault, wiring issue or mechanical binding has been fixed. Conversely, a failed routine does not necessarily indicate a bad DME. Record what the test plan actually says and repair the underlying fault.
+
+## Safety: do not treat a failed teach-in as a retry button
+
+Valvetronic mechanisms and actuators can move under control, and there is substantial risk of component damage if positions or mechanical conditions are wrong. Never force travel, override fault interlocks, repeat a rejected calibration experimentally or use unsanctioned scanner commands to “unstick” a motor. Stop for unexpected noises/movement, suspect mechanical interference, implausible position feedback, poor supply, relevant DME electrical faults or ambiguous repair instructions. Escalate to trained BMW service with a stable authorized environment.
+
+This page retains its distinct **Valvetronic/ISTA DME teach-in versus diagnosis** intent; the [service-function matrix](/tools/bmw-service-function-matrix/) is deliberately a high-level eligibility index. No actuator was energized and no vehicle was coded or calibrated for this October source review.
 
 
 ## Related service-function eligibility and safety matrix
