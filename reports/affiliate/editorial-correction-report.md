@@ -2,14 +2,17 @@
 
 Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors were added.
 
-- Eligible guides: 69
+- Eligible guides: 71
 - APPROVE: 9
-- CORRECTED: 60
+- CORRECTED: 62
 - HOLD: 0
-- Material before/after mapping changes: 64
+- Material before/after mapping changes: 66
 
 ## Changed mappings
 
+- `autel-mk808s-bmw-compatibility` (CORRECTED)
+  - Before: primary=[foxwell-nt530]; alternative=[autel-mk808s, autel-mk900, autel-mx808s]; mode=recommended_equipment
+  - After: primary=[autel-mx808s]; alternative=[]; mode=recommended_equipment
 - `autel-mk900-bmw-compatibility` (CORRECTED)
   - Before: primary=[autel-mk900]; alternative=[autel-mk900-bt]; mode=recommended_equipment
   - After: primary=[autel-mk900-bt]; alternative=[]; mode=recommended_equipment
@@ -136,6 +139,9 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
 - `creator-c310-plus-vs-foxwell-nt530` (CORRECTED)
   - Before: primary=[foxwell-nt530, foxwell-nt530-plus]; alternative=[creator-c310-plus]; mode=comparison
   - After: primary=[creator-c310-plus]; alternative=[]; mode=exact_product
+- `enet-cable-vs-obdlink-cx-for-bimmercode` (CORRECTED)
+  - Before: primary=[obdlink-cx, obdlink-ex]; alternative=[bmw-enet-cable]; mode=comparison
+  - After: primary=[obdlink-cx]; alternative=[]; mode=compatible_adapter
 - `foxwell-nt530-vs-autel-mk808s-bmw` (CORRECTED)
   - Before: primary=[foxwell-nt530, foxwell-nt530-plus]; alternative=[autel-mk808s]; mode=comparison
   - After: primary=[autel-mx808s]; alternative=[]; mode=recommended_equipment

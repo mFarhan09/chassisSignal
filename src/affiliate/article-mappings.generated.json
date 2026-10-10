@@ -1,4 +1,29 @@
 {
+  "autel-mk808s-bmw-compatibility": {
+    "articleSlug": "autel-mk808s-bmw-compatibility",
+    "articleIntent": "Autel MK808S BMW Compatibility: What It Reads, Resets, and Where It Stops",
+    "monetizationMode": "recommended_equipment",
+    "editorialDecision": "CORRECTED",
+    "primaryProductKeys": [
+      "autel-mx808s"
+    ],
+    "alternativeProductKeys": [],
+    "placementType": "recommended_equipment",
+    "placementLocation": "after_evidence_context",
+    "recommendationRationale": "The exact MaxiCOM MK808S has no verified listing, so the card is the Autel MaxiCheck MX808S: a near-identical MaxiCheck sibling whose Autel store specs match the MK808S (same all-system diagnostics, bidirectional active tests, service resets, AutoVIN and Android 11 hardware). It is NOT the exact MK808S and carries no BMW coding claim, because neither tool codes a BMW. Confirm your exact BMW in Autel coverage before buying.",
+    "affiliateRelationship": "available_alternative",
+    "relationshipLabel": "Available Autel MaxiCheck sibling - the MX808S, not the exact MK808S",
+    "productRelationshipLabels": {},
+    "productRelationships": {},
+    "relationshipType": "SAME_BRAND_ALTERNATIVE",
+    "relationshipRationale": "Article subject is the Autel MaxiCOM MK808S, which has no verified listing. The verified product is the Autel MaxiCheck MX808S, the same maker and a near-identical sibling by Autel's own store specs; it is labelled as the MX808S, never as the exact MK808S, and no BMW coding claim is transferred because neither tool codes a BMW.",
+    "officialEvidenceUrl": "https://store.autel.com/products/autel-maxicheck-mx808",
+    "relatedBuyerGuideSlug": null,
+    "mappingStatus": "approved",
+    "approvalStatus": "approved",
+    "reviewedAt": "2026-09-12T19:42:08.000Z",
+    "reviewedBy": "Muhammad Farhan"
+  },
   "autel-mk900-bmw-compatibility": {
     "articleSlug": "autel-mk900-bmw-compatibility",
     "articleIntent": "Autel MK900 BMW Compatibility: What Autel Documents, and What You Must Confirm",
@@ -1100,6 +1125,31 @@
     "relationshipType": "EXACT_PRODUCT",
     "relationshipRationale": "Creator C310+ is named in the title and is the available side; no Foxwell listing is substituted.",
     "officialEvidenceUrl": "https://forobd2tool.com/wp-content/download/Creator%20C310%2B/c310_manual.pdf",
+    "relatedBuyerGuideSlug": null,
+    "mappingStatus": "approved",
+    "approvalStatus": "approved",
+    "reviewedAt": "2026-09-12T19:42:08.000Z",
+    "reviewedBy": "Muhammad Farhan"
+  },
+  "enet-cable-vs-obdlink-cx-for-bimmercode": {
+    "articleSlug": "enet-cable-vs-obdlink-cx-for-bimmercode",
+    "articleIntent": "ENET Cable vs OBDLink CX for BimmerCode: The App's Own Recommendation, and When to Ignore It",
+    "monetizationMode": "compatible_adapter",
+    "editorialDecision": "CORRECTED",
+    "primaryProductKeys": [
+      "obdlink-cx"
+    ],
+    "alternativeProductKeys": [],
+    "placementType": "product_card",
+    "placementLocation": "after_evidence_context",
+    "recommendationRationale": "OBDLink CX is the exact BimmerCode-recommended adapter this guide compares and the only side with a verified listing; the ENET cable has no verified listing, so a single CX card is shown rather than a two-product comparison. Confirm your exact BMW series and phone platform on the BimmerCode adapter list before buying.",
+    "affiliateRelationship": "exact_product",
+    "relationshipLabel": "Exact OBDLink CX adapter compared - the ENET cable has no verified listing",
+    "productRelationshipLabels": {},
+    "productRelationships": {},
+    "relationshipType": "EXACT_PRODUCT",
+    "relationshipRationale": "OBDLink CX is named in the article title and is the side of the comparison with a verified, rights-cleared listing; the ENET cable side is deliberately not linked because it has no verified listing.",
+    "officialEvidenceUrl": "https://www.obdlink.com/products/obdlink-cx/",
     "relatedBuyerGuideSlug": null,
     "mappingStatus": "approved",
     "approvalStatus": "approved",

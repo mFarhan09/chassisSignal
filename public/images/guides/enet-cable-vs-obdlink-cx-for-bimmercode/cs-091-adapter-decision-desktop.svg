@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 540" width="1100" height="540" role="img" aria-labelledby="t091 d091">
+<title id="t091">Choosing between the OBDLink CX and the ENET cable for BimmerCode</title>
+<desc id="d091">BimmerCode lists the OBDLink CX as a Bluetooth 5.1 adapter made for BimmerCode and covering all series, pairing the same way on iOS and Android. It lists the ENET cable as a wired option for F, G and I series only, and on an iPhone the Ethernet route needs an added Ethernet adapter. Choose the CX for older cars, for iPhone simplicity, and for the app's endorsed default; choose the ENET cable when a wired link on an F, G or I series car matters more than convenience.</desc>
+<rect width="1100" height="540" fill="#0f1620"/>
+<text x="60" y="60" fill="#f2f6fa" font-family="Georgia,serif" font-size="29" font-weight="bold">For BimmerCode: OBDLink CX or ENET cable</text>
+<text x="60" y="92" fill="#8fa3b8" font-family="Helvetica,Arial,sans-serif" font-size="16">From BimmerCode's own supported-adapter list. Unlisted adapters will not work.</text>
+
+<rect x="60" y="120" width="480" height="300" rx="12" fill="#16212e" stroke="#2f6b45" stroke-width="2"/>
+<text x="88" y="162" fill="#7fe0a8" font-family="Georgia,serif" font-size="22" font-weight="bold">OBDLink CX</text>
+<rect x="360" y="138" width="152" height="34" rx="17" fill="#1f3a2e" stroke="#2f6b45" stroke-width="2"/>
+<text x="436" y="161" fill="#7fe0a8" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Recommended</text>
+<text x="88" y="204" fill="#d8e2ec" font-family="Helvetica,Arial,sans-serif" font-size="17">Bluetooth 5.1 BLE, wireless</text>
+<text x="88" y="238" fill="#d8e2ec" font-family="Helvetica,Arial,sans-serif" font-size="17">Listed for All Series</text>
+<text x="88" y="272" fill="#d8e2ec" font-family="Helvetica,Arial,sans-serif" font-size="17">Made for BimmerCode badge</text>
+<text x="88" y="306" fill="#d8e2ec" font-family="Helvetica,Arial,sans-serif" font-size="17">One part on iOS and Android</text>
+<text x="88" y="358" fill="#9fdcf0" font-family="Helvetica,Arial,sans-serif" font-size="15">Best for: older E cars, iPhone users,</text>
+<text x="88" y="380" fill="#9fdcf0" font-family="Helvetica,Arial,sans-serif" font-size="15">and the simplest endorsed setup.</text>
+
+<rect x="560" y="120" width="480" height="300" rx="12" fill="#16212e" stroke="#3a5169" stroke-width="2"/>
+<text x="588" y="162" fill="#9fdcf0" font-family="Georgia,serif" font-size="22" font-weight="bold">ENET cable</text>
+<text x="588" y="204" fill="#d8e2ec" font-family="Helvetica,Arial,sans-serif" font-size="17">Wired Ethernet connection</text>
+<text x="588" y="238" fill="#d8e2ec" font-family="Helvetica,Arial,sans-serif" font-size="17">Listed for F, G and I series only</text>
+<text x="588" y="272" fill="#d8e2ec" font-family="Helvetica,Arial,sans-serif" font-size="17">iPhone needs an Ethernet adapter</text>
+<text x="588" y="306" fill="#d8e2ec" font-family="Helvetica,Arial,sans-serif" font-size="17">Removes the wireless variable</text>
+<text x="588" y="358" fill="#9fdcf0" font-family="Helvetica,Arial,sans-serif" font-size="15">Best for: a wired link on an F, G or I</text>
+<text x="588" y="380" fill="#9fdcf0" font-family="Helvetica,Arial,sans-serif" font-size="15">car when connection stability leads.</text>
+
+<text x="60" y="470" fill="#c9b3ba" font-family="Helvetica,Arial,sans-serif" font-size="15">Speed and price claims for ENET are community opinion. BimmerCode publishes no wired-versus-Bluetooth ranking.</text>
+<text x="60" y="504" fill="#6f8296" font-family="Helvetica,Arial,sans-serif" font-size="15">Confirm your exact car and phone against BimmerCode's live adapter list before buying.</text>
+</svg>

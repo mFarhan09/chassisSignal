@@ -126,7 +126,9 @@ export const relationshipClassifications: Record<string, RelationshipClassificat
   'bmw-icom-vs-k-dcan': c('SUPPORTING_EQUIPMENT', 'INC100 is programming support equipment, not ICOM or K+DCAN hardware.'),
   'ista-valvetronic-relearn': c('SUPPORTING_EQUIPMENT', 'Schumacher documents INC100 as a stable diagnostic and ECU-reprogramming supply; it is not a claimed relearn interface.'),
   'k-dcan-vs-enet-cable': c('SUPPORTING_EQUIPMENT', 'Generic cables remain unlinked; INC100 is supporting power for coding and programming, never a cable substitute.'),
-  'protool-vs-ista': c('SUPPORTING_EQUIPMENT', 'INC100 supports coding and programming power needs and is not presented as ProTool hardware or an ISTA interface.')
+  'protool-vs-ista': c('SUPPORTING_EQUIPMENT', 'INC100 supports coding and programming power needs and is not presented as ProTool hardware or an ISTA interface.'),
+  'autel-mk808s-bmw-compatibility': c('SAME_BRAND_ALTERNATIVE', 'Article subject is the Autel MaxiCOM MK808S, which has no verified listing. The verified product is the Autel MaxiCheck MX808S, the same maker and a near-identical sibling by Autel\'s own store specs; it is labelled as the MX808S, never as the exact MK808S, and no BMW coding claim is transferred because neither tool codes a BMW.'),
+  'enet-cable-vs-obdlink-cx-for-bimmercode': c('EXACT_PRODUCT', 'OBDLink CX is named in the article title and is the side of the comparison with a verified, rights-cleared listing; the ENET cable side is deliberately not linked because it has no verified listing.')
 };
 
 export function getRelationshipClassification(slug: string): RelationshipClassification | undefined {

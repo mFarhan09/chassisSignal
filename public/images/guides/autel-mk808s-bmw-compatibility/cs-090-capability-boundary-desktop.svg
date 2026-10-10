@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 560" width="1100" height="560" role="img" aria-labelledby="t090 d090">
+<title id="t090">What the Autel MK808S does on a BMW, and where it stops</title>
+<desc id="d090">Autel documents the MK808S for full-system fault reading and clearing, live data, bidirectional active tests, and a fixed set of service resets including oil, EPB, SAS, DPF, injector and battery registration. Autel documents no ECU coding, module programming, feature personalization, base-model TPMS sensor programming, or key and immobilizer programming. Autel names no BMW specifically, so coverage must be confirmed for the exact car.</desc>
+<rect width="1100" height="560" fill="#0f1620"/>
+<text x="60" y="66" fill="#f2f6fa" font-family="Georgia,serif" font-size="30" font-weight="bold">Autel MK808S on a BMW</text>
+<text x="60" y="98" fill="#8fa3b8" font-family="Helvetica,Arial,sans-serif" font-size="16">A diagnostic and service tool, not a coding tool. Both columns are from Autel's own documentation.</text>
+
+<rect x="60" y="128" width="480" height="356" rx="12" fill="#16212e" stroke="#2f6b45" stroke-width="2"/>
+<text x="88" y="170" fill="#7fe0a8" font-family="Georgia,serif" font-size="22" font-weight="bold">What it does</text>
+<text x="88" y="212" fill="#d8e2ec" font-family="Helvetica,Arial,sans-serif" font-size="17">Read and clear codes, all available systems</text>
+<text x="88" y="246" fill="#d8e2ec" font-family="Helvetica,Arial,sans-serif" font-size="17">Live data, with graphing</text>
+<text x="88" y="280" fill="#d8e2ec" font-family="Helvetica,Arial,sans-serif" font-size="17">Bidirectional active tests</text>
+<text x="88" y="314" fill="#d8e2ec" font-family="Helvetica,Arial,sans-serif" font-size="17">Oil, service interval and EPB reset</text>
+<text x="88" y="348" fill="#d8e2ec" font-family="Helvetica,Arial,sans-serif" font-size="17">SAS, DPF and injector reset</text>
+<text x="88" y="382" fill="#d8e2ec" font-family="Helvetica,Arial,sans-serif" font-size="17">Battery registration and reset (generic)</text>
+<text x="88" y="416" fill="#d8e2ec" font-family="Helvetica,Arial,sans-serif" font-size="17">AutoVIN identification</text>
+
+<rect x="560" y="128" width="480" height="356" rx="12" fill="#1c1620" stroke="#6b4a55" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="588" y="170" fill="#e6a9b6" font-family="Georgia,serif" font-size="22" font-weight="bold">Where it stops</text>
+<text x="588" y="212" fill="#c9b3ba" font-family="Helvetica,Arial,sans-serif" font-size="17">ECU coding</text>
+<text x="588" y="246" fill="#c9b3ba" font-family="Helvetica,Arial,sans-serif" font-size="17">Module programming or flashing</text>
+<text x="588" y="280" fill="#c9b3ba" font-family="Helvetica,Arial,sans-serif" font-size="17">Feature personalization</text>
+<text x="588" y="314" fill="#c9b3ba" font-family="Helvetica,Arial,sans-serif" font-size="17">TPMS sensor programming (base model)</text>
+<text x="588" y="348" fill="#c9b3ba" font-family="Helvetica,Arial,sans-serif" font-size="17">Key or immobilizer programming</text>
+<text x="588" y="404" fill="#8a94a6" font-family="Helvetica,Arial,sans-serif" font-size="14">The datasheet makes no coding or</text>
+<text x="588" y="424" fill="#8a94a6" font-family="Helvetica,Arial,sans-serif" font-size="14">programming claim at all.</text>
+
+<text x="60" y="524" fill="#6f8296" font-family="Helvetica,Arial,sans-serif" font-size="15">Autel names no BMW on the MK808S page. Confirm your exact chassis and year in Autel's vehicle coverage list before buying.</text>
+</svg>
