@@ -158,7 +158,7 @@ Before touching a vehicle, record Windows edition/build, driver publisher and si
 
 A **clean pass** means documented authorized software source, supported computer build, appropriate signed drivers, correctly identified VCI and evidence that the intended **diagnostic** function can be supported. It never means a DIY programming attempt is safe. Any high-risk ECU programming also requires current BMW-approved power, workshop network and procedure; do not attempt it solely because AOS installed successfully.
 
-[Microsoft's driver-signing documentation](https://learn.microsoft.com/en-us/windows-hardware/drivers/install/driver-signing) establishes an additional software integrity boundary. For the broader distinction among BMW software products, use the [BMW diagnostic software matrix](/tools/bmw-diagnostic-software-matrix/); it does not replace this host-specific checklist. No licensed AOS installation, laptop benchmark or actual vehicle programming was performed for this article.
+[Microsoft's driver-signing documentation](https://learn.microsoft.com/en-us/windows-hardware/drivers/install/driver-signing) establishes an additional software integrity boundary. For the broader distinction among BMW software products, use the [BMW diagnostic software matrix](/tools/bmw-diagnostic-software-comparison/); it does not replace this host-specific checklist. No licensed AOS installation, laptop benchmark or actual vehicle programming was performed for this article.
 
 
 ## Sources consulted
