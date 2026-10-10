@@ -20,7 +20,7 @@ if(pending.length!==34||active.length!==31)throw Error('Unexpected 34 redirect /
 const jobs=[
  ...pending.flatMap(x=>['/',''].map(suffix=>({kind:'301',slug:x.slug,url:origin+'/guides/'+x.slug+suffix,expected:x.target+'#'+x.slug}))),
  ...active.map(x=>({kind:'200',slug:x.slug,url:origin+'/guides/'+x.slug+'/'})),
- ...new Set(Object.values(publicGuideRedirects))].map(target=>({kind:'canonical',url:origin+target,expected:target})),
+ ...[...new Set(Object.values(publicGuideRedirects))].map(target=>({kind:'canonical',url:origin+target,expected:target})),
  {kind:'robots',url:origin+'/robots.txt'},
  {kind:'sitemap-index',url:origin+'/sitemap-index.xml'}
 ];
