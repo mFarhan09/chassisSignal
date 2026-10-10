@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import {execFileSync} from 'node:child_process';
-import {consolidatedRedirects,retiredGuidePaths,publishedGuidesAfterAuditMerges} from '../src/data/consolidated-redirects.mjs';
+import {consolidatedRedirects,convertedToolSourceRedirects,retiredGuidePaths,publishedGuidesAfterAuditMerges} from '../src/data/consolidated-redirects.mjs';
 const assert=(v,msg)=>{if(!v)throw Error(msg)};
 const entries=Object.entries(consolidatedRedirects);
 assert(entries.length===32,'forensic audit must contain 32 merge/redirect candidates');
@@ -11,8 +11,17 @@ assert(entries.filter(x=>x[1]==='/guides/bmw-diagnostic-interface-map/').length=
 assert(entries.filter(x=>x[1]==='/tools/bmw-vehicle-interface-compatibility/').length===1,'MINI merge count');
 const lines=fs.readFileSync('dist/_redirects','utf8').trim().split(/\r?\n/);
 assert(lines.includes('/home / 301')&&lines.includes('/articles /research/ 301'),'existing redirects lost');
-assert(lines.length===66,'64 exact source redirect variants and two originals required; got '+lines.length);
+assert(lines.length===70,'64 Wave7 variants, four separately approved tool-conversion variants and two originals required; got '+lines.length);
 assert(new Set(lines.map(x=>x.split(' ')[0])).size===lines.length,'duplicate 301 source');
+// Additive conversion audit: never reclassify the original 32 wave7 sources.
+assert(Object.keys(convertedToolSourceRedirects).length===2,'two approved tool conversions required');
+for(const [slug,target] of Object.entries(convertedToolSourceRedirects)){
+ for(const variant of ['/guides/'+slug+'/','/guides/'+slug]){
+  assert(lines.includes(variant+' '+target+'#'+slug+' 301'),'tool conversion 301 missing '+variant);
+  assert(retiredGuidePaths.has(variant),'tool conversion exclusion missing '+variant);
+ }
+}
+
 const sitemapFiles=fs.readdirSync('dist').filter(n=>n.startsWith('sitemap')&&n.endsWith('.xml'));assert(sitemapFiles.includes('sitemap-index.xml'),'sitemap index missing');
 const sitemap=sitemapFiles.map(x=>fs.readFileSync('dist/'+x,'utf8')).join('\n');
 const mainLinks=['/guides/','/software/','/comparisons/','/coding-adapters/','/compatibility/'];
