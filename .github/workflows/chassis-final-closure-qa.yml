@@ -1,0 +1,44 @@
+name: Chassis Final 65-URL Forensic Closure and Tool-Conversions QA
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/content/articles/**'
+      - 'src/components/ScannerConvertedEvidence.astro'
+      - 'src/components/ScannerResearch.astro'
+      - 'src/pages/tools/bmw-scanner-capability-database/index.astro'
+      - 'src/lib/rehype-canonicalize-retired-guide-links.mjs'
+      - 'astro.config.mjs'
+      - 'src/data/**'
+      - 'public/_redirects'
+      - 'scripts/recovery-chassis-final-closure-qa.mjs'
+      - 'scripts/recovery-chassis-wave7-p0-qa.mjs'
+      - 'src/affiliate/placement-plan.generated.json'
+      - 'recovery/**'
+      - '.github/workflows/chassis-final-closure-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  closure:
+    name: Original 65-URL forensic disposition, 5 improved, 2 source-preserving 301s
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.14.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.19.0
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm test
+      - run: pnpm build
+      - run: node scripts/recovery-chassis-final-closure-qa.mjs
+      - run: CHASSIS_FINAL_MINOR_REBUILD=1 node scripts/recovery-chassis-wave7-p0-qa.mjs
+      - run: node scripts/recovery-chassis-wave8a-editorial.mjs
