@@ -136,8 +136,14 @@ The examples are **calculation structures, not live checkout quotes**. Capture t
 | Plans several brands | Price separate licenses/brands on both architectures | Additional make coverage may be an add-on |
 | Wants offline evidence capture | Verify export/record/playback, account/network needs and actual ECU access | “Handheld” does not automatically mean comprehensive historical storage |
 
-The [Carly subscription-cost guide](/guides/carly-subscription-cost/) owns market/renewal pricing; [Foxwell NT530 versus NT710](/guides/foxwell-nt530-vs-nt710/) owns the separate Foxwell model comparison. This page remains solely a **Carly vs NT530 two-architecture purchase decision**. No checkout, paid app access or hands-on BMW scan was conducted for this research. If fresh GSC query-page data shows this intent adds no independent demand, reconsider consolidation **with SVG/claim migration and an approved 301**, not an automatic deletion.
+The [Carly subscription-cost guide](/guides/carly-subscription-cost/) owns market/renewal pricing; [Foxwell NT530 versus NT710](/tools/bmw-scanner-capability-database/#foxwell-nt530-vs-nt710) owns the separate Foxwell model comparison. This page remains solely a **Carly vs NT530 two-architecture purchase decision**. No checkout, paid app access or hands-on BMW scan was conducted for this research. If fresh GSC query-page data shows this intent adds no independent demand, reconsider consolidation **with SVG/claim migration and an approved 301**, not an automatic deletion.
 
+
+### A license-cancellation record matters as much as the scanner price
+
+Carly purchases can differ by market and acquisition channel. Before comparing costs, save the **merchant of record**, website or app-store account, invoice currency, term start, auto-renewal state, and applicable cancellation instructions from [Carly support](https://support.mycarly.com/hc/en-us/articles/20084641053586-What-is-Carly-Premium-Package). A cancelled renewal does not automatically imply that scanner hardware supplies equivalent diagnostics without an active subscription. Conversely, a Foxwell lifetime update promise does not include unlimited additional makes or guarantee new BMW ECU coverage. Its [product listing](https://www.foxwelldiag.com/products/foxwell-nt530) separates the included brand from paid extras.
+
+For the final purchase, identify the **two exact BMW jobs** that justify a device, such as read-only fault histories from a specific module and a separately named maintenance function. Ask each vendor for that actual chassis, ECU and software version. If the intended task remains unverified, do not declare the cheaper box the winner: an attractive price and a broad brand list do not prove the necessary function. Record what each scanner *cannot* establish and refer high-risk writes to the manufacturer plan.
 
 ## Sources Consulted
 
