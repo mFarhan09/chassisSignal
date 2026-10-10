@@ -131,6 +131,33 @@ Choose a tool that proves BMW manufacturer-specific access for the exact vehicle
 An FRM scanner is valuable when it narrows the fault domain. It can establish identity, reachability, fault patterns and selected inputs/outputs. It cannot replace wiring evidence, current BMW repair information or specialist judgment about coding and internal repair. Keep that line visible and the diagnostic session becomes evidence instead of a shortcut.
 
 
+
+## October 2026 FRM architecture and evidence — do not misidentify the ECU
+
+BMW's [F30 Complete Vehicle training manual, ST1113](https://bmwtechinfo.bmwgroup.com/tech_training_manual/ST1113%20F30%20Complete%20Vehicle.pdf) specifically describes **FEM and REM replacing functions previously handled by the E90 junction box, FRM and CAS**. Therefore the first step is not to buy an “FRM programmer” for every BMW model that shows a lighting fault. The [F10 Complete Vehicle training manual, ST1002](https://bmwtechinfo.bmwgroup.com/tech_training_manual/ST1002%20F10%20Complete%20Vehicle.pdf) separately documents an FRM role in its power-window electronics. These are *generation-specific architecture examples*, not a universal compatibility list.
+
+BMW's historical [SI B01 20 16 warranty bulletin](https://static.nhtsa.gov/odi/tsbs/2016/MC-10146998-9999.pdf) shows that some FRM faults were subject to a **VIN-qualified, time-limited 8-year/125,000-mile extension** for specifically listed vehicles. Do not interpret that historical bulletin as a current 2026 entitlement: model-year range alone was expressly insufficient, and any warranty question requires the dealer's actual VIN-specific eligibility inquiry.
+
+| Symptom or evidence | Working hypotheses | Proof before ordering repair |
+| --- | --- | --- |
+| Several exterior lights/window functions affected | FRM/architecture control, supply, fuse/wiring or shared network | Confirm VIN generation, fitted FRM vs FEM/REM, reachable ECU inventory |
+| One lamp not working | Lamp, circuit, protection logic or output driver | Manufacturer circuit procedure, stored faults and physical supply evidence |
+| FRM cannot communicate, other ECUs reachable | FRM power/ground, bus/network, interface limitations, internal ECU state | Whole-vehicle scan + power/network proof, not a forced memory reset |
+| FRM reachable with short-circuit/overload history | Real load fault, protective shutdown or persistent failed output | BMW test-plan conditions and **repair the physical cause before any authorized reset** |
+| Problem after battery disconnect, low voltage or programming | Power event, software/coding or existing underlying defect | Preserve repair chronology and power history before any write |
+| Seller promises “FRM recovery” from a cheap dongle | Unverified diagnostic-versus-programming claim | Actual ECU, authorized operation, recovery path and operator qualifications |
+
+### What a useful scan report must capture
+
+The report should include the vehicle chassis/build data, ECU name and software ID, modules communicating/not communicating, original fault numbers and states, battery/supply context, and whether the relevant function is a **read-only diagnosis, authorized output test, configuration coding or programming repair**. A missing ECU from one third-party scan is not itself evidence that the FRM failed. Request the service diagram and identify accessible module supply and network at the correct vehicle repair information.
+
+### The high-risk boundary
+
+Some FRM designs protect outputs after circuit faults. Resetting protection or reflashing software before finding the damaged load can reproduce the failure or complicate diagnosis. No generic short-circuit-counter threshold should be applied across variants. Electrical testing, output commands, module firmware recovery and airbag-adjacent work should stay within BMW-approved procedures and a competent workshop. A historic class of FRM warranty failures does not imply every lighting fault is a bad FRM.
+
+The [module troubleshooting hub](/guides/bmw-module-troubleshooting/) explains general access problems; the [no-OBD-communication guide](/guides/bmw-no-communication-with-obd-scanner/) owns network and interface triage. This page owns **FRM/FEM identification and the technical evidence required before replacement or specialist programming**. Dated source review **10 October 2026**; no diagnostic ECU or vehicle module was operated.
+
+
 ## How this investigation fits the wider BMW diagnostic method
 
 Preserve the original FRM fault and power/network evidence before considering coding, replacement or specialist repair. The broader hub separates module inventory from fault interpretation and links back to this body-electronics-specific explanation. If the problem is still unclassified, start with the [BMW Module Troubleshooting Hub](/guides/bmw-module-troubleshooting/) and its evidence-first symptom directory. This guide remains the detailed resource for its distinct controller, procedure and original technical visuals; no source research or SVG is being retired.
