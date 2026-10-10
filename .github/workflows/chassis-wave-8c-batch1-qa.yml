@@ -15,6 +15,7 @@ permissions:
 jobs:
   recovery:
     name: Eleven source-preserving specialist rebuilds and legacy redirect QA
+    if: github.head_ref == 'recovery/chassis-wave-8c-batch1-eleven-specialist-guides' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
