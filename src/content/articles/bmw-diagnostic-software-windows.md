@@ -36,7 +36,7 @@ INPA, EDIABAS, Tool32, NCS Expert, and E-Sys appear throughout enthusiast archiv
 
 “BMW diagnostic software” can mean emissions-code reading, BMW-wide control-unit diagnosis, guided test plans, service functions, configuration coding, engineering access, or control-unit programming. Those are not interchangeable. A tool can communicate with an engine ECU yet fail to see body modules; another can expose engineering jobs without giving a safe, documented service plan.
 
-Write a narrow requirement: for example, “read and document faults across all control units on this F-series car,” “perform the engine-specific [injector adjustment-value entry](/guides/bmw-injector-coding-tool/),” or “follow the BMW test plan for a current G-series symptom.” Then choose a supported stack. If the requirement is a convenience coding change, a purpose-built coding product may be more appropriate than constructing a workshop laptop. Our [ProTool versus ISTA guide](/guides/protool-vs-ista/) separates mobile diagnosis/coding from factory service intent.
+Write a narrow requirement: for example, “read and document faults across all control units on this F-series car,” “perform the engine-specific [injector adjustment-value entry](/guides/bmw-injector-coding-tool/),” or “follow the BMW test plan for a current G-series symptom.” Then choose a supported stack. If the requirement is a convenience coding change, a purpose-built coding product may be more appropriate than constructing a workshop laptop. Our [ProTool versus ISTA guide](/tools/bmw-diagnostic-software-comparison/#protool-vs-ista) separates mobile diagnosis/coding from factory service intent.
 
 <figure>
   <picture>
@@ -52,7 +52,7 @@ ISTA is BMW's service diagnostic environment. Current access, packages, and term
 
 At the observation date, BMW AOS specified 64-bit Windows 10 or Windows 11 Pro/Enterprise, at least 4 GB of RAM, 250 GB of free space on the system drive, a LAN adapter, .NET and Java requirements, and a supported vehicle interface. Those are minimum eligibility facts, not a promise that a marginal laptop will be pleasant under every data package. Storage headroom, reliable Ethernet, an SSD, a stable power plan, and controlled operating-system updates improve service reliability.
 
-BMW's ICOM Next guide documents the interface as a networked piece of service equipment. Our [BMW ICOM versus K+DCAN guide](/guides/bmw-icom-vs-k-dcan/) maps that interface boundary in the current production corpus. A compatible J2534 device may be accepted for specific AOS work, but “J2534” on a box does not establish every BMW operation. Verify the portal, procedure, vehicle, and device together.
+BMW's ICOM Next guide documents the interface as a networked piece of service equipment. Our [BMW ICOM versus K+DCAN guide](/guides/bmw-diagnostic-interface-map/#bmw-icom-vs-k-dcan) maps that interface boundary in the current production corpus. A compatible J2534 device may be accepted for specific AOS work, but “J2534” on a box does not establish every BMW operation. Verify the portal, procedure, vehicle, and device together.
 
 ## Where legacy and engineering names fit
 
@@ -74,7 +74,7 @@ This package contains no download links for BMW software, no mirrored data, no l
 
 BMW communication evolved, so older diagnostic arrangements and later networked platforms do not share one universal physical path. Current BMW AOS requirements name ICOM Next as the recommended interface and also describe an applicable J2534 pass-through route. That does not turn every cable or pass-through device into a universal substitute.
 
-K+DCAN and ENET cables can be legitimate for narrower supported jobs, but neither is a universal ICOM substitute. The correct path depends on chassis, build date, module, application, and task. Read [K+DCAN versus ENET](/guides/k-dcan-vs-enet-cable/) for the transport distinction, then check the actual software instructions.
+K+DCAN and ENET cables can be legitimate for narrower supported jobs, but neither is a universal ICOM substitute. The correct path depends on chassis, build date, module, application, and task. Read [K+DCAN versus ENET](/guides/bmw-diagnostic-interface-map/#k-dcan-vs-enet-cable) for the transport distinction, then check the actual software instructions.
 
 <figure>
   <picture>
