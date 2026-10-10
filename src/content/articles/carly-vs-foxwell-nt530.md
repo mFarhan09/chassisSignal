@@ -106,7 +106,7 @@ Package terms, recurring-license boundaries and scanner coverage were checked ag
 
 ## October 2026 Carly versus Foxwell: the fair purchase comparison
 
-**Intent-review state: provisional standalone head-to-head; do not 301 without GSC page-query overlap analysis.** The independent reader task is choosing **Carly's app/scanner recurring-license architecture versus Foxwell's self-contained NT530 family** for a particular BMW—not learning Carly prices in isolation or choosing among all scanners. Vendor model generations, country-specific checkout and included brand bundles materially affect the answer.
+The practical decision is whether **Carly's app/scanner recurring-license architecture or Foxwell's self-contained NT530 family** better fits a particular BMW and buyer—not just comparing two advertised starting prices. Vendor model generations, country-specific checkout and included brand bundles materially affect the answer.
 
 The [Foxwell NT530 Plus seller page](https://www.foxwelldiag.com/products/foxwell-nt530) advertises one included brand-software package, paid extra brands and lifetime updates, but it does not guarantee a BMW procedure on every year or a second vehicle brand for free. Its [NT530 update listing](https://www.foxwelldiag.com/pages/update-tools) likewise calls the original NT530 lifetime-update eligible. [Carly Premium support](https://support.mycarly.com/hc/en-us/articles/20084641053586-What-is-Carly-Premium-Package) describes a different app/package architecture. Neither product should inherit claims or exact prices from the other.
 
@@ -136,7 +136,7 @@ The examples are **calculation structures, not live checkout quotes**. Capture t
 | Plans several brands | Price separate licenses/brands on both architectures | Additional make coverage may be an add-on |
 | Wants offline evidence capture | Verify export/record/playback, account/network needs and actual ECU access | “Handheld” does not automatically mean comprehensive historical storage |
 
-The [Carly subscription-cost guide](/guides/carly-subscription-cost/) owns market/renewal pricing; [Foxwell NT530 versus NT710](/tools/bmw-scanner-capability-database/#foxwell-nt530-vs-nt710) owns the separate Foxwell model comparison. This page remains solely a **Carly vs NT530 two-architecture purchase decision**. No checkout, paid app access or hands-on BMW scan was conducted for this research. If fresh GSC query-page data shows this intent adds no independent demand, reconsider consolidation **with SVG/claim migration and an approved 301**, not an automatic deletion.
+The [Carly subscription-cost guide](/guides/carly-subscription-cost/) owns market/renewal pricing; [Foxwell NT530 versus NT710](/tools/bmw-scanner-capability-database/#foxwell-nt530-vs-nt710) owns the separate Foxwell model comparison. This page remains solely a **Carly vs NT530 two-architecture purchase decision**. No checkout, paid app access or hands-on BMW scan was conducted for this research. Before buying, verify each platform against the exact BMW model and the function actually needed; a title-level product comparison cannot substitute for that evidence.
 
 
 ### A license-cancellation record matters as much as the scanner price
