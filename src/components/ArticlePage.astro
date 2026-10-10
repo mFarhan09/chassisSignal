@@ -3,7 +3,7 @@ import { render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import EvidenceBadge from './EvidenceBadge.astro';
 import { articleCardImage, articlePath } from '../data/articles';
-import { consolidatedRedirects } from '../data/consolidated-redirects.mjs';
+import { publicGuideRedirects } from '../data/consolidated-redirects.mjs';
 import { affiliateConfig, resolveAffiliateMode } from '../affiliate/config';
 import { getArticleProductMapping } from '../affiliate/mappings';
 import { productRegistry } from '../affiliate/registry';
@@ -29,12 +29,12 @@ const href = articlePath(article);
 const sectionLabel = article.data.section === 'guides' ? 'Guides' : 'Research';
 const sectionHref = `/${article.data.section}/`;
 const breadcrumbLabel = article.data.title.split(':')[0];
-const requestedRelatedSlugs = [...new Set(article.data.relatedSlugs)].filter((slug) => slug !== article.data.slug && !(slug in consolidatedRedirects));
+const requestedRelatedSlugs = [...new Set(article.data.relatedSlugs)].filter((slug) => slug !== article.data.slug && !(slug in publicGuideRedirects));
 const explicitRelated = requestedRelatedSlugs
   .map((slug) => articles.find((candidate) => candidate.data.slug === slug))
   .filter((candidate): candidate is Article => Boolean(candidate));
 const related = (explicitRelated.length > 0 ? explicitRelated : articles
-  .filter((candidate) => !(candidate.data.slug in consolidatedRedirects) && candidate.id !== article.id && (candidate.data.category === article.data.category || candidate.data.tags.some((tag: string) => article.data.tags.includes(tag)))))
+  .filter((candidate) => !(candidate.data.slug in publicGuideRedirects) && candidate.id !== article.id && (candidate.data.category === article.data.category || candidate.data.tags.some((tag: string) => article.data.tags.includes(tag)))))
   .slice(0, 3);
 const published = article.data.publishedAt.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 const updated = article.data.updatedAt?.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
