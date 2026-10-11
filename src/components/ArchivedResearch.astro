@@ -1,0 +1,12 @@
+---
+// Preserve the original source while avoiding heading ID collisions when guides share a page.
+interface Props { namespace: string }
+const { namespace } = Astro.props;
+if (!/^[a-z][a-z0-9-]*$/.test(namespace)) throw new Error('Invalid archive namespace');
+const content = await Astro.slots.render('default');
+const ids = new Set([...content.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]));
+const namespaced = content
+  .replace(/\bid="([^"]+)"/g, (_, id) => `id="${namespace}-${id}"`)
+  .replace(/\bhref="#([^"]+)"/g, (original, id) => ids.has(id) ? `href="#${namespace}-${id}"` : original);
+---
+<Fragment set:html={namespaced} />
