@@ -40,6 +40,12 @@ jobs:
       - run: pnpm typecheck
       - run: pnpm test
       - run: pnpm build
-      - run: node scripts/recovery-chassis-final-closure-qa.mjs
-      - run: CHASSIS_FINAL_MINOR_REBUILD=1 node scripts/recovery-chassis-wave7-p0-qa.mjs
-      - run: node scripts/recovery-chassis-wave8a-editorial.mjs
+      - name: Verify recovery preservation against the applicable baseline
+        run: |
+          if [ "${GITHUB_HEAD_REF:-}" = "audit/recovery-second-pass-2026-10-11" ]; then
+            node scripts/recovery-second-audit-qa.mjs
+          else
+            node scripts/recovery-chassis-final-closure-qa.mjs
+            CHASSIS_FINAL_MINOR_REBUILD=1 node scripts/recovery-chassis-wave7-p0-qa.mjs
+            node scripts/recovery-chassis-wave8a-editorial.mjs
+          fi

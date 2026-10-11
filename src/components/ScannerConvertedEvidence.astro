@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import ArchivedResearch from './ArchivedResearch.astro';
 const all=await getCollection('articles');
 const autel=all.find(article => article.data.slug==='autel-scanner-for-bmw');
 const active=all.find(article => article.data.slug==='bmw-bidirectional-scan-tool-functions');
@@ -21,7 +22,7 @@ const ActiveContent=(await render(active)).Content;
     <tr><td>Wireless link or complete TPMS workflow</td><td>Not implied by base suffix</td><td>Not implied by base suffix</td><td>BT/TS exact models and included VCI</td></tr>
     <tr><td>Long-term use</td><td>Update license must be checked</td><td>Update license must be checked</td><td>Market, expiry and offline functionality</td></tr>
     </tbody></table></div>
-    <details><summary>Read the complete archived Autel specialist guide and original diagrams</summary><div class="archived-body"><AutelContent /></div></details>
+    <details><summary>Read the complete archived Autel specialist guide and original diagrams</summary><div class="archived-body"><ArchivedResearch namespace="autel-archive"><AutelContent /></ArchivedResearch></div></details>
   </article>
   <article id="bmw-bidirectional-scan-tool-functions" class="source-article">
     <h3>BMW bidirectional functions: exact ECU command versus a marketing badge</h3>
@@ -35,7 +36,7 @@ const ActiveContent=(await render(active)).Content;
     <tr><td>Write configuration or ECU firmware</td><td>Separate authorized coding/programming workflow</td><td>Ability to read or command a component</td></tr>
     </tbody></table></div>
     <p>High-risk brakes, restraint, steering, fuel, coolant or electronically actuated systems require exact manufacturer instructions and qualified operators. The <a href="/tools/bmw-service-function-matrix/">BMW Service Function Eligibility Matrix</a> cross-checks safe categories, not exact VIN support.</p>
-    <details><summary>Read the complete archived bidirectional guide and original diagrams</summary><div class="archived-body"><ActiveContent /></div></details>
+    <details><summary>Read the complete archived bidirectional guide and original diagrams</summary><div class="archived-body"><ArchivedResearch namespace="bidirectional-archive"><ActiveContent /></ArchivedResearch></div></details>
   </article>
 </section>
 <style>
