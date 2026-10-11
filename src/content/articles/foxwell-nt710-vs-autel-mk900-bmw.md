@@ -5,7 +5,7 @@ description: "A source-checked BMW comparison of the Foxwell NT710 and Autel MK9
 slug: "foxwell-nt710-vs-autel-mk900-bmw"
 section: "guides"
 publishedAt: 2026-09-25T12:00:00+05:00
-updatedAt: 2026-09-25
+updatedAt: 2026-10-11
 pricingChecked: 2026-09-25
 category: "Comparisons"
 tags: ["BMW", "Comparisons", "Foxwell NT710", "Autel MK900", "ECU coding", "bidirectional control", "DoIP"]
@@ -129,3 +129,13 @@ Before you buy either one, send the seller your VIN and the exact function you i
 
 
 **Related resource:** Our [BMW Scanner Capability Database](/tools/bmw-scanner-capability-database/) explains broader model, feature, vehicle-coverage and safety verification. This specialist article remains available with its original diagrams, sources and task-specific evidence.
+
+
+## Primary sources and verification scope
+
+- [Autel MaxiCOM MK900 specifications and variant comparison](https://autel.com/mk3/4171.jhtml): platform-level features, transports and hardware; this does not verify any particular BMW module or function.
+- [Autel MaxiCOM MK900 user manual, version 2.3](https://autel.com/u/cms/www/202604/200157383ity.pdf): Diagnostics and Service chapters describe functions and vehicle-dependent limits. Follow the vehicle manufacturer’s procedure for the exact task.
+- [Foxwell NT710 product documentation](https://www.foxwelldiag.com/products/foxwell-nt710): advertised diagnostic, coding and service scope, single-make licensing and coverage qualifications.
+- [Foxwell software-license catalog](https://www.foxwelldiag.com/collections/foxwell-license): check the current license listing and terms before buying additional coverage; the price example above is dated September 24, 2026.
+
+Citation links checked on October 11, 2026. Manufacturer documentation establishes advertised platform scope; it is not independent hands-on validation or a guarantee for your vehicle.
