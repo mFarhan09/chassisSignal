@@ -88,6 +88,9 @@ jobs:
           elif [ "${GITHUB_HEAD_REF:-}" = "recovery/chassis-wave-1-obd-adapters" ]; then
             BASE=origin/main
             node scripts/recovery-chassis-wave1-qa.mjs
+          elif [ "${GITHUB_HEAD_REF:-}" = "audit/recovery-second-pass-2026-10-11" ]; then
+            BASE=origin/main
+            node scripts/recovery-second-audit-qa.mjs
           else
             test -z "$(git diff "$BASE" -- src/content/articles/)" || { echo 'article Markdown changed'; exit 1; }
           fi
