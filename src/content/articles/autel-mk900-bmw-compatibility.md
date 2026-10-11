@@ -5,7 +5,7 @@ description: "Autel lists BMW under the MK900's coverage, but listed is not the 
 slug: "autel-mk900-bmw-compatibility"
 section: "guides"
 publishedAt: 2026-09-25T12:00:00+05:00
-updatedAt: 2026-09-25
+updatedAt: 2026-10-11
 category: "BMW Diagnostics"
 tags: ["BMW", "MINI", "Autel MK900", "MaxiCOM", "DoIP", "CAN FD", "Active Test", "vehicle coverage"]
 relatedSlugs: ["autel-scanner-for-bmw", "foxwell-nt710-vs-autel-mk900-bmw", "bmw-battery-registration-scanner"]
@@ -135,3 +135,11 @@ If the answer you receive is a restatement of "compatible with European vehicles
 ## The short version
 
 The MK900 is a credible BMW diagnostic and service tool with current transport support and a documented active-test and service-function set. It is not documented as a BMW coding tool. Pick the variant by how you work rather than by price, treat every function claim as conditional until confirmed against your VIN, and get the update cost in writing before you buy.
+
+
+## Primary sources and verification scope
+
+- [Autel MaxiCOM MK900 specifications and variant comparison](https://autel.com/mk3/4171.jhtml): platform-level features, transports and hardware; this does not verify any particular BMW module or function.
+- [Autel MaxiCOM MK900 user manual, version 2.3](https://autel.com/u/cms/www/202604/200157383ity.pdf): Diagnostics and Service chapters describe functions and vehicle-dependent limits. Follow the vehicle manufacturer’s procedure for the exact task.
+
+Citation links checked on October 11, 2026. Manufacturer documentation establishes advertised platform scope; it is not independent hands-on validation or a guarantee for your vehicle.
