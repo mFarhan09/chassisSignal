@@ -25,6 +25,8 @@ const corrected = (monetizationMode: MonetizationMode, primaryProductKeys: strin
 });
 
 export const editorialMappingOverrides: Record<string, EditorialMappingOverride> = {
+  'bmw-obd-freeze-frame-vs-live-data': unmonetized('This guide helps readers preserve and interpret data from the scanner they already have. It does not recommend a product.'),
+  'bmw-cbs-vs-service-history': unmonetized('This guide verifies vehicle maintenance records from iDrive and paperwork. A product recommendation does not support that decision.'),
   // --- 2026-09-25 full-site monetization repair: the five formerly unmonetized guides. ---
   // Each is mapped to the strongest VERIFIED relevant product in the registry and labelled for
   // what that product actually is. No exact-product identity is transferred to a variant.

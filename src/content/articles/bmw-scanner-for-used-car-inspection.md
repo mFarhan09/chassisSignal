@@ -56,6 +56,8 @@ Capture these items in the first session:
 
 The report should name the tool and software version. If it silently omits unsupported modules, a polished green summary can be misleading. Count the expected systems against the systems that actually responded.
 
+For codes with saved operating conditions, compare the frame with the operating conditions during your current scan. [BMW OBD-II freeze frame vs. live data](/guides/bmw-obd-freeze-frame-vs-live-data/)
+
 ## Understand the two diagnostic layers
 
 Standardized OBD II and BMW-specific diagnosis overlap, but they are not the same inspection. SAE standards define scan-tool requirements and diagnostic modes for emissions-related information such as live data, freeze frame, and trouble codes. BMW-specific access can extend into chassis, restraint, body, comfort, and network modules when the tool genuinely supports them.

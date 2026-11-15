@@ -2,18 +2,20 @@
 
 Generated deterministically from local Chassis Signal content and the supplied human-verified SiteStripe inventory.
 
-- Eligible guides: 69
+- Eligible guides: 71
 - Discovered product candidates: 51
 - Actionable linked products: 23
 - Verified actionable Special Links: 23
 - Renderable actionable images: 23
 - Monetized articles: 67
-- HOLD articles: 2
+- HOLD articles: 4
 - Verified supplied Special Links in registry: 27
 - Live mode active: no
 
 ## HOLD articles
 
+- `bmw-cbs-vs-service-history`
+- `bmw-obd-freeze-frame-vs-live-data`
 - `bmw-parking-sensor-diagnostic-tool`
 - `foxwell-nt710-vs-autel-mk900-bmw`
 
