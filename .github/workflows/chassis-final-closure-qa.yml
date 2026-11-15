@@ -44,8 +44,30 @@ jobs:
         run: |
           if [ "${GITHUB_HEAD_REF:-}" = "audit/recovery-second-pass-2026-10-11" ]; then
             node scripts/recovery-second-audit-qa.mjs
-          else
+          elif [ "${GITHUB_HEAD_REF:-}" = "recovery/chassis-final-closure-65url-discovery-audit" ]; then
             node scripts/recovery-chassis-final-closure-qa.mjs
             CHASSIS_FINAL_MINOR_REBUILD=1 node scripts/recovery-chassis-wave7-p0-qa.mjs
             node scripts/recovery-chassis-wave8a-editorial.mjs
+          else
+            node --input-type=module <<'JS'
+          import assert from 'node:assert/strict';
+          import { existsSync, readFileSync } from 'node:fs';
+          import { publicGuideRedirects } from './src/data/consolidated-redirects.mjs';
+
+          const redirects = readFileSync('dist/_redirects', 'utf8');
+          const sitemap = readFileSync('dist/sitemap-0.xml', 'utf8');
+          assert.equal(redirects, readFileSync('public/_redirects', 'utf8'));
+          const rules = new Set(redirects.trim().split(/\r?\n/));
+          for (const [slug, destination] of Object.entries(publicGuideRedirects)) {
+            const path = '/guides/' + slug;
+            for (const variant of [path, path + '/']) {
+              assert.ok(rules.has(variant + ' ' + destination + '#' + slug + ' 301'), variant);
+              assert.ok(!sitemap.includes('<loc>https://chassissignal.com' + variant + '</loc>'), variant);
+            }
+            assert.ok(sitemap.includes('<loc>https://chassissignal.com' + destination + '</loc>'), destination);
+            assert.ok(readFileSync('dist' + destination + 'index.html', 'utf8').includes('id="' + slug + '"'), slug);
+            assert.ok(existsSync('src/content/articles/' + slug + '.md'), slug);
+          }
+          console.log('Verified archived sources, sitemap exclusions and 301 destinations for', Object.keys(publicGuideRedirects).length, 'guides.');
+          JS
           fi
