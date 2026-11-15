@@ -46,6 +46,8 @@ Before opening a menu, identify the exact item: engine oil, brake fluid, front o
   <figcaption>Complete the maintenance and confirm every prerequisite before resetting CBS.</figcaption>
 </figure>
 
+When reviewing a used car, check the due date against the work recorded in iDrive or on an invoice. [BMW CBS vs. service history](/guides/bmw-cbs-vs-service-history/)
+
 ## When the instrument cluster is the sensible first method
 
 The cluster method is appropriate when BMW's instructions for the exact vehicle expose the completed service item and permit a manual reset. It costs nothing, needs no pairing, and gives immediate confirmation. Use the owner's or service information for that chassis rather than memorizing a universal sequence.

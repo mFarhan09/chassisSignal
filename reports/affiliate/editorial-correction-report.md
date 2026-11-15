@@ -2,11 +2,11 @@
 
 Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors were added.
 
-- Eligible guides: 69
+- Eligible guides: 71
 - APPROVE: 9
 - CORRECTED: 58
-- HOLD: 2
-- Material before/after mapping changes: 65
+- HOLD: 4
+- Material before/after mapping changes: 67
 
 ## Changed mappings
 
@@ -58,6 +58,9 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
 - `bmw-brake-bleed-scan-tool` (CORRECTED)
   - Before: primary=[autel-mx900, autel-md909-pro]; alternative=[]; mode=comparison
   - After: primary=[autel-md909-pro]; alternative=[]; mode=exact_product
+- `bmw-cbs-vs-service-history` (HOLD)
+  - Before: primary=[]; alternative=[]; mode=related_buyer_guide
+  - After: primary=[]; alternative=[]; mode=no_defensible_product
 - `bmw-code-reader-vs-scan-tool` (CORRECTED)
   - Before: primary=[]; alternative=[]; mode=related_buyer_guide
   - After: primary=[obdlink-cx, autel-ds808s-bt]; alternative=[]; mode=comparison
@@ -97,6 +100,9 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
 - `bmw-no-communication-with-obd-scanner` (CORRECTED)
   - Before: primary=[obdlink-ex]; alternative=[]; mode=exact_product
   - After: primary=[fluke-88v]; alternative=[]; mode=recommended_equipment
+- `bmw-obd-freeze-frame-vs-live-data` (HOLD)
+  - Before: primary=[]; alternative=[]; mode=related_buyer_guide
+  - After: primary=[]; alternative=[]; mode=no_defensible_product
 - `bmw-parking-sensor-diagnostic-tool` (HOLD)
   - Before: primary=[]; alternative=[]; mode=related_buyer_guide
   - After: primary=[]; alternative=[]; mode=no_defensible_product
