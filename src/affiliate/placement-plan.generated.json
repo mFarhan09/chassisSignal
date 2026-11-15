@@ -1339,51 +1339,6 @@
       }
     ]
   },
-  "bmw-parking-sensor-diagnostic-tool": {
-    "classification": "THREE_PLACEMENTS",
-    "articleType": "recommended_equipment",
-    "wordCount": 1813,
-    "h2Count": 11,
-    "isLong": true,
-    "requiredPlacements": 3,
-    "placements": [
-      {
-        "position": "top",
-        "anchorIndex": 1,
-        "headingText": "Reach the module — the step generic readers miss",
-        "variant": "recommended_equipment",
-        "productKeys": [
-          "autel-mk900-bt"
-        ],
-        "role": "Relevant equipment",
-        "decisionMoment": "compatibility"
-      },
-      {
-        "position": "middle",
-        "anchorIndex": 5,
-        "headingText": "Respect the wiring boundary",
-        "variant": "compact_cta",
-        "productKeys": [
-          "autel-mk900-bt"
-        ],
-        "role": "Coverage check before you commit",
-        "decisionMoment": "technical",
-        "context": "For bmw parking sensor diagnostic tool, verify the named autel-mk900-bt against the exact BMW chassis, ECU, documented operation and vendor software version; a broad service-function icon is not proof of this vehicle's eligibility."
-      },
-      {
-        "position": "end",
-        "anchorIndex": 9,
-        "headingText": "Model, communication and signal checklist",
-        "variant": "final_cta",
-        "productKeys": [
-          "autel-mk900-bt"
-        ],
-        "role": "Final pick to verify",
-        "decisionMoment": "final_recommendation",
-        "context": "Before selecting equipment for bmw parking sensor diagnostic tool, retain the VIN-specific manufacturer procedure, read-only fault evidence and the seller's confirmed exact-function coverage. Do not use an unsupported write as a test."
-      }
-    ]
-  },
   "bmw-ride-height-calibration-scan-tool": {
     "classification": "THREE_PLACEMENTS",
     "articleType": "recommended_equipment",
@@ -2057,51 +2012,6 @@
         "role": "Final pick to verify",
         "decisionMoment": "final_recommendation",
         "context": "If foxwell NT530 vs NT710 points you here, AUTOPHIX 7910P+ is the defensible pick to verify and buy once your exact configuration checks out."
-      }
-    ]
-  },
-  "foxwell-nt710-vs-autel-mk900-bmw": {
-    "classification": "THREE_PLACEMENTS",
-    "articleType": "recommended_equipment",
-    "wordCount": 1667,
-    "h2Count": 6,
-    "isLong": true,
-    "requiredPlacements": 3,
-    "placements": [
-      {
-        "position": "top",
-        "anchorIndex": 1,
-        "headingText": "The Foxwell BMW coding claim contradicts itself",
-        "variant": "recommended_equipment",
-        "productKeys": [
-          "foxwell-nt530"
-        ],
-        "role": "Relevant equipment",
-        "decisionMoment": "compatibility"
-      },
-      {
-        "position": "middle",
-        "anchorIndex": 2,
-        "headingText": "Where the MK900 is the stronger documented answer",
-        "variant": "compact_cta",
-        "productKeys": [
-          "autel-mk900-bt"
-        ],
-        "role": "Wireless MK900-family alternative",
-        "decisionMoment": "compatibility",
-        "context": "On the Autel side of this comparison, the MaxiCOM MK900-BT is the variant with a verified listing. It is the wireless MK900-family tablet, not the base wired MK900 this article opens on, and Autel documents no coding capability for either — confirm your VIN and the exact function in writing first."
-      },
-      {
-        "position": "end",
-        "anchorIndex": 5,
-        "headingText": "Choosing",
-        "variant": "final_cta",
-        "productKeys": [
-          "foxwell-nt530"
-        ],
-        "role": "Final pick to verify",
-        "decisionMoment": "final_recommendation",
-        "context": "Having worked through choosing, Foxwell NT530 is the listing to confirm for foxwell NT710 vs Autel MK900 for BMW — match your exact vehicle, market and software before buying."
       }
     ]
   },

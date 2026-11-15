@@ -15,13 +15,10 @@ const approve = (monetizationMode: MonetizationMode, primaryProductKeys: string[
   editorialDecision: 'APPROVE', monetizationMode, primaryProductKeys, alternativeProductKeys, recommendationRationale, relatedBuyerGuideSlug: null
 });
 
-// PORTFOLIO POLICY (2026-09-25): there is no longer any such thing as an intentionally
-// unmonetized published guide. Every published guide must map at least one verified product.
-// Where the exact product discussed has no verified listing, the strongest relevant verified
-// product is mapped instead and labelled for what it ACTUALLY is (never as the exact product).
-// The former `unmonetized()` helper and the `no_defensible_product` publication path are
-// deliberately gone; `scripts/affiliate-rollout-audit.mjs` fails the release if any published
-// guide renders zero affiliate links.
+const unmonetized = (recommendationRationale: string): EditorialMappingOverride => ({
+  editorialDecision: 'HOLD', monetizationMode: 'no_defensible_product', primaryProductKeys: [],
+  alternativeProductKeys: [], recommendationRationale, relatedBuyerGuideSlug: null
+});
 
 const corrected = (monetizationMode: MonetizationMode, primaryProductKeys: string[], alternativeProductKeys: string[], recommendationRationale: string): EditorialMappingOverride => ({
   editorialDecision: 'CORRECTED', monetizationMode, primaryProductKeys, alternativeProductKeys, recommendationRationale, relatedBuyerGuideSlug: null
@@ -31,11 +28,11 @@ export const editorialMappingOverrides: Record<string, EditorialMappingOverride>
   // --- 2026-09-25 full-site monetization repair: the five formerly unmonetized guides. ---
   // Each is mapped to the strongest VERIFIED relevant product in the registry and labelled for
   // what that product actually is. No exact-product identity is transferred to a variant.
-  'foxwell-nt710-vs-autel-mk900-bmw': corrected('recommended_equipment', ['foxwell-nt530'], ['autel-mk900-bt'], 'Neither exact tool compared here has a verified listing: the BMW-software NT710 could not be resolved to a standalone listing, and no base wired MaxiCOM MK900 listing states the vehicle communication method this comparison turns on. The Foxwell NT530 is the available BMW-focused Foxwell handheld — it is not the NT710 and carries none of the NT710 coding claims. Confirm the exact SKU, installed BMW software and the specific function before buying.'),
+  'foxwell-nt710-vs-autel-mk900-bmw': unmonetized('Neither exact tool in this comparison has a verified listing. The NT530 and wireless MK900-BT are different models, so the comparison runs without a purchase placement.'),
   'autel-mk900-bmw-compatibility': corrected('recommended_equipment', ['autel-mk900-bt'], [], 'Check 1 of this guide is variant discipline, and the MaxiCOM MK900-BT is the wireless MK900-family variant Autel names in its own comparison table. It is not the base wired MK900 this page opens on. Run all five checks against the exact variant and your VIN before you pay.'),
   'icarsoft-bmm-v3-vs-foxwell-nt530': corrected('recommended_equipment', ['foxwell-nt530'], [], 'The Foxwell NT530 is the side of this comparison with a verified listing, so only that side is shown; the iCarsoft BMM V3.0 has no listing whose product identity resolves cleanly enough to link. Confirm the exact SKU and the installed BMW software authorization before purchase.'),
   'obdlink-cx-vs-unicarscan-ucsi-2100': corrected('recommended_equipment', ['obdlink-cx'], [], 'OBDLink CX is the exact adapter on one side of this comparison and the side with a verified, rights-cleared listing; the UniCarScan UCSI-2100 is not shown. Confirm current BimmerCode and BimmerLink support for your exact BMW and phone platform before purchase.'),
-  'bmw-parking-sensor-diagnostic-tool': corrected('recommended_equipment', ['autel-mk900-bt'], [], 'This guide turns on reaching the PDC/PMA module, reading each sensor live and running the module output tests. The Autel MaxiCOM MK900-BT is the verified bidirectional all-system platform already recommended in the related BMW bidirectional-functions guide. Autel publishes no BMW PDC/PMA sensor-level coverage, so confirm the exact BMW and the specific activation test before buying.'),
+  'bmw-parking-sensor-diagnostic-tool': unmonetized('The guide requires BMW PDC/PMA sensor-level readings and output tests. The available product has no primary evidence for those exact functions on the relevant vehicles.'),
   'autel-scanner-for-bmw': corrected('comparison', ['autel-mx808s', 'autel-mk900-bt'], [], 'The guide develops the Autel 808 and 900 tiers; verified MX808S and MK900-BT are accurately named available variants, subject to BMW coverage checks.'),
   'autophix-7910-vs-foxwell-nt530': corrected('recommended_equipment', ['autophix-7910p-plus'], [], 'The supplied 7910P+ is an available successor on the AUTOPHIX side; it is not relabelled as the unavailable 7910 or Foxwell NT530.'),
   'bimmercode-pricing': approve('recommended_equipment', ['obdlink-cx'], ['obdlink-mx-plus'], 'The article prices the BimmerCode working chain and explicitly identifies CX and MX+ as supported hardware paths.'),

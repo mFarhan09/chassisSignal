@@ -5,6 +5,7 @@ function cleanCell(value) {
 export function buildFinalRolloutReport(articles, mappings, registry, mode) {
   const rows = articles.map((article) => {
     const mapping = mappings[article.slug];
+    const unmonetized = mapping.editorialDecision === 'HOLD';
     const productKeys = [...mapping.primaryProductKeys, ...mapping.alternativeProductKeys];
     const products = productKeys.map((key) => registry[key]);
     return {
@@ -13,16 +14,16 @@ export function buildFinalRolloutReport(articles, mappings, registry, mode) {
       productKeys: productKeys.join('|'),
       displayedProducts: products.map((product) => `${product.brand} ${product.model}`).join(' | '),
       asins: products.map((product) => product.asin).join('|'),
-      placementRelationship: mapping.affiliateRelationship,
-      relationshipLabel: mapping.relationshipLabel,
+      placementRelationship: unmonetized ? 'none' : mapping.affiliateRelationship,
+      relationshipLabel: unmonetized ? 'Published without a product' : mapping.relationshipLabel,
       why: mapping.recommendationRationale,
       officialEvidenceUrls: products.map((product) => product.manufacturerUrl).join(' | '),
-      affiliateUrlStatus: products.every((product) => product.linkStatus === 'verified') ? 'verified' : 'blocked',
+      affiliateUrlStatus: unmonetized ? 'none' : products.every((product) => product.linkStatus === 'verified') ? 'verified' : 'blocked',
       imageSources: products.map((product) => product.imageRightsSource).join(' | '),
       imageAttributions: products.map((product) => product.imageAttribution).join(' | '),
       imageRightsStatus: products.map((product) => product.imageRightsStatus).join('|'),
-      disclosureStatus: 'present_before_first_affiliate_unit',
-      renderStatus: mode === 'live' ? 'live' : 'ready_for_live_activation'
+      disclosureStatus: unmonetized ? 'none' : 'present_before_first_affiliate_unit',
+      renderStatus: unmonetized ? 'unmonetized' : mode === 'live' ? 'live' : 'ready_for_live_activation'
     };
   });
   const usedProducts = [...new Set(rows.flatMap((row) => row.productKeys.split('|').filter(Boolean)))].map((key) => registry[key]);
@@ -47,7 +48,6 @@ export function buildFinalRolloutReport(articles, mappings, registry, mode) {
   const table = rows.map((row, index) => `| ${index + 1} | \`${cleanCell(row.slug)}\` | ${cleanCell(row.title)} | ${cleanCell(row.productKeys)} | ${cleanCell(row.displayedProducts)} | ${cleanCell(row.asins)} | ${cleanCell(row.relationshipLabel)} | ${cleanCell(row.why)} | ${cleanCell(row.officialEvidenceUrls)} | ${row.affiliateUrlStatus} | ${cleanCell(row.imageSources)} | ${cleanCell(row.imageAttributions)} | ${cleanCell(row.imageRightsStatus)} | ${row.disclosureStatus} | ${row.renderStatus} |`).join('\n');
   const markdown = `# Final affiliate rollout report
 
-Generated: 2026-09-13
 Mode: ${mode}
 
 ## Totals
@@ -69,7 +69,7 @@ Mode: ${mode}
 
 Official manufacturer images are stored locally without altering the depicted product and carry truthful manufacturer attribution with status \`manufacturer_attributed_editorial\`. This status does not assert that reuse permission was granted. When no exact first-party image could be obtained, the card uses a distinct brand-neutral Chassis Signal-owned category illustration with status \`site_owned\` and labels it as an illustration. Amazon-hosted images are prohibited.
 
-## Complete 58-guide rollout
+## Guide inventory
 
 | # | Slug | Article title | Product key(s) | Displayed product(s) | ASIN(s) | Placement | Why it belongs | Official evidence URL(s) | Link status | Image source URL(s) | Attribution | Image-rights status | Disclosure | Render |
 |---:|---|---|---|---|---|---|---|---|---|---|---|---|---|---|

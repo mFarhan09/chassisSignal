@@ -7,14 +7,15 @@ Generated deterministically from local Chassis Signal content and the supplied h
 - Actionable linked products: 23
 - Verified actionable Special Links: 23
 - Renderable actionable images: 23
-- Monetized articles: 69
-- HOLD articles: 0
+- Monetized articles: 67
+- HOLD articles: 2
 - Verified supplied Special Links in registry: 27
 - Live mode active: no
 
 ## HOLD articles
 
-- None
+- `bmw-parking-sensor-diagnostic-tool`
+- `foxwell-nt710-vs-autel-mk900-bmw`
 
 ## Live image-rights policy
 

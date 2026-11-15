@@ -220,9 +220,7 @@ for (const file of files) {
   const placements = [];
 
   // Anchor indices (into the full heading list) at distinct, spread section boundaries.
-  // The TOP unit is lifted to an early prose boundary by the renderer (see `first-placement.ts`),
-  // so its anchor only needs to be EARLY — keeping it shallow also stops it from squeezing the
-  // middle anchor's search range into the tail of the article.
+  // Keep the first candidate near the relevant editorial decision and leave room for later anchors.
   const firstIdx = pickAnchor(useful, U * 0.18, 1, Math.max(1, U - 4), DECISION_KW);
   const finalIdx = useful[U - 1].index; // attach after the last useful section (before Sources consulted / at end)
   const finalHeadingText = useful[U - 1].text;
