@@ -18,6 +18,7 @@ const models = [
       <h1>BMW OBD Adapter Comparison Database</h1>
       <p class="lede">Choose the adapter by <strong>vehicle and protocol × diagnostic application × phone or computer × connection method × exact requested function</strong> — not by a pairwise winner, a Bluetooth logo or a generic “supports BMW” label.</p>
       <p>This is a <strong>screening database</strong>, not a universal compatibility certificate. Manufacturer documentation supports different facts at different levels: some claims describe hardware transport and protocol, others describe an application’s approved model list, and neither guarantees the control module function on every vehicle. Use the filters to reject obviously unsuitable combinations, then confirm the exact application, vehicle generation and operation with its current support list.</p>
+      <p><a href="#iphone-obdlink-connection">Find the right iPhone connection steps for your OBDLink model</a>.</p>
     </header>
     <figure class="technical-figure">
       <picture><source media="(max-width: 640px)" srcset="/images/tools/bmw-obd-adapter-comparison/compatibility-gates-mobile.svg"/><img src="/images/tools/bmw-obd-adapter-comparison/compatibility-gates.svg" width="1200" height="480" alt="Five-gate flow for vehicle, application, host platform, transport and exact diagnostic function" loading="lazy"/></picture>
@@ -70,6 +71,45 @@ const models = [
       <tr><td>iPhone with OBDLink LX</td><td>Reject this pairing</td><td>Manufacturer does not list iOS for LX</td></tr>
       <tr><td>Unknown vLinker or UniCarScan model</td><td>Undetermined pending exact SKU evidence</td><td>Exact manufacturer model, connectivity standard, supported app and vehicle</td></tr>
       </tbody></table></div>
+    </section>
+    <section id="iphone-obdlink-connection" class="panel" aria-labelledby="iphone-obdlink-heading">
+      <h2 id="iphone-obdlink-heading">How to connect an OBDLink adapter to an iPhone</h2>
+      <p>“Bluetooth transport” describes how your iPhone talks to the adapter. Read the model name printed on the adapter first. In OBDLink’s setup instructions, a CX starts in the OBDLink app and an MX+ pairs in iPhone settings. The LX and the older MX Bluetooth have no documented iPhone support.</p>
+      <div class="table-scroll">
+        <table>
+          <caption>Where to start with each OBDLink model on iOS</caption>
+          <thead><tr><th scope="col">Model on the label</th><th scope="col">Where to start</th><th scope="col">Official instructions</th></tr></thead>
+          <tbody>
+            <tr>
+              <th scope="row">OBDLink CX</th>
+              <td>Start in the OBDLink app and tap Connect. Follow the app’s prompts for the Bluetooth Low Energy adapter.</td>
+              <td><a href="https://obdlink.com/cx/qsg">CX quick-start guide</a></td>
+            </tr>
+            <tr>
+              <th scope="row">OBDLink MX+</th>
+              <td>Put the adapter in pairing mode with its Pair button. Select the MX+ in Settings → Bluetooth, then connect in the OBDLink app.</td>
+              <td><a href="https://obdlink.com/mxp/qsg">MX+ quick-start guide</a></td>
+            </tr>
+            <tr>
+              <th scope="row">OBDLink LX</th>
+              <td>OBDLink lists Android and Windows. For an iPhone, choose an adapter listed for iOS and your diagnostic app.</td>
+              <td><a href="https://support.obdlink.com/support/solutions/articles/43000713351">OBDLink platform matrix</a></td>
+            </tr>
+            <tr>
+              <th scope="row">OBDLink MX Bluetooth</th>
+              <td>The original MX Bluetooth supports Android and Windows. Check for the plus sign if you are buying a used MX+.</td>
+              <td><a href="https://support.obdlink.com/support/solutions/articles/43000713274-use-obdlink-mx-bluetooth-adapter-with-obdlink-app-and-obdwiz">OBDLink’s original MX support note</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>If the app still cannot connect</h3>
+      <ol>
+        <li><strong>Check that the app has permission to use Bluetooth.</strong> On your iPhone, look under Settings → Privacy &amp; Security → Bluetooth. Allow access for the app you are actually using. <a href="https://support.apple.com/en-afri/102267">Apple’s Bluetooth privacy settings</a></li>
+        <li><strong>Test one app at a time.</strong> If the OBDLink app and BimmerCode are both open, disconnect and close the one you aren’t testing. In BimmerCode, select the supported adapter type and follow its iOS instructions. <a href="https://bimmercode.app/manual/">BimmerCode connection instructions</a></li>
+        <li><strong>Write down where the connection stops.</strong> If the app can’t see the adapter, check phone permission and the model’s pairing instructions. If the app sees the adapter but can’t identify the car, check the exact BMW or MINI and adapter combination in the app’s compatibility list. For a failure beyond the phone connection, <a href="/guides/bmw-no-communication-with-obd-scanner/">trace the vehicle communication path</a>.</li>
+      </ol>
+      <p>Once you can read the vehicle identity, check the exact function you need in the app. A successful Bluetooth connection confirms the phone-to-adapter link. Module access and service functions depend on the vehicle and app.</p>
     </section>
     <figure class="technical-figure"><picture><source media="(max-width: 640px)" srcset="/images/tools/bmw-obd-adapter-comparison/evidence-tiers-mobile.svg"/><img src="/images/tools/bmw-obd-adapter-comparison/evidence-tiers.svg" width="1200" height="440" alt="Evidence tiers from physical protocol support through host connection, app certification and individual vehicle function" loading="lazy"/></picture><figcaption>Capabilities cannot be extrapolated upward: an adapter protocol only enables a connection; it does not certify a vehicle-specific feature.</figcaption></figure>
     <AdapterEvidenceDeepDive />
