@@ -11,44 +11,43 @@ import { getProductRenderState } from '../src/affiliate/render-policy.ts';
 import { validateSpecialLink } from '../src/affiliate/validator.ts';
 import { findRawAmazonUrls, scanEligibleGuides } from '../scripts/lib/affiliate-inventory.mjs';
 import { parseCsvRecords } from '../scripts/lib/csv.mjs';
-import { placementPlans, validatePlacementPlans, planSummary, MAX_PLACEMENTS_PER_ARTICLE, isLongArticle, requiredPlacementsFor, LONG_ARTICLE_WORD_COUNT, LONG_ARTICLE_H2_COUNT } from '../src/affiliate/placement-plan.ts';
+import { placementPlans, selectRenderedPlacements, validatePlacementPlans, planSummary, MAX_PLACEMENTS_PER_ARTICLE, isLongArticle, requiredPlacementsFor, LONG_ARTICLE_WORD_COUNT, LONG_ARTICLE_H2_COUNT } from '../src/affiliate/placement-plan.ts';
 import { relationshipClassifications, relationshipTypes } from '../src/affiliate/relationship-classification.ts';
-import { resolveFirstPlacementOffset } from '../src/affiliate/first-placement.ts';
 
 const root = process.cwd();
 const registry = JSON.parse(await readFile(join(root, 'src/affiliate/product-registry.generated.json'), 'utf8'));
 const mappings = JSON.parse(await readFile(join(root, 'src/affiliate/article-mappings.generated.json'), 'utf8'));
 const articles = await scanEligibleGuides();
 const mapped = Object.values(mappings);
-// PORTFOLIO POLICY (2026-09-25): there is no unmonetized-guide exemption. Every published
-// guide carries an approved mapping and at least one verified, renderable product.
 const approvedMapped = mapped.filter((mapping) => mapping.mappingStatus === 'approved');
 const actionableKeys = [...new Set(approvedMapped.flatMap((mapping) => [...mapping.primaryProductKeys, ...mapping.alternativeProductKeys]))].sort();
 
-test('every published guide is mapped, approved and monetized (no exemptions)', () => {
-  assert.equal(articles.length, 69);
+test('each published guide has a reviewed affiliate decision and eligible products when approved', () => {
   assert.equal(mapped.length, articles.length);
   assert.equal(Object.keys(editorialMappingOverrides).length, articles.length);
-  assert.equal(approvedMapped.length, articles.length);
   for (const article of articles) {
     const mapping = mappings[article.slug];
     assert.ok(mapping, article.slug);
-    assert.notEqual(mapping.editorialDecision, 'HOLD', article.slug);
+    if (mapping.editorialDecision === 'HOLD') {
+      assert.equal(mapping.monetizationMode, 'no_defensible_product', article.slug);
+      assert.equal(mapping.approvalStatus, 'pending', article.slug);
+      assert.ok(mapping.recommendationRationale, article.slug);
+      assert.deepEqual([...mapping.primaryProductKeys, ...mapping.alternativeProductKeys], [], article.slug);
+      assert.equal(placementPlans[article.slug], undefined, article.slug);
+      continue;
+    }
     assert.equal(mapping.mappingStatus, 'approved', article.slug);
     assert.equal(mapping.approvalStatus, 'approved', article.slug);
-    assert.notEqual(mapping.monetizationMode, 'no_defensible_product', article.slug);
     assert.ok(mapping.primaryProductKeys.length >= 1 && mapping.primaryProductKeys.length <= 2, article.slug);
     assert.ok(mapping.relationshipLabel && mapping.recommendationRationale && mapping.officialEvidenceUrl, article.slug);
   }
 });
 
-test('the five formerly unmonetized guides now map verified products with truthful labels', () => {
+test('reviewed comparisons retain exact identity and publish without unsupported substitutes', () => {
   const repaired = {
-    'foxwell-nt710-vs-autel-mk900-bmw': { primary: ['foxwell-nt530'], alternative: ['autel-mk900-bt'] },
     'autel-mk900-bmw-compatibility': { primary: ['autel-mk900-bt'], alternative: [] },
     'icarsoft-bmm-v3-vs-foxwell-nt530': { primary: ['foxwell-nt530'], alternative: [] },
-    'obdlink-cx-vs-unicarscan-ucsi-2100': { primary: ['obdlink-cx'], alternative: [] },
-    'bmw-parking-sensor-diagnostic-tool': { primary: ['autel-mk900-bt'], alternative: [] }
+    'obdlink-cx-vs-unicarscan-ucsi-2100': { primary: ['obdlink-cx'], alternative: [] }
   };
   for (const [slug, expected] of Object.entries(repaired)) {
     const mapping = mappings[slug];
@@ -65,17 +64,21 @@ test('the five formerly unmonetized guides now map verified products with truthf
   // base wired MK900, and the NT530 card may not claim to be the NT710.
   assert.doesNotMatch(mappings['autel-mk900-bmw-compatibility'].relationshipLabel, /^Autel MaxiCOM MK900$/);
   assert.match(mappings['autel-mk900-bmw-compatibility'].relationshipLabel, /MK900-family/i);
-  assert.match(mappings['foxwell-nt710-vs-autel-mk900-bmw'].relationshipLabel, /not the NT710/i);
+  for (const slug of ['foxwell-nt710-vs-autel-mk900-bmw', 'bmw-parking-sensor-diagnostic-tool']) {
+    assert.equal(mappings[slug].editorialDecision, 'HOLD', slug);
+    assert.deepEqual(selectRenderedPlacements(placementPlans[slug]), [], slug);
+  }
   assert.equal(registry['foxwell-nt530'].model, 'NT530');
   assert.equal(registry['autel-mk900-bt'].model, 'MaxiCOM MK900-BT');
 });
 
 test('every mapping carries a valid relationship type and a written rationale', () => {
-  assert.equal(Object.keys(relationshipClassifications).length, articles.length);
-  for (const article of articles) {
-    const mapping = mappings[article.slug];
-    assert.ok(relationshipTypes.includes(mapping.relationshipType), `${article.slug}: ${mapping.relationshipType}`);
-    assert.ok(mapping.relationshipRationale.trim().length >= 30, article.slug);
+
+  for (const mapping of approvedMapped) {
+    const slug = mapping.articleSlug;
+    assert.ok(relationshipClassifications[slug], slug);
+    assert.ok(relationshipTypes.includes(mapping.relationshipType), `${slug}: ${mapping.relationshipType}`);
+    assert.ok(mapping.relationshipRationale.trim().length >= 30, slug);
   }
 });
 
@@ -86,8 +89,7 @@ test('all approved mappings resolve to live image-bearing affiliate links', () =
   }
 });
 
-test('both verification queues exactly match the 23 renderable keys', async () => {
-  assert.equal(actionableKeys.length, 23);
+test('both verification queues exactly match the renderable keys', async () => {
   const link = parseCsvRecords(await readFile(join(root, 'reports/affiliate/link-verification-queue.csv'), 'utf8'));
   const image = parseCsvRecords(await readFile(join(root, 'reports/affiliate/image-rights-queue.csv'), 'utf8'));
   assert.deepEqual(link.map((row) => row.productKey).sort(), actionableKeys);
@@ -167,25 +169,24 @@ test('card markup binds identity and safe affiliate attributes without commerce 
   assert.match(page, /part\.first && <AffiliateDisclosure compact \/>[\s\S]*<PlacementRenderer/);
 });
 
-test('catalog and final reports preserve all candidates and cover 69 guides', async () => {
-  assert.equal(Object.keys(registry).length, 51);
-  assert.equal(Object.values(registry).filter((product) => product.specialLink).length, 27);
+test('catalog and final reports preserve supplied products and cover all guides', async () => {
   const report = await readFile(join(root, 'reports/affiliate/final-affiliate-rollout-report.md'), 'utf8');
   const rows = parseCsvRecords(await readFile(join(root, 'reports/affiliate/final-affiliate-coverage.csv'), 'utf8'));
-  assert.equal(rows.length, 69);
+  assert.equal(rows.length, articles.length);
   for (const article of articles) {
     assert.ok(rows.find((row) => row.slug === article.slug), article.slug);
     assert.ok(report.includes(String.fromCharCode(96) + article.slug + String.fromCharCode(96)), article.slug);
   }
-  assert.match(report, /Remaining HOLD articles: 0/);
+  assert.ok(report.includes(`Remaining HOLD articles: ${mapped.filter((mapping) => mapping.editorialDecision === 'HOLD').length}`));
 });
 
-test('every published guide has a plan meeting the top/middle/end placement policy', () => {
+test('each approved mapping retains valid candidate anchors', () => {
   assert.deepEqual(validatePlacementPlans(placementPlans, mappings, registry), []);
   let two = 0, three = 0, exc = 0;
-  for (const article of articles) {
+  for (const mapping of approvedMapped) {
+    const article = { slug: mapping.articleSlug };
     const plan = placementPlans[article.slug];
-    assert.ok(plan, `${article.slug} must have a placement plan — no published guide may be unplanned`);
+    assert.ok(plan, `${article.slug} must have candidate anchors`);
     assert.ok(plan.placements.length >= 2 && plan.placements.length <= MAX_PLACEMENTS_PER_ARTICLE, article.slug);
     // The LONG definition is machine-enforced, and long articles require the middle unit.
     assert.equal(plan.isLong, isLongArticle(plan.wordCount, plan.h2Count), article.slug);
@@ -200,14 +201,14 @@ test('every published guide has a plan meeting the top/middle/end placement poli
     else if (plan.classification === 'THREE_PLACEMENTS') three++;
     else exc++;
   }
-  assert.equal(two + three + exc, articles.length);
+  assert.equal(two + three + exc, approvedMapped.length);
   assert.equal(exc, 0, 'no published guide may fall back to a one-placement exception');
   const s = planSummary(placementPlans);
   assert.equal(s.totalPlacements, two * 2 + three * 3 + exc);
-  assert.equal(s.withTopPlacement, articles.length);
-  assert.equal(s.withEndPlacement, articles.length);
+  assert.equal(s.withTopPlacement, approvedMapped.length);
+  assert.equal(s.withEndPlacement, approvedMapped.length);
   assert.equal(s.withMiddlePlacement, s.longArticles);
-  assert.equal(s.longArticles + s.shortArticles, articles.length);
+  assert.equal(s.longArticles + s.shortArticles, approvedMapped.length);
 });
 
 test('the LONG-article rule is exactly word_count >= 1400 OR h2_count >= 6', () => {
@@ -303,7 +304,7 @@ test('the top/middle/end policy actually fails on broken plans (mutation tests)'
   assert.ok(lyingCodes.has('UNEXPECTED_MIDDLE_PLACEMENT'));
 });
 
-test('no published guide renders zero affiliate links (built pages, live mode only)', async (t) => {
+test('live pages render each approved product once and disclose only applicable placements', async (t) => {
   const built = [];
   for (const article of articles) {
     try { built.push([article.slug, await readFile(join(root, 'dist/guides', article.slug, 'index.html'), 'utf8')]); } catch { /* not built */ }
@@ -312,45 +313,23 @@ test('no published guide renders zero affiliate links (built pages, live mode on
   if (!built.some(([, html]) => html.includes('data-affiliate-link'))) return t.skip('dist/ was built in draft mode');
   for (const [slug, html] of built) {
     const links = (html.match(/data-affiliate-link/g) ?? []).length;
-    const plan = placementPlans[slug];
-    assert.ok(links > 0, `${slug} rendered zero affiliate links`);
-    assert.ok(links >= plan.requiredPlacements, `${slug}: ${links} links, ${plan.requiredPlacements} required`);
-    assert.equal((html.match(/class="affiliate-disclosure/g) ?? []).length, 1, `${slug}: exactly one article disclosure`);
+    const expected = selectRenderedPlacements(placementPlans[slug]).flatMap((placement) => placement.productKeys).sort();
+    const rendered = [...html.matchAll(/<a\b[^>]*data-affiliate-link[^>]*>/g)]
+      .map(([link]) => link.match(/\bdata-product-key="([^"]+)"/)?.[1])
+      .sort();
+    assert.deepEqual(rendered, expected, slug);
+    assert.equal(links, new Set(rendered).size, slug);
+    assert.equal((html.match(/class="affiliate-disclosure/g) ?? []).length, expected.length ? 1 : 0, slug);
   }
 });
 
-test('first placement surfaces after ~2 intro prose paragraphs (early, safe, never later)', () => {
-  const SECTION = 100000; // an intentionally deep original section boundary
-  // Long intro of plain paragraphs: land just after the 2nd paragraph.
-  const plain = '<p>One.</p>\n<p>Two.</p>\n<p>Three.</p>\n<h2>S</h2><p>x</p>';
-  const plainAt = resolveFirstPlacementOffset(plain, SECTION);
-  assert.equal(plain.slice(0, plainAt), '<p>One.</p>\n<p>Two.</p>');
-  // Paragraphs nested inside a blockquote/figure/list are skipped, never counted or split.
-  const nested = '<blockquote><p>Q1.</p><p>Q2.</p></blockquote>\n<p>Real one.</p>\n<p>Real two.</p>\n<h2>S</h2>';
-  const nestedAt = resolveFirstPlacementOffset(nested, SECTION);
-  assert.ok(nestedAt > nested.indexOf('</blockquote>'), 'must not split the blockquote');
-  assert.equal(nested.slice(0, nestedAt).endsWith('<p>Real two.</p>'), true);
-  // Counting crosses a leading heading (intro-less articles) but never counts the heading itself.
-  const leadingH2 = '<h2>Direct answer</h2>\n<p>A.</p>\n<p>B.</p>\n<p>C.</p>';
-  const leadingAt = resolveFirstPlacementOffset(leadingH2, SECTION);
-  assert.equal(leadingH2.slice(0, leadingAt), '<h2>Direct answer</h2>\n<p>A.</p>\n<p>B.</p>');
-  // The result is always earlier than the original section boundary (never later).
-  assert.ok(plainAt < SECTION && nestedAt < SECTION && leadingAt < SECTION);
-});
-
-test('first-placement resolver falls back safely and is bounded (adversarial)', () => {
-  // No leading prose at all (opens on a table/list) -> null, caller keeps section position.
-  assert.equal(resolveFirstPlacementOffset('<table><tr><td>x</td></tr></table><h2>S</h2>', 100000), null);
-  assert.equal(resolveFirstPlacementOffset('<ul><li>a</li></ul>', 100000), null);
-  // Only one paragraph available before the section -> after that single paragraph, still early.
-  const one = '<p>Solo intro.</p><h2>S</h2><p>later</p>';
-  assert.equal(resolveFirstPlacementOffset(one, one.indexOf('<h2')), '<p>Solo intro.</p>'.length);
-  // A tiny section budget that precedes the 2nd paragraph must never return past it.
-  const budget = '<p>One.</p><p>Two.</p>';
-  const tight = resolveFirstPlacementOffset(budget, '<p>One.</p>'.length + 3);
-  assert.ok(tight === null || tight <= '<p>One.</p>'.length + 3, 'must respect the section budget');
-  // Malformed / unmatched markup must not throw and must not fabricate a boundary past a real paragraph.
-  assert.doesNotThrow(() => resolveFirstPlacementOffset('<p>Good.</p><div><span>unclosed', 100000));
+test('the earliest relevant placement covers each product and keeps comparison cards together', () => {
+  const plan = placementPlans['obdlink-cx-vs-mx-plus'];
+  const [comparison, ...later] = plan.placements;
+  assert.equal(comparison.variant, 'comparison_card');
+  const shuffled = { ...plan, placements: [...later, comparison] };
+  assert.deepEqual(selectRenderedPlacements(shuffled), [comparison]);
+  assert.equal(shuffled.placements.at(-1), comparison);
 });
 
 test('disclosure precedes every affiliate unit in the distributed render', async () => {

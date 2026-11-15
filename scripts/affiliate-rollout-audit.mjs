@@ -7,7 +7,7 @@ import { productVerificationOverrides } from '../src/affiliate/product-verificat
 import { suppliedSiteStripeInventory } from '../src/affiliate/supplied-sitestripe-inventory.ts';
 import { getProductRenderState } from '../src/affiliate/render-policy.ts';
 import { validateSpecialLink } from '../src/affiliate/validator.ts';
-import { placementPlans, getPlacementPlan, validatePlacementPlans, MAX_PLACEMENTS_PER_ARTICLE, requiredPlacementsFor, isLongArticle } from '../src/affiliate/placement-plan.ts';
+import { placementPlans, getPlacementPlan, selectRenderedPlacements, validatePlacementPlans } from '../src/affiliate/placement-plan.ts';
 import { relationshipTypes } from '../src/affiliate/relationship-classification.ts';
 import { findRawAmazonUrls, scanEligibleGuides } from './lib/affiliate-inventory.mjs';
 import { parseCsvRecords } from './lib/csv.mjs';
@@ -31,47 +31,31 @@ const rejectedAsins = new Set(['B0CDGH4WFH', 'B0GX17T6Z2']);
 const allowedImageStatuses = new Set(['verified', 'manufacturer_attributed_editorial', 'site_owned']);
 const relationshipTypeSet = new Set(relationshipTypes);
 
-/**
- * PORTFOLIO POLICY (2026-09-25): there is NO exemption path. Every published guide must be
- * monetized — approved mapping, at least one verified mapped product, a top placement, an end
- * placement, a middle placement when the article is long, and at least the required number of
- * rendered affiliate links. The former `UNMONETIZED_GUIDES` allow-list is deliberately gone.
- */
-const EXPECTED_PUBLISHED_GUIDES = 69;
-// Rendered-position gates, measured against the substantive article body.
-const TOP_MAX_FRACTION = 0.30;
-// Below this word count, "fraction of the body above the first unit" stops being a useful
-// signal — two short intro paragraphs legitimately occupy 40%+ of a 600-word guide. Those pages
-// are held to the paragraph rule alone (which is the actual policy); every substantial guide
-// must additionally keep its first unit inside the top TOP_MAX_FRACTION of the body.
-const TOP_FRACTION_MIN_WORDS = 1000;
-const MIDDLE_MIN_FRACTION = 0.30;
-const MIDDLE_MAX_FRACTION = 0.80;
-const END_MIN_FRACTION = 0.75;
-const MIN_PLACEMENT_GAP = 0.10;
-const MIN_INTRO_PARAGRAPHS = 2;
-const MAX_INTRO_PARAGRAPHS = 4;
-
-if (articles.length !== EXPECTED_PUBLISHED_GUIDES) fail('INVENTORY_COUNT', `Expected ${EXPECTED_PUBLISHED_GUIDES} published guides, found ${articles.length}.`);
 if (mapped.length !== articles.length || Object.keys(editorialMappingOverrides).length !== articles.length) fail('MAPPING_COUNT', `Exactly ${articles.length} reviewed mappings are required (one per published guide).`);
-if (candidateRows.length !== 51) fail('CANDIDATE_COUNT', `Expected 51 preserved/discovered candidates, found ${candidateRows.length}.`);
-if (actionableKeys.length !== 23) fail('ACTIONABLE_COUNT', `Expected 23 mapped linked products, found ${actionableKeys.length}.`);
-if (mapped.some((mapping) => mapping.editorialDecision === 'HOLD')) fail('HOLD_REMAINS', 'No article-level HOLD may remain.');
-if (mapped.some((mapping) => mapping.monetizationMode === 'no_defensible_product')) fail('UNMONETIZED_MODE_PRESENT', 'The no_defensible_product publication path is retired; every published guide must map a product.');
+if (candidateRows.length !== Object.keys(registry).length) fail('CANDIDATE_COUNT', 'Candidate report must cover the product registry.');
 
 for (const article of articles) {
   const mapping = mappings[article.slug];
   if (!mapping) { fail('MISSING_MAPPING', article.slug); continue; }
   if (!editorialMappingOverrides[article.slug]) fail('MISSING_EDITORIAL_OVERRIDE', article.slug);
+  const source = await readFile(join(root, article.filePath), 'utf8');
+  if (findRawAmazonUrls(source).length) fail('RAW_AMAZON_URL', article.filePath);
+  if (mapping.editorialDecision === 'HOLD') {
+    if (mapping.primaryProductKeys.length || mapping.alternativeProductKeys.length || getPlacementPlan(article.slug)) {
+      fail('UNMONETIZED_MAPPING_HAS_PRODUCTS', article.slug);
+    }
+    if (mapping.monetizationMode !== 'no_defensible_product' || !mapping.recommendationRationale?.trim()) {
+      fail('INVALID_UNMONETIZED_MAPPING', article.slug);
+    }
+    continue;
+  }
   if (mapping.mappingStatus !== 'approved' || mapping.approvalStatus !== 'approved') fail('UNAPPROVED_MAPPING', article.slug);
-  if (!mapping.primaryProductKeys.length) fail('PUBLISHED_GUIDE_NOT_MONETIZED', `${article.slug} maps no product; zero-link published guides are not permitted.`);
+  if (!mapping.primaryProductKeys.length || !getPlacementPlan(article.slug)) fail('MISSING_APPROVED_PLACEMENT', article.slug);
   if (mapping.primaryProductKeys.length > 2) fail('PRODUCT_COUNT', `${article.slug} must map one or two primary products.`);
   if (!mapping.relationshipLabel || !mapping.recommendationRationale || !mapping.officialEvidenceUrl) fail('MISSING_CONTEXT', article.slug);
   // Product-relevance QA: a truthful relationship type plus a written rationale for every mapping.
   if (!relationshipTypeSet.has(mapping.relationshipType)) fail('INVALID_RELATIONSHIP_TYPE', `${article.slug}: "${mapping.relationshipType}".`);
   if (!mapping.relationshipRationale || mapping.relationshipRationale.trim().length < 30) fail('MISSING_RELATIONSHIP_RATIONALE', article.slug);
-  const source = await readFile(join(root, article.filePath), 'utf8');
-  if (findRawAmazonUrls(source).length) fail('RAW_AMAZON_URL', article.filePath);
   for (const key of [...mapping.primaryProductKeys, ...mapping.alternativeProductKeys]) {
     const product = registry[key];
     if (!product) { fail('UNKNOWN_PRODUCT', `${article.slug}: ${key}`); continue; }
@@ -101,19 +85,7 @@ const cx = registry['obdlink-cx'];
 if (cx.specialLink !== productVerificationOverrides['obdlink-cx'].specialLink || cx.asin !== 'B08NFLL3NT') fail('OBDLINK_CX_CHANGED', 'OBDLink CX link or ASIN changed.');
 if (cx.imageSha256 !== '71D0D17DD3027118E4F5B3FB35CB79A4F45DC04B50B2FE9607D019D2E2FA04D6') fail('OBDLINK_CX_HASH_CHANGED', 'OBDLink CX image hash changed.');
 
-// Contextual placement enforcement: top/middle/end contract, required counts, distinct, capped.
 for (const error of validatePlacementPlans(placementPlans, mappings, registry)) fail(`PLACEMENT_${error.code}`, error.message);
-for (const article of articles) {
-  const plan = getPlacementPlan(article.slug);
-  if (!plan) { fail('PLACEMENT_MISSING_PLAN', article.slug); continue; }
-  const required = requiredPlacementsFor(plan.wordCount, plan.h2Count);
-  if (plan.placements.length < required) fail('PLACEMENT_BELOW_REQUIRED', `${article.slug}: ${plan.placements.length} planned, ${required} required.`);
-  if (plan.placements.length > MAX_PLACEMENTS_PER_ARTICLE) fail('PLACEMENT_COUNT_EXCEEDED', `${article.slug}: ${plan.placements.length} placements.`);
-  const positions = new Set(plan.placements.map((placement) => placement.position));
-  if (!positions.has('top')) fail('MISSING_TOP_PLACEMENT', article.slug);
-  if (!positions.has('end')) fail('MISSING_END_PLACEMENT', article.slug);
-  if (isLongArticle(plan.wordCount, plan.h2Count) && !positions.has('middle')) fail('MISSING_MIDDLE_PLACEMENT', `${article.slug}: long article without a middle placement.`);
-}
 
 const queueKeys = (rows) => rows.map((row) => row.productKey).sort().join('\0');
 if (queueKeys(linkQueue) !== actionableKeys.join('\0')) fail('LINK_QUEUE_MISMATCH', 'Link queue must exactly match actionable keys.');
@@ -121,12 +93,7 @@ if (queueKeys(imageQueue) !== actionableKeys.join('\0')) fail('IMAGE_QUEUE_MISMA
 for (const asin of rejectedAsins) if (Object.values(registry).some((product) => product.asin === asin)) fail('REJECTED_ASIN', asin);
 if (Object.values(registry).some((product) => product.specialLink?.includes('node=51812349011'))) fail('REJECTED_SEARCH_NODE', 'Rejected Amazon category node is present.');
 
-/**
- * Locate the substantive article body in a built page: everything between the end of the
- * evidence/safety callout and the start of the "Related articles" block. Rendered placement
- * positions are measured as fractions of that region, so the top/middle/end gates read the
- * real article structure rather than a raw byte percentage of the whole document.
- */
+// Use the editorial body rather than template headings or related article cards.
 function articleBodyBounds(html) {
   const proseStart = html.indexOf('<article class="prose">');
   if (proseStart < 0) return null;
@@ -146,14 +113,15 @@ if (mode === 'live') {
     let html;
     try { html = await readFile(outputPath, 'utf8'); } catch { fail('MISSING_BUILT_PAGE', article.slug); continue; }
 
-    // --- NO-PAGE-LEFT-BEHIND hard gate ---------------------------------------------------
     const linkCount = (html.match(/data-affiliate-link/g) ?? []).length;
-    if (linkCount === 0) { zeroLinkGuides++; fail('PUBLISHED_GUIDE_ZERO_AFFILIATE_LINKS', article.slug); }
-
-    const plan = getPlacementPlan(article.slug);
     const firstLink = html.indexOf('data-affiliate-link');
     const disclosure = html.indexOf('class="affiliate-disclosure');
     const firstUnit = html.indexOf('data-affiliate-unit');
+    if (linkCount === 0) zeroLinkGuides++;
+    if (mappings[article.slug]?.editorialDecision === 'HOLD') {
+      if (linkCount || firstUnit >= 0 || disclosure >= 0) fail('UNMONETIZED_PAGE_HAS_AFFILIATE_MARKUP', article.slug);
+      continue;
+    }
     if (firstLink < 0) fail('MISSING_HTML_LINK', article.slug);
     if (disclosure < 0 || (firstLink >= 0 && disclosure > firstLink)) fail('DISCLOSURE_ORDER', article.slug);
     // Exactly one article-level disclosure must render before the first unit (never missing,
@@ -177,55 +145,24 @@ if (mode === 'live') {
       else if (!Object.values(registry).some((product) => product.asin === asin)) fail('UNKNOWN_HTML_ASIN', `${article.slug}: ${asin}`);
     }
 
-    if (!plan) continue;
-    const unitOffsets = [...html.matchAll(/data-affiliate-unit/g)].map((match) => match.index);
-    // Each placement renders one unit; a comparison card renders two product-card units.
-    const expectedUnits = plan.placements.reduce((sum, p) => sum + (p.variant === 'comparison_card' ? 2 : 1), 0);
-    if (unitOffsets.length !== expectedUnits) fail('PLACEMENT_UNIT_COUNT', `${article.slug}: ${unitOffsets.length} units, expected ${expectedUnits}.`);
-    if (linkCount < plan.requiredPlacements) fail('BELOW_REQUIRED_RENDERED_LINKS', `${article.slug}: ${linkCount} rendered links, ${plan.requiredPlacements} required.`);
-    for (const placement of plan.placements) for (const key of placement.productKeys) {
-      if (!html.includes(`data-product-key="${key}"`)) fail('MISSING_PLANNED_PLACEMENT', `${article.slug}: ${key}`);
+    const placements = selectRenderedPlacements(getPlacementPlan(article.slug));
+    const expectedKeys = placements.flatMap((placement) => placement.productKeys).sort();
+    const renderedKeys = [...html.matchAll(/<a\b[^>]*data-affiliate-link[^>]*>/g)]
+      .map(([link]) => link.match(/\bdata-product-key="([^"]+)"/)?.[1])
+      .sort();
+    const unitCount = (html.match(/data-affiliate-unit/g) ?? []).length;
+    if (unitCount !== expectedKeys.length || JSON.stringify(renderedKeys) !== JSON.stringify(expectedKeys)) {
+      fail('RENDERED_PLACEMENT_MISMATCH', `${article.slug}: expected ${expectedKeys.join(', ')}, rendered ${renderedKeys.join(', ')}.`);
     }
+    if (new Set(renderedKeys).size !== renderedKeys.length) fail('REPEATED_PRODUCT', article.slug);
 
-    // --- rendered TOP / MIDDLE / END position audit ---------------------------------------
     const bounds = articleBodyBounds(html);
-    if (!bounds || unitOffsets.length === 0) { fail('UNREADABLE_ARTICLE_BODY', article.slug); continue; }
-    const span = bounds.end - bounds.start;
-    const fractionOf = (offset) => (offset - bounds.start) / span;
-    // Unit index at which each planned placement starts, in document order.
-    const unitIndexOf = (placementIndex) => plan.placements
-      .slice(0, placementIndex)
-      .reduce((sum, p) => sum + (p.variant === 'comparison_card' ? 2 : 1), 0);
-    const positionFraction = (position) => {
-      const index = plan.placements.findIndex((p) => p.position === position);
-      if (index < 0) return null;
-      const offset = unitOffsets[unitIndexOf(index)];
-      return offset === undefined ? null : fractionOf(offset);
-    };
-
-    // TOP: after two substantive intro paragraphs, and high on the page.
-    const introParagraphs = (html.slice(bounds.start, disclosure >= 0 ? disclosure : unitOffsets[0]).match(/<p[\s>]/g) ?? []).length;
-    if (introParagraphs < MIN_INTRO_PARAGRAPHS) fail('FIRST_PLACEMENT_TOO_EARLY', `${article.slug}: only ${introParagraphs} intro paragraph(s) before the first unit.`);
-    if (introParagraphs > MAX_INTRO_PARAGRAPHS) fail('FIRST_PLACEMENT_TOO_DEEP', `${article.slug}: ${introParagraphs} paragraphs before the first unit.`);
-    const topFraction = positionFraction('top');
-    if (topFraction === null) fail('MISSING_TOP_PLACEMENT', `${article.slug}: no rendered top unit.`);
-    else if (plan.wordCount >= TOP_FRACTION_MIN_WORDS && topFraction > TOP_MAX_FRACTION) fail('FIRST_PLACEMENT_TOO_DEEP', `${article.slug}: top unit at ${Math.round(topFraction * 100)}% of the body.`);
-
-    // END: a buying opportunity near the bottom, in the final quarter of the body.
-    const endFraction = positionFraction('end');
-    if (endFraction === null) fail('MISSING_END_PLACEMENT', `${article.slug}: no rendered end unit.`);
-    else if (endFraction < END_MIN_FRACTION) fail('MISSING_END_PLACEMENT', `${article.slug}: last planned unit at ${Math.round(endFraction * 100)}%, below the required ${Math.round(END_MIN_FRACTION * 100)}%.`);
-
-    // MIDDLE: required for long articles, in the central portion, not adjacent to top or end.
-    const middleFraction = positionFraction('middle');
-    if (plan.isLong && middleFraction === null) fail('MISSING_MIDDLE_PLACEMENT', `${article.slug}: long article rendered no middle unit.`);
-    if (middleFraction !== null) {
-      if (middleFraction < MIDDLE_MIN_FRACTION || middleFraction > MIDDLE_MAX_FRACTION) {
-        fail('MIDDLE_PLACEMENT_OUT_OF_BAND', `${article.slug}: middle unit at ${Math.round(middleFraction * 100)}% (band ${Math.round(MIDDLE_MIN_FRACTION * 100)}-${Math.round(MIDDLE_MAX_FRACTION * 100)}%).`);
-      }
-      if (topFraction !== null && middleFraction - topFraction < MIN_PLACEMENT_GAP) fail('PLACEMENTS_ADJACENT', `${article.slug}: top and middle units are adjacent.`);
-      if (endFraction !== null && endFraction - middleFraction < MIN_PLACEMENT_GAP) fail('PLACEMENTS_ADJACENT', `${article.slug}: middle and end units are adjacent.`);
+    if (!bounds || firstUnit < bounds.start || firstUnit >= bounds.end) {
+      fail('UNREADABLE_ARTICLE_BODY', article.slug);
+      continue;
     }
+    if (!/<h2[\s>]/.test(html.slice(bounds.start, firstUnit))) fail('UNIT_BEFORE_EDITORIAL_SECTION', article.slug);
+
   }
 } else {
   warn('DRAFT_MODE', 'Registry and mapping integrity passed; full HTML coverage is checked by the live audit.');

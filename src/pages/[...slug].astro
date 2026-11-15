@@ -16,12 +16,36 @@ type EditorialPage = (typeof editorialPages)[number];
 const hubPage = kind === 'hub' ? page as Hub : undefined;
 const editorialPage = kind === 'editorial' ? page as EditorialPage : undefined;
 const articles = (await getVisibleArticles()).sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
+const featuredGuideSlugs: Record<string, string[]> = {
+  guides: [
+    'bmw-diagnostic-interface-map',
+    'bmw-no-communication-with-obd-scanner',
+    'bmw-scanner-abs-airbag-codes',
+    'bmw-battery-registration-scanner',
+    'bmw-coding-vs-programming',
+    'bmw-scanner-without-subscription',
+  ],
+  scanners: [
+    'bmw-scanner-abs-airbag-codes',
+    'bmw-scanner-for-used-car-inspection',
+    'bmw-scanner-without-subscription',
+    'obd-app-vs-handheld-scanner',
+    'carly-vs-foxwell-nt530',
+    'foxwell-nt710-vs-nt809bt-bmw',
+    'launch-x431-bmw',
+  ],
+};
+const featured = hubPage && featuredGuideSlugs[hubPage.slug];
 const relevant = hubPage ? articles.filter((article) =>
   hubPage.slug === 'research' ||
-  (hubPage.slug === 'guides' && article.data.section === 'guides') ||
-  article.data.category.toLowerCase().includes(hubPage.title.split(' ')[0].toLowerCase()) ||
-  article.data.tags.some((tag) => tag.toLowerCase().includes(hubPage.slug.replaceAll('-', ' ')))
+  (featured
+    ? featured.includes(article.data.slug)
+    : article.data.category.toLowerCase().includes(hubPage.title.split(' ')[0].toLowerCase()) ||
+      article.data.tags.some((tag) => tag.toLowerCase().includes(hubPage.slug.replaceAll('-', ' '))))
 ) : [];
+if (featured) {
+  relevant.sort((a, b) => featured.indexOf(a.data.slug) - featured.indexOf(b.data.slug));
+}
 ---
 <BaseLayout title={page.title} description={page.intro}>
   <header class="page-hero"><div class="shell page-hero-grid"><div><p class="eyebrow">{page.eyebrow}</p><h1>{page.title}</h1><p class="lede">{page.intro}</p></div><div class="page-index"><span>CS</span>{kind === 'hub' ? 'Research organized by decision, evidence and compatibility context.' : 'Publication standard — reviewed for clarity, independence and accuracy.'}</div></div></header>
@@ -34,7 +58,7 @@ const relevant = hubPage ? articles.filter((article) =>
     {(hubPage?.slug === 'software' || hubPage?.slug === 'comparisons' || hubPage?.slug === 'battery-service-tools' || hubPage?.slug === 'research') && <section class="shell" aria-label="BMW software and license pricing"><div class="research-note"><strong>Understand diagnostic software pricing</strong><p>Compare dated first-party license amounts, regional quotes, adapter exclusions and renewal costs.</p><a href="/tools/bmw-diagnostic-software-price-ledger/">Open the BMW Software Pricing &amp; Entitlement Ledger →</a></div></section>}
     {(hubPage?.slug === 'battery-service-tools' || hubPage?.slug === 'guides' || hubPage?.slug === 'scanners' || hubPage?.slug === 'research') && <section class="shell" aria-label="BMW service function evidence"><div class="research-note"><strong>Choose the exact BMW service operation</strong><p>Separate reminders, battery registration, coding, adaptations, active brake service and ECU programming before choosing a scanner.</p><a href="/tools/bmw-service-function-matrix/">Open the BMW Service Function Eligibility and Safety Matrix →</a></div></section>}
     <div class="focus-strip shell">{hubPage?.focus.map((focus: string, index: number) => <div><small>0{index + 1}</small>{focus}</div>)}</div>
-    <section class="section"><div class="shell hub-layout"><aside class="hub-aside"><strong>In this index</strong><p>Published research will identify its evidence basis, limitations and compatibility context.</p><a href="/methodology/">Research methodology →</a><a href="/editorial-standards/">Evidence standards →</a><a href="/contact/">Contact status →</a></aside><div>
+    <section class="section"><div class="shell hub-layout"><aside class="hub-aside"><strong>In this index</strong><p>Published research will identify its evidence basis, limitations and compatibility context.</p>{featured && <a href="/research/">Browse all published research →</a>}<a href="/methodology/">Research methodology →</a><a href="/editorial-standards/">Evidence standards →</a><a href="/contact/">Contact status →</a></aside><div>
       {relevant.length ? <div class="hub-list">{relevant.map((article) => <article class:list={['hub-article card-3d', { 'hub-article--visual': hubPage?.slug === 'guides' }]} data-tilt>
         {hubPage?.slug === 'guides' && <a class:list={['hub-article__visual', { 'hub-article__visual--abstract': !articleCardImage(article) }]} href={articlePath(article)} style={articleCardImage(article) ? `--hub-image:url(${articleCardImage(article)})` : undefined} aria-label={`Read ${article.data.title}`}></a>}
         <small>{article.data.category}<br />{article.data.readingTime}</small>

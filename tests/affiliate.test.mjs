@@ -80,7 +80,7 @@ test('affiliate anchor is direct, disclosed and carries required attributes', as
   // Segmented render: the disclosure is emitted with the FIRST placement, immediately before it.
   assert.match(article, /\{part\.first && <AffiliateDisclosure compact \/>\}\s*<PlacementRenderer/);
   // Fallback render (no segmented HTML available): disclosure still precedes the placements.
-  assert.match(article, /<AffiliateDisclosure compact \/>\s*\{placementPlan\.placements\.map/);
+  assert.match(article, /<AffiliateDisclosure compact \/>\s*\{affiliatePlacements\.map/);
   assert.ok(
     article.indexOf('<AffiliateDisclosure compact />') < article.indexOf('<PlacementRenderer'),
     'the disclosure must be emitted before the first placement renderer'
@@ -105,7 +105,7 @@ test('every eligible guide is represented in mappings and coverage output', asyn
   assert.match(coverage, new RegExp(`Eligible guides: ${articles.length}`));
 });
 
-test('every published guide is editorially reviewed, monetized and obeys product safeguards', async () => {
+test('every published guide has a recorded affiliate decision and approved products follow safeguards', async () => {
   const articles = await scanEligibleGuides();
   const mappings = JSON.parse(await readFile(join(process.cwd(), 'src', 'affiliate', 'article-mappings.generated.json'), 'utf8'));
   const registry = JSON.parse(await readFile(join(process.cwd(), 'src', 'affiliate', 'product-registry.generated.json'), 'utf8'));
@@ -120,13 +120,14 @@ test('every published guide is editorially reviewed, monetized and obeys product
     const mapping = mappings[article.slug];
     assert.ok(mapping, article.slug);
     assert.ok(editorialMappingOverrides[article.slug], article.slug);
+    assert.ok(mapping.editorialDecision in counts, article.slug);
     counts[mapping.editorialDecision] += 1;
-    // PUBLISHED_GUIDES_WITH_ZERO_LINKS = 0 — the unmonetized-guide exception is retired, so
-    // every published guide must map at least one product and may never sit in the old
-    // no_defensible_product / HOLD publication state.
+    if (mapping.editorialDecision === 'HOLD') {
+      assert.equal(mapping.monetizationMode, 'no_defensible_product', article.slug);
+      assert.deepEqual([...mapping.primaryProductKeys, ...mapping.alternativeProductKeys], [], article.slug);
+      continue;
+    }
     assert.ok(mapping.primaryProductKeys.length >= 1, `${article.slug} maps no product`);
-    assert.notEqual(mapping.editorialDecision, 'HOLD', article.slug);
-    assert.notEqual(mapping.monetizationMode, 'no_defensible_product', article.slug);
     assert.equal(mapping.mappingStatus, 'approved', article.slug);
     assert.equal(mapping.approvalStatus, 'approved', article.slug);
     assert.ok(mapping.primaryProductKeys.length <= 2, article.slug);
@@ -137,10 +138,7 @@ test('every published guide is editorially reviewed, monetized and obeys product
     }
   }
 
-  // Decision MIX is derived (it moves whenever a guide is corrected); the retired HOLD state
-  // is the only value pinned, because any HOLD reappearing is a policy regression.
-  assert.equal(counts.HOLD, 0, 'no published guide may carry an editorial HOLD');
-  assert.equal(counts.APPROVE + counts.CORRECTED, articles.length);
+  assert.equal(counts.APPROVE + counts.CORRECTED + counts.HOLD, articles.length);
 });
 
 test('verification queues exactly match actionable product keys', async () => {
@@ -163,8 +161,6 @@ test('verification queues exactly match actionable product keys', async () => {
   assert.deepEqual(linkQueue.map((record) => record.productKey).sort(), actionableProductKeys);
   assert.deepEqual(imageQueue.map((record) => record.productKey).sort(), actionableProductKeys);
   assert.equal(candidates.length, Object.keys(registry).length);
-  // Every published guide is monetized, so no mapping is excluded from the actionable set.
-  assert.equal(actionableMappings.length, articles.length);
   assert.ok(actionableProductKeys.length > 0);
   assert.equal(mappings['bimmerlink-pricing'].monetizationMode, 'recommended_equipment');
 
@@ -173,10 +169,8 @@ test('verification queues exactly match actionable product keys', async () => {
   assert.equal(reported('Eligible guides'), articles.length);
   assert.equal(reported('Discovered product candidates'), Object.keys(registry).length);
   assert.equal(reported('Actionable linked products'), actionableProductKeys.length);
-  assert.equal(reported('Monetized articles'), articles.length);
-  assert.equal(reported('HOLD articles'), 0);
-  // Every actionable product is link-verified and image-renderable — that is what makes the
-  // "no published guide renders zero links" guarantee reachable.
+  assert.equal(reported('Monetized articles'), actionableMappings.length);
+  assert.equal(reported('HOLD articles'), articles.length - actionableMappings.length);
   assert.equal(reported('Verified actionable Special Links'), actionableProductKeys.length);
   assert.equal(reported('Renderable actionable images'), actionableProductKeys.length);
 });
@@ -232,21 +226,16 @@ test('published guide count is 69 (tripwire against accidental content deletion)
   assert.equal(articles.length, 69, 'published guide inventory changed — update deliberately, in the same commit');
 });
 
-test('every published guide has top and bottom placements, and long guides a middle one', async () => {
-  const articles = await scanEligibleGuides();
-  for (const article of articles) {
-    const plan = placementPlans[article.slug];
-    assert.ok(plan, `${article.slug} has no placement plan`);
+test('approved plans record section anchors including a middle candidate on long guides', () => {
+  for (const [slug, plan] of Object.entries(placementPlans)) {
     const positions = plan.placements.map((placement) => placement.position);
-    // EVERY_GUIDE_HAS_TOP_PLACEMENT / EVERY_GUIDE_HAS_BOTTOM_PLACEMENT
-    assert.ok(positions.includes('top'), `${article.slug}: missing TOP placement`);
-    assert.ok(positions.includes('end'), `${article.slug}: missing BOTTOM placement`);
-    // EVERY_LONG_GUIDE_HAS_MIDDLE_PLACEMENT (long := word_count >= 1400 || h2_count >= 6)
+    assert.ok(positions.includes('top'), `${slug}: missing TOP placement`);
+    assert.ok(positions.includes('end'), `${slug}: missing BOTTOM placement`);
     const long = isLongArticle(plan.wordCount, plan.h2Count);
-    assert.equal(plan.isLong, long, article.slug);
-    if (long) assert.ok(positions.includes('middle'), `${article.slug}: long guide missing MIDDLE placement`);
-    assert.ok(plan.placements.length >= requiredPlacementsFor(plan.wordCount, plan.h2Count), article.slug);
-    assert.equal(new Set(positions).size, positions.length, `${article.slug}: duplicate placement positions`);
+    assert.equal(plan.isLong, long, slug);
+    if (long) assert.ok(positions.includes('middle'), `${slug}: long guide missing MIDDLE placement`);
+    assert.ok(plan.placements.length >= requiredPlacementsFor(plan.wordCount, plan.h2Count), slug);
+    assert.equal(new Set(positions).size, positions.length, `${slug}: duplicate placement positions`);
   }
 });
 

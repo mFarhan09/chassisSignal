@@ -153,7 +153,7 @@ export function buildArticleMappings(articles, existingMappings = {}, editorialO
       officialEvidenceUrl: '',
       relatedBuyerGuideSlug,
       mappingStatus: approved ? 'approved' : editorialOverride ? 'reviewed' : (previous.mappingStatus ?? 'candidate'),
-      approvalStatus: approved ? 'approved' : (previous.approvalStatus ?? 'pending'),
+      approvalStatus: approved ? 'approved' : editorialOverride ? 'pending' : (previous.approvalStatus ?? 'pending'),
       reviewedAt: approved ? '2026-09-12T19:42:08.000Z' : (previous.reviewedAt ?? null),
       reviewedBy: approved ? 'Muhammad Farhan' : (previous.reviewedBy ?? null)
     }];

@@ -3,19 +3,8 @@ import { validateSpecialLink } from './validator.ts';
 import type { ArticleProductMapping, ProductRecord } from './types';
 
 /**
- * Contextual placement DENSITY plan.
- *
- * SITE-WIDE PLACEMENT POLICY (portfolio rule, 2026-09-25). Every published guide carries:
- *
- *   PLACEMENT A — `position: 'top'`     mandatory, after ~2-3 short intro paragraphs
- *   PLACEMENT C — `position: 'middle'`  mandatory for LONG articles, ~40-65% through the body
- *   PLACEMENT B — `position: 'end'`     mandatory, at the last substantive section
- *
- * LONG is machine-defined: `wordCount >= 1400 || h2Count >= 6`. Long articles require three
- * placements, shorter articles two, and three is the hard cap. Placements attach at real H2
- * boundaries (the renderer lifts the TOP unit to an early prose boundary) and never rewrite
- * prose. The same verified product may appear at two distinct reader moments provided the
- * variant and contextual copy differ.
+ * Reviewed heading anchors for guides that have approved products.
+ * The generator retains candidate positions. The renderer uses one appearance per product.
  */
 
 export type PlacementVariant = 'product_card' | 'comparison_card' | 'recommended_equipment' | 'compact_cta' | 'final_cta';
@@ -60,7 +49,7 @@ export interface ArticlePlacementPlan {
   /** H2 count used for the LONG decision. */
   h2Count: number;
   isLong: boolean;
-  /** Minimum placements this article must carry (3 when long, otherwise 2). */
+  /** Number of candidate anchors the generator records for this article. */
   requiredPlacements: number;
   placements: PlannedPlacement[];
 }
@@ -69,6 +58,19 @@ export const placementPlans = generatedPlans as Record<string, ArticlePlacementP
 
 export function getPlacementPlan(slug: string): ArticlePlacementPlan | undefined {
   return placementPlans[slug];
+}
+
+export function selectRenderedPlacements(plan: ArticlePlacementPlan | undefined): PlannedPlacement[] {
+  if (!plan) return [];
+
+  const placedProducts = new Set<string>();
+  return [...plan.placements]
+    .sort((a, b) => a.anchorIndex - b.anchorIndex)
+    .filter((placement) => {
+      if (placement.productKeys.every((key) => placedProducts.has(key))) return false;
+      for (const key of placement.productKeys) placedProducts.add(key);
+      return true;
+    });
 }
 
 export interface PlacementPlanError {

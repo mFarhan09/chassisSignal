@@ -4,9 +4,9 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
 
 - Eligible guides: 69
 - APPROVE: 9
-- CORRECTED: 60
-- HOLD: 0
-- Material before/after mapping changes: 64
+- CORRECTED: 58
+- HOLD: 2
+- Material before/after mapping changes: 65
 
 ## Changed mappings
 
@@ -29,7 +29,7 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
   - Before: primary=[]; alternative=[]; mode=related_buyer_guide
   - After: primary=[obdlink-cx]; alternative=[]; mode=compatible_adapter
 - `bimmerlink-adapter` (CORRECTED)
-  - Before: primary=[obdlink-cx]; alternative=[obdlink-mx-plus, unicarscan-ucsi-2100, bmw-enet-cable]; mode=recommended_equipment
+  - Before: primary=[obdlink-cx]; alternative=[obdlink-mx-plus, obdlink-ex, unicarscan-ucsi-2100, bmw-enet-cable]; mode=recommended_equipment
   - After: primary=[obdlink-cx]; alternative=[obdlink-mx-plus]; mode=recommended_equipment
 - `bimmerlink-pricing` (APPROVE)
   - Before: primary=[obdlink-cx]; alternative=[]; mode=exact_product
@@ -55,6 +55,9 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
 - `bmw-bidirectional-scan-tool-functions` (CORRECTED)
   - Before: primary=[foxwell-nt530]; alternative=[foxwell-nt530-plus, autel-mk900]; mode=recommended_equipment
   - After: primary=[autel-mk900-bt]; alternative=[]; mode=recommended_equipment
+- `bmw-brake-bleed-scan-tool` (CORRECTED)
+  - Before: primary=[autel-mx900, autel-md909-pro]; alternative=[]; mode=comparison
+  - After: primary=[autel-md909-pro]; alternative=[]; mode=exact_product
 - `bmw-code-reader-vs-scan-tool` (CORRECTED)
   - Before: primary=[]; alternative=[]; mode=related_buyer_guide
   - After: primary=[obdlink-cx, autel-ds808s-bt]; alternative=[]; mode=comparison
@@ -68,7 +71,7 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
   - Before: primary=[obdlink-cx]; alternative=[autel-mx900]; mode=recommended_equipment
   - After: primary=[obdlink-cx]; alternative=[]; mode=recommended_equipment
 - `bmw-electric-parking-brake-service-mode-scanner` (CORRECTED)
-  - Before: primary=[autel-mk808s]; alternative=[]; mode=exact_product
+  - Before: primary=[autel-mk808s]; alternative=[autel-mx900]; mode=recommended_equipment
   - After: primary=[autel-md909-pro]; alternative=[]; mode=exact_product
 - `bmw-electronic-water-pump-diagnostic-tool` (CORRECTED)
   - Before: primary=[]; alternative=[]; mode=related_buyer_guide
@@ -94,14 +97,14 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
 - `bmw-no-communication-with-obd-scanner` (CORRECTED)
   - Before: primary=[obdlink-ex]; alternative=[]; mode=exact_product
   - After: primary=[fluke-88v]; alternative=[]; mode=recommended_equipment
-- `bmw-parking-sensor-diagnostic-tool` (CORRECTED)
+- `bmw-parking-sensor-diagnostic-tool` (HOLD)
   - Before: primary=[]; alternative=[]; mode=related_buyer_guide
-  - After: primary=[autel-mk900-bt]; alternative=[]; mode=recommended_equipment
+  - After: primary=[]; alternative=[]; mode=no_defensible_product
 - `bmw-ride-height-calibration-scan-tool` (CORRECTED)
   - Before: primary=[]; alternative=[]; mode=related_buyer_guide
   - After: primary=[autel-maxisys-ultra]; alternative=[]; mode=recommended_equipment
 - `bmw-scanner-abs-airbag-codes` (CORRECTED)
-  - Before: primary=[foxwell-nt530]; alternative=[foxwell-nt530-plus, autel-mx900]; mode=recommended_equipment
+  - Before: primary=[foxwell-nt530]; alternative=[foxwell-nt530-plus, autel-mk900, autel-mx900]; mode=recommended_equipment
   - After: primary=[autel-mx900]; alternative=[]; mode=recommended_equipment
 - `bmw-scanner-for-used-car-inspection` (CORRECTED)
   - Before: primary=[autel-ds808s]; alternative=[]; mode=exact_product
@@ -116,7 +119,7 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
   - Before: primary=[autel-mk808s]; alternative=[]; mode=exact_product
   - After: primary=[autel-mx808s]; alternative=[]; mode=recommended_equipment
 - `bmw-tpms-diagnostic-tool` (CORRECTED)
-  - Before: primary=[autel-mk808s]; alternative=[autel-mk808s-ts]; mode=recommended_equipment
+  - Before: primary=[autel-mk808s]; alternative=[autel-mk808s-ts, autel-mx900]; mode=recommended_equipment
   - After: primary=[autel-mx808s, autel-mx808s-ts]; alternative=[]; mode=comparison
 - `bmw-transfer-case-adaptation-reset-tool` (CORRECTED)
   - Before: primary=[]; alternative=[]; mode=related_buyer_guide
@@ -131,7 +134,7 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
   - Before: primary=[obdlink-cx]; alternative=[carly-universal-scanner]; mode=recommended_equipment
   - After: primary=[obdlink-cx]; alternative=[]; mode=recommended_equipment
 - `carly-vs-foxwell-nt530` (CORRECTED)
-  - Before: primary=[foxwell-nt530]; alternative=[]; mode=exact_product
+  - Before: primary=[foxwell-nt530, foxwell-nt530-plus]; alternative=[]; mode=comparison
   - After: primary=[autophix-7910p-plus]; alternative=[]; mode=recommended_equipment
 - `creator-c310-plus-vs-foxwell-nt530` (CORRECTED)
   - Before: primary=[foxwell-nt530, foxwell-nt530-plus]; alternative=[creator-c310-plus]; mode=comparison
@@ -142,9 +145,9 @@ Draft-only correction pass. No links, ASINs, images, prices or affiliate anchors
 - `foxwell-nt530-vs-nt710` (CORRECTED)
   - Before: primary=[foxwell-nt530, icarsoft-bmm-v3]; alternative=[foxwell-nt710, autophix-7910, autel-mk900, creator-c310-plus, foxwell-nt809bt]; mode=comparison
   - After: primary=[autophix-7910p-plus]; alternative=[]; mode=recommended_equipment
-- `foxwell-nt710-vs-autel-mk900-bmw` (CORRECTED)
+- `foxwell-nt710-vs-autel-mk900-bmw` (HOLD)
   - Before: primary=[foxwell-nt710, autel-mk900]; alternative=[foxwell-nt809bt]; mode=comparison
-  - After: primary=[foxwell-nt530]; alternative=[autel-mk900-bt]; mode=recommended_equipment
+  - After: primary=[]; alternative=[]; mode=no_defensible_product
 - `foxwell-nt710-vs-nt809bt-bmw` (CORRECTED)
   - Before: primary=[foxwell-nt710, autel-mk900]; alternative=[foxwell-nt809bt]; mode=comparison
   - After: primary=[foxwell-nt809bt, foxwell-nt530]; alternative=[]; mode=comparison
